@@ -1,0 +1,108 @@
+#!/bin/ksh
+# -*- Mode: shell-script -*-
+#
+# $Id: announce.txt,v 1.20 2011/04/26 19:36:37 bkorb Exp $
+
+test -z "${sender}" && sender=bkorb
+domain=gnu.org
+lname=${sender}@${domain}
+fullname='Bruce Korb'
+project=sharutils
+
+tfile=$(mktemp ./suaXXXXXX) 2>/dev/null
+test -z "${tfile}" && tfile=sua$$.txt
+mv $tfile ${tfile}.txt
+tfile=${tfile}.txt
+
+sharutils_version=$(autoconf -t 'AC_INIT:$2')
+
+exec 3> ${tfile}
+
+recip=$(echo \
+    ${lname} \
+    bug-gnu-utils@gnu.org \
+    coordinator@translationproject.org)
+
+nl='
+'
+
+# Three levels of release:
+# x.y        -- a primary release
+# x.y.z      -- a bug fix release
+# x.*-preX   -- an alpha testing release
+#
+case ${sharutils_version} in
+*.*-pre* )
+  to_line='bug-gnu-utils@gnu.org'
+  cc_line=""
+  rel_type=$(echo "This is an alpha release of ${project}.")
+
+  ftpurl=ftp://autogen.sourceforge.net/data
+  ;;
+
+*.*.* )
+  rel_type="\
+This is a bug fix release for version ${sharutils_version%.*} of ${project}"
+  to_line='To: bug-gnu-utils@gnu.org info-gnu@gnu.org'
+  recip=$(echo ${recip} info-gnu@gnu.org)
+  ftpurl=ftp://ftp.gnu.org/gnu/${project}
+  cc_line=""
+  ;;
+
+* )
+  rel_type=""
+  to_line='GNU Announcements <info-gnu@gnu.org>'
+  cc_line="Cc: bug-gnu-utils@gnu.org${nl}"
+  recip=$(echo ${recip} info-gnu@gnu.org)
+  ftpurl=ftp://ftp.gnu.org/gnu/${project}
+  ;;
+esac
+
+cat >&3 <<_EOF_
+From: ${fullname} <${sender}@${domain}>
+Sender: ${sender}@${domain}
+To: ${to_line}
+Subject: Release of version ${sharutils_version} of ${project}
+Reply-To: bug-gnu-utils@gnu.org
+${cc_line}
+GNU ${project} consists of two pairs of utilities: shar and unshar, and
+uuencode and uudecode.  "shar" makes so-called shell archives out of
+many files, preparing them for transmission by electronic mail
+services (converting binary data to ascii representations, breaking
+the text into multiple shar scripts, etc.).  "unshar" is the safe way
+to extract and reassemble the original files.  It will automatically
+strip off the mail headers and other introductory text.
+
+"uuencode" and "uudecode" are programs that convert binary files into
+ascii text so that the original data can pass through the email system
+without having intermediate hosts "fixing" the files en route.
+
+_EOF_
+
+test ${#rel_type} -gt 1 && print -u3 "${rel_type}\n\n"
+
+exec 4< NEWS
+while read -u4 text
+do
+  case "${text}" in
+  Version* ) break ;; esac  
+done
+
+print -u3 "${text}"
+sed '/^Version/,$d;//d' >&3 <&4
+exec 4<&-
+
+cat >&3 <<_EOF_
+${project} home:  http://www.gnu.org/software/${project}/
+primary ftp:     ${ftpurl}/
+.tar.gz:         ${ftpurl}/${project}-${sharutils_version}.tar.gz
+bug reports:     bug-gnu-utils at the usual GNU domain
+                 (be sure to mention "${project}" in the subject...
+                 it helps to spot the message.)
+bug archive:     http://lists.gnu.org/mailman/listinfo/bug-gnu-utils/
+maintainer:      ${fullname} - ${sender} at the usual GNU domain
+_EOF_
+
+exec 3>&-
+echo sendmail ${recip} bruce.korb@gmail.com \< ${tfile}
+## test $? -eq 0 && rm -f ${tfile}

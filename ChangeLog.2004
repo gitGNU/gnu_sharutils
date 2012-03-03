@@ -1,0 +1,197 @@
+2004-09-05  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar.c(shar): Do not use fscanf.  You can overflow buffer.
+	Thanks to Ulf H‰rnhammar <Ulf.Harnhammar.9485@student.uu.se>
+	for pointing this out.
+
+2004-05-15  Karl Eichwalder  <ke@gnu.franken.de>
+
+	* src/shar.c (open_output): Fix command line handling; reported by Ned
+	Ludd: http://bugs.gentoo.org/show_bug.cgi?id=46998
+	Use patch supplied by Michael Schr√∂der: http://bugzilla.suse.de
+	[#39122, password protected].
+
+2002-12-03  Karl Eichwalder  <ke@gnu.franken.de>
+
+	* configure.ac: Set 4.3.76.
+
+2002-12-03  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.75.
+
+2002-11-28  Bruno Haible  <bruno@clisp.org>
+
+	* configure.ac: Don't test for basename. Don't use AC_LIBOBJ for
+	basename.c.
+	(HAVE_BASENAME): Don't define.
+
+2002-07-20  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Set 4.3.75.
+
+2002-07-18  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.74.
+
+	* Makefile.am (DISTCLEANFILES): New variable, add stamp-h created
+	by configure.
+
+	* configure.ac: Set 4.3.74.
+
+2002-07-17  Bruno Haible  <bruno@clisp.org>
+
+	* configure.ac: Define _GNU_SOURCE and conditionally HAVE_BASENAME.
+
+2002-07-18  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.73.
+
+2002-07-18  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Remove $nls_cv_header_intl and
+	$nls_cv_header_libgt; obsolete because of <libintl.h> in
+	lib/system.h.
+
+	* Update to Gettext 0.11.3 (gettextize -f -c --intl).
+	* Run aclocal -I m4.
+
+2002-07-16  Paul Eggert  <eggert@twinsun.com>
+
+	Add support for large files, e.g., files larger than 2 GiB on
+	hosts where 'long' is 32 bits wide; cf. {lib,m4,src}/ChangeLog.
+
+	* configure.ac (AC_SYS_LARGEFILE, AC_FUNC_FSEEKO,
+	jm_AC_PREREQ_XSTRTOIMAX): Add.
+
+2002-07-16  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Set 4.3.73.
+
+2002-07-16  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.72.
+
+2002-07-08  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Set 4.3.72.
+
+2002-07-08  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.71.
+
+2002-07-07  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Move compress check to m4/sharutils; call it with
+	ke_CHECK_COMPRESS_AND_LINK.
+
+2002-07-06  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Set 4.3.71.
+
+2002-07-06  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.70.
+
+	* configure.ac: Provide enable-compress-link switch; don't
+	install the compress link by default.
+
+2002-07-02  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Print messages when verifying compress using
+	AC_MSG_CHECKING and AC_MSG_RESULT.
+
+	* configure.ac: Set 4.3.70.
+
+2002-07-01  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.61.
+
+	* configure.ac (MAN1PAG): Split MAN1PAGES into DIST_MAN1PAGES and
+	NODIST_MAN1PAGES.
+	Reported by Alexandre Duret-Lutz.
+
+	* configure.ac (AC_CONFIG_FILES): Add 'intl/Makefile'.
+
+2002-07-01  Karl Eichwalder  <ke@suse.de>
+
+	* Makefile.am (SUBDIRS): Add 'intl'.
+	Reported by Paul Eggert.
+
+2002-06-30  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Set 4.3.61.
+
+2002-06-30  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.60.
+	* configure.ac: Set 4.3.60.
+
+	* configure.ac: Define HAVE_COMPRESS if compress is available.
+
+	* configure.ac: Check for compress; if the proper compress binary
+	not found, install the compress-dummy script.
+
+2002-06-27  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Set 4.3.53.
+
+2002-06-27  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.52.
+
+	* configure.ac (AC_INIT): Use three-arg form.
+
+	* README.OLD: Rename it to...
+	* NEWS.OLD: ...renamed.
+
+	* configure.ac (AC_DEFINE([HAVE_ETC_SYSTEMID]...): Use three-arg
+	form to make acconfig.h obsolete; thus:
+	* acconfig.h: Remove it.
+
+2002-06-26  Karl Eichwalder  <ke@suse.de>
+
+	* configure.ac: Renamed from configure.in.
+
+	* configure.in (AC_PREREQ): Version 2.53.
+
+	* INSTALL: Sync likewise.
+
+2002-06-26  Paul Eggert  <eggert@twinsun.com>
+
+	* config.guess, config.sub: Sync with ftp://ftp.gnu.org/gnu/config/.
+	* depcomp, missing: Sync with Automake 1.6.2.
+
+2002-06-25  Karl Eichwalder  <ke@suse.de>
+
+	* configure.in: Set 4.3.52.
+
+2002-06-25  Karl Eichwalder  <ke@suse.de>
+
+	* Release 4.3.51.
+
+	* configure.in (AM_INIT_AUTOMAKE): Specify the required version
+	of automake (1.6), and options (gnits dist-bzip2), rather than...
+	(ALL_LINGUAS): Remove: now in po/LINGUAS.
+
+	* Makefile.am (AUTOMAKE_OPTIONS): ...here.  Remove definition.
+	(MAINT_CHARSET): Remove definition.
+
+	* configure.in: Call jm_PREREQ_ERROR, jm_FUNC_REALLOC, and
+	jm_FUNC_MALLOC.
+	Fix AC_LIBOBJ call.
+
+	* configure.in (AC_INIT): Set version to 4.3.51. 
+
+2002-06-24  Karl Eichwalder  <ke@suse.de>
+
+	* configure.in (ALL_LINGUAS): Add cs da el es gl ja ru tr zh_TW;
+	remove ja_JP.EUC.
+
+	* configure.in (AM_INIT_AUTOMAKE): Use zero-arg form of this
+	macro.
+	(AC_INIT): Use the two-arg form of thei macro.
+	(AC_PROG_INSTALL): Use this instead for AM_PROG_INSTALL.
+	(AM_CONFIG_HEADER): Use this instead of AC_CONFIG_HEADER.
+	(AC_INIT): Set version to 4.3.50.
+
+[[... see cvs ChangeLog.2000 ]]

@@ -1,0 +1,138 @@
+2005-11-15  Eric Blake  <ebb9@byu.net>
+
+        * uudecode.c (O_BINARY): Define for all platforms.
+        (decode): Always open with binary, where it matters.
+        * uuencode.c [__CYGWIN__]: Include io.h for setmode.
+        (O_BINARY): Define for all platforms.
+        (main): Always open with binary, where it matters.
+        (main) [__CYGWIN__]: Use setmode to make stdin binary.
+
+2005-11-06  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar.c(echo_status): new - report status in consistent fashion.
+	(throughout): remove many strings to scripts.def file.
+	* src/scripts.def: add many new entries and alphabetize
+	* tests/shar-1.ok: adjust to changes
+	* tests/Makefile.am: add 'shar-3' test and a clean rule
+	* tests/shar-3: new - test large multi part archive
+	* tests/shar-1: delete varying text, not arbitrary lines from sample
+	* tests/shar-2: remove unnecessary line removal
+
+2005-09-09  Eric Blake  <ebb9@byu.net>
+
+	* doc/Makefile.am(dist_man5_MANS): new value.  Don't put man5 pages into
+	man1 make variables.  :-}
+
+2005-09-08  John T. Rose  <rose@iastate.edu>
+
+	* src/Makefile.am(compress-link): install hooks need to use $(DESTDIR)
+
+2005-09-03  Bruce Korb  <bkorb@gnu.org>
+
+	* BACKLOG: this is too old for being of much use.  Removed.
+	= Released 4.5.2 to alpha.gnu.org
+
+2005-08-30  Eric Blake  <ebb9@byu.net>
+
+	* shar-2 (UNSHAR): Define and use.
+	* unshar.c (main): Use current arg in final loop.
+
+2005-08-28  Bruce Korb  <bkorb@gnu.org>
+
+	* src/mail-files.in(usage): make a function and doc the positional
+	command operands.
+	* doc/: put "BUG REPORTS" section into man pages
+
+2005-08-18  Bruce Korb  <bkorb@gnu.org>
+
+	* lib/system.h(intmax_t): Make sure we have this typedef
+	* lib/inttostr.h(intmax_t): Make sure we don't have two copies
+
+2005-08-15  Karl Berry  <karl@freefriends.org>
+
+	* doc/sharutils.texi:
+	- change main @direntry to make it align with others in the Texinfo
+	   dir-example file (and be more descriptive).
+	- legally it's necessary to write out the years in the copyright
+	   statement, not use a macro.
+	- use @insertcopying in @title so years are listed only once.
+	- Texinfo has had the @, command for a cedilla accent for years, so
+	   replace \ptexc hack for Francois's name.
+
+2005-08-13  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: generate scripts.x
+	* src/scripts.def: define several script strings that are cumbersome
+	to read/write/maintain in compilable string form.  Include in this
+	a new fragment that determines how to run "md5sum".
+	* src/scripts.tpl: describes the transform from normal script format
+	into the compilable strings
+	* src/Makefile.am: distribute the scripts.* files
+	* src/shar.c: #include "scripts.x".  Remove several strings to
+	scripts.def.  Emit the md5sum checks in a way that works with more
+	than one very ancient version of it.  Do not fill file name buffer
+	past the end of the buffer.
+	* tests/shar-1: No need to remove static date from "touch" line
+	* tests/shar-1.ok: adjust for new md5 sum stuff.
+	* tests/shar-2: adjust "sed" so it produces usable shar archive
+	* tests/shar-2.ok: adjust for new md5 sum stuff.
+
+2005-08-02  Bruce Korb  <bkorb@gnu.org>
+
+	* doc/shar.1: split overlong line
+	* doc/sharutils.texi: ditto
+	* src/remsync.in($findtempfile): improve temp file usage
+	* src/unshar.c(main): uninited variable
+	* tests/shar-1(unshar): test basic functioning
+
+2005-07-07  Bruce Korb  <bkorb@gnu.org>
+	Thanks to: Nelson H. F. Beebe <beebe@math.utah.edu>
+
+	* lib/inttostr.h(HAVE_INTMAX_T): if we don't, then typedef intmax_t
+	into a long.  This is done in "configure" for uintmax_t, but the
+	m4 macros for intmax_t do not create a substitute.  :(
+	* lib/strtoimax.c(inttostr.h): include this header for that type.
+
+2005-07-07  Stepan Kasal  <kasal@ucw.cz>
+
+	* configure.ac, m4/sharutils.m4, Makefile.am, lib/Makefile.am:
+	* src/Makefile.am: Some modernization.
+	* configure.ac: Set AM_CONDITIONAL([UUCODE]) according to
+	--disable-uucode.
+	* src/Makefile.am: Use "if UUCODE".
+	* doc/Makefile.am: Likewise.
+
+2005-06-24  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar.c(shar): Do not use snprintf, either.  "True" unix doesn't
+	have it, so pre-compute the maximum buffer size conceivable and
+	allocate that size instead.  Also, only allocate the name buffer
+	just once and reuse it.
+
+2005-04-29  Bruce Korb  <bkorb@gnu.org>
+
+	* src/unshar.c(main): unlink the temporary file created when
+	unsharing from stdin
+
+2005-04-24  Bruce Korb  <bkorb@gnu.org>
+
+	* Makefile.am(DISTCLEANFILES): stamp-h is cleanable.
+	(ACLOCAL_AMFLAGS): specify the m4 macro subdirectory
+	* src/unshar.c(load_stdin): newly extracted from main.
+	Close a microscopic timing vulnerability, fix file name length
+	"vulnerability" and remove size limit on same.
+	* contrib/pas-diffs: this file was incomprehensible, unusable and
+	diffed against a version more than a decade old.  Deleted.
+	* contrib/Makefile.am: Removed from EXTRA_DIST.
+	* m4/xstrtoimax.m4(jm_AC_TYPE_): these have acquired new prefix
+	initials: gl instead of jm.
+
+2005-01-30  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: new script replacing "autoreconf"
+	* throughout: cleanups for newer versions of tools.
+
+2005-01-23  Bruce Korb  <bkorb@gnu.org>
+
+	* tests/shar-1: modify to avoid changing for every release
+	* tests/shar-1.ok: modify the sample output, too.

@@ -1,0 +1,4 @@
+The GIT version of the sharutils no longer contains files that get
+installed from the autotools.  Before configuring the GIT version,
+you are required to have all the necessary build tools and to run
+the "bootstrap" pre-configure script.

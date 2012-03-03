@@ -1,0 +1,27 @@
+GNU sharutils NEWS - User visible changes.
+Copyright (C) 1994, 1995, 1996, 2002, 2004, 2005, 2006,
+              2007, 2009, 2010, 2011 Free Software Foundation, Inc.
+
+Version 4.11 - January 2011, by Bruce Korb
+
+* mail-files was completely broken and cannot be in use.  Removed.
+  mailshar (its wrapper script) also remvoed.
+
+
+
+Version 4.10 - August 2010, by Bruce Korb
+
+* test and handle clobber option correctly in generated scripts.
+
+
+
+Version 4.9 - March 2010, by Bruce Korb
+
+* Fix up quoting some more in the shar script messages.
+  Translators will not have to worry over shell quoting any more.
+
+
+
+Version 4.7.1 - November 2009, by Bruce Korb
+
+* uudecode will not create output file names with trailing white space
