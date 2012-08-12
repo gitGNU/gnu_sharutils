@@ -1,0 +1,13 @@
+Usage: ./unshar [OPTION]... [FILE]...
+Mandatory arguments to long options are mandatory for short options too.
+
+  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking
+  -c, --overwrite             pass -c to shar script for overwriting files
+  -e, --exit-0                same as `--split-at="exit 0"'
+  -E, --split-at=STRING       split concatenated shars after STRING
+  -f, --force                 same as `-c'
+      --help                  display this help and exit
+      --version               output version information and exit
+
+If no FILE, standard input is read.
+Report bugs to <bug-gnu-utils@gnu.org>.

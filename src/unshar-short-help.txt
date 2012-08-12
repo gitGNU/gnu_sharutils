@@ -1,0 +1,2 @@
+./unshar: unrecognized option '--error-bogus-option-name'
+Try `./unshar --help' for more information.

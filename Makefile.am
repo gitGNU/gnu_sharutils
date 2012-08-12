@@ -18,6 +18,6 @@
 
 ## Process this file with automake to produce Makefile.in.
 
-EXTRA_DIST      = config.rpath m4/gnulib-cache.m4 $(DIST_ALPHA)
-SUBDIRS         = intl lib src doc po tests
+EXTRA_DIST      = config.rpath m4 $(DIST_ALPHA)
+SUBDIRS         = intl lib libopts src doc po tests
 ACLOCAL_AMFLAGS = -I m4

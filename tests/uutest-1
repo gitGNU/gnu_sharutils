@@ -6,21 +6,30 @@ tmpfiles="test.bin test.out"
 # Make sure no files are left over.
 rm -fr $tmpfiles
 
-: ${UUDECODE=uudecode}
-${UUDECODE} $top_srcdir/tests/testdata
-result=$?
+test "X${VERBOSE}" = Xtrue && {
+  set -x
+  PS4=">$`basename $0`> "
+}
 
-if test $result -eq 0; then
-  : ${UUENCODE=uuencode}
-  ${UUENCODE} test.bin test.bin > test.out
-  result=$?
-
-  if test $result -eq 0; then
-    : ${DIFF=diff}
-    ${DIFF} $top_srcdir/tests/testdata test.out > /dev/null
+while :
+do
+  : ${UUDECODE=$top_builddir/src/uudecode}
+  ${UUDECODE} $top_srcdir/tests/testdata || {
     result=$?
-  fi
-fi
+    break
+  }
+
+  : ${UUENCODE=$top_builddir/src/uuencode}
+  ${UUENCODE} test.bin test.bin > test.out || {
+    result=$?
+    break
+  }
+
+  : ${DIFF=diff}
+  ${DIFF} $top_srcdir/tests/testdata test.out > /dev/null
+  result=$?
+  break
+done
 
 rm -fr $tmpfiles
 

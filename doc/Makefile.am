@@ -1,6 +1,6 @@
 ## Makefile for the doc subdirectory of the GNU NLS Utilities
 ##
-## Copyright (C) 1995, 1996, 2005, 2007 Free Software Foundation, Inc.
+## Copyright (C) 1995, 1996, 2005, 2007-2012 Free Software Foundation, Inc.
 ##
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -18,10 +18,15 @@
 
 ## Process this file with automake to produce Makefile.in.
 
-info_TEXINFOS = sharutils.texi
+info_TEXINFOS   = sharutils.texi
+texi_files      = fdl.texi version.texi \
+	invoke-shar.texi invoke-unshar.texi \
+	invoke-uudecode.texi invoke-uuencode.texi
 
-dist_man1_MANS = shar.1 unshar.1
-dist_man5_MANS =
+dist_man1_MANS  = shar.1 unshar.1
+dist_man5_MANS  =
+man_files       = $(dist_man1_MANS) \
+	shar.1 unshar.1 uuencode.1 uudecode.1 uuencode.5
 
 if UUCODE
   dist_man1_MANS += uuencode.1
@@ -29,12 +34,8 @@ if UUCODE
   man1_MANS = uudecode.1
 endif
 
-CLEANFILES = $(man1_MANS) $(man5_MANS)
-EXTRA_DIST = fdl.texi
-
-uudecode.1: Makefile
-	man1base=`echo $(man1dir) | sed 's@.*/\(.*\)@\1@'`; \
-	echo ".so $$man1base/uuencode.1" > $@
+CLEANFILES  = $(man1_MANS)  $(man5_MANS)
+EXTRA_DIST  = $(texi_files) $(man_files)
 
 sharutils.txt :
 	makeinfo --no-split --fill-column=70 --paragraph-indent=0 --no-headers \

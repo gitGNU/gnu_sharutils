@@ -26,7 +26,5 @@ TESTS_ENVIRONMENT = \
 
 EXTRA_DIST = $(TESTS) testdata shar-1.ok
 
-clean : local-clean
-
-local-clean :
+clean-local :
 	rm -rf shar-1-* shar-1.in shar-2*.* $${TMPDIR=/tmp}/shar-3*.d

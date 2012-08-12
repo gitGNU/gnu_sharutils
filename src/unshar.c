@@ -2,7 +2,7 @@
 static const char cright_years_z[] =
 
 /* Handle so called `shell archives'.
-   Copyright (C) */ "1994-1996, 2002, 2005-2007, 2010-2011";
+   Copyright (C) */ "1994-1996, 2002, 2005-2012";
 
 /* Free Software Foundation, Inc.
 

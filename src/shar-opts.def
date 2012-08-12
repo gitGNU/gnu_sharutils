@@ -1,0 +1,837 @@
+AutoGen Definitions options;
+/*
+   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+ */
+#define NEED_AUTHORS
+#include shar-std.def
+
+prog-name   = shar;
+prog-title  = 'create a shell archive';
+argument    = '[file ...]';
+full-usage  = `cat shar-full-help.txt`;
+short-usage = `cat shar-short-help.txt`;
+
+explain     = <<- _EOExplain_
+	If no @file{file}s are specified, the list of input files is read
+	from a standard input.  Standard input must not be a terminal.
+	_EOExplain_;
+
+detail      = <<- _EODetail_
+	@command{shar} creates "shell archives" (or shar files) which are in
+	text format and can be emailed.  These files may be unpacked later by
+	executing them with /bin/sh.  The resulting archive is sent to
+	standard out unless the @option{-o} option is given.  A wide range of
+	features provide extensive flexibility in manufacturing shars and in
+	specifying shar "smartness".  Archives may be "vanilla" or
+	comprehensive.
+
+	Options may be specified in any order until a @code{file} argument is
+	recognized.  If the @code{intermix-type} option has been specified,
+	more compression and encoding options will be recognized after the
+	file @code{file} argument.
+
+	Though this program supports uuencoded files, uuencoding is deprecated.
+	If you are emailing files, please consider mime-encoded files.
+	Base 64 is the preferred encoding method.
+	_EODetail_;
+
+usage-message;
+die-code;
+exit-name[1]  = option-error;
+exit-desc[1]  = 'The command options were misconfigured.';
+exit-name[2]  = file-not-found;
+exit-desc[2]  = 'a specified input could not be found';
+exit-name[3]  = cannot-opendir;
+exit-desc[3]  = 'open/close of specified directory failed';
+exit-name[4]  = failed;
+exit-desc[4]  = 'Resource limit/miscelleaneous shar command failure';
+exit-name[63] = bug;
+exit-desc[63] = 'There is a shar command bug.  Please report it.';
+
+include = <<- _EOInclude_
+	#include <string.h>
+
+	int initialization_done = 0;
+	int optidx = 0;
+	_EOInclude_;
+
+export = <<- _EOExport_
+	extern int initialization_done;
+	extern int optidx;
+	_EOExport_;
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = compression;
+    documentation;
+    descrip     = 'specifying compression';
+};
+
+flag = {
+    name        = intermix-type;
+    value       = p;
+    descrip     = 'specify compression for input files';
+    flags-cant  = vanilla-operation;
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Allow positional parameter options.  The compression method and
+	encoding method options may be intermixed with file names.
+	Files named after these options will be processed in the specified way.
+	_EODoc_;
+};
+
+flag = {
+    name        = compactor;
+    value       = C;
+    arg-type    = string;
+    arg-name    = PROGRAM;
+    descrip     = 'specify compaction (compression) program';
+    max         = NOLIMIT;
+    flags-cant  = vanilla-operation;
+    call-proc   = set_compaction;
+    settable;
+    doc = <<- _EODoc_
+
+	@command{compress}, @command{gzip} and @command{bzip2} are specified by name
+	and have tailored options.  There is also @command{xz} now.  Specify
+	@command{xz} with @option{-C xz} or @option{--compactor=xz}.
+
+	Specifying the compactor "none" will then disable file compression.
+
+	Any compression other than "none" will force uuencoding of files.
+	(Compressed files are never processed as plain text.)
+	_EODoc_;
+};
+
+flag = {
+    name        = compress;
+    value       = Z;
+    ifdef       = HAVE_COMPRESS;
+    descrip     = '@command{compress} and @command{uuencode} files';
+    max         = NOLIMIT;
+    flag-code   = '    SET_OPT_COMPACTOR("compress");';
+    doc = <<- _EODoc_
+	@command{compress} and @command{uuencode} all files prior to
+	packing.  The recipient must have @command{uudecode} and
+	@command{compress} in order to unpack.
+	_EODoc_;
+};
+
+flag = {
+    name        = bzip2;
+    value       = j;
+    descrip     = '@command{bzip2} and @command{uuencode} files';
+    max         = NOLIMIT;
+    flag-code   = '    SET_OPT_COMPACTOR("bzip2");';
+    doc = <<- _EODoc_
+	@command{bzip2} compress and @command{uuencode} all files
+	prior to packing.  The recipient must have @command{uudecode}
+	@command{bzip2} in order to unpack.
+	_EODoc_;
+};
+
+flag = {
+    name        = gzip;
+    value       = z;
+    descrip     = '@command{gzip} and @command{uuencode} files';
+    max         = NOLIMIT;
+    flag-code   = '    SET_OPT_COMPACTOR("gzip");';
+    doc = <<- _EODoc_
+	@command{gzip} compress and @command{uuencode} all files prior
+	to packing.  The recipient must have @command{uudecode} and
+	@command{gzip} in order to unpack.
+	_EODoc_;
+};
+
+flag = {
+    name        = level-of-compression;
+    value       = g;
+    arg-type    = number;
+    arg-name    = LEVEL;
+    arg-range   = '1->9';
+    arg-default = 9;
+    descrip     = 'pass @file{LEVEL} for compression';
+    doc = <<- _EODoc_
+	Some compression programs allow for a level of compression.  The default
+	is @code{9}, but this option allows you to specify something else.
+	This value is used by @command{gzip}, @command{bzip2} and @command{xz},
+	but not @command{compress}.
+	_EODoc_;
+};
+
+flag = {
+    name        = level-for-gzip;
+    aliases     = level-of-compression;
+};
+
+flag = {
+    name        = bits-per-code;
+    value       = b;
+    arg-type    = string;
+    arg-name    = BITS;
+    arg-default = 12;
+    flag-code   = <<- _EOCode_
+	    check_intermixing(pOptions, pOptDesc);
+	    SET_OPT_COMPACTOR("compress");
+	_EOCode_;
+    ifdef       = HAVE_COMPRESS;
+    descrip     = 'pass @file{bits} (default 12) to compress';
+    doc =
+    "This is the compression factor used by the @command{compress} program.";
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = encoding;
+    descrip     = 'specifying file encoding methodology';
+    documentation = <<- _EODoc_
+	Files may be stored in the shar either as plain text or uuencoded.
+	By default, the program selects which by examining the file.
+	You may force the selection for all files.  In intermixed option/file
+	mode, this setting may be changed during processing.
+	_EODoc_;
+};
+
+flag = {
+    name        = mixed-uuencode;
+    value       = M;
+    descrip     = 'decide uuencoding for each file';
+    call-proc   = check_intermixing;
+    equivalence = mixed-uuencode;
+    settable;
+    doc = <<- _EODoc_
+	Automatically determine if the files are text or binary and archive
+	correctly.  Files found to be binary are uuencoded prior to packing.
+	This is the default behavior for @file{shar}.
+
+	For a file to be considered a text file instead of a binary file,
+	all the following should be true:
+	@enumerate
+	@item
+	The file does not contain any ASCII control character besides @key{BS}
+	(backspace), @key{HT} (horizontal tab), @key{LF} (new line) or
+	@key{FF} (form feed).
+	@item
+	The file contains no character with its eighth-bit set.
+	@item
+	The file contains no line beginning with the five letters
+	"@samp{from }", capitalized or not.  (Mail handling programs
+	will often gratuitously insert a @code{>} character before it.)
+	@item
+	The file is either empty or ends with a @key{LF} (newline) byte.
+	@item
+	No line in the file contains more than 200 characters.  For counting
+	purpose, lines are separated by a @key{LF} (newline).
+	@end enumerate
+	_EODoc_;
+};
+
+flag = {
+    name        = uuencode;
+    value       = B;
+    descrip     = 'treat all files as binary';
+    call-proc   = check_intermixing;
+    equivalence = mixed-uuencode;
+    doc = <<- _EODoc_
+	Use @command{uuencode} prior to packing all files.  This
+	increases the size of the archive.  The recipient must have
+	@command{uudecode} in order to unpack.  Compressed files are
+	always encoded.
+	_EODoc_;
+};
+
+flag = {
+    name        = text-files;
+    value       = T;
+    descrip     = 'treat all files as text';
+    call-proc   = check_intermixing;
+    equivalence = mixed-uuencode;
+    settable;
+    doc = <<- _EODoc_
+	If you have files with non-ascii bytes or text that some mail handling
+	programs do not like, you may find difficulties.  However, if you are
+	using FTP or SSH/SCP, the non-conforming text files should be okay.
+	_EODoc_;
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = in-out;
+    documentation;
+    descrip     = 'specifying file selection and output modes';
+};
+
+flag = {
+    name        = output-prefix;
+    value       = o;
+    arg-type    = string;
+    arg-name    = PREFIX;
+    descrip     = 'print output to file PREFIX.nn';
+    call-proc   = validate_opt_context;
+    settable;
+    doc = <<- _EODoc_
+	Save the archive to files PREFIX.01 thru PREFIX.nn instead of sending
+	all output to standard out.  Must be specified when the
+	@code{whole-size-limit} or @code{split-size-limit} options are
+	specified.
+
+	When @var{prefix} contains a @samp{%} character, @var{prefix} is then
+	interpreted as a @code{sprintf} format, which should be able to display
+	a single decimal number.  When @var{prefix} does not contain such a
+	@samp{%} character, the string @samp{.%02d} is internally appended.
+	_EODoc_;
+};
+
+flag = {
+    name        = whole-size-limit;
+    value       = l;
+    arg-type    = number;
+    arg-name    = SIZE;
+    scaled;
+    flags-must  = output-prefix;
+    arg-range   = '8->1023', '8192->4194304';
+    equivalence = whole-size-limit;
+    descrip     = 'split archive, not files, to @i{size}';
+    doc = <<- _EODoc_
+	Limit the output file size to SIZE bytes, but don't split input files.
+	If SIZE is less than 1024, then it will be multiplied by 1024.
+	The value may also be specified with a k, K, m or M suffix.
+	The number is then multiplied by 1000, 1024, 1000000, or 1048576,
+	respectively.  4M (4194304) is the maximum allowed.
+
+	Unlike the @code{split-size-limit} option, this allows the recipient
+	of the shell archives to be unpacked in any order.
+	_EODoc_;
+};
+
+flag = {
+    name        = split-size-limit;
+    value       = L;
+    arg-type    = number;
+    arg-name    = SIZE;
+    scaled;
+    flags-must  = output-prefix;
+    arg-range   = '8->1023', '8192->4194304';
+    equivalence = whole-size-limit;
+    descrip     = 'split archive or files to @i{size}';
+    doc = <<- _EODoc_
+	Limit output file size to XXk bytes and split files if necessary.  The
+	archive parts created with this option must be unpacked in correct
+	order.  If the recipient of the shell archives wants to put all of
+	them in a single email folder (file), they will have to be saved in
+	the correct order for @command{unshar} to unpack them all at once (using
+	one of the split archive options).  @xref{unshar Invocation}.
+	_EODoc_;
+};
+
+flag = {
+    name        = input-file-list;
+    value       = I;
+    arg-type    = string;
+    arg-name    = FILE;
+    descrip     = 'read file list from a file';
+    settable;
+    flag-code   = <<- _EOCode_
+	    char const * fnm = pOptDesc->optArg.argString;
+	    validate_opt_context (pOptions, pOptDesc);
+	    if (strcmp (fnm, "-") != 0) {
+	        FILE * fp = freopen(fnm, "r", stdin);
+	        if (fp != stdin)
+	            usage_message(_("Cannot reopen %s as stdin"), fnm);
+	    }
+	_EOCode_;
+
+    doc = <<- _EODoc_
+	This option causes the named file to be reopened as standard input.
+	If specified, no file names may appear on the command line.  If no
+	files are found on the input line, then standard input is read for
+	input file names.  Use of this option will prohibit input files from
+	being listed on the command line.
+
+	Read list of files to be packed from the standard input rather than
+	from the command line.  Input must be in a form similar to that
+	generated by the find command, one filename per line.  This switch is
+	especially useful when the command line will not hold the list of
+	files to be packed.
+
+	If the @option{--intermix-type} option is specified on the command
+	line, then the compression options may be included in the standard
+	input on lines by themselves and no file name may begin with a hyphen.
+
+	For example:
+	@example
+	@{ echo --compact xz
+	   find . -type f -print | sort
+	@} | shar -S -p -L50K -o /somewhere/big
+	@end example
+	_EODoc_;
+};
+
+flag = {
+    name        = stdin-file-list;
+    value       = S;
+    descrip     = 'read file list from standard input';
+    flag-code   = '    SET_OPT_INPUT_FILE_LIST("-");';
+
+    doc = <<- _EODoc_
+	This option is actually a no-op.  It is a wrapper for
+	@option{--input-file-list=-}.
+	_EODoc_;
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = headers;
+    documentation;
+    descrip     = 'Controlling the shar headers';
+};
+
+flag = {
+    name        = archive-name;
+    value       = n;
+    arg-type    = string;
+    arg-name    = NAME;
+    descrip     = 'use @i{name} to document the archive';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Name of archive to be included in the header of the shar files.
+	See the @option{--net-headers} option.
+	_EODoc_;
+};
+
+flag = {
+    name        = submitter;
+    value       = s;
+    arg-type    = string;
+    arg-name    = 'WHO@WHERE';
+    descrip     = 'override the submitter name';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	@command{shar} will normally determine the submitter name by querying
+	the system.  Use this option if it is being done on behalf of another.
+	_EODoc_;
+};
+
+flag = {
+    name        = net-headers;
+    value       = a;
+    descrip     = 'output Submitted-by: & Archive-name: headers';
+    flags-must  = archive-name;
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Adds specialized email headers:
+	@example
+	Submitted-by: @i{who@@where}
+	Archive-name: @i{name}/part##
+	@end example
+	The @i{who@@where} is normally derived, but can be specified with the
+	@option{--submitter} option.  The @i{name} must be provided with the
+	@option{--archive-name} option.  If the archive name includes a slash
+	(@code{/}) character, then the @code{/part##} is omitted.  Thus
+	@samp{-n xyzzy} produces:
+	@example
+	xyzzy/part01
+	xyzzy/part02
+	@end example
+
+	@noindent
+	while @samp{-n xyzzy/patch} produces:
+	@example
+	xyzzy/patch01
+	xyzzy/patch02
+	@end example
+
+	@noindent
+	and @samp{-n xyzzy/patch01.} produces:
+	@example
+	xyzzy/patch01.01
+	xyzzy/patch01.02
+	@end example
+	_EODoc_;
+};
+
+flag = {
+    name        = cut-mark;
+    value       = c;
+    descrip     = 'start the shar with a cut line';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	A line saying 'Cut here' is placed at the
+	start of each output file.
+	_EODoc_;
+};
+
+flag = {
+    name        = translate;
+    value       = t;
+    descrip     = 'translate messages in the script';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Translate messages in the script.  If you have set the @samp{LANG}
+	environment variable, messages printed by @command{shar} will be in the
+	specified language.  The produced script will still be emitted using
+	messages in the lingua franca of the computer world: English.  This
+	option will cause the script messages to appear in the languages
+	specified by the @samp{LANG} environment variable set when the script
+	is produced.
+	_EODoc_;
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = xmit-defenses;
+    documentation;
+    descrip     = 'Protecting against transmission issues:';
+    texi-text   = <<- _EOTexiText_
+	Transmission of shell archives is not always free of errors.  So one
+	should make consistency checks on the receiving site.  A very simple
+	(and unreliable) method is running the UNIX @command{wc} tool on the
+	output file.  This can report the number of characters in the file.
+
+	As one can guess this does not catch all errors.  Especially changing
+	of a character value does not change the computed check sum.  To
+	achieve this goal better method were invented and standardized.  One
+	very strong is MD5 (MD = message digests).  This is standardized in
+	RFC 1321.  The produced shell scripts do not force the @command{md5sum}
+	program to be installed on the system.  This is necessary because it
+	is not yet part of every UNIX.  The program is however not necessary
+	for producing the shell archive.
+	_EOTexiText_;
+};
+
+flag = {
+    name        = no-character-count;
+    descrip     = 'do not use `wc -c\' to check size';
+    call-proc   = validate_opt_context;
+    settable;
+    doc = <<- _EODoc_
+	Do NOT check each file with 'wc -c' after unpack.
+	The default is to check.
+	_EODoc_;
+};
+
+flag = {
+    name        = no-md5-digest;
+    value       = D;
+    descrip     = "do not use @command{md5sum} digest to verify";
+    call-proc   = validate_opt_context;
+    settable;
+    doc = <<- _EODoc_
+	Do @emph{not} use @command{md5sum} digest to verify the unpacked files.
+	The default is to check.
+	_EODoc_;
+};
+
+flag = {
+    name        = force-prefix;
+    value       = F;
+    descrip     = 'apply the prefix character on every line';
+    call-proc   = validate_opt_context;
+    settable;
+    doc = <<- _EODoc_
+	Forces the prefix character to be prepended to every line, even if
+	not required.  This option may slightly increase the size of the archive,
+	especially if @option{--uuencode} or a compression option is used.
+	_EODoc_;
+};
+
+flag = {
+    name        = here-delimiter;
+    value       = d;
+    arg-type    = string;
+    arg-name    = DELIM;
+    arg-default = "SHAR_EOF";
+    descrip     = 'use @i{delim} to delimit the files';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Use DELIM to delimit the files in the shar instead of SHAR_EOF.
+	This is for those who want to personalize their shar files.
+	The delimiter will always be prefixed and suffixed with underscores.
+	_EODoc_;
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = shar-flavors;
+    documentation;
+    descrip     = 'Producing different kinds of shars:';
+};
+
+flag = {
+    name        = vanilla-operation;
+    value       = V;
+    descrip     = 'produce very simple shars';
+    flag-code   = <<- _EOCode_
+	    validate_opt_context (pOptions, pOptDesc);
+
+	    SET_OPT_NO_CHARACTER_COUNT;
+	    SET_OPT_NO_TIMESTAMP;
+	    SET_OPT_NO_MD5_DIGEST;
+	    SET_OPT_NO_I18N;
+	    SET_OPT_NO_PIPING;
+	    SET_OPT_FORCE_PREFIX;
+	_EOCode_;
+
+    doc = <<- _EODoc_
+	This option produces @dfn{vanilla} shars which rely only upon the
+	existence of @command{echo}, @command{test} and @command{sed} in the
+	unpacking environment.
+
+	It changes the default behavior from mixed mode
+	(@option{--mixed-uuencode}) to text mode (@option{--text-files}).
+	Warnings are produced if options are specified that will require
+	decompression or decoding in the unpacking environment.
+
+	_EODoc_;
+};
+
+flag = {
+    name        = no-piping;
+    value       = P;
+    descrip     = 'use temporary files between programs';
+    call-proc   = validate_opt_context;
+    settable;
+    doc = <<- _EODoc_
+	In the @file{shar} file, use a temporary file to hold file contents
+	between unpacking stages instead of using pipes.  This option is
+	mandatory when you know the unpacking will happen on systems that do
+	not support pipes.
+	_EODoc_;
+};
+
+flag = {
+    name        = no-check-existing;
+    value       = x;
+    descrip     = 'blindly overwrite existing files';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Create the archive so that when processed it will overwrite existing
+	files without checking first.  If neither this option nor the
+	@option{--query-user} option is specified, the unpack will not
+	overwrite pre-existing files.  In all cases, however, if
+	@option{--cut-mark} is passed as a parameter to the script when
+	unpacking, then existing files will be overwritten unconditionally.
+
+	@example
+	sh shar-archive-file -c
+	@end example
+	_EODoc_;
+};
+
+flag = {
+    name        = query-user;
+    value       = X;
+    descrip     = 'ask user before overwriting files';
+    flags-cant  = vanilla-operation;
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	When unpacking, interactively ask the user if files should be
+	overwritten.  Do not use for shars submitted to the net.
+
+	Use of this option produces shars which @emph{will} cause problems
+	with some unshar-style procedures, particularily when used
+	together with vanilla mode (@option{--vanilla-operation}).  Use this
+	feature mainly for archives to be passed among agreeable parties.
+	Certainly, @option{-X} is @emph{not} for shell archives which are to be
+	submitted to Usenet or other public networks.
+
+	The problem is that @command{unshar} programs or procedures often feed
+	@file{/bin/sh} from its standard input, thus putting @file{/bin/sh}
+	and the shell archive script in competition for input lines.  As an
+	attempt to alleviate this problem, @command{shar} will try to detect
+	if @file{/dev/tty} exists at the receiving site and will use it to
+	read user replies.  But this does not work in all cases, it may happen
+	that the receiving user will have to avoid using @command{unshar}
+	programs or procedures, and call @file{/bin/sh} directly.  In vanilla
+	mode, using @file{/dev/tty} is not even attempted.
+	_EODoc_;
+};
+
+flag = {
+    name        = no-timestamp;
+    value       = m;
+    descrip     = 'do not restore modification times';
+    call-proc   = validate_opt_context;
+    settable;
+    doc = <<- _EODoc_
+	Avoid generating 'touch' commands to restore the file modification
+	dates when unpacking files from the archive.
+
+	When file modification times are not preserved, project build programs
+	like "make" will see built files older than the files they get built
+	from.  This is why, when this option is not used, a special effort is
+	made to restore timestamps.
+	_EODoc_;
+};
+
+flag = {
+    name        = quiet-unshar;
+    value       = Q;
+    descrip     = 'avoid verbose messages at unshar time';
+    flag-cant   = query-user;
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Verbose OFF.  Disables the inclusion of comments to be output when
+	the archive is unpacked.
+	_EODoc_;
+};
+
+flag = {
+    name        = basename;
+    value       = f;
+    descrip     = 'restore in one directory, despite hierarchy';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	Restore by the base file name only, rather than path.  This option
+	causes only file names to be used, which is useful when building a
+	shar from several directories, or another directory.  Note that if a
+	directory name is passed to shar, the substructure of that directory
+	will be restored whether this option is specified or not.
+	_EODoc_;
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = internationalization;
+    documentation;
+    descrip     = 'Internationalization options:';
+};
+
+flag = {
+    name        = no-i18n;
+    descrip     = 'do not internationalize';
+    call-proc   = validate_opt_context;
+    settable;
+    doc = <<- _EODoc_
+	Do not produce internationalized shell archives, use default English
+	messages.  By default, shar produces archives that will try to output
+	messages in the unpackers preferred language (as determined by the
+	LANG/LC_MESSAGES environmental variables) when they are unpacked.  If
+	no message file for the unpackers language is found at unpack time,
+	messages will be in English.
+	_EODoc_;
+};
+
+flag = {
+    name        = print-text-domain-dir;
+    descrip     = 'print directory with shar messages';
+    flag-code   = <<- _EOCode_
+	    validate_opt_context (pOptions, pOptDesc);
+
+	#if !defined ENABLE_NLS || defined HAVE_CATGETS \
+	    || (defined HAVE_GETTEXT && !defined __USE_GNU_GETTEXT)
+	    exit (EXIT_FAILURE);
+	#else
+	    puts (LOCALEDIR);
+	    exit (EXIT_SUCCESS);
+	#endif
+	_EOCode_;
+
+    doc = <<- _EODoc_
+	Prints the directory shar looks in to find messages files
+	for different languages, then immediately exits.
+	_EODoc_;
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+flag = {
+    name        = feedback;
+    documentation;
+    descrip     = 'user feedback/entertainment';
+};
+
+flag = {
+    name        = quiet;
+    value       = q;
+    descrip     = 'do not output verbose messages';
+    call-proc   = validate_opt_context;
+    doc = <<- _EODoc_
+	omit progress messages.
+	_EODoc_;
+};
+
+flag = {
+    name        = silent;
+    aliases     = quiet;
+};
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+doc-section = {
+    ds-type = EXAMPLES;
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	The first shows how to make a shell archive out of all C program
+	sources.  The second produces a shell archive with all @file{.c} and
+	@file{.h} files, which unpacks silently.  The third gives a shell
+	archive of all uuencoded @file{.arc} files, into numbered files
+	starting from @file{arc.sh.01}.  The last example gives a shell
+	archive which will use only the file names at unpack time.
+
+	@example
+	shar *.c > cprog.shar
+	shar -Q *.[ch] > cprog.shar
+	shar -B -l28 -oarc.sh *.arc
+	shar -f /lcl/src/u*.c > u.sh
+	@end example
+	_EOText_;
+};
+
+doc-section = {
+    ds-type = WARNINGS;
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	No attempt is made to restore the protection and modification dates
+	for directories, even if this is done by default for files.  Thus, if
+	a directory is given to @code{shar}, the protection and modification
+	dates of corresponding unpacked directory may not match those of the
+	original.
+
+	If a directory is passed to shar, it may be scanned more than once, to
+	conserve memory.  Therefore, do not change the directory contents
+	while shar is running.
+
+	Be careful that the output file(s) are not included in the inputs or
+	shar may loop until the disk fills up.  Be particularly careful when a
+	directory is passed to shar that the output files are not in that
+	directory or a subdirectory of it.
+
+	Use of the compression and encoding options will slow the archive
+	process, perhaps considerably.
+
+	Use of the @option{--query-user} produces shars which @emph{will}
+	cause problems with many unshar procedures.  Use this feature only for
+	archives to be passed among agreeable parties.  Certainly,
+	@code{query-user} is NOT for shell archives which are to be
+	distributed across the net.  The use of compression in net shars will
+	cause you to be flamed off the earth.  Not using the
+	@option{--no-timestamp} or @option{--force-prefix} options may also
+	get you occasional complaints.  Put these options into your
+	@file{~/.sharrc} file.
+	_EOText_;
+};
+
+doc-section = {
+    ds-type = 'SEE ALSO';
+    ds-text = 'unshar(1)';
+};

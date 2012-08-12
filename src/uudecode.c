@@ -2,7 +2,7 @@
 static const char cright_years_z[] =
 
 /* uudecode utility.
-   Copyright (C) */ "1994-1996, 2002, 2005-2007, 2010-2011";
+   Copyright (C) */ "1994-1996, 2002, 2005-2012";
 
 /* Free Software Foundation, Inc.
 
@@ -487,7 +487,7 @@ main (int argc, char const * const * argv)
   bindtextdomain (PACKAGE, LOCALEDIR);
   textdomain (PACKAGE);
 
-  while (opt = getopt_long (argc, argv, "o:", longopts, (int *) NULL),
+  while (opt = getopt_long (argc, (void *)argv, "o:", longopts, (int *) NULL),
 	 opt != EOF)
     {
       switch (opt)

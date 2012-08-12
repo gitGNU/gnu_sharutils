@@ -2,7 +2,7 @@
 
 test "X${VERBOSE}" = Xtrue && {
   set -x
-  PS4=">`basename $0`> "
+  PS4="> "
 }
 
 current_dir=`pwd`
@@ -12,17 +12,44 @@ testname=shar-3
 testdir=${TMPDIR}/${testname}-$$.d
 rm -rf ${testdir}
 (umask 077 ; mkdir ${testdir}) || exit 1
-opts="-S -o ${testdir}/${testname}-%04d.shar"
-opts="${opts} -L32 -n ${testname}-test -s ${testname} -z"
+opts="-o ${testdir}/${testname}-%04d.shar"
+opts="${opts} -L256K -n ${testname}-test -s ${testname}"
 
 shar=`cd ../src ; pwd`/shar
 unshar=`cd ../src ; pwd`/unshar
 top_builddir=`cd ${top_builddir} ; pwd`
 
+nocompression=false
 cd ${top_builddir}
-find . -type f | \
-  sed 's,^./,,'  | \
-  ${shar} -q ${opts}
+{
+  ctypes='gzip bzip2 xz'
+  for f in `ls -1A`
+  do
+    case "`file $f`" in
+
+    *'directory'* | *text*'long lines'* )
+      echo --compact=`set -- $ctypes ; echo $1`
+      ctypes=`set -- $ctypes ; echo $2 $3 $1`
+      nocompression=false
+      ;;
+
+    *'text'* )
+      $nocompression || {
+        echo --compact=none
+        nocompression=true
+      }
+      ;;
+
+    * )
+      echo --compact=`set -- $ctypes ; echo $1`
+      ctypes=`set -- $ctypes ; echo $2 $3 $1`
+      nocompression=false
+      ;;
+    esac
+    echo $f
+  done
+} > ${testdir}/list
+${shar} -pq ${opts} -I${testdir}/list
 
 cd ${testdir}
 mkdir ${testname}.d
@@ -30,12 +57,14 @@ opts=-d${testname}.d
 
 for f in ${testname}-*.shar
 do
-  ${unshar} ${opts} ${f}
+  ${unshar} ${opts} ${f} || exit 1
 done >/dev/null
 
 if diff -r ${top_builddir} ${testname}.d
 then :
-else echo ${top_builddir} and ${testname}.d differ ; exit 1
+else
+  echo ${top_builddir} and ${testdir}/${testname}.d differ
+  exit 1
 fi
 
 cd ${current_dir}

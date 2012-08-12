@@ -1,0 +1,75 @@
+AutoGen Definitions options;
+/*
+   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+ */
+#include shar-std.def
+
+prog-name   = uudecode;
+prog-title  = 'decode an encoded file';
+argument    = '[ file ... ]';
+full-usage  = `cat uudecode-full-help.txt`;
+short-usage = `cat uudecode-short-help.txt`;
+
+explain = 'If @file{file} is not provided, then standard input is decoded.';
+help-value;
+
+detail = <<- _EODetail_
+	@file{Uudecode} transforms uuencoded @file{files} (or standard input)
+	into the original form.  The resulting file is named @file{name} (or
+	@file{outfile} if the \-o option is given) and will have the mode of
+	the original file except that setuid and execute bits are not
+	retained.  If @file{outfile} or @file{name} is /dev/stdout the result
+	will be written to standard output. @file{uudecode} ignores any
+	leading and trailing lines.  The program determines from the header
+	which of the two supported encoding schemes was used.
+	_EODetail_;
+
+include = '#include <error.h>' "\n" '#include <errno.h>';
+
+flag = {
+    name        = output-file;
+    value       = o;
+    arg-type    = string;
+    arg-name    = file;
+    descrip     = 'direct output to @file{file}';
+    flag-code   = <<- _EOCode_
+	  FILE * fp = freopen (pOptDesc->optArg.argString, "w", stdout);
+	  if (fp != stdout)
+	    {
+	      error (0, errno, "%s", pOptDesc->optArg.argString);
+	      exit (UUDECODE_EXIT_FAILURE);
+	    }
+	_EOCode_;
+    doc = <<- _EODoc_
+	_EODoc_;
+};
+
+doc-section = {
+    ds-type = BUGS;
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	If more than one file is provided and the -o option is given, or if
+	more than one @file{name} in the encoded files are the same, then the
+	result is probably not what is expected.
+	_EOText_;
+};
+
+doc-section = {
+    ds-type = STANDARDS;
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	This implementation is compliant with P1003.2b/D11.
+	_EOText_;
+};

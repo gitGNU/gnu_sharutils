@@ -2,7 +2,7 @@
 static const char cright_years_z[] =
 
 /* uuencode utility.
-   Copyright (C) */ "1994-1996, 2002, 2005-2007, 2010-2011";
+   Copyright (C) */ "1994-1996, 2002, 2005-2012";
 
 /* Free Software Foundation, Inc.
 
@@ -61,12 +61,12 @@ static const char cright_years_z[] =
 
 #define  UUENCODE_C  1
 #include "local.h"
+#include "uuencode-opts.h"
 
 #if HAVE_LOCALE_H
 #else
 # define setlocale(Category, Locale)
 #endif
-#define _(str) gettext (str)
 
 #if __CYGWIN__
 # include <fcntl.h>
@@ -74,23 +74,10 @@ static const char cright_years_z[] =
 #endif
 
 #define	IRWALL_MODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
-
-static struct option longopts[] =
-{
-  { "base64",           0, 0, 'm' },
-  { "encode-file-name", 0, 0, 'e' },
-  { "help",             0, 0, 'h' },
-  { "version",          0, 0, 'v' },
-  { NULL,               0, 0, '\0' }
-};
+char * output_name = NULL;
 
 static inline void try_putchar __P ((int));
 static void encode __P ((void));
-static void usage __P ((int))
-#if defined __GNUC__ && ((__GNUC__ == 2 && __GNUC_MINOR__ >= 5) || __GNUC__ > 2)
-     __attribute__ ((noreturn))
-#endif
-;
 
 /* The name this program was run with. */
 const char *program_name;
@@ -138,15 +125,56 @@ try_putchar (int c)
 | Copy from IN to OUT, encoding as you go along.  |
 `------------------------------------------------*/
 
+static size_t
+encode_block (char * out, unsigned char const * in, size_t in_len)
+{
+  char * start = out;
+
+  while (in_len >= 3)
+    {
+      *(out++) = ENC (in[0] >> 2);
+      *(out++) = ENC (((in[0] & 0x03) << 4) + ((in[1] >> 4) & 0x0F));
+      *(out++) = ENC (((in[1] & 0x0F) << 2) + ((in[2] >> 6) & 0x03));
+      *(out++) = ENC (in[2] & 0x3F);
+      in_len -= 3;
+      in += 3;
+    }
+
+  if (in_len > 0)
+    {
+      unsigned char lc = (in_len > 1) ? in[1] : '\0';
+      *(out++) = ENC (in[0] >> 2);
+      *(out++) = ENC (((in[0] & 0x03) << 4) + ((lc >> 4) & 0x0F));
+
+      if (HAVE_OPT(BASE64))
+        {
+          *(out++) = (in_len > 1) ? ENC ((lc & 0x0F) << 2) : '=';
+          *(out++) = '=';
+        }
+      else
+        {
+          *(out++) = ENC ((lc & 0x0F) << 2);
+          *(out++) = ENC (0);
+        }
+    }
+
+  *(out++) = '\n';
+  return out - start;
+}
+
+/*------------------------------------------------.
+| Copy from IN to OUT, encoding as you go along.  |
+`------------------------------------------------*/
+
 static void
 encode (void)
 {
   register int n;
   int finishing = 0;
-  register char *p;
-  char buf[46];  /* 45 should be enough, but one never knows... */
+  unsigned char buf[45];
+  char buf_out[60];
 
-  while ( !finishing && (n = fread (buf, 1, 45, stdin)) > 0 )
+  while ( !finishing && (n = fread (buf, 1, sizeof(buf), stdin)) > 0 )
     {
       if (n < 45)
         {
@@ -156,31 +184,12 @@ encode (void)
             error (EXIT_FAILURE, 0, _("Read error"));
         }
 
-      if (trans_ptr == uu_std)
-        putchar (ENC (n));
+      if (! HAVE_OPT(BASE64))
+        try_putchar (ENC (n));
 
-      for (p = buf; n > 2; n -= 3, p += 3)
-        {
-          try_putchar (ENC (*p >> 2));
-          try_putchar (ENC (((*p << 4) & 060) | ((p[1] >> 4) & 017)));
-          try_putchar (ENC (((p[1] << 2) & 074) | ((p[2] >> 6) & 03)));
-          try_putchar (ENC (p[2] & 077));
-        }
-
-      if (n > 0)  /* encode the last one or two chars */
-        {
-          char tail = trans_ptr == uu_std ? ENC ('\0') : '=';
-
-          if (n == 1)
-            p[1] = '\0';
-
-          try_putchar (ENC (*p >> 2));
-          try_putchar (ENC (((*p << 4) & 060) | ((p[1] >> 4) & 017)));
-          try_putchar (n == 1 ? tail : ENC ((p[1] << 2) & 074));
-          try_putchar (tail);
-        }
-
-      try_putchar ('\n');
+      n = encode_block (buf_out, buf, n);
+      if (fwrite (buf_out, 1, n, stdout) != n)
+        error (EXIT_FAILURE, errno, _("Write error"));
     }
 
   if (ferror (stdin))
@@ -188,7 +197,7 @@ encode (void)
   if (fclose (stdin) != 0)
     error (EXIT_FAILURE, errno, _("Read error"));
 
-  if (trans_ptr == uu_std)
+  if (! HAVE_OPT(BASE64))
     {
       try_putchar (ENC ('\0'));
       try_putchar ('\n');
@@ -196,61 +205,13 @@ encode (void)
 }
 
 static void
-usage (int status)
+process_opts (int argc, char ** argv, int * mode)
 {
-  if (status != 0)
-    fprintf (stderr, _("Try `%s --help' for more information.\n"),
-	     program_name);
-  else
-    {
-      printf (_("Usage: %s [INFILE] REMOTEFILE\n"), program_name);
-      fputs (_("\n\
-  -m, --base64    use base64 encoding as of RFC1521\n\
-  -e, --encode-fname  hex-encode result file name\n\
-  -h, --help      display this help and exit\n\
-  -v, --version   output version information and exit\n"), stdout);
-      /* TRANSLATORS: add the contact address for your translation team! */
-      printf (_("Report bugs to <%s>.\n"), PACKAGE_BUGREPORT);
-    }
-  exit (status);
-}
+  int ct = optionProcess (&uuencodeOptions, argc, argv);
+  argc -= ct;
+  argv += ct;
 
-static void
-process_opts (int argc, char const * const * argv, int * mode)
-{
-  int opt;
-
-  while (opt = getopt_long (argc, argv, "hm", longopts, (int *) NULL),
-	 opt != EOF)
-    {
-      switch (opt)
-	{
-	case 'h':
-	  usage (EXIT_SUCCESS);
-
-	case 'm':
-	  trans_ptr = uu_base64;
-	  break;
-
-	case 'v':
-	  printf ("%s (GNU %s) %s\n", basename (program_name),
-		  PACKAGE, VERSION);
-	  /* xgettext: no-wrap */
-	  printf (_("Copyright (C) %s Free Software Foundation, Inc.\n\
-This is free software; see the source for copying conditions.  There is NO\n\
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"),
-		  cright_years_z);
-	  exit (EXIT_SUCCESS);
-
-	case 0:
-	  break;
-
-	default:
-	  usage (EXIT_FAILURE);
-	}
-    }
-
-  switch (argc - optind)
+  switch (argc)
     {
     case 2:
       /* Optional first argument is input file.  */
@@ -260,13 +221,13 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"),
         choke me - Must translate mode argument
 #endif
 
-	FILE *fp = freopen (argv[optind], FOPEN_READ_BINARY, stdin);
+	FILE * fp = freopen (*argv, FOPEN_READ_BINARY, stdin);
 	if (fp != stdin)
-	  error (EXIT_FAILURE, errno, _("fopen-ing %s"), argv[optind]);
+	  error (EXIT_FAILURE, errno, _("fopen-ing %s"), *argv);
 	if (fstat (fileno (stdin), &sb) != 0)
-	  error (EXIT_FAILURE, errno, _("fstat-ing %s"), argv[optind]);
+	  error (EXIT_FAILURE, errno, _("fstat-ing %s"), *argv);
 	*mode = sb.st_mode & (S_IRWXU | S_IRWXG | S_IRWXO);
-	optind++;
+        output_name = argv[1];
 	break;
       }
 
@@ -277,16 +238,33 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"),
 #endif
 
       *mode = IRWALL_MODE & ~umask (IRWALL_MODE);
+      output_name = *argv;
       break;
 
     case 0:
     default:
-      usage (EXIT_FAILURE);
+      USAGE (EXIT_FAILURE);
+    }
+
+  if (HAVE_OPT(ENCODE_FILE_NAME))
+    {
+      size_t nmlen = strlen (output_name);
+      char * p = malloc (nmlen + (nmlen > 1) + 3);
+      if (p == NULL)
+        error (EXIT_FAILURE, ENOMEM, _("Allocation failure"));
+      nmlen = encode_block (p, (unsigned char *)output_name, nmlen);
+      if (HAVE_OPT(BASE64))
+        {
+          while ((nmlen > 0) && (p[nmlen-1] == '='))
+            nmlen--;
+        }
+      p[nmlen] = '\0';
+      output_name = p;
     }
 }
 
 int
-main (int argc, char const * const * argv)
+main (int argc, char ** argv)
 {
   int mode;
   /* Set global variables.  */
@@ -299,14 +277,16 @@ main (int argc, char const * const * argv)
 
   process_opts (argc, argv, &mode);
 
-  if (printf ("begin%s %o %s\n", trans_ptr == uu_std ? "" : "-base64",
-	      mode, argv[optind]) < 0)
+  if (printf ("begin%s%s %o %s\n",
+              HAVE_OPT(BASE64) ? "-base64" : "",
+              HAVE_OPT(ENCODE_FILE_NAME) ? "-encoded" : "",
+	      mode, output_name) < 0)
     error (EXIT_FAILURE, errno, _("Write error"));
 
   encode ();
 
   if (ferror (stdout) ||
-      printf (trans_ptr == uu_std ? "end\n" : "====\n") < 0 ||
+      puts (HAVE_OPT(BASE64) ? "====" : "end") == EOF ||
       fclose (stdout) != 0)
     error (EXIT_FAILURE, errno, _("Write error"));
 

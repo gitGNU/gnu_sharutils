@@ -1,0 +1,100 @@
+AutoGen Definitions options;
+/*
+   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+ */
+#include shar-std.def
+
+prog-name   = uuencode;
+prog-title  = 'encode a file into email friendly text';
+argument    = '[ in-file ] output-name';
+full-usage  = `cat uuencode-full-help.txt`;
+short-usage = `cat uuencode-short-help.txt`;
+
+detail = <<- _EODetail_
+	@file{uuencode} is used to create an ASCII representation of a file
+	that can be sent over channels that may otherwise corrupt the data.
+	Specifically, email cannot handle binary data and will often even insert
+	a character when the six character sequence "\nFrom " is seen.
+
+	@file{uuencode} will read @file{in-file} if provided and otherwise read data
+	from standard in and write the encoded form to standard out.
+	The output will begin with a header line for use by @file{uudecode}
+	giving it the resulting suggested file @file{output-name} and access mode.
+	If the @file{output-name} is specifically @file{/dev/stdout}, then
+	@file{uudecode} will emit the decoded file to standard out.
+
+	@strong{Note}: @file{uuencode} uses buffered input and assumes that it
+	is not hand typed from a tty.  The consequence is that at a tty, you
+	may need to hit Ctl-D several times to terminate input.
+	_EODetail_;
+
+include = <<- _EOF_
+	extern char const * trans_ptr;
+	extern char const uu_base64[64];
+	_EOF_;
+
+flag = {
+    name        = base64;
+    value       = m;
+    descrip     = 'convert using base 64';
+    flag-code   = '    trans_ptr = uu_base64;';
+
+    doc = <<- _EODoc_
+	By default, @file{uuencode} will encode using the traditional
+	conversion.  It is slower and less compact than base 64.
+	The encoded form of the file is expanded by 37% for UU encoding and by 35%
+	for base64 encoding (3 bytes become 4 plus control information).
+	_EODoc_;
+};
+
+flag = {
+    name        = encode-file-name;
+    value       = e;
+    descrip     = 'encode the output file name';
+    doc = <<- _EODoc_
+	Since output file names may contain characters that are not
+	handled well by various transmission modes, you may specify
+	that the @file{output-name} be hex encoded as well.
+	_EODoc_;
+};
+
+doc-section = {
+    ds-type = STANDARDS;
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	This implementation is compliant with P1003.2b/D11.
+	_EOText_;
+};
+
+doc-section = {
+    ds-type = BUGS;
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	The output file name must not begin with the 11 character sequence:
+	@example
+	hex-encode:
+	@end example
+	unless you specify the @code{-h} (encode-file-name) option.
+
+	_EOText_;
+};
+
+doc-section = {
+    ds-type = HISTORY;
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	The @file{uuencode} command first appeared in BSD 4.0.
+	_EOText_;
+};

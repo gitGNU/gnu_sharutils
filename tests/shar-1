@@ -17,7 +17,7 @@ outf=${tmpfile}.outf
 
 trap "rm -fr shar-1.in ${tmpfile}.*" 1 2 3 15
 
-echo "This is a test" > ${inf}
+printf "This is a test\nFrom this line, encoding is forced.\n" > ${inf}
 chmod 0644 ${inf} 2> /dev/null >&2
 SHAR=../src/shar
 

@@ -1,4 +1,17 @@
 /*
+   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
 
  The first half of this file defines the shell script strings in normal
  shell script format.  The template will reformat them so that after they
@@ -47,7 +60,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = continue_archive;
   body = <<- _EOBody_
@@ -59,7 +71,6 @@ text = {
 	lock_dir=_sh%05d
 	_EOBody_;
 };
-
 
 text = {
   name = dev_tty_check;
@@ -79,7 +90,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = echo_checks;
   body = <<- _EOBody_
@@ -92,7 +102,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = echo_string;
   body = <<- _EOBody_
@@ -101,11 +110,38 @@ text = {
 };
 
 text = {
-  name = end_part;
+  name = split_file;
   body = <<- _EOBody_
-	echo %d > ${lock_dir}/seq
-	exit 0
+	: > ${lock_dir}/continued
 	_EOBody_;
+};
+
+text = {
+  name = split_continue_quietly;
+  body = "if test -f ${lock_dir}/continued; then";
+};
+
+text = {
+  name = split_continue;
+  body = "if test ! -f ${lock_dir}/continued\nthen ${echo} ";
+};
+
+text = {
+  name = split_resume;
+  body = <<- _EOBody_
+	  rm -f ${lock_dir}/continued
+	  sed 's/^%c//' << '%s' >> %s &&
+	_EOBody_;
+};
+
+text = {
+  name = otherwise;
+  body = "\nelse";
+};
+
+text = {
+  name = mode_fmt;
+  body = "begin 600 %s";
 };
 
 text = {
@@ -119,7 +155,6 @@ text = {
 	lock_dir=_sh%05d
 	_EOBody_;
 };
-
 
 text = {
   name = i18n;
@@ -189,7 +224,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = md5check;
   body = <<- _EOBody_
@@ -201,7 +235,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = md5test;
   body = <<- _EOBody_
@@ -211,7 +244,6 @@ text = {
 	       ) << \%s
 	_EOBody_;
 };
-
 
 text = {
   name = query_answers;
@@ -256,7 +288,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = query_user;
   body = <<- _EOBody_
@@ -281,50 +312,25 @@ text = {
 	_EOBody_;
 };
 
-
-text = {
-  name = split_mode;
-  body = <<- _EOBody_
-	  rm -f ${lock_dir}/new
-	else
-	  > ${lock_dir}/new
-	_EOBody_;
-};
-
-
 text = {
   name = seq_check;
   body = <<- _EOBody_
-	if test ! -r ${lock_dir}/seq; then
-	 ${echo} '%s'
+	test -r ${lock_dir}/seq || {
+	  ${echo} '%s' >&2
 	  exit 1
-	fi
+	}
 	shar_sequence=`cat ${lock_dir}/seq`
-	test "$shar_sequence" = %d
+	test "$shar_sequence" = %d || {
+	  ${echo} %s >&2
+	  exit 1
+	}
 	_EOBody_;
 };
 
-
 text = {
   name = shar_decode;
-  body = 'uudecode ${lock_dir}/uue < ${lock_dir}/uue && \\';
+  body = 'uudecode ${lock_dir}/uue && \\';
 };
-
-text = {
-  name = shar_uncomp;
-  body = 'compress -d < ${lock_dir}/cmp > %s && \\';
-};
-
-text = {
-  name = shar_gunzip;
-  body = 'gzip -d < ${lock_dir}/gzi > %s && \\';
-};
-
-text = {
-  name = shar_bunzip;
-  body = 'bzip2 -d < ${lock_dir}/bzi > %s && \\';
-};
-
 
 text = {
   name = shar_touch;
@@ -333,7 +339,6 @@ text = {
 	   eval "${shar_touch}") && \
 	_EOBody_;
 };
-
 
 text = {
   name = show_all_status;
@@ -345,7 +350,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = show_bad_status;
   body = <<- _EOBody_
@@ -354,7 +358,6 @@ text = {
 	fi
 	_EOBody_;
 };
-
 
 text = {
   name = show_good_status;
@@ -365,7 +368,6 @@ text = {
 	_EOBody_;
 };
 
-
 text = {
   name = timestamp;
   body = <<- _EOBody_
@@ -375,16 +377,16 @@ text = {
 	st2tr=123123592001.5 # old SysV 14-char limit
 	st3=1231235901
 
-	if touch -am -t ${st1} ${f} >/dev/null 2>&1 && \
-	   test ! -f ${st1} && test -f ${f}; then
+	if   touch -am -t ${st1} ${f} >/dev/null 2>&1 && \
+	     test ! -f ${st1} && test -f ${f}; then
 	  shar_touch='touch -am -t $1$2$3$4$5$6.$7 "$8"'
 
 	elif touch -am ${st2} ${f} >/dev/null 2>&1 && \
-	   test ! -f ${st2} && test ! -f ${st2tr} && test -f ${f}; then
+	     test ! -f ${st2} && test ! -f ${st2tr} && test -f ${f}; then
 	  shar_touch='touch -am $3$4$5$6$1$2.$7 "$8"'
 
 	elif touch -am ${st3} ${f} >/dev/null 2>&1 && \
-	   test ! -f ${st3} && test -f ${f}; then
+	     test ! -f ${st3} && test -f ${f}; then
 	  shar_touch='touch -am $3$4$5$6$2 "$8"'
 
 	else
@@ -526,15 +528,6 @@ shar-msg = {
 };
 
 shar-msg = {
-  sm-name   = out_of_seq;
-  sm-xform  = dbl_quote;
-  sm-body   = <<- _EOBody_
-	Archives must be unpacked in sequence!
-	Please unpack part `cat ${lock_dir}/seq` next.
-	_EOBody_;
-};
-
-shar-msg = {
   sm-name   = restore_failed;
   sm-xform  = dbl_quote;
   sm-body   = "restore of %s failed";
@@ -664,24 +657,6 @@ shar-msg = {
   sm-name   = uudec_file;
   sm-xform  = dbl_quote;
   sm-body   = "uudecoding file %s";
-};
-
-shar-msg = {
-  sm-name   = uncomp_file;
-  sm-xform  = dbl_quote;
-  sm-body   = "uncompressing file %s";
-};
-
-shar-msg = {
-  sm-name   = gunzip_file;
-  sm-xform  = dbl_quote;
-  sm-body   = "gunzipping file %s";
-};
-
-shar-msg = {
-  sm-name   = bunzip_file;
-  sm-xform  = dbl_quote;
-  sm-body   = "bunzipping file %s";
 };
 
 shar-msg = {

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils 4.11\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2011-02-05 11:12-0800\n"
+"POT-Creation-Date: 2012-08-10 11:52-0700\n"
 "PO-Revision-Date: 2011-02-07 01:33:05+0100\n"
 "Last-Translator: Keld Simonsen <keld@keldix.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -17,467 +17,458 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/error.c:181
-msgid "Unknown system error"
-msgstr "Ukendt systemfejl"
+#. TRANSLATORS:  This is a phony function generated for the purpose of
+#. constructing the strings to be extracted for translation.  Each string
+#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
+#. if you need to look up context.  These strings are all inserted into
+#. the shar-generated shell script so the shar user can create shar archives
+#. with messages localized for one locale.
+#.
+#: src/scripts.x:395
+msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
+msgstr ""
+"Bemærk: efterprøver ikke md5summer. Overvej at installere GNU coreutils."
 
-#: lib/getopt.c:527 lib/getopt.c:543
+#: src/scripts.x:396
+msgid ""
+"WARNING: not restoring timestamps.  Consider getting and\n"
+"installing GNU `touch', distributed in GNU coreutils..."
+msgstr ""
+"ADVARSEL: Tidsinformation for filer genskabes ikke. Overvej at skaffe og "
+"installere GNUs 'touch' som følger med GNU coreutils..."
+
+#: src/scripts.x:398
 #, c-format
-msgid "%s: option '%s' is ambiguous\n"
-msgstr "%s: flaget '%s' er flertydigt\n"
+msgid "lock directory %s exists"
+msgstr "låsekatalog %s eksisterer"
 
-#: lib/getopt.c:576 lib/getopt.c:580
+#: src/scripts.x:399
 #, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: flaget '--%s' tillader ikke et argument\n"
+msgid "failed to create %s lock directory"
+msgstr "det mislykkedes at oprette låsekatalog %s"
 
-#: lib/getopt.c:589 lib/getopt.c:594
+#: src/scripts.x:400
 #, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: flaget '%c%s' tillader ikke et argument\n"
+msgid "x - created lock directory %s."
+msgstr "det mislykkedes at oprette låsekatalog %s."
 
-#: lib/getopt.c:637 lib/getopt.c:656
+#: src/scripts.x:401
 #, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: flaget '--%s' behøver et argument\n"
+msgid "x - failed to create lock directory %s."
+msgstr "x - det mislykkedes at oprette låsekatalog %s."
 
-#: lib/getopt.c:694 lib/getopt.c:697
+#: src/scripts.x:402
 #, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: ukendt flag '--%s'\n"
+msgid "x - created directory %s."
+msgstr "x - oprettede låsekatalog %s."
 
-#: lib/getopt.c:705 lib/getopt.c:708
+#: src/scripts.x:403
 #, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: ukendt flag '%c%s'\n"
+msgid "x - failed to create directory %s."
+msgstr "x - det mislykkedes at oprette låsekatalog %s."
 
-#: lib/getopt.c:757 lib/getopt.c:760
+#: src/scripts.x:404
+msgid "yes"
+msgstr "ja"
+
+#: src/scripts.x:405
+msgid "overwrite this file"
+msgstr "overskriv denne fil"
+
+#: src/scripts.x:406
+msgid "no"
+msgstr "nej"
+
+#: src/scripts.x:407
+msgid "skip this file"
+msgstr "overspring denne fil"
+
+#: src/scripts.x:408
+msgid "all"
+msgstr "alle"
+
+#: src/scripts.x:409
+msgid "overwrite all files"
+msgstr "overskriv alle filer"
+
+#: src/scripts.x:410
+msgid "none"
+msgstr "ingen"
+
+#: src/scripts.x:411
+msgid "overwrite no files"
+msgstr "overskriv ingen filer"
+
+#: src/scripts.x:412
+msgid "help"
+msgstr "hjælp"
+
+#: src/scripts.x:413
+msgid "explain choices"
+msgstr "forklar valg"
+
+#: src/scripts.x:414
+msgid "quit"
+msgstr "afslut"
+
+#: src/scripts.x:415
+msgid "exit immediately"
+msgstr "aflut med det samme"
+
+#: src/scripts.x:416
 #, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: ugyldigt flag -- %c\n"
+msgid "restore of %s failed"
+msgstr "gendannelse af %s mislykkedes"
 
-#: lib/getopt.c:810 lib/getopt.c:827 lib/getopt.c:1035 lib/getopt.c:1053
+#: src/scripts.x:417
 #, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: flaget behøver et argument -- '%c'\n"
+msgid "End of part %d, continue with part %d"
+msgstr "Slut på arkivdel %d, fortsæt med arkivdel %d"
 
-#: lib/getopt.c:883 lib/getopt.c:899
+#: src/scripts.x:418
 #, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: flaget '-W %s' er flertydigt\n"
+msgid "End of %s part %d"
+msgstr "Slut på %s arkivdel %d"
 
-#: lib/getopt.c:923 lib/getopt.c:941
+#: src/scripts.x:419
 #, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: flaget '-W %s' tillader ikke et argument\n"
+msgid "restoration warning:  size of %s is not %s"
+msgstr "advarsel ved gendannelse: størrelse på %s er ikke %s"
 
-#: lib/getopt.c:962 lib/getopt.c:980
+#: src/scripts.x:420 src/shar.c:1306
+msgid "(text)"
+msgstr "(tekst)"
+
+#: src/scripts.x:421
+msgid "(compressed)"
+msgstr "(komprimeret)"
+
+#: src/scripts.x:422
+msgid "(gzipped)"
+msgstr "(gzip-komprimeret)"
+
+#: src/scripts.x:423
+msgid "(bzipped)"
+msgstr "(bzip-komprimeret)"
+
+#: src/scripts.x:424
+msgid "(binary)"
+msgstr "(binær)"
+
+#: src/scripts.x:425
+msgid "archive"
+msgstr "arkiv"
+
+#: src/scripts.x:426
 #, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: flaget '-W %s' behøver et argument\n"
+msgid "File %s is continued in part %d"
+msgstr "Fil %s fortsætter i arkivdel %d"
 
-#: src/shar.c:416
+#: src/scripts.x:427
+msgid "Please unpack part 1 first!"
+msgstr "Vær venlig at udpakke arkivdel 1 først!"
+
+#: src/scripts.x:428
+msgid "Please unpack part ${shar_sequence} next!"
+msgstr "Vær venlig at udpakke arkivdel ${shar_sequence} herefter!"
+
+#: src/scripts.x:429
+#, c-format
+msgid "x - STILL SKIPPING %s"
+msgstr "x - FORTSÆTTER MED AT OVERSPRINGE %s"
+
+#: src/scripts.x:430
+#, c-format
+msgid "continuing file %s"
+msgstr "fortsætter med fil %s"
+
+#: src/scripts.x:431
+msgid "(empty)"
+msgstr "(tom)"
+
+#: src/scripts.x:432
+#, c-format
+msgid "x - overwriting %s"
+msgstr "x - overskriver %s"
+
+#: src/scripts.x:433
+#, c-format
+msgid "overwrite %s"
+msgstr "overskriv %s"
+
+#: src/scripts.x:434
+#, c-format
+msgid "SKIPPING %s"
+msgstr "OVERSPRINGER %s"
+
+#: src/scripts.x:435
+msgid "extraction aborted"
+msgstr "udtræk afbrydes"
+
+#: src/scripts.x:436
+#, c-format
+msgid "x - SKIPPING %s (file already exists)"
+msgstr "x - OVERSPRINGER %s (filen findes allerede)"
+
+#: src/scripts.x:437
+#, c-format
+msgid "x - extracting %s %s"
+msgstr "x - udtrækker %s %s"
+
+#: src/scripts.x:438
+#, c-format
+msgid "File %s is complete"
+msgstr "Fil %s er færdig"
+
+#: src/scripts.x:439
+#, c-format
+msgid "uudecoding file %s"
+msgstr "uuafkoder fil %s"
+
+#: src/scripts.x:440
+msgid "MD5 check failed"
+msgstr "MD5-kontrollen mislykkedes"
+
+#: src/scripts.x:441
+msgid "You have unpacked the last part"
+msgstr "Du har udpakket den sidste arkivdel"
+
+#: src/scripts.x:442
+#, c-format
+msgid "x - removed lock directory %s."
+msgstr "x - fjernede låsekatalog %s."
+
+#: src/scripts.x:443
+#, c-format
+msgid "x - failed to remove lock directory %s."
+msgstr "x - det mislykkedes at fjerne låsekatalog %s."
+
+#: src/shar-opts.c:1653
+#, fuzzy, c-format
+msgid "Cannot reopen %s as stdin"
+msgstr "Filen %s kunne ikke åbnes"
+
+#: src/shar-opts.c:1745
+msgid "shar usage error:\n"
+msgstr ""
+
+#: src/shar-opts.c:1781
+msgid "shar fatal error:\n"
+msgstr ""
+
+#: src/shar-opts.c:1818
+#, c-format
+msgid "fserr %d (%s) performing '%s' on %s\n"
+msgstr ""
+
+#: src/shar-opts.c:1919 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/uuencode-opts.c:479
+#, fuzzy
+msgid "No memory for duping translated strings\n"
+msgstr "ikke hukummelse til %d byte allokering"
+
+#: src/shar.c:372
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "printf formatfejl: %s\n"
 
-#: src/shar.c:467
-#, c-format
-msgid "sharutils bug - no status\n"
+#: src/shar.c:423
+#, fuzzy
+msgid "sharutils bug - no status"
 msgstr "sharutils fejl - ingen status\n"
 
-#: src/shar.c:823
-#, c-format
+#: src/shar.c:788
 msgid "Too many directories for mkdir generation"
 msgstr "Kan ikke generere mkdir-kommandoer for så mange kataloger"
 
-#: src/shar.c:906 src/shar.c:1573
+#: src/shar.c:871 src/shar.c:1541
 #, c-format
 msgid "Cannot access %s"
 msgstr "Kan ikke få adgang til %s"
 
-#: src/shar.c:956
-#, c-format
-msgid "-C is being deprecated, use -Z instead"
-msgstr "-C er forældet, brug -Z i stedet"
-
-#: src/shar.c:997 src/unshar.c:375
+#: src/shar.c:948 src/unshar.c:376
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Kan ikke få fat på navnet på aktuelt katalog"
 
-#: src/shar.c:1066 src/shar.c:1388
+#: src/shar.c:1005 src/shar.c:1346
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Ny fil, resterende %s, "
 
-#: src/shar.c:1067 src/shar.c:1389
+#: src/shar.c:1006 src/shar.c:1347
 #, c-format
 msgid "Limit still %s\n"
 msgstr "Begrænsningen er stadig %s\n"
 
-#: src/shar.c:1090 src/shar.c:1471
+#: src/shar.c:1028
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Begynder på fil %s\n"
 
-#: src/shar.c:1141
-#, c-format
-msgid "Could not popen 'wc' command:  %s\n"
+#: src/shar.c:1081
+#, fuzzy
+msgid "Could not popen command"
 msgstr "Kunne ikke åbne 'wc'-kommando: %s\n"
 
-#: src/shar.c:1202
+#: src/shar.c:1162
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Filen %s kunne ikke åbnes"
 
-#: src/shar.c:1257
-#, c-format
-msgid "popen(3) on: %s"
-msgstr "popen(3) på: %s"
-
-#: src/shar.c:1280
-#, c-format
-msgid "fopen(3) of file %s"
-msgstr "fopen(3) af fil %s"
-
-#: src/shar.c:1332
+#: src/shar.c:1296 src/shar.c:1305
 msgid "text"
 msgstr "tekst"
 
-#: src/shar.c:1342
-msgid "compressed"
-msgstr "komprimeret"
+#: src/shar.c:1311 src/shar.c:1322
+msgid "call"
+msgstr ""
 
-#: src/shar.c:1343
-msgid "gzipped"
-msgstr "gzip-komprimeret"
-
-#: src/shar.c:1344
-msgid "bzipped"
-msgstr "bzip-komprimeret"
-
-#: src/shar.c:1345
-msgid "binary"
-msgstr "binær"
-
-#: src/shar.c:1356
-#, c-format
-msgid "pipe(2) failed"
-msgstr "pipe(2) mislykkedes"
-
-#: src/shar.c:1367
-#, c-format
-msgid "Could not fork"
-msgstr "Kunne ikke fraspalte ny proces"
-
-#: src/shar.c:1379
+#: src/shar.c:1335
 #, c-format
 msgid "File %s (%s)"
 msgstr "Fil %s (%s)"
 
-#: src/shar.c:1568
+#: src/shar.c:1426
+#, fuzzy, c-format
+msgid "Continuing file %s\n"
+msgstr "fortsætter med fil %s"
+
+#: src/shar.c:1536
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Ikke en normal fil"
 
-#: src/shar.c:1588
+#: src/shar.c:1563
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "I shar: resterende størrelse %s\n"
 
-#: src/shar.c:1606
+#: src/shar.c:1583
 msgid "empty"
 msgstr "tom"
 
-#: src/shar.c:1649
+#: src/shar.c:1622
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Gemmer %s (%s)"
 
-#: src/shar.c:1869
-#, c-format
-msgid "allocating output file name"
-msgstr "allokerer filnavn på uddata"
-
-#: src/shar.c:1875
-#, c-format
-msgid "Opening `%s'"
-msgstr "Åbner '%s'"
-
-#: src/shar.c:1886
-#, c-format
-msgid "Closing `%s'"
-msgstr "Lukker '%s'"
-
-#: src/shar.c:1897 src/unshar.c:311 src/uudecode.c:460 src/uuencode.c:202
-#, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "Prøv med '%s --help' for yderligere information.\n"
-
-#: src/shar.c:1901 src/unshar.c:315
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Brug: %s [FLAG]... [FIL]...\n"
-
-#: src/shar.c:1902
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"Giving feedback:\n"
-"      --help              display this help and exit\n"
-"      --version           output version information and exit\n"
-"  -q, --quiet, --silent   do not output verbose messages locally\n"
-"\n"
-"Selecting files:\n"
-msgstr ""
-"Obligatoriske argumenter for lange flag er også obligatoriske for korte flag.\n"
-"\n"
-"Giver tilbagemeldinger:\n"
-"  -h, --help              vis denne hjælpetekst og afslut\n"
-"  -v, --version           vis versionsinformation og afslut\n"
-"  -q, --quiet, --silent   udskriv ikke udførlige beskeder lokalt\n"
-"\n"
-"Udvælgelse af filer:\n"
-
-#: src/shar.c:1913
-msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-msgstr "  -p, --intermix-type     tillad -[BTzZ] i fillister at ændre tilstand\n"
-
-#: src/shar.c:1917
-msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-msgstr "  -p, --intermix-type     tillad -[BTz] i fillister at ændre tilstand\n"
-
-#: src/shar.c:1921
-msgid ""
-"  -S, --stdin-file-list   read file list from standard input\n"
-"\n"
-"Splitting output:\n"
-"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
-"\n"
-"Controlling the shar headers:\n"
-"  -n, --archive-name=NAME   use NAME to document the archive\n"
-"  -s, --submitter=ADDRESS   override the submitter name\n"
-"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-"  -c, --cut-mark            start the shar with a cut line\n"
-"  -t, --translate           translate messages in the script\n"
-"\n"
-"Selecting how files are stocked:\n"
-"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-"  -T, --text-files             treat all files as text\n"
-"  -B, --uuencode               treat all files as binary, use uuencode\n"
-"  -z, --gzip                   gzip and uuencode all files\n"
-"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-"  -j, --bzip2                  bzip2 and uuencode all files\n"
-msgstr ""
-"  -S, --stdin-file-list   læs filliste fra standard-ind\n"
-"\n"
-"Opsplitning af uddata:\n"
-"  -o, --output-prefix=PRÆFIKS   udskriv på filerne PRÆFIKS.01 til PRÆFIKS.NN\n"
-"  -l, --whole-size-limit=STØRR  opsplit arkiv, ikke filer, i STØRR kilobyte\n"
-"  -L, --split-size-limit=STØRR  opsplit arkiv eller filer i STØRR kilobyte\n"
-"\n"
-"Kontrol af felter i arkivhovedet:\n"
-"  -n, --archive-name=NAVN   brug NAVN for at dokumentere arkivet\n"
-"  -s, --submitter=ADRESSE   angiv eksplicit adresse for arkiv-skaberen\n"
-"  -a, --net-headers         indsæt headere Submitted-by: og Archive-name:\n"
-"  -c, --cut-mark            begynd arkivet med en linje til afskæring\n"
-"  -t, --translate           oversæt tekster i skriptet\n"
-"\n"
-"Kontrol af hvordan filer gemmes:\n"
-"  -M, --mixed-uuencode          afgør dynamisk om uuencode behøves\n"
-"                                (standardværdi: på)\n"
-"  -T, --text-files              behandl alle filer som tekst\n"
-"  -B, --uuencode                behandl alle filer som binære data,\n"
-"                                brug uuencode\n"
-"  -z, --gzip                    kør gzip og uuencode på alle filer\n"
-"  -g, --level-for-gzip=NIVEAU   giv flaget -LEVEL til gzip\n"
-"                                (standardværdi: 9)\n"
-"  -j, --bzip2                   bzip2 og uuencode alle filer\n"
-
-#: src/shar.c:1945
-msgid ""
-"  -Z, --compress               compress and uuencode all files\n"
-"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-msgstr ""
-"  -Z, --compress                kør compress og uuencode på alle filer\n"
-"  -b, --bits-per-code=BIT       giv flaget -bBIT til compress\n"
-"                                (standardværdi: 12)\n"
-
-#: src/shar.c:1950
-msgid ""
-"\n"
-"Protecting against transmission:\n"
-"  -w, --no-character-count      do not use `wc -c' to check size\n"
-"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-"  -F, --force-prefix            force the prefix character on every line\n"
-"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
-"\n"
-"Producing different kinds of shars:\n"
-"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-"  -P, --no-piping           exclusively use temporary files at unshar time\n"
-"  -x, --no-check-existing   blindly overwrite existing files\n"
-"  -X, --query-user          ask user before overwriting files (not for Net)\n"
-"  -m, --no-timestamp        do not restore file modification dates & times\n"
-"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-"  -f, --basename            restore in one directory, despite hierarchy\n"
-"      --no-i18n             do not produce internationalized shell script\n"
-msgstr ""
-"\n"
-"Beskyttelse mod overførselsfejl:\n"
-"  -w, --no-character-count      brug ikke 'wc -c' for at tjekke størrelsen\n"
-"  -D, --no-md5-digest           brug ikke 'md5sum' til kontrol\n"
-"  -F, --force-prefix            skriv præfikstegnet på alle linjer\n"
-"  -d, --here-delimiter=STRENG   adskil filer i arkivet med STRENG\n"
-"\n"
-"Forskellige typer af skal-arkiver:\n"
-"  -V, --vanilla-operation   lav simple arkiver som bruger få kommandoer\n"
-"  -P, --no-piping           brug kun midlertidige filer ved udpakning\n"
-"  -x, --no-check-existing   overskriv eksisterende filer ved udpakning\n"
-"  -X, --query-user          spørg bruger om filer skal overskrives\n"
-"                            (ikke for arkiver til nettet)\n"
-"  -m, --no-timestamp        genskab ikke filers ændringstid\n"
-"  -Q, --quiet-unshar        undgå snakkesalige beskeder ved udpakning\n"
-"  -f, --basename            udpak filer i ét katalog, uden hierarki\n"
-"      --no-i18n             opret ikke internationaliserede skalarkiver\n"
-
-#: src/shar.c:1968
-msgid ""
-"\n"
-"Option -o is required with -l or -L, option -n is required with -a.\n"
-msgstr ""
-"\n"
-"Flaget -o kræves sammen med -l eller -L, flaget -n kræves sammen med -a.\n"
-
-#: src/shar.c:1972
-msgid "Option -g implies -z, option -b implies -Z.\n"
-msgstr "Flaget -g medfører -z, flaget -b medfører -Z.\n"
-
-#: src/shar.c:1975
-msgid "Option -g implies -z.\n"
-msgstr "Flaget -g medfører -z.\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/shar.c:1979 src/unshar.c:330 src/uudecode.c:471 src/uuencode.c:212
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr "Rapportér fejl til <%s>.\n"
-
-#: src/shar.c:1996
-#, c-format
-msgid "invalid file size limit `%s'"
-msgstr "ugyldig grænse på filstørrelse '%s'"
-
-#: src/shar.c:2032
-#, c-format
-msgid "invalid format (count field too wide): '%s'\n"
+#: src/shar.c:1807
+#, fuzzy, c-format
+msgid "Invalid format for output file names (%s): %s"
 msgstr "ugyldigt format (antalsfelt for bredt): '%s'\n"
 
-#: src/shar.c:2121
-#, c-format
-msgid "DEBUG was not selected at compile time"
-msgstr "DEBUG var ikke valgt da programmet oversattes"
-
-#: src/shar.c:2141
-#, c-format
-msgid "Hard limit %s\n"
-msgstr "Hård begrænsning på %s\n"
-
-#: src/shar.c:2183
-#, c-format
-msgid "This system doesn't support -Z ('compress'), use -z instead"
-msgstr "Dette system understøtter ikke -Z ('compress'), brug -z i stedet"
-
-#: src/shar.c:2216
-#, c-format
-msgid "Soft limit %s\n"
-msgstr "Blød begrænsning på %s\n"
-
-#: src/shar.c:2231
-#, c-format
-msgid "illegal output prefix\n"
-msgstr "ugyldigt præfiks for uddata\n"
-
-#: src/shar.c:2278 src/unshar.c:413 src/uudecode.c:509 src/uuencode.c:252
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+#: src/shar.c:1822
+msgid "more than one format element"
 msgstr ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"Dette er frit programmel; se kildeteksten for kopieringsvilkår.  Der gives\n"
-"INGEN garanti; ikke engang for SALGBARHED eller ANVENDELIGHED FOR NOGET SPECIELT\n"
-"FORMÅL.\n"
 
-#: src/shar.c:2347
-#, c-format
-msgid "WARNING: No user interaction in vanilla mode"
-msgstr "ADVARSEL: Ingen brugerinteraktion i 'vanilla'-tilstand"
+#: src/shar.c:1827
+msgid "no conversion character"
+msgstr ""
 
-#: src/shar.c:2359
-#, c-format
-msgid "WARNING: Non-text storage options overridden"
-msgstr "ADVARSEL: Gemningsflag for ikke-tekst tilsidesat"
+#: src/shar.c:1836
+msgid "format is too wide"
+msgstr ""
 
-#: src/shar.c:2388
-#, c-format
-msgid "Cannot use -a option without -n"
-msgstr "Flaget -a kan ikke bruges uden -n"
+#: src/shar.c:1848
+msgid "invalid conversion character"
+msgstr ""
 
-#: src/shar.c:2394
-#, c-format
-msgid "Cannot use -l or -L option without -o"
-msgstr "Flaget -l eller -L kan ikke bruges uden -o"
+#: src/shar.c:1889
+#, fuzzy
+msgid "Opening"
+msgstr "Åbner '%s'"
 
-#: src/shar.c:2436
-#, c-format
+#: src/shar.c:1904
+#, fuzzy
+msgid "Closing"
+msgstr "Lukker '%s'"
+
+#: src/shar.c:2015
 msgid "No input files"
 msgstr "Ingen indfiler"
 
-#: src/shar.c:2448
+#: src/shar.c:2032
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "Undgå venligst -X for skalarkiver som skal til Usenet eller offentlige netværk"
+msgstr ""
+"Undgå venligst -X for skalarkiver som skal til Usenet eller offentlige "
+"netværk"
 
-#: src/shar.c:2514
+#: src/shar.c:2056
+#, c-format
+msgid ""
+"The '%s' option may not be intermixed with file names\n"
+"unless the --intermix-type option has been specified."
+msgstr ""
+
+#: src/shar.c:2074
+#, c-format
+msgid "The '%s' option must appear before any file names"
+msgstr ""
+
+#: src/shar.c:2110
+#, c-format
+msgid ""
+"invalid compaction type:  %s\n"
+"the known types are:\n"
+msgstr ""
+
+#: src/shar.c:2149
+msgid "files on command line and --input-file-list specified"
+msgstr ""
+
+#: src/shar.c:2198
 #, c-format
 msgid "Created %d files\n"
 msgstr "Oprettede %d filer\n"
 
-#: src/unshar.c:167
+#: src/unshar-opts.c:427 src/unshar.c:394
+#, c-format
+msgid "Cannot chdir to `%s'"
+msgstr "Kan ikke gå til katalog '%s'"
+
+#: src/unshar.c:168
 #, c-format
 msgid "Found no shell commands in %s"
 msgstr "Fandt ingen skalkommandoer i %s"
 
-#: src/unshar.c:183
+#: src/unshar.c:184
 #, c-format
 msgid "%s looks like raw C code, not a shell archive"
 msgstr "%s ser ud som rå C-kode, ikke som et skalarkiv"
 
-#: src/unshar.c:219
+#: src/unshar.c:220
 #, c-format
 msgid "Found no shell commands after `cut' in %s"
 msgstr "Fandt ingen skalkommandoer efter skæringslinje i %s"
 
-#: src/unshar.c:240
+#: src/unshar.c:241
 #, c-format
 msgid "%s is probably not a shell archive"
 msgstr "%s er formodentlig ikke et skalarkiv"
 
-#: src/unshar.c:241
+#: src/unshar.c:242
 #, c-format
 msgid "The `cut' line was followed by: %s"
 msgstr "Skæringslinjen efterfulgtes af: %s"
 
-#: src/unshar.c:267
+#: src/unshar.c:268
 #, c-format
 msgid "Starting `sh' process"
 msgstr "Starter en skalproces"
 
+#: src/unshar.c:312 src/uudecode.c:459
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Prøv med '%s --help' for yderligere information.\n"
+
 #: src/unshar.c:316
+#, c-format
+msgid "Usage: %s [OPTION]... [FILE]...\n"
+msgstr "Brug: %s [FLAG]... [FIL]...\n"
+
+#: src/unshar.c:317
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -491,7 +482,8 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Obligatoriske argumenter for lange flag er også obligatoriske for korte flag.\n"
+"Obligatoriske argumenter for lange flag er også obligatoriske for korte "
+"flag.\n"
 "\n"
 "  -d, --directory=KATALOG     gå til KATALOG før udpakning\n"
 "  -c, --overwrite             giv -c flaget til arkivet for overskrivning\n"
@@ -503,76 +495,89 @@ msgstr ""
 "\n"
 "Hvis ingen FIL angives så læses standard ind.\n"
 
-#: src/unshar.c:393
+#. TRANSLATORS: add the contact address for your translation team!
+#: src/unshar.c:331 src/uudecode.c:470
 #, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Kan ikke gå til katalog '%s'"
+msgid "Report bugs to <%s>.\n"
+msgstr "Rapportér fejl til <%s>.\n"
 
-#: src/unshar.c:444 src/unshar.c:506
+#: src/unshar.c:414 src/uudecode.c:506
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Dette er frit programmel; se kildeteksten for kopieringsvilkår.  Der gives\n"
+"INGEN garanti; ikke engang for SALGBARHED eller ANVENDELIGHED FOR NOGET SPECIELT\n"
+"FORMÅL.\n"
+
+#: src/unshar.c:445 src/unshar.c:507
 #, c-format
 msgid "allocate file name buffer"
 msgstr "allokér buffer for filnavn"
 
-#: src/unshar.c:465
+#: src/unshar.c:466
 msgid "standard input"
 msgstr "standard ind"
 
-#: src/unshar.c:527
+#: src/unshar.c:528
 #, c-format
 msgid "allocate file buffer"
 msgstr "allokér filbuffer"
 
-#: src/uudecode.c:113 src/uudecode.c:444
+#: src/uudecode.c:114 src/uudecode.c:444
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Skrivefejl"
 
-#: src/uudecode.c:130 src/uudecode.c:217
+#: src/uudecode.c:131 src/uudecode.c:218
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Afkortet fil"
 
-#: src/uudecode.c:166
+#: src/uudecode.c:167
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: 'end'-linje savnes"
 
-#: src/uudecode.c:226
+#: src/uudecode.c:227
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: det findes data efter udfyldningstegnet '=' "
 
-#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
+#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: fejlagtig linje"
 
-#: src/uudecode.c:302
+#: src/uudecode.c:303
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Ugyldigt filnavn: %s"
 
-#: src/uudecode.c:309
+#: src/uudecode.c:310
 #, c-format
 msgid "No user `%s'"
 msgstr "Ingen bruger '%s'"
 
-#: src/uudecode.c:320
+#: src/uudecode.c:321
 #, c-format
 msgid "no memory for %d byte allocation"
 msgstr "ikke hukummelse til %d byte allokering"
 
-#: src/uudecode.c:345
+#: src/uudecode.c:346
 #, c-format
 msgid "cannot access %s"
 msgstr "kan ikke få adgang til %s"
 
-#: src/uudecode.c:353
+#: src/uudecode.c:354
 #, c-format
 msgid "freopen of %s"
 msgstr "freopen af %s"
 
-#: src/uudecode.c:359
+#: src/uudecode.c:360
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod af %s"
@@ -582,24 +587,25 @@ msgstr "chmod af %s"
 msgid "%s: No `begin' line"
 msgstr "%s: 'begin'-linje savnes"
 
-#: src/uudecode.c:464
+#: src/uudecode.c:463
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Brug: %s [FIL]...\n"
 
-#: src/uudecode.c:465
+#: src/uudecode.c:464
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Obligatoriske argumenter for lange flag er også obligatoriske for korte flag.\n"
+"Obligatoriske argumenter for lange flag er også obligatoriske for korte "
+"flag.\n"
 "  -o, --output-file=FIL    skriv resultatet til FIL\n"
 "  -h, --help               vis denne hjælpetekst og afslut\n"
 "  -v, --version            vis versionsinformation og afslut\n"
 
-#: src/uudecode.c:533
+#: src/uudecode.c:530
 #, c-format
 msgid ""
 "You cannot specify an output file when processing\n"
@@ -608,294 +614,388 @@ msgstr ""
 "Du kan ikke angive en uddatafil ved behandling\n"
 "af flere inddatafiler.\n"
 
-#: src/uuencode.c:133 src/uuencode.c:301 src/uuencode.c:308
+#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
 #, c-format
 msgid "Write error"
 msgstr "Skrivefejl"
 
-#: src/uuencode.c:155 src/uuencode.c:186 src/uuencode.c:188
+#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
 #, c-format
 msgid "Read error"
 msgstr "Fejl ved læsning"
 
-#: src/uuencode.c:206
-#, c-format
-msgid "Usage: %s [INFILE] REMOTEFILE\n"
-msgstr "Brug: %s [LOKAL_FIL] IKKE_LOKAL_FIL\n"
-
-#: src/uuencode.c:207
-msgid ""
-"\n"
-"  -m, --base64    use base64 encoding as of RFC1521\n"
-"      --help      display this help and exit\n"
-"      --version   output version information and exit\n"
-msgstr ""
-"\n"
-"  -m, --base64    brug base64-kodning ifølge RFC1521\n"
-"  -h, --help      vis denne hjælpetekst og afslut\n"
-"  -v, --version   vis versionsinformation og afslut\n"
-
-#: src/uuencode.c:277
+#: src/uuencode.c:226
 #, c-format
 msgid "fopen-ing %s"
 msgstr "laver fopen på %s"
 
-#: src/uuencode.c:279
+#: src/uuencode.c:228
 #, c-format
 msgid "fstat-ing %s"
 msgstr "laver fstat på %s"
 
-#. TRANSLATORS:  This is a phony function generated for the purpose of
-#. constructing the strings to be extracted for translation.  Each string
-#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
-#. if you need to look up context.  These strings are all inserted into
-#. the shar-generated shell script so the shar user can create shar archives
-#. with messages localized for one locale.
-#.
-#: src/scripts.x:398
-msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr "Bemærk: efterprøver ikke md5summer. Overvej at installere GNU coreutils."
+#: src/uuencode.c:254
+#, fuzzy, c-format
+msgid "Allocation failure"
+msgstr "allokér filbuffer"
 
-#: src/scripts.x:399
-msgid ""
-"WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
-msgstr "ADVARSEL: Tidsinformation for filer genskabes ikke. Overvej at skaffe og installere GNUs 'touch' som følger med GNU coreutils..."
+#: lib/error.c:188
+msgid "Unknown system error"
+msgstr "Ukendt systemfejl"
 
-#: src/scripts.x:401
+#: lib/getopt.c:547 lib/getopt.c:576
+#, fuzzy, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: flaget '%s' er flertydigt\n"
+
+#: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
-msgid "lock directory %s exists"
-msgstr "låsekatalog %s eksisterer"
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: flaget '--%s' tillader ikke et argument\n"
 
-#: src/scripts.x:402
+#: lib/getopt.c:637 lib/getopt.c:642
 #, c-format
-msgid "failed to create %s lock directory"
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: flaget '%c%s' tillader ikke et argument\n"
+
+#: lib/getopt.c:685 lib/getopt.c:704
+#, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: flaget '--%s' behøver et argument\n"
+
+#: lib/getopt.c:742 lib/getopt.c:745
+#, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: ukendt flag '--%s'\n"
+
+#: lib/getopt.c:753 lib/getopt.c:756
+#, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: ukendt flag '%c%s'\n"
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: ugyldigt flag -- %c\n"
+
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: flaget behøver et argument -- '%c'\n"
+
+#: lib/getopt.c:934 lib/getopt.c:950
+#, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: flaget '-W %s' er flertydigt\n"
+
+#: lib/getopt.c:974 lib/getopt.c:992
+#, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: flaget '-W %s' tillader ikke et argument\n"
+
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: flaget '-W %s' behøver et argument\n"
+
+#: lib/openat-die.c:38
+#, fuzzy, c-format
+msgid "unable to record current working directory"
 msgstr "det mislykkedes at oprette låsekatalog %s"
 
-#: src/scripts.x:403
-#, c-format
-msgid "x - created lock directory %s."
-msgstr "det mislykkedes at oprette låsekatalog %s."
+#: lib/openat-die.c:57
+#, fuzzy, c-format
+msgid "failed to return to initial working directory"
+msgstr "det mislykkedes at oprette låsekatalog %s"
 
-#: src/scripts.x:404
-#, c-format
-msgid "x - failed to create lock directory %s."
-msgstr "x - det mislykkedes at oprette låsekatalog %s."
-
-#: src/scripts.x:405
-#, c-format
-msgid "x - created directory %s."
-msgstr "x - oprettede låsekatalog %s."
-
-#: src/scripts.x:406
-#, c-format
-msgid "x - failed to create directory %s."
-msgstr "x - det mislykkedes at oprette låsekatalog %s."
-
-#: src/scripts.x:407
-msgid "yes"
-msgstr "ja"
-
-#: src/scripts.x:408
-msgid "overwrite this file"
-msgstr "overskriv denne fil"
-
-#: src/scripts.x:409
-msgid "no"
-msgstr "nej"
-
-#: src/scripts.x:410
-msgid "skip this file"
-msgstr "overspring denne fil"
-
-#: src/scripts.x:411
-msgid "all"
-msgstr "alle"
-
-#: src/scripts.x:412
-msgid "overwrite all files"
-msgstr "overskriv alle filer"
-
-#: src/scripts.x:413
-msgid "none"
-msgstr "ingen"
-
-#: src/scripts.x:414
-msgid "overwrite no files"
-msgstr "overskriv ingen filer"
-
-#: src/scripts.x:415
-msgid "help"
-msgstr "hjælp"
-
-#: src/scripts.x:416
-msgid "explain choices"
-msgstr "forklar valg"
-
-#: src/scripts.x:417
-msgid "quit"
-msgstr "afslut"
-
-#: src/scripts.x:418
-msgid "exit immediately"
-msgstr "aflut med det samme"
-
-#: src/scripts.x:419
-msgid ""
-"Archives must be unpacked in sequence!\n"
-"Please unpack part `cat ${lock_dir}/seq` next."
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:312
+msgid "`"
 msgstr ""
-"Arkiver skal udpakkes i rækkefølge!\n"
-"Udpak venligst arkivdel `cat ${lock_dir}/seq` herefter."
 
-#: src/scripts.x:421
+#: lib/quotearg.c:313
+msgid "'"
+msgstr ""
+
+#: lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr "Løbet tør for hukommelse"
+
+#: lib/xstrtol-error.c:63
 #, c-format
-msgid "restore of %s failed"
-msgstr "gendannelse af %s mislykkedes"
+msgid "invalid %s%s argument '%s'"
+msgstr ""
 
-#: src/scripts.x:422
+#: lib/xstrtol-error.c:68
 #, c-format
-msgid "End of part %d, continue with part %d"
-msgstr "Slut på arkivdel %d, fortsæt med arkivdel %d"
+msgid "invalid suffix in %s%s argument '%s'"
+msgstr ""
 
-#: src/scripts.x:423
+#: lib/xstrtol-error.c:72
 #, c-format
-msgid "End of %s part %d"
-msgstr "Slut på %s arkivdel %d"
+msgid "%s%s argument '%s' too large"
+msgstr ""
 
-#: src/scripts.x:424
-#, c-format
-msgid "restoration warning:  size of %s is not %s"
-msgstr "advarsel ved gendannelse: størrelse på %s er ikke %s"
+#~ msgid "-C is being deprecated, use -Z instead"
+#~ msgstr "-C er forældet, brug -Z i stedet"
 
-#: src/scripts.x:425
-msgid "(text)"
-msgstr "(tekst)"
+#~ msgid "popen(3) on: %s"
+#~ msgstr "popen(3) på: %s"
 
-#: src/scripts.x:426
-msgid "(compressed)"
-msgstr "(komprimeret)"
+#~ msgid "fopen(3) of file %s"
+#~ msgstr "fopen(3) af fil %s"
 
-#: src/scripts.x:427
-msgid "(gzipped)"
-msgstr "(gzip-komprimeret)"
+#~ msgid "compressed"
+#~ msgstr "komprimeret"
 
-#: src/scripts.x:428
-msgid "(bzipped)"
-msgstr "(bzip-komprimeret)"
+#~ msgid "gzipped"
+#~ msgstr "gzip-komprimeret"
 
-#: src/scripts.x:429
-msgid "(binary)"
-msgstr "(binær)"
+#~ msgid "bzipped"
+#~ msgstr "bzip-komprimeret"
 
-#: src/scripts.x:430
-msgid "archive"
-msgstr "arkiv"
+#~ msgid "binary"
+#~ msgstr "binær"
 
-#: src/scripts.x:431
-#, c-format
-msgid "File %s is continued in part %d"
-msgstr "Fil %s fortsætter i arkivdel %d"
+#~ msgid "pipe(2) failed"
+#~ msgstr "pipe(2) mislykkedes"
 
-#: src/scripts.x:432
-msgid "Please unpack part 1 first!"
-msgstr "Vær venlig at udpakke arkivdel 1 først!"
+#~ msgid "Could not fork"
+#~ msgstr "Kunne ikke fraspalte ny proces"
 
-#: src/scripts.x:433
-msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Vær venlig at udpakke arkivdel ${shar_sequence} herefter!"
+#~ msgid "allocating output file name"
+#~ msgstr "allokerer filnavn på uddata"
 
-#: src/scripts.x:434
-#, c-format
-msgid "x - STILL SKIPPING %s"
-msgstr "x - FORTSÆTTER MED AT OVERSPRINGE %s"
+#~ msgid "invalid file size limit `%s'"
+#~ msgstr "ugyldig grænse på filstørrelse '%s'"
 
-#: src/scripts.x:435
-#, c-format
-msgid "continuing file %s"
-msgstr "fortsætter med fil %s"
+#~ msgid "WARNING: No user interaction in vanilla mode"
+#~ msgstr "ADVARSEL: Ingen brugerinteraktion i 'vanilla'-tilstand"
 
-#: src/scripts.x:436
-msgid "(empty)"
-msgstr "(tom)"
+#~ msgid "WARNING: Non-text storage options overridden"
+#~ msgstr "ADVARSEL: Gemningsflag for ikke-tekst tilsidesat"
 
-#: src/scripts.x:437
-#, c-format
-msgid "x - overwriting %s"
-msgstr "x - overskriver %s"
+#~ msgid "Cannot use -a option without -n"
+#~ msgstr "Flaget -a kan ikke bruges uden -n"
 
-#: src/scripts.x:438
-#, c-format
-msgid "overwrite %s"
-msgstr "overskriv %s"
+#~ msgid "Cannot use -l or -L option without -o"
+#~ msgstr "Flaget -l eller -L kan ikke bruges uden -o"
 
-#: src/scripts.x:439
-#, c-format
-msgid "SKIPPING %s"
-msgstr "OVERSPRINGER %s"
+#~ msgid ""
+#~ "Archives must be unpacked in sequence!\n"
+#~ "Please unpack part `cat ${lock_dir}/seq` next."
+#~ msgstr ""
+#~ "Arkiver skal udpakkes i rækkefølge!\n"
+#~ "Udpak venligst arkivdel `cat ${lock_dir}/seq` herefter."
 
-#: src/scripts.x:440
-msgid "extraction aborted"
-msgstr "udtræk afbrydes"
+#~ msgid "uncompressing file %s"
+#~ msgstr "udpakker fil %s"
 
-#: src/scripts.x:441
-#, c-format
-msgid "x - SKIPPING %s (file already exists)"
-msgstr "x - OVERSPRINGER %s (filen findes allerede)"
+#~ msgid "gunzipping file %s"
+#~ msgstr "gunzipper fil %s"
 
-#: src/scripts.x:442
-#, c-format
-msgid "x - extracting %s %s"
-msgstr "x - udtrækker %s %s"
+#~ msgid "bunzipping file %s"
+#~ msgstr "bunzipper fil %s"
 
-#: src/scripts.x:443
-#, c-format
-msgid "File %s is complete"
-msgstr "Fil %s er færdig"
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "Giving feedback:\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
+#~ "\n"
+#~ "Selecting files:\n"
+#~ msgstr ""
+#~ "Obligatoriske argumenter for lange flag er også obligatoriske for korte "
+#~ "flag.\n"
+#~ "\n"
+#~ "Giver tilbagemeldinger:\n"
+#~ "  -h, --help              vis denne hjælpetekst og afslut\n"
+#~ "  -v, --version           vis versionsinformation og afslut\n"
+#~ "  -q, --quiet, --silent   udskriv ikke udførlige beskeder lokalt\n"
+#~ "\n"
+#~ "Udvælgelse af filer:\n"
 
-#: src/scripts.x:444
-#, c-format
-msgid "uudecoding file %s"
-msgstr "uuafkoder fil %s"
+#~ msgid ""
+#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ msgstr ""
+#~ "  -p, --intermix-type     tillad -[BTzZ] i fillister at ændre tilstand\n"
 
-#: src/scripts.x:445
-#, c-format
-msgid "uncompressing file %s"
-msgstr "udpakker fil %s"
+#~ msgid ""
+#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ msgstr ""
+#~ "  -p, --intermix-type     tillad -[BTz] i fillister at ændre tilstand\n"
 
-#: src/scripts.x:446
-#, c-format
-msgid "gunzipping file %s"
-msgstr "gunzipper fil %s"
+#~ msgid ""
+#~ "  -S, --stdin-file-list   read file list from standard input\n"
+#~ "\n"
+#~ "Splitting output:\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
+#~ "kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
+#~ "kilobytes\n"
+#~ "\n"
+#~ "Controlling the shar headers:\n"
+#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
+#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
+#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+#~ "  -c, --cut-mark            start the shar with a cut line\n"
+#~ "  -t, --translate           translate messages in the script\n"
+#~ "\n"
+#~ "Selecting how files are stocked:\n"
+#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+#~ "  -T, --text-files             treat all files as text\n"
+#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
+#~ "  -z, --gzip                   gzip and uuencode all files\n"
+#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
+#~ msgstr ""
+#~ "  -S, --stdin-file-list   læs filliste fra standard-ind\n"
+#~ "\n"
+#~ "Opsplitning af uddata:\n"
+#~ "  -o, --output-prefix=PRÆFIKS   udskriv på filerne PRÆFIKS.01 til PRÆFIKS."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=STØRR  opsplit arkiv, ikke filer, i STØRR "
+#~ "kilobyte\n"
+#~ "  -L, --split-size-limit=STØRR  opsplit arkiv eller filer i STØRR "
+#~ "kilobyte\n"
+#~ "\n"
+#~ "Kontrol af felter i arkivhovedet:\n"
+#~ "  -n, --archive-name=NAVN   brug NAVN for at dokumentere arkivet\n"
+#~ "  -s, --submitter=ADRESSE   angiv eksplicit adresse for arkiv-skaberen\n"
+#~ "  -a, --net-headers         indsæt headere Submitted-by: og Archive-"
+#~ "name:\n"
+#~ "  -c, --cut-mark            begynd arkivet med en linje til afskæring\n"
+#~ "  -t, --translate           oversæt tekster i skriptet\n"
+#~ "\n"
+#~ "Kontrol af hvordan filer gemmes:\n"
+#~ "  -M, --mixed-uuencode          afgør dynamisk om uuencode behøves\n"
+#~ "                                (standardværdi: på)\n"
+#~ "  -T, --text-files              behandl alle filer som tekst\n"
+#~ "  -B, --uuencode                behandl alle filer som binære data,\n"
+#~ "                                brug uuencode\n"
+#~ "  -z, --gzip                    kør gzip og uuencode på alle filer\n"
+#~ "  -g, --level-for-gzip=NIVEAU   giv flaget -LEVEL til gzip\n"
+#~ "                                (standardværdi: 9)\n"
+#~ "  -j, --bzip2                   bzip2 og uuencode alle filer\n"
 
-#: src/scripts.x:447
-#, c-format
-msgid "bunzipping file %s"
-msgstr "bunzipper fil %s"
+#~ msgid ""
+#~ "  -Z, --compress               compress and uuencode all files\n"
+#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+#~ msgstr ""
+#~ "  -Z, --compress                kør compress og uuencode på alle filer\n"
+#~ "  -b, --bits-per-code=BIT       giv flaget -bBIT til compress\n"
+#~ "                                (standardværdi: 12)\n"
 
-#: src/scripts.x:448
-msgid "MD5 check failed"
-msgstr "MD5-kontrollen mislykkedes"
+#~ msgid ""
+#~ "\n"
+#~ "Protecting against transmission:\n"
+#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
+#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+#~ "  -F, --force-prefix            force the prefix character on every line\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
+#~ "shar\n"
+#~ "\n"
+#~ "Producing different kinds of shars:\n"
+#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar "
+#~ "time\n"
+#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for "
+#~ "Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & "
+#~ "times\n"
+#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
+#~ "      --no-i18n             do not produce internationalized shell "
+#~ "script\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Beskyttelse mod overførselsfejl:\n"
+#~ "  -w, --no-character-count      brug ikke 'wc -c' for at tjekke "
+#~ "størrelsen\n"
+#~ "  -D, --no-md5-digest           brug ikke 'md5sum' til kontrol\n"
+#~ "  -F, --force-prefix            skriv præfikstegnet på alle linjer\n"
+#~ "  -d, --here-delimiter=STRENG   adskil filer i arkivet med STRENG\n"
+#~ "\n"
+#~ "Forskellige typer af skal-arkiver:\n"
+#~ "  -V, --vanilla-operation   lav simple arkiver som bruger få kommandoer\n"
+#~ "  -P, --no-piping           brug kun midlertidige filer ved udpakning\n"
+#~ "  -x, --no-check-existing   overskriv eksisterende filer ved udpakning\n"
+#~ "  -X, --query-user          spørg bruger om filer skal overskrives\n"
+#~ "                            (ikke for arkiver til nettet)\n"
+#~ "  -m, --no-timestamp        genskab ikke filers ændringstid\n"
+#~ "  -Q, --quiet-unshar        undgå snakkesalige beskeder ved udpakning\n"
+#~ "  -f, --basename            udpak filer i ét katalog, uden hierarki\n"
+#~ "      --no-i18n             opret ikke internationaliserede skalarkiver\n"
 
-#: src/scripts.x:449
-msgid "You have unpacked the last part"
-msgstr "Du har udpakket den sidste arkivdel"
+#~ msgid ""
+#~ "\n"
+#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Flaget -o kræves sammen med -l eller -L, flaget -n kræves sammen med -a.\n"
 
-#: src/scripts.x:450
-#, c-format
-msgid "x - removed lock directory %s."
-msgstr "x - fjernede låsekatalog %s."
+#~ msgid "Option -g implies -z, option -b implies -Z.\n"
+#~ msgstr "Flaget -g medfører -z, flaget -b medfører -Z.\n"
 
-#: src/scripts.x:451
-#, c-format
-msgid "x - failed to remove lock directory %s."
-msgstr "x - det mislykkedes at fjerne låsekatalog %s."
+#~ msgid "Option -g implies -z.\n"
+#~ msgstr "Flaget -g medfører -z.\n"
+
+#~ msgid "DEBUG was not selected at compile time"
+#~ msgstr "DEBUG var ikke valgt da programmet oversattes"
+
+#~ msgid "Hard limit %s\n"
+#~ msgstr "Hård begrænsning på %s\n"
+
+#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
+#~ msgstr "Dette system understøtter ikke -Z ('compress'), brug -z i stedet"
+
+#~ msgid "Soft limit %s\n"
+#~ msgstr "Blød begrænsning på %s\n"
+
+#~ msgid "illegal output prefix\n"
+#~ msgstr "ugyldigt præfiks for uddata\n"
+
+#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
+#~ msgstr "Brug: %s [LOKAL_FIL] IKKE_LOKAL_FIL\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "\n"
+#~ "  -m, --base64    brug base64-kodning ifølge RFC1521\n"
+#~ "  -h, --help      vis denne hjælpetekst og afslut\n"
+#~ "  -v, --version   vis versionsinformation og afslut\n"
 
 #~ msgid "%s: illegal option -- %c\n"
 #~ msgstr "%s: ulovligt flag -- %c\n"
-
-#~ msgid "memory exhausted"
-#~ msgstr "Løbet tør for hukommelse"
 
 #~ msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
 #~ msgstr "installere GNUs \"touch\" som følger med GNU File Utilities..."
@@ -933,21 +1033,30 @@ msgstr "x - det mislykkedes at fjerne låsekatalog %s."
 #~ msgid "current size"
 #~ msgstr "aktuel størrelse"
 
-#~ msgid "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ msgstr "Obligatoriske argumenter for lange flag er også obligatoriske for korte flag.\n"
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ msgstr ""
+#~ "Obligatoriske argumenter for lange flag er også obligatoriske for korte "
+#~ "flag.\n"
 
 #~ msgid ""
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
+#~ "kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
+#~ "kilobytes\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PRÆFIKS   udskriv på filerne PRÆFIKS.01 til PRÆFIKS.NN\n"
-#~ "  -l, --whole-size-limit=STØRR  opsplit arkiv, ikke filer, i STØRR kilobyte\n"
-#~ "  -L, --split-size-limit=STØRR  opsplit arkiv eller filer i STØRR kilobyte\n"
+#~ "  -o, --output-prefix=PRÆFIKS   udskriv på filerne PRÆFIKS.01 til PRÆFIKS."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=STØRR  opsplit arkiv, ikke filer, i STØRR "
+#~ "kilobyte\n"
+#~ "  -L, --split-size-limit=STØRR  opsplit arkiv eller filer i STØRR "
+#~ "kilobyte\n"
 
 #~ msgid "removed"
 #~ msgstr "fjernet"
@@ -976,9 +1085,12 @@ msgstr "x - det mislykkedes at fjerne låsekatalog %s."
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
+#~ "kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
+#~ "kilobytes\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Vælg information:\n"
@@ -987,14 +1099,18 @@ msgstr "x - det mislykkedes at fjerne låsekatalog %s."
 #~ "  -q, --quiet, --silent   brug ikke snakkesalige beskeder lokalt\n"
 #~ "\n"
 #~ "Vælg filer:\n"
-#~ "  -p, --intermix-type     tillad -[BTzZ] i fil-lister for at ændre tilstand\n"
+#~ "  -p, --intermix-type     tillad -[BTzZ] i fil-lister for at ændre "
+#~ "tilstand\n"
 #~ "  -S, --stdin-file-list   læs fil-liste fra standard ind\n"
 #~ "\n"
 #~ "Opdel arkivet:\n"
-#~ "  -o, --output-prefix=PRÆFIKS       lav filerne PRÆFIKS.01 til PRÆFIKS.NN\n"
-#~ "  -l, --whole-size-limit=STØRRELSE  opdel arkivet i STØRRELSE kbyte stykker,\n"
+#~ "  -o, --output-prefix=PRÆFIKS       lav filerne PRÆFIKS.01 til PRÆFIKS."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=STØRRELSE  opdel arkivet i STØRRELSE kbyte "
+#~ "stykker,\n"
 #~ "                                    individuelle filer opdeles ikke\n"
-#~ "  -L, --split-size-limit=STØRRELSE  som ovenfor, individuelle filer opdeles\n"
+#~ "  -L, --split-size-limit=STØRRELSE  som ovenfor, individuelle filer "
+#~ "opdeles\n"
 
 #~ msgid "Report bugs to <bug-gnu-utils@prep.ai.mit.edu>.\n"
 #~ msgstr "Rapportér fejl til <bug-gnu-utils@prep.ai.mit.edu>.\n"

@@ -7,493 +7,469 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils 4.10\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2011-02-05 11:03-0800\n"
+"POT-Creation-Date: 2012-08-10 11:52-0700\n"
 "PO-Revision-Date: 2010-09-28 22:38+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: LocFactoryEditor 1.8\n"
 
-#: lib/error.c:181
-msgid "Unknown system error"
-msgstr "Lỗi hệ thống không rõ"
+#. TRANSLATORS:  This is a phony function generated for the purpose of
+#. constructing the strings to be extracted for translation.  Each string
+#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
+#. if you need to look up context.  These strings are all inserted into
+#. the shar-generated shell script so the shar user can create shar archives
+#. with messages localized for one locale.
+#.
+#: src/scripts.x:395
+msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
+msgstr ""
+"Ghi chú : không kiểm tra các md5sum. Hãy suy tính cài đặt gói các tiện ích "
+"lõi coreutils của GNU."
 
-#: lib/getopt.c:527 lib/getopt.c:543
+#: src/scripts.x:396
+msgid ""
+"WARNING: not restoring timestamps.  Consider getting and\n"
+"installing GNU `touch', distributed in GNU coreutils..."
+msgstr ""
+"CẢNH BÁO : không phục hồi nhãn giờ.\n"
+"Hãy lấy và cài đặt gói « touch » của GNU,\n"
+"được phân phối trong gói phần mềm coreutils (các tiện ích lõi) của GNU..."
+
+#: src/scripts.x:398
 #, c-format
-msgid "%s: option '%s' is ambiguous\n"
-msgstr "%s: tùy chọn « %s » vẫn mơ hồ\n"
+msgid "lock directory %s exists"
+msgstr "thư mục khoá %s đã có"
 
-#: lib/getopt.c:576 lib/getopt.c:580
+#: src/scripts.x:399
 #, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: tùy chọn « --%s » không cho phép đối số\n"
+msgid "failed to create %s lock directory"
+msgstr "lỗi tạo thư mục khoá %s"
 
-#: lib/getopt.c:589 lib/getopt.c:594
+#: src/scripts.x:400
 #, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: tùy chọn « %c%s » không cho phép đối số\n"
+msgid "x - created lock directory %s."
+msgstr "x - đã tạo thư mục khoá %s."
 
-#: lib/getopt.c:637 lib/getopt.c:656
+#: src/scripts.x:401
+#, c-format
+msgid "x - failed to create lock directory %s."
+msgstr "x - lỗi tạo thư mục khoá %s."
+
+#: src/scripts.x:402
+#, c-format
+msgid "x - created directory %s."
+msgstr "x - đã tạo thư mục %s."
+
+#: src/scripts.x:403
+#, c-format
+msgid "x - failed to create directory %s."
+msgstr "x - lỗi tạo thư mục %s."
+
+#: src/scripts.x:404
+msgid "yes"
+msgstr "có"
+
+#: src/scripts.x:405
+msgid "overwrite this file"
+msgstr "ghi đè lên tập tin này"
+
+#: src/scripts.x:406
+msgid "no"
+msgstr "không"
+
+#: src/scripts.x:407
+msgid "skip this file"
+msgstr "bỏ qua tập tin này"
+
+#: src/scripts.x:408
+msgid "all"
+msgstr "tất cả"
+
+#: src/scripts.x:409
+msgid "overwrite all files"
+msgstr "ghi đè lên mọi tập tin"
+
+#: src/scripts.x:410
+msgid "none"
+msgstr "không có"
+
+#: src/scripts.x:411
+msgid "overwrite no files"
+msgstr "đừng ghi đè gì"
+
+#: src/scripts.x:412
+msgid "help"
+msgstr "trợ giúp"
+
+#: src/scripts.x:413
+msgid "explain choices"
+msgstr "giải thích các lựa chọn"
+
+#: src/scripts.x:414
+msgid "quit"
+msgstr "thoát"
+
+#: src/scripts.x:415
+msgid "exit immediately"
+msgstr "thoát ngay"
+
+#: src/scripts.x:416
+#, c-format
+msgid "restore of %s failed"
+msgstr "việc phục hồi %s bị lỗi"
+
+#: src/scripts.x:417
+#, c-format
+msgid "End of part %d, continue with part %d"
+msgstr "Kết thúc phần %d, tiếp tục lại với phần %d"
+
+#: src/scripts.x:418
+#, c-format
+msgid "End of %s part %d"
+msgstr "Kết thức %s phần %d"
+
+#: src/scripts.x:419
+#, c-format
+msgid "restoration warning:  size of %s is not %s"
+msgstr "cảnh báo phục hồi : kích cỡ %s không phải %s"
+
+#: src/scripts.x:420 src/shar.c:1306
+msgid "(text)"
+msgstr "(văn bản)"
+
+#: src/scripts.x:421
+msgid "(compressed)"
+msgstr "(đã nén)"
+
+#: src/scripts.x:422
+msgid "(gzipped)"
+msgstr "(đã nén gzip)"
+
+#: src/scripts.x:423
+msgid "(bzipped)"
+msgstr "(đã nén bzip)"
+
+#: src/scripts.x:424
+msgid "(binary)"
+msgstr "(nhị phân)"
+
+#: src/scripts.x:425
+msgid "archive"
+msgstr "kho nén"
+
+#: src/scripts.x:426
+#, c-format
+msgid "File %s is continued in part %d"
+msgstr "Tập tin %s được tiếp tục trong phần %d"
+
+#: src/scripts.x:427
+msgid "Please unpack part 1 first!"
+msgstr "Trước tiên hãy giải nén phần 1."
+
+#: src/scripts.x:428
+msgid "Please unpack part ${shar_sequence} next!"
+msgstr "Kế tiếp hãy giải nén phần ${shar_sequence}."
+
+#: src/scripts.x:429
+#, c-format
+msgid "x - STILL SKIPPING %s"
+msgstr "x - VẪN CÒN BỎ QUA %s"
+
+#: src/scripts.x:430
+#, c-format
+msgid "continuing file %s"
+msgstr "đang tiếp tục tập tin %s"
+
+#: src/scripts.x:431
+msgid "(empty)"
+msgstr "(rỗng)"
+
+#: src/scripts.x:432
+#, c-format
+msgid "x - overwriting %s"
+msgstr "x - đang ghi đè lên %s"
+
+#: src/scripts.x:433
+#, c-format
+msgid "overwrite %s"
+msgstr "ghi đè lên %s"
+
+#: src/scripts.x:434
+#, c-format
+msgid "SKIPPING %s"
+msgstr "ĐANG BỎ QUA %s"
+
+#: src/scripts.x:435
+msgid "extraction aborted"
+msgstr "việc giải nén bị hủy bỏ"
+
+#: src/scripts.x:436
+#, c-format
+msgid "x - SKIPPING %s (file already exists)"
+msgstr "x - ĐANG BỎ QUA %s (tập tin đã có)"
+
+#: src/scripts.x:437
+#, c-format
+msgid "x - extracting %s %s"
+msgstr "x — đang giải nén %s %s"
+
+#: src/scripts.x:438
+#, c-format
+msgid "File %s is complete"
+msgstr "Tập tin %s hoàn tất"
+
+#: src/scripts.x:439
+#, c-format
+msgid "uudecoding file %s"
+msgstr "đang giải nén tập tin mã « uu » %s"
+
+#: src/scripts.x:440
+msgid "MD5 check failed"
+msgstr "Việc kiểm tra MD5 bị lỗi"
+
+#: src/scripts.x:441
+msgid "You have unpacked the last part"
+msgstr "Bạn đã giải nén mọi phần."
+
+#: src/scripts.x:442
+#, c-format
+msgid "x - removed lock directory %s."
+msgstr "x - đã gỡ bỏ thư mục khoá %s."
+
+#: src/scripts.x:443
+#, c-format
+msgid "x - failed to remove lock directory %s."
+msgstr "x - lỗi gỡ bỏ thư mục khoá %s."
+
+#: src/shar-opts.c:1653
 #, fuzzy, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: tùy chọn « %s » yêu cầu một đối số\n"
+msgid "Cannot reopen %s as stdin"
+msgstr "Không thể mở tập tin %s"
 
-#: lib/getopt.c:694 lib/getopt.c:697
+#: src/shar-opts.c:1745
+msgid "shar usage error:\n"
+msgstr ""
+
+#: src/shar-opts.c:1781
+msgid "shar fatal error:\n"
+msgstr ""
+
+#: src/shar-opts.c:1818
 #, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: không nhận ra tùy chọn « --%s »\n"
+msgid "fserr %d (%s) performing '%s' on %s\n"
+msgstr ""
 
-#: lib/getopt.c:705 lib/getopt.c:708
-#, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: không nhận ra tùy chọn « %c%s »\n"
+#: src/shar-opts.c:1919 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/uuencode-opts.c:479
+#, fuzzy
+msgid "No memory for duping translated strings\n"
+msgstr "không có bộ nhớ cho sự cấp phát %d byte"
 
-#: lib/getopt.c:757 lib/getopt.c:760
-#, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: tùy chọn không hợp lệ -- « %c »\n"
-
-#: lib/getopt.c:810 lib/getopt.c:827 lib/getopt.c:1035 lib/getopt.c:1053
-#, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: tùy chọn yêu cầu một đối số -- « %c »\n"
-
-#: lib/getopt.c:883 lib/getopt.c:899
-#, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: tùy chọn « -W %s » vẫn mơ hồ\n"
-
-#: lib/getopt.c:923 lib/getopt.c:941
-#, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: tùy chọn « -W %s » không cho phép đối số\n"
-
-#: lib/getopt.c:962 lib/getopt.c:980
-#, fuzzy, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: tùy chọn « %s » yêu cầu một đối số\n"
-
-#: src/shar.c:416
+#: src/shar.c:372
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "lỗi định dạng printf: %s\n"
 
-#: src/shar.c:467
-#, c-format
-msgid "sharutils bug - no status\n"
+#: src/shar.c:423
+#, fuzzy
+msgid "sharutils bug - no status"
 msgstr "lỗi sharutils — không có trạng thái\n"
 
-#: src/shar.c:823
-#, c-format
+#: src/shar.c:788
 msgid "Too many directories for mkdir generation"
 msgstr "Quá nhiều thư mục để tạo ra bằng mkdir (tạo thư mục)"
 
-#: src/shar.c:906 src/shar.c:1573
+#: src/shar.c:871 src/shar.c:1541
 #, c-format
 msgid "Cannot access %s"
 msgstr "Không thể truy cập %s."
 
-#: src/shar.c:956
-#, c-format
-msgid "-C is being deprecated, use -Z instead"
-msgstr "« -C » bị phản đối nên dùng « -Z » thay thế."
-
-#: src/shar.c:997 src/unshar.c:375
+#: src/shar.c:948 src/unshar.c:376
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Không thể lấy tên thư mục hiện có."
 
-#: src/shar.c:1066 src/shar.c:1388
+#: src/shar.c:1005 src/shar.c:1346
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Tập tin mới, còn lại %s, "
 
-#: src/shar.c:1067 src/shar.c:1389
+#: src/shar.c:1006 src/shar.c:1347
 #, c-format
 msgid "Limit still %s\n"
 msgstr "Vẫn còn có sự hạn chế %s\n"
 
-#: src/shar.c:1090 src/shar.c:1471
+#: src/shar.c:1028
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Đang bắt đầu tập tin %s\n"
 
-#: src/shar.c:1141
-#, c-format
-msgid "Could not popen 'wc' command:  %s\n"
+#: src/shar.c:1081
+#, fuzzy
+msgid "Could not popen command"
 msgstr "Không thể popen lệnh « wc »: %s\n"
 
-#: src/shar.c:1202
+#: src/shar.c:1162
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Không thể mở tập tin %s"
 
-#: src/shar.c:1257
-#, c-format
-msgid "popen(3) on: %s"
-msgstr "popen(3) trên: %s"
-
-#: src/shar.c:1280
-#, c-format
-msgid "fopen(3) of file %s"
-msgstr "fopen(3) tập tin %s"
-
-#: src/shar.c:1332
+#: src/shar.c:1296 src/shar.c:1305
 msgid "text"
 msgstr "văn bản"
 
-#: src/shar.c:1342
-msgid "compressed"
-msgstr "đã nén"
+#: src/shar.c:1311 src/shar.c:1322
+msgid "call"
+msgstr ""
 
-#: src/shar.c:1343
-msgid "gzipped"
-msgstr "đã nén gzip"
-
-#: src/shar.c:1344
-msgid "bzipped"
-msgstr "đã nén bzip"
-
-#: src/shar.c:1345
-msgid "binary"
-msgstr "nhị phân"
-
-#: src/shar.c:1356
-#, c-format
-msgid "pipe(2) failed"
-msgstr "pipe(2) bị lỗi"
-
-#: src/shar.c:1367
-#, c-format
-msgid "Could not fork"
-msgstr "Không thể tạo tiến trình con"
-
-#: src/shar.c:1379
+#: src/shar.c:1335
 #, c-format
 msgid "File %s (%s)"
 msgstr "Tập tin %s (%s)"
 
-#: src/shar.c:1568
+#: src/shar.c:1426
+#, fuzzy, c-format
+msgid "Continuing file %s\n"
+msgstr "đang tiếp tục tập tin %s"
+
+#: src/shar.c:1536
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: không phải là tập tin chuẩn"
 
-#: src/shar.c:1588
+#: src/shar.c:1563
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "Trong shar: kích cỡ còn lại %s\n"
 
-#: src/shar.c:1606
+#: src/shar.c:1583
 msgid "empty"
 msgstr "rỗng"
 
-#: src/shar.c:1649
+#: src/shar.c:1622
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Đang lưu %s (%s)"
 
-#: src/shar.c:1869
-#, c-format
-msgid "allocating output file name"
-msgstr "đang cấp phát tên tập tin xuất"
-
-#: src/shar.c:1875
-#, c-format
-msgid "Opening `%s'"
-msgstr "Đang mở « %s »"
-
-#: src/shar.c:1886
-#, c-format
-msgid "Closing `%s'"
-msgstr "Đang đóng « %s »"
-
-#: src/shar.c:1897 src/unshar.c:311 src/uudecode.c:460 src/uuencode.c:202
-#, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "Hãy thử lệnh trợ giúp « %s --help » để tìm thông tin thêm.\n"
-
-#: src/shar.c:1901 src/unshar.c:315
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Cách sử dụng: %s [TÙY_CHỌN]... [TẬP_TIN]...\n"
-
-#: src/shar.c:1902
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"Giving feedback:\n"
-"      --help              display this help and exit\n"
-"      --version           output version information and exit\n"
-"  -q, --quiet, --silent   do not output verbose messages locally\n"
-"\n"
-"Selecting files:\n"
-msgstr ""
-"Mọi đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn "
-"ngắn.\n"
-"\n"
-"Cách gởi thông tin phải hồi:\n"
-"      --help              hiển thị trợ giúp này rồi thoát\n"
-"      --version           xuất thông tin phiên bản rồi thoát\n"
-"  -q, --quiet, --silent   không xuất chi tiết một cách cục bộ\n"
-"\n"
-"Lựa chọn tập tin:\n"
-
-#: src/shar.c:1913
-msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-msgstr ""
-"  -p, --intermix-type    cho phép đối số -[BTzZ] trong danh sách tập tin để "
-"chuyển đổi chế độ\n"
-
-#: src/shar.c:1917
-msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-msgstr ""
-" -p, --intermix-type    cho phép đối số -[BTz] trong danh sách tập tin để "
-"chuyển đổi chế độ\n"
-
-#: src/shar.c:1921
-msgid ""
-"  -S, --stdin-file-list   read file list from standard input\n"
-"\n"
-"Splitting output:\n"
-"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
-"\n"
-"Controlling the shar headers:\n"
-"  -n, --archive-name=NAME   use NAME to document the archive\n"
-"  -s, --submitter=ADDRESS   override the submitter name\n"
-"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-"  -c, --cut-mark            start the shar with a cut line\n"
-"  -t, --translate           translate messages in the script\n"
-"\n"
-"Selecting how files are stocked:\n"
-"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-"  -T, --text-files             treat all files as text\n"
-"  -B, --uuencode               treat all files as binary, use uuencode\n"
-"  -z, --gzip                   gzip and uuencode all files\n"
-"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-"  -j, --bzip2                  bzip2 and uuencode all files\n"
-msgstr ""
-"  -S, --stdin-file-list        đọc danh sách tập tin từ đầu vào tiêu chuẩn\n"
-"\n"
-"Chia tách kết xuất:\n"
-"  -o, --output-prefix=HIỀN_TỐ    xuất vào tập tin HIỀN_TỐ.01 đến HIỀN_TỐ.SỐ\n"
-"  -l, --whole-size-limit=CỠ   chia tách kho (không phải tập tin) ra số kB "
-"này\n"
-"  -L, --split-size-limit=CỠ     chia tách kho (hoặc tập tin) ra số kB này\n"
-"\n"
-"Điều khiển các dòng đầu shar:\n"
-"  -n, --archive-name=TÊN    dùng tên này để diễn tả kho\n"
-"  -s, --submitter=ĐỊA_CHỈ    ghi đè lên tên đã đệ trình\n"
-"  -a, --net-headers         xuất dòng đầu « Submitted-by: » (đệ trình bởi)\n"
-"\t\t\t\t\tvà « Archive-name: » (tên kho)\n"
-"  -c, --cut-mark               bắt đầu vùng shar dùng một đường cắt\n"
-"  -t, --translate                dịch các thông điệp trpng văn lệnh\n"
-"\n"
-"Chọn cách cất giữ tập tin:\n"
-"  -M, --mixed-uuencode         quyết định động mã UU (uuencode): mặc định\n"
-"  -T, --text-files                          thấy mọi tập tin là nhập thô\n"
-"  -B, --uuencode                      thấy mọi tập tin là nhị phân, dùng mã "
-"UU\n"
-"  -z, --gzip                                 nén gzip và mã hoá UU mọi tập "
-"tin\n"
-"  -g, --level-for-gzip=CẤP      gửi cấp này (mặc định là 9) cho trình gzip\n"
-"  -j, --bzip2                               nén bzip2 và mã hoá UU mọi tập "
-"tin\n"
-
-#: src/shar.c:1945
-msgid ""
-"  -Z, --compress               compress and uuencode all files\n"
-"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-msgstr ""
-"  -Z, --compress                       nén và mã hoá UU mọi tập tin\n"
-"  -b, --bits-per-code=SỐ_BIT        gửi « -bSỐ_BIT » (mặc định là 12) sang "
-"trình nén\n"
-
-#: src/shar.c:1950
-msgid ""
-"\n"
-"Protecting against transmission:\n"
-"  -w, --no-character-count      do not use `wc -c' to check size\n"
-"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-"  -F, --force-prefix            force the prefix character on every line\n"
-"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
-"\n"
-"Producing different kinds of shars:\n"
-"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-"  -P, --no-piping           exclusively use temporary files at unshar time\n"
-"  -x, --no-check-existing   blindly overwrite existing files\n"
-"  -X, --query-user          ask user before overwriting files (not for Net)\n"
-"  -m, --no-timestamp        do not restore file modification dates & times\n"
-"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-"  -f, --basename            restore in one directory, despite hierarchy\n"
-"      --no-i18n             do not produce internationalized shell script\n"
-msgstr ""
-"\n"
-"Bảo vệ chống truyền:\n"
-"  -w, --no-character-count      đừng dùng « wc -c » để kiểm tra kích cỡ\n"
-"  -D, --no-md5-digest\t\tđừng dùng bản tóm tắt md5sum để thẩm tra\n"
-"  -F, --force-prefix            \tép buộc ký tự tiền tố trên mọi dòng\n"
-"  -d, --here-delimiter=CHUỖI\tdùng chuỗi này để định giới những tập tin "
-"trong shar\n"
-"\n"
-"Tạo các kiểu shar khác nhau :\n"
-"  -V, --vanilla-operation   \t\ttạo shar kiểu rất đơn giản và dễ sử dụng\n"
-"  -P, --no-piping           \t\tdùng chỉ tập tin tạm thời vào lúc unshar\n"
-"  -x, --no-check-existing   \t\tghi đè lên tập tin tồn tại, không kiểm tra "
-"trước\n"
-"  -X, --query-user          \t\thỏi người dùng trước khi ghi đè lên tập tin "
-"(không phải cho Mạng)\n"
-"  -m, --no-timestamp        \tđừng phục hồi giờ/ngày sửa đổi tập tin\n"
-"  -Q, --quiet-unshar        \ttránh hiển thị thông điệp dài vào lúc unshar "
-"(_im_)\n"
-"  -f, --basename            \tphục hồi trong cùng một thư mục, không kể phân "
-"cấp\n"
-"      --no-i18n             \t\t\tkhông tạo văn lệnh trình bao đã quốc tế "
-"hóa\n"
-
-#: src/shar.c:1968
-msgid ""
-"\n"
-"Option -o is required with -l or -L, option -n is required with -a.\n"
-msgstr ""
-"\n"
-"Tùy chọn « -o » cần thiết với « -l » or « -L », tùy chọn « -n » cần thiết với « -"
-"a ».\n"
-
-#: src/shar.c:1972
-msgid "Option -g implies -z, option -b implies -Z.\n"
-msgstr "Tùy chọn « -g » ngụ ý « -z », tùy chọn « -b » ngụ ý « -Z ».\n"
-
-#: src/shar.c:1975
-msgid "Option -g implies -z.\n"
-msgstr "Tùy chọn « -g » ngụ ý « -z ».\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/shar.c:1979 src/unshar.c:330 src/uudecode.c:471 src/uuencode.c:212
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr "Hãy thông báo lỗi dịch nào cho <vi-VN@googlegroups.com>%.0s.\n"
-
-#: src/shar.c:1996
-#, c-format
-msgid "invalid file size limit `%s'"
-msgstr "hạn chế kích cỡ tập tin không hợp lệ « %s »."
-
-#: src/shar.c:2032
-#, c-format
-msgid "invalid format (count field too wide): '%s'\n"
+#: src/shar.c:1807
+#, fuzzy, c-format
+msgid "Invalid format for output file names (%s): %s"
 msgstr "định dạng không hợp lệ (trường đếm quá rộng): « %s »\n"
 
-#: src/shar.c:2121
-#, c-format
-msgid "DEBUG was not selected at compile time"
-msgstr "Chưa chọn tùy chọn DEBUG (gỡ lỗi) vào lúc biên dich."
-
-#: src/shar.c:2141
-#, c-format
-msgid "Hard limit %s\n"
-msgstr "Hạn chế cứng %s\n"
-
-#: src/shar.c:2183
-#, c-format
-msgid "This system doesn't support -Z ('compress'), use -z instead"
+#: src/shar.c:1822
+msgid "more than one format element"
 msgstr ""
-"Hệ thống này không hỗ trợ tùy chọn « -Z » (nén) nên hãy sử dụng « -z » thay "
-"thế."
 
-#: src/shar.c:2216
-#, c-format
-msgid "Soft limit %s\n"
-msgstr "Hạn chế mềm %s\n"
-
-#: src/shar.c:2231
-#, c-format
-msgid "illegal output prefix\n"
-msgstr "không cho phép tiền tố xuất\n"
-
-#: src/shar.c:2278 src/unshar.c:413 src/uudecode.c:509 src/uuencode.c:252
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+#: src/shar.c:1827
+msgid "no conversion character"
 msgstr ""
-"Tác quyền © %s cùa Tổ chức Phần mềm Tự do.\n"
-"Chương trình này là phần mềm tự do; xem mã nguồn để tìm điều kiện sao chép.\n"
-"KHÔNG CÓ BẢO HÀNH GÌ CẢ, THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý\n"
-"KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC VIỆC DỨT KHOÁT.\n"
 
-#: src/shar.c:2347
-#, c-format
-msgid "WARNING: No user interaction in vanilla mode"
-msgstr "CẢNH BÁO : trong chế độ vani (đơn giản) không tương tác với người dùng"
-
-#: src/shar.c:2359
-#, c-format
-msgid "WARNING: Non-text storage options overridden"
-msgstr "CẢNH BÁO : các tùy chọn lưu trữ khác văn bản không có quyền cao hơn"
-
-#: src/shar.c:2388
-#, c-format
-msgid "Cannot use -a option without -n"
-msgstr "Không thể sử dụng tùy chọn « -a » nếu không cũng sử dụng « -n »."
-
-#: src/shar.c:2394
-#, c-format
-msgid "Cannot use -l or -L option without -o"
+#: src/shar.c:1836
+msgid "format is too wide"
 msgstr ""
-"Không thể sử dụng tùy chọn « -l » hay « -L » nếu không cũng sử dụng « -o »."
 
-#: src/shar.c:2436
-#, c-format
+#: src/shar.c:1848
+msgid "invalid conversion character"
+msgstr ""
+
+#: src/shar.c:1889
+#, fuzzy
+msgid "Opening"
+msgstr "Đang mở « %s »"
+
+#: src/shar.c:1904
+#, fuzzy
+msgid "Closing"
+msgstr "Đang đóng « %s »"
+
+#: src/shar.c:2015
 msgid "No input files"
 msgstr "Không có tập tin nhập"
 
-#: src/shar.c:2448
+#: src/shar.c:2032
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "QUAN TRỌNG là bạn tránh shar -X trên USENET (nhóm tin) hay mạng công."
 
-#: src/shar.c:2514
+#: src/shar.c:2056
+#, c-format
+msgid ""
+"The '%s' option may not be intermixed with file names\n"
+"unless the --intermix-type option has been specified."
+msgstr ""
+
+#: src/shar.c:2074
+#, c-format
+msgid "The '%s' option must appear before any file names"
+msgstr ""
+
+#: src/shar.c:2110
+#, c-format
+msgid ""
+"invalid compaction type:  %s\n"
+"the known types are:\n"
+msgstr ""
+
+#: src/shar.c:2149
+msgid "files on command line and --input-file-list specified"
+msgstr ""
+
+#: src/shar.c:2198
 #, c-format
 msgid "Created %d files\n"
 msgstr "Đã tạo %d tập tin\n"
 
-#: src/unshar.c:167
+#: src/unshar-opts.c:427 src/unshar.c:394
+#, c-format
+msgid "Cannot chdir to `%s'"
+msgstr "Không thể chdir (chuyển đổi thư mục) sang « %s »"
+
+#: src/unshar.c:168
 #, c-format
 msgid "Found no shell commands in %s"
 msgstr "Không tìm thấy lệnh trình bao trong %s"
 
-#: src/unshar.c:183
+#: src/unshar.c:184
 #, c-format
 msgid "%s looks like raw C code, not a shell archive"
 msgstr "%s hình như mã C thô, không phải kho trình bao."
 
-#: src/unshar.c:219
+#: src/unshar.c:220
 #, c-format
 msgid "Found no shell commands after `cut' in %s"
 msgstr "Không tìm thấy lệnh trình bao nằm sau « cut » (cắt) trong %s"
 
-#: src/unshar.c:240
+#: src/unshar.c:241
 #, c-format
 msgid "%s is probably not a shell archive"
 msgstr "Rất có thể là %s không phải kho trình bao"
 
-#: src/unshar.c:241
+#: src/unshar.c:242
 #, c-format
 msgid "The `cut' line was followed by: %s"
 msgstr "Dòng « cut » (cắt) nằm trước: %s"
 
-#: src/unshar.c:267
+#: src/unshar.c:268
 #, c-format
 msgid "Starting `sh' process"
 msgstr "Đang bắt đầu tiến trình « sh »"
 
+#: src/unshar.c:312 src/uudecode.c:459
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Hãy thử lệnh trợ giúp « %s --help » để tìm thông tin thêm.\n"
+
 #: src/unshar.c:316
+#, c-format
+msgid "Usage: %s [OPTION]... [FILE]...\n"
+msgstr "Cách sử dụng: %s [TÙY_CHỌN]... [TẬP_TIN]...\n"
+
+#: src/unshar.c:317
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -525,76 +501,89 @@ msgstr ""
 "\n"
 "Không có TẬP TIN thì đọc thiết bị nhập chuẩn.\n"
 
-#: src/unshar.c:393
+#. TRANSLATORS: add the contact address for your translation team!
+#: src/unshar.c:331 src/uudecode.c:470
 #, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Không thể chdir (chuyển đổi thư mục) sang « %s »"
+msgid "Report bugs to <%s>.\n"
+msgstr "Hãy thông báo lỗi dịch nào cho <vi-VN@googlegroups.com>%.0s.\n"
 
-#: src/unshar.c:444 src/unshar.c:506
+#: src/unshar.c:414 src/uudecode.c:506
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Tác quyền © %s cùa Tổ chức Phần mềm Tự do.\n"
+"Chương trình này là phần mềm tự do; xem mã nguồn để tìm điều kiện sao chép.\n"
+"KHÔNG CÓ BẢO HÀNH GÌ CẢ, THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý\n"
+"KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC VIỆC DỨT KHOÁT.\n"
+
+#: src/unshar.c:445 src/unshar.c:507
 #, c-format
 msgid "allocate file name buffer"
 msgstr "cấp phát bộ đệm tên tập tin"
 
-#: src/unshar.c:465
+#: src/unshar.c:466
 msgid "standard input"
 msgstr "thiết bị nhập chuẩn"
 
-#: src/unshar.c:527
+#: src/unshar.c:528
 #, c-format
 msgid "allocate file buffer"
 msgstr "cấp phát bộ đệm tập tin"
 
-#: src/uudecode.c:113 src/uudecode.c:444
+#: src/uudecode.c:114 src/uudecode.c:444
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: lỗi ghi"
 
-#: src/uudecode.c:130 src/uudecode.c:217
+#: src/uudecode.c:131 src/uudecode.c:218
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: tập tin ngắn"
 
-#: src/uudecode.c:166
+#: src/uudecode.c:167
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: không có dòng « end » (kết thúc)"
 
-#: src/uudecode.c:226
+#: src/uudecode.c:227
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: có dữ liệu theo ký tự đệm « = »"
 
-#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
+#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: không cho phép dòng này"
 
-#: src/uudecode.c:302
+#: src/uudecode.c:303
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: không cho phép tên tập tin: %s"
 
-#: src/uudecode.c:309
+#: src/uudecode.c:310
 #, c-format
 msgid "No user `%s'"
 msgstr "Không có người dùng « %s »"
 
-#: src/uudecode.c:320
+#: src/uudecode.c:321
 #, c-format
 msgid "no memory for %d byte allocation"
 msgstr "không có bộ nhớ cho sự cấp phát %d byte"
 
-#: src/uudecode.c:345
+#: src/uudecode.c:346
 #, c-format
 msgid "cannot access %s"
 msgstr "không thể truy cập %s"
 
-#: src/uudecode.c:353
+#: src/uudecode.c:354
 #, c-format
 msgid "freopen of %s"
 msgstr "việc freopen %s"
 
-#: src/uudecode.c:359
+#: src/uudecode.c:360
 #, c-format
 msgid "chmod of %s"
 msgstr "việc chmod (thay đổi chế độ) %s"
@@ -604,12 +593,12 @@ msgstr "việc chmod (thay đổi chế độ) %s"
 msgid "%s: No `begin' line"
 msgstr "%s: không có dòng « begin » (bắt đầu)"
 
-#: src/uudecode.c:464
+#: src/uudecode.c:463
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Cách sử dụng: %s [TẬP_TIN]...\n"
 
-#: src/uudecode.c:465
+#: src/uudecode.c:464
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
@@ -623,7 +612,7 @@ msgstr ""
 "      --help               hiển thị _trợ giúp_ này rồi thoát\n"
 "      --version            xuất thông tin _phiên bản_ rồi thoát\n"
 
-#: src/uudecode.c:533
+#: src/uudecode.c:530
 #, c-format
 msgid ""
 "You cannot specify an output file when processing\n"
@@ -632,296 +621,404 @@ msgstr ""
 "Không cho phép ghi rõ một tập tin kết xuất khi xử lý nhiều tập tin nhập "
 "vào.\n"
 
-#: src/uuencode.c:133 src/uuencode.c:301 src/uuencode.c:308
+#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
 #, c-format
 msgid "Write error"
 msgstr "Lỗi ghi"
 
-#: src/uuencode.c:155 src/uuencode.c:186 src/uuencode.c:188
+#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
 #, c-format
 msgid "Read error"
 msgstr "Lỗi đọc"
 
-#: src/uuencode.c:206
-#, c-format
-msgid "Usage: %s [INFILE] REMOTEFILE\n"
-msgstr ""
-"Cách sử dụng: %s [TTN] TTX\n"
-"[TTN\t\ttập tin nhập vào\n"
-"TTX\t\ttập tin ở xa]\n"
-
-#: src/uuencode.c:207
-msgid ""
-"\n"
-"  -m, --base64    use base64 encoding as of RFC1521\n"
-"      --help      display this help and exit\n"
-"      --version   output version information and exit\n"
-msgstr ""
-"\n"
-"  -m, --base64    sử dụng mã hóa _cơ số 64_ tùy theo RFC1521\n"
-"      --help      hiển thị _trợ giúp_ này rồi thoát\n"
-"      --version   xuất thông tin _phiên bản_ rồi thoát\n"
-
-#: src/uuencode.c:277
+#: src/uuencode.c:226
 #, c-format
 msgid "fopen-ing %s"
 msgstr "Đang fopen (mở) %s"
 
-#: src/uuencode.c:279
+#: src/uuencode.c:228
 #, c-format
 msgid "fstat-ing %s"
 msgstr "Đang fstat (lấy các thông tin) %s"
 
-#. TRANSLATORS:  This is a phony function generated for the purpose of
-#. constructing the strings to be extracted for translation.  Each string
-#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
-#. if you need to look up context.  These strings are all inserted into
-#. the shar-generated shell script so the shar user can create shar archives
-#. with messages localized for one locale.
-#.
-#: src/scripts.x:398
-msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Ghi chú : không kiểm tra các md5sum. Hãy suy tính cài đặt gói các tiện ích "
-"lõi coreutils của GNU."
+#: src/uuencode.c:254
+#, fuzzy, c-format
+msgid "Allocation failure"
+msgstr "cấp phát bộ đệm tập tin"
 
-#: src/scripts.x:399
-msgid ""
-"WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
-msgstr ""
-"CẢNH BÁO : không phục hồi nhãn giờ.\n"
-"Hãy lấy và cài đặt gói « touch » của GNU,\n"
-"được phân phối trong gói phần mềm coreutils (các tiện ích lõi) của GNU..."
+#: lib/error.c:188
+msgid "Unknown system error"
+msgstr "Lỗi hệ thống không rõ"
 
-#: src/scripts.x:401
+#: lib/getopt.c:547 lib/getopt.c:576
+#, fuzzy, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: tùy chọn « %s » vẫn mơ hồ\n"
+
+#: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
-msgid "lock directory %s exists"
-msgstr "thư mục khoá %s đã có"
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: tùy chọn « --%s » không cho phép đối số\n"
 
-#: src/scripts.x:402
+#: lib/getopt.c:637 lib/getopt.c:642
 #, c-format
-msgid "failed to create %s lock directory"
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: tùy chọn « %c%s » không cho phép đối số\n"
+
+#: lib/getopt.c:685 lib/getopt.c:704
+#, fuzzy, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: tùy chọn « %s » yêu cầu một đối số\n"
+
+#: lib/getopt.c:742 lib/getopt.c:745
+#, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: không nhận ra tùy chọn « --%s »\n"
+
+#: lib/getopt.c:753 lib/getopt.c:756
+#, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: không nhận ra tùy chọn « %c%s »\n"
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: tùy chọn không hợp lệ -- « %c »\n"
+
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: tùy chọn yêu cầu một đối số -- « %c »\n"
+
+#: lib/getopt.c:934 lib/getopt.c:950
+#, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: tùy chọn « -W %s » vẫn mơ hồ\n"
+
+#: lib/getopt.c:974 lib/getopt.c:992
+#, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: tùy chọn « -W %s » không cho phép đối số\n"
+
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, fuzzy, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: tùy chọn « %s » yêu cầu một đối số\n"
+
+#: lib/openat-die.c:38
+#, fuzzy, c-format
+msgid "unable to record current working directory"
 msgstr "lỗi tạo thư mục khoá %s"
 
-#: src/scripts.x:403
-#, c-format
-msgid "x - created lock directory %s."
-msgstr "x - đã tạo thư mục khoá %s."
+#: lib/openat-die.c:57
+#, fuzzy, c-format
+msgid "failed to return to initial working directory"
+msgstr "lỗi tạo thư mục khoá %s"
 
-#: src/scripts.x:404
-#, c-format
-msgid "x - failed to create lock directory %s."
-msgstr "x - lỗi tạo thư mục khoá %s."
-
-#: src/scripts.x:405
-#, c-format
-msgid "x - created directory %s."
-msgstr "x - đã tạo thư mục %s."
-
-#: src/scripts.x:406
-#, c-format
-msgid "x - failed to create directory %s."
-msgstr "x - lỗi tạo thư mục %s."
-
-#: src/scripts.x:407
-msgid "yes"
-msgstr "có"
-
-#: src/scripts.x:408
-msgid "overwrite this file"
-msgstr "ghi đè lên tập tin này"
-
-#: src/scripts.x:409
-msgid "no"
-msgstr "không"
-
-#: src/scripts.x:410
-msgid "skip this file"
-msgstr "bỏ qua tập tin này"
-
-#: src/scripts.x:411
-msgid "all"
-msgstr "tất cả"
-
-#: src/scripts.x:412
-msgid "overwrite all files"
-msgstr "ghi đè lên mọi tập tin"
-
-#: src/scripts.x:413
-msgid "none"
-msgstr "không có"
-
-#: src/scripts.x:414
-msgid "overwrite no files"
-msgstr "đừng ghi đè gì"
-
-#: src/scripts.x:415
-msgid "help"
-msgstr "trợ giúp"
-
-#: src/scripts.x:416
-msgid "explain choices"
-msgstr "giải thích các lựa chọn"
-
-#: src/scripts.x:417
-msgid "quit"
-msgstr "thoát"
-
-#: src/scripts.x:418
-msgid "exit immediately"
-msgstr "thoát ngay"
-
-#: src/scripts.x:419
-msgid ""
-"Archives must be unpacked in sequence!\n"
-"Please unpack part `cat ${lock_dir}/seq` next."
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:312
+msgid "`"
 msgstr ""
-"Phải giải nén các khó theo thứ tự.\n"
-"Kế tiếp hãy giải nén phần « cat ${lock_dir}/seq »."
 
-#: src/scripts.x:421
+#: lib/quotearg.c:313
+msgid "'"
+msgstr ""
+
+#: lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr ""
+
+#: lib/xstrtol-error.c:63
 #, c-format
-msgid "restore of %s failed"
-msgstr "việc phục hồi %s bị lỗi"
+msgid "invalid %s%s argument '%s'"
+msgstr ""
 
-#: src/scripts.x:422
+#: lib/xstrtol-error.c:68
 #, c-format
-msgid "End of part %d, continue with part %d"
-msgstr "Kết thúc phần %d, tiếp tục lại với phần %d"
+msgid "invalid suffix in %s%s argument '%s'"
+msgstr ""
 
-#: src/scripts.x:423
+#: lib/xstrtol-error.c:72
 #, c-format
-msgid "End of %s part %d"
-msgstr "Kết thức %s phần %d"
+msgid "%s%s argument '%s' too large"
+msgstr ""
 
-#: src/scripts.x:424
-#, c-format
-msgid "restoration warning:  size of %s is not %s"
-msgstr "cảnh báo phục hồi : kích cỡ %s không phải %s"
+#~ msgid "-C is being deprecated, use -Z instead"
+#~ msgstr "« -C » bị phản đối nên dùng « -Z » thay thế."
 
-#: src/scripts.x:425
-msgid "(text)"
-msgstr "(văn bản)"
+#~ msgid "popen(3) on: %s"
+#~ msgstr "popen(3) trên: %s"
 
-#: src/scripts.x:426
-msgid "(compressed)"
-msgstr "(đã nén)"
+#~ msgid "fopen(3) of file %s"
+#~ msgstr "fopen(3) tập tin %s"
 
-#: src/scripts.x:427
-msgid "(gzipped)"
-msgstr "(đã nén gzip)"
+#~ msgid "compressed"
+#~ msgstr "đã nén"
 
-#: src/scripts.x:428
-msgid "(bzipped)"
-msgstr "(đã nén bzip)"
+#~ msgid "gzipped"
+#~ msgstr "đã nén gzip"
 
-#: src/scripts.x:429
-msgid "(binary)"
-msgstr "(nhị phân)"
+#~ msgid "bzipped"
+#~ msgstr "đã nén bzip"
 
-#: src/scripts.x:430
-msgid "archive"
-msgstr "kho nén"
+#~ msgid "binary"
+#~ msgstr "nhị phân"
 
-#: src/scripts.x:431
-#, c-format
-msgid "File %s is continued in part %d"
-msgstr "Tập tin %s được tiếp tục trong phần %d"
+#~ msgid "pipe(2) failed"
+#~ msgstr "pipe(2) bị lỗi"
 
-#: src/scripts.x:432
-msgid "Please unpack part 1 first!"
-msgstr "Trước tiên hãy giải nén phần 1."
+#~ msgid "Could not fork"
+#~ msgstr "Không thể tạo tiến trình con"
 
-#: src/scripts.x:433
-msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Kế tiếp hãy giải nén phần ${shar_sequence}."
+#~ msgid "allocating output file name"
+#~ msgstr "đang cấp phát tên tập tin xuất"
 
-#: src/scripts.x:434
-#, c-format
-msgid "x - STILL SKIPPING %s"
-msgstr "x - VẪN CÒN BỎ QUA %s"
+#~ msgid "invalid file size limit `%s'"
+#~ msgstr "hạn chế kích cỡ tập tin không hợp lệ « %s »."
 
-#: src/scripts.x:435
-#, c-format
-msgid "continuing file %s"
-msgstr "đang tiếp tục tập tin %s"
+#~ msgid "WARNING: No user interaction in vanilla mode"
+#~ msgstr ""
+#~ "CẢNH BÁO : trong chế độ vani (đơn giản) không tương tác với người dùng"
 
-#: src/scripts.x:436
-msgid "(empty)"
-msgstr "(rỗng)"
+#~ msgid "WARNING: Non-text storage options overridden"
+#~ msgstr "CẢNH BÁO : các tùy chọn lưu trữ khác văn bản không có quyền cao hơn"
 
-#: src/scripts.x:437
-#, c-format
-msgid "x - overwriting %s"
-msgstr "x - đang ghi đè lên %s"
+#~ msgid "Cannot use -a option without -n"
+#~ msgstr "Không thể sử dụng tùy chọn « -a » nếu không cũng sử dụng « -n »."
 
-#: src/scripts.x:438
-#, c-format
-msgid "overwrite %s"
-msgstr "ghi đè lên %s"
+#~ msgid "Cannot use -l or -L option without -o"
+#~ msgstr ""
+#~ "Không thể sử dụng tùy chọn « -l » hay « -L » nếu không cũng sử dụng « -o "
+#~ "»."
 
-#: src/scripts.x:439
-#, c-format
-msgid "SKIPPING %s"
-msgstr "ĐANG BỎ QUA %s"
+#~ msgid ""
+#~ "Archives must be unpacked in sequence!\n"
+#~ "Please unpack part `cat ${lock_dir}/seq` next."
+#~ msgstr ""
+#~ "Phải giải nén các khó theo thứ tự.\n"
+#~ "Kế tiếp hãy giải nén phần « cat ${lock_dir}/seq »."
 
-#: src/scripts.x:440
-msgid "extraction aborted"
-msgstr "việc giải nén bị hủy bỏ"
+#~ msgid "uncompressing file %s"
+#~ msgstr "đang giải nén tập tin %s"
 
-#: src/scripts.x:441
-#, c-format
-msgid "x - SKIPPING %s (file already exists)"
-msgstr "x - ĐANG BỎ QUA %s (tập tin đã có)"
+#~ msgid "gunzipping file %s"
+#~ msgstr "đang giải nén tập tin gzip %s"
 
-#: src/scripts.x:442
-#, c-format
-msgid "x - extracting %s %s"
-msgstr "x — đang giải nén %s %s"
+#~ msgid "bunzipping file %s"
+#~ msgstr "đang giải nén tập tin bzip %s"
 
-#: src/scripts.x:443
-#, c-format
-msgid "File %s is complete"
-msgstr "Tập tin %s hoàn tất"
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "Giving feedback:\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
+#~ "\n"
+#~ "Selecting files:\n"
+#~ msgstr ""
+#~ "Mọi đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy "
+#~ "chọn ngắn.\n"
+#~ "\n"
+#~ "Cách gởi thông tin phải hồi:\n"
+#~ "      --help              hiển thị trợ giúp này rồi thoát\n"
+#~ "      --version           xuất thông tin phiên bản rồi thoát\n"
+#~ "  -q, --quiet, --silent   không xuất chi tiết một cách cục bộ\n"
+#~ "\n"
+#~ "Lựa chọn tập tin:\n"
 
-#: src/scripts.x:444
-#, c-format
-msgid "uudecoding file %s"
-msgstr "đang giải nén tập tin mã « uu » %s"
+#~ msgid ""
+#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ msgstr ""
+#~ "  -p, --intermix-type    cho phép đối số -[BTzZ] trong danh sách tập tin "
+#~ "để chuyển đổi chế độ\n"
 
-#: src/scripts.x:445
-#, c-format
-msgid "uncompressing file %s"
-msgstr "đang giải nén tập tin %s"
+#~ msgid ""
+#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ msgstr ""
+#~ " -p, --intermix-type    cho phép đối số -[BTz] trong danh sách tập tin để "
+#~ "chuyển đổi chế độ\n"
 
-#: src/scripts.x:446
-#, c-format
-msgid "gunzipping file %s"
-msgstr "đang giải nén tập tin gzip %s"
+#~ msgid ""
+#~ "  -S, --stdin-file-list   read file list from standard input\n"
+#~ "\n"
+#~ "Splitting output:\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
+#~ "kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
+#~ "kilobytes\n"
+#~ "\n"
+#~ "Controlling the shar headers:\n"
+#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
+#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
+#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+#~ "  -c, --cut-mark            start the shar with a cut line\n"
+#~ "  -t, --translate           translate messages in the script\n"
+#~ "\n"
+#~ "Selecting how files are stocked:\n"
+#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+#~ "  -T, --text-files             treat all files as text\n"
+#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
+#~ "  -z, --gzip                   gzip and uuencode all files\n"
+#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
+#~ msgstr ""
+#~ "  -S, --stdin-file-list        đọc danh sách tập tin từ đầu vào tiêu "
+#~ "chuẩn\n"
+#~ "\n"
+#~ "Chia tách kết xuất:\n"
+#~ "  -o, --output-prefix=HIỀN_TỐ    xuất vào tập tin HIỀN_TỐ.01 đến HIỀN_TỐ."
+#~ "SỐ\n"
+#~ "  -l, --whole-size-limit=CỠ   chia tách kho (không phải tập tin) ra số kB "
+#~ "này\n"
+#~ "  -L, --split-size-limit=CỠ     chia tách kho (hoặc tập tin) ra số kB "
+#~ "này\n"
+#~ "\n"
+#~ "Điều khiển các dòng đầu shar:\n"
+#~ "  -n, --archive-name=TÊN    dùng tên này để diễn tả kho\n"
+#~ "  -s, --submitter=ĐỊA_CHỈ    ghi đè lên tên đã đệ trình\n"
+#~ "  -a, --net-headers         xuất dòng đầu « Submitted-by: » (đệ trình "
+#~ "bởi)\n"
+#~ "\t\t\t\t\tvà « Archive-name: » (tên kho)\n"
+#~ "  -c, --cut-mark               bắt đầu vùng shar dùng một đường cắt\n"
+#~ "  -t, --translate                dịch các thông điệp trpng văn lệnh\n"
+#~ "\n"
+#~ "Chọn cách cất giữ tập tin:\n"
+#~ "  -M, --mixed-uuencode         quyết định động mã UU (uuencode): mặc "
+#~ "định\n"
+#~ "  -T, --text-files                          thấy mọi tập tin là nhập thô\n"
+#~ "  -B, --uuencode                      thấy mọi tập tin là nhị phân, dùng "
+#~ "mã UU\n"
+#~ "  -z, --gzip                                 nén gzip và mã hoá UU mọi "
+#~ "tập tin\n"
+#~ "  -g, --level-for-gzip=CẤP      gửi cấp này (mặc định là 9) cho trình "
+#~ "gzip\n"
+#~ "  -j, --bzip2                               nén bzip2 và mã hoá UU mọi "
+#~ "tập tin\n"
 
-#: src/scripts.x:447
-#, c-format
-msgid "bunzipping file %s"
-msgstr "đang giải nén tập tin bzip %s"
+#~ msgid ""
+#~ "  -Z, --compress               compress and uuencode all files\n"
+#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+#~ msgstr ""
+#~ "  -Z, --compress                       nén và mã hoá UU mọi tập tin\n"
+#~ "  -b, --bits-per-code=SỐ_BIT        gửi « -bSỐ_BIT » (mặc định là 12) "
+#~ "sang trình nén\n"
 
-#: src/scripts.x:448
-msgid "MD5 check failed"
-msgstr "Việc kiểm tra MD5 bị lỗi"
+#~ msgid ""
+#~ "\n"
+#~ "Protecting against transmission:\n"
+#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
+#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+#~ "  -F, --force-prefix            force the prefix character on every line\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
+#~ "shar\n"
+#~ "\n"
+#~ "Producing different kinds of shars:\n"
+#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar "
+#~ "time\n"
+#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for "
+#~ "Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & "
+#~ "times\n"
+#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
+#~ "      --no-i18n             do not produce internationalized shell "
+#~ "script\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Bảo vệ chống truyền:\n"
+#~ "  -w, --no-character-count      đừng dùng « wc -c » để kiểm tra kích cỡ\n"
+#~ "  -D, --no-md5-digest\t\tđừng dùng bản tóm tắt md5sum để thẩm tra\n"
+#~ "  -F, --force-prefix            \tép buộc ký tự tiền tố trên mọi dòng\n"
+#~ "  -d, --here-delimiter=CHUỖI\tdùng chuỗi này để định giới những tập tin "
+#~ "trong shar\n"
+#~ "\n"
+#~ "Tạo các kiểu shar khác nhau :\n"
+#~ "  -V, --vanilla-operation   \t\ttạo shar kiểu rất đơn giản và dễ sử dụng\n"
+#~ "  -P, --no-piping           \t\tdùng chỉ tập tin tạm thời vào lúc unshar\n"
+#~ "  -x, --no-check-existing   \t\tghi đè lên tập tin tồn tại, không kiểm "
+#~ "tra trước\n"
+#~ "  -X, --query-user          \t\thỏi người dùng trước khi ghi đè lên tập "
+#~ "tin (không phải cho Mạng)\n"
+#~ "  -m, --no-timestamp        \tđừng phục hồi giờ/ngày sửa đổi tập tin\n"
+#~ "  -Q, --quiet-unshar        \ttránh hiển thị thông điệp dài vào lúc "
+#~ "unshar (_im_)\n"
+#~ "  -f, --basename            \tphục hồi trong cùng một thư mục, không kể "
+#~ "phân cấp\n"
+#~ "      --no-i18n             \t\t\tkhông tạo văn lệnh trình bao đã quốc tế "
+#~ "hóa\n"
 
-#: src/scripts.x:449
-msgid "You have unpacked the last part"
-msgstr "Bạn đã giải nén mọi phần."
+#~ msgid ""
+#~ "\n"
+#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Tùy chọn « -o » cần thiết với « -l » or « -L », tùy chọn « -n » cần thiết "
+#~ "với « -a ».\n"
 
-#: src/scripts.x:450
-#, c-format
-msgid "x - removed lock directory %s."
-msgstr "x - đã gỡ bỏ thư mục khoá %s."
+#~ msgid "Option -g implies -z, option -b implies -Z.\n"
+#~ msgstr "Tùy chọn « -g » ngụ ý « -z », tùy chọn « -b » ngụ ý « -Z ».\n"
 
-#: src/scripts.x:451
-#, c-format
-msgid "x - failed to remove lock directory %s."
-msgstr "x - lỗi gỡ bỏ thư mục khoá %s."
+#~ msgid "Option -g implies -z.\n"
+#~ msgstr "Tùy chọn « -g » ngụ ý « -z ».\n"
+
+#~ msgid "DEBUG was not selected at compile time"
+#~ msgstr "Chưa chọn tùy chọn DEBUG (gỡ lỗi) vào lúc biên dich."
+
+#~ msgid "Hard limit %s\n"
+#~ msgstr "Hạn chế cứng %s\n"
+
+#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
+#~ msgstr ""
+#~ "Hệ thống này không hỗ trợ tùy chọn « -Z » (nén) nên hãy sử dụng « -z » "
+#~ "thay thế."
+
+#~ msgid "Soft limit %s\n"
+#~ msgstr "Hạn chế mềm %s\n"
+
+#~ msgid "illegal output prefix\n"
+#~ msgstr "không cho phép tiền tố xuất\n"
+
+#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
+#~ msgstr ""
+#~ "Cách sử dụng: %s [TTN] TTX\n"
+#~ "[TTN\t\ttập tin nhập vào\n"
+#~ "TTX\t\ttập tin ở xa]\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "\n"
+#~ "  -m, --base64    sử dụng mã hóa _cơ số 64_ tùy theo RFC1521\n"
+#~ "      --help      hiển thị _trợ giúp_ này rồi thoát\n"
+#~ "      --version   xuất thông tin _phiên bản_ rồi thoát\n"
 
 #~ msgid ""
 #~ "Mandatory arguments to long options are mandatory for short options too.\n"

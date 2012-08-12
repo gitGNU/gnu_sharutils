@@ -1,3 +1,30 @@
+2012-08-11  Bruce Korb  <bkorb@gnu.org>
+
+	* .gnuploadrc: support gnu upload script
+	* bootstrap: rework to use gnulib and rebuild option code
+	* src/Makefile.am: tell make how to build option code
+	* configure.ac.git: renamed from configure.ac.  Check for autogen.
+	* src/scripts.def: define some new strings
+	* src/shar-opts.def: define options and doc them for shar program
+	* src/unshar-opts.def: likewise for unshar
+	* src/uudecode-opts.def: likewise for uudecode
+	* src/uuencode-opts.def: likewise for uuencode
+	* src/shar-std.def: define standard options for shar and unshar
+	* src/shar.c: rewrite to use generated option code
+	* src/uuencode.c: rework (not rewrite) to use new option code
+	* po/.gitignore: tell GIT to ignore derived files
+	* src/.gitignore: likewise
+	* doc/.gitignore: likewise
+	* doc/Makefile.am: docs are largely derived files now
+	* doc/*.1: removed
+	* doc/sharutils.texi: include derived files
+	* tests/shar-1.ok: tweak for new output layout
+	* tests/shar-2: cleanup debugging stuff
+	* tests/shar-3: increase file segment size
+	* tests/uutest-1: add debugability stuff & simplify script
+	* configure.ac.git: incorporate building of libopts
+	* src/Makefile.am: link against libopts
+
 2011-05-02  Bruce Korb  <bkorb@gnu.org>
 	Gary Vaughan  <gary@gnu.org>
 

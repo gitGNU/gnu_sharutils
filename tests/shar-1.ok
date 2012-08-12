@@ -12,7 +12,7 @@ lock_dir=_sh<PID>
 # This shar contains:
 # length mode       name
 # ------ ---------- ------------------------------------------
-#     15 -rw-r--r-- shar-1.in
+#     51 -rw-r--r-- shar-1.in
 #
 MD5SUM=${MD5SUM-md5sum}
 f=`${MD5SUM} --version | egrep '^md5sum .*(core|text)utils'`
@@ -79,16 +79,16 @@ st2=123123592001.59
 st2tr=123123592001.5 # old SysV 14-char limit
 st3=1231235901
 
-if touch -am -t ${st1} ${f} >/dev/null 2>&1 && \
-   test ! -f ${st1} && test -f ${f}; then
+if   touch -am -t ${st1} ${f} >/dev/null 2>&1 && \
+     test ! -f ${st1} && test -f ${f}; then
   shar_touch='touch -am -t $1$2$3$4$5$6.$7 "$8"'
 
 elif touch -am ${st2} ${f} >/dev/null 2>&1 && \
-   test ! -f ${st2} && test ! -f ${st2tr} && test -f ${f}; then
+     test ! -f ${st2} && test ! -f ${st2tr} && test -f ${f}; then
   shar_touch='touch -am $3$4$5$6$1$2.$7 "$8"'
 
 elif touch -am ${st3} ${f} >/dev/null 2>&1 && \
-   test ! -f ${st3} && test -f ${f}; then
+     test ! -f ${st3} && test -f ${f}; then
   shar_touch='touch -am $3$4$5$6$2 "$8"'
 
 else
@@ -113,10 +113,15 @@ fi
 if test -n "${keep_file}" && test -f 'shar-1.in'
 then
 ${echo} "x - SKIPPING shar-1.in (file already exists)"
+
 else
 ${echo} "x - extracting shar-1.in (text)"
-  sed 's/^X//' << 'SHAR_EOF' > 'shar-1.in' &&
-This is a test
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 shar-1.in
+M5&AI<R!I<R!A('1E<W0*1G)O;2!T:&ES(&QI;F4L(&5N8V]D:6YG(&ES(&9O
+&<F-E9"X*
+`
+end
 SHAR_EOF
   (set <date> 'shar-1.in'
    eval "${shar_touch}") && \
@@ -128,11 +133,12 @@ fi
   then (
        ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'shar-1.in': 'MD5 check failed'
        ) << \SHAR_EOF
-ff22941336956098ae9a564289d1bf1b  shar-1.in
+fc2d8e8bfe9e5c50263bb93f3097d0af  shar-1.in
 SHAR_EOF
-  else
-test `LC_ALL=C wc -c < 'shar-1.in'` -ne 15 && \
-  ${echo} "restoration warning:  size of 'shar-1.in' is not 15"
+
+else
+test `LC_ALL=C wc -c < 'shar-1.in'` -ne 51 && \
+  ${echo} "restoration warning:  size of 'shar-1.in' is not 51"
   fi
 fi
 if rm -fr ${lock_dir}

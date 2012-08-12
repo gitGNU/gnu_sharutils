@@ -1,12 +1,40 @@
-Makefile
-Makefile.in
 *.1
-\.deps
+.deps
+/*.cache
+/*.gz
+/*.xdelta
+/*.xz
+/ABOUT-NLS
+/COPYING
+/INSTALL
+/NEWS
+/README
+/aclocal.m4
+/autom4te*
+/config.*
 /config.h
 /config.log
 /config.status
+/configure
+/configure.ac
+/depcomp
+/install-sh
+/intl
+/m4
+/missing
+/patches
+/snippet
 /stamp-h*
-/*.cache
-/*.gz
-/*.xz
-/*.xdelta
+/version.m4
+Makefile
+Makefile.in
+*.o
+stamp-*
+*-stamp
+lib/
+! lib/basename.h
+! lib/liballoca.h
+! lib/md5.c
+! lib/md5.h
+! lib/system.h
+! lib/whoami.c

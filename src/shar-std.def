@@ -1,0 +1,66 @@
+AutoGen Definitions options;
+/*
+   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+ */
+copyright = {
+    date    = "1994-1996, 2002, 2005-2012";
+    type    = gpl;
+    owner   = "Free Software Foundation, Inc.";
+    eaddr   = 'bug-gnu-utils@gnu.org';
+};
+
+package         = 'GNU sharutils';
+version         = `
+    sed -n '/^AC_INIT(/{
+	s/.*GNU *sharutils[^,]*, *.//
+	s/.,.*//
+	p
+	q ; }' ../configure.ac
+`;
+
+gnu-usage;
+long-opts;
+help-value      = h;
+version-value   = v;
+homerc          = '$HOME';
+rcfile          = .sharrc;
+save-opts-value = R;
+load-opts-value = r;
+option-doc-format = texi;
+config-header   = config.h;
+no-misuse-usage;
+
+#ifdef NEED_AUTHORS
+doc-section     = {
+    ds-type     = AUTHORS;
+    ds-format   = texi;
+    ds-text     = <<- _EOText_
+	The @file{shar} and @file{unshar} programs is the collective work of
+	many authors.  Many people contributed by reporting problems,
+	suggesting various improvements or submitting actual code.  A list of
+	these people is in the @file{THANKS} file in the sharutils distribution.
+	_EOText_;
+};
+#endif
+
+doc-section     = {
+    ds-type     = 'REPORTING BUGS';
+    ds-format   = texi;
+    ds-text     = <<- _EOText_
+	Report bugs to @email{bug-gnu-utils@@gnu.org}.
+	Please put @samp{sharutils} in the subject line.
+	It helps to spot the message.
+	_EOText_;
+};

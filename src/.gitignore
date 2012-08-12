@@ -3,3 +3,11 @@ shar
 unshar
 uudecode
 uuencode
+/scripts.x
+/shar-opts.c
+/shar-opts.h
+/local.h
+/unshar-opts.[ch]
+/uudecode-opts.[ch]
+/uuencode-opts.[ch]
+/invoke-*.????

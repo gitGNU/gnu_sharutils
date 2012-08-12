@@ -1,2 +1,12 @@
 Makevars.template
 *.gmo
+/LINGUAS
+/Makefile.in.in
+/Rules-quot
+/en@boldquot.header
+/en@quot.header
+/insert-header.sin
+/remove-potcdate.sin
+/POTFILES
+/*.sed
+/sharutils.pot

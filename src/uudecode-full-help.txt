@@ -1,0 +1,6 @@
+Usage: ./uudecode [FILE]...
+Mandatory arguments to long options are mandatory to short options too.
+  -o, --output-file=FILE   direct output to FILE
+      --help               display this help and exit
+      --version            output version information and exit
+Report bugs to <bug-gnu-utils@gnu.org>.

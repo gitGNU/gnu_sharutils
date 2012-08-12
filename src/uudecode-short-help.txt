@@ -1,0 +1,2 @@
+./uudecode: unrecognized option '--error-bogus-option-name'
+Try `./uudecode --help' for more information.

@@ -20,7 +20,9 @@ FOR text    =][=
  (set! body-text (get "body"))
  (if (not (exist? "omit-nl"))
      (set! body-text (string-append body-text "\n")) )
-
+ (shellf
+  "grep -w '%1$s_z' shar.c >/dev/null ||
+     die '%1$s is unused' 1>&2" (get "name"))
  (string-append
      (sprintf "\n\nstatic const char %s_z[%d] = \n"
 	(get "name") (+ 1 (string-length body-text))  )

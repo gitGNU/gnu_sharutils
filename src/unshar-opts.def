@@ -1,0 +1,98 @@
+AutoGen Definitions options;
+
+#define NEED_AUTHORS
+#include shar-std.def
+
+prog-name   = unshar;
+prog-title  = 'unpack a shar archive';
+argument    = '[ file ... ]';
+full-usage  = `cat unshar-full-help.txt`;
+short-usage = `cat unshar-short-help.txt`;
+
+detail = <<- _EODetail_
+	Unshar scans the input files (typically email messages) looking for
+	the start of a shell archive.  If no files are given, then standard
+	input is processed instead.  It then passes each archive discovered
+	through an invocation of the shell program to unpack it.
+	_EODetail_;
+
+include = <<- _EOF_
+	#include <errno.h>
+	#include <error.h>
+	#include <unistd.h>
+	_EOF_;
+
+help-value;
+
+flag = {
+    name        = directory;
+    value       = d;
+    arg-type    = string;
+    arg-name    = dir;
+    descrip     = 'change directory to @file{dir} first';
+    flag-code   = <<- _EOCode_
+	  int res = chdir (pOptDesc->optArg.argString);
+	  if (res == -1)
+	    {
+	      error (2, 0, _("Cannot chdir to `%s'"),
+	             pOptDesc->optArg.argString);
+	      USAGE(UNSHAR_EXIT_FAILURE);
+	    }
+	_EOCode_;
+
+    doc =
+    "Before unpacking any files, change the current directory to @file{dir}.";
+};
+
+flag = {
+    name        = overwrite;
+    value       = c;
+    descrip     = 'Overwrite any pre-existing files';
+    doc = <<- _EODoc_
+	This option is passed through as an option to the shar file.  Many
+	shell archive scripts accept a @file{-c} argument to indicate that
+	existing files should be overwritten.
+	_EODoc_;
+};
+
+flag = {
+    name        = force;
+    value       = f;
+    aliases     = overwrite;
+};
+
+flag = {
+    name        = split-at;
+    value       = E;
+    arg-type    = string;
+    arg-name    = split-pat;
+    descrip     = 'separate archives on @file{split-pat} lines';
+    settable;
+
+    doc = <<- _EODoc_
+	With this option, @file{unshar} isolates each different shell archive
+	from the others which have been placed in the same file, unpacking each
+	in turn, from the beginning of the file to the end.  Its proper
+	operation relies on the fact that many shar files are terminated by a
+	readily identifiable string.
+
+	For example, noticing that most `.signatures' have a double hyphen
+	("--") on a line right before them, one can then sometimes use
+	@code{--split-at=--}.  The signature will then be skipped, along with
+	the headers of the following message.
+	_EODoc_;
+};
+
+flag = {
+    name        = exit-0;
+    value       = e;
+    flags-cant  = split-at;
+    descrip     = 'split archives at "exit 0" lines';
+    flag-code   = '  SET_OPT_SPLIT_AT("exit 0");';
+
+    doc = <<- _EODoc_
+	Most shell archives end with a line consisting of simply "exit 0".
+	This option is equivalent to (and conflicts with)
+	@code{--split-at="exit 0"}.
+	_EODoc_;
+};
