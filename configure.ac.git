@@ -88,7 +88,7 @@ AC_MSG_CHECKING([for /etc/systemid])
   AC_MSG_RESULT([no])
 [fi]
 [AUTOGEN=`command -v autogen`
-$AUTOGEN --version >/dev/null || AUTOGEN='touch $@']
+$AUTOGEN --version >/dev/null 2>&1 || AUTOGEN='touch $@']
 AC_SUBST(AUTOGEN)
 AC_ARG_ENABLE(uucode,
   [AS_HELP_STRING([--disable-uucode],
