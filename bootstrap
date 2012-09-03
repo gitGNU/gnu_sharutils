@@ -90,6 +90,7 @@ versioned_files() {
     autogen scripts.def
     cd ..
 
+    liboptsdir=libopts
     f=$(autoopts-config libsrc)
     case "$f" in
     *.tar.gz ) tar -xzf $f ;;
@@ -98,8 +99,8 @@ versioned_files() {
     * ) die "cannot find autoopts library source:  $f" ;;
     esac
     f=$(basename ${f%.tar.*})
-    mv $f ${f%%-*}
-    cd ${f%%-*}
+    mv $f ${liboptsdir}
+    cd ${liboptsdir}
     sed '/if INSTALL_LIBOPTS/,/else/d
 	/^endif$/d
 	/^libopts_la_LDFLAGS/d
@@ -108,9 +109,11 @@ versioned_files() {
 	s/\.la/.a/
 	s/libopts_la/libopts_a/g' Makefile.am > X
     mv -f X Makefile.am
+    sed "/^#line/s@\.\./@${liboptsdir}/@" autoopts/usage-txt.h > X
+    mv -f X autoopts/usage-txt.h
     cd ..
     sed '/end .* of INVOKE_LIBOPTS_MACROS/q' \
-        libopts/m4/libopts.m4 > m4/libopts.m4
+        ${liboptsdir}/m4/libopts.m4 > m4/libopts.m4
 
     test -d intl || mkdir intl || die "cannot make intl directory"
     month_stamp=$(date '+%B %Y')
@@ -284,6 +287,7 @@ generate_option_code() {
         ls -1 src/*.[chx]
         printf '\n# Compatibility library source files\n'
         ls -1 lib/*.[ch]
+        printf "\n# AutoOpts source file\n${liboptsdir}/autoopts/usage-txt.h\n"
     } > po/POTFILES.in
 }
 
