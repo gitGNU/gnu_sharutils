@@ -1,14 +1,14 @@
 # Estonian translations for sharutils.
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
-# Toomas Soome <Toomas.Soome@microlink.ee>, 2011.
+# Toomas Soome <Toomas.Soome@microlink.ee>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.11\n"
+"Project-Id-Version: sharutils 4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-10 11:52-0700\n"
-"PO-Revision-Date: 2011-02-11 16:17+0200\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
+"PO-Revision-Date: 2012-08-13 21:53+0300\n"
 "Last-Translator: Toomas Soome <Toomas.Soome@microlink.ee>\n"
 "Language-Team: Estonian <linux-ee@lists.eenet.ee>\n"
 "Language: et\n"
@@ -25,17 +25,14 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Märkus: md5 kontrollsummasid ei kontrolli. Kaaluge GNU coreutils "
-"paigaldamist."
+msgstr "Märkus: md5 kontrollsummasid ei kontrolli. Kaaluge GNU coreutils paigaldamist."
 
 #: src/scripts.x:396
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
 "installing GNU `touch', distributed in GNU coreutils..."
 msgstr ""
-"HOIATUS: ei taasta ajatempleid. Kaaluge GNU `touch' paigaldamist, "
-"levitatakse\n"
+"HOIATUS: ei taasta ajatempleid. Kaaluge GNU `touch' paigaldamist, levitatakse\n"
 "GNU coreutils paketis..."
 
 #: src/scripts.x:398
@@ -244,29 +241,28 @@ msgstr "x - eemaldasin luku kataloogi %s."
 msgid "x - failed to remove lock directory %s."
 msgstr "x - lukkude kataloogi eemaldamine ebaõnnestus %s."
 
-#: src/shar-opts.c:1653
-#, fuzzy, c-format
+#: src/shar-opts.c:1650
+#, c-format
 msgid "Cannot reopen %s as stdin"
-msgstr "Faili %s ei saa avada"
+msgstr "Faili %s ei saa standardsisendina uuesti avada"
 
-#: src/shar-opts.c:1745
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
-msgstr ""
+msgstr "shar kasutamise viga:\n"
 
-#: src/shar-opts.c:1781
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
-msgstr ""
+msgstr "shar fataalne viga:\n"
 
-#: src/shar-opts.c:1818
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
+msgstr "fserr %d (%s) teostab '%s' failil %s\n"
 
-#: src/shar-opts.c:1919 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
 #: src/uuencode-opts.c:479
-#, fuzzy
 msgid "No memory for duping translated strings\n"
-msgstr " %d baidi jaoks puudub vaba mälu"
+msgstr "Tõlgitud sõnede jaoks puudub vaba mälu\n"
 
 #: src/shar.c:372
 #, c-format
@@ -274,9 +270,8 @@ msgid "printf formatting error:  %s\n"
 msgstr "printf vormindamis viga:  %s\n"
 
 #: src/shar.c:423
-#, fuzzy
 msgid "sharutils bug - no status"
-msgstr "sharutils viga - olek puudub\n"
+msgstr "sharutils viga - olek puudub"
 
 #: src/shar.c:788
 msgid "Too many directories for mkdir generation"
@@ -308,9 +303,8 @@ msgid "Starting file %s\n"
 msgstr "Alustan fili %s\n"
 
 #: src/shar.c:1081
-#, fuzzy
 msgid "Could not popen command"
-msgstr "popen 'wc' käsk ebaõnnestus:  %s\n"
+msgstr "popen käsk ebaõnnestus"
 
 #: src/shar.c:1162
 #, c-format
@@ -323,7 +317,7 @@ msgstr "tekst"
 
 #: src/shar.c:1311 src/shar.c:1322
 msgid "call"
-msgstr ""
+msgstr "kutsun"
 
 #: src/shar.c:1335
 #, c-format
@@ -331,9 +325,9 @@ msgid "File %s (%s)"
 msgstr "Fail %s (%s)"
 
 #: src/shar.c:1426
-#, fuzzy, c-format
+#, c-format
 msgid "Continuing file %s\n"
-msgstr "jätkan faili %s"
+msgstr "Jätkan faili %s\n"
 
 #: src/shar.c:1536
 #, c-format
@@ -355,35 +349,33 @@ msgid "Saving %s (%s)"
 msgstr "Salvestan %s (%s)"
 
 #: src/shar.c:1807
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid format for output file names (%s): %s"
-msgstr "vigane vorming (arvu väli on liiga lai): '%s'\n"
+msgstr "Vigane väljund failide nimede vorming (%s): %s"
 
 #: src/shar.c:1822
 msgid "more than one format element"
-msgstr ""
+msgstr "enam kui üks vormingu element"
 
 #: src/shar.c:1827
 msgid "no conversion character"
-msgstr ""
+msgstr "puudub teisenduse sümbol"
 
 #: src/shar.c:1836
 msgid "format is too wide"
-msgstr ""
+msgstr "vorming on liiga lai"
 
 #: src/shar.c:1848
 msgid "invalid conversion character"
-msgstr ""
+msgstr "vigane teisenduse sümbol"
 
 #: src/shar.c:1889
-#, fuzzy
 msgid "Opening"
-msgstr "Avan `%s'"
+msgstr "Avan"
 
 #: src/shar.c:1904
-#, fuzzy
 msgid "Closing"
-msgstr "Sulen `%s'"
+msgstr "Sulen"
 
 #: src/shar.c:2015
 msgid "No input files"
@@ -400,11 +392,13 @@ msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
+"Võtit '%s' ei saa failinimedega kasutada, välja arvatud juhul,\n"
+"kui kasutati võtit --intermix-type."
 
 #: src/shar.c:2074
 #, c-format
 msgid "The '%s' option must appear before any file names"
-msgstr ""
+msgstr "Võti '%s' peab olema antud enne failinimesid"
 
 #: src/shar.c:2110
 #, c-format
@@ -412,10 +406,12 @@ msgid ""
 "invalid compaction type:  %s\n"
 "the known types are:\n"
 msgstr ""
+"vigane tihendamise tüüp:  %s\n"
+"tuntud tüübid on:\n"
 
 #: src/shar.c:2149
 msgid "files on command line and --input-file-list specified"
-msgstr ""
+msgstr "--input-file-list ja käsureal näidatud failid"
 
 #: src/shar.c:2198
 #, c-format
@@ -481,12 +477,10 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Kohustuslikud argumendid pikkadele võtmetele on kohustuslikud ka "
-"lühikestele.\n"
+"Kohustuslikud argumendid pikkadele võtmetele on kohustuslikud ka lühikestele.\n"
 "\n"
 "  -d, --directory=KATALOOG    enne lahtipakkimist mine KATALOOGI\n"
-"  -c, --overwrite             edasta failide ülekirjutamiseks shar arhiivi -"
-"c\n"
+"  -c, --overwrite             edasta failide ülekirjutamiseks shar arhiivi -c\n"
 "  -e, --exit-0                sama, kui `--split-at=\"exit 0\"'\n"
 "  -E, --split-at=SÕNE         poolita ühendatud arhiivid peale SÕNE\n"
 "  -f, --force                 sama, kui `-c'\n"
@@ -599,8 +593,7 @@ msgid ""
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Kohustuslikud argumendid pikkadele võtmetele on kohustuslikud ka "
-"lühikestele.\n"
+"Kohustuslikud argumendid pikkadele võtmetele on kohustuslikud ka lühikestele.\n"
 "  -o, --output-file=FAIL   suuna väljund FAILI\n"
 "      --help               esita see abiinfo\n"
 "      --version            esita versiooni info\n"
@@ -633,18 +626,18 @@ msgid "fstat-ing %s"
 msgstr "fstat %s"
 
 #: src/uuencode.c:254
-#, fuzzy, c-format
+#, c-format
 msgid "Allocation failure"
-msgstr "faili puhvri võtmine"
+msgstr "Mälu on otsas"
 
 #: lib/error.c:188
 msgid "Unknown system error"
 msgstr "Tundmatu süsteemne viga"
 
 #: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: võti '%s' on mitmetähenduslik\n"
+msgstr "%s: võti '%s' on mitmetähenduslik; variandid:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
@@ -697,14 +690,14 @@ msgid "%s: option '-W %s' requires an argument\n"
 msgstr "%s: võti '-W %s' nõuab argumenti\n"
 
 #: lib/openat-die.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "unable to record current working directory"
-msgstr "lukkude kataloogi %s loomine ebaõnnestus"
+msgstr "jooksva töökataloogi salvestamine ebaõnnestus"
 
 #: lib/openat-die.c:57
-#, fuzzy, c-format
+#, c-format
 msgid "failed to return to initial working directory"
-msgstr "lukkude kataloogi %s loomine ebaõnnestus"
+msgstr "algsesse töökataloogi tagasi minemine ebaõnnestus"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -729,261 +722,27 @@ msgstr "lukkude kataloogi %s loomine ebaõnnestus"
 #. and use glyphs suitable for your language.
 #: lib/quotearg.c:312
 msgid "`"
-msgstr ""
+msgstr "`"
 
 #: lib/quotearg.c:313
 msgid "'"
-msgstr ""
+msgstr "'"
 
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
-msgstr ""
+msgstr "mälu on otsas"
 
 #: lib/xstrtol-error.c:63
 #, c-format
 msgid "invalid %s%s argument '%s'"
-msgstr ""
+msgstr "vigane %s%s argument '%s'"
 
 #: lib/xstrtol-error.c:68
 #, c-format
 msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
+msgstr "vigane sufiks %s%s argumendis '%s'"
 
 #: lib/xstrtol-error.c:72
 #, c-format
 msgid "%s%s argument '%s' too large"
-msgstr ""
-
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "-C on ebasoovitab, kasutage -Z"
-
-#~ msgid "popen(3) on: %s"
-#~ msgstr "popen(3) failil: %s"
-
-#~ msgid "fopen(3) of file %s"
-#~ msgstr "freopen(3) failil %s"
-
-#~ msgid "compressed"
-#~ msgstr "kompressitud"
-
-#~ msgid "gzipped"
-#~ msgstr "gzipitud"
-
-#~ msgid "bzipped"
-#~ msgstr "bzipitud"
-
-#~ msgid "binary"
-#~ msgstr "binaar"
-
-#~ msgid "pipe(2) failed"
-#~ msgstr "pipe(2) ebaõnnestus"
-
-#~ msgid "Could not fork"
-#~ msgstr "fork ebaõnnestus"
-
-#~ msgid "allocating output file name"
-#~ msgstr "võtan ruumi väljundfaili nimele"
-
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "vigane faili suuruse piirang `%s'"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr "HOIATUS: kasutaja ei saa lihtsa arhiivi loomisse sekkuda"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "HOIATUS: Mitte tekstilise paigutamise võtmed ümber määratud"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Võtit -a ei saa võtmeta -n kasutada"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "Võtit -l ega -L ei saa võtmeta -o kasutada"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part `cat ${lock_dir}/seq` next."
-#~ msgstr ""
-#~ "Arhiivid tuleb lahti pakkida järjekorras!\n"
-#~ "Palun pakkige järgmisena lahti osa `cat ${lock_dir}/seq`."
-
-#~ msgid "uncompressing file %s"
-#~ msgstr "uncompress failil %s"
-
-#~ msgid "gunzipping file %s"
-#~ msgstr "gunzip failil %s"
-
-#~ msgid "bunzipping file %s"
-#~ msgstr "bunzip failil %s"
-
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ "\n"
-#~ "Selecting files:\n"
-#~ msgstr ""
-#~ "Kohustuslikud argumendid pikkadele võtmetele on kohustuslikud ka "
-#~ "lühikestele.\n"
-#~ "\n"
-#~ "Tagasiside:\n"
-#~ "      --help              esita see abiinfo\n"
-#~ "      --version           esita versiooni info\n"
-#~ "  -q, --quiet, --silent   ära väljasta tagasiside teateid lokaalselt\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     luba -[BTzZ] faililoendites moodi muutmiseks\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     luba -[BTz] faililoendites moodi muutmiseks\n"
-
-#~ msgid ""
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "  -t, --translate           translate messages in the script\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
-#~ msgstr ""
-#~ "  -S, --stdin-file-list   loe failide loend standardsisendist\n"
-#~ "\n"
-#~ "Väljundi tükeldamine:\n"
-#~ "  -o, --output-prefix=PREFIKS   väljasta failidesse PREFIKS.01 kuni "
-#~ "PREFIKS.NN\n"
-#~ "  -l, --whole-size-limit=MAHT   tükelda arhiiv, mitte failid, MAHT "
-#~ "kilobaitideks\n"
-#~ "  -L, --split-size-limit=MAHT   tükelda arhiiv, või failid, MAHT "
-#~ "kilobaitideks\n"
-#~ "\n"
-#~ "Shar päiste kontrollimine:\n"
-#~ "  -n, --archive-name=NIMI   määra arhiivi nimi\n"
-#~ "  -s, --submitter=AADRESS   muuda looja nime\n"
-#~ "  -a, --net-headers         väljasta Submitted-by: & Archive-name: "
-#~ "päised\n"
-#~ "  -c, --cut-mark            shar algusse `cut' rida\n"
-#~ "  -t, --translate           tõlgi skriptis olevad teated\n"
-#~ "\n"
-#~ "Failide paigutamise valik:\n"
-#~ "  -M, --mixed-uuencode         uuencode kasutatakse vajadusel "
-#~ "(vaikimisi)\n"
-#~ "  -T, --text-files             kõik failid on tekstifailid\n"
-#~ "  -B, --uuencode               kõik failid on binaarsed, kasuta uuencode\n"
-#~ "  -z, --gzip                   kasuta kõikide failidega gzip ja uuencode\n"
-#~ "  -g, --level-for-gzip=TASE    kasuta gzip -TASE (vaikimisi 9)\n"
-#~ "  -j, --bzip2                  kasuta kõikide failidega bzip2 ja "
-#~ "uuencode\n"
-
-#~ msgid ""
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "  -Z, --compress               kompressi ja uukodeeri kõik failid\n"
-#~ "  -b, --bits-per-code=BITTE    kasutad compress -bBITTE (vaikimisi 12)\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Ülekandmiste kaitse:\n"
-#~ "  -w, --no-character-count      ära kasuta suuruse kontrolliks `wc -c'\n"
-#~ "  -D, --no-md5-digest           ära kasuta kontrolliks `md5sum'\n"
-#~ "  -F, --force-prefix            kasuta igal real prefiks sümbolit\n"
-#~ "  -d, --here-delimiter=SÕNE     kasuta SÕNE failide eraldamiseks "
-#~ "arhiivis\n"
-#~ "\n"
-#~ "Erinevat tüüpi shar arhiivide loomine:\n"
-#~ "  -V, --vanilla-operation   loo väga lihtne shar\n"
-#~ "  -P, --no-piping           kasuta unshar ajal ainult ajutisi faile\n"
-#~ "  -x, --no-check-existing   kirjuta olemasolevad failid üle\n"
-#~ "  -X, --query-user          enne ülekirjutamist küsi (mitte Netis)\n"
-#~ "  -m, --no-timestamp        ära taasta failide muutmise aegu\n"
-#~ "  -Q, --quiet-unshar        väldi unshar ajal teateid\n"
-#~ "  -f, --basename            sõltumata hierarhiast taasta ühte kataloogi\n"
-#~ "      --no-i18n             ära loo rahvuskeelte toega skripti\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Võti -o on nõutav võtmega -l või -L, võti -n on nõutav võtmega -a.\n"
-
-#~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr "Võti -g kasutab ka võtit -z, võti -b kasutab ka võtit -Z.\n"
-
-#~ msgid "Option -g implies -z.\n"
-#~ msgstr "Võti -g kasutab ka võtit -z.\n"
-
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "DEBUG ei ole kompileerimise ajal määratud"
-
-#~ msgid "Hard limit %s\n"
-#~ msgstr "Ületamatu piirang %s\n"
-
-#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr ""
-#~ "See süsteem ei toeta võtit -Z ('compress'), kasutage selle asemel -z"
-
-#~ msgid "Soft limit %s\n"
-#~ msgstr "Pehme piirang %s\n"
-
-#~ msgid "illegal output prefix\n"
-#~ msgstr "lubamatu prefiks väljundile\n"
-
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Kasutamine: %s [SISENDFAIL] SIHTFAIL\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64    kasuta RFC1521 vastavat base64 kodeerimist\n"
-#~ "      --help      esita see abiinfo\n"
-#~ "      --version   esita versiooni info\n"
+msgstr "%s%s argument '%s' on liiga suur"

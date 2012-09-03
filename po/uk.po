@@ -2,13 +2,13 @@
 # Copyright (C) 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2011.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: GNU sharutils 4.11\n"
+"Project-Id-Version: GNU sharutils 4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-10 11:52-0700\n"
-"PO-Revision-Date: 2011-02-12 09:32+0200\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
+"PO-Revision-Date: 2012-08-13 21:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: uk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 
 #. TRANSLATORS:  This is a phony function generated for the purpose of
 #. constructing the strings to be extracted for translation.  Each string
@@ -27,9 +27,7 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Зауваження: контрольні суми md5 не перевірено. Щоб виконати перевірку, "
-"встановіть GNU coreutils."
+msgstr "Зауваження: контрольні суми md5 не перевірено. Щоб виконати перевірку, встановіть GNU coreutils."
 
 #: src/scripts.x:396
 msgid ""
@@ -245,29 +243,28 @@ msgstr "x — вилучено каталог блокування %s."
 msgid "x - failed to remove lock directory %s."
 msgstr "x — не вдалося вилучити каталог блокування %s."
 
-#: src/shar-opts.c:1653
-#, fuzzy, c-format
+#: src/shar-opts.c:1650
+#, c-format
 msgid "Cannot reopen %s as stdin"
-msgstr "Не вдалося відкрити файл %s"
+msgstr "Не вдалося повторно відкрити %s як stdin"
 
-#: src/shar-opts.c:1745
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
-msgstr ""
+msgstr "помилка у використанні shar:\n"
 
-#: src/shar-opts.c:1781
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
-msgstr ""
+msgstr "критична помилка shar:\n"
 
-#: src/shar-opts.c:1818
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
+msgstr "fserr %d (%s), виконання «%s» над %s\n"
 
-#: src/shar-opts.c:1919 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
 #: src/uuencode-opts.c:479
-#, fuzzy
 msgid "No memory for duping translated strings\n"
-msgstr "недостатньо пам’яті для отримання області у %d байтів"
+msgstr "Недостатньо пам’яті для дублювання перекладених рядків\n"
 
 #: src/shar.c:372
 #, c-format
@@ -275,9 +272,8 @@ msgid "printf formatting error:  %s\n"
 msgstr "помилка форматування даних у printf: %s\n"
 
 #: src/shar.c:423
-#, fuzzy
 msgid "sharutils bug - no status"
-msgstr "Вада sharutils — стан не визначено\n"
+msgstr "вада sharutils — стан не визначено"
 
 #: src/shar.c:788
 msgid "Too many directories for mkdir generation"
@@ -309,9 +305,8 @@ msgid "Starting file %s\n"
 msgstr "Запуск файла %s\n"
 
 #: src/shar.c:1081
-#, fuzzy
 msgid "Could not popen command"
-msgstr "Не вдалося виконати popen для команди «wc»: %s\n"
+msgstr "Не вдалося виконати команду popen"
 
 #: src/shar.c:1162
 #, c-format
@@ -324,7 +319,7 @@ msgstr "текст"
 
 #: src/shar.c:1311 src/shar.c:1322
 msgid "call"
-msgstr ""
+msgstr "виклик"
 
 #: src/shar.c:1335
 #, c-format
@@ -332,9 +327,9 @@ msgid "File %s (%s)"
 msgstr "Файл %s (%s)"
 
 #: src/shar.c:1426
-#, fuzzy, c-format
+#, c-format
 msgid "Continuing file %s\n"
-msgstr "продовження файла %s"
+msgstr "Продовження файла %s\n"
 
 #: src/shar.c:1536
 #, c-format
@@ -356,35 +351,33 @@ msgid "Saving %s (%s)"
 msgstr "Збереження %s (%s)"
 
 #: src/shar.c:1807
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid format for output file names (%s): %s"
-msgstr "помилкове форматування (занадто довге поле лічильника): «%s»\n"
+msgstr "Помилкове форматування назв файлів виведених даних (%s): %s"
 
 #: src/shar.c:1822
 msgid "more than one format element"
-msgstr ""
+msgstr "більше за один запис формату"
 
 #: src/shar.c:1827
 msgid "no conversion character"
-msgstr ""
+msgstr "немає символу перетворення"
 
 #: src/shar.c:1836
 msgid "format is too wide"
-msgstr ""
+msgstr "формат є надто довгим"
 
 #: src/shar.c:1848
 msgid "invalid conversion character"
-msgstr ""
+msgstr "некоректний символ перетворення"
 
 #: src/shar.c:1889
-#, fuzzy
 msgid "Opening"
-msgstr "Відкриття «%s»"
+msgstr "Відкриття"
 
 #: src/shar.c:1904
-#, fuzzy
 msgid "Closing"
-msgstr "Закриття «%s»"
+msgstr "Закриття"
 
 #: src/shar.c:2015
 msgid "No input files"
@@ -393,9 +386,7 @@ msgstr "Не вказано вхідних файлів"
 #: src/shar.c:2032
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr ""
-"БУДЬ ЛАСКА, не використовуйте режим -X у Usenet та мережах з відкритим "
-"доступом"
+msgstr "БУДЬ ЛАСКА, не використовуйте режим -X у Usenet та мережах з відкритим доступом"
 
 #: src/shar.c:2056
 #, c-format
@@ -403,11 +394,13 @@ msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
+"Параметр «%s» не можна використовувати з заданими назвами файлів,\n"
+"якщо не було вказано параметра --intermix-type."
 
 #: src/shar.c:2074
 #, c-format
 msgid "The '%s' option must appear before any file names"
-msgstr ""
+msgstr "Параметр «%s» слід вказувати до назв файлів"
 
 #: src/shar.c:2110
 #, c-format
@@ -415,10 +408,12 @@ msgid ""
 "invalid compaction type:  %s\n"
 "the known types are:\n"
 msgstr ""
+"некоректний тип ущільнення:  %s\n"
+"відомі програмі типи:\n"
 
 #: src/shar.c:2149
 msgid "files on command line and --input-file-list specified"
-msgstr ""
+msgstr "вказано файли у командному рядку і за допомогою --input-file-list"
 
 #: src/shar.c:2198
 #, c-format
@@ -484,20 +479,17 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Обов’язкові аргументи для параметрів у форматі повного запису є "
-"обов’язковими і для параметрів у скороченому форматі запису.\n"
+"Обов’язкові аргументи для параметрів у форматі повного запису є обов’язковими і для параметрів у скороченому форматі запису.\n"
 "\n"
 "  -d, --directory=КАТАЛОГ     перейти до КАТАЛОГУ, перед розпакуванням\n"
-"  -c, --overwrite             передати скрипту shar параметр -c для "
-"перезапису файлів\n"
+"  -c, --overwrite             передати скрипту shar параметр -c для перезапису файлів\n"
 "  -e, --exit-0                те саме, що і  «--split-at=\"exit 0\"»\n"
 "  -E, --split-at=РЯДОК        розділити з’єднані shars за позначкою РЯДОК\n"
 "  -f, --force                 те саме, що і «-c»\n"
 "      --help                  показати ці довідкові дані і завершити роботу\n"
 "      --version               показати дані щодо версії і завершити роботу\n"
 "\n"
-"Якщо не буде вказано значення ФАЙЛ, дані буде прочитано зі стандартного "
-"джерела вхідних даних.\n"
+"Якщо не буде вказано значення ФАЙЛ, дані буде прочитано зі стандартного джерела вхідних даних.\n"
 
 #. TRANSLATORS: add the contact address for your translation team!
 #: src/unshar.c:331 src/uudecode.c:470
@@ -601,8 +593,7 @@ msgid ""
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Обов’язкові аргументи для параметрів у форматі повного запису є "
-"обов’язковими і для параметрів у скороченому форматі запису.\n"
+"Обов’язкові аргументи для параметрів у форматі повного запису є обов’язковими і для параметрів у скороченому форматі запису.\n"
 "  -o, --output-file=ФАЙЛ   виводити дані безпосередньо до ФАЙЛа\n"
 "      --help               показати ці довідкові дані і завершити роботу\n"
 "      --version            показати дані щодо версії і завершити роботу\n"
@@ -637,18 +628,18 @@ msgid "fstat-ing %s"
 msgstr "виконання fstat для %s"
 
 #: src/uuencode.c:254
-#, fuzzy, c-format
+#, c-format
 msgid "Allocation failure"
-msgstr "встановлення буфера файла"
+msgstr "Помилка отримання пам’яті"
 
 #: lib/error.c:188
 msgid "Unknown system error"
 msgstr "Невідома системна помилка"
 
 #: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: параметр «%s» не є однозначним\n"
+msgstr "%s: параметр «%s» не є однозначним. Можливі варіанти:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
@@ -701,14 +692,14 @@ msgid "%s: option '-W %s' requires an argument\n"
 msgstr "%s: до параметра «-W %s» слід додати аргумент\n"
 
 #: lib/openat-die.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "unable to record current working directory"
-msgstr "не вдалося створити каталог блокування %s"
+msgstr "не вдалося зберегти поточний робочий каталог"
 
 #: lib/openat-die.c:57
-#, fuzzy, c-format
+#, c-format
 msgid "failed to return to initial working directory"
-msgstr "не вдалося створити каталог блокування %s"
+msgstr "не вдалося повернутись до початкового робочого каталогу"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -733,35 +724,33 @@ msgstr "не вдалося створити каталог блокування
 #. and use glyphs suitable for your language.
 #: lib/quotearg.c:312
 msgid "`"
-msgstr ""
+msgstr "«"
 
 #: lib/quotearg.c:313
 msgid "'"
-msgstr ""
+msgstr "»"
 
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
-msgstr ""
+msgstr "пам’ять вичерпано"
 
 #: lib/xstrtol-error.c:63
 #, c-format
 msgid "invalid %s%s argument '%s'"
-msgstr ""
+msgstr "некоректний аргумент %s%s — «%s»"
 
 #: lib/xstrtol-error.c:68
 #, c-format
 msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
+msgstr "некоректний суфікс у аргументі %s%s «%s»"
 
 #: lib/xstrtol-error.c:72
 #, c-format
 msgid "%s%s argument '%s' too large"
-msgstr ""
+msgstr "%s%s, аргумент «%s» є занадто об'ємним"
 
 #~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr ""
-#~ "Параметр -C вважається застарілим, скористайтеся замість нього параметром "
-#~ "-Z"
+#~ msgstr "Параметр -C вважається застарілим, скористайтеся замість нього параметром -Z"
 
 #~ msgid "popen(3) on: %s"
 #~ msgstr "popen(3) для %s"
@@ -790,38 +779,6 @@ msgstr ""
 #~ msgid "allocating output file name"
 #~ msgstr "визначення назви файла вихідних даних"
 
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "некоректне граничне значення розміру файла «%s»"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr ""
-#~ "ПОПЕРЕДЖЕННЯ: у типовому режимі взаємодії з користувачем не передбачено"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "ПОПЕРЕДЖЕННЯ: параметри зберігання нетекстових даних перевизначено"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Не можна використовувати параметр -a без параметра -n"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "Не можна використовувати параметр -l або -L без параметра -o"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part `cat ${lock_dir}/seq` next."
-#~ msgstr ""
-#~ "Архіви має бути видобуто послідовно!\n"
-#~ "Будь ласка, розпакуйте наступною частину `cat ${lock_dir}/seq`."
-
-#~ msgid "uncompressing file %s"
-#~ msgstr "розпакування файла %s"
-
-#~ msgid "gunzipping file %s"
-#~ msgstr "стискання файла %s gzip"
-
-#~ msgid "bunzipping file %s"
-#~ msgstr "стискання файла %s bzip"
-
 #~ msgid ""
 #~ "Mandatory arguments to long options are mandatory for short options too.\n"
 #~ "\n"
@@ -832,39 +789,28 @@ msgstr ""
 #~ "\n"
 #~ "Selecting files:\n"
 #~ msgstr ""
-#~ "Обов’язкові аргументи для параметрів у форматі повного запису є "
-#~ "обов’язковими і для параметрів у скороченому форматі запису.\n"
+#~ "Обов’язкові аргументи для параметрів у форматі повного запису є обов’язковими і для параметрів у скороченому форматі запису.\n"
 #~ "\n"
 #~ "Отримання інформації:\n"
-#~ "      --help              показати цю довідкову інформацію і завершити "
-#~ "роботу\n"
+#~ "      --help              показати цю довідкову інформацію і завершити роботу\n"
 #~ "      --version           показати дані щодо версії і завершити роботу\n"
 #~ "  -q, --quiet, --silent   не показувати докладних повідомлень локально\n"
 #~ "\n"
 #~ "Вибір файлів:\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     дозволити використання -[BTzZ] у списках файлів "
-#~ "для зміни режиму\n"
+#~ msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     дозволити використання -[BTzZ] у списках файлів для зміни режиму\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     дозволити використання -[BTz] у списках файлів "
-#~ "для зміни режиму\n"
+#~ msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     дозволити використання -[BTz] у списках файлів для зміни режиму\n"
 
 #~ msgid ""
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ "\n"
 #~ "Controlling the shar headers:\n"
 #~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
@@ -881,47 +827,34 @@ msgstr ""
 #~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
 #~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
 #~ msgstr ""
-#~ "  -S, --stdin-file-list   прочитати список файлів зі стандартного джерела "
-#~ "вхідних даних\n"
+#~ "  -S, --stdin-file-list   прочитати список файлів зі стандартного джерела вхідних даних\n"
 #~ "\n"
 #~ "Поділ виведених даних:\n"
-#~ "  -o, --output-prefix=ПРЕФІКС   виводити дані до файлів з назвами від "
-#~ "ПРЕФІКС.01 до ПРЕФІКС.NN\n"
-#~ "  -l, --whole-size-limit=РОЗМІР поділити архів, не файли, на шматки у "
-#~ "РОЗМІР кілобайтів\n"
-#~ "  -L, --split-size-limit=РОЗМІР поділити архів або файли на шматки у "
-#~ "РОЗМІР кілобайтів\n"
+#~ "  -o, --output-prefix=ПРЕФІКС   виводити дані до файлів з назвами від ПРЕФІКС.01 до ПРЕФІКС.NN\n"
+#~ "  -l, --whole-size-limit=РОЗМІР поділити архів, не файли, на шматки у РОЗМІР кілобайтів\n"
+#~ "  -L, --split-size-limit=РОЗМІР поділити архів або файли на шматки у РОЗМІР кілобайтів\n"
 #~ "\n"
 #~ "Керування заголовками shar:\n"
-#~ "  -n, --archive-name=НАЗВА  використовувати НАЗВУ для визначення назви "
-#~ "документа архіву\n"
+#~ "  -n, --archive-name=НАЗВА  використовувати НАЗВУ для визначення назви документа архіву\n"
 #~ "  -s, --submitter=АДРЕСА    перевизначити ім’я відправника\n"
-#~ "  -a, --net-headers         додати поля заголовка Submitted-by: і Archive-"
-#~ "name:\n"
+#~ "  -a, --net-headers         додати поля заголовка Submitted-by: і Archive-name:\n"
 #~ "  -c, --cut-mark            почати shar з рядка cut\n"
 #~ "  -t, --translate           перекладати повідомлення у скрипті\n"
 #~ "\n"
 #~ "Вибір типу зберігання файлів:\n"
-#~ "  -M, --mixed-uuencode         динамічно визначати, чи слід виконувати "
-#~ "UUE-кодування (типово)\n"
+#~ "  -M, --mixed-uuencode         динамічно визначати, чи слід виконувати UUE-кодування (типово)\n"
 #~ "  -T, --text-files             вважати всі файли файлами текстових даних\n"
-#~ "  -B, --uuencode               вважати всі файли файлами бінарних даних, "
-#~ "використовувати UUE-кодування\n"
-#~ "  -z, --gzip                   використати gzip і UUE-кодування для всіх "
-#~ "файлів\n"
-#~ "  -g, --level-for-gzip=РІВЕНЬ  передати параметр -РІВЕНЬ (типово 9) "
-#~ "програмі gzip\n"
-#~ "  -j, --bzip2                  використати bzip2 і UUE-кодування для всіх "
-#~ "файлів\n"
+#~ "  -B, --uuencode               вважати всі файли файлами бінарних даних, використовувати UUE-кодування\n"
+#~ "  -z, --gzip                   використати gzip і UUE-кодування для всіх файлів\n"
+#~ "  -g, --level-for-gzip=РІВЕНЬ  передати параметр -РІВЕНЬ (типово 9) програмі gzip\n"
+#~ "  -j, --bzip2                  використати bzip2 і UUE-кодування для всіх файлів\n"
 
 #~ msgid ""
 #~ "  -Z, --compress               compress and uuencode all files\n"
 #~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
 #~ msgstr ""
-#~ "  -Z, --compress               використати стискання і UUE-кодування для "
-#~ "всіх файлів\n"
-#~ "  -b, --bits-per-code=БІТИ     передати параметр -bБІТИ (типово 12) "
-#~ "програмі стискання (compress)\n"
+#~ "  -Z, --compress               використати стискання і UUE-кодування для всіх файлів\n"
+#~ "  -b, --bits-per-code=БІТИ     передати параметр -bБІТИ (типово 12) програмі стискання (compress)\n"
 
 #~ msgid ""
 #~ "\n"
@@ -929,68 +862,50 @@ msgstr ""
 #~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
 #~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
 #~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
 #~ "\n"
 #~ "Producing different kinds of shars:\n"
 #~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar time\n"
 #~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & times\n"
 #~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
 #~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
+#~ "      --no-i18n             do not produce internationalized shell script\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Захист від пошкодження під час передавання:\n"
-#~ "  -w, --no-character-count      не використовувати «wc -c» для перевірки "
-#~ "розміру файлів\n"
-#~ "  -D, --no-md5-digest           не використовувати для перевірки "
-#~ "контрольну суму «md5sum»\n"
-#~ "  -F, --force-prefix            примусово використовувати символ-префікс "
-#~ "на початку кожного рядка\n"
-#~ "  -d, --here-delimiter=РЯДОК    використовувати РЯДОК для відокремлення "
-#~ "файлів у shar\n"
+#~ "  -w, --no-character-count      не використовувати «wc -c» для перевірки розміру файлів\n"
+#~ "  -D, --no-md5-digest           не використовувати для перевірки контрольну суму «md5sum»\n"
+#~ "  -F, --force-prefix            примусово використовувати символ-префікс на початку кожного рядка\n"
+#~ "  -d, --here-delimiter=РЯДОК    використовувати РЯДОК для відокремлення файлів у shar\n"
 #~ "\n"
 #~ "Створення різних типів пакунків shar:\n"
-#~ "  -V, --vanilla-operation   створювати дуже прості і невибагливі до "
-#~ "системи shar\n"
-#~ "  -P, --no-piping           виключне використання тимчасових файлів під "
-#~ "час виконання unshar\n"
-#~ "  -x, --no-check-existing   без запитань перезаписувати вже створені "
-#~ "файли\n"
-#~ "  -X, --query-user          запитувати щодо дії під час перезапису файлів "
-#~ "(не працює у мережі)\n"
-#~ "  -m, --no-timestamp        не відновлювати позначки дати і часу внесення "
-#~ "змін для файлів\n"
-#~ "  -Q, --quiet-unshar        не показувати докладних повідомлень під час "
-#~ "виконання unshar\n"
-#~ "  -f, --basename            відновлювати файли у одному каталозі, не "
-#~ "зважати на структуру\n"
-#~ "      --no-i18n             не використовувати локалізацію у скрипті "
-#~ "оболонки\n"
+#~ "  -V, --vanilla-operation   створювати дуже прості і невибагливі до системи shar\n"
+#~ "  -P, --no-piping           виключне використання тимчасових файлів під час виконання unshar\n"
+#~ "  -x, --no-check-existing   без запитань перезаписувати вже створені файли\n"
+#~ "  -X, --query-user          запитувати щодо дії під час перезапису файлів (не працює у мережі)\n"
+#~ "  -m, --no-timestamp        не відновлювати позначки дати і часу внесення змін для файлів\n"
+#~ "  -Q, --quiet-unshar        не показувати докладних повідомлень під час виконання unshar\n"
+#~ "  -f, --basename            відновлювати файли у одному каталозі, не зважати на структуру\n"
+#~ "      --no-i18n             не використовувати локалізацію у скрипті оболонки\n"
 
 #~ msgid ""
 #~ "\n"
 #~ "Option -o is required with -l or -L, option -n is required with -a.\n"
 #~ msgstr ""
 #~ "\n"
-#~ "Разом з -l або -L слід використовувати параметр -o, а разом з -a — "
-#~ "параметр -n.\n"
+#~ "Разом з -l або -L слід використовувати параметр -o, а разом з -a — параметр -n.\n"
 
 #~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr ""
-#~ "Використання параметра -g призводить до використання параметра -z, а -b — "
-#~ "-Z.\n"
+#~ msgstr "Використання параметра -g призводить до використання параметра -z, а -b — -Z.\n"
 
 #~ msgid "Option -g implies -z.\n"
-#~ msgstr ""
-#~ "Використання параметра -g призводить до використання параметра -z.\n"
+#~ msgstr "Використання параметра -g призводить до використання параметра -z.\n"
+
+#~ msgid "invalid file size limit `%s'"
+#~ msgstr "некоректне граничне значення розміру файла «%s»"
 
 #~ msgid "DEBUG was not selected at compile time"
 #~ msgstr "Параметр DEBUG не було вказано під час збирання"
@@ -999,15 +914,25 @@ msgstr ""
 #~ msgstr "Жорстке обмеження %s\n"
 
 #~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr ""
-#~ "У цій системі не передбачено підтримки використання -Z («стискання»), "
-#~ "скористайтеся параметром -z"
+#~ msgstr "У цій системі не передбачено підтримки використання -Z («стискання»), скористайтеся параметром -z"
 
 #~ msgid "Soft limit %s\n"
 #~ msgstr "М’яке обмеження %s\n"
 
 #~ msgid "illegal output prefix\n"
 #~ msgstr "неприпустимий префікс виведення даних\n"
+
+#~ msgid "WARNING: No user interaction in vanilla mode"
+#~ msgstr "ПОПЕРЕДЖЕННЯ: у типовому режимі взаємодії з користувачем не передбачено"
+
+#~ msgid "WARNING: Non-text storage options overridden"
+#~ msgstr "ПОПЕРЕДЖЕННЯ: параметри зберігання нетекстових даних перевизначено"
+
+#~ msgid "Cannot use -a option without -n"
+#~ msgstr "Не можна використовувати параметр -a без параметра -n"
+
+#~ msgid "Cannot use -l or -L option without -o"
+#~ msgstr "Не можна використовувати параметр -l або -L без параметра -o"
 
 #~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
 #~ msgstr "Використання: %s [ФАЙЛ_ВХІДНИХ_ДАНИХ] ВІДДАЛЕНИЙ_ФАЙЛ\n"
@@ -1022,3 +947,19 @@ msgstr ""
 #~ "  -m, --base64    використовувати кодування base64 відповідно до RFC1521\n"
 #~ "      --help      показати ці довідкові дані і завершити роботу\n"
 #~ "      --version   показати дані щодо версії і завершити роботу\n"
+
+#~ msgid ""
+#~ "Archives must be unpacked in sequence!\n"
+#~ "Please unpack part `cat ${lock_dir}/seq` next."
+#~ msgstr ""
+#~ "Архіви має бути видобуто послідовно!\n"
+#~ "Будь ласка, розпакуйте наступною частину `cat ${lock_dir}/seq`."
+
+#~ msgid "uncompressing file %s"
+#~ msgstr "розпакування файла %s"
+
+#~ msgid "gunzipping file %s"
+#~ msgstr "стискання файла %s gzip"
+
+#~ msgid "bunzipping file %s"
+#~ msgstr "стискання файла %s bzip"

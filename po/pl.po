@@ -1,20 +1,20 @@
 # Polish translation for sharutils.
-# Copyright (C) 2005, 2006, 2010, 2011 Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2010, 2011, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2011.
-# partially based on initial translation by Wojtek ¶lusarczyk of PLD, 1999.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2012.
+# partially based on initial translation by Wojtek ≈ölusarczyk of PLD, 1999.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.11\n"
+"Project-Id-Version: sharutils 4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-10 11:52-0700\n"
-"PO-Revision-Date: 2011-02-08 15:17+0100\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
+"PO-Revision-Date: 2012-08-20 19:02+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS:  This is a phony function generated for the purpose of
@@ -26,35 +26,35 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr "Uwaga: sumy md5 nie s± sprawdzane. Do tego potrzebne s± GNU coreutils."
+msgstr "Uwaga: sumy md5 nie sƒÖ sprawdzane. Do tego potrzebne sƒÖ GNU coreutils."
 
 #: src/scripts.x:396
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
 "installing GNU `touch', distributed in GNU coreutils..."
 msgstr ""
-"UWAGA: nie odtwarzanie znacznikÛw czasu. ProszÍ rozwaøyÊ\n"
+"UWAGA: nie odtwarzanie znacznik√≥w czasu. Proszƒô rozwa≈ºyƒá\n"
 "doinstalowanie pakietu GNU `touch' z pakietu GNU coreutils..."
 
 #: src/scripts.x:398
 #, c-format
 msgid "lock directory %s exists"
-msgstr "katalog blokuj±cy %s istnieje"
+msgstr "katalog blokujƒÖcy %s istnieje"
 
 #: src/scripts.x:399
 #, c-format
 msgid "failed to create %s lock directory"
-msgstr "nie uda≥o siÍ utworzyÊ katalogu blokuj±cego %s"
+msgstr "nie uda≈Ço siƒô utworzyƒá katalogu blokujƒÖcego %s"
 
 #: src/scripts.x:400
 #, c-format
 msgid "x - created lock directory %s."
-msgstr "x - utworzono katalog blokuj±cy %s."
+msgstr "x - utworzono katalog blokujƒÖcy %s."
 
 #: src/scripts.x:401
 #, c-format
 msgid "x - failed to create lock directory %s."
-msgstr "x - nie uda≥o siÍ utworzyÊ katalogu blokuj±cego %s."
+msgstr "x - nie uda≈Ço siƒô utworzyƒá katalogu blokujƒÖcego %s."
 
 #: src/scripts.x:402
 #, c-format
@@ -64,7 +64,7 @@ msgstr "x - utworzono katalog %s."
 #: src/scripts.x:403
 #, c-format
 msgid "x - failed to create directory %s."
-msgstr "x - nie uda≥o siÍ utworzyÊ katalogu %s."
+msgstr "x - nie uda≈Ço siƒô utworzyƒá katalogu %s."
 
 #: src/scripts.x:404
 msgid "yes"
@@ -80,7 +80,7 @@ msgstr "nie"
 
 #: src/scripts.x:407
 msgid "skip this file"
-msgstr "pominiÍcie tego pliku"
+msgstr "pominiƒôcie tego pliku"
 
 #: src/scripts.x:408
 msgid "all"
@@ -88,15 +88,15 @@ msgstr "wszystkie"
 
 #: src/scripts.x:409
 msgid "overwrite all files"
-msgstr "nadpisanie wszystkich plikÛw"
+msgstr "nadpisanie wszystkich plik√≥w"
 
 #: src/scripts.x:410
 msgid "none"
-msgstr "øaden"
+msgstr "≈ºaden"
 
 #: src/scripts.x:411
 msgid "overwrite no files"
-msgstr "nie nadpisywanie øadnego pliku"
+msgstr "nie nadpisywanie ≈ºadnego pliku"
 
 #: src/scripts.x:412
 msgid "help"
@@ -104,7 +104,7 @@ msgstr "pomoc"
 
 #: src/scripts.x:413
 msgid "explain choices"
-msgstr "wyja∂nienie opcji"
+msgstr "wyja≈õnienie opcji"
 
 #: src/scripts.x:414
 msgid "quit"
@@ -112,22 +112,22 @@ msgstr "koniec"
 
 #: src/scripts.x:415
 msgid "exit immediately"
-msgstr "natychmiastowe zakoÒczenie"
+msgstr "natychmiastowe zako≈Ñczenie"
 
 #: src/scripts.x:416
 #, c-format
 msgid "restore of %s failed"
-msgstr "przywrÛcenie %s nie powiod≥o siÍ"
+msgstr "przywr√≥cenie %s nie powiod≈Ço siƒô"
 
 #: src/scripts.x:417
 #, c-format
 msgid "End of part %d, continue with part %d"
-msgstr "Koniec czÍ∂ci %d, ci±g dalszy w czÍ∂ci %d"
+msgstr "Koniec czƒô≈õci %d, ciƒÖg dalszy w czƒô≈õci %d"
 
 #: src/scripts.x:418
 #, c-format
 msgid "End of %s part %d"
-msgstr "Koniec czÍ∂ci %2$d %1$s"
+msgstr "Koniec czƒô≈õci %2$d %1$s"
 
 #: src/scripts.x:419
 #, c-format
@@ -161,25 +161,25 @@ msgstr "archiwum"
 #: src/scripts.x:426
 #, c-format
 msgid "File %s is continued in part %d"
-msgstr "Plik %s bÍdzie kontynuowany w czÍ∂ci %d"
+msgstr "Plik %s bƒôdzie kontynuowany w czƒô≈õci %d"
 
 #: src/scripts.x:427
 msgid "Please unpack part 1 first!"
-msgstr "ProszÍ najpierw rozpakowaÊ pierwsz± czÍ∂Ê!"
+msgstr "Proszƒô najpierw rozpakowaƒá pierwszƒÖ czƒô≈õƒá!"
 
 #: src/scripts.x:428
 msgid "Please unpack part ${shar_sequence} next!"
-msgstr "ProszÍ nastÍpnie rozpakowaÊ czÍ∂Ê ${shar_sequence}!"
+msgstr "Proszƒô nastƒôpnie rozpakowaƒá czƒô≈õƒá ${shar_sequence}!"
 
 #: src/scripts.x:429
 #, c-format
 msgid "x - STILL SKIPPING %s"
-msgstr "x - NADAL POMINI TO %s"
+msgstr "x - NADAL POMINIƒòTO %s"
 
 #: src/scripts.x:430
 #, c-format
 msgid "continuing file %s"
-msgstr "ci±g dalszy pliku %s"
+msgstr "ciƒÖg dalszy pliku %s"
 
 #: src/scripts.x:431
 msgid "(empty)"
@@ -193,12 +193,12 @@ msgstr "x - nadpisywanie %s"
 #: src/scripts.x:433
 #, c-format
 msgid "overwrite %s"
-msgstr "nadpisaÊ %s"
+msgstr "nadpisaƒá %s"
 
 #: src/scripts.x:434
 #, c-format
 msgid "SKIPPING %s"
-msgstr "POMINI TO %s"
+msgstr "POMINIƒòTO %s"
 
 #: src/scripts.x:435
 msgid "extraction aborted"
@@ -207,7 +207,7 @@ msgstr "rozpakowywanie przerwane"
 #: src/scripts.x:436
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
-msgstr "x - POMINI TO %s (plik juø istnieje)"
+msgstr "x - POMINIƒòTO %s (plik ju≈º istnieje)"
 
 #: src/scripts.x:437
 #, c-format
@@ -226,74 +226,72 @@ msgstr "dekodowanie pliku %s programem uudecode"
 
 #: src/scripts.x:440
 msgid "MD5 check failed"
-msgstr "Sprawdzenie sumy kontrolnej MD5 nie powiod≥o siÍ"
+msgstr "Sprawdzenie sumy kontrolnej MD5 nie powiod≈Ço siƒô"
 
 #: src/scripts.x:441
 msgid "You have unpacked the last part"
-msgstr "Rozpakowano ostatni± czÍ∂Ê"
+msgstr "Rozpakowano ostatniƒÖ czƒô≈õƒá"
 
 #: src/scripts.x:442
 #, c-format
 msgid "x - removed lock directory %s."
-msgstr "x - usuniÍto katalog blokuj±cy %s."
+msgstr "x - usuniƒôto katalog blokujƒÖcy %s."
 
 #: src/scripts.x:443
 #, c-format
 msgid "x - failed to remove lock directory %s."
-msgstr "x - nie uda≥o siÍ usun±Ê katalogu blokuj±cego %s."
+msgstr "x - nie uda≈Ço siƒô usunƒÖƒá katalogu blokujƒÖcego %s."
 
-#: src/shar-opts.c:1653
-#, fuzzy, c-format
+#: src/shar-opts.c:1650
+#, c-format
 msgid "Cannot reopen %s as stdin"
-msgstr "Nie moøna otworzyÊ pliku %s"
+msgstr "Nie mo≈ºna ponownie otworzyƒá %s jako standardowego wej≈õcia"
 
-#: src/shar-opts.c:1745
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
-msgstr ""
+msgstr "B≈ÇƒÖd u≈ºycia shara:\n"
 
-#: src/shar-opts.c:1781
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
-msgstr ""
+msgstr "B≈ÇƒÖd krytyczny shara:\n"
 
-#: src/shar-opts.c:1818
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
+msgstr "fserr %d (%s) podczas wykonywania '%s' na %s\n"
 
-#: src/shar-opts.c:1919 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
 #: src/uuencode-opts.c:479
-#, fuzzy
 msgid "No memory for duping translated strings\n"
-msgstr "brak pamiÍci (bajtÛw do przydzielenia: %d)"
+msgstr "Brak pamiƒôci do powielenia przet≈Çumaczonych napis√≥w\n"
 
 #: src/shar.c:372
 #, c-format
 msgid "printf formatting error:  %s\n"
-msgstr "B≥±d formatowania printf: %s\n"
+msgstr "B≈ÇƒÖd formatowania printf: %s\n"
 
 #: src/shar.c:423
-#, fuzzy
 msgid "sharutils bug - no status"
-msgstr "B≥±d sharutils - brak statusu\n"
+msgstr "B≈ÇƒÖd sharutils - brak statusu"
 
 #: src/shar.c:788
 msgid "Too many directories for mkdir generation"
-msgstr "Zbyt wiele katalogÛw dla programu mkdir"
+msgstr "Zbyt wiele katalog√≥w dla programu mkdir"
 
 #: src/shar.c:871 src/shar.c:1541
 #, c-format
 msgid "Cannot access %s"
-msgstr "Brak dostÍpu do %s"
+msgstr "Brak dostƒôpu do %s"
 
 #: src/shar.c:948 src/unshar.c:376
 #, c-format
 msgid "Cannot get current directory name"
-msgstr "Nie moøna pobraÊ nazwy bieø±cego katalogu"
+msgstr "Nie mo≈ºna pobraƒá nazwy bie≈ºƒÖcego katalogu"
 
 #: src/shar.c:1005 src/shar.c:1346
 #, c-format
 msgid "New file, remaining %s, "
-msgstr "Nowy plik, pozosta≥o %s, "
+msgstr "Nowy plik, pozosta≈Ço %s, "
 
 #: src/shar.c:1006 src/shar.c:1347
 #, c-format
@@ -303,17 +301,16 @@ msgstr "Ograniczenie rozmiaru to nadal %s\n"
 #: src/shar.c:1028
 #, c-format
 msgid "Starting file %s\n"
-msgstr "Pocz±tkowy plik %s\n"
+msgstr "PoczƒÖtkowy plik %s\n"
 
 #: src/shar.c:1081
-#, fuzzy
 msgid "Could not popen command"
-msgstr "Nie uda≥o siÍ wywo≥aÊ polecenia 'wc': %s\n"
+msgstr "Nie uda≈Ço siƒô wywo≈Çaƒá polecenia przez popen"
 
 #: src/shar.c:1162
 #, c-format
 msgid "Cannot open file %s"
-msgstr "Nie moøna otworzyÊ pliku %s"
+msgstr "Nie mo≈ºna otworzyƒá pliku %s"
 
 #: src/shar.c:1296 src/shar.c:1305
 msgid "text"
@@ -321,7 +318,7 @@ msgstr "tekst"
 
 #: src/shar.c:1311 src/shar.c:1322
 msgid "call"
-msgstr ""
+msgstr "wywo≈Çania"
 
 #: src/shar.c:1335
 #, c-format
@@ -329,19 +326,19 @@ msgid "File %s (%s)"
 msgstr "Plik %s (%s)"
 
 #: src/shar.c:1426
-#, fuzzy, c-format
+#, c-format
 msgid "Continuing file %s\n"
-msgstr "ci±g dalszy pliku %s"
+msgstr "CiƒÖg dalszy pliku %s\n"
 
 #: src/shar.c:1536
 #, c-format
 msgid "%s: Not a regular file"
-msgstr "%s: To nie jest zwyk≥y plik"
+msgstr "%s: To nie jest zwyk≈Çy plik"
 
 #: src/shar.c:1563
 #, c-format
 msgid "In shar: remaining size %s\n"
-msgstr "W shar: pozosta≥y rozmiar %s\n"
+msgstr "W shar: pozosta≈Çy rozmiar %s\n"
 
 #: src/shar.c:1583
 msgid "empty"
@@ -353,44 +350,42 @@ msgid "Saving %s (%s)"
 msgstr "Zapisywanie %s (%s)"
 
 #: src/shar.c:1807
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid format for output file names (%s): %s"
-msgstr "b≥Ídny format (pole liczbowe zbyt szerokie): '%s'\n"
+msgstr "B≈Çƒôdny format dla nazw pliku wyj≈õciowego (%s): %s"
 
 #: src/shar.c:1822
 msgid "more than one format element"
-msgstr ""
+msgstr "wiƒôcej ni≈º jeden element formatujƒÖcy"
 
 #: src/shar.c:1827
 msgid "no conversion character"
-msgstr ""
+msgstr "brak znaku konwersji"
 
 #: src/shar.c:1836
 msgid "format is too wide"
-msgstr ""
+msgstr "format zbyt d≈Çugi"
 
 #: src/shar.c:1848
 msgid "invalid conversion character"
-msgstr ""
+msgstr "b≈ÇƒÖdny znak konwersji"
 
 #: src/shar.c:1889
-#, fuzzy
 msgid "Opening"
-msgstr "Otwieranie `%s'"
+msgstr "Otwieranie"
 
 #: src/shar.c:1904
-#, fuzzy
 msgid "Closing"
-msgstr "Zamykanie `%s'"
+msgstr "Zamykanie"
 
 #: src/shar.c:2015
 msgid "No input files"
-msgstr "Brak pliku wej∂ciowego"
+msgstr "Brak pliku wej≈õciowego"
 
 #: src/shar.c:2032
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "PROSZ  unikaÊ archiwÛw -X na Usenecie i w sieciach publicznych"
+msgstr "PROSZƒò unikaƒá archiw√≥w -X na Usenecie i w sieciach publicznych"
 
 #: src/shar.c:2056
 #, c-format
@@ -398,11 +393,13 @@ msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
+"Opcji '%s' nie mo≈ºna mieszaƒá z nazwami plik√≥w,\n"
+"chyba ≈ºe podano opcjƒô --intermix-type."
 
 #: src/shar.c:2074
 #, c-format
 msgid "The '%s' option must appear before any file names"
-msgstr ""
+msgstr "Opcja '%s' musi byƒá podana przed jakƒÖkolwiek nazwƒÖ pliku"
 
 #: src/shar.c:2110
 #, c-format
@@ -410,35 +407,37 @@ msgid ""
 "invalid compaction type:  %s\n"
 "the known types are:\n"
 msgstr ""
+"b≈Çƒôdny rodzaj kompresji: %s\n"
+"znane rodzaje to:\n"
 
 #: src/shar.c:2149
 msgid "files on command line and --input-file-list specified"
-msgstr ""
+msgstr "przekazano pliki w linii polece≈Ñ wraz z opcjƒÖ --input-file-list"
 
 #: src/shar.c:2198
 #, c-format
 msgid "Created %d files\n"
-msgstr "Utworzono %d plikÛw\n"
+msgstr "Utworzono %d plik√≥w\n"
 
 #: src/unshar-opts.c:427 src/unshar.c:394
 #, c-format
 msgid "Cannot chdir to `%s'"
-msgstr "Nie moøna zmieniÊ katalogu na `%s'"
+msgstr "Nie mo≈ºna zmieniƒá katalogu na `%s'"
 
 #: src/unshar.c:168
 #, c-format
 msgid "Found no shell commands in %s"
-msgstr "Nie znaleziono poleceÒ pow≥oki w %s"
+msgstr "Nie znaleziono polece≈Ñ pow≈Çoki w %s"
 
 #: src/unshar.c:184
 #, c-format
 msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s wygl±da jak surowy kod w jÍzyku C, nie archiwum shellowe"
+msgstr "%s wyglƒÖda jak surowy kod w jƒôzyku C, nie archiwum shellowe"
 
 #: src/unshar.c:220
 #, c-format
 msgid "Found no shell commands after `cut' in %s"
-msgstr "Nie znaleziono poleceÒ shellowych po `cut' w %s"
+msgstr "Nie znaleziono polece≈Ñ shellowych po `cut' w %s"
 
 #: src/unshar.c:241
 #, c-format
@@ -448,7 +447,7 @@ msgstr "%s prawdopodobnie nie jest archiwum shellowym"
 #: src/unshar.c:242
 #, c-format
 msgid "The `cut' line was followed by: %s"
-msgstr "Po linii `cut' nastÍpuje: %s"
+msgstr "Po linii `cut' nastƒôpuje: %s"
 
 #: src/unshar.c:268
 #, c-format
@@ -458,12 +457,12 @@ msgstr "Uruchamianie procesu `sh'"
 #: src/unshar.c:312 src/uudecode.c:459
 #, c-format
 msgid "Try `%s --help' for more information.\n"
-msgstr "Wywo≥anie `%s --help' poda wiÍcej informacji.\n"
+msgstr "Wywo≈Çanie `%s --help' poda wiƒôcej informacji.\n"
 
 #: src/unshar.c:316
 #, c-format
 msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Sk≥adnia: %s [OPCJA]... [PLIK]...\n"
+msgstr "Sk≈Çadnia: %s [OPCJA]... [PLIK]...\n"
 
 #: src/unshar.c:317
 msgid ""
@@ -479,28 +478,25 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Argumenty obowi±zkowe dla opcji d≥ugich obowi±zuj± rÛwnieø dla opcji "
-"krÛtkich.\n"
+"Argumenty obowiƒÖzkowe dla opcji d≈Çugich obowiƒÖzujƒÖ r√≥wnie≈º dla opcji kr√≥tkich.\n"
 "\n"
-"  -d, --directory=KATALOG     przej∂cie do KATALOGU przed rozpakowaniem\n"
-"  -c, --overwrite             przekazanie opcji -c dla shar aby nadpisaÊ "
-"pliki\n"
+"  -d, --directory=KATALOG     przej≈õcie do KATALOGU przed rozpakowaniem\n"
+"  -c, --overwrite             przekazanie opcji -c dla shar aby nadpisaƒá pliki\n"
 "  -e, --exit-0                to samo co `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=£A—CUCH      dzielenie po≥±czonych sharÛw po £A—CUCHU\n"
+"  -E, --split-at=≈ÅA≈ÉCUCH      dzielenie po≈ÇƒÖczonych shar√≥w po ≈ÅA≈ÉCUCHU\n"
 "  -f, --force                 to samo co `-c'\n"
-"      --help                  wy∂wietlenie tego opisu i zakoÒczenie\n"
-"      --version               wy∂wietlenie informacji o wersji i "
-"zakoÒczenie\n"
+"      --help                  wy≈õwietlenie tego opisu i zako≈Ñczenie\n"
+"      --version               wy≈õwietlenie informacji o wersji i zako≈Ñczenie\n"
 "\n"
-"Jeøeli nie podano PLIKU, dane zostan± pobrane ze standardowego wej∂cia.\n"
+"Je≈ºeli nie podano PLIKU, dane zostanƒÖ pobrane ze standardowego wej≈õcia.\n"
 
 #. TRANSLATORS: add the contact address for your translation team!
 #: src/unshar.c:331 src/uudecode.c:470
 #, c-format
 msgid "Report bugs to <%s>.\n"
 msgstr ""
-"B≥Ídy w programie naleøy zg≥aszaÊ na adres <%s>, natomiast b≥Ídy\n"
-"w t≥umaczeniu - na <translation-team-pl@lists.sourceforge.net>.\n"
+"B≈Çƒôdy w programie nale≈ºy zg≈Çaszaƒá na adres <%s>, natomiast b≈Çƒôdy\n"
+"w t≈Çumaczeniu - na <translation-team-pl@lists.sourceforge.net>.\n"
 
 #: src/unshar.c:414 src/uudecode.c:506
 #, c-format, no-wrap
@@ -510,18 +506,18 @@ msgid ""
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 msgstr ""
 "Copyright (C) %s Free Software Foundation, Inc.\n"
-"To oprogramowanie jest darmowe; warunki kopiowania s± opisane w ºrÛd≥ach.\n"
-"Autorzy nie daj± ØADNYCH gwarancji, w tym rÛwnieø gwarancji PRZYDATNO¶CI\n"
-"DO SPRZEDAØY LUB DO KONKRETNYCH CEL”W.\n"
+"To oprogramowanie jest darmowe; warunki kopiowania sƒÖ opisane w ≈∫r√≥d≈Çach.\n"
+"Autorzy nie dajƒÖ ≈ªADNYCH gwarancji, w tym r√≥wnie≈º gwarancji PRZYDATNO≈öCI\n"
+"DO SPRZEDA≈ªY LUB DO KONKRETNYCH CEL√ìW.\n"
 
 #: src/unshar.c:445 src/unshar.c:507
 #, c-format
 msgid "allocate file name buffer"
-msgstr "przydzielanie bufora na nazwy plikÛw"
+msgstr "przydzielanie bufora na nazwy plik√≥w"
 
 #: src/unshar.c:466
 msgid "standard input"
-msgstr "standardowe wej∂cie"
+msgstr "standardowe wej≈õcie"
 
 #: src/unshar.c:528
 #, c-format
@@ -531,12 +527,12 @@ msgstr "przydzielanie bufora na pliki"
 #: src/uudecode.c:114 src/uudecode.c:444
 #, c-format
 msgid "%s: Write error"
-msgstr "%s: B≥±d zapisu"
+msgstr "%s: B≈ÇƒÖd zapisu"
 
 #: src/uudecode.c:131 src/uudecode.c:218
 #, c-format
 msgid "%s: Short file"
-msgstr "%s: KrÛtki plik"
+msgstr "%s: Kr√≥tki plik"
 
 #: src/uudecode.c:167
 #, c-format
@@ -546,7 +542,7 @@ msgstr "%s: Brak lini `end'"
 #: src/uudecode.c:227
 #, c-format
 msgid "%s: data following `=' padding character"
-msgstr "%s: dane nastÍpuj±ce po znaku dope≥niaj±cym `='"
+msgstr "%s: dane nastƒôpujƒÖce po znaku dope≈ÇniajƒÖcym `='"
 
 #: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
 #, c-format
@@ -561,17 +557,17 @@ msgstr "%s: niedozwolona nazwa pliku: %s"
 #: src/uudecode.c:310
 #, c-format
 msgid "No user `%s'"
-msgstr "Brak uøytkownika `%s'"
+msgstr "Brak u≈ºytkownika `%s'"
 
 #: src/uudecode.c:321
 #, c-format
 msgid "no memory for %d byte allocation"
-msgstr "brak pamiÍci (bajtÛw do przydzielenia: %d)"
+msgstr "brak pamiƒôci (bajt√≥w do przydzielenia: %d)"
 
 #: src/uudecode.c:346
 #, c-format
 msgid "cannot access %s"
-msgstr "brak dostÍpu do %s"
+msgstr "brak dostƒôpu do %s"
 
 #: src/uudecode.c:354
 #, c-format
@@ -591,7 +587,7 @@ msgstr "%s: Brak linii `begin'"
 #: src/uudecode.c:463
 #, c-format
 msgid "Usage: %s [FILE]...\n"
-msgstr "Sk≥adnia: %s [PLIK]...\n"
+msgstr "Sk≈Çadnia: %s [PLIK]...\n"
 
 #: src/uudecode.c:464
 msgid ""
@@ -600,30 +596,27 @@ msgid ""
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Argumenty obowi±zkowe dla opcji d≥ugich obowi±zuj± rÛwnieø dla opcji "
-"krÛtkich.\n"
-"  -o, --output-file=PLIK   zapis bezpo∂rednio do PLIKU\n"
-"      --help               wy∂wietlenie tego opisu i zakoÒczenie\n"
-"      --version            wy∂wietlenie informacji o wersji i zakoÒczenie\n"
+"Argumenty obowiƒÖzkowe dla opcji d≈Çugich obowiƒÖzujƒÖ r√≥wnie≈º dla opcji kr√≥tkich.\n"
+"  -o, --output-file=PLIK   zapis bezpo≈õrednio do PLIKU\n"
+"      --help               wy≈õwietlenie tego opisu i zako≈Ñczenie\n"
+"      --version            wy≈õwietlenie informacji o wersji i zako≈Ñczenie\n"
 
 #: src/uudecode.c:530
 #, c-format
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
-msgstr ""
-"Nie moøna podaÊ pliku wyj∂ciowego przy przetwarzaniu wielu plikÛw "
-"wej∂ciowych.\n"
+msgstr "Nie mo≈ºna podaƒá pliku wyj≈õciowego przy przetwarzaniu wielu plik√≥w wej≈õciowych.\n"
 
 #: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
 #, c-format
 msgid "Write error"
-msgstr "B≥±d zapisu"
+msgstr "B≈ÇƒÖd zapisu"
 
 #: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
 #, c-format
 msgid "Read error"
-msgstr "B≥±d odczytu"
+msgstr "B≈ÇƒÖd odczytu"
 
 #: src/uuencode.c:226
 #, c-format
@@ -636,33 +629,33 @@ msgid "fstat-ing %s"
 msgstr "Wykonywanie fstat na %s"
 
 #: src/uuencode.c:254
-#, fuzzy, c-format
+#, c-format
 msgid "Allocation failure"
-msgstr "przydzielanie bufora na pliki"
+msgstr "B≈ÇƒÖd przydzielania pamiƒôci"
 
 #: lib/error.c:188
 msgid "Unknown system error"
-msgstr "Nieznany b≥±d systemowy"
+msgstr "Nieznany b≈ÇƒÖd systemowy"
 
 #: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: opcja '%s' jest niejednoznaczna\n"
+msgstr "%s: opcja '%s' jest niejednoznaczna; mo≈ºliwo≈õci:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
 msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: opcja '--%s' nie moøe mieÊ argumentÛw\n"
+msgstr "%s: opcja '--%s' nie mo≈ºe mieƒá argument√≥w\n"
 
 #: lib/getopt.c:637 lib/getopt.c:642
 #, c-format
 msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: opcja '%c%s' nie moøe mieÊ argumentÛw\n"
+msgstr "%s: opcja '%c%s' nie mo≈ºe mieƒá argument√≥w\n"
 
 #: lib/getopt.c:685 lib/getopt.c:704
 #, c-format
 msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: opcja '--%s' musi mieÊ argument\n"
+msgstr "%s: opcja '--%s' musi mieƒá argument\n"
 
 #: lib/getopt.c:742 lib/getopt.c:745
 #, c-format
@@ -677,12 +670,12 @@ msgstr "%s: nieznana opcja '%c%s'\n"
 #: lib/getopt.c:805 lib/getopt.c:808
 #, c-format
 msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: b≥Ídna opcja -- '%c'\n"
+msgstr "%s: b≈Çƒôdna opcja -- '%c'\n"
 
 #: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
 #, c-format
 msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: opcja musi mieÊ argument -- '%c'\n"
+msgstr "%s: opcja musi mieƒá argument -- '%c'\n"
 
 #: lib/getopt.c:934 lib/getopt.c:950
 #, c-format
@@ -692,22 +685,22 @@ msgstr "%s: opcja '-W %s' jest niejednoznaczna\n"
 #: lib/getopt.c:974 lib/getopt.c:992
 #, c-format
 msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: opcja '-W %s' nie moøe mieÊ argumentÛw\n"
+msgstr "%s: opcja '-W %s' nie mo≈ºe mieƒá argument√≥w\n"
 
 #: lib/getopt.c:1013 lib/getopt.c:1031
 #, c-format
 msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: opcja '-W %s' musi mieÊ argument\n"
+msgstr "%s: opcja '-W %s' musi mieƒá argument\n"
 
 #: lib/openat-die.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "unable to record current working directory"
-msgstr "nie uda≥o siÍ utworzyÊ katalogu blokuj±cego %s"
+msgstr "nie uda≈Ço siƒô zachowaƒá bie≈ºƒÖcego katalogu roboczego"
 
 #: lib/openat-die.c:57
-#, fuzzy, c-format
+#, c-format
 msgid "failed to return to initial working directory"
-msgstr "nie uda≥o siÍ utworzyÊ katalogu blokuj±cego %s"
+msgstr "nie uda≈Ço siƒô przywr√≥ciƒá poczƒÖtkowego katalogu roboczego"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -732,273 +725,27 @@ msgstr "nie uda≥o siÍ utworzyÊ katalogu blokuj±cego %s"
 #. and use glyphs suitable for your language.
 #: lib/quotearg.c:312
 msgid "`"
-msgstr ""
+msgstr "`"
 
 #: lib/quotearg.c:313
 msgid "'"
-msgstr ""
+msgstr "'"
 
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
-msgstr ""
+msgstr "pamiƒôƒá wyczerpana"
 
 #: lib/xstrtol-error.c:63
 #, c-format
 msgid "invalid %s%s argument '%s'"
-msgstr ""
+msgstr "b≈Çƒôdny argument %s%s '%s'"
 
 #: lib/xstrtol-error.c:68
 #, c-format
 msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
+msgstr "b≈Çƒôdny przyrostek argumentu %s%s '%s'"
 
 #: lib/xstrtol-error.c:72
 #, c-format
 msgid "%s%s argument '%s' too large"
-msgstr ""
-
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "-C jest przestarza≥e, naleøy uøyÊ opcji -Z"
-
-#~ msgid "popen(3) on: %s"
-#~ msgstr "popen(3) na: %s"
-
-#~ msgid "fopen(3) of file %s"
-#~ msgstr "fopen(3) na pliku %s"
-
-#~ msgid "compressed"
-#~ msgstr "skompresowany"
-
-#~ msgid "gzipped"
-#~ msgstr "skompresowany gzipem"
-
-#~ msgid "bzipped"
-#~ msgstr "skompresowany bzipem"
-
-#~ msgid "binary"
-#~ msgstr "binarny"
-
-#~ msgid "pipe(2) failed"
-#~ msgstr "pipe(2) nie powiod≥o siÍ"
-
-#~ msgid "Could not fork"
-#~ msgstr "Nie moøna wykonaÊ fork"
-
-#~ msgid "allocating output file name"
-#~ msgstr "przydzielanie nazwy pliku wyj∂ciowego"
-
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "b≥Ídne ograniczenie rozmiaru pliku `%s'"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr "UWAGA: Tryb vanilla nie jest interakcyjny"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "UWAGA: nadpisano opcje zachowywania nietekstowego"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Nie moøna uøyÊ opcji -a bez -n"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "Nie moøna uøyÊ opcji -l ani -L bez -o"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part `cat ${lock_dir}/seq` next."
-#~ msgstr ""
-#~ "Archiwa musz± byÊ rozpakowywane w kolejno∂ci!\n"
-#~ "ProszÍ rozpakowaÊ teraz czÍ∂Ê `cat ${lock_dir}/seq`."
-
-#~ msgid "uncompressing file %s"
-#~ msgstr "rozpakowywanie pliku %s programem uncompress"
-
-#~ msgid "gunzipping file %s"
-#~ msgstr "rozpakowywanie pliku %s programem gunzip"
-
-#~ msgid "bunzipping file %s"
-#~ msgstr "rozpakowywanie pliku %s programem bunzip"
-
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ "\n"
-#~ "Selecting files:\n"
-#~ msgstr ""
-#~ "Argumenty obowi±zkowe dla opcji d≥ugich s± obowi±zkowe takøe dla opcji "
-#~ "krÛtkich.\n"
-#~ "\n"
-#~ "Sterowanie komunikatami:\n"
-#~ "      --help              wy∂wietlenie tego opisu i zakoÒczenie\n"
-#~ "      --version           wy∂wietlenie informacji o wersji i zakoÒczenie\n"
-#~ "  -q, --quiet, --silent   niewypisywanie lokalnie szczegÛ≥owych "
-#~ "komunikatÛw\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     dopuszczenie -[BTzZ] w listach plikÛw do zmiany "
-#~ "trybu\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     dopuszczenie -[BTz] w listach plikÛw do zmiany "
-#~ "trybu\n"
-
-#~ msgid ""
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "  -t, --translate           translate messages in the script\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
-#~ msgstr ""
-#~ "  -S, --stdin-file-list   odczyt listy plikÛw ze standardowego wej∂cia\n"
-#~ "\n"
-#~ "Dzielenie wyj∂cia:\n"
-#~ "  -o, --output-file=PREFIKS     zapis do plikÛw PREFIKS.01 do PREFIKS.NN\n"
-#~ "  -l, --whole-size-limit=ILE    dzielenie archiwum, nie plikÛw, na ILE "
-#~ "kB\n"
-#~ "  -L, --split-size-limit=ILE    dzielenie archiwum lub plikÛw, na ILE kB\n"
-#~ "\n"
-#~ "Sterowanie nag≥Ûwkami shara:\n"
-#~ "  -n, --archive-name=NAZWA  uøycie NAZWY dla archiwum\n"
-#~ "  -s, --submitter=ADRES     nadpisanie nazwy wysy≥aj±cego\n"
-#~ "  -a, --net-headers         dodanie nag≥ÛwkÛw Submitted-by: oraz Archive-"
-#~ "name:\n"
-#~ "  -c, --cut-mark            rozpoczÍcie archiwum lini± obciÍcia\n"
-#~ "  -t, --translate           przet≥umaczenie wiadomo∂ci w skrypcie\n"
-#~ "\n"
-#~ "WybÛr sposobu zapisu plikÛw:\n"
-#~ "  -M, --mixed-uuencode         dynamiczny wybÛr uuencode (domy∂lne)\n"
-#~ "  -T, --text-files             wszystkie pliki s± tekstowe\n"
-#~ "  -B, --uuencode               wszystkie pliki s± binarne, wymagaj± "
-#~ "uuencode\n"
-#~ "  -z, --gzip                   uøycie gzipa i uuencode dla wszystkich "
-#~ "plikÛw\n"
-#~ "  -g, --level-for-gzip=POZIOM  przekazanie -POZIOM do gzipa (domy∂lnie "
-#~ "9)\n"
-#~ "  -j, --bzip2                  uøycie bzip2 i uuencode dla wszystkich "
-#~ "plikÛw\n"
-
-#~ msgid ""
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "  -Z, --compress               uøycie compress i uuencode dla wszystkich "
-#~ "plikÛw\n"
-#~ "  -b, --bits-per-code=BIT”W    przekazanie -bBIT”W (domy∂lnie 12) do "
-#~ "compress\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Ochrona transmisji:\n"
-#~ "  -w, --no-character-count      nie uøywanie `wc -c' do sprawdzania "
-#~ "rozmiaru\n"
-#~ "  -D, --no-md5-digest           nie uøywanie skrÛtu `md5sum' do "
-#~ "weryfikacji\n"
-#~ "  -F, --force-prefix            wymuszenie znaku lokalizacji dla kaødej "
-#~ "linii\n"
-#~ "  -d, --here-delimiter=£A—CUCH  uøyj £A—CUCHA do ograniczania plikÛw\n"
-#~ "\n"
-#~ "Tworzenie rÛønych rodzajÛw archiwÛw shar:\n"
-#~ "  -V, --vanilla-operation   tworzenie bardzo prostych i niewymagaj±cych "
-#~ "sharÛw\n"
-#~ "  -P, --no-piping           tworzenie tymczasowych plikÛw na czas "
-#~ "rozpakowywania\n"
-#~ "  -x, --no-check-existing   nadpisywanie istniej±cych plikÛw bez "
-#~ "ostrzeøenia\n"
-#~ "  -X, --query-user          pytanie przed nadpisywaniem plikÛw (nie dla "
-#~ "sieci)\n"
-#~ "  -m, --no-timestamp        nie przywracanie czasu modyfikacji plikÛw\n"
-#~ "  -Q, --quiet-unshar        nie wy∂wietlanie informacji podczas "
-#~ "dekompresji\n"
-#~ "  -f, --basename            odtwarzanie w jednym podkatalogu, bez "
-#~ "hierarchii\n"
-#~ "      --no-i18n             nie tworzenie umiÍdzynarodowionego skryptu\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Opcja -o jest wymagana przy -l lub -L, opcja -n jest wymagana przy -a.\n"
-
-#~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr "Opcja -g implikuje -z, opcja -b implikuje -Z.\n"
-
-#~ msgid "Option -g implies -z.\n"
-#~ msgstr "Opcja -g implikuje -z.\n"
-
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "DEBUG nie zosta≥o wybrane na etapie kompilacji"
-
-#~ msgid "Hard limit %s\n"
-#~ msgstr "Twarde ograniczenie %s\n"
-
-#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr "Ten system nie obs≥uguje -Z ('compress'), naleøy uøyÊ -z"
-
-#~ msgid "Soft limit %s\n"
-#~ msgstr "MiÍkkie ograniczenie %s\n"
-
-#~ msgid "illegal output prefix\n"
-#~ msgstr "niedozwolony prefiks wyj∂cia\n"
-
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Sk≥adnia: %s [PLIK_WEJ¶CIOWY] PLIK_ZDALNY\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64    uøycie kodowanie base64 zgodnie z RFC1521\n"
-#~ "      --help      wy∂wietlenie tego opisu i zakoÒczenie\n"
-#~ "      --version   wy∂wietlenie informacji o wersji i zakoÒczenie\n"
+msgstr "argument %s%s '%s' zbyt d≈Çugi"

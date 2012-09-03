@@ -1,15 +1,14 @@
 # Swedish messages for sharutils
-# Copyright © 1996, 2002, 2005, 2006, 2010 Free Software Foundation, Inc.
+# Copyright © 1996, 2002, 2005, 2006, 2010, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
-# Jan Djärv <jan.h.d@swipnet.se>, 1996, 2002, 2005, 2006, 2010.
-# Revision: 1.37
+# Jan Djärv <jan.h.d@swipnet.se>, 1996, 2002, 2005, 2006, 2010, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.11\n"
+"Project-Id-Version: sharutils 4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-10 11:52-0700\n"
-"PO-Revision-Date: 2011-02-23 08:09+0100\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
+"PO-Revision-Date: 2012-08-28 20:48+0200\n"
 "Last-Translator: Jan Djärv <jan.h.d@swipnet.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -26,8 +25,7 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"OBS: verifierar inte md5-summor.  Överväg att installera GNU coreutils."
+msgstr "OBS: verifierar inte md5-summor.  Överväg att installera GNU coreutils."
 
 #: src/scripts.x:396
 msgid ""
@@ -118,7 +116,7 @@ msgstr "avsluta omedelbart"
 #: src/scripts.x:416
 #, c-format
 msgid "restore of %s failed"
-msgstr "återskapande av %s misslyckades"
+msgstr "misslyckades att återskapa %s"
 
 #: src/scripts.x:417
 #, c-format
@@ -243,29 +241,28 @@ msgstr "x - tog bort låskatalog %s."
 msgid "x - failed to remove lock directory %s."
 msgstr "x - misslyckades med att ta bort låskatalog %s."
 
-#: src/shar-opts.c:1653
-#, fuzzy, c-format
+#: src/shar-opts.c:1650
+#, c-format
 msgid "Cannot reopen %s as stdin"
-msgstr "Filen %s kunde inte öppnas"
+msgstr "Kan inte återöppna %s som standard in"
 
-#: src/shar-opts.c:1745
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
-msgstr ""
+msgstr "shar användningsfel:\n"
 
-#: src/shar-opts.c:1781
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
-msgstr ""
+msgstr "shar ödestigert fel:\n"
 
-#: src/shar-opts.c:1818
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
+msgstr "fserr %d (%s) utförande \"%s\" på %s\n"
 
-#: src/shar-opts.c:1919 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
 #: src/uuencode-opts.c:479
-#, fuzzy
 msgid "No memory for duping translated strings\n"
-msgstr "kunde inte allokera %d byte"
+msgstr "Minne saknas för att duplicera översatta strängar\n"
 
 #: src/shar.c:372
 #, c-format
@@ -273,9 +270,8 @@ msgid "printf formatting error:  %s\n"
 msgstr "printf formatfel:  %s\n"
 
 #: src/shar.c:423
-#, fuzzy
 msgid "sharutils bug - no status"
-msgstr "fel i sharutils - ingen status\n"
+msgstr "fel i sharutils - ingen status"
 
 #: src/shar.c:788
 msgid "Too many directories for mkdir generation"
@@ -307,9 +303,8 @@ msgid "Starting file %s\n"
 msgstr "Påbörjar filen %s\n"
 
 #: src/shar.c:1081
-#, fuzzy
 msgid "Could not popen command"
-msgstr "Kunde inte köra (popen) \"wc\": %s\n"
+msgstr "Kunde inte köra (popen) kommando"
 
 #: src/shar.c:1162
 #, c-format
@@ -322,7 +317,7 @@ msgstr "text"
 
 #: src/shar.c:1311 src/shar.c:1322
 msgid "call"
-msgstr ""
+msgstr "anrop"
 
 #: src/shar.c:1335
 #, c-format
@@ -330,9 +325,9 @@ msgid "File %s (%s)"
 msgstr "Fil %s (%s)"
 
 #: src/shar.c:1426
-#, fuzzy, c-format
+#, c-format
 msgid "Continuing file %s\n"
-msgstr "fortsätter fil %s"
+msgstr "Fortsätter fil %s\n"
 
 #: src/shar.c:1536
 #, c-format
@@ -354,35 +349,33 @@ msgid "Saving %s (%s)"
 msgstr "Sparar %s (%s)"
 
 #: src/shar.c:1807
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid format for output file names (%s): %s"
-msgstr "ogiltigt format (räknarfält för stort): \"%s\"\n"
+msgstr "Ogiltigt format för filnamn för utdata (%s): %s"
 
 #: src/shar.c:1822
 msgid "more than one format element"
-msgstr ""
+msgstr "mer än ett formatelement"
 
 #: src/shar.c:1827
 msgid "no conversion character"
-msgstr ""
+msgstr "inget konverteringstecken"
 
 #: src/shar.c:1836
 msgid "format is too wide"
-msgstr ""
+msgstr "formatet är för brett"
 
 #: src/shar.c:1848
 msgid "invalid conversion character"
-msgstr ""
+msgstr "ogiltigt konverteringstecken"
 
 #: src/shar.c:1889
-#, fuzzy
 msgid "Opening"
-msgstr "Öppnar \"%s\""
+msgstr "Öppnar"
 
 #: src/shar.c:1904
-#, fuzzy
 msgid "Closing"
-msgstr "Stänger \"%s\""
+msgstr "Stänger"
 
 #: src/shar.c:2015
 msgid "No input files"
@@ -391,8 +384,7 @@ msgstr "Inga infiler"
 #: src/shar.c:2032
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr ""
-"Vänligen undvik -X för skalarkiv som ska till Usenet eller offentliga nätverk"
+msgstr "Vänligen undvik -X för skalarkiv som ska till Usenet eller offentliga nätverk"
 
 #: src/shar.c:2056
 #, c-format
@@ -400,11 +392,13 @@ msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
+"Flaggan \"%s\" kan inte blandas med filnamn\n"
+"om inte flaggan --intermix-type har angetts."
 
 #: src/shar.c:2074
 #, c-format
 msgid "The '%s' option must appear before any file names"
-msgstr ""
+msgstr "Flaggan \"%s\" måste komma före eventuella filnamn"
 
 #: src/shar.c:2110
 #, c-format
@@ -412,10 +406,12 @@ msgid ""
 "invalid compaction type:  %s\n"
 "the known types are:\n"
 msgstr ""
+"okiltig kompressionstyp: %s\n"
+"kända typer är:\n"
 
 #: src/shar.c:2149
 msgid "files on command line and --input-file-list specified"
-msgstr ""
+msgstr "filer på kommandoraden och --input-file-list angiven"
 
 #: src/shar.c:2198
 #, c-format
@@ -499,8 +495,7 @@ msgstr ""
 msgid "Report bugs to <%s>.\n"
 msgstr ""
 "Rapportera fel till <%s>.\n"
-"Rapportera fel eller synpunkter på översättningen till <tp-sv@listor.tp-sv."
-"se>.\n"
+"Rapportera fel eller synpunkter på översättningen till <tp-sv@listor.tp-sv.se>.\n"
 
 #: src/unshar.c:414 src/uudecode.c:506
 #, c-format, no-wrap
@@ -633,18 +628,18 @@ msgid "fstat-ing %s"
 msgstr "tar status (fstat) på %s"
 
 #: src/uuencode.c:254
-#, fuzzy, c-format
+#, c-format
 msgid "Allocation failure"
-msgstr "allokera filbuffert"
+msgstr "Fel vid allokering"
 
 #: lib/error.c:188
 msgid "Unknown system error"
 msgstr "Okänt systemfel"
 
 #: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: flaggan \"%s\" är tvetydig\n"
+msgstr "%s: flaggan \"%s\" är tvetydig; alternaiv:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
@@ -697,14 +692,14 @@ msgid "%s: option '-W %s' requires an argument\n"
 msgstr "%s: flaggan \"-W %s\" kräver ett argument\n"
 
 #: lib/openat-die.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "unable to record current working directory"
-msgstr "misslyckades med att skapa låskatalog %s"
+msgstr "misslyckades med att spara nuvarande katalog"
 
 #: lib/openat-die.c:57
-#, fuzzy, c-format
+#, c-format
 msgid "failed to return to initial working directory"
-msgstr "misslyckades med att skapa låskatalog %s"
+msgstr "misslyckades med att återvända till ursprunglig katalog"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -729,266 +724,27 @@ msgstr "misslyckades med att skapa låskatalog %s"
 #. and use glyphs suitable for your language.
 #: lib/quotearg.c:312
 msgid "`"
-msgstr ""
+msgstr "\""
 
 #: lib/quotearg.c:313
 msgid "'"
-msgstr ""
+msgstr "\""
 
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
-msgstr ""
+msgstr "minnet slut"
 
 #: lib/xstrtol-error.c:63
 #, c-format
 msgid "invalid %s%s argument '%s'"
-msgstr ""
+msgstr "ogilitgt %s%s-argument \"%s\""
 
 #: lib/xstrtol-error.c:68
 #, c-format
 msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
+msgstr "ogiltigt suffix i %s%s-argument \"%s\""
 
 #: lib/xstrtol-error.c:72
 #, c-format
 msgid "%s%s argument '%s' too large"
-msgstr ""
-
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "-C kommer att tas bort, använd -Z i stället"
-
-#~ msgid "popen(3) on: %s"
-#~ msgstr "kör (popen): %s"
-
-#~ msgid "fopen(3) of file %s"
-#~ msgstr "öppnar (fopen) fil %s"
-
-#~ msgid "compressed"
-#~ msgstr "komprimerad"
-
-#~ msgid "gzipped"
-#~ msgstr "gzip-komprimerad"
-
-#~ msgid "bzipped"
-#~ msgstr "bzip-komprimerad"
-
-#~ msgid "binary"
-#~ msgstr "binär"
-
-#~ msgid "pipe(2) failed"
-#~ msgstr "skapa rör (pipe) misslyckades"
-
-#~ msgid "Could not fork"
-#~ msgstr "Kunde inte grena"
-
-#~ msgid "allocating output file name"
-#~ msgstr "allokerar utfilnamn"
-
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "ogiltig begränsning på filstorlek \"%s\""
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr "VARNING: Ingen användarinteraktion i \"vanilla\"-läge"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "VARNING: Lagringsflaggor för icke-text åsidosatta"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Flaggan -a kan inte användas utan -n"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "Flaggan -l eller -L kan inte användas utan -o"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part `cat ${lock_dir}/seq` next."
-#~ msgstr ""
-#~ "Arkiv måste packas upp i ordning!\n"
-#~ "Packa upp del `cat ${lock_dir}/seq` härnäst."
-
-#~ msgid "uncompressing file %s"
-#~ msgstr "dekomprimerar upp fil %s"
-
-#~ msgid "gunzipping file %s"
-#~ msgstr "gunzip:ar fil %s"
-
-#~ msgid "bunzipping file %s"
-#~ msgstr "bunzip:ar fil %s"
-
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ "\n"
-#~ "Selecting files:\n"
-#~ msgstr ""
-#~ "Obligatoriska argument för långa flaggor är obligatoriska även för korta "
-#~ "flaggor.\n"
-#~ "\n"
-#~ "Välja information:\n"
-#~ "  -h, --help              visa denna hjälptext och avsluta\n"
-#~ "  -v, --version           visa versionsinformation och avsluta\n"
-#~ "  -q, --quiet, --silent   använd inte utförliga meddelanden lokalt\n"
-#~ "\n"
-#~ "Välja filer:\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     tillåt -[BTzZ] i fillistor för att ändra läge\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     tillåt -[BTz] i fillistor för att ändra läge\n"
-
-#~ msgid ""
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "  -t, --translate           translate messages in the script\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
-#~ msgstr ""
-#~ "  -S, --stdin-file-list   läs fillista från standard in\n"
-#~ "\n"
-#~ "Dela arkivet:\n"
-#~ "  -o, --output-prefix=PREFIX        gör filerna PREFIX.01 till PREFIX.NN\n"
-#~ "  -l, --whole-size-limit=STORLEK    dela arkivet i STORLEK kbyte bitar,\n"
-#~ "                                    individuella filer delas inte\n"
-#~ "  -L, --split-size-limit=STORLEK    som ovan, individuella filer delas\n"
-#~ "\n"
-#~ "Kontroll av fält i arkivhuvudet:\n"
-#~ "  -n, --archive-name=NAMN   använd NAMN för att dokumentera arkivet\n"
-#~ "  -s, --submitter=ADRESS    ange explicit adress för arkivinlämnaren\n"
-#~ "  -a, --net-headers         lägg in Submitted-by: och Archive-name:\n"
-#~ "  -c, --cut-mark            börja arkivet med en \"klipp-här\"-rad\n"
-#~ "  -t, --translate           översätt meddelanden i skriptet\n"
-#~ "\n"
-#~ "Kontroll av hur filer lagras:\n"
-#~ "  -M, --mixed-uuencode         avgör automatiskt om uuencode behövs\n"
-#~ "                               (standardvärde: på)\n"
-#~ "  -T, --text-files             behandla alla filer som text\n"
-#~ "  -B, --uuencode               behandla alla filer som binär data,\n"
-#~ "                               använd uuencode\n"
-#~ "  -z, --gzip                   kör gzip och uuencode på alla filer\n"
-#~ "  -g, --level-for-gzip=NIVÅ    ge flaggan -NIVÅ till gzip (standardvärde: "
-#~ "9)\n"
-#~ "  -j, --bzip2                  kör bzip2 och uuencode på alla filer\n"
-
-#~ msgid ""
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "  -Z, --compress               kör compress och uuencode på alla filer\n"
-#~ "  -b, --bits-per-code=BITAR    ge flaggan -bBITAR till compress\n"
-#~ "                               (standardvärde: 12)\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Skydd mot överföringsfel:\n"
-#~ "  -w, --no-character-count      använd inte \"wc -c\" för att "
-#~ "kontrollera\n"
-#~ "                                storleken\n"
-#~ "  -D, --no-md5-digest           använd inte \"md5sum\" för kontroll\n"
-#~ "  -F, --force-prefix            skriv prefixtecknet på alla rader\n"
-#~ "  -d, --here-delimiter=STRÄNG   skilj filer åt i arkivet med STRÄNG\n"
-#~ "\n"
-#~ "Olika typer av skalarkiv:\n"
-#~ "  -V, --vanilla-operation   gör enkla arkiv som använder få kommandon\n"
-#~ "  -P, --no-piping           använd enbart temporärfiler vid uppackning\n"
-#~ "  -x, --no-check-existing   skriv över existerande filer vid uppackning\n"
-#~ "  -X, --query-user          fråga uppackaren om filer ska skrivas över\n"
-#~ "                            (inte för arkiv till nätet)\n"
-#~ "  -m, --no-timestamp        återskapa inte filers modifieringstid\n"
-#~ "  -Q, --quiet-unshar        undvik utförliga meddelanden vid uppackning\n"
-#~ "  -f, --basename            packa upp filer i en katalog, oavsett "
-#~ "hierarki\n"
-#~ "      --no-i18n             skapa inte internationaliserade skalarkiv\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Flaggan -o krävs tillsammans med -l eller -L,\n"
-#~ "flaggan -n krävs tillsammans med -a.\n"
-
-#~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr "Flaggan -g medför -z, flaggan -b medför -Z.\n"
-
-#~ msgid "Option -g implies -z.\n"
-#~ msgstr "Flaggan -g medför -z.\n"
-
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "DEBUG valdes inte när programmet kompilerades"
-
-#~ msgid "Hard limit %s\n"
-#~ msgstr "Hård begränsning på %s\n"
-
-#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr "Det här systemet stöder inte -Z (\"compress\"), använd -z istället"
-
-#~ msgid "Soft limit %s\n"
-#~ msgstr "Mjuk begränsning på %s\n"
-
-#~ msgid "illegal output prefix\n"
-#~ msgstr "otillåtet prefix för utfiler\n"
-
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Användning: %s [LOKAL_FIL] ICKE_LOKAL_FIL\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64    använd base64-kodning enligt RFC1521\n"
-#~ "      --help      visa denna hjälptext och avsluta\n"
-#~ "      --version   visa versionsinformation och avsluta\n"
+msgstr "%s%s-argument \"%s\" för stort"

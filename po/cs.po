@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the sharutils package.
 # David Sauer <xsauer@fel.cvut.cz>, 1997.
 # Vladimir Michl <Vladimir.Michl@upol.cz>, 1998.
-# Petr Pisar <petr.pisar@atlas.cz>, 2010, 2011.
+# Petr Pisar <petr.pisar@atlas.cz>, 2010, 2011, 2012.
 #
 # Notes: 1 unstanslated message, still untranslatable, require redefinition
 #        user asks keys
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.11\n"
+"Project-Id-Version: sharutils 4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-10 11:52-0700\n"
-"PO-Revision-Date: 2011-02-08 23:03+0100\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
+"PO-Revision-Date: 2012-08-13 21:36+0200\n"
 "Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
@@ -30,8 +30,7 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Poznámka: Kontrolní součty MD5 se neověřují. Zvažte instalaci GNU coreutils."
+msgstr "Poznámka: Kontrolní součty MD5 se neověřují. Zvažte instalaci GNU coreutils."
 
 #: src/scripts.x:396
 msgid ""
@@ -247,30 +246,29 @@ msgstr "x – adresář pro zámky %s odstraněn."
 msgid "x - failed to remove lock directory %s."
 msgstr "x – adresář pro zámky %s nebylo možné odstranit."
 
-#: src/shar-opts.c:1653
-#, fuzzy, c-format
+#: src/shar-opts.c:1650
+#, c-format
 msgid "Cannot reopen %s as stdin"
-msgstr "Soubor %s nelze otevřít"
+msgstr "%s nelze znovu otevřít jako standardní vstup"
 
-#: src/shar-opts.c:1745
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
-msgstr ""
+msgstr "chybné použití sharu:\n"
 
-#: src/shar-opts.c:1781
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
-msgstr ""
+msgstr "nepřekonatelné chyba v shar:\n"
 
-#: src/shar-opts.c:1818
+# TODO: rephrase fserr
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
+msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
 
-# TODO: plural
-#: src/shar-opts.c:1919 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
 #: src/uuencode-opts.c:479
-#, fuzzy
 msgid "No memory for duping translated strings\n"
-msgstr "nedostatek paměti pro alokaci %d bajtů"
+msgstr "Nedostatek paměti pro duplikaci přeložených řetězců\n"
 
 #: src/shar.c:372
 #, c-format
@@ -278,9 +276,8 @@ msgid "printf formatting error:  %s\n"
 msgstr "chyba formátování printf: %s\n"
 
 #: src/shar.c:423
-#, fuzzy
 msgid "sharutils bug - no status"
-msgstr "chyba sharutils – chybí status\n"
+msgstr "chyba sharutils – chybí status"
 
 #: src/shar.c:788
 msgid "Too many directories for mkdir generation"
@@ -312,9 +309,8 @@ msgid "Starting file %s\n"
 msgstr "Začíná soubor %s\n"
 
 #: src/shar.c:1081
-#, fuzzy
 msgid "Could not popen command"
-msgstr "Nebylo možné spustit příkaz „wc“ přes popen: %s\n"
+msgstr "Nebylo možné spustit příkaz přes popen"
 
 #: src/shar.c:1162
 #, c-format
@@ -327,7 +323,7 @@ msgstr "textový"
 
 #: src/shar.c:1311 src/shar.c:1322
 msgid "call"
-msgstr ""
+msgstr "volání"
 
 #: src/shar.c:1335
 #, c-format
@@ -335,9 +331,9 @@ msgid "File %s (%s)"
 msgstr "Soubor %s (%s)"
 
 #: src/shar.c:1426
-#, fuzzy, c-format
+#, c-format
 msgid "Continuing file %s\n"
-msgstr "pokračování souboru %s"
+msgstr "Pokračování souboru %s\n"
 
 #: src/shar.c:1536
 #, c-format
@@ -360,36 +356,34 @@ msgid "Saving %s (%s)"
 msgstr "Ukládání %s (%s)"
 
 #: src/shar.c:1807
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid format for output file names (%s): %s"
-msgstr "neplatný formát (pole počítadla příliš široké): „%s“\n"
+msgstr "Neplatný formát pro názvy výstupního souboru (%s): %s"
 
 #: src/shar.c:1822
 msgid "more than one format element"
-msgstr ""
+msgstr "více jak jeden formátovací prvek"
 
 #: src/shar.c:1827
 msgid "no conversion character"
-msgstr ""
+msgstr "žádný převodní znak"
 
 #: src/shar.c:1836
 msgid "format is too wide"
-msgstr ""
+msgstr "formát je příliš široký"
 
 #: src/shar.c:1848
 msgid "invalid conversion character"
-msgstr ""
+msgstr "neplatný převodní znak"
 
 # Error while...
 #: src/shar.c:1889
-#, fuzzy
 msgid "Opening"
-msgstr "Otevírání „%s“"
+msgstr "Otevírání"
 
 #: src/shar.c:1904
-#, fuzzy
 msgid "Closing"
-msgstr "Uzavírání „%s“"
+msgstr "Uzavírání"
 
 #: src/shar.c:2015
 msgid "No input files"
@@ -406,11 +400,13 @@ msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
+"Přepínač „%s“ nesmí být namíchán s názvy souborů\n"
+"pokud nebyl zadán přepínač --intermix-type."
 
 #: src/shar.c:2074
 #, c-format
 msgid "The '%s' option must appear before any file names"
-msgstr ""
+msgstr "Přepínač „%s“ musí předcházet všem názvům souborů"
 
 #: src/shar.c:2110
 #, c-format
@@ -418,10 +414,12 @@ msgid ""
 "invalid compaction type:  %s\n"
 "the known types are:\n"
 msgstr ""
+"neplatný druh komprese: %s\n"
+"známé druhy jsou:\n"
 
 #: src/shar.c:2149
 msgid "files on command line and --input-file-list specified"
-msgstr ""
+msgstr "zadány soubory na příkazovém řádku i --input-file-list"
 
 #: src/shar.c:2198
 #, c-format
@@ -487,8 +485,7 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"  Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro "
-"jejich\n"
+"  Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro jejich\n"
 "krátké formy.\n"
 "\n"
 "  -d, --directory=ADRESÁŘ     aktuální adresář pro zpracovávání\n"
@@ -610,8 +607,7 @@ msgid ""
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Povinné argumenty dlouhých formátů přepínačů, jsou závazné i pro krátké "
-"formy.\n"
+"Povinné argumenty dlouhých formátů přepínačů, jsou závazné i pro krátké formy.\n"
 "  -o, --output-file=SOUBOR výstup do souboru SOUBOR\n"
 "      --help               vypíše tuto nápovědu a skončí\n"
 "      --version            vypíše označení verze a skončí\n"
@@ -621,8 +617,7 @@ msgstr ""
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
-msgstr ""
-"Když se zpracovává více vstupních souborů, nelze zadat výstupní soubor.\n"
+msgstr "Když se zpracovává více vstupních souborů, nelze zadat výstupní soubor.\n"
 
 #: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
 #, c-format
@@ -644,22 +639,22 @@ msgstr "otevření přes fopen %s"
 #: src/uuencode.c:228
 #, c-format
 msgid "fstat-ing %s"
-msgstr "zjištění informací o souboru %s"
+msgstr "zjišťování informací o souboru %s"
 
 # Error:...
 #: src/uuencode.c:254
-#, fuzzy, c-format
+#, c-format
 msgid "Allocation failure"
-msgstr "alokace buffer souboru"
+msgstr "Alokace selhala"
 
 #: lib/error.c:188
 msgid "Unknown system error"
 msgstr "Neznámá chyba systému"
 
 #: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: přepínač „%s“ není jednoznačný\n"
+msgstr "%s: přepínač „%s“ není jednoznačný; možnosti:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
@@ -712,14 +707,14 @@ msgid "%s: option '-W %s' requires an argument\n"
 msgstr "%s: přepínač „-W %s“ vyžaduje argument\n"
 
 #: lib/openat-die.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "unable to record current working directory"
-msgstr "adresář pro zámky %s nebylo možné vytvořit"
+msgstr "nelze zaznamenat současný pracovní adresář"
 
 #: lib/openat-die.c:57
-#, fuzzy, c-format
+#, c-format
 msgid "failed to return to initial working directory"
-msgstr "adresář pro zámky %s nebylo možné vytvořit"
+msgstr "nelze se vrátit do původního pracovního adresáře"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -744,31 +739,30 @@ msgstr "adresář pro zámky %s nebylo možné vytvořit"
 #. and use glyphs suitable for your language.
 #: lib/quotearg.c:312
 msgid "`"
-msgstr ""
+msgstr "„"
 
 #: lib/quotearg.c:313
 msgid "'"
-msgstr ""
+msgstr "“"
 
 #: lib/xalloc-die.c:34
-#, fuzzy
 msgid "memory exhausted"
-msgstr "Paměť vyčerpána"
+msgstr "paměť vyčerpána"
 
 #: lib/xstrtol-error.c:63
 #, c-format
 msgid "invalid %s%s argument '%s'"
-msgstr ""
+msgstr "přepínač %s%s má neplatný „%s“"
 
 #: lib/xstrtol-error.c:68
 #, c-format
 msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
+msgstr "argument „%3$s“ přepínače %1$s%2$s má neplatnou příponu"
 
 #: lib/xstrtol-error.c:72
 #, c-format
 msgid "%s%s argument '%s' too large"
-msgstr ""
+msgstr "přepínač %s%s má příliš dlouhý argument „%s“"
 
 #~ msgid "-C is being deprecated, use -Z instead"
 #~ msgstr "-C není podporován, místo něj použijte -Z"
@@ -801,38 +795,6 @@ msgstr ""
 #~ msgid "allocating output file name"
 #~ msgstr "alokace názvu výstupního souboru"
 
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "neplatné omezení velikosti souboru „%s“"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr ""
-#~ "UPOZORNĚNÍ: Bez interakce s uživatelem v jednoduchém(vanilla) režimu"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "UPOZORNĚNÍ: přepínač pro netextové ukládání přebit"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Přepínač -a nelze použít bez -n"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "-l nebo -L nelze bez -o použít"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part `cat ${lock_dir}/seq` next."
-#~ msgstr ""
-#~ "Archivy musí být rozbalovány v původním pořadí!\n"
-#~ "Jako další část rozbalte, prosím, `cat ${lock_dir}/seq`."
-
-#~ msgid "uncompressing file %s"
-#~ msgstr "dekomprimování souboru %s"
-
-#~ msgid "gunzipping file %s"
-#~ msgstr "dekomprese gzipového souboru %s"
-
-#~ msgid "bunzipping file %s"
-#~ msgstr "dekomprese bzipového souboru %s"
-
 #~ msgid ""
 #~ "Mandatory arguments to long options are mandatory for short options too.\n"
 #~ "\n"
@@ -852,28 +814,19 @@ msgstr ""
 #~ "\n"
 #~ "Výběr souborů:\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -"
-#~ "[BTzZ]\n"
+#~ msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -[BTzZ]\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -"
-#~ "[BTz]\n"
+#~ msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -[BTz]\n"
 
 #~ msgid ""
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ "\n"
 #~ "Controlling the shar headers:\n"
 #~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
@@ -895,44 +848,35 @@ msgstr ""
 #~ "Dělení výstupu:\n"
 #~ "  -o, --output-prefix=PŘEDPONA     výstup vede do souboru PŘEDPONA.01 až\n"
 #~ "                                   PŘEDPONA.NN\n"
-#~ "  -l, --whole-size-limit=VELIKOST  rozdělí archiv, ne soubory, na "
-#~ "VELIKOST\n"
+#~ "  -l, --whole-size-limit=VELIKOST  rozdělí archiv, ne soubory, na VELIKOST\n"
 #~ "                                   kilobajtů\n"
-#~ "  -L, --split-size-limit=VELIKOST  rozdělí archiv nebo soubory na "
-#~ "VELIKOST\n"
+#~ "  -L, --split-size-limit=VELIKOST  rozdělí archiv nebo soubory na VELIKOST\n"
 #~ "                                   kilobajtů\n"
 #~ "\n"
 #~ "Řízení hlaviček shar:\n"
 #~ "  -n, --archive-name=JMÉNO  použije jako jméno archívu\n"
 #~ "  -s, --submitter=ADRESA    použije jako adresu distributora\n"
-#~ "  -a, --net-headers         do výstupu hlavička Submitted-by: a Archive-"
-#~ "name:\n"
+#~ "  -a, --net-headers         do výstupu hlavička Submitted-by: a Archive-name:\n"
 #~ "  -c, --cut-mark            na začátek každého výstupního souboru přidá\n"
 #~ "                            řádek označující začátek archívu (cut line)\n"
 #~ "  -t, --translate           přeloží zprávy ve skriptu\n"
 #~ "\n"
 #~ "Výběr toho, jak budou soubory uloženy:\n"
-#~ "  -M, --mixed-uuencode         automaticky se rozhodne, zda použít "
-#~ "uuencode\n"
+#~ "  -M, --mixed-uuencode         automaticky se rozhodne, zda použít uuencode\n"
 #~ "                               (implicitně)\n"
 #~ "  -T, --text-files             pokládá všechny soubory za textové\n"
-#~ "  -B, --uuencode               pokládá všechny soubory za binární, "
-#~ "použije\n"
+#~ "  -B, --uuencode               pokládá všechny soubory za binární, použije\n"
 #~ "                               uuencode\n"
-#~ "  -z, --gzip                   použije gzip a uuencode na všechny "
-#~ "soubory\n"
+#~ "  -z, --gzip                   použije gzip a uuencode na všechny soubory\n"
 #~ "  -g, --level-for-gzip=ÚROVEŇ  parametr -ÚROVEŇ (implicitně 9) pro gzip\n"
-#~ "  -j, --bzip2                  použije bzip2 a uuencode na všechny "
-#~ "soubory\n"
+#~ "  -j, --bzip2                  použije bzip2 a uuencode na všechny soubory\n"
 
 #~ msgid ""
 #~ "  -Z, --compress               compress and uuencode all files\n"
 #~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
 #~ msgstr ""
-#~ "  -Z, --compress               použije compress a uuencode na všechny "
-#~ "soubory\n"
-#~ "  -b, --bits-per-code=BITŮ     parametr -bBITŮ (implicitně 12) pro "
-#~ "compress\n"
+#~ "  -Z, --compress               použije compress a uuencode na všechny soubory\n"
+#~ "  -b, --bits-per-code=BITŮ     parametr -bBITŮ (implicitně 12) pro compress\n"
 
 #~ msgid ""
 #~ "\n"
@@ -940,36 +884,28 @@ msgstr ""
 #~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
 #~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
 #~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
 #~ "\n"
 #~ "Producing different kinds of shars:\n"
 #~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar time\n"
 #~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & times\n"
 #~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
 #~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
+#~ "      --no-i18n             do not produce internationalized shell script\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Ochrana přenosu:\n"
 #~ "  -w, --no-character-count      nepoužívá 'wc -c' na testování velikosti\n"
 #~ "  -D, --no-md5-digest           nepoužívá 'md5sum' pro ověření\n"
-#~ "  -F, --force-prefix            použije předponový (prefix) znak na každé "
-#~ "řádce\n"
-#~ "  -d, --here-delimiter=ŘETĚZEC  použije ŘETĚZEC k oddělení souborů v "
-#~ "shar\n"
+#~ "  -F, --force-prefix            použije předponový (prefix) znak na každé řádce\n"
+#~ "  -d, --here-delimiter=ŘETĚZEC  použije ŘETĚZEC k oddělení souborů v shar\n"
 #~ "                                archívu\n"
 #~ "\n"
 #~ "Různé druhy shar archívů:\n"
-#~ "  -V, --vanilla-operation   vyrobí velmi jednoduchý shar archív, "
-#~ "nenáročný\n"
+#~ "  -V, --vanilla-operation   vyrobí velmi jednoduchý shar archív, nenáročný\n"
 #~ "                            na rozbalení (je třeba sed a echo)\n"
 #~ "  -P, --no-piping           použije dočasné soubory při rozbalování\n"
 #~ "  -x, --no-check-existing   slepé přepsání existujících souborů\n"
@@ -979,8 +915,7 @@ msgstr ""
 #~ "  -Q, --quiet-unshar        nevypisuje zprávy při rozbalování\n"
 #~ "  -f, --basename            rozbaluje do jednoho adresáře, neuvažuje\n"
 #~ "                            adresářovou strukturu\n"
-#~ "      --no-i18n             nevyrobí internacionalizovaný shellový "
-#~ "script\n"
+#~ "      --no-i18n             nevyrobí internacionalizovaný shellový script\n"
 
 #~ msgid ""
 #~ "\n"
@@ -994,6 +929,9 @@ msgstr ""
 
 #~ msgid "Option -g implies -z.\n"
 #~ msgstr "Přepínač -g zahrnuje -z.\n"
+
+#~ msgid "invalid file size limit `%s'"
+#~ msgstr "neplatné omezení velikosti souboru „%s“"
 
 #~ msgid "DEBUG was not selected at compile time"
 #~ msgstr "DEBUG nebyl nastaven při překladu"
@@ -1010,6 +948,18 @@ msgstr ""
 #~ msgid "illegal output prefix\n"
 #~ msgstr "zakázaná předpona výstupu\n"
 
+#~ msgid "WARNING: No user interaction in vanilla mode"
+#~ msgstr "UPOZORNĚNÍ: Bez interakce s uživatelem v jednoduchém(vanilla) režimu"
+
+#~ msgid "WARNING: Non-text storage options overridden"
+#~ msgstr "UPOZORNĚNÍ: přepínač pro netextové ukládání přebit"
+
+#~ msgid "Cannot use -a option without -n"
+#~ msgstr "Přepínač -a nelze použít bez -n"
+
+#~ msgid "Cannot use -l or -L option without -o"
+#~ msgstr "-l nebo -L nelze bez -o použít"
+
 #~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
 #~ msgstr "Použití: %s [VSTUPNÍ_SOUBOR] VZDÁLENÝ_SOUBOR\n"
 
@@ -1023,6 +973,22 @@ msgstr ""
 #~ "  -m, --base64    použije kódování base64 odpovídající RFC1521\n"
 #~ "      --help      vypíše tuto nápovědu a skončí\n"
 #~ "      --version   vypíše označení verze a skončí\n"
+
+#~ msgid ""
+#~ "Archives must be unpacked in sequence!\n"
+#~ "Please unpack part `cat ${lock_dir}/seq` next."
+#~ msgstr ""
+#~ "Archivy musí být rozbalovány v původním pořadí!\n"
+#~ "Jako další část rozbalte, prosím, `cat ${lock_dir}/seq`."
+
+#~ msgid "uncompressing file %s"
+#~ msgstr "dekomprimování souboru %s"
+
+#~ msgid "gunzipping file %s"
+#~ msgstr "dekomprese gzipového souboru %s"
+
+#~ msgid "bunzipping file %s"
+#~ msgstr "dekomprese bzipového souboru %s"
 
 #~ msgid "%s: illegal option -- %c\n"
 #~ msgstr "%s: neznámý přepínač -- %c\n"
@@ -1060,11 +1026,9 @@ msgstr ""
 #~ msgid "current size"
 #~ msgstr "současná velikost"
 
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ msgid "Mandatory arguments to long options are mandatory for short options too.\n"
 #~ msgstr ""
-#~ "  Povinné argumenty dlouhých přepínačů, jsou pro jejich krátké formy "
-#~ "také\n"
+#~ "  Povinné argumenty dlouhých přepínačů, jsou pro jejich krátké formy také\n"
 #~ "povinné.\n"
 
 #~ msgid ""
@@ -1079,12 +1043,9 @@ msgstr ""
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Výstup:\n"
@@ -1093,23 +1054,19 @@ msgstr ""
 #~ "  -q, --quiet, --silent   dočasně nevypisuje informace o tom, co dělá\n"
 #~ "\n"
 #~ "Výběr souborů:\n"
-#~ "  -p, --intermix-type     povolení -[BTzZ] v seznamu souborů na změnu "
-#~ "práv\n"
+#~ "  -p, --intermix-type     povolení -[BTzZ] v seznamu souborů na změnu práv\n"
 #~ "  -S, --stdin-file-list   čte seznam souborů z stdin\n"
 #~ "\n"
 #~ "Rozdělení výstupu:\n"
-#~ "  -o, --output-prefix=PŘEDPONA    výstup do souboru PREFIX.01 až PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=VELIKOST rozdělí archív, nikoli soubory na "
-#~ "části\n"
+#~ "  -o, --output-prefix=PŘEDPONA    výstup do souboru PREFIX.01 až PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=VELIKOST rozdělí archív, nikoli soubory na části\n"
 #~ "                                  velikosti VELIKOST kilobajtů\n"
 #~ "  -L, --split-size-limit=VELIKOST rozdělí archiv nebo soubory na části\n"
 #~ "                                  velikosti VELIKOST kilobajtů\n"
 
 #~ msgid "Report bugs to <bug-gnu-utils@prep.ai.mit.edu>.\n"
 #~ msgstr ""
-#~ "  Chyby v programu oznamujte na adrese <bug-gnu-utils@prep.ai.mit.edu> "
-#~ "(pouze\n"
+#~ "  Chyby v programu oznamujte na adrese <bug-gnu-utils@prep.ai.mit.edu> (pouze\n"
 #~ "anglicky), připomínky k překladu zasílejte na <cs@li.org> (česky).\n"
 
 #~ msgid "removed"
