@@ -83,6 +83,30 @@ init() {
     [tT1-9yY]* ) set -x ;;
     * ) set +x ;;
     esac
+
+    cd ${progdir%-bld}/po && {
+        rsync -Lrtvz translationproject.org::tp/latest/sharutils/ po-tmp
+        for f in *.po
+        do
+            prev=$(fgrep PO-Revision-Date: $f)
+            if ! test -f po-tmp/$f
+            then rm -f $f
+
+            elif fgrep "$prev" po-tmp/$f >/dev/null 2>&1
+            then rm -f po-tmp/$f
+            else mv -f po-tmp/$f $f
+            fi
+        done
+        for f in $(find po-tmp -type f)
+        do
+            g=${f#po-tmp/}
+            d=$(dirname $g)
+            test -d ${d} || mkdir ${d}
+            mv $f $d/.
+        done
+        rm -rf po-tmp
+        cd -
+    }
 }
 
 versioned_files() {
@@ -137,7 +161,7 @@ versioned_files() {
     done
     fgrep PO-Revision-Date: *.po | \
         sed 's/\.po: *"PO-Revision-Date: */\t/;s/ [0-2][0-9]:.*//' | \
-        sort -t$'\t' -k +1 >&3
+        sort -t$'\t' -k +2 -r >&3
     exec 3>&-
     cd ..
 

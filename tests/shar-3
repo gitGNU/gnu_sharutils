@@ -21,6 +21,7 @@ top_builddir=`cd ${top_builddir} ; pwd`
 
 nocompression=false
 cd ${top_builddir}
+rm -f $(find * -type f -name '*~')
 {
   ctypes='gzip bzip2 xz'
   for f in `ls -1A`
@@ -33,7 +34,7 @@ cd ${top_builddir}
       nocompression=false
       ;;
 
-    *'text'* )
+    *' text' )
       $nocompression || {
         echo --compact=none
         nocompression=true
