@@ -8,695 +8,464 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils 4.6.3-pre4\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2006-05-18 20:39-0700\n"
+"POT-Creation-Date: 2012-09-04 15:59-0700\n"
 "PO-Revision-Date: 2006-05-22 18:52-0500\n"
 "Last-Translator: Kevin Patrick Scannell <scannell@SLU.EDU>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/error.c:131 lib/error.c:159
-msgid "Unknown system error"
-msgstr "Earráid anaithnid chórais"
-
-#: lib/getopt.c:694
-#, c-format
-msgid "%s: option `%s' is ambiguous\n"
-msgstr "%s: Tá an rogha `%s' débhríoch\n"
-
-#: lib/getopt.c:719
-#, c-format
-msgid "%s: option `--%s' doesn't allow an argument\n"
-msgstr "%s: ní cheadaítear argóint i ndiaidh na rogha `--%s'\n"
-
-#: lib/getopt.c:724
-#, c-format
-msgid "%s: option `%c%s' doesn't allow an argument\n"
-msgstr "%s: ní cheadaítear argóint i ndiaidh na rogha `%c%s'\n"
-
-#: lib/getopt.c:742 lib/getopt.c:915
-#, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: tá argóint de dhíth i ndiaidh na rogha `%s'\n"
-
-#: lib/getopt.c:771
-#, c-format
-msgid "%s: unrecognized option `--%s'\n"
-msgstr "%s: rogha anaithnid `--%s'\n"
-
-#: lib/getopt.c:775
-#, c-format
-msgid "%s: unrecognized option `%c%s'\n"
-msgstr "%s: rogha anaithnid `%c%s'\n"
-
-#: lib/getopt.c:801
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: rogha neamhcheadaithe -- %c\n"
-
-#: lib/getopt.c:804
-#, c-format
-msgid "%s: invalid option -- %c\n"
-msgstr "%s: rogha neamhbhailí -- %c\n"
-
-#: lib/getopt.c:834 lib/getopt.c:964
-#, c-format
-msgid "%s: option requires an argument -- %c\n"
-msgstr "%s: tá argóint de dhíth i ndiaidh na rogha -- %c\n"
-
-#: lib/getopt.c:881
-#, c-format
-msgid "%s: option `-W %s' is ambiguous\n"
-msgstr "%s: Tá an rogha `-W %s' débhríoch\n"
-
-#: lib/getopt.c:899
-#, c-format
-msgid "%s: option `-W %s' doesn't allow an argument\n"
-msgstr "%s: ní cheadaítear argóint i ndiaidh na rogha `-W %s'\n"
-
-#: lib/xmalloc.c:66
-msgid "memory exhausted"
-msgstr "cuimhne ídithe"
-
-#: src/shar.c:606
+#. TRANSLATORS:  This is a phony function generated for the purpose of
+#. constructing the strings to be extracted for translation.  Each string
+#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
+#. if you need to look up context.  These strings are all inserted into
+#. the shar-generated shell script so the shar user can create shar archives
+#. with messages localized for one locale.
+#.
+#: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr "Nóta: ní fhíorófar suimeanna MD5.  Ba chóir duit coreutils GNU a shuiteáil (le fáil as Gaeilge freisin)."
+msgstr ""
+"Nóta: ní fhíorófar suimeanna MD5.  Ba chóir duit coreutils GNU a shuiteáil "
+"(le fáil as Gaeilge freisin)."
 
-#: src/shar.c:641
-msgid "WARNING: not restoring timestamps.  Consider getting and"
+#: src/scripts.x:396
+#, fuzzy
+msgid ""
+"WARNING: not restoring timestamps.  Consider getting and\n"
+"installing GNU `touch', distributed in GNU coreutils..."
 msgstr "RABHADH: ní athchóireofar na stampaí ama.  Ba chóir duit\""
 
-#: src/shar.c:643
-msgid "installing GNU `touch'\\'', distributed in GNU coreutils..."
-msgstr "`touch' GNU á shuiteáil, dáilte mar chuid de coreutils GNU..."
-
-#: src/shar.c:650
-msgid "lock directory '${lock_dir}' exists"
+#: src/scripts.x:398
+#, fuzzy, c-format
+msgid "lock directory %s exists"
 msgstr "tá comhadlann ghlasála '${lock_dir}' ann"
 
-#: src/shar.c:655
-msgid "failed to create lock directory"
+#: src/scripts.x:399
+#, fuzzy, c-format
+msgid "failed to create %s lock directory"
 msgstr "theip ar chruthú na comhadlainne glasála"
 
-#: src/shar.c:659
-#, c-format
-msgid "x - created lock directory `'%s\\''."
+#: src/scripts.x:400
+#, fuzzy, c-format
+msgid "x - created lock directory %s."
 msgstr "z - cruthaíodh comhadlann ghlasála `'%s\\''."
 
-#: src/shar.c:661
-#, c-format
-msgid "x - failed to create lock directory `'%s\\''."
+#: src/scripts.x:401
+#, fuzzy, c-format
+msgid "x - failed to create lock directory %s."
 msgstr "x - theip ar chruthú na comhadlainne glasála `'%s\\''."
 
-#: src/shar.c:669
+#: src/scripts.x:402
+#, fuzzy, c-format
+msgid "x - created directory %s."
+msgstr "x - cruthaíodh comhadlann `%s'\\''."
+
+#: src/scripts.x:403
+#, fuzzy, c-format
+msgid "x - failed to create directory %s."
+msgstr "x - theip ar chruthú na comhadlainne `%s'\\''."
+
+#: src/scripts.x:404
 msgid "yes"
 msgstr "forscríobh"
 
-#: src/shar.c:669
+#: src/scripts.x:405
 msgid "overwrite this file"
 msgstr "forscríobh an comhad seo"
 
-#: src/shar.c:670
+#: src/scripts.x:406
 msgid "no"
 msgstr "ná forscríobh"
 
-#: src/shar.c:670
+#: src/scripts.x:407
 msgid "skip this file"
 msgstr "lig an comhad seo thart"
 
-#: src/shar.c:671
+#: src/scripts.x:408 libopts/enum.c:488
 msgid "all"
 msgstr "gach comhad"
 
-#: src/shar.c:671
+#: src/scripts.x:409
 msgid "overwrite all files"
 msgstr "forscríobh gach comhad"
 
-#: src/shar.c:672
+#: src/scripts.x:410 libopts/enum.c:493
 msgid "none"
 msgstr "neamhní"
 
-#: src/shar.c:672
+#: src/scripts.x:411
 msgid "overwrite no files"
 msgstr "ná forscríobh comhad ar bith"
 
-#: src/shar.c:673
+#: src/scripts.x:412
 msgid "help"
 msgstr "cabhair"
 
-#: src/shar.c:673
+#: src/scripts.x:413
 msgid "explain choices"
 msgstr "mínigh na roghanna"
 
-#: src/shar.c:674
+#: src/scripts.x:414
 msgid "quit"
 msgstr "scoir"
 
-#: src/shar.c:674
+#: src/scripts.x:415
 msgid "exit immediately"
 msgstr "scoir anois láithreach"
 
-#: src/shar.c:716
-msgid "Too many directories for mkdir generation"
-msgstr "An iomarca comhadlann le haghaidh cruthaithe ag mkdir"
-
-#: src/shar.c:735
-#, c-format
-msgid "x - created directory `%s'\\''."
-msgstr "x - cruthaíodh comhadlann `%s'\\''."
-
-#: src/shar.c:737
-#, c-format
-msgid "x - failed to create directory `%s'\\''."
-msgstr "x - theip ar chruthú na comhadlainne `%s'\\''."
-
-#: src/shar.c:804 src/shar.c:1055
-#, c-format
-msgid "Cannot access %s"
-msgstr "Ní féidir %s a rochtain"
-
-#: src/shar.c:858
-msgid "-C is being deprecated, use -Z instead"
-msgstr "tá -C i léig; bain úsáid as -Z ina áit"
-
-#: src/shar.c:899 src/unshar.c:377
-msgid "Cannot get current directory name"
-msgstr "Ní féidir ainm na comhadlainne reatha a fháil"
-
-#: src/shar.c:963
-msgid ""
-"Archives must be unpacked in sequence!\n"
-"Please unpack part '`cat ${lock_dir}/seq`' next."
-msgstr ""
-"Ní mór cartlanna a dhíphacáil in ord!\n"
-"Ba chóir duit páirt '`cat ${lock_dir}/seq`' a dhíphacáil anois."
-
-#: src/shar.c:974 src/shar.c:1381
-#, c-format
-msgid "New file, remaining %s, "
-msgstr "Comhad nua, fágtha: %s, "
-
-#: src/shar.c:975 src/shar.c:1382
-#, c-format
-msgid "Limit still %s\n"
-msgstr "Teorainn = %s fós\n"
-
-#: src/shar.c:981 src/shar.c:1556 src/shar.c:1572
+#: src/scripts.x:416
 #, c-format
 msgid "restore of %s failed"
 msgstr "theip ar athchóiriú de %s"
 
-#: src/shar.c:985
+#: src/scripts.x:417
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "Deireadh %d, lean ar aghaidh leis an bpáirt %d"
 
-#: src/shar.c:999 src/shar.c:1475
-#, c-format
-msgid "Starting file %s\n"
-msgstr "Comhad %s á thosú\n"
-
-#: src/shar.c:1050
-#, c-format
-msgid "%s: Not a regular file"
-msgstr "%s: Ní gnáthchomhad é"
-
-#: src/shar.c:1065
-#, c-format
-msgid "In shar: remaining size %s\n"
-msgstr "Sa chartlann: méid fágtha: %s\n"
-
-#: src/shar.c:1084
-msgid "empty"
-msgstr "folamh"
-
-#: src/shar.c:1085
-msgid "(empty)"
-msgstr "(folamh)"
-
-#: src/shar.c:1109
-#, c-format
-msgid "Cannot open file %s"
-msgstr "Ní féidir comhad %s a oscailt"
-
-#: src/shar.c:1146
-msgid "compressed"
-msgstr "comhbhrúite"
-
-#: src/shar.c:1147
-msgid "gzipped"
-msgstr "comhbhrúite le gzip"
-
-#: src/shar.c:1148
-msgid "bzipped"
-msgstr "comhbhrúite le bzip"
-
-#: src/shar.c:1149
-msgid "binary"
-msgstr "dénártha"
-
-#: src/shar.c:1150
-msgid "(compressed)"
-msgstr "(comhbhrúite)"
-
-#: src/shar.c:1151
-msgid "(gzipped)"
-msgstr "(comhbhrúite le gzip)"
-
-#: src/shar.c:1152
-msgid "(bzipped)"
-msgstr "(comhbhrúite le bzip)"
-
-#: src/shar.c:1153
-msgid "(binary)"
-msgstr "(dénártha)"
-
-#: src/shar.c:1166
-msgid "Could not fork"
-msgstr "Níorbh fhéidir forc a dhéanamh"
-
-#: src/shar.c:1171 src/shar.c:1231
-#, c-format
-msgid "File %s (%s)"
-msgstr "Comhad %s (%s)"
-
-#: src/shar.c:1225
-msgid "text"
-msgstr "téacs"
-
-#: src/shar.c:1226
-msgid "(text)"
-msgstr "(téacs)"
-
-#: src/shar.c:1249
-#, c-format
-msgid "overwriting %s"
-msgstr "%s á fhorscríobh"
-
-#: src/shar.c:1251
-#, c-format
-msgid "overwrite %s"
-msgstr "forscríobh %s"
-
-#: src/shar.c:1255
-#, c-format
-msgid "SKIPPING %s"
-msgstr "%s Á LIGEAN THART"
-
-#: src/shar.c:1256
-msgid "extraction aborted"
-msgstr "tobscoireadh an bhaint amach"
-
-#: src/shar.c:1260
-#, c-format
-msgid "SKIPPING %s (file already exists)"
-msgstr "%s Á LIGEAN THART (tá an comhad ann cheana)"
-
-#: src/shar.c:1270
-#, c-format
-msgid "Saving %s (%s)"
-msgstr "%s á shábháil (%s)"
-
-#: src/shar.c:1274
-#, c-format
-msgid "x - extracting %s %s"
-msgstr "x - %s %s á bhaint amach"
-
-#: src/shar.c:1390
-#, c-format
-msgid "restore of %s failed\n"
-msgstr "theip ar athchóiriú de %s\n"
-
-#: src/shar.c:1399
-#, c-format
-msgid "End of part %ld, continue with part %ld"
-msgstr "Deireadh %ld, lean ar aghaidh leis an bpáirt %ld"
-
-#: src/shar.c:1405
+#: src/scripts.x:418
 #, c-format
 msgid "End of %s part %d"
 msgstr "Deireadh %s, páirt %d"
 
-#: src/shar.c:1406
+#: src/scripts.x:419
+#, fuzzy, c-format
+msgid "restoration warning:  size of %s is not %s"
+msgstr "'rabhadh athbhunaithe:  ní ionann méid de %s agus %s'\n"
+
+#: src/scripts.x:420 src/shar.c:1306
+msgid "(text)"
+msgstr "(téacs)"
+
+#: src/scripts.x:421
+msgid "(compressed)"
+msgstr "(comhbhrúite)"
+
+#: src/scripts.x:422
+msgid "(gzipped)"
+msgstr "(comhbhrúite le gzip)"
+
+#: src/scripts.x:423
+msgid "(bzipped)"
+msgstr "(comhbhrúite le bzip)"
+
+#: src/scripts.x:424
+msgid "(binary)"
+msgstr "(dénártha)"
+
+#: src/scripts.x:425
 msgid "archive"
 msgstr "cartlann"
 
-#: src/shar.c:1410
+#: src/scripts.x:426
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "Comhad %s leanta ar aghaidh i bpáirt %d"
 
-#: src/shar.c:1454
+#: src/scripts.x:427
 msgid "Please unpack part 1 first!"
 msgstr "Díphacáil páirt a haon ar dtús, le do thoil!"
 
-#: src/shar.c:1458
-msgid "Please unpack part '${shar_sequence}' next!"
+#: src/scripts.x:428
+#, fuzzy
+msgid "Please unpack part ${shar_sequence} next!"
 msgstr "Díphacáil páirt '${shar_sequence}' anois, le do thoil!"
 
-#: src/shar.c:1469
-#, c-format
-msgid "STILL SKIPPING %s"
+#: src/scripts.x:429
+#, fuzzy, c-format
+msgid "x - STILL SKIPPING %s"
 msgstr "%s Á LIGEAN THART FÓS"
 
-#: src/shar.c:1477
+#: src/scripts.x:430
 #, c-format
 msgid "continuing file %s"
 msgstr "comhad %s á leanúint ar aghaidh"
 
-#: src/shar.c:1495
+#: src/scripts.x:431
+msgid "(empty)"
+msgstr "(folamh)"
+
+#: src/scripts.x:432
+#, fuzzy, c-format
+msgid "x - overwriting %s"
+msgstr "%s á fhorscríobh"
+
+#: src/scripts.x:433
+#, c-format
+msgid "overwrite %s"
+msgstr "forscríobh %s"
+
+#: src/scripts.x:434
+#, c-format
+msgid "SKIPPING %s"
+msgstr "%s Á LIGEAN THART"
+
+#: src/scripts.x:435
+msgid "extraction aborted"
+msgstr "tobscoireadh an bhaint amach"
+
+#: src/scripts.x:436
+#, fuzzy, c-format
+msgid "x - SKIPPING %s (file already exists)"
+msgstr "%s Á LIGEAN THART (tá an comhad ann cheana)"
+
+#: src/scripts.x:437
+#, c-format
+msgid "x - extracting %s %s"
+msgstr "x - %s %s á bhaint amach"
+
+#: src/scripts.x:438
 #, c-format
 msgid "File %s is complete"
 msgstr "Comhad %s curtha i gcrích"
 
-#: src/shar.c:1502
+#: src/scripts.x:439
 #, c-format
 msgid "uudecoding file %s"
 msgstr "comhad %s á dhíchódú le uudecode"
 
-#: src/shar.c:1512
-#, c-format
-msgid "uncompressing file %s"
-msgstr "comhad %s á dhí-chomhbhrú"
-
-#: src/shar.c:1520
-#, c-format
-msgid "gunzipping file %s"
-msgstr "comhad %s á dhí-chomhbhrú le gunzip"
-
-#: src/shar.c:1528
-#, c-format
-msgid "bunzipping file %s"
-msgstr "comhad %s á dhí-chomhbhrú le bunzip"
-
-#: src/shar.c:1583
+#: src/scripts.x:440
 msgid "MD5 check failed"
 msgstr "theip ar sheiceáil MD5"
 
-#: src/shar.c:1639
-#, c-format
-msgid "'restoration warning:  size of %s is not %s'\n"
-msgstr "'rabhadh athbhunaithe:  ní ionann méid de %s agus %s'\n"
-
-#: src/shar.c:1691
-msgid "allocating output file name"
-msgstr "ainm an aschomhaid á dháileadh"
-
-#: src/shar.c:1697
-#, c-format
-msgid "Opening `%s'"
-msgstr "`%s' á oscailt"
-
-#: src/shar.c:1708
-#, c-format
-msgid "Closing `%s'"
-msgstr "`%s' á dhúnadh"
-
-#: src/shar.c:1720 src/unshar.c:313 src/uudecode.c:439 src/uuencode.c:204
-#, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "Bain triail as `%s --help' chun tuilleadh eolais a fháil.\n"
-
-#: src/shar.c:1724 src/unshar.c:317
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Úsáid: %s [ROGHA]... [COMHAD]...\n"
-
-#: src/shar.c:1725
-msgid "Mandatory arguments to long options are mandatory for short options too.\n"
-msgstr "Is riachtanach le rogha ghearr aon argóint atá riachtanach leis an rogha fhada.\n"
-
-#: src/shar.c:1728
-msgid ""
-"\n"
-"Giving feedback:\n"
-"      --help              display this help and exit\n"
-"      --version           output version information and exit\n"
-"  -q, --quiet, --silent   do not output verbose messages locally\n"
-msgstr ""
-"\n"
-"Aiseolas:\n"
-"      --help             taispeáin an chabhair seo agus scoir\n"
-"      --version          taispeáin eolas faoin leagan agus scoir\n"
-"  -q, --quiet, --silent  ná taispeáin teachtaireachtaí foclacha go logánta\n"
-
-#: src/shar.c:1736
-msgid ""
-"\n"
-"Selecting files:\n"
-"  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-"  -S, --stdin-file-list   read file list from standard input\n"
-msgstr ""
-"\n"
-"Roghnú comhad:\n"
-"  -p, --intermix-type    ceadaigh -[BTzZ] i liosta comhad chun an mód a athrú\n"
-"  -S, --stdin-file-list  léigh liosta comhad ón ionchur caighdeánach\n"
-
-#: src/shar.c:1743
-msgid ""
-"\n"
-"Selecting files:\n"
-"  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-"  -S, --stdin-file-list   read file list from standard input\n"
-msgstr ""
-"\n"
-"Roghnú comhad:\n"
-"  -p, --intermix-type    ceadaigh -[BTz] i liosta comhad chun an mód a athrú\n"
-"  -S, --stdin-file-list  léigh liosta comhad ón ionchur caighdeánach\n"
-
-#: src/shar.c:1750
-msgid ""
-"\n"
-"Splitting output:\n"
-"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
-msgstr ""
-"\n"
-"Roinnt an aschuir:\n"
-"  -o, --output-prefix=RÉIMÍR    scríobh RÉIMÍR.01 go RÉIMÍR.NN i gcomhad\n"
-"  -l, --whole-size-limit=MÉID   roinn cartlann (amháin), MÉID KB ar a mhéad\n"
-"  -L, --split-size-limit=MÉID   roinn cartlann nó comhaid, MÉID KB ar a mhéad\n"
-
-#: src/shar.c:1757
-msgid ""
-"\n"
-"Controlling the shar headers:\n"
-"  -n, --archive-name=NAME   use NAME to document the archive\n"
-"  -s, --submitter=ADDRESS   override the submitter name\n"
-"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-"  -c, --cut-mark            start the shar with a cut line\n"
-"  -t, --translate           translate messages in the script\n"
-"\n"
-"Selecting how files are stocked:\n"
-"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-"  -T, --text-files             treat all files as text\n"
-"  -B, --uuencode               treat all files as binary, use uuencode\n"
-"  -z, --gzip                   gzip and uuencode all files\n"
-"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-"  -j, --bzip2                  bzip2 and uuencode all files\n"
-msgstr ""
-"\n"
-"Rialú na gceanntásc sa chartlann:\n"
-"  -n, --archive-name=AINM   úsáid AINM chun an chartlann a dhoiciméadú\n"
-"  -s, --submitter=SEOLADH   sáraigh an t-ainm `Submitted-by'\n"
-"  -a, --net-headers         úsáid ceanntásca Submitted-by: & Archive-name:\n"
-"  -c, --cut-mark            tosaigh an chartlann le líne `cut'\n"
-"  -t, --translate           aistrigh teachtaireachtaí sa script\n"
-"\n"
-"Conas a líontar comhaid:\n"
-"  -M, --mixed-uuencode         socraigh úsáid de uuencode go dinimiciúil (réamhshocrú)\n"
-"  -T, --text-files             déileáil le gach comhad mar ghnáth-théacs\n"
-"  -B, --uuencode               déileáil le gach comhad mar dhénártha, úsáid uuencode\n"
-"  -z, --gzip                   úsáid gzip agus uuencode ar gach comhad\n"
-"  -g, --level-for-gzip=LBHL    seachaid -LBHL (réamhshocrú=9) go gzip\n"
-"  -j, --bzip2                  úsáid bzip2 agus uuencode ar gach comhad\n"
-
-#: src/shar.c:1775
-msgid ""
-"  -Z, --compress               compress and uuencode all files\n"
-"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-msgstr ""
-"  -Z, --compress               comhbhrúigh agus rith uuencode ar gach comhad\n"
-"  -b, --bits-per-code=GIOTÁIN  seol -bGIOTÁIN (réamhshocrú 12) go `compress'\n"
-
-#: src/shar.c:1780
-msgid ""
-"\n"
-"Protecting against transmission:\n"
-"  -w, --no-character-count      do not use `wc -c' to check size\n"
-"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-"  -F, --force-prefix            force the prefix character on every line\n"
-"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
-"\n"
-"Producing different kinds of shars:\n"
-"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-"  -P, --no-piping           exclusively use temporary files at unshar time\n"
-"  -x, --no-check-existing   blindly overwrite existing files\n"
-"  -X, --query-user          ask user before overwriting files (not for Net)\n"
-"  -m, --no-timestamp        do not restore file modification dates & times\n"
-"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-"  -f, --basename            restore in one directory, despite hierarchy\n"
-"      --no-i18n             do not produce internationalized shell script\n"
-msgstr ""
-"\n"
-"Cosaint ar tharchur:\n"
-"  -w, --no-character-count      ná húsáid `wc -c' chun an méid a sheiceáil\n"
-"  -D, --no-md5-digest           ná fíoraigh le díolaim `md5sum'\n"
-"  -F, --force-prefix            éiligh an carachtar réimíre ar gach líne\n"
-"  -d, --here-delimiter=TEAGHRÁN úsáid TEAGHRÁN idir na comhaid sa chartlann\n"
-"\n"
-"Cruthú cartlanna difriúla:\n"
-"  -V, --vanilla-operation   cruthaigh cartlanna an-shimplí agus an-éasca\n"
-"  -P, --no-piping           úsáid comhaid shealadacha amháin ag am `unshar'\n"
-"  -x, --no-check-existing   forscríobh comhaid atá ann, gan idirdhealú\n"
-"  -X, --query-user          fiafraigh roimh fhorscríobh aon chomhad (seachas Líonra)\n"
-"  -m, --no-timestamp        ná hathchóirigh amanna mionathraithe\n"
-"  -Q, --quiet-unshar        ná taispeáin teachtaireachtaí foclacha ag am `unshar'\n"
-"  -f, --basename            athchóirigh i gcomhadlann aonair, d'ainneoin ordlathas\n"
-"      --no-i18n             ná cruthaigh script idirnáisiúntaithe bhlaoisce\n"
-
-#: src/shar.c:1798
-msgid ""
-"\n"
-"Option -o is required with -l or -L, option -n is required with -a.\n"
-msgstr ""
-"\n"
-"Tá gá le rogha -o in éineacht le -l nó -L, agus rogha -n in éineacht le -a.\n"
-
-#: src/shar.c:1802
-msgid "Option -g implies -z, option -b implies -Z.\n"
-msgstr "Úsáidtear -z go huathoibríoch nuair a shonraítear -g, agus ar an nós céanna úsáidtear -Z le -b.\n"
-
-#: src/shar.c:1805
-msgid "Option -g implies -z.\n"
-msgstr "Úsáidtear -z go huathoibríoch nuair a shonraítear -g.\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/shar.c:1809 src/unshar.c:332 src/uudecode.c:450 src/uuencode.c:214
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr "Seol tuairiscí fabhtanna chuig <%s>.\n"
-
-#: src/shar.c:1867
-#, c-format
-msgid "invalid file size limit `%s'"
-msgstr "uasmhéid neamhbhailí na gcomhad `%s'"
-
-#: src/shar.c:1903
-#, c-format
-msgid "invalid format (count field too wide): '%s'\n"
-msgstr "formáid neamhbhailí (réimse líonta róleathan): `%s'\n"
-
-#: src/shar.c:1964
-msgid "DEBUG was not selected at compile time"
-msgstr "Níor úsáideadh DEBUG ag am tiomsaithe"
-
-#: src/shar.c:1984
-#, c-format
-msgid "Hard limit %s\n"
-msgstr "Uasteorainn chrua %s\n"
-
-#: src/shar.c:2026
-msgid "This system doesn't support -Z ('compress'), use -z instead"
-msgstr "Ní thacaíonn an córas seo le -Z ('compress'), úsáid -z ina ionad"
-
-#: src/shar.c:2059
-#, c-format
-msgid "Soft limit %s\n"
-msgstr "Uasteorainn bhog %s\n"
-
-#: src/shar.c:2074
-#, c-format
-msgid "illegal output prefix\n"
-msgstr "réimír neamhcheadaithe aschurtha\n"
-
-#: src/shar.c:2121 src/unshar.c:415 src/uudecode.c:488 src/uuencode.c:254
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Copyright © %s Free Software Foundation, Inc.\n"
-"Is saorbhogearra é an ríomhchlár seo; féach ar an bhunchód le haghaidh\n"
-"coinníollacha cóipeála.  Níl baránta ar bith ann; go fiú níl baránta ann\n"
-"d'INDÍOLTACHT nó FEILIÚNACHT D'FHEIDHM AR LEITH.\n"
-
-#: src/shar.c:2168
-msgid "WARNING: No user interaction in vanilla mode"
-msgstr "RABHADH: níl idirghníomhú leis an úsáideoir sa mhód fanaile"
-
-#: src/shar.c:2180
-msgid "WARNING: Non-text storage options overridden"
-msgstr "RABHADH: Sáraíodh roghanna stórála neamhthéacs"
-
-#: src/shar.c:2236
-msgid "No input files"
-msgstr "Gan inchomhaid"
-
-#: src/shar.c:2242
-msgid "Cannot use -a option without -n"
-msgstr "Ní féidir rogha -a a úsáid gan -n"
-
-#: src/shar.c:2248
-msgid "Cannot use -l or -L option without -o"
-msgstr "Ní féidir rogha -l nó -L a úsáid gan -o"
-
-#: src/shar.c:2260
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "LE DO THOIL, seachain cartlanna -X ar Usenet nó líonraí poiblí eile"
-
-#: src/shar.c:2301
+#: src/scripts.x:441
 msgid "You have unpacked the last part"
 msgstr "Tá an pháirt deiridh díphacáilte agat"
 
-#: src/shar.c:2303
+#: src/scripts.x:442
+#, fuzzy, c-format
+msgid "x - removed lock directory %s."
+msgstr "x - baineadh comhadlann ghlasála `'%s\\''."
+
+#: src/scripts.x:443
+#, fuzzy, c-format
+msgid "x - failed to remove lock directory %s."
+msgstr "x - theip ar bhaint na comhadlainne glasála `'%s\\''."
+
+#: src/shar-opts.c:1680
+#, fuzzy, c-format
+msgid "Cannot reopen %s as stdin"
+msgstr "Ní féidir comhad %s a oscailt"
+
+#: src/shar-opts.c:1790
+msgid "shar usage error:\n"
+msgstr ""
+
+#: src/shar-opts.c:1826
+msgid "shar fatal error:\n"
+msgstr ""
+
+#: src/shar-opts.c:1863
+#, c-format
+msgid "fserr %d (%s) performing '%s' on %s\n"
+msgstr ""
+
+#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
+#: src/uuencode-opts.c:500
+msgid "No memory for duping translated strings\n"
+msgstr ""
+
+#: src/shar.c:372
+#, c-format
+msgid "printf formatting error:  %s\n"
+msgstr ""
+
+#: src/shar.c:423
+msgid "sharutils bug - no status"
+msgstr ""
+
+#: src/shar.c:788
+msgid "Too many directories for mkdir generation"
+msgstr "An iomarca comhadlann le haghaidh cruthaithe ag mkdir"
+
+#: src/shar.c:871 src/shar.c:1541
+#, c-format
+msgid "Cannot access %s"
+msgstr "Ní féidir %s a rochtain"
+
+#: src/shar.c:948 src/unshar.c:376
+#, c-format
+msgid "Cannot get current directory name"
+msgstr "Ní féidir ainm na comhadlainne reatha a fháil"
+
+#: src/shar.c:1005 src/shar.c:1346
+#, c-format
+msgid "New file, remaining %s, "
+msgstr "Comhad nua, fágtha: %s, "
+
+#: src/shar.c:1006 src/shar.c:1347
+#, c-format
+msgid "Limit still %s\n"
+msgstr "Teorainn = %s fós\n"
+
+#: src/shar.c:1028
+#, c-format
+msgid "Starting file %s\n"
+msgstr "Comhad %s á thosú\n"
+
+#: src/shar.c:1081
+#, fuzzy
+msgid "Could not popen command"
+msgstr "Níor aimsíodh ordú ar bith i %s"
+
+#: src/shar.c:1162
+#, c-format
+msgid "Cannot open file %s"
+msgstr "Ní féidir comhad %s a oscailt"
+
+#: src/shar.c:1296 src/shar.c:1305
+msgid "text"
+msgstr "téacs"
+
+#: src/shar.c:1311 src/shar.c:1322
+msgid "call"
+msgstr ""
+
+#: src/shar.c:1335
+#, c-format
+msgid "File %s (%s)"
+msgstr "Comhad %s (%s)"
+
+#: src/shar.c:1426
+#, fuzzy, c-format
+msgid "Continuing file %s\n"
+msgstr "comhad %s á leanúint ar aghaidh"
+
+#: src/shar.c:1536
+#, c-format
+msgid "%s: Not a regular file"
+msgstr "%s: Ní gnáthchomhad é"
+
+#: src/shar.c:1563
+#, c-format
+msgid "In shar: remaining size %s\n"
+msgstr "Sa chartlann: méid fágtha: %s\n"
+
+#: src/shar.c:1583
+msgid "empty"
+msgstr "folamh"
+
+#: src/shar.c:1622
+#, c-format
+msgid "Saving %s (%s)"
+msgstr "%s á shábháil (%s)"
+
+#: src/shar.c:1807
+#, fuzzy, c-format
+msgid "Invalid format for output file names (%s): %s"
+msgstr "formáid neamhbhailí (réimse líonta róleathan): `%s'\n"
+
+#: src/shar.c:1822
+msgid "more than one format element"
+msgstr ""
+
+#: src/shar.c:1827
+msgid "no conversion character"
+msgstr ""
+
+#: src/shar.c:1836
+msgid "format is too wide"
+msgstr ""
+
+#: src/shar.c:1848
+msgid "invalid conversion character"
+msgstr ""
+
+#: src/shar.c:1889
+#, fuzzy
+msgid "Opening"
+msgstr "`%s' á oscailt"
+
+#: src/shar.c:1904
+#, fuzzy
+msgid "Closing"
+msgstr "`%s' á dhúnadh"
+
+#: src/shar.c:2015
+msgid "No input files"
+msgstr "Gan inchomhaid"
+
+#: src/shar.c:2032
+#, c-format
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "LE DO THOIL, seachain cartlanna -X ar Usenet nó líonraí poiblí eile"
+
+#: src/shar.c:2056
+#, c-format
+msgid ""
+"The '%s' option may not be intermixed with file names\n"
+"unless the --intermix-type option has been specified."
+msgstr ""
+
+#: src/shar.c:2074
+#, c-format
+msgid "The '%s' option must appear before any file names"
+msgstr ""
+
+#: src/shar.c:2110
+#, c-format
+msgid ""
+"invalid compaction type:  %s\n"
+"the known types are:\n"
+msgstr ""
+
+#: src/shar.c:2149
+msgid "files on command line and --input-file-list specified"
+msgstr ""
+
+#: src/shar.c:2198
 #, c-format
 msgid "Created %d files\n"
 msgstr "Cruthaíodh %d comhad\n"
 
-#: src/shar.c:2308
+#: src/unshar-opts.c:433 src/unshar.c:394
 #, c-format
-msgid "x - removed lock directory `'%s\\''."
-msgstr "x - baineadh comhadlann ghlasála `'%s\\''."
+msgid "Cannot chdir to `%s'"
+msgstr "Ní féidir an chomhadlann oibre a athrú go `%s'"
 
-#: src/shar.c:2310
-#, c-format
-msgid "x - failed to remove lock directory `'%s\\''."
-msgstr "x - theip ar bhaint na comhadlainne glasála `'%s\\''."
-
-#: src/unshar.c:169
+#: src/unshar.c:168
 #, c-format
 msgid "Found no shell commands in %s"
 msgstr "Níor aimsíodh ordú ar bith i %s"
 
-#: src/unshar.c:185
+#: src/unshar.c:184
 #, c-format
 msgid "%s looks like raw C code, not a shell archive"
 msgstr "Is dealraitheach %s le cód amh C, ní cosúil le cartlann bhlaoisce"
 
-#: src/unshar.c:221
+#: src/unshar.c:220
 #, c-format
 msgid "Found no shell commands after `cut' in %s"
 msgstr "Níor aimsíodh aon ordú blaoisce i ndiaidh `cut' i %s"
 
-#: src/unshar.c:242
+#: src/unshar.c:241
 #, c-format
 msgid "%s is probably not a shell archive"
 msgstr "is dócha nach bhfuil %s ina chartlann bhlaoisce"
 
-#: src/unshar.c:243
+#: src/unshar.c:242
 #, c-format
 msgid "The `cut' line was followed by: %s"
 msgstr "Is é seo a leanann an líne `cut': %s"
 
-#: src/unshar.c:269
+#: src/unshar.c:268
+#, c-format
 msgid "Starting `sh' process"
 msgstr "Próiseas `sh' á thosú"
 
-#: src/unshar.c:318
+#: src/unshar.c:312 src/uudecode.c:459
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Bain triail as `%s --help' chun tuilleadh eolais a fháil.\n"
+
+#: src/unshar.c:316
+#, c-format
+msgid "Usage: %s [OPTION]... [FILE]...\n"
+msgstr "Úsáid: %s [ROGHA]... [COMHAD]...\n"
+
+#: src/unshar.c:317
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -714,7 +483,8 @@ msgstr ""
 "leis an rogha fhada.\n"
 "\n"
 "  -d, --directory=COMHADLANN  athraigh go COMHADLANN roimh dhíphacáil\n"
-"  -c, --overwrite             seachaid -c go script `shar' chun comhaid a fhorscríobh\n"
+"  -c, --overwrite             seachaid -c go script `shar' chun comhaid a "
+"fhorscríobh\n"
 "  -e, --exit-0                ar comhbhrí le `--split-at=\"exit 0\"'\n"
 "  -E, --split-at=TEAGHRÁN     roinn cartlanna ceangailte tar éis TEAGHRÁN\n"
 "  -f, --force                 ar comhbhrí le `-c'\n"
@@ -723,139 +493,962 @@ msgstr ""
 "\n"
 "Mura bhfuil COMHAD ann, léigh ón ionchur caighdeánach.\n"
 
-#: src/unshar.c:395
+#. TRANSLATORS: add the contact address for your translation team!
+#: src/unshar.c:331 src/uudecode.c:470
 #, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Ní féidir an chomhadlann oibre a athrú go `%s'"
+msgid "Report bugs to <%s>.\n"
+msgstr "Seol tuairiscí fabhtanna chuig <%s>.\n"
 
-#: src/unshar.c:446 src/unshar.c:508
+#: src/unshar.c:414 src/uudecode.c:506
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Copyright © %s Free Software Foundation, Inc.\n"
+"Is saorbhogearra é an ríomhchlár seo; féach ar an bhunchód le haghaidh\n"
+"coinníollacha cóipeála.  Níl baránta ar bith ann; go fiú níl baránta ann\n"
+"d'INDÍOLTACHT nó FEILIÚNACHT D'FHEIDHM AR LEITH.\n"
+
+#: src/unshar.c:445 src/unshar.c:507
+#, c-format
 msgid "allocate file name buffer"
 msgstr "dáil maolán le haghaidh comhadainm"
 
-#: src/unshar.c:467
+#: src/unshar.c:466
 msgid "standard input"
 msgstr "ionchur caighdeánach"
 
-#: src/unshar.c:529
+#: src/unshar.c:528
+#, c-format
 msgid "allocate file buffer"
 msgstr "dáil maolán le haghaidh comhaid"
 
-#: src/uudecode.c:123 src/uudecode.c:427
+#: src/uudecode.c:114 src/uudecode.c:444
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Earráid sa scríobh"
 
-#: src/uudecode.c:141 src/uudecode.c:229
+#: src/uudecode.c:131 src/uudecode.c:218
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Comhad gearr"
 
-#: src/uudecode.c:177
+#: src/uudecode.c:167
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Gan líne `end'"
 
-#: src/uudecode.c:238
+#: src/uudecode.c:227
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: tá sonraí ann tar éis an charachtair stuála `='"
 
-#: src/uudecode.c:262 src/uudecode.c:270 src/uudecode.c:284
+#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: líne neamhcheadaithe"
 
-#: src/uudecode.c:324
-#, c-format
-msgid "%s: No `begin' line"
-msgstr "%s: Gan líne `begin'"
+#: src/uudecode.c:303
+#, fuzzy, c-format
+msgid "%s: Illegal file name: %s"
+msgstr "%s: líne neamhcheadaithe"
 
-#: src/uudecode.c:356
-#, c-format
-msgid "%s: Illegal ~user"
-msgstr "%s: ~Úsáideoir neamhcheadaithe"
-
-#: src/uudecode.c:363
-#, c-format
-msgid "%s: No user `%s'"
+#: src/uudecode.c:310
+#, fuzzy, c-format
+msgid "No user `%s'"
 msgstr "%s: Níl aon úsáideoir darb ainm `%s'"
 
-#: src/uudecode.c:387
+#: src/uudecode.c:321
+#, c-format
+msgid "no memory for %d byte allocation"
+msgstr ""
+
+#: src/uudecode.c:346
 #, c-format
 msgid "cannot access %s"
 msgstr "Ní féidir %s a rochtain"
 
-#: src/uudecode.c:392
-#, c-format
-msgid "denied writing FIFO (%s)"
-msgstr "níor ceadaíodh FIFO a scríobh (%s)"
-
-#: src/uudecode.c:397
-#, c-format
-msgid "not following symlink (%s)"
-msgstr "ní leanfar nasc siombalach (%s)"
-
-#: src/uudecode.c:405
+#: src/uudecode.c:354
 #, c-format
 msgid "freopen of %s"
 msgstr "%s á oscailt le freopen"
 
-#: src/uudecode.c:411
+#: src/uudecode.c:360
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod de %s"
 
-#: src/uudecode.c:443
+#: src/uudecode.c:385
+#, c-format
+msgid "%s: No `begin' line"
+msgstr "%s: Gan líne `begin'"
+
+#: src/uudecode.c:463
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Úsáid: %s [COMHAD]...\n"
 
-#: src/uudecode.c:444
+#: src/uudecode.c:464
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Is riachtanach le rogha ghearr aon argóint atá riachtanach leis an rogha fhada.\n"
+"Is riachtanach le rogha ghearr aon argóint atá riachtanach leis an rogha "
+"fhada.\n"
 "  -o, --output-file=COMHAD scríobh i gCOMHAD go díreach\n"
 "      --help               taispeáin an chabhair seo agus scoir\n"
 "      --version            taispeáin eolas faoin leagan agus scoir\n"
 
-#: src/uuencode.c:135 src/uuencode.c:303 src/uuencode.c:310
+#: src/uudecode.c:530
+#, c-format
+msgid ""
+"You cannot specify an output file when processing\n"
+"multiple input files.\n"
+msgstr ""
+
+#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
+#, c-format
 msgid "Write error"
 msgstr "Earráid sa scríobh"
 
-#: src/uuencode.c:157 src/uuencode.c:188 src/uuencode.c:190
+#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
+#, c-format
 msgid "Read error"
 msgstr "Earráid sa léamh"
 
-#: src/uuencode.c:208
-#, c-format
-msgid "Usage: %s [INFILE] REMOTEFILE\n"
-msgstr "Úsáid: %s [INCHOMHAD] CIANCHOMHAD\n"
-
-#: src/uuencode.c:209
-msgid ""
-"\n"
-"  -m, --base64    use base64 encoding as of RFC1521\n"
-"      --help      display this help and exit\n"
-"      --version   output version information and exit\n"
-msgstr ""
-"\n"
-"  -m, --base64    úsáid ionchódú base64 de réir RFC1521\n"
-"      --help      taispeáin an chabhair seo agus scoir\n"
-"      --version   taispeáin eolas faoin leagan agus scoir\n"
-
-#: src/uuencode.c:275
+#: src/uuencode.c:226
 #, c-format
 msgid "fopen-ing %s"
 msgstr "%s á oscailt le fopen"
 
-#: src/uuencode.c:277
+#: src/uuencode.c:228
 #, c-format
 msgid "fstat-ing %s"
 msgstr "%s á léamh le fstat"
+
+#: src/uuencode.c:254
+#, fuzzy, c-format
+msgid "Allocation failure"
+msgstr "dáil maolán le haghaidh comhaid"
+
+#: lib/error.c:188
+msgid "Unknown system error"
+msgstr "Earráid anaithnid chórais"
+
+#: lib/getopt.c:547 lib/getopt.c:576
+#, fuzzy, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: Tá an rogha `%s' débhríoch\n"
+
+#: lib/getopt.c:624 lib/getopt.c:628
+#, fuzzy, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: ní cheadaítear argóint i ndiaidh na rogha `--%s'\n"
+
+#: lib/getopt.c:637 lib/getopt.c:642
+#, fuzzy, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: ní cheadaítear argóint i ndiaidh na rogha `%c%s'\n"
+
+#: lib/getopt.c:685 lib/getopt.c:704
+#, fuzzy, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: tá argóint de dhíth i ndiaidh na rogha `%s'\n"
+
+#: lib/getopt.c:742 lib/getopt.c:745
+#, fuzzy, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: rogha anaithnid `--%s'\n"
+
+#: lib/getopt.c:753 lib/getopt.c:756
+#, fuzzy, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: rogha anaithnid `%c%s'\n"
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, fuzzy, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: rogha neamhbhailí -- %c\n"
+
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, fuzzy, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: tá argóint de dhíth i ndiaidh na rogha -- %c\n"
+
+#: lib/getopt.c:934 lib/getopt.c:950
+#, fuzzy, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: Tá an rogha `-W %s' débhríoch\n"
+
+#: lib/getopt.c:974 lib/getopt.c:992
+#, fuzzy, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: ní cheadaítear argóint i ndiaidh na rogha `-W %s'\n"
+
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, fuzzy, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: tá argóint de dhíth i ndiaidh na rogha `%s'\n"
+
+#: lib/openat-die.c:38
+#, fuzzy, c-format
+msgid "unable to record current working directory"
+msgstr "theip ar chruthú na comhadlainne glasála"
+
+#: lib/openat-die.c:57
+#, fuzzy, c-format
+msgid "failed to return to initial working directory"
+msgstr "theip ar chruthú na comhadlainne glasála"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:312
+msgid "`"
+msgstr ""
+
+#: lib/quotearg.c:313
+msgid "'"
+msgstr ""
+
+#: lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr "cuimhne ídithe"
+
+#: lib/xstrtol-error.c:63
+#, c-format
+msgid "invalid %s%s argument '%s'"
+msgstr ""
+
+#: lib/xstrtol-error.c:68
+#, c-format
+msgid "invalid suffix in %s%s argument '%s'"
+msgstr ""
+
+#: lib/xstrtol-error.c:72
+#, c-format
+msgid "%s%s argument '%s' too large"
+msgstr ""
+
+#: libopts/autoopts.c:53
+#, fuzzy, c-format
+msgid "malloc of %d bytes failed\n"
+msgstr "theip ar athchóiriú de %s\n"
+
+#: libopts/init.c:54
+msgid "AutoOpts function called without option descriptor\n"
+msgstr ""
+
+#: libopts/init.c:87
+msgid "\tThis exceeds the compiled library version:  "
+msgstr ""
+
+#: libopts/init.c:85
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+
+#: libopts/autoopts.c:66
+#, fuzzy, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr "theip ar athchóiriú de %s\n"
+
+#: libopts/init.c:89
+msgid "\tThis is less than the minimum library version:  "
+msgstr ""
+
+#: libopts/autoopts.c:79
+#, fuzzy, c-format
+msgid "strdup of %d byte string failed\n"
+msgstr "theip ar athchóiriú de %s\n"
+
+#: libopts/version.c:124
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
+msgstr ""
+
+#: libopts/find.c:568
+msgid "AutoOpts lib error: defaulted to option with optional arg\n"
+msgstr ""
+
+#: libopts/alias.c:55
+msgid "(AutoOpts bug):  Aliasing option is out of range."
+msgstr ""
+
+#: libopts/enum.c:230
+#, fuzzy, c-format
+msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
+msgstr "%s: Tá an rogha `%s' débhríoch\n"
+
+#: libopts/find.c:87
+msgid "  The following options match:\n"
+msgstr ""
+
+#: libopts/find.c:269
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr ""
+
+#: libopts/find.c:90 libopts/find.c:95
+#, c-format
+msgid "  %s%s\n"
+msgstr ""
+
+#: libopts/check.c:159
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr ""
+
+#: libopts/alias.c:80 libopts/autoopts.c:217
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr ""
+
+#: libopts/usage.c:867
+msgid "version, usage and configuration options:"
+msgstr ""
+
+#: libopts/makeshell.c:261
+#, c-format
+msgid "Error %d (%s) from the pipe(2) syscall\n"
+msgstr ""
+
+#: libopts/version.c:164
+#, c-format
+msgid ""
+"ERROR: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and copyright notice\n"
+msgstr ""
+
+#: libopts/check.c:58
+#, c-format
+msgid "ERROR:  %s option conflicts with the %s option\n"
+msgstr ""
+
+#: libopts/restore.c:109
+#, c-format
+msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
+msgstr ""
+
+#: libopts/configfile.c:593
+msgid "auto-options"
+msgstr ""
+
+#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
+msgid "program"
+msgstr ""
+
+#: libopts/find.c:193 libopts/find.c:400
+#, c-format
+msgid "%s: The ``%s'' option has been disabled"
+msgstr ""
+
+#: libopts/usage.c:836
+#, c-format
+msgid " --- %-14s %s\n"
+msgstr ""
+
+#: libopts/usage.c:834
+msgid "This option has been disabled"
+msgstr ""
+
+#: libopts/alias.c:75 libopts/autoopts.c:212
+msgid "-equivalence"
+msgstr ""
+
+#: libopts/alias.c:77 libopts/autoopts.c:214
+msgid "ERROR:  only "
+msgstr ""
+
+#: libopts/usage.c:911
+#, c-format
+msgid " - examining environment variables named %s_*\n"
+msgstr ""
+
+#: libopts/usage.c:275
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+msgstr ""
+
+#: libopts/usage.c:250 libopts/usage.c:255
+#, c-format
+msgid "%%-%ds %%s\n"
+msgstr ""
+
+#: libopts/makeshell.c:267
+#, c-format
+msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
+msgstr ""
+
+#: libopts/makeshell.c:759
+#, c-format
+msgid "fs error %d (%s) on freopen\n"
+msgstr ""
+
+#: libopts/configfile.c:1168
+#, c-format
+msgid "File error %d (%s) opening %s for loading options\n"
+msgstr ""
+
+#: libopts/text_mmap.c:100
+#, c-format
+msgid "fs error %d (%s) reading file %s\n"
+msgstr ""
+
+#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
+#: libopts/file.c:136
+#, c-format
+msgid "fs error %d (%s) on %s %s for option %s\n"
+msgstr ""
+
+# lock not verb
+#: libopts/file.c:76
+#, fuzzy
+msgid "stat-ing for directory"
+msgstr "comhadlann ghlasála"
+
+#: libopts/file.c:88
+#, fuzzy
+msgid "stat-ing for regular file"
+msgstr "%s: Ní gnáthchomhad é"
+
+#: libopts/file.c:50
+msgid "stat-ing for non-existant file"
+msgstr ""
+
+#: libopts/file.c:110
+#, fuzzy
+msgid "open-ing file"
+msgstr "%s á oscailt le fopen"
+
+#: libopts/file.c:137
+#, fuzzy
+msgid "fopen-ing file"
+msgstr "%s á oscailt le fopen"
+
+#: libopts/makeshell.c:837
+#, c-format
+msgid ""
+"\n"
+"= = = = = = = =\n"
+"\n"
+"This incarnation of genshell will produce\n"
+"a shell script to parse the options for %s:\n"
+"\n"
+msgstr ""
+
+#: libopts/find.c:439 libopts/reset.c:108
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: rogha neamhcheadaithe -- %c\n"
+
+#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
+#, fuzzy, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: rogha neamhcheadaithe -- %c\n"
+
+#: libopts/find.c:311
+#, fuzzy, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: rogha anaithnid `--%s'\n"
+
+#: libopts/enum.c:155 libopts/enum.c:165
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr ""
+
+#: libopts/usage.c:486 libopts/usage.c:800
+#, c-format
+msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
+msgstr ""
+
+#: libopts/find.c:358
+#, fuzzy, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: rogha neamhbhailí -- %c\n"
+
+#: libopts/enum.c:162
+#, c-format
+msgid "  or an integer mask with any of the lower %d bits set\n"
+msgstr ""
+
+#: libopts/find.c:497
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: tá argóint de dhíth i ndiaidh na rogha `%s'\n"
+
+#: libopts/autoopts.c:164
+#, c-format
+msgid ""
+"Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'"
+msgstr ""
+
+#: libopts/check.c:92
+#, c-format
+msgid "ERROR:  The %s option is required\n"
+msgstr ""
+
+#: libopts/find.c:603
+#, fuzzy, c-format
+msgid "%s: option `%s' cannot have an argument\n"
+msgstr "%s: ní cheadaítear argóint i ndiaidh na rogha `%c%s'\n"
+
+#: libopts/check.c:149
+#, c-format
+msgid "%s: Command line arguments not allowed\n"
+msgstr ""
+
+#: libopts/save.c:512
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr ""
+
+#: libopts/usage.c:277
+msgid "Options are specified by single or double hyphens and their name.\n"
+msgstr ""
+
+#: libopts/enum.c:230
+#, c-format
+msgid "%s error:  `%s' does not match any %s keywords\n"
+msgstr ""
+
+#: libopts/reset.c:91
+#, fuzzy
+msgid "The 'reset-option' option requires an argument\n"
+msgstr "%s: tá argóint de dhíth i ndiaidh na rogha `%s'\n"
+
+#: libopts/usage.c:1026
+msgid "   Arg Option-Name    Description\n"
+msgstr ""
+
+#: libopts/usage.c:962 libopts/usage.c:1020
+msgid "  Flg Arg Option-Name    Description\n"
+msgstr ""
+
+#: libopts/save.c:179 libopts/save.c:233
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr ""
+
+#: libopts/restore.c:150
+#, c-format
+msgid "%s(optionRestore): error: no saved option state\n"
+msgstr ""
+
+#: libopts/save.c:128
+#, c-format
+msgid "'%s' not defined\n"
+msgstr ""
+
+#: libopts/autoopts.c:254
+#, c-format
+msgid "'%s' is not a command line option\n"
+msgstr ""
+
+#: libopts/check.c:91
+#, c-format
+msgid "ERROR:  The %s option must appear %d times\n"
+msgstr ""
+
+#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
+#, c-format
+msgid "error:  cannot load options from non-regular file %s\n"
+msgstr ""
+
+#: libopts/numeric.c:151
+#, c-format
+msgid "%s error:  `%s' is not a recognizable number\n"
+msgstr ""
+
+#: libopts/time.c:112
+#, c-format
+msgid "%s error:  `%s' is not a recognizable date/time\n"
+msgstr ""
+
+#: libopts/time.c:51
+#, c-format
+msgid "%s error:  `%s' is not a recognizable time duration\n"
+msgstr ""
+
+#: libopts/usage.c:1021 libopts/usage.c:1027
+#, c-format
+msgid " %3s %s"
+msgstr ""
+
+#: libopts/usage.c:282
+msgid "The '-#<number>' option may omit the hash char\n"
+msgstr ""
+
+#: libopts/alias.c:82 libopts/autoopts.c:219
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr ""
+
+#: libopts/usage.c:278
+msgid "All arguments are named options.\n"
+msgstr ""
+
+#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
+#: libopts/usage.c:309 libopts/version.c:170
+msgid "Write failure to output file"
+msgstr ""
+
+#: libopts/usage.c:703
+#, fuzzy, c-format
+msgid " - reading file %s"
+msgstr "comhad %s á dhíchódú le uudecode"
+
+#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
+#, c-format
+msgid ""
+"\n"
+"please send bug reports to:  %s\n"
+msgstr ""
+
+#: libopts/usage.c:675 libopts/usage.c:909
+msgid ""
+"\n"
+"The following option preset mechanisms are supported:\n"
+msgstr ""
+
+#: libopts/usage.c:285
+msgid "Operands and options may be intermixed.  They will be reordered.\n"
+msgstr ""
+
+#: libopts/reset.c:86
+msgid "The --reset-option has not been configured.\n"
+msgstr ""
+
+#: libopts/check.c:45
+#, c-format
+msgid "ERROR:  %s option requires the %s option\n"
+msgstr ""
+
+#: libopts/init.c:119
+msgid "-_^"
+msgstr ""
+
+#: libopts/enum.c:163
+msgid ""
+"or you may use a numeric representation.  Preceding these with a '!' will\n"
+"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
+"them\n"
+"all.  Multiple entries may be passed as an option argument list.\n"
+msgstr ""
+
+#: libopts/enum.c:196
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr ""
+
+#: libopts/enum.c:73
+#, c-format
+msgid "The valid \"%s\" option keywords are:\n"
+msgstr ""
+
+#: libopts/usage.c:514
+msgid "These additional options are:"
+msgstr ""
+
+#: libopts/usage.c:871
+msgid "The next option supports vendor supported extra options:"
+msgstr ""
+
+#~ msgid "installing GNU `touch'\\'', distributed in GNU coreutils..."
+#~ msgstr "`touch' GNU á shuiteáil, dáilte mar chuid de coreutils GNU..."
+
+#~ msgid "-C is being deprecated, use -Z instead"
+#~ msgstr "tá -C i léig; bain úsáid as -Z ina áit"
+
+#~ msgid ""
+#~ "Archives must be unpacked in sequence!\n"
+#~ "Please unpack part '`cat ${lock_dir}/seq`' next."
+#~ msgstr ""
+#~ "Ní mór cartlanna a dhíphacáil in ord!\n"
+#~ "Ba chóir duit páirt '`cat ${lock_dir}/seq`' a dhíphacáil anois."
+
+#~ msgid "compressed"
+#~ msgstr "comhbhrúite"
+
+#~ msgid "gzipped"
+#~ msgstr "comhbhrúite le gzip"
+
+#~ msgid "bzipped"
+#~ msgstr "comhbhrúite le bzip"
+
+#~ msgid "binary"
+#~ msgstr "dénártha"
+
+#~ msgid "Could not fork"
+#~ msgstr "Níorbh fhéidir forc a dhéanamh"
+
+#~ msgid "End of part %ld, continue with part %ld"
+#~ msgstr "Deireadh %ld, lean ar aghaidh leis an bpáirt %ld"
+
+#~ msgid "uncompressing file %s"
+#~ msgstr "comhad %s á dhí-chomhbhrú"
+
+#~ msgid "gunzipping file %s"
+#~ msgstr "comhad %s á dhí-chomhbhrú le gunzip"
+
+#~ msgid "bunzipping file %s"
+#~ msgstr "comhad %s á dhí-chomhbhrú le bunzip"
+
+#~ msgid "allocating output file name"
+#~ msgstr "ainm an aschomhaid á dháileadh"
+
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ msgstr ""
+#~ "Is riachtanach le rogha ghearr aon argóint atá riachtanach leis an rogha "
+#~ "fhada.\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Giving feedback:\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Aiseolas:\n"
+#~ "      --help             taispeáin an chabhair seo agus scoir\n"
+#~ "      --version          taispeáin eolas faoin leagan agus scoir\n"
+#~ "  -q, --quiet, --silent  ná taispeáin teachtaireachtaí foclacha go "
+#~ "logánta\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Selecting files:\n"
+#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ "  -S, --stdin-file-list   read file list from standard input\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Roghnú comhad:\n"
+#~ "  -p, --intermix-type    ceadaigh -[BTzZ] i liosta comhad chun an mód a "
+#~ "athrú\n"
+#~ "  -S, --stdin-file-list  léigh liosta comhad ón ionchur caighdeánach\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Selecting files:\n"
+#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ "  -S, --stdin-file-list   read file list from standard input\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Roghnú comhad:\n"
+#~ "  -p, --intermix-type    ceadaigh -[BTz] i liosta comhad chun an mód a "
+#~ "athrú\n"
+#~ "  -S, --stdin-file-list  léigh liosta comhad ón ionchur caighdeánach\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Splitting output:\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
+#~ "NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
+#~ "kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
+#~ "kilobytes\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Roinnt an aschuir:\n"
+#~ "  -o, --output-prefix=RÉIMÍR    scríobh RÉIMÍR.01 go RÉIMÍR.NN i gcomhad\n"
+#~ "  -l, --whole-size-limit=MÉID   roinn cartlann (amháin), MÉID KB ar a "
+#~ "mhéad\n"
+#~ "  -L, --split-size-limit=MÉID   roinn cartlann nó comhaid, MÉID KB ar a "
+#~ "mhéad\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Controlling the shar headers:\n"
+#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
+#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
+#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+#~ "  -c, --cut-mark            start the shar with a cut line\n"
+#~ "  -t, --translate           translate messages in the script\n"
+#~ "\n"
+#~ "Selecting how files are stocked:\n"
+#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+#~ "  -T, --text-files             treat all files as text\n"
+#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
+#~ "  -z, --gzip                   gzip and uuencode all files\n"
+#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Rialú na gceanntásc sa chartlann:\n"
+#~ "  -n, --archive-name=AINM   úsáid AINM chun an chartlann a dhoiciméadú\n"
+#~ "  -s, --submitter=SEOLADH   sáraigh an t-ainm `Submitted-by'\n"
+#~ "  -a, --net-headers         úsáid ceanntásca Submitted-by: & Archive-"
+#~ "name:\n"
+#~ "  -c, --cut-mark            tosaigh an chartlann le líne `cut'\n"
+#~ "  -t, --translate           aistrigh teachtaireachtaí sa script\n"
+#~ "\n"
+#~ "Conas a líontar comhaid:\n"
+#~ "  -M, --mixed-uuencode         socraigh úsáid de uuencode go dinimiciúil "
+#~ "(réamhshocrú)\n"
+#~ "  -T, --text-files             déileáil le gach comhad mar ghnáth-théacs\n"
+#~ "  -B, --uuencode               déileáil le gach comhad mar dhénártha, "
+#~ "úsáid uuencode\n"
+#~ "  -z, --gzip                   úsáid gzip agus uuencode ar gach comhad\n"
+#~ "  -g, --level-for-gzip=LBHL    seachaid -LBHL (réamhshocrú=9) go gzip\n"
+#~ "  -j, --bzip2                  úsáid bzip2 agus uuencode ar gach comhad\n"
+
+#~ msgid ""
+#~ "  -Z, --compress               compress and uuencode all files\n"
+#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+#~ msgstr ""
+#~ "  -Z, --compress               comhbhrúigh agus rith uuencode ar gach "
+#~ "comhad\n"
+#~ "  -b, --bits-per-code=GIOTÁIN  seol -bGIOTÁIN (réamhshocrú 12) go "
+#~ "`compress'\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Protecting against transmission:\n"
+#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
+#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+#~ "  -F, --force-prefix            force the prefix character on every line\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
+#~ "shar\n"
+#~ "\n"
+#~ "Producing different kinds of shars:\n"
+#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar "
+#~ "time\n"
+#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for "
+#~ "Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & "
+#~ "times\n"
+#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
+#~ "      --no-i18n             do not produce internationalized shell "
+#~ "script\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Cosaint ar tharchur:\n"
+#~ "  -w, --no-character-count      ná húsáid `wc -c' chun an méid a "
+#~ "sheiceáil\n"
+#~ "  -D, --no-md5-digest           ná fíoraigh le díolaim `md5sum'\n"
+#~ "  -F, --force-prefix            éiligh an carachtar réimíre ar gach líne\n"
+#~ "  -d, --here-delimiter=TEAGHRÁN úsáid TEAGHRÁN idir na comhaid sa "
+#~ "chartlann\n"
+#~ "\n"
+#~ "Cruthú cartlanna difriúla:\n"
+#~ "  -V, --vanilla-operation   cruthaigh cartlanna an-shimplí agus an-éasca\n"
+#~ "  -P, --no-piping           úsáid comhaid shealadacha amháin ag am "
+#~ "`unshar'\n"
+#~ "  -x, --no-check-existing   forscríobh comhaid atá ann, gan idirdhealú\n"
+#~ "  -X, --query-user          fiafraigh roimh fhorscríobh aon chomhad "
+#~ "(seachas Líonra)\n"
+#~ "  -m, --no-timestamp        ná hathchóirigh amanna mionathraithe\n"
+#~ "  -Q, --quiet-unshar        ná taispeáin teachtaireachtaí foclacha ag am "
+#~ "`unshar'\n"
+#~ "  -f, --basename            athchóirigh i gcomhadlann aonair, d'ainneoin "
+#~ "ordlathas\n"
+#~ "      --no-i18n             ná cruthaigh script idirnáisiúntaithe "
+#~ "bhlaoisce\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Tá gá le rogha -o in éineacht le -l nó -L, agus rogha -n in éineacht le -"
+#~ "a.\n"
+
+#~ msgid "Option -g implies -z, option -b implies -Z.\n"
+#~ msgstr ""
+#~ "Úsáidtear -z go huathoibríoch nuair a shonraítear -g, agus ar an nós "
+#~ "céanna úsáidtear -Z le -b.\n"
+
+#~ msgid "Option -g implies -z.\n"
+#~ msgstr "Úsáidtear -z go huathoibríoch nuair a shonraítear -g.\n"
+
+#~ msgid "invalid file size limit `%s'"
+#~ msgstr "uasmhéid neamhbhailí na gcomhad `%s'"
+
+#~ msgid "DEBUG was not selected at compile time"
+#~ msgstr "Níor úsáideadh DEBUG ag am tiomsaithe"
+
+#~ msgid "Hard limit %s\n"
+#~ msgstr "Uasteorainn chrua %s\n"
+
+#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
+#~ msgstr "Ní thacaíonn an córas seo le -Z ('compress'), úsáid -z ina ionad"
+
+#~ msgid "Soft limit %s\n"
+#~ msgstr "Uasteorainn bhog %s\n"
+
+#~ msgid "illegal output prefix\n"
+#~ msgstr "réimír neamhcheadaithe aschurtha\n"
+
+#~ msgid "WARNING: No user interaction in vanilla mode"
+#~ msgstr "RABHADH: níl idirghníomhú leis an úsáideoir sa mhód fanaile"
+
+#~ msgid "WARNING: Non-text storage options overridden"
+#~ msgstr "RABHADH: Sáraíodh roghanna stórála neamhthéacs"
+
+#~ msgid "Cannot use -a option without -n"
+#~ msgstr "Ní féidir rogha -a a úsáid gan -n"
+
+#~ msgid "Cannot use -l or -L option without -o"
+#~ msgstr "Ní féidir rogha -l nó -L a úsáid gan -o"
+
+#~ msgid "%s: Illegal ~user"
+#~ msgstr "%s: ~Úsáideoir neamhcheadaithe"
+
+#~ msgid "denied writing FIFO (%s)"
+#~ msgstr "níor ceadaíodh FIFO a scríobh (%s)"
+
+#~ msgid "not following symlink (%s)"
+#~ msgstr "ní leanfar nasc siombalach (%s)"
+
+#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
+#~ msgstr "Úsáid: %s [INCHOMHAD] CIANCHOMHAD\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "\n"
+#~ "  -m, --base64    úsáid ionchódú base64 de réir RFC1521\n"
+#~ "      --help      taispeáin an chabhair seo agus scoir\n"
+#~ "      --version   taispeáin eolas faoin leagan agus scoir\n"
 
 #~ msgid "[no, yes, all, quit] (no)?"
 #~ msgstr "[níl, tá, uile, scoir] (níl)?"
@@ -874,10 +1467,6 @@ msgstr "%s á léamh le fstat"
 
 #~ msgid "current size"
 #~ msgstr "méid faoi láthair"
-
-# lock not verb
-#~ msgid "lock directory"
-#~ msgstr "comhadlann ghlasála"
 
 #~ msgid "created"
 #~ msgstr "cruthaithe"
