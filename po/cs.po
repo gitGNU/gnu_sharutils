@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils 4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
 "PO-Revision-Date: 2012-08-13 21:36+0200\n"
 "Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
@@ -30,8 +30,7 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Poznámka: Kontrolní součty MD5 se neověřují. Zvažte instalaci GNU coreutils."
+msgstr "Poznámka: Kontrolní součty MD5 se neověřují. Zvažte instalaci GNU coreutils."
 
 #: src/scripts.x:396
 msgid ""
@@ -87,7 +86,7 @@ msgstr "ne"
 msgid "skip this file"
 msgstr "přeskočit tento soubor"
 
-#: src/scripts.x:408 libopts/enum.c:488
+#: src/scripts.x:408
 msgid "all"
 msgstr "vše"
 
@@ -95,7 +94,7 @@ msgstr "vše"
 msgid "overwrite all files"
 msgstr "přepsat všechny soubory"
 
-#: src/scripts.x:410 libopts/enum.c:493
+#: src/scripts.x:410
 msgid "none"
 msgstr "nic"
 
@@ -247,27 +246,27 @@ msgstr "x – adresář pro zámky %s odstraněn."
 msgid "x - failed to remove lock directory %s."
 msgstr "x – adresář pro zámky %s nebylo možné odstranit."
 
-#: src/shar-opts.c:1680
+#: src/shar-opts.c:1650
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "%s nelze znovu otevřít jako standardní vstup"
 
-#: src/shar-opts.c:1790
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
 msgstr "chybné použití sharu:\n"
 
-#: src/shar-opts.c:1826
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
 msgstr "nepřekonatelné chyba v shar:\n"
 
 # TODO: rephrase fserr
-#: src/shar-opts.c:1863
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
 
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/uuencode-opts.c:479
 msgid "No memory for duping translated strings\n"
 msgstr "Nedostatek paměti pro duplikaci přeložených řetězců\n"
 
@@ -427,7 +426,7 @@ msgstr "zadány soubory na příkazovém řádku i --input-file-list"
 msgid "Created %d files\n"
 msgstr "Souborů vytvořeno: %d\n"
 
-#: src/unshar-opts.c:433 src/unshar.c:394
+#: src/unshar-opts.c:427 src/unshar.c:394
 #, c-format
 msgid "Cannot chdir to `%s'"
 msgstr "Adresář nelze změnit na „%s“"
@@ -486,8 +485,7 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"  Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro "
-"jejich\n"
+"  Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro jejich\n"
 "krátké formy.\n"
 "\n"
 "  -d, --directory=ADRESÁŘ     aktuální adresář pro zpracovávání\n"
@@ -609,8 +607,7 @@ msgid ""
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Povinné argumenty dlouhých formátů přepínačů, jsou závazné i pro krátké "
-"formy.\n"
+"Povinné argumenty dlouhých formátů přepínačů, jsou závazné i pro krátké formy.\n"
 "  -o, --output-file=SOUBOR výstup do souboru SOUBOR\n"
 "      --help               vypíše tuto nápovědu a skončí\n"
 "      --version            vypíše označení verze a skončí\n"
@@ -620,8 +617,7 @@ msgstr ""
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
-msgstr ""
-"Když se zpracovává více vstupních souborů, nelze zadat výstupní soubor.\n"
+msgstr "Když se zpracovává více vstupních souborů, nelze zadat výstupní soubor.\n"
 
 #: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
 #, c-format
@@ -768,444 +764,6 @@ msgstr "argument „%3$s“ přepínače %1$s%2$s má neplatnou příponu"
 msgid "%s%s argument '%s' too large"
 msgstr "přepínač %s%s má příliš dlouhý argument „%s“"
 
-#: libopts/autoopts.c:53
-#, fuzzy, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr "obnovení %s selhalo"
-
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-
-#: libopts/autoopts.c:66
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
-
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, fuzzy, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "obnovení %s selhalo"
-
-#: libopts/version.c:124
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
-
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: přepínač „-W %s“ není jednoznačný\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
-
-#: libopts/find.c:90 libopts/find.c:95
-#, c-format
-msgid "  %s%s\n"
-msgstr ""
-
-#: libopts/check.c:159
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
-
-#: libopts/version.c:164
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-
-#: libopts/check.c:58
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
-
-#: libopts/restore.c:109
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
-
-#: libopts/usage.c:836
-#, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
-
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
-#, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-# TODO: rephrase fserr
-#: libopts/makeshell.c:759
-#, fuzzy, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
-
-# TODO: rephrase fserr
-#: libopts/configfile.c:1168
-#, fuzzy, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
-
-# TODO: rephrase fserr
-#: libopts/text_mmap.c:100
-#, fuzzy, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
-
-# TODO: rephrase fserr
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, fuzzy, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
-
-#: libopts/file.c:76
-msgid "stat-ing for directory"
-msgstr ""
-
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: Není obyčejný soubor"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-# Error whle...
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "otevření přes fopen %s"
-
-# Error whle...
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "otevření přes fopen %s"
-
-#: libopts/makeshell.c:837
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-#: libopts/find.c:439 libopts/reset.c:108
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: neznámý přepínač -- %c\n"
-
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: neznámý přepínač -- %c\n"
-
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: neznámý přepínač „--%s“\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: neznámý přepínač – „%c“\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:497
-#, fuzzy, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: přepínač „--%s“ vyžaduje argument\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: přepínač „--%s“ musí být zadán bez argumentu\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-# TODO: rephrase fserr
-#: libopts/save.c:512
-#, fuzzy, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: přepínač „-W %s“ vyžaduje argument\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-# TODO: rephrase fserr
-#: libopts/save.c:179 libopts/save.c:233
-#, fuzzy, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, fuzzy, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr "Přepínač „%s“ musí předcházet všem názvům souborů"
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
-msgstr "uudekódování souboru %s"
-
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
-
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:73
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
-
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
 #~ msgid "-C is being deprecated, use -Z instead"
 #~ msgstr "-C není podporován, místo něj použijte -Z"
 
@@ -1256,28 +814,19 @@ msgstr ""
 #~ "\n"
 #~ "Výběr souborů:\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -"
-#~ "[BTzZ]\n"
+#~ msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -[BTzZ]\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -"
-#~ "[BTz]\n"
+#~ msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     v seznamu souborů povolí změnu módu pomocí -[BTz]\n"
 
 #~ msgid ""
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ "\n"
 #~ "Controlling the shar headers:\n"
 #~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
@@ -1299,44 +848,35 @@ msgstr ""
 #~ "Dělení výstupu:\n"
 #~ "  -o, --output-prefix=PŘEDPONA     výstup vede do souboru PŘEDPONA.01 až\n"
 #~ "                                   PŘEDPONA.NN\n"
-#~ "  -l, --whole-size-limit=VELIKOST  rozdělí archiv, ne soubory, na "
-#~ "VELIKOST\n"
+#~ "  -l, --whole-size-limit=VELIKOST  rozdělí archiv, ne soubory, na VELIKOST\n"
 #~ "                                   kilobajtů\n"
-#~ "  -L, --split-size-limit=VELIKOST  rozdělí archiv nebo soubory na "
-#~ "VELIKOST\n"
+#~ "  -L, --split-size-limit=VELIKOST  rozdělí archiv nebo soubory na VELIKOST\n"
 #~ "                                   kilobajtů\n"
 #~ "\n"
 #~ "Řízení hlaviček shar:\n"
 #~ "  -n, --archive-name=JMÉNO  použije jako jméno archívu\n"
 #~ "  -s, --submitter=ADRESA    použije jako adresu distributora\n"
-#~ "  -a, --net-headers         do výstupu hlavička Submitted-by: a Archive-"
-#~ "name:\n"
+#~ "  -a, --net-headers         do výstupu hlavička Submitted-by: a Archive-name:\n"
 #~ "  -c, --cut-mark            na začátek každého výstupního souboru přidá\n"
 #~ "                            řádek označující začátek archívu (cut line)\n"
 #~ "  -t, --translate           přeloží zprávy ve skriptu\n"
 #~ "\n"
 #~ "Výběr toho, jak budou soubory uloženy:\n"
-#~ "  -M, --mixed-uuencode         automaticky se rozhodne, zda použít "
-#~ "uuencode\n"
+#~ "  -M, --mixed-uuencode         automaticky se rozhodne, zda použít uuencode\n"
 #~ "                               (implicitně)\n"
 #~ "  -T, --text-files             pokládá všechny soubory za textové\n"
-#~ "  -B, --uuencode               pokládá všechny soubory za binární, "
-#~ "použije\n"
+#~ "  -B, --uuencode               pokládá všechny soubory za binární, použije\n"
 #~ "                               uuencode\n"
-#~ "  -z, --gzip                   použije gzip a uuencode na všechny "
-#~ "soubory\n"
+#~ "  -z, --gzip                   použije gzip a uuencode na všechny soubory\n"
 #~ "  -g, --level-for-gzip=ÚROVEŇ  parametr -ÚROVEŇ (implicitně 9) pro gzip\n"
-#~ "  -j, --bzip2                  použije bzip2 a uuencode na všechny "
-#~ "soubory\n"
+#~ "  -j, --bzip2                  použije bzip2 a uuencode na všechny soubory\n"
 
 #~ msgid ""
 #~ "  -Z, --compress               compress and uuencode all files\n"
 #~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
 #~ msgstr ""
-#~ "  -Z, --compress               použije compress a uuencode na všechny "
-#~ "soubory\n"
-#~ "  -b, --bits-per-code=BITŮ     parametr -bBITŮ (implicitně 12) pro "
-#~ "compress\n"
+#~ "  -Z, --compress               použije compress a uuencode na všechny soubory\n"
+#~ "  -b, --bits-per-code=BITŮ     parametr -bBITŮ (implicitně 12) pro compress\n"
 
 #~ msgid ""
 #~ "\n"
@@ -1344,36 +884,28 @@ msgstr ""
 #~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
 #~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
 #~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
 #~ "\n"
 #~ "Producing different kinds of shars:\n"
 #~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar time\n"
 #~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & times\n"
 #~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
 #~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
+#~ "      --no-i18n             do not produce internationalized shell script\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Ochrana přenosu:\n"
 #~ "  -w, --no-character-count      nepoužívá 'wc -c' na testování velikosti\n"
 #~ "  -D, --no-md5-digest           nepoužívá 'md5sum' pro ověření\n"
-#~ "  -F, --force-prefix            použije předponový (prefix) znak na každé "
-#~ "řádce\n"
-#~ "  -d, --here-delimiter=ŘETĚZEC  použije ŘETĚZEC k oddělení souborů v "
-#~ "shar\n"
+#~ "  -F, --force-prefix            použije předponový (prefix) znak na každé řádce\n"
+#~ "  -d, --here-delimiter=ŘETĚZEC  použije ŘETĚZEC k oddělení souborů v shar\n"
 #~ "                                archívu\n"
 #~ "\n"
 #~ "Různé druhy shar archívů:\n"
-#~ "  -V, --vanilla-operation   vyrobí velmi jednoduchý shar archív, "
-#~ "nenáročný\n"
+#~ "  -V, --vanilla-operation   vyrobí velmi jednoduchý shar archív, nenáročný\n"
 #~ "                            na rozbalení (je třeba sed a echo)\n"
 #~ "  -P, --no-piping           použije dočasné soubory při rozbalování\n"
 #~ "  -x, --no-check-existing   slepé přepsání existujících souborů\n"
@@ -1383,8 +915,7 @@ msgstr ""
 #~ "  -Q, --quiet-unshar        nevypisuje zprávy při rozbalování\n"
 #~ "  -f, --basename            rozbaluje do jednoho adresáře, neuvažuje\n"
 #~ "                            adresářovou strukturu\n"
-#~ "      --no-i18n             nevyrobí internacionalizovaný shellový "
-#~ "script\n"
+#~ "      --no-i18n             nevyrobí internacionalizovaný shellový script\n"
 
 #~ msgid ""
 #~ "\n"
@@ -1418,8 +949,7 @@ msgstr ""
 #~ msgstr "zakázaná předpona výstupu\n"
 
 #~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr ""
-#~ "UPOZORNĚNÍ: Bez interakce s uživatelem v jednoduchém(vanilla) režimu"
+#~ msgstr "UPOZORNĚNÍ: Bez interakce s uživatelem v jednoduchém(vanilla) režimu"
 
 #~ msgid "WARNING: Non-text storage options overridden"
 #~ msgstr "UPOZORNĚNÍ: přepínač pro netextové ukládání přebit"
@@ -1460,6 +990,9 @@ msgstr ""
 #~ msgid "bunzipping file %s"
 #~ msgstr "dekomprese bzipového souboru %s"
 
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: neznámý přepínač -- %c\n"
+
 #~ msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
 #~ msgstr "GNU \\`touch`, z balíčku GNU File Utilities ..."
 
@@ -1493,11 +1026,9 @@ msgstr ""
 #~ msgid "current size"
 #~ msgstr "současná velikost"
 
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ msgid "Mandatory arguments to long options are mandatory for short options too.\n"
 #~ msgstr ""
-#~ "  Povinné argumenty dlouhých přepínačů, jsou pro jejich krátké formy "
-#~ "také\n"
+#~ "  Povinné argumenty dlouhých přepínačů, jsou pro jejich krátké formy také\n"
 #~ "povinné.\n"
 
 #~ msgid ""
@@ -1512,12 +1043,9 @@ msgstr ""
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Výstup:\n"
@@ -1526,23 +1054,19 @@ msgstr ""
 #~ "  -q, --quiet, --silent   dočasně nevypisuje informace o tom, co dělá\n"
 #~ "\n"
 #~ "Výběr souborů:\n"
-#~ "  -p, --intermix-type     povolení -[BTzZ] v seznamu souborů na změnu "
-#~ "práv\n"
+#~ "  -p, --intermix-type     povolení -[BTzZ] v seznamu souborů na změnu práv\n"
 #~ "  -S, --stdin-file-list   čte seznam souborů z stdin\n"
 #~ "\n"
 #~ "Rozdělení výstupu:\n"
-#~ "  -o, --output-prefix=PŘEDPONA    výstup do souboru PREFIX.01 až PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=VELIKOST rozdělí archív, nikoli soubory na "
-#~ "části\n"
+#~ "  -o, --output-prefix=PŘEDPONA    výstup do souboru PREFIX.01 až PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=VELIKOST rozdělí archív, nikoli soubory na části\n"
 #~ "                                  velikosti VELIKOST kilobajtů\n"
 #~ "  -L, --split-size-limit=VELIKOST rozdělí archiv nebo soubory na části\n"
 #~ "                                  velikosti VELIKOST kilobajtů\n"
 
 #~ msgid "Report bugs to <bug-gnu-utils@prep.ai.mit.edu>.\n"
 #~ msgstr ""
-#~ "  Chyby v programu oznamujte na adrese <bug-gnu-utils@prep.ai.mit.edu> "
-#~ "(pouze\n"
+#~ "  Chyby v programu oznamujte na adrese <bug-gnu-utils@prep.ai.mit.edu> (pouze\n"
 #~ "anglicky), připomínky k překladu zasílejte na <cs@li.org> (česky).\n"
 
 #~ msgid "removed"

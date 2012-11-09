@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils-4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
 "PO-Revision-Date: 2012-08-14 08:36+0200\n"
 "Last-Translator: Frédéric Marchal <fmarchal@perso.be>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -27,9 +27,7 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Note: pas de vérification des md5sums. Considérez l'installation de GNU "
-"coreutils."
+msgstr "Note: pas de vérification des md5sums. Considérez l'installation de GNU coreutils."
 
 #: src/scripts.x:396
 msgid ""
@@ -85,7 +83,7 @@ msgstr "non"
 msgid "skip this file"
 msgstr "ignorer le fichier"
 
-#: src/scripts.x:408 libopts/enum.c:488
+#: src/scripts.x:408
 msgid "all"
 msgstr "tous"
 
@@ -93,7 +91,7 @@ msgstr "tous"
 msgid "overwrite all files"
 msgstr "écraser tous les fichiers"
 
-#: src/scripts.x:410 libopts/enum.c:493
+#: src/scripts.x:410
 msgid "none"
 msgstr "aucun"
 
@@ -245,26 +243,26 @@ msgstr "x - retrait du verrou de répertoire %s."
 msgid "x - failed to remove lock directory %s."
 msgstr "x - échec lors du retrait du verrou de répertoire %s."
 
-#: src/shar-opts.c:1680
+#: src/shar-opts.c:1650
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "Incapable de ré-ouvrir %s en tant que stdin"
 
-#: src/shar-opts.c:1790
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
 msgstr "erreur d'utilisation de shar:\n"
 
-#: src/shar-opts.c:1826
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
 msgstr "erreur fatale de shar:\n"
 
-#: src/shar-opts.c:1863
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr "fserr %d (%s) en réalisant « %s » sur %s\n"
 
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/uuencode-opts.c:479
 msgid "No memory for duping translated strings\n"
 msgstr "Pas de mémoire pour dupliquer les chaînes traduites\n"
 
@@ -388,8 +386,7 @@ msgstr "Aucun fichier à lire"
 #: src/shar.c:2032
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr ""
-"De grâce, évitez -X pour des archives devant transiter par réseaux publics"
+msgstr "De grâce, évitez -X pour des archives devant transiter par réseaux publics"
 
 #: src/shar.c:2056
 #, c-format
@@ -423,7 +420,7 @@ msgstr "fichiers sur la ligne de commande et --input-file-list spécifiés"
 msgid "Created %d files\n"
 msgstr "%d fichiers ont été créés\n"
 
-#: src/unshar-opts.c:433 src/unshar.c:394
+#: src/unshar-opts.c:427 src/unshar.c:394
 #, c-format
 msgid "Cannot chdir to `%s'"
 msgstr "Ne peut changer le répertoire à « %s »"
@@ -482,13 +479,11 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Les paramètres obligatoires pour les formes longues des options le sont "
-"aussi\n"
+"Les paramètres obligatoires pour les formes longues des options le sont aussi\n"
 "pour les formes courtes correspondantes.\n"
 "\n"
 "  -d, --directory=RÉP      effectuer le dépaquetage dans le RÉPertoire\n"
-"  -c, --overwrite          relayer -c au script shar pour réécrire les "
-"fichiers\n"
+"  -c, --overwrite          relayer -c au script shar pour réécrire les fichiers\n"
 "  -e, --exit-0             identique à --split-at=\"exit 0\"»\n"
 "  -E, --split-at=CHAÎNE    scinder les archives concaténées après CHAÎNE\n"
 "  -f, --force              identique à -c\n"
@@ -759,436 +754,6 @@ msgstr "suffixe invalide pour l'argument %s%s: « %s »"
 msgid "%s%s argument '%s' too large"
 msgstr "argument de %s%s est trop grand: « %s »"
 
-#: libopts/autoopts.c:53
-#, fuzzy, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr "restauration de %s a échoué"
-
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-
-#: libopts/autoopts.c:66
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
-
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, fuzzy, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "restauration de %s a échoué"
-
-#: libopts/version.c:124
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
-
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: l'option « -W %s » est ambiguë\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
-
-#: libopts/find.c:90 libopts/find.c:95
-#, c-format
-msgid "  %s%s\n"
-msgstr ""
-
-#: libopts/check.c:159
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
-
-#: libopts/version.c:164
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-
-#: libopts/check.c:58
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
-
-#: libopts/restore.c:109
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
-
-#: libopts/usage.c:836
-#, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
-
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
-#, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-#: libopts/makeshell.c:759
-#, fuzzy, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr "fserr %d (%s) en réalisant « %s » sur %s\n"
-
-#: libopts/configfile.c:1168
-#, fuzzy, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr "fserr %d (%s) en réalisant « %s » sur %s\n"
-
-#: libopts/text_mmap.c:100
-#, fuzzy, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr "fserr %d (%s) en réalisant « %s » sur %s\n"
-
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, fuzzy, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr "fserr %d (%s) en réalisant « %s » sur %s\n"
-
-#: libopts/file.c:76
-msgid "stat-ing for directory"
-msgstr ""
-
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: n'est pas un fichier régulier"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "ouverture par fopen %s"
-
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "ouverture par fopen %s"
-
-#: libopts/makeshell.c:837
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-#: libopts/find.c:439 libopts/reset.c:108
-#, fuzzy, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: l'option «-- %c» n'est pas valable\n"
-
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: l'option «-- %c» n'est pas valable\n"
-
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: l'option « --%s » n'est pas reconnue\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: l'option «-- %c» n'est pas valable\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:497
-#, fuzzy, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: l'option « --%s » requiert un paramètre\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: l'option « --%s » n'admet pas de paramètre\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-#: libopts/save.c:512
-#, fuzzy, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr "fserr %d (%s) en réalisant « %s » sur %s\n"
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: l'option « -W %s » requiert un paramètre\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:179 libopts/save.c:233
-#, fuzzy, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr "fserr %d (%s) en réalisant « %s » sur %s\n"
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, fuzzy, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr "L'option « %s » doit apparaître avant les noms des fichiers"
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
-msgstr "uudécodage du fichier %s"
-
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
-
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:73
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
-
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
 #~ msgid "-C is being deprecated, use -Z instead"
 #~ msgstr "L'option -C tombe en désuétude, utilisez -Z de préférence."
 
@@ -1229,8 +794,7 @@ msgstr ""
 #~ "\n"
 #~ "Selecting files:\n"
 #~ msgstr ""
-#~ "Les paramètres requis pour les options longues sont également requis pour "
-#~ "les options courtes.\n"
+#~ "Les paramètres requis pour les options longues sont également requis pour les options courtes.\n"
 #~ "\n"
 #~ "Fournir de l'aide rétroactive:\n"
 #~ "      --help              afficher l'aide-mémoire\n"
@@ -1239,28 +803,19 @@ msgstr ""
 #~ "\n"
 #~ "Sélection des fichiers:\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     permettre -[BTzZ] dans la liste des fichiers "
-#~ "pour changer le mode\n"
+#~ msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     permettre -[BTzZ] dans la liste des fichiers pour changer le mode\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     permettre -[BTz] dans la liste des fichiers "
-#~ "pour changer le mode\n"
+#~ msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type     permettre -[BTz] dans la liste des fichiers pour changer le mode\n"
 
 #~ msgid ""
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ "\n"
 #~ "Controlling the shar headers:\n"
 #~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
@@ -1277,46 +832,34 @@ msgstr ""
 #~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
 #~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
 #~ msgstr ""
-#~ "  -S, --stdin-file-list   lire la liste des fichiers à partir de l'entrée "
-#~ "standard\n"
+#~ "  -S, --stdin-file-list   lire la liste des fichiers à partir de l'entrée standard\n"
 #~ "\n"
 #~ "Scinder la sortie:\n"
-#~ "  -o, --output-prefix=PREFIX     sortie vers fichiers PREFIX.01 à PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=TAILLE  scinder l'archive (pas les fichiers) à "
-#~ "TAILLE kilo-octets\n"
-#~ "  -L, --split-size-limit=TAILLE  scinder l'archive ou les fichiers à "
-#~ "TAILLE kilo-octets\n"
+#~ "  -o, --output-prefix=PREFIX     sortie vers fichiers PREFIX.01 à PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=TAILLE  scinder l'archive (pas les fichiers) à TAILLE kilo-octets\n"
+#~ "  -L, --split-size-limit=TAILLE  scinder l'archive ou les fichiers à TAILLE kilo-octets\n"
 #~ "\n"
 #~ "Modes de contrôle des en-têtes:\n"
 #~ "  -n, --archive-name=NOM    donner NOM comme titre de l'archive\n"
 #~ "  -s, --submitter=ADRESSE   remplacer le nom du demandeur par défaut\n"
-#~ "  -a, --net-headers         générer les en-têtes: \"Submitted-by:\" et "
-#~ "\"Archive-name:\"\n"
-#~ "  -c, --cut-mark            insérer une ligne de démarcation au début "
-#~ "(cut)\n"
+#~ "  -a, --net-headers         générer les en-têtes: \"Submitted-by:\" et \"Archive-name:\"\n"
+#~ "  -c, --cut-mark            insérer une ligne de démarcation au début (cut)\n"
 #~ "  -t, --translate           traduire le message dans le script\n"
 #~ "\n"
 #~ "Sélection de la méthode de stockage:\n"
-#~ "  -M, --mixed-uuencode         décider de l'uuencodage dynamiquement "
-#~ "(option par défaut)\n"
-#~ "  -T, --text-files             traiter tous les fichiers comme des "
-#~ "fichiers de textes\n"
-#~ "  -B, --uuencode               uuencoder tous les fichiers comme des "
-#~ "binaires\n"
-#~ "  -z, --gzip                   comprimer avec « gzip » et uuencoder tous "
-#~ "les fichiers\n"
+#~ "  -M, --mixed-uuencode         décider de l'uuencodage dynamiquement (option par défaut)\n"
+#~ "  -T, --text-files             traiter tous les fichiers comme des fichiers de textes\n"
+#~ "  -B, --uuencode               uuencoder tous les fichiers comme des binaires\n"
+#~ "  -z, --gzip                   comprimer avec « gzip » et uuencoder tous les fichiers\n"
 #~ "  -g, --level-for-gzip=NIVEAU  passer -NIVEAU (par défaut 9) à « gzip »\n"
-#~ "  -j, --bzip2                  comprimer avec « bzip2 » et uuencoder tous "
-#~ "les fichiers\n"
+#~ "  -j, --bzip2                  comprimer avec « bzip2 » et uuencoder tous les fichiers\n"
 
 #~ msgid ""
 #~ "  -Z, --compress               compress and uuencode all files\n"
 #~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
 #~ msgstr ""
 #~ "  -Z, --compress               compresser et uuencoder tous les fichiers\n"
-#~ "  -b, --bits-per-code=BITS     utiliser -bBITS (par défaut 12) pour la "
-#~ "compression\n"
+#~ "  -b, --bits-per-code=BITS     utiliser -bBITS (par défaut 12) pour la compression\n"
 
 #~ msgid ""
 #~ "\n"
@@ -1324,52 +867,38 @@ msgstr ""
 #~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
 #~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
 #~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
 #~ "\n"
 #~ "Producing different kinds of shars:\n"
 #~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar time\n"
 #~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & times\n"
 #~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
 #~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
+#~ "      --no-i18n             do not produce internationalized shell script\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Erreurs de transmission:\n"
 #~ "  -w, --no-character-count      ne pas utiliser « wc -c » pour vérifier\n"
 #~ "                                la taille en nombre de caractères\n"
-#~ "  -D, --no-md5-digest           ne pas utiliser la somme de contrôle « "
-#~ "md5sum »\n"
+#~ "  -D, --no-md5-digest           ne pas utiliser la somme de contrôle « md5sum »\n"
 #~ "                                pour vérifier le contenu\n"
-#~ "  -F, --force-prefix            placer le caractère préfixe sur chaque "
-#~ "ligne\n"
-#~ "  -d, --here-delimiter=CHAÎNE   délimiter chaque fichier d'archive par "
-#~ "CHAÎNE\n"
+#~ "  -F, --force-prefix            placer le caractère préfixe sur chaque ligne\n"
+#~ "  -d, --here-delimiter=CHAÎNE   délimiter chaque fichier d'archive par CHAÎNE\n"
 #~ "\n"
 #~ "Modalités d'archivage:\n"
-#~ "  -V, --vanilla-operation   produire des archives simples et peu "
-#~ "exigeantes\n"
+#~ "  -V, --vanilla-operation   produire des archives simples et peu exigeantes\n"
 #~ "  -P, --no-piping           utiliser des fichiers temporaires\n"
 #~ "                            au moment du désarchivage\n"
 #~ "  -x, --no-check-existing   écraser de façon aveugle les fichiers\n"
 #~ "                            déjà existants\n"
-#~ "  -X, --query-user          confirmer chaque écrasement (*pas* pour le "
-#~ "réseau)\n"
-#~ "  -m, --no-timestamp        ne pas restaurer les dates originales des "
-#~ "fichiers\n"
-#~ "  -Q, --quiet-unshar        inhiber le mode bavard pendant le "
-#~ "désarchivage\n"
-#~ "  -f, --basename            désarchiver tout au même niveau de "
-#~ "répertoire\n"
-#~ "      --no-i18n             ne pas produire un script non-"
-#~ "internationalisé\n"
+#~ "  -X, --query-user          confirmer chaque écrasement (*pas* pour le réseau)\n"
+#~ "  -m, --no-timestamp        ne pas restaurer les dates originales des fichiers\n"
+#~ "  -Q, --quiet-unshar        inhiber le mode bavard pendant le désarchivage\n"
+#~ "  -f, --basename            désarchiver tout au même niveau de répertoire\n"
+#~ "      --no-i18n             ne pas produire un script non-internationalisé\n"
 
 #~ msgid ""
 #~ "\n"
@@ -1394,9 +923,7 @@ msgstr ""
 #~ msgstr "Limite matérielle %s\n"
 
 #~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr ""
-#~ "Le système ne supporte pas l'option -Z (compression), utiliser -z à la "
-#~ "place."
+#~ msgstr "Le système ne supporte pas l'option -Z (compression), utiliser -z à la place."
 
 #~ msgid "Soft limit %s\n"
 #~ msgstr "Limite logicielle %s\n"
@@ -1405,9 +932,7 @@ msgstr ""
 #~ msgstr "préfixe de sortie illégal\n"
 
 #~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr ""
-#~ "AVERTISSEMENT: aucune interaction possible avec l'usager en mode « "
-#~ "vanilla »."
+#~ msgstr "AVERTISSEMENT: aucune interaction possible avec l'usager en mode « vanilla »."
 
 #~ msgid "WARNING: Non-text storage options overridden"
 #~ msgstr "ATTENTION: annulation des options de stockage en mode non-texte."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils-4.11\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 2011-02-05 11:12-0800\n"
 "PO-Revision-Date: 2011-02-09 19:01-0600\n"
 "Last-Translator: E. Hakan Duran <hakan_duran@hotmail.com>\n"
 "Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
@@ -18,458 +18,464 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS:  This is a phony function generated for the purpose of
-#. constructing the strings to be extracted for translation.  Each string
-#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
-#. if you need to look up context.  These strings are all inserted into
-#. the shar-generated shell script so the shar user can create shar archives
-#. with messages localized for one locale.
-#.
-#: src/scripts.x:395
-msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Not: md5toplamları control edilmiyor.  GNU coreutils kurmayı gözününde "
-"bulundurun."
+#: lib/error.c:181
+msgid "Unknown system error"
+msgstr "Bilinmeyen sistem hatası"
 
-#: src/scripts.x:396
-msgid ""
-"WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
-msgstr ""
-"UYARI: zaman belirteçleri geri yüklenmiyor. GNU çekirdek araçları\n"
-" içinde dağıtılan GNU `touch' edinip yüklemeyi gözönünde bulundurun..."
-
-#: src/scripts.x:398
+#: lib/getopt.c:527 lib/getopt.c:543
 #, c-format
-msgid "lock directory %s exists"
-msgstr "kilit dizini %s mevcut"
+msgid "%s: option '%s' is ambiguous\n"
+msgstr "%s: '%s' seçeneği belirsiz\n"
 
-#: src/scripts.x:399
+#: lib/getopt.c:576 lib/getopt.c:580
 #, c-format
-msgid "failed to create %s lock directory"
-msgstr "%s kilit dizini oluşturulamadı"
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: '--%s' seçeneği argümansız kullanılır\n"
 
-#: src/scripts.x:400
+#: lib/getopt.c:589 lib/getopt.c:594
 #, c-format
-msgid "x - created lock directory %s."
-msgstr "x - kilit dizini oluşturuldu %s."
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: '%c%s' seçeneği argümansız kullanılır\n"
 
-#: src/scripts.x:401
+#: lib/getopt.c:637 lib/getopt.c:656
 #, c-format
-msgid "x - failed to create lock directory %s."
-msgstr "x - kilit dizini oluşturulamadı %s."
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: '--%s' seçeneği bir argümanla kullanılır\n"
 
-#: src/scripts.x:402
+#: lib/getopt.c:694 lib/getopt.c:697
 #, c-format
-msgid "x - created directory %s."
-msgstr "x - dizin oluşturuldu %s."
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: '--%s' seçeneği bilinmiyor\n"
 
-#: src/scripts.x:403
+#: lib/getopt.c:705 lib/getopt.c:708
 #, c-format
-msgid "x - failed to create directory %s."
-msgstr "x - dizin oluşturulamadı %s."
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: '%c%s' seçeneği bilinmiyor\n"
 
-#: src/scripts.x:404
-msgid "yes"
-msgstr "evet"
-
-#: src/scripts.x:405
-msgid "overwrite this file"
-msgstr "bu dosyanın üstüne yaz"
-
-#: src/scripts.x:406
-msgid "no"
-msgstr "hayır"
-
-#: src/scripts.x:407
-msgid "skip this file"
-msgstr "bu dosyayı atla"
-
-#: src/scripts.x:408 libopts/enum.c:488
-msgid "all"
-msgstr "tümü"
-
-#: src/scripts.x:409
-msgid "overwrite all files"
-msgstr "tüm dosyaların üstüne yaz"
-
-#: src/scripts.x:410 libopts/enum.c:493
-msgid "none"
-msgstr "hiçbiri"
-
-#: src/scripts.x:411
-msgid "overwrite no files"
-msgstr "hiçbir dosyanın üstüne yazma"
-
-#: src/scripts.x:412
-msgid "help"
-msgstr "yardım"
-
-#: src/scripts.x:413
-msgid "explain choices"
-msgstr "seçenekleri açıkla"
-
-#: src/scripts.x:414
-msgid "quit"
-msgstr "çıkış"
-
-#: src/scripts.x:415
-msgid "exit immediately"
-msgstr "derhal çık"
-
-#: src/scripts.x:416
+#: lib/getopt.c:757 lib/getopt.c:760
 #, c-format
-msgid "restore of %s failed"
-msgstr "%s'nin geri yüklemesi başarısız"
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: geçersiz seçenek -- '%c'\n"
 
-#: src/scripts.x:417
+#: lib/getopt.c:810 lib/getopt.c:827 lib/getopt.c:1035 lib/getopt.c:1053
 #, c-format
-msgid "End of part %d, continue with part %d"
-msgstr "%d bölümünün sonu, %d bölümüyle devam edin"
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: seçenek bir argümanla kullanılır -- '%c'\n"
 
-#: src/scripts.x:418
+#: lib/getopt.c:883 lib/getopt.c:899
 #, c-format
-msgid "End of %s part %d"
-msgstr "%s bölümünün sonu %d"
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: '-W %s' seçeneği belirsiz\n"
 
-#: src/scripts.x:419
+#: lib/getopt.c:923 lib/getopt.c:941
 #, c-format
-msgid "restoration warning:  size of %s is not %s"
-msgstr "geri yükleme uyarısı: %1$s'nin boyutu %2$s değil"
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: '-W %s' seçeneği argümansız kullanılır\n"
 
-#: src/scripts.x:420 src/shar.c:1306
-msgid "(text)"
-msgstr "(metin)"
-
-#: src/scripts.x:421
-msgid "(compressed)"
-msgstr "(sıkıştırılmış)"
-
-#: src/scripts.x:422
-msgid "(gzipped)"
-msgstr "(gziplenmiş)"
-
-#: src/scripts.x:423
-msgid "(bzipped)"
-msgstr "(bziplenmiş)"
-
-#: src/scripts.x:424
-msgid "(binary)"
-msgstr "(iki tabanlı)"
-
-#: src/scripts.x:425
-msgid "archive"
-msgstr "arşiv"
-
-#: src/scripts.x:426
+#: lib/getopt.c:962 lib/getopt.c:980
 #, c-format
-msgid "File %s is continued in part %d"
-msgstr "%s dosyası %d bölümünde devam etmektedir"
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: '-W %s' seçeneği bir argümanla kullanılır\n"
 
-#: src/scripts.x:427
-msgid "Please unpack part 1 first!"
-msgstr "Lütfen önce ilk bölümü açınız!"
-
-#: src/scripts.x:428
-msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Lütfen önce ${shar_sequence} bölümünü açınız!"
-
-#: src/scripts.x:429
-#, c-format
-msgid "x - STILL SKIPPING %s"
-msgstr "x - HÂLÂ ATLANIYOR %s"
-
-#: src/scripts.x:430
-#, c-format
-msgid "continuing file %s"
-msgstr "%s dosyasına devam ediliyor"
-
-#: src/scripts.x:431
-msgid "(empty)"
-msgstr "(boş)"
-
-#: src/scripts.x:432
-#, c-format
-msgid "x - overwriting %s"
-msgstr "x - %s'nin üstüne yazılıyor"
-
-#: src/scripts.x:433
-#, c-format
-msgid "overwrite %s"
-msgstr "%s'nin üstüne yaz"
-
-#: src/scripts.x:434
-#, c-format
-msgid "SKIPPING %s"
-msgstr "%s ATLANIYOR"
-
-#: src/scripts.x:435
-msgid "extraction aborted"
-msgstr "açılma iptal edildi"
-
-#: src/scripts.x:436
-#, c-format
-msgid "x - SKIPPING %s (file already exists)"
-msgstr "x - %s ATLANIYOR (dosya zaten var)"
-
-#: src/scripts.x:437
-#, c-format
-msgid "x - extracting %s %s"
-msgstr "x - %s %s açılıyor"
-
-#: src/scripts.x:438
-#, c-format
-msgid "File %s is complete"
-msgstr "Dosya %s tamamlandı"
-
-#: src/scripts.x:439
-#, c-format
-msgid "uudecoding file %s"
-msgstr "dosya %s uuçözülüyor"
-
-#: src/scripts.x:440
-msgid "MD5 check failed"
-msgstr "MD5 kontrolü başarısız"
-
-#: src/scripts.x:441
-msgid "You have unpacked the last part"
-msgstr "Son kısmı açtınız"
-
-#: src/scripts.x:442
-#, c-format
-msgid "x - removed lock directory %s."
-msgstr "x - kilit dizini silindi %s."
-
-#: src/scripts.x:443
-#, c-format
-msgid "x - failed to remove lock directory %s."
-msgstr "x - kilit dizini silinemedi %s."
-
-#: src/shar-opts.c:1680
-#, fuzzy, c-format
-msgid "Cannot reopen %s as stdin"
-msgstr "%s dosyası açılamıyor"
-
-#: src/shar-opts.c:1790
-msgid "shar usage error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1826
-msgid "shar fatal error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1863
-#, c-format
-msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
-
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
-#, fuzzy
-msgid "No memory for duping translated strings\n"
-msgstr "%d bit ataması için bellek yok"
-
-#: src/shar.c:372
+#: src/shar.c:416
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "printf biçimleme hatası: %s\n"
 
-#: src/shar.c:423
-#, fuzzy
-msgid "sharutils bug - no status"
+#: src/shar.c:467
+#, c-format
+msgid "sharutils bug - no status\n"
 msgstr "sharutils yazılım hatası - durum yok\n"
 
-#: src/shar.c:788
+#: src/shar.c:823
+#, c-format
 msgid "Too many directories for mkdir generation"
 msgstr "mkdir için çok sayıda dizin"
 
-#: src/shar.c:871 src/shar.c:1541
+#: src/shar.c:906 src/shar.c:1573
 #, c-format
 msgid "Cannot access %s"
 msgstr "%s'e girilemedi"
 
-#: src/shar.c:948 src/unshar.c:376
+#: src/shar.c:956
+#, c-format
+msgid "-C is being deprecated, use -Z instead"
+msgstr "-C reddediliyor, yerine -Z kullanın"
+
+#: src/shar.c:997 src/unshar.c:375
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Yürürlükteki dizin adı okunamıyor"
 
-#: src/shar.c:1005 src/shar.c:1346
+#: src/shar.c:1066 src/shar.c:1388
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Yeni dosya, kalan %s, "
 
-#: src/shar.c:1006 src/shar.c:1347
+#: src/shar.c:1067 src/shar.c:1389
 #, c-format
 msgid "Limit still %s\n"
 msgstr "Halen sınır %s\n"
 
-#: src/shar.c:1028
+#: src/shar.c:1090 src/shar.c:1471
 #, c-format
 msgid "Starting file %s\n"
 msgstr "%s dosyası başlatılıyor\n"
 
 # Is "popen" a typo for "open"?
-#: src/shar.c:1081
-#, fuzzy
-msgid "Could not popen command"
+#: src/shar.c:1141
+#, c-format
+msgid "Could not popen 'wc' command:  %s\n"
 msgstr "'wc' komutu paçılamadı: %s\n"
 
-#: src/shar.c:1162
+#: src/shar.c:1202
 #, c-format
 msgid "Cannot open file %s"
 msgstr "%s dosyası açılamıyor"
 
-#: src/shar.c:1296 src/shar.c:1305
+# Is "popen" a typo for "open"?
+#: src/shar.c:1257
+#, c-format
+msgid "popen(3) on: %s"
+msgstr "paç(3) : %s"
+
+#: src/shar.c:1280
+#, c-format
+msgid "fopen(3) of file %s"
+msgstr "%s dosyasının façılımı(3)"
+
+#: src/shar.c:1332
 msgid "text"
 msgstr "metin"
 
-#: src/shar.c:1311 src/shar.c:1322
-msgid "call"
-msgstr ""
+#: src/shar.c:1342
+msgid "compressed"
+msgstr "sıkıştırılmış"
 
-#: src/shar.c:1335
+#: src/shar.c:1343
+msgid "gzipped"
+msgstr "gziplendi"
+
+#: src/shar.c:1344
+msgid "bzipped"
+msgstr "bziplendi"
+
+#: src/shar.c:1345
+msgid "binary"
+msgstr "iki tabanlı"
+
+#: src/shar.c:1356
+#, c-format
+msgid "pipe(2) failed"
+msgstr "veri yolu(2) başarısız"
+
+#: src/shar.c:1367
+#, c-format
+msgid "Could not fork"
+msgstr "Çatallanamadı"
+
+#: src/shar.c:1379
 #, c-format
 msgid "File %s (%s)"
 msgstr "%s dosyası (%s)"
 
-#: src/shar.c:1426
-#, fuzzy, c-format
-msgid "Continuing file %s\n"
-msgstr "%s dosyasına devam ediliyor"
-
-#: src/shar.c:1536
+#: src/shar.c:1568
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Sıradan bir dosya değil"
 
-#: src/shar.c:1563
+#: src/shar.c:1588
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "Shar içinde kalan boyut: %s\n"
 
-#: src/shar.c:1583
+#: src/shar.c:1606
 msgid "empty"
 msgstr "boş"
 
-#: src/shar.c:1622
+#: src/shar.c:1649
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "%s kaydediliyor (%s)"
 
-#: src/shar.c:1807
-#, fuzzy, c-format
-msgid "Invalid format for output file names (%s): %s"
-msgstr "geçersiz biçem (sayma alanı çok geniş): '%s'\n"
+#: src/shar.c:1869
+#, c-format
+msgid "allocating output file name"
+msgstr "çıktı dosya adı atanıyor"
 
-#: src/shar.c:1822
-msgid "more than one format element"
-msgstr ""
-
-#: src/shar.c:1827
-msgid "no conversion character"
-msgstr ""
-
-#: src/shar.c:1836
-msgid "format is too wide"
-msgstr ""
-
-#: src/shar.c:1848
-msgid "invalid conversion character"
-msgstr ""
-
-#: src/shar.c:1889
-#, fuzzy
-msgid "Opening"
+#: src/shar.c:1875
+#, c-format
+msgid "Opening `%s'"
 msgstr "`%s' açılıyor"
 
-#: src/shar.c:1904
-#, fuzzy
-msgid "Closing"
+#: src/shar.c:1886
+#, c-format
+msgid "Closing `%s'"
 msgstr "`%s' kapatılıyor"
 
-#: src/shar.c:2015
-msgid "No input files"
-msgstr "Hiçbir girdi dosyası yok"
-
-#: src/shar.c:2032
-#, c-format
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "LÜTFEN Usenet ya da halka açık ağlarda -X shar'lardan kaçınınız"
-
-#: src/shar.c:2056
-#, c-format
-msgid ""
-"The '%s' option may not be intermixed with file names\n"
-"unless the --intermix-type option has been specified."
-msgstr ""
-
-#: src/shar.c:2074
-#, c-format
-msgid "The '%s' option must appear before any file names"
-msgstr ""
-
-#: src/shar.c:2110
-#, c-format
-msgid ""
-"invalid compaction type:  %s\n"
-"the known types are:\n"
-msgstr ""
-
-#: src/shar.c:2149
-msgid "files on command line and --input-file-list specified"
-msgstr ""
-
-#: src/shar.c:2198
-#, c-format
-msgid "Created %d files\n"
-msgstr "%d dosya oluşturuldu\n"
-
-#: src/unshar-opts.c:433 src/unshar.c:394
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "`%s' e girilemiyor"
-
-#: src/unshar.c:168
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "%s'de kabuk komutu bulunamadı"
-
-#: src/unshar.c:184
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s, kabuk arşivinden çok, ham C kodunu andırıyor."
-
-#: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "%s'deki `kesme'den sonra kabuk komutu bulunamadı"
-
-#: src/unshar.c:241
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "%s, muhtemelen bir kabuk arşivi değil"
-
-#: src/unshar.c:242
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "`kesme' çizgisini %s izliyor"
-
-#: src/unshar.c:268
-#, c-format
-msgid "Starting `sh' process"
-msgstr "`sh' işlemi başlatılıyor"
-
-#: src/unshar.c:312 src/uudecode.c:459
+#: src/shar.c:1897 src/unshar.c:311 src/uudecode.c:460 src/uuencode.c:202
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Daha fazla bilgi için `%s --help' yazın.\n"
 
-#: src/unshar.c:316
+#: src/shar.c:1901 src/unshar.c:315
 #, c-format
 msgid "Usage: %s [OPTION]... [FILE]...\n"
 msgstr "Kullanımı: %s [SEÇENEK]... [DOSYA]...\n"
 
-#: src/unshar.c:317
+#: src/shar.c:1902
+msgid ""
+"Mandatory arguments to long options are mandatory for short options too.\n"
+"\n"
+"Giving feedback:\n"
+"      --help              display this help and exit\n"
+"      --version           output version information and exit\n"
+"  -q, --quiet, --silent   do not output verbose messages locally\n"
+"\n"
+"Selecting files:\n"
+msgstr ""
+"Uzun seçenekler için zorunlu argümanlar kısa seçenekler için de zorunludur.\n"
+"\n"
+"Geribesleme verme:\n"
+"      --help              bu yardımı görüntüle ve çık\n"
+"      --version           sürüm bilgisini göster ve çık\n"
+"  -q, --quiet, --silent   sözlü mesajları yerel görüntüleme\n"
+"\n"
+"Dosyalar seçiliyor:\n"
+
+#: src/shar.c:1913
+msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+msgstr "  -p, --intermix type     kip değiştirmek için dosya listesinde -[BTzZ]'ye izin ver\n"
+
+#: src/shar.c:1917
+msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+msgstr "  -p, --intermix-type     kip değiştirmek için dosya listesinde -[BTz]'ye izin ver\n"
+
+#: src/shar.c:1921
+msgid ""
+"  -S, --stdin-file-list   read file list from standard input\n"
+"\n"
+"Splitting output:\n"
+"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
+"\n"
+"Controlling the shar headers:\n"
+"  -n, --archive-name=NAME   use NAME to document the archive\n"
+"  -s, --submitter=ADDRESS   override the submitter name\n"
+"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+"  -c, --cut-mark            start the shar with a cut line\n"
+"  -t, --translate           translate messages in the script\n"
+"\n"
+"Selecting how files are stocked:\n"
+"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+"  -T, --text-files             treat all files as text\n"
+"  -B, --uuencode               treat all files as binary, use uuencode\n"
+"  -z, --gzip                   gzip and uuencode all files\n"
+"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+"  -j, --bzip2                  bzip2 and uuencode all files\n"
+msgstr ""
+" -S, --stdin-file-list dosya listesini standart girdiden oku\n"
+"\n"
+"Çıktıyı bölme:\n"
+" -o, --output-prefix=ÖNİSİM    ÖNİSİM.01'den ÖNİSİM.NN'e dek dosyalara çıkar\n"
+" -l, --whole-size-limit=BOYUT    dosyaları değil, arşivi BOYUT kilobayta böl\n"
+" -L, --spilt-size-limit=BOYUT    arşivi ya da dosyaları BOYUT kilobayta böl\n"
+"\n"
+"shar başlıklarını kontrol etme:\n"
+" -n, --archive-name=İSİM    arşivi belgelemek için İSİM'i kullan\n"
+" -s, --submitter=ADRES    sunanın adını hükümsüz kıl\n"
+" -a, --net-headers         çıktıyı sunan: & Arşiv-adı: başlıklar\n"
+" -c, --cut-mark         sharı kesik satırla başlat\n"
+" -t, --translate         betikteki mesajları çevir\n"
+"\n"
+"Dosya depolanma şeklini seçme:\n"
+"  -M, --mixed-uuencode         uukodlamayı dinamik kararlaştır (öntanımlı)\n"
+"  -T, --text-files             tüm dosyaları metin varsay\n"
+"  -B, --uuencode               tüm dosyaları iki tabanlı varsay, uukodla\n"
+"  -z, --gzip                   tüm dosyaları gzipleyip uukodla\n"
+"  -g, --level-for-gzip=DÜZEY   gzip'e geçiş -DÜZEY'i (öntanımlısı:9)\n"
+"  -j, --bzip2                  tüm dosyaları bzip2'leyip uukodla\n"
+
+#: src/shar.c:1945
+msgid ""
+"  -Z, --compress               compress and uuencode all files\n"
+"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+msgstr ""
+"  -Z, --compress               tüm dosyaları sıkıştır ve uukodla\n"
+"  -b, --bits-per-code=BIT      sıkıştırmaya geçiş -BIT'i (öntanımlısı:12)\n"
+
+#: src/shar.c:1950
+msgid ""
+"\n"
+"Protecting against transmission:\n"
+"  -w, --no-character-count      do not use `wc -c' to check size\n"
+"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+"  -F, --force-prefix            force the prefix character on every line\n"
+"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
+"\n"
+"Producing different kinds of shars:\n"
+"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+"  -P, --no-piping           exclusively use temporary files at unshar time\n"
+"  -x, --no-check-existing   blindly overwrite existing files\n"
+"  -X, --query-user          ask user before overwriting files (not for Net)\n"
+"  -m, --no-timestamp        do not restore file modification dates & times\n"
+"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+"  -f, --basename            restore in one directory, despite hierarchy\n"
+"      --no-i18n             do not produce internationalized shell script\n"
+msgstr ""
+"\n"
+"İletime karşı koruma:\n"
+"  -w, --no-character-count       boyutu kontrol etmek için `wc -c' kullanma\n"
+"  -D, --no-md5-digest            doğrulamak için `md5sum' özütünü kullanma\n"
+"  -F, --force-prefix             önek karakterini her satırda zorla kullan\n"
+"  -d, --here-delimiter=DİZGİ     shar'daki dosyaları sınırlamak için DİZGİ'yi kullan\n"
+"\n"
+"Değişik türlerde shar'lar üretme:\n"
+"  -V, --vanilla-operation   çok basit ve esnek shar'lar üret\n"
+"  -P, --no-piping           shar çözüleceğinde tamamen geçici dosyalar kullanarak çöz\n"
+"  -x, --no-check-existing   mevcut dosyaların üzerine körlemesine yaz\n"
+"  -X, --query-user          dosyaların üzerine yazmadan önce kullanıcıyı sor (Ağ için değil)\n"
+"  -m, --no-timestamp        dosya değişim tarih ve zamanını geri yükleme\n"
+"  -Q, --quit-unshar         shar çözüleceğinde mesajları dillendirmekten kaçın\n"
+"  -f, --basename            sıradüzeni yok sayıp, bir dizine geri yükle\n"
+"      --no-i18n             uluslararasılaştırılmış kabuk senaryosu üretme\n"
+
+#: src/shar.c:1968
+msgid ""
+"\n"
+"Option -o is required with -l or -L, option -n is required with -a.\n"
+msgstr ""
+"\n"
+"-o seçeneği -l ya da -L ile, -n seçeneği -a ile kullanılmalıdır.\n"
+
+#: src/shar.c:1972
+msgid "Option -g implies -z, option -b implies -Z.\n"
+msgstr "-g seçeneği -z, -b seçeneği -Z gerektirir.\n"
+
+#: src/shar.c:1975
+msgid "Option -g implies -z.\n"
+msgstr "-g seçeneği -z gerektirir.\n"
+
+#. TRANSLATORS: add the contact address for your translation team!
+#: src/shar.c:1979 src/unshar.c:330 src/uudecode.c:471 src/uuencode.c:212
+#, c-format
+msgid "Report bugs to <%s>.\n"
+msgstr "Yazılım hatalarını <%s>'e bildiriniz.\n"
+
+#: src/shar.c:1996
+#, c-format
+msgid "invalid file size limit `%s'"
+msgstr "geçersiz dosya boyutu limiti `%s'"
+
+#: src/shar.c:2032
+#, c-format
+msgid "invalid format (count field too wide): '%s'\n"
+msgstr "geçersiz biçem (sayma alanı çok geniş): '%s'\n"
+
+#: src/shar.c:2121
+#, c-format
+msgid "DEBUG was not selected at compile time"
+msgstr "HATA AYIKLAMA, derleme sırasında seçilmemiştir."
+
+#: src/shar.c:2141
+#, c-format
+msgid "Hard limit %s\n"
+msgstr "Donanım sınırı %s\n"
+
+#: src/shar.c:2183
+#, c-format
+msgid "This system doesn't support -Z ('compress'), use -z instead"
+msgstr "Bu sistem -Z'yi ('sıkıştır') desteklemiyor, yerine -z kullanınız"
+
+#: src/shar.c:2216
+#, c-format
+msgid "Soft limit %s\n"
+msgstr "Yazılım sınırı %s\n"
+
+#: src/shar.c:2231
+#, c-format
+msgid "illegal output prefix\n"
+msgstr "kuraldışı çıktı öneki\n"
+
+#: src/shar.c:2278 src/unshar.c:413 src/uudecode.c:509 src/uuencode.c:252
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Kopyahakkı (C) %s Free Software Foundation, Inc.\n"
+"Bu bir serbest yazılımdır; kopyalama koşulları için kaynak koduna bakınız.\n"
+"Hiçbir garantisi yoktur; hatta SATILABİLİRLİĞİ veya ŞAHSİ KULLANIMINIZA\n"
+"UYGUNLUĞU için bile garanti verilmez.\n"
+
+#: src/shar.c:2347
+#, c-format
+msgid "WARNING: No user interaction in vanilla mode"
+msgstr "UYARI: Vanilla kipinde kullanıcı etkileşimi olmaz"
+
+#: src/shar.c:2359
+#, c-format
+msgid "WARNING: Non-text storage options overridden"
+msgstr "UYARI: Metin dışı depolama seçenekleri geçersiz kılındı"
+
+#: src/shar.c:2388
+#, c-format
+msgid "Cannot use -a option without -n"
+msgstr "-a seçeneği, -n seçeneği olmaksızın kullanılamaz"
+
+#: src/shar.c:2394
+#, c-format
+msgid "Cannot use -l or -L option without -o"
+msgstr "-l ya da -L seçeneği, -o'suz kullanılamaz"
+
+#: src/shar.c:2436
+#, c-format
+msgid "No input files"
+msgstr "Hiçbir girdi dosyası yok"
+
+#: src/shar.c:2448
+#, c-format
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "LÜTFEN Usenet ya da halka açık ağlarda -X shar'lardan kaçınınız"
+
+#: src/shar.c:2514
+#, c-format
+msgid "Created %d files\n"
+msgstr "%d dosya oluşturuldu\n"
+
+#: src/unshar.c:167
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "%s'de kabuk komutu bulunamadı"
+
+#: src/unshar.c:183
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s, kabuk arşivinden çok, ham C kodunu andırıyor."
+
+#: src/unshar.c:219
+#, c-format
+msgid "Found no shell commands after `cut' in %s"
+msgstr "%s'deki `kesme'den sonra kabuk komutu bulunamadı"
+
+#: src/unshar.c:240
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "%s, muhtemelen bir kabuk arşivi değil"
+
+#: src/unshar.c:241
+#, c-format
+msgid "The `cut' line was followed by: %s"
+msgstr "`kesme' çizgisini %s izliyor"
+
+#: src/unshar.c:267
+#, c-format
+msgid "Starting `sh' process"
+msgstr "`sh' işlemi başlatılıyor"
+
+#: src/unshar.c:316
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -483,12 +489,10 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Uzun seçenekler için zorunlu argümanlar, kısa seçenekler için de "
-"zorunludur.\n"
+"Uzun seçenekler için zorunlu argümanlar, kısa seçenekler için de zorunludur.\n"
 "\n"
 "  -d, --directory=DİZİN       açmadan önce DİZİN'e gidin\n"
-"  -c, --overwrite             dosyaların üstüne yazmak için shar senaryosuna "
-"-c geçin\n"
+"  -c, --overwrite             dosyaların üstüne yazmak için shar senaryosuna -c geçin\n"
 "  -e, --exit-0                `--split-at=\"exit 0\"' ile aynı\n"
 "  -E, --split-at=DİZGİ        birleştirilmiş shar'ları DİZGİ'den sonra böl\n"
 "  -f, --force                 `-c' ile aynı\n"
@@ -497,89 +501,76 @@ msgstr ""
 "\n"
 "DOSYA yoksa, standart girdi okunur.\n"
 
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
+#: src/unshar.c:393
 #, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr "Yazılım hatalarını <%s>'e bildiriniz.\n"
+msgid "Cannot chdir to `%s'"
+msgstr "`%s' e girilemiyor"
 
-#: src/unshar.c:414 src/uudecode.c:506
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Kopyahakkı (C) %s Free Software Foundation, Inc.\n"
-"Bu bir serbest yazılımdır; kopyalama koşulları için kaynak koduna bakınız.\n"
-"Hiçbir garantisi yoktur; hatta SATILABİLİRLİĞİ veya ŞAHSİ KULLANIMINIZA\n"
-"UYGUNLUĞU için bile garanti verilmez.\n"
-
-#: src/unshar.c:445 src/unshar.c:507
+#: src/unshar.c:444 src/unshar.c:506
 #, c-format
 msgid "allocate file name buffer"
 msgstr "dosya adı tamponu ata"
 
-#: src/unshar.c:466
+#: src/unshar.c:465
 msgid "standard input"
 msgstr "standart girdi"
 
-#: src/unshar.c:528
+#: src/unshar.c:527
 #, c-format
 msgid "allocate file buffer"
 msgstr "dosya tamponu ata"
 
-#: src/uudecode.c:114 src/uudecode.c:444
+#: src/uudecode.c:113 src/uudecode.c:444
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Yazma hatası"
 
-#: src/uudecode.c:131 src/uudecode.c:218
+#: src/uudecode.c:130 src/uudecode.c:217
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Kısa dosya"
 
-#: src/uudecode.c:167
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: `son' çizgisi yok"
 
-#: src/uudecode.c:227
+#: src/uudecode.c:226
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: dolgulama karakteri `=' sonrası veri"
 
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
+#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: kuraldışı çizgi"
 
-#: src/uudecode.c:303
+#: src/uudecode.c:302
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: kuraldışı dosya adı: %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:309
 #, c-format
 msgid "No user `%s'"
 msgstr "Kullanıcı yok `%s'"
 
-#: src/uudecode.c:321
+#: src/uudecode.c:320
 #, c-format
 msgid "no memory for %d byte allocation"
 msgstr "%d bit ataması için bellek yok"
 
-#: src/uudecode.c:346
+#: src/uudecode.c:345
 #, c-format
 msgid "cannot access %s"
 msgstr "%s'e erişilemedi"
 
-#: src/uudecode.c:354
+#: src/uudecode.c:353
 #, c-format
 msgid "freopen of %s"
 msgstr "%s'in freaçılımı"
 
-#: src/uudecode.c:360
+#: src/uudecode.c:359
 #, c-format
 msgid "chmod of %s"
 msgstr "%s'in chkipi"
@@ -589,12 +580,12 @@ msgstr "%s'in chkipi"
 msgid "%s: No `begin' line"
 msgstr "%s: `başlangıç' çizgisi yok"
 
-#: src/uudecode.c:463
+#: src/uudecode.c:464
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Kullanım: %s [DOSYA]   \n"
 
-#: src/uudecode.c:464
+#: src/uudecode.c:465
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
@@ -606,7 +597,7 @@ msgstr ""
 "      --help                bu yardımı görüntüle ve çık\n"
 "      --version             sürüm bilgisini göster ve çık\n"
 
-#: src/uudecode.c:530
+#: src/uudecode.c:533
 #, c-format
 msgid ""
 "You cannot specify an output file when processing\n"
@@ -615,846 +606,306 @@ msgstr ""
 "Çok sayıda girdi dosyası işlerken bir çıktı dosyası\n"
 "belirleyemezsiniz.\n"
 
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
+#: src/uuencode.c:133 src/uuencode.c:301 src/uuencode.c:308
 #, c-format
 msgid "Write error"
 msgstr "Yazma hatası"
 
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
+#: src/uuencode.c:155 src/uuencode.c:186 src/uuencode.c:188
 #, c-format
 msgid "Read error"
 msgstr "Okuma hatası"
 
-#: src/uuencode.c:226
+#: src/uuencode.c:206
+#, c-format
+msgid "Usage: %s [INFILE] REMOTEFILE\n"
+msgstr "Kullanım: %s [İÇDOSYA] DIŞDOSYA\n"
+
+#: src/uuencode.c:207
+msgid ""
+"\n"
+"  -m, --base64    use base64 encoding as of RFC1521\n"
+"      --help      display this help and exit\n"
+"      --version   output version information and exit\n"
+msgstr ""
+"\n"
+"  -m, --base64      RFC1521'deki gibi 64 tabanlı kodlama kullan\n"
+"      --help        bu yardımı görüntüle ve çık\n"
+"      --version     sürüm bilgisini göster ve çık\n"
+
+#: src/uuencode.c:277
 #, c-format
 msgid "fopen-ing %s"
 msgstr "%s 'f'açılıyor"
 
-#: src/uuencode.c:228
+#: src/uuencode.c:279
 #, c-format
 msgid "fstat-ing %s"
 msgstr "%s 'f'statlanıyor"
 
-#: src/uuencode.c:254
-#, fuzzy, c-format
-msgid "Allocation failure"
-msgstr "dosya tamponu ata"
+#. TRANSLATORS:  This is a phony function generated for the purpose of
+#. constructing the strings to be extracted for translation.  Each string
+#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
+#. if you need to look up context.  These strings are all inserted into
+#. the shar-generated shell script so the shar user can create shar archives
+#. with messages localized for one locale.
+#.
+#: src/scripts.x:398
+msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
+msgstr "Not: md5toplamları control edilmiyor.  GNU coreutils kurmayı gözününde bulundurun."
 
-#: lib/error.c:188
-msgid "Unknown system error"
-msgstr "Bilinmeyen sistem hatası"
+#: src/scripts.x:399
+msgid ""
+"WARNING: not restoring timestamps.  Consider getting and\n"
+"installing GNU `touch', distributed in GNU coreutils..."
+msgstr ""
+"UYARI: zaman belirteçleri geri yüklenmiyor. GNU çekirdek araçları\n"
+" içinde dağıtılan GNU `touch' edinip yüklemeyi gözönünde bulundurun..."
 
-#: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
-msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: '%s' seçeneği belirsiz\n"
-
-#: lib/getopt.c:624 lib/getopt.c:628
+#: src/scripts.x:401
 #, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: '--%s' seçeneği argümansız kullanılır\n"
+msgid "lock directory %s exists"
+msgstr "kilit dizini %s mevcut"
 
-#: lib/getopt.c:637 lib/getopt.c:642
+#: src/scripts.x:402
 #, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: '%c%s' seçeneği argümansız kullanılır\n"
-
-#: lib/getopt.c:685 lib/getopt.c:704
-#, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: '--%s' seçeneği bir argümanla kullanılır\n"
-
-#: lib/getopt.c:742 lib/getopt.c:745
-#, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: '--%s' seçeneği bilinmiyor\n"
-
-#: lib/getopt.c:753 lib/getopt.c:756
-#, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: '%c%s' seçeneği bilinmiyor\n"
-
-#: lib/getopt.c:805 lib/getopt.c:808
-#, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: geçersiz seçenek -- '%c'\n"
-
-#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
-#, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: seçenek bir argümanla kullanılır -- '%c'\n"
-
-#: lib/getopt.c:934 lib/getopt.c:950
-#, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: '-W %s' seçeneği belirsiz\n"
-
-#: lib/getopt.c:974 lib/getopt.c:992
-#, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: '-W %s' seçeneği argümansız kullanılır\n"
-
-#: lib/getopt.c:1013 lib/getopt.c:1031
-#, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: '-W %s' seçeneği bir argümanla kullanılır\n"
-
-#: lib/openat-die.c:38
-#, fuzzy, c-format
-msgid "unable to record current working directory"
+msgid "failed to create %s lock directory"
 msgstr "%s kilit dizini oluşturulamadı"
 
-#: lib/openat-die.c:57
-#, fuzzy, c-format
-msgid "failed to return to initial working directory"
-msgstr "%s kilit dizini oluşturulamadı"
-
-#. TRANSLATORS:
-#. Get translations for open and closing quotation marks.
-#. The message catalog should translate "`" to a left
-#. quotation mark suitable for the locale, and similarly for
-#. "'".  For example, a French Unicode local should translate
-#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), respectively.
-#.
-#. If the catalog has no translation, we will try to
-#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
-#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
-#. current locale is not Unicode, locale_quoting_style
-#. will quote 'like this', and clocale_quoting_style will
-#. quote "like this".  You should always include translations
-#. for "`" and "'" even if U+2018 and U+2019 are appropriate
-#. for your locale.
-#.
-#. If you don't know what to put here, please see
-#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
-#. and use glyphs suitable for your language.
-#: lib/quotearg.c:312
-msgid "`"
-msgstr ""
-
-#: lib/quotearg.c:313
-msgid "'"
-msgstr ""
-
-#: lib/xalloc-die.c:34
-msgid "memory exhausted"
-msgstr "bellek tükendi"
-
-#: lib/xstrtol-error.c:63
+#: src/scripts.x:403
 #, c-format
-msgid "invalid %s%s argument '%s'"
-msgstr ""
+msgid "x - created lock directory %s."
+msgstr "x - kilit dizini oluşturuldu %s."
 
-#: lib/xstrtol-error.c:68
+#: src/scripts.x:404
 #, c-format
-msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
+msgid "x - failed to create lock directory %s."
+msgstr "x - kilit dizini oluşturulamadı %s."
 
-#: lib/xstrtol-error.c:72
+#: src/scripts.x:405
 #, c-format
-msgid "%s%s argument '%s' too large"
-msgstr ""
+msgid "x - created directory %s."
+msgstr "x - dizin oluşturuldu %s."
 
-#: libopts/autoopts.c:53
-#, fuzzy, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr "'%s'nin geri yüklemesi başarısız\n"
-
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
+#: src/scripts.x:406
 #, c-format
+msgid "x - failed to create directory %s."
+msgstr "x - dizin oluşturulamadı %s."
+
+#: src/scripts.x:407
+msgid "yes"
+msgstr "evet"
+
+#: src/scripts.x:408
+msgid "overwrite this file"
+msgstr "bu dosyanın üstüne yaz"
+
+#: src/scripts.x:409
+msgid "no"
+msgstr "hayır"
+
+#: src/scripts.x:410
+msgid "skip this file"
+msgstr "bu dosyayı atla"
+
+#: src/scripts.x:411
+msgid "all"
+msgstr "tümü"
+
+#: src/scripts.x:412
+msgid "overwrite all files"
+msgstr "tüm dosyaların üstüne yaz"
+
+#: src/scripts.x:413
+msgid "none"
+msgstr "hiçbiri"
+
+#: src/scripts.x:414
+msgid "overwrite no files"
+msgstr "hiçbir dosyanın üstüne yazma"
+
+#: src/scripts.x:415
+msgid "help"
+msgstr "yardım"
+
+#: src/scripts.x:416
+msgid "explain choices"
+msgstr "seçenekleri açıkla"
+
+#: src/scripts.x:417
+msgid "quit"
+msgstr "çıkış"
+
+#: src/scripts.x:418
+msgid "exit immediately"
+msgstr "derhal çık"
+
+#: src/scripts.x:419
 msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+"Archives must be unpacked in sequence!\n"
+"Please unpack part `cat ${lock_dir}/seq` next."
 msgstr ""
+"Arşivlerin paketi sırayla açılmalıdır!\n"
+"Lütfen bir sonra `cat ${lock_dir}/seq` bölümünü açınız."
 
-#: libopts/autoopts.c:66
+#: src/scripts.x:421
 #, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
+msgid "restore of %s failed"
+msgstr "%s'nin geri yüklemesi başarısız"
 
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, fuzzy, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "'%s'nin geri yüklemesi başarısız\n"
-
-#: libopts/version.c:124
+#: src/scripts.x:422
 #, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
+msgid "End of part %d, continue with part %d"
+msgstr "%d bölümünün sonu, %d bölümüyle devam edin"
 
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: '%s' seçeneği belirsiz\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
+#: src/scripts.x:423
 #, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
+msgid "End of %s part %d"
+msgstr "%s bölümünün sonu %d"
 
-#: libopts/find.c:90 libopts/find.c:95
+#: src/scripts.x:424
 #, c-format
-msgid "  %s%s\n"
-msgstr ""
+msgid "restoration warning:  size of %s is not %s"
+msgstr "geri yükleme uyarısı: %1$s'nin boyutu %2$s değil"
 
-#: libopts/check.c:159
+#: src/scripts.x:425
+msgid "(text)"
+msgstr "(metin)"
+
+#: src/scripts.x:426
+msgid "(compressed)"
+msgstr "(sıkıştırılmış)"
+
+#: src/scripts.x:427
+msgid "(gzipped)"
+msgstr "(gziplenmiş)"
+
+#: src/scripts.x:428
+msgid "(bzipped)"
+msgstr "(bziplenmiş)"
+
+#: src/scripts.x:429
+msgid "(binary)"
+msgstr "(iki tabanlı)"
+
+#: src/scripts.x:430
+msgid "archive"
+msgstr "arşiv"
+
+#: src/scripts.x:431
 #, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
+msgid "File %s is continued in part %d"
+msgstr "%s dosyası %d bölümünde devam etmektedir"
 
-#: libopts/alias.c:80 libopts/autoopts.c:217
+#: src/scripts.x:432
+msgid "Please unpack part 1 first!"
+msgstr "Lütfen önce ilk bölümü açınız!"
+
+#: src/scripts.x:433
+msgid "Please unpack part ${shar_sequence} next!"
+msgstr "Lütfen önce ${shar_sequence} bölümünü açınız!"
+
+#: src/scripts.x:434
 #, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
+msgid "x - STILL SKIPPING %s"
+msgstr "x - HÂLÂ ATLANIYOR %s"
 
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
+#: src/scripts.x:435
 #, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
+msgid "continuing file %s"
+msgstr "%s dosyasına devam ediliyor"
 
-#: libopts/version.c:164
+#: src/scripts.x:436
+msgid "(empty)"
+msgstr "(boş)"
+
+#: src/scripts.x:437
 #, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
+msgid "x - overwriting %s"
+msgstr "x - %s'nin üstüne yazılıyor"
 
-#: libopts/check.c:58
+#: src/scripts.x:438
 #, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
+msgid "overwrite %s"
+msgstr "%s'nin üstüne yaz"
 
-#: libopts/restore.c:109
+#: src/scripts.x:439
 #, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
+msgid "SKIPPING %s"
+msgstr "%s ATLANIYOR"
 
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
+#: src/scripts.x:440
+msgid "extraction aborted"
+msgstr "açılma iptal edildi"
 
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
+#: src/scripts.x:441
 #, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
+msgid "x - SKIPPING %s (file already exists)"
+msgstr "x - %s ATLANIYOR (dosya zaten var)"
 
-#: libopts/usage.c:836
+#: src/scripts.x:442
 #, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
+msgid "x - extracting %s %s"
+msgstr "x - %s %s açılıyor"
 
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
+#: src/scripts.x:443
 #, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
+msgid "File %s is complete"
+msgstr "Dosya %s tamamlandı"
 
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
+#: src/scripts.x:444
 #, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-#: libopts/makeshell.c:759
-#, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr ""
-
-#: libopts/configfile.c:1168
-#, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr ""
-
-#: libopts/text_mmap.c:100
-#, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr ""
-
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr ""
-
-#: libopts/file.c:76
-msgid "stat-ing for directory"
-msgstr ""
-
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: Sıradan bir dosya değil"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "%s 'f'açılıyor"
-
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "%s 'f'açılıyor"
-
-#: libopts/makeshell.c:837
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-#: libopts/find.c:439 libopts/reset.c:108
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: kuraldışı seçenek -- %c\n"
-
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: kuraldışı seçenek -- %c\n"
-
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: '--%s' seçeneği bilinmiyor\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: geçersiz seçenek -- '%c'\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:497
-#, fuzzy, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: '--%s' seçeneği bir argümanla kullanılır\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: '--%s' seçeneği argümansız kullanılır\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-#: libopts/save.c:512
-#, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr ""
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: '-W %s' seçeneği bir argümanla kullanılır\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:179 libopts/save.c:233
-#, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr ""
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr ""
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
+msgid "uudecoding file %s"
 msgstr "dosya %s uuçözülüyor"
 
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
+#: src/scripts.x:445
 #, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
+msgid "uncompressing file %s"
+msgstr "dosya %s'in sıkıştırması açılıyor"
 
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
+#: src/scripts.x:446
 #, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
+msgid "gunzipping file %s"
+msgstr "dosya %s gunzipleniyor"
 
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
+#: src/scripts.x:447
 #, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
+msgid "bunzipping file %s"
+msgstr "dosya %s bunzipleniyor"
 
-#: libopts/enum.c:73
+#: src/scripts.x:448
+msgid "MD5 check failed"
+msgstr "MD5 kontrolü başarısız"
+
+#: src/scripts.x:449
+msgid "You have unpacked the last part"
+msgstr "Son kısmı açtınız"
+
+#: src/scripts.x:450
 #, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
+msgid "x - removed lock directory %s."
+msgstr "x - kilit dizini silindi %s."
 
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
+#: src/scripts.x:451
+#, c-format
+msgid "x - failed to remove lock directory %s."
+msgstr "x - kilit dizini silinemedi %s."
 
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "-C reddediliyor, yerine -Z kullanın"
-
-# Is "popen" a typo for "open"?
-#~ msgid "popen(3) on: %s"
-#~ msgstr "paç(3) : %s"
-
-#~ msgid "fopen(3) of file %s"
-#~ msgstr "%s dosyasının façılımı(3)"
-
-#~ msgid "compressed"
-#~ msgstr "sıkıştırılmış"
-
-#~ msgid "gzipped"
-#~ msgstr "gziplendi"
-
-#~ msgid "bzipped"
-#~ msgstr "bziplendi"
-
-#~ msgid "binary"
-#~ msgstr "iki tabanlı"
-
-#~ msgid "pipe(2) failed"
-#~ msgstr "veri yolu(2) başarısız"
-
-#~ msgid "Could not fork"
-#~ msgstr "Çatallanamadı"
-
-#~ msgid "allocating output file name"
-#~ msgstr "çıktı dosya adı atanıyor"
-
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ "\n"
-#~ "Selecting files:\n"
-#~ msgstr ""
-#~ "Uzun seçenekler için zorunlu argümanlar kısa seçenekler için de "
-#~ "zorunludur.\n"
-#~ "\n"
-#~ "Geribesleme verme:\n"
-#~ "      --help              bu yardımı görüntüle ve çık\n"
-#~ "      --version           sürüm bilgisini göster ve çık\n"
-#~ "  -q, --quiet, --silent   sözlü mesajları yerel görüntüleme\n"
-#~ "\n"
-#~ "Dosyalar seçiliyor:\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix type     kip değiştirmek için dosya listesinde -"
-#~ "[BTzZ]'ye izin ver\n"
-
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     kip değiştirmek için dosya listesinde -[BTz]'ye "
-#~ "izin ver\n"
-
-#~ msgid ""
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "  -t, --translate           translate messages in the script\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
-#~ msgstr ""
-#~ " -S, --stdin-file-list dosya listesini standart girdiden oku\n"
-#~ "\n"
-#~ "Çıktıyı bölme:\n"
-#~ " -o, --output-prefix=ÖNİSİM    ÖNİSİM.01'den ÖNİSİM.NN'e dek dosyalara "
-#~ "çıkar\n"
-#~ " -l, --whole-size-limit=BOYUT    dosyaları değil, arşivi BOYUT kilobayta "
-#~ "böl\n"
-#~ " -L, --spilt-size-limit=BOYUT    arşivi ya da dosyaları BOYUT kilobayta "
-#~ "böl\n"
-#~ "\n"
-#~ "shar başlıklarını kontrol etme:\n"
-#~ " -n, --archive-name=İSİM    arşivi belgelemek için İSİM'i kullan\n"
-#~ " -s, --submitter=ADRES    sunanın adını hükümsüz kıl\n"
-#~ " -a, --net-headers         çıktıyı sunan: & Arşiv-adı: başlıklar\n"
-#~ " -c, --cut-mark         sharı kesik satırla başlat\n"
-#~ " -t, --translate         betikteki mesajları çevir\n"
-#~ "\n"
-#~ "Dosya depolanma şeklini seçme:\n"
-#~ "  -M, --mixed-uuencode         uukodlamayı dinamik kararlaştır "
-#~ "(öntanımlı)\n"
-#~ "  -T, --text-files             tüm dosyaları metin varsay\n"
-#~ "  -B, --uuencode               tüm dosyaları iki tabanlı varsay, uukodla\n"
-#~ "  -z, --gzip                   tüm dosyaları gzipleyip uukodla\n"
-#~ "  -g, --level-for-gzip=DÜZEY   gzip'e geçiş -DÜZEY'i (öntanımlısı:9)\n"
-#~ "  -j, --bzip2                  tüm dosyaları bzip2'leyip uukodla\n"
-
-#~ msgid ""
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "  -Z, --compress               tüm dosyaları sıkıştır ve uukodla\n"
-#~ "  -b, --bits-per-code=BIT      sıkıştırmaya geçiş -BIT'i "
-#~ "(öntanımlısı:12)\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "İletime karşı koruma:\n"
-#~ "  -w, --no-character-count       boyutu kontrol etmek için `wc -c' "
-#~ "kullanma\n"
-#~ "  -D, --no-md5-digest            doğrulamak için `md5sum' özütünü "
-#~ "kullanma\n"
-#~ "  -F, --force-prefix             önek karakterini her satırda zorla "
-#~ "kullan\n"
-#~ "  -d, --here-delimiter=DİZGİ     shar'daki dosyaları sınırlamak için "
-#~ "DİZGİ'yi kullan\n"
-#~ "\n"
-#~ "Değişik türlerde shar'lar üretme:\n"
-#~ "  -V, --vanilla-operation   çok basit ve esnek shar'lar üret\n"
-#~ "  -P, --no-piping           shar çözüleceğinde tamamen geçici dosyalar "
-#~ "kullanarak çöz\n"
-#~ "  -x, --no-check-existing   mevcut dosyaların üzerine körlemesine yaz\n"
-#~ "  -X, --query-user          dosyaların üzerine yazmadan önce kullanıcıyı "
-#~ "sor (Ağ için değil)\n"
-#~ "  -m, --no-timestamp        dosya değişim tarih ve zamanını geri yükleme\n"
-#~ "  -Q, --quit-unshar         shar çözüleceğinde mesajları dillendirmekten "
-#~ "kaçın\n"
-#~ "  -f, --basename            sıradüzeni yok sayıp, bir dizine geri yükle\n"
-#~ "      --no-i18n             uluslararasılaştırılmış kabuk senaryosu "
-#~ "üretme\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "-o seçeneği -l ya da -L ile, -n seçeneği -a ile kullanılmalıdır.\n"
-
-#~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr "-g seçeneği -z, -b seçeneği -Z gerektirir.\n"
-
-#~ msgid "Option -g implies -z.\n"
-#~ msgstr "-g seçeneği -z gerektirir.\n"
-
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "geçersiz dosya boyutu limiti `%s'"
-
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "HATA AYIKLAMA, derleme sırasında seçilmemiştir."
-
-#~ msgid "Hard limit %s\n"
-#~ msgstr "Donanım sınırı %s\n"
-
-#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr "Bu sistem -Z'yi ('sıkıştır') desteklemiyor, yerine -z kullanınız"
-
-#~ msgid "Soft limit %s\n"
-#~ msgstr "Yazılım sınırı %s\n"
-
-#~ msgid "illegal output prefix\n"
-#~ msgstr "kuraldışı çıktı öneki\n"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr "UYARI: Vanilla kipinde kullanıcı etkileşimi olmaz"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "UYARI: Metin dışı depolama seçenekleri geçersiz kılındı"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "-a seçeneği, -n seçeneği olmaksızın kullanılamaz"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "-l ya da -L seçeneği, -o'suz kullanılamaz"
-
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Kullanım: %s [İÇDOSYA] DIŞDOSYA\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64      RFC1521'deki gibi 64 tabanlı kodlama kullan\n"
-#~ "      --help        bu yardımı görüntüle ve çık\n"
-#~ "      --version     sürüm bilgisini göster ve çık\n"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part `cat ${lock_dir}/seq` next."
-#~ msgstr ""
-#~ "Arşivlerin paketi sırayla açılmalıdır!\n"
-#~ "Lütfen bir sonra `cat ${lock_dir}/seq` bölümünü açınız."
-
-#~ msgid "uncompressing file %s"
-#~ msgstr "dosya %s'in sıkıştırması açılıyor"
-
-#~ msgid "gunzipping file %s"
-#~ msgstr "dosya %s gunzipleniyor"
-
-#~ msgid "bunzipping file %s"
-#~ msgstr "dosya %s bunzipleniyor"
-
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ msgstr ""
-#~ "Uzun seçenekler için zorunlu olan argümanlar, kısa seçenekler için de "
-#~ "zorunludur.\n"
+#~ msgid "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ msgstr "Uzun seçenekler için zorunlu olan argümanlar, kısa seçenekler için de zorunludur.\n"
 
 #~ msgid ""
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Çıktı bölme:\n"
-#~ "  -o, --output-prefix=ÖNEK       Çıktıyı ÖNEK.01'den ÖNEK.NN'e dek "
-#~ "dosyalara gönder\n"
-#~ "  -l, --whole-size-limit=BOYUT   Dosyaları değil arşivi, BOYUT kilobayta "
-#~ "böl\n"
-#~ "  -L, --spilt-size-limit=BOYUT   Dosyaları ya da arşivi BOYUT kilobayta "
-#~ "böl\n"
+#~ "  -o, --output-prefix=ÖNEK       Çıktıyı ÖNEK.01'den ÖNEK.NN'e dek dosyalara gönder\n"
+#~ "  -l, --whole-size-limit=BOYUT   Dosyaları değil arşivi, BOYUT kilobayta böl\n"
+#~ "  -L, --spilt-size-limit=BOYUT   Dosyaları ya da arşivi BOYUT kilobayta böl\n"
 
 #~ msgid "denied writing FIFO (%s)"
 #~ msgstr "FIFO (%s) yazımı reddedildi"
@@ -1462,8 +913,17 @@ msgstr ""
 #~ msgid "not following symlink (%s)"
 #~ msgstr "simgesel link (%s) izlenemiyor"
 
+#~ msgid "restore of '%s' failed\n"
+#~ msgstr "'%s'nin geri yüklemesi başarısız\n"
+
 #~ msgid "End of part %ld, continue with part %ld"
 #~ msgstr "%1$ld bölümünün sonu, %2$ld bölümüyle devam edin"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: kuraldışı seçenek -- %c\n"
+
+#~ msgid "memory exhausted"
+#~ msgstr "bellek tükendi"
 
 #~ msgid "WARNING: not restoring timestamps.  Consider getting and"
 #~ msgstr "UYARI: Zaman belirteçleri geri yüklenmiyor.  GNU Dosya Hizmetleri"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils-4.12\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 2012-08-11 10:56-0700\n"
 "PO-Revision-Date: 2012-08-14 15:00+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
@@ -31,9 +31,7 @@ msgstr ""
 #.
 #: src/scripts.x:395
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Ghi chú: không kiểm tra các md5sum. Hãy suy tính cài đặt gói các tiện ích "
-"lõi coreutils của GNU."
+msgstr "Ghi chú: không kiểm tra các md5sum. Hãy suy tính cài đặt gói các tiện ích lõi coreutils của GNU."
 
 #: src/scripts.x:396
 msgid ""
@@ -90,7 +88,7 @@ msgstr "không"
 msgid "skip this file"
 msgstr "bỏ qua tập tin này"
 
-#: src/scripts.x:408 libopts/enum.c:488
+#: src/scripts.x:408
 msgid "all"
 msgstr "tất cả"
 
@@ -98,7 +96,7 @@ msgstr "tất cả"
 msgid "overwrite all files"
 msgstr "ghi đè lên mọi tập tin"
 
-#: src/scripts.x:410 libopts/enum.c:493
+#: src/scripts.x:410
 msgid "none"
 msgstr "không có"
 
@@ -250,26 +248,26 @@ msgstr "x - đã gỡ bỏ thư mục khoá %s."
 msgid "x - failed to remove lock directory %s."
 msgstr "x - gặp lỗi gỡ bỏ thư mục khoá %s."
 
-#: src/shar-opts.c:1680
+#: src/shar-opts.c:1650
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "Không thể mở lại %s như là stdin"
 
-#: src/shar-opts.c:1790
+#: src/shar-opts.c:1742
 msgid "shar usage error:\n"
 msgstr "cú pháp shar sai:\n"
 
-#: src/shar-opts.c:1826
+#: src/shar-opts.c:1778
 msgid "shar fatal error:\n"
 msgstr "lỗi shar nghiêm trọng:\n"
 
-#: src/shar-opts.c:1863
+#: src/shar-opts.c:1815
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
 
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
+#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
+#: src/uuencode-opts.c:479
 msgid "No memory for duping translated strings\n"
 msgstr "Không đủ bộ nhớ cho\"duping\" các chuỗi đã dịch\n"
 
@@ -427,7 +425,7 @@ msgstr "các tập tin trên dòng lệnh và --input-file-list được chỉ �
 msgid "Created %d files\n"
 msgstr "Đã tạo %d tập tin\n"
 
-#: src/unshar-opts.c:433 src/unshar.c:394
+#: src/unshar-opts.c:427 src/unshar.c:394
 #, c-format
 msgid "Cannot chdir to `%s'"
 msgstr "Không thể chdir (chuyển đổi thư mục) sang \"%s\""
@@ -486,21 +484,16 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy "
-"chọn ngắn.\n"
+"Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
 "\n"
-"  -d, --directory=THƯ_MỤC   \tchuyển đổi sang thư mục này trước khi giải "
-"nén\n"
-"  -c, --overwrite             gửi tùy chọn \"-c\" qua cho văn lệnh shar để "
-"ghi đè lên tập tin\n"
+"  -d, --directory=THƯ_MỤC   \tchuyển đổi sang thư mục này trước khi giải nén\n"
+"  -c, --overwrite             gửi tùy chọn \"-c\" qua cho văn lệnh shar để ghi đè lên tập tin\n"
 "\t\t(_ghi đè_)\n"
 "  -e, --exit-0                bằng \"--split-at=\"exit 0\"\" (_thoát_)\n"
-"  -E, --split-at=CHUỖI       chia tách các shar nối nhau sau chuỗi này "
-"(_chia tách ở_)\n"
+"  -E, --split-at=CHUỖI       chia tách các shar nối nhau sau chuỗi này (_chia tách ở_)\n"
 "  -f, --force                 \tbằng \"-c\" (_ép buộc_)\n"
 "      --help                  \thiển thị trợ giúp này rồi thoát (trợ giúp_)\n"
-"      --version               \txuất thông tin phiên bản rồi thoát (_phiên "
-"bản_)\n"
+"      --version               \txuất thông tin phiên bản rồi thoát (_phiên bản_)\n"
 "\n"
 "Không có TẬP TIN thì đọc thiết bị nhập chuẩn.\n"
 
@@ -608,10 +601,8 @@ msgid ""
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy "
-"chọn ngắn.\n"
-"  -o, --output-file=TẬP_TIN   chuyển kết xuất ra tập tin này (_tập tin "
-"xuất_)\n"
+"Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
+"  -o, --output-file=TẬP_TIN   chuyển kết xuất ra tập tin này (_tập tin xuất_)\n"
 "      --help               hiển thị _trợ giúp_ này rồi thoát\n"
 "      --version            xuất thông tin _phiên bản_ rồi thoát\n"
 
@@ -620,9 +611,7 @@ msgstr ""
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
-msgstr ""
-"Không cho phép ghi rõ một tập tin kết xuất khi xử lý nhiều tập tin nhập "
-"vào.\n"
+msgstr "Không cho phép ghi rõ một tập tin kết xuất khi xử lý nhiều tập tin nhập vào.\n"
 
 #: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
 #, c-format
@@ -766,436 +755,6 @@ msgstr "hậu tố không hợp lệ trong %s%s đối số '%s'"
 msgid "%s%s argument '%s' too large"
 msgstr "%s%s đối số '%s' quá lớn"
 
-#: libopts/autoopts.c:53
-#, fuzzy, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr "việc phục hồi %s bị lỗi"
-
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-
-#: libopts/autoopts.c:66
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
-
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, fuzzy, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "việc phục hồi %s bị lỗi"
-
-#: libopts/version.c:124
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
-
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: tùy chọn \"-W %s\" vẫn mơ hồ\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
-
-#: libopts/find.c:90 libopts/find.c:95
-#, c-format
-msgid "  %s%s\n"
-msgstr ""
-
-#: libopts/check.c:159
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
-
-#: libopts/version.c:164
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-
-#: libopts/check.c:58
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
-
-#: libopts/restore.c:109
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
-
-#: libopts/usage.c:836
-#, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
-
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
-#, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-#: libopts/makeshell.c:759
-#, fuzzy, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
-
-#: libopts/configfile.c:1168
-#, fuzzy, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
-
-#: libopts/text_mmap.c:100
-#, fuzzy, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
-
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, fuzzy, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
-
-#: libopts/file.c:76
-msgid "stat-ing for directory"
-msgstr ""
-
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: không phải là tập tin chuẩn"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "Đang fopen (mở) %s"
-
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "Đang fopen (mở) %s"
-
-#: libopts/makeshell.c:837
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-#: libopts/find.c:439 libopts/reset.c:108
-#, fuzzy, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: tùy chọn không hợp lệ  -- \"%c\"\n"
-
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: tùy chọn không hợp lệ  -- \"%c\"\n"
-
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: không nhận ra tùy chọn \"--%s\"\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: tùy chọn không hợp lệ  -- \"%c\"\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:497
-#, fuzzy, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: tùy chọn '--%s' yêu cầu một đối số\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: tùy chọn \"--%s\" không cho phép đối số\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-#: libopts/save.c:512
-#, fuzzy, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: tùy chọn '-W %s' yêu cầu một đối số\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:179 libopts/save.c:233
-#, fuzzy, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, fuzzy, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr "Tùy chọn '%s' phải xuất hiện trước tất cả các tập tin nào"
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
-msgstr "đang giải nén tập tin kiểu \"uu\" %s"
-
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
-
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:73
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
-
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
 #~ msgid "-C is being deprecated, use -Z instead"
 #~ msgstr "« -C\" bị phản đối nên dùng \"-Z\" thay thế."
 
@@ -1236,8 +795,7 @@ msgstr ""
 #~ "\n"
 #~ "Selecting files:\n"
 #~ msgstr ""
-#~ "Mọi đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy "
-#~ "chọn ngắn.\n"
+#~ "Mọi đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
 #~ "\n"
 #~ "Cách gởi thông tin phải hồi:\n"
 #~ "      --help              hiển thị trợ giúp này rồi thoát\n"
@@ -1246,28 +804,19 @@ msgstr ""
 #~ "\n"
 #~ "Lựa chọn tập tin:\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type    cho phép đối số -[BTzZ] trong danh sách tập tin "
-#~ "để chuyển đổi chế độ\n"
+#~ msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+#~ msgstr "  -p, --intermix-type    cho phép đối số -[BTzZ] trong danh sách tập tin để chuyển đổi chế độ\n"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ " -p, --intermix-type    cho phép đối số -[BTz] trong danh sách tập tin để "
-#~ "chuyển đổi chế độ\n"
+#~ msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+#~ msgstr " -p, --intermix-type    cho phép đối số -[BTz] trong danh sách tập tin để chuyển đổi chế độ\n"
 
 #~ msgid ""
 #~ "  -S, --stdin-file-list   read file list from standard input\n"
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ "\n"
 #~ "Controlling the shar headers:\n"
 #~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
@@ -1284,46 +833,35 @@ msgstr ""
 #~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
 #~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
 #~ msgstr ""
-#~ "  -S, --stdin-file-list        đọc danh sách tập tin từ đầu vào tiêu "
-#~ "chuẩn\n"
+#~ "  -S, --stdin-file-list        đọc danh sách tập tin từ đầu vào tiêu chuẩn\n"
 #~ "\n"
 #~ "Chia tách kết xuất:\n"
-#~ "  -o, --output-prefix=HIỀN_TỐ    xuất vào tập tin HIỀN_TỐ.01 đến HIỀN_TỐ."
-#~ "SỐ\n"
-#~ "  -l, --whole-size-limit=CỠ   chia tách kho (không phải tập tin) ra số kB "
-#~ "này\n"
-#~ "  -L, --split-size-limit=CỠ     chia tách kho (hoặc tập tin) ra số kB "
-#~ "này\n"
+#~ "  -o, --output-prefix=HIỀN_TỐ    xuất vào tập tin HIỀN_TỐ.01 đến HIỀN_TỐ.SỐ\n"
+#~ "  -l, --whole-size-limit=CỠ   chia tách kho (không phải tập tin) ra số kB này\n"
+#~ "  -L, --split-size-limit=CỠ     chia tách kho (hoặc tập tin) ra số kB này\n"
 #~ "\n"
 #~ "Điều khiển các dòng đầu shar:\n"
 #~ "  -n, --archive-name=TÊN    dùng tên này để diễn tả kho\n"
 #~ "  -s, --submitter=ĐỊA_CHỈ    ghi đè lên tên đã đệ trình\n"
-#~ "  -a, --net-headers         xuất dòng đầu \"Submitted-by:\" (đệ trình "
-#~ "bởi)\n"
+#~ "  -a, --net-headers         xuất dòng đầu \"Submitted-by:\" (đệ trình bởi)\n"
 #~ "\t\t\t\t\tvà \"Archive-name:\" (tên kho)\n"
 #~ "  -c, --cut-mark               bắt đầu vùng shar dùng một đường cắt\n"
 #~ "  -t, --translate                dịch các thông điệp trpng văn lệnh\n"
 #~ "\n"
 #~ "Chọn cách cất giữ tập tin:\n"
-#~ "  -M, --mixed-uuencode         quyết định động mã UU (uuencode): mặc "
-#~ "định\n"
+#~ "  -M, --mixed-uuencode         quyết định động mã UU (uuencode): mặc định\n"
 #~ "  -T, --text-files                          thấy mọi tập tin là nhập thô\n"
-#~ "  -B, --uuencode                      thấy mọi tập tin là nhị phân, dùng "
-#~ "mã UU\n"
-#~ "  -z, --gzip                                 nén gzip và mã hoá UU mọi "
-#~ "tập tin\n"
-#~ "  -g, --level-for-gzip=CẤP      gửi cấp này (mặc định là 9) cho trình "
-#~ "gzip\n"
-#~ "  -j, --bzip2                               nén bzip2 và mã hoá UU mọi "
-#~ "tập tin\n"
+#~ "  -B, --uuencode                      thấy mọi tập tin là nhị phân, dùng mã UU\n"
+#~ "  -z, --gzip                                 nén gzip và mã hoá UU mọi tập tin\n"
+#~ "  -g, --level-for-gzip=CẤP      gửi cấp này (mặc định là 9) cho trình gzip\n"
+#~ "  -j, --bzip2                               nén bzip2 và mã hoá UU mọi tập tin\n"
 
 #~ msgid ""
 #~ "  -Z, --compress               compress and uuencode all files\n"
 #~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
 #~ msgstr ""
 #~ "  -Z, --compress                       nén và mã hoá UU mọi tập tin\n"
-#~ "  -b, --bits-per-code=SỐ_BIT        gửi \"-bSỐ_BIT\" (mặc định là 12) "
-#~ "sang trình nén\n"
+#~ "  -b, --bits-per-code=SỐ_BIT        gửi \"-bSỐ_BIT\" (mặc định là 12) sang trình nén\n"
 
 #~ msgid ""
 #~ "\n"
@@ -1331,53 +869,41 @@ msgstr ""
 #~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
 #~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
 #~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
+#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
 #~ "\n"
 #~ "Producing different kinds of shars:\n"
 #~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
+#~ "  -P, --no-piping           exclusively use temporary files at unshar time\n"
 #~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
+#~ "  -X, --query-user          ask user before overwriting files (not for Net)\n"
+#~ "  -m, --no-timestamp        do not restore file modification dates & times\n"
 #~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
 #~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
+#~ "      --no-i18n             do not produce internationalized shell script\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Bảo vệ chống truyền:\n"
 #~ "  -w, --no-character-count      đừng dùng \"wc -c\" để kiểm tra kích cỡ\n"
 #~ "  -D, --no-md5-digest\t\tđừng dùng bản tóm tắt md5sum để thẩm tra\n"
 #~ "  -F, --force-prefix            \tép buộc ký tự tiền tố trên mọi dòng\n"
-#~ "  -d, --here-delimiter=CHUỖI\tdùng chuỗi này để định giới những tập tin "
-#~ "trong shar\n"
+#~ "  -d, --here-delimiter=CHUỖI\tdùng chuỗi này để định giới những tập tin trong shar\n"
 #~ "\n"
 #~ "Tạo các kiểu shar khác nhau :\n"
 #~ "  -V, --vanilla-operation   \t\ttạo shar kiểu rất đơn giản và dễ sử dụng\n"
 #~ "  -P, --no-piping           \t\tdùng chỉ tập tin tạm thời vào lúc unshar\n"
-#~ "  -x, --no-check-existing   \t\tghi đè lên tập tin tồn tại, không kiểm "
-#~ "tra trước\n"
-#~ "  -X, --query-user          \t\thỏi người dùng trước khi ghi đè lên tập "
-#~ "tin (không phải cho Mạng)\n"
+#~ "  -x, --no-check-existing   \t\tghi đè lên tập tin tồn tại, không kiểm tra trước\n"
+#~ "  -X, --query-user          \t\thỏi người dùng trước khi ghi đè lên tập tin (không phải cho Mạng)\n"
 #~ "  -m, --no-timestamp        \tđừng phục hồi giờ/ngày sửa đổi tập tin\n"
-#~ "  -Q, --quiet-unshar        \ttránh hiển thị thông điệp dài vào lúc "
-#~ "unshar (_im_)\n"
-#~ "  -f, --basename            \tphục hồi trong cùng một thư mục, không kể "
-#~ "phân cấp\n"
-#~ "      --no-i18n             \t\t\tkhông tạo văn lệnh trình bao đã quốc tế "
-#~ "hóa\n"
+#~ "  -Q, --quiet-unshar        \ttránh hiển thị thông điệp dài vào lúc unshar (_im_)\n"
+#~ "  -f, --basename            \tphục hồi trong cùng một thư mục, không kể phân cấp\n"
+#~ "      --no-i18n             \t\t\tkhông tạo văn lệnh trình bao đã quốc tế hóa\n"
 
 #~ msgid ""
 #~ "\n"
 #~ "Option -o is required with -l or -L, option -n is required with -a.\n"
 #~ msgstr ""
 #~ "\n"
-#~ "Tùy chọn \"-o\" cần thiết với \"-l\" or \"-L\", tùy chọn \"-n\" cần thiết "
-#~ "với \"-a\".\n"
+#~ "Tùy chọn \"-o\" cần thiết với \"-l\" or \"-L\", tùy chọn \"-n\" cần thiết với \"-a\".\n"
 
 #~ msgid "Option -g implies -z, option -b implies -Z.\n"
 #~ msgstr "Tùy chọn \"-g\" ngụ ý \"-z\", tùy chọn \"-b\" ngụ ý \"-Z\".\n"
@@ -1395,9 +921,7 @@ msgstr ""
 #~ msgstr "Hạn chế cứng %s\n"
 
 #~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr ""
-#~ "Hệ thống này không hỗ trợ tùy chọn \"-Z\" (nén) nên hãy sử dụng \"-z\" "
-#~ "thay thế."
+#~ msgstr "Hệ thống này không hỗ trợ tùy chọn \"-Z\" (nén) nên hãy sử dụng \"-z\" thay thế."
 
 #~ msgid "Soft limit %s\n"
 #~ msgstr "Hạn chế mềm %s\n"
@@ -1406,8 +930,7 @@ msgstr ""
 #~ msgstr "không cho phép tiền tố xuất\n"
 
 #~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr ""
-#~ "CẢNH BÁO: trong chế độ vani (đơn giản) không tương tác với người dùng"
+#~ msgstr "CẢNH BÁO: trong chế độ vani (đơn giản) không tương tác với người dùng"
 
 #~ msgid "WARNING: Non-text storage options overridden"
 #~ msgstr "CẢNH BÁO: các tùy chọn lưu trữ khác văn bản không có quyền cao hơn"
@@ -1451,31 +974,22 @@ msgstr ""
 #~ msgid "bunzipping file %s"
 #~ msgstr "đang giải nén tập tin bzip %s"
 
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ msgstr ""
-#~ "Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với "
-#~ "tùy chọn ngắn.\n"
+#~ msgid "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ msgstr "Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
 
 #~ msgid ""
 #~ "\n"
 #~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
+#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
 #~ msgstr ""
 #~ "\n"
 #~ "Chia tách kết xuất:\n"
-#~ "  -o, --output-prefix=TIỀN_TỐ    _xuất_ ra các tập tin TIỀN_TỐ.01 đến "
-#~ "TIỀN_TỐ.NN (_tiền tố_\n"
-#~ "  -l, --whole-size-limit=CỠ   \tchia tách kho nén (không phải tập tin) ra "
-#~ "phần CỠ KB\n"
+#~ "  -o, --output-prefix=TIỀN_TỐ    _xuất_ ra các tập tin TIỀN_TỐ.01 đến TIỀN_TỐ.NN (_tiền tố_\n"
+#~ "  -l, --whole-size-limit=CỠ   \tchia tách kho nén (không phải tập tin) ra phần CỠ KB\n"
 #~ "\t(_hạn-chế-toàn-kích_cỡ_)\n"
-#~ "  -L, --split-size-limit=CỠ   \t_chia tách_ kho nén, hay tập tin, ra phần "
-#~ "CỠ KB\n"
+#~ "  -L, --split-size-limit=CỠ   \t_chia tách_ kho nén, hay tập tin, ra phần CỠ KB\n"
 #~ "\t(_hạn-chế-kích_cỡ-bị-chia-tách_)\n"
 
 #~ msgid "denied writing FIFO (%s)"

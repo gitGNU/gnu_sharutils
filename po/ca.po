@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils-4.11\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 2011-02-05 11:12-0800\n"
 "PO-Revision-Date: 2011-04-11 22:43+0200\n"
 "Last-Translator: Jordi Mallach <jordi@gnu.org>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -18,457 +18,482 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.1\n"
 
-#. TRANSLATORS:  This is a phony function generated for the purpose of
-#. constructing the strings to be extracted for translation.  Each string
-#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
-#. if you need to look up context.  These strings are all inserted into
-#. the shar-generated shell script so the shar user can create shar archives
-#. with messages localized for one locale.
-#.
-#: src/scripts.x:395
-msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Nota: no es verifiquen les sumes md5. Considereu instaŀlar GNU coreutils."
+# Amb el mateix format que els errors de la libc.  ivb
+#: lib/error.c:181
+msgid "Unknown system error"
+msgstr "S'ha produït un error desconegut del sistema"
 
-#: src/scripts.x:396
-msgid ""
-"WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
-msgstr ""
-"AVÍS: no es restauren les marques de temps. Considereu obtenir i\n"
-"instaŀlar GNU «touch», distribuït amb GNU coreutils…"
-
-#: src/scripts.x:398
+#: lib/getopt.c:527 lib/getopt.c:543
 #, c-format
-msgid "lock directory %s exists"
-msgstr "el directori de blocatge %s existeix"
+msgid "%s: option '%s' is ambiguous\n"
+msgstr "%s: l’opció «%s» és ambigua\n"
 
-#: src/scripts.x:399
+#: lib/getopt.c:576 lib/getopt.c:580
 #, c-format
-msgid "failed to create %s lock directory"
-msgstr "no s’ha pogut crear el directori de blocatge %s"
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: l’opció «--%s» no admet arguments\n"
 
-#: src/scripts.x:400
+#: lib/getopt.c:589 lib/getopt.c:594
 #, c-format
-msgid "x - created lock directory %s."
-msgstr "x - s’ha creat el directori de blocatge %s."
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: l’opció «%c%s» no admet arguments\n"
 
-#: src/scripts.x:401
+#: lib/getopt.c:637 lib/getopt.c:656
 #, c-format
-msgid "x - failed to create lock directory %s."
-msgstr "x - no s’ha pogut crear el directori de blocatge %s."
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: l'opció «--%s» necessita un argument\n"
 
-#: src/scripts.x:402
+#: lib/getopt.c:694 lib/getopt.c:697
 #, c-format
-msgid "x - created directory %s."
-msgstr "x - s’ha creat el directori %s."
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: l’opció «--%s» no és reconeguda\n"
 
-#: src/scripts.x:403
+#: lib/getopt.c:705 lib/getopt.c:708
 #, c-format
-msgid "x - failed to create directory %s."
-msgstr "x - no s’ha pogut crear el directori %s."
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: l’opció «%c%s» no és reconeguda\n"
 
-#: src/scripts.x:404
-msgid "yes"
-msgstr "sí"
-
-#: src/scripts.x:405
-msgid "overwrite this file"
-msgstr "sobreescriu aquest fitxer"
-
-#: src/scripts.x:406
-msgid "no"
-msgstr "no"
-
-#: src/scripts.x:407
-msgid "skip this file"
-msgstr "omet aquest fitxer"
-
-#: src/scripts.x:408 libopts/enum.c:488
-msgid "all"
-msgstr "tots"
-
-#: src/scripts.x:409
-msgid "overwrite all files"
-msgstr "sobreescriu tots els fitxers"
-
-#: src/scripts.x:410 libopts/enum.c:493
-msgid "none"
-msgstr "cap"
-
-#: src/scripts.x:411
-msgid "overwrite no files"
-msgstr "no sobreescrigues cap fitxer"
-
-#: src/scripts.x:412
-msgid "help"
-msgstr "ajuda"
-
-#: src/scripts.x:413
-msgid "explain choices"
-msgstr "explica les opcions"
-
-#: src/scripts.x:414
-msgid "quit"
-msgstr "surt"
-
-#: src/scripts.x:415
-msgid "exit immediately"
-msgstr "surt immediatament"
-
-#: src/scripts.x:416
+#: lib/getopt.c:757 lib/getopt.c:760
 #, c-format
-msgid "restore of %s failed"
-msgstr "ha fallat la restauració de %s"
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: l’opció «%c» no és vàlida\n"
 
-#: src/scripts.x:417
+#: lib/getopt.c:810 lib/getopt.c:827 lib/getopt.c:1035 lib/getopt.c:1053
 #, c-format
-msgid "End of part %d, continue with part %d"
-msgstr "Final de la part %d, continua amb la part %d"
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: l’opció «%c» necessita un argument\n"
 
-#: src/scripts.x:418
+#: lib/getopt.c:883 lib/getopt.c:899
 #, c-format
-msgid "End of %s part %d"
-msgstr "Final de la part %2$d del fitxer %1$s"
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: l’opció «-W %s» és ambigua\n"
 
-#: src/scripts.x:419
+#: lib/getopt.c:923 lib/getopt.c:941
 #, c-format
-msgid "restoration warning:  size of %s is not %s"
-msgstr "avís de restauració:  la mida de %s no és %s"
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: l’opció «-W %s» no admet arguments\n"
 
-#: src/scripts.x:420 src/shar.c:1306
-msgid "(text)"
-msgstr "(text)"
-
-#: src/scripts.x:421
-msgid "(compressed)"
-msgstr "(comprimit)"
-
-#: src/scripts.x:422
-msgid "(gzipped)"
-msgstr "(comprimit amb «gzip»)"
-
-# És bzip2, empra l'opció j de tar. jm
-#: src/scripts.x:423
-msgid "(bzipped)"
-msgstr "(comprimit amb «bzip2»)"
-
-#: src/scripts.x:424
-msgid "(binary)"
-msgstr "(binari)"
-
-#: src/scripts.x:425
-msgid "archive"
-msgstr "arxiu"
-
-#: src/scripts.x:426
+#: lib/getopt.c:962 lib/getopt.c:980
 #, c-format
-msgid "File %s is continued in part %d"
-msgstr "El fitxer %s continua a la part %d"
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: l'opció «-W %s» necessita un argument\n"
 
-#: src/scripts.x:427
-msgid "Please unpack part 1 first!"
-msgstr "Desempaqueteu la primera part primer!"
-
-#: src/scripts.x:428
-msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Desempaqueteu la part ${shar_sequence} a continuació!"
-
-#: src/scripts.x:429
-#, c-format
-msgid "x - STILL SKIPPING %s"
-msgstr "x - ENCARA S'ESTÀ OMETENT %s"
-
-#: src/scripts.x:430
-#, c-format
-msgid "continuing file %s"
-msgstr "s'està continuant amb el fitxer %s"
-
-#: src/scripts.x:431
-msgid "(empty)"
-msgstr "(buit)"
-
-#: src/scripts.x:432
-#, c-format
-msgid "x - overwriting %s"
-msgstr "x - s'està sobreescrivint %s"
-
-#: src/scripts.x:433
-#, c-format
-msgid "overwrite %s"
-msgstr "sobreescriu %s"
-
-#: src/scripts.x:434
-#, c-format
-msgid "SKIPPING %s"
-msgstr "S'ESTÀ OMETENT %s"
-
-#: src/scripts.x:435
-msgid "extraction aborted"
-msgstr "s'ha avortat l'extracció"
-
-#: src/scripts.x:436
-#, c-format
-msgid "x - SKIPPING %s (file already exists)"
-msgstr "x - S'ESTÀ OMETENT %s (el fitxer ja existeix)"
-
-#: src/scripts.x:437
-#, c-format
-msgid "x - extracting %s %s"
-msgstr "x - s’està extraient %s %s"
-
-#: src/scripts.x:438
-#, c-format
-msgid "File %s is complete"
-msgstr "El fitxer %s és complet"
-
-#: src/scripts.x:439
-#, c-format
-msgid "uudecoding file %s"
-msgstr "S'està decodificant el fitxer %s amb «uudecode»"
-
-#: src/scripts.x:440
-msgid "MD5 check failed"
-msgstr "Ha fallat la comprovació de la suma MD5"
-
-#: src/scripts.x:441
-msgid "You have unpacked the last part"
-msgstr "Heu desempaquetat l'última part"
-
-#: src/scripts.x:442
-#, c-format
-msgid "x - removed lock directory %s."
-msgstr "x - s'ha suprimit el directori: %s."
-
-#: src/scripts.x:443
-#, c-format
-msgid "x - failed to remove lock directory %s."
-msgstr "x - no s'ha pogut suprimir el directori de blocatge %s."
-
-#: src/shar-opts.c:1680
-#, fuzzy, c-format
-msgid "Cannot reopen %s as stdin"
-msgstr "No es pot obrir el fitxer %s"
-
-#: src/shar-opts.c:1790
-msgid "shar usage error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1826
-msgid "shar fatal error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1863
-#, c-format
-msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
-
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
-#, fuzzy
-msgid "No memory for duping translated strings\n"
-msgstr "no hi ha memòria per a assignar %d octets"
-
-#: src/shar.c:372
+#: src/shar.c:416
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "s'ha produït un error de format de printf:  %s\n"
 
-#: src/shar.c:423
-#, fuzzy
-msgid "sharutils bug - no status"
+#: src/shar.c:467
+#, c-format
+msgid "sharutils bug - no status\n"
 msgstr "error de sharutils - sense estat\n"
 
-#: src/shar.c:788
+#: src/shar.c:823
+#, c-format
 msgid "Too many directories for mkdir generation"
 msgstr "Hi ha massa directoris per a la generació amb mkdir"
 
-#: src/shar.c:871 src/shar.c:1541
+#: src/shar.c:906 src/shar.c:1573
 #, c-format
 msgid "Cannot access %s"
 msgstr "No es pot accedir a %s"
 
-#: src/shar.c:948 src/unshar.c:376
+#: src/shar.c:956
+#, c-format
+msgid "-C is being deprecated, use -Z instead"
+msgstr "L'opció -C és obsoleta, empreu -Z en el seu lloc"
+
+#: src/shar.c:997 src/unshar.c:375
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "No es pot obtenir el nom del directori actual"
 
-#: src/shar.c:1005 src/shar.c:1346
+#: src/shar.c:1066 src/shar.c:1388
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Fitxer nou, falten %s, "
 
-#: src/shar.c:1006 src/shar.c:1347
+#: src/shar.c:1067 src/shar.c:1389
 #, c-format
 msgid "Limit still %s\n"
 msgstr "El límit encara és %s\n"
 
-#: src/shar.c:1028
+#: src/shar.c:1090 src/shar.c:1471
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Fitxer d'inici %s\n"
 
-#: src/shar.c:1081
-#, fuzzy
-msgid "Could not popen command"
+#: src/shar.c:1141
+#, c-format
+msgid "Could not popen 'wc' command:  %s\n"
 msgstr "No s'ha pogut fer «popen» de l'ordre «wc»: %s\n"
 
-#: src/shar.c:1162
+#: src/shar.c:1202
 #, c-format
 msgid "Cannot open file %s"
 msgstr "No es pot obrir el fitxer %s"
 
-#: src/shar.c:1296 src/shar.c:1305
+#: src/shar.c:1257
+#, c-format
+msgid "popen(3) on: %s"
+msgstr "popen(3) en: %s"
+
+#: src/shar.c:1280
+#, c-format
+msgid "fopen(3) of file %s"
+msgstr "fopen(3) del fitxer %s"
+
+#: src/shar.c:1332
 msgid "text"
 msgstr "text"
 
-#: src/shar.c:1311 src/shar.c:1322
-msgid "call"
-msgstr ""
+#: src/shar.c:1342
+msgid "compressed"
+msgstr "comprimit amb «compress»"
 
-#: src/shar.c:1335
+#: src/shar.c:1343
+msgid "gzipped"
+msgstr "comprimit amb «gzip»"
+
+# És bzip2, empra l'opció j de tar. jm
+#: src/shar.c:1344
+msgid "bzipped"
+msgstr "comprimit amb «bzip2»"
+
+#: src/shar.c:1345
+msgid "binary"
+msgstr "binari"
+
+#: src/shar.c:1356
+#, c-format
+msgid "pipe(2) failed"
+msgstr "ha fallat pipe(2)"
+
+#: src/shar.c:1367
+#, c-format
+msgid "Could not fork"
+msgstr "No s'ha pogut fer «fork»"
+
+#: src/shar.c:1379
 #, c-format
 msgid "File %s (%s)"
 msgstr "Fitxer %s (%s)"
 
-#: src/shar.c:1426
-#, fuzzy, c-format
-msgid "Continuing file %s\n"
-msgstr "s'està continuant amb el fitxer %s"
-
-#: src/shar.c:1536
+#: src/shar.c:1568
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: No és un fitxer ordinari"
 
-#: src/shar.c:1563
+#: src/shar.c:1588
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "En shar: mida restant %s\n"
 
-#: src/shar.c:1583
+#: src/shar.c:1606
 msgid "empty"
 msgstr "buit"
 
-#: src/shar.c:1622
+#: src/shar.c:1649
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "S'està desant %s (%s)"
 
-#: src/shar.c:1807
-#, fuzzy, c-format
-msgid "Invalid format for output file names (%s): %s"
-msgstr "el format és invalid (el camp de compte és massa ample): «%s»\n"
+#: src/shar.c:1869
+#, c-format
+msgid "allocating output file name"
+msgstr "s'està assignant el nom del fitxer de sortida"
 
-#: src/shar.c:1822
-msgid "more than one format element"
-msgstr ""
-
-#: src/shar.c:1827
-msgid "no conversion character"
-msgstr ""
-
-#: src/shar.c:1836
-msgid "format is too wide"
-msgstr ""
-
-#: src/shar.c:1848
-msgid "invalid conversion character"
-msgstr ""
-
-#: src/shar.c:1889
-#, fuzzy
-msgid "Opening"
+#: src/shar.c:1875
+#, c-format
+msgid "Opening `%s'"
 msgstr "S'està obrint «%s»"
 
-#: src/shar.c:1904
-#, fuzzy
-msgid "Closing"
+#: src/shar.c:1886
+#, c-format
+msgid "Closing `%s'"
 msgstr "S'està tancant «%s»"
 
-#: src/shar.c:2015
-msgid "No input files"
-msgstr "No hi ha fitxers d'entrada"
-
-#: src/shar.c:2032
-#, c-format
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "SI US PLAU, evitau shars creats amb -X a Usenet o xarxes públiques"
-
-#: src/shar.c:2056
-#, c-format
-msgid ""
-"The '%s' option may not be intermixed with file names\n"
-"unless the --intermix-type option has been specified."
-msgstr ""
-
-#: src/shar.c:2074
-#, c-format
-msgid "The '%s' option must appear before any file names"
-msgstr ""
-
-#: src/shar.c:2110
-#, c-format
-msgid ""
-"invalid compaction type:  %s\n"
-"the known types are:\n"
-msgstr ""
-
-#: src/shar.c:2149
-msgid "files on command line and --input-file-list specified"
-msgstr ""
-
-#: src/shar.c:2198
-#, c-format
-msgid "Created %d files\n"
-msgstr "S'han creat %d fitxers\n"
-
-#: src/unshar-opts.c:433 src/unshar.c:394
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "No es pot canviar al directori «%s»"
-
-#: src/unshar.c:168
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "No s'ha trobat ordres del shell a %s"
-
-#: src/unshar.c:184
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s sembla codi C cru, no un arxiu del shell"
-
-#: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "No s'ha trobat cap ordre del shell després de «cut» a %s"
-
-#: src/unshar.c:241
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "Probablement %s no sigui un arxiu del shell"
-
-#: src/unshar.c:242
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "La línia «cut» estava seguida per: %s"
-
-#: src/unshar.c:268
-#, c-format
-msgid "Starting `sh' process"
-msgstr "S'està iniciant el proces «sh»"
-
-#: src/unshar.c:312 src/uudecode.c:459
+#: src/shar.c:1897 src/unshar.c:311 src/uudecode.c:460 src/uuencode.c:202
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Proveu «%s --help» per a obtenir més informació.\n"
 
-#: src/unshar.c:316
+#: src/shar.c:1901 src/unshar.c:315
 #, c-format
 msgid "Usage: %s [OPTION]... [FILE]...\n"
 msgstr "Forma d’ús: %s [OPCIÓ]… [FITXER]…\n"
 
-#: src/unshar.c:317
+#: src/shar.c:1902
+msgid ""
+"Mandatory arguments to long options are mandatory for short options too.\n"
+"\n"
+"Giving feedback:\n"
+"      --help              display this help and exit\n"
+"      --version           output version information and exit\n"
+"  -q, --quiet, --silent   do not output verbose messages locally\n"
+"\n"
+"Selecting files:\n"
+msgstr ""
+"Els arguments obligatoris per a les opcions llargues també són obligatoris\n"
+"per a les opcions curtes.\n"
+"\n"
+"Obtenció d'ajuda:\n"
+"      --help              mostra aquesta ajuda i surt\n"
+"      --version           informa de la versió i surt\n"
+"  -q, --quiet, --silent   no mostres missatges detallats localment\n"
+"\n"
+"Selecció de fitxers:\n"
+
+#: src/shar.c:1913
+msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+msgstr ""
+"  -p, --intermix-type     permet -[BTzZ] a les llistes de fitxers per a\n"
+"                          canviar el mode\n"
+
+#: src/shar.c:1917
+msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+msgstr ""
+"  -p, --intermix-type     permet -[BTz] a les llistes de fitxers per a\n"
+"                          canviar el mode\n"
+"\n"
+
+#: src/shar.c:1921
+msgid ""
+"  -S, --stdin-file-list   read file list from standard input\n"
+"\n"
+"Splitting output:\n"
+"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
+"\n"
+"Controlling the shar headers:\n"
+"  -n, --archive-name=NAME   use NAME to document the archive\n"
+"  -s, --submitter=ADDRESS   override the submitter name\n"
+"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+"  -c, --cut-mark            start the shar with a cut line\n"
+"  -t, --translate           translate messages in the script\n"
+"\n"
+"Selecting how files are stocked:\n"
+"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+"  -T, --text-files             treat all files as text\n"
+"  -B, --uuencode               treat all files as binary, use uuencode\n"
+"  -z, --gzip                   gzip and uuencode all files\n"
+"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+"  -j, --bzip2                  bzip2 and uuencode all files\n"
+msgstr ""
+"  -S, --stdin-file-list   llig la llista de fitxers de l'entrada estàndard\n"
+"\n"
+"Divisió de la sortida:\n"
+"  -o, --output-prefix=PREFIX    desa l'eixida al fitxer PREFIX.01 fins a\n"
+"                                PREFIX.NN\n"
+"  -l, --whole-size-limit=MIDA   divideix l'arxiu, no els fitxers, a\n"
+"                                MIDA kilobytes\n"
+"  -L, --split-size-limit=MIDA   divideix l'arxiu o fitxers a MIDA kilobytes\n"
+"\n"
+"Control de les capçaleres shar:\n"
+"  -n, --archive-name=NOM    empra NOM per a documentar l'arxiu\n"
+"  -s, --submitter=ADREÇA    sobreescriu el nom del creador\n"
+"  -a, --net-headers         mostra capçaleres Submitted-by: i Archive-name:\n"
+"  -c, --cut-mark            comença el shar amb una línia de tall\n"
+"  -t, --translate           tradueix els missatges del script\n"
+"\n"
+"Selecció del mode d'emmagatzemament dels fitxers:\n"
+"  -M, --mixed-uuencode         decideix dinàmicament sobre l'ús d'uuencode\n"
+"                               (per defecte)\n"
+"  -T, --text-files             tracta tots els fitxers com si foren de text\n"
+"  -B, --uuencode               tracta tots els fitxers com si foren binaris,\n"
+"                               empra uuencode\n"
+"  -z, --gzip                   comprimeix amb gzip i codifica amb uuencode\n"
+"                               tots els fitxers\n"
+"  -g, --level-for-gzip=NIVELL  passa -NIVELL (9 per defecte) al gzip\n"
+"  -j, --bzip2                  comprimeix amb bzip2 i codifica amb uuencode\n"
+"                               tots els fitxers\n"
+
+#: src/shar.c:1945
+msgid ""
+"  -Z, --compress               compress and uuencode all files\n"
+"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+msgstr ""
+"  -Z, --compress               comprimeix amb compress i codifica amb uuencode\n"
+"                               tots els fitxers\n"
+"  -b, --bits-per-code=BITS     passa -bBITS (12 per defecte) al compress\n"
+
+#: src/shar.c:1950
+msgid ""
+"\n"
+"Protecting against transmission:\n"
+"  -w, --no-character-count      do not use `wc -c' to check size\n"
+"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+"  -F, --force-prefix            force the prefix character on every line\n"
+"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
+"\n"
+"Producing different kinds of shars:\n"
+"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+"  -P, --no-piping           exclusively use temporary files at unshar time\n"
+"  -x, --no-check-existing   blindly overwrite existing files\n"
+"  -X, --query-user          ask user before overwriting files (not for Net)\n"
+"  -m, --no-timestamp        do not restore file modification dates & times\n"
+"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+"  -f, --basename            restore in one directory, despite hierarchy\n"
+"      --no-i18n             do not produce internationalized shell script\n"
+msgstr ""
+"\n"
+"Protecció contra la transmissió:\n"
+"  -w, --no-character-count     no empres «wc -c» per a comprovar la mida\n"
+"  -D, --no-md5-digest          no empres el resum «md5sum» per a verificar\n"
+"  -F, --force-prefix           força el caràcter de prefix en cada línia\n"
+"  -d, --here-delimiter=CADENA  empra CADENA per a delimitar els fitxers al shar\n"
+"\n"
+"Producció de diferents tipus de shar:\n"
+"  -V, --vanilla-operation   produeix shars molt sencills i poc exigents\n"
+"  -P, --no-piping           empra exclusivament fitxers temporals en desfer\n"
+"                            el shar\n"
+"  -x, --no-check-existing   sobreescriu sense confirmar els fitxers existents\n"
+"  -X, --query-user          demana a l'usuari abans de sobreescriure fitxers\n"
+"                            (no per a xarxa)\n"
+"  -m, --no-timestamp        no restaures les dates i hores de modificació del\n"
+"                            fitxer\n"
+"  -Q, --quiet-unshar        evita els missatges de depuració en desfer el shar\n"
+"  -f, --basename            restaura en un directori, malgrat la jerarquia\n"
+"      --no-i18n             no produeixes un script shell internacionalitzat\n"
+
+#: src/shar.c:1968
+msgid ""
+"\n"
+"Option -o is required with -l or -L, option -n is required with -a.\n"
+msgstr ""
+"\n"
+"Es requereix l'opció -o amb -l o -L, es requereix l'opció -n amb -a.\n"
+
+#: src/shar.c:1972
+msgid "Option -g implies -z, option -b implies -Z.\n"
+msgstr "L'opció -g implica -z, l'opció -b implica -Z.\n"
+
+#: src/shar.c:1975
+msgid "Option -g implies -z.\n"
+msgstr "L'opció -g implica l'opció -z.\n"
+
+#. TRANSLATORS: add the contact address for your translation team!
+#: src/shar.c:1979 src/unshar.c:330 src/uudecode.c:471 src/uuencode.c:212
+#, c-format
+msgid "Report bugs to <%s>.\n"
+msgstr ""
+"Informeu dels errors a: <%s>.\n"
+"Informeu dels errors de traducció a <ca@dodds.net>.\n"
+
+#: src/shar.c:1996
+#, c-format
+msgid "invalid file size limit `%s'"
+msgstr "el límit «%s» de la mida del fitxer no és vàlid"
+
+#: src/shar.c:2032
+#, c-format
+msgid "invalid format (count field too wide): '%s'\n"
+msgstr "el format és invalid (el camp de compte és massa ample): «%s»\n"
+
+#: src/shar.c:2121
+#, c-format
+msgid "DEBUG was not selected at compile time"
+msgstr "No s'ha seleccionat DEBUG durant la construcció"
+
+#: src/shar.c:2141
+#, c-format
+msgid "Hard limit %s\n"
+msgstr "Límit dur %s\n"
+
+#: src/shar.c:2183
+#, c-format
+msgid "This system doesn't support -Z ('compress'), use -z instead"
+msgstr "Aquest sistema no implementa l'opció -Z («compress»), empreu -Z en el seu lloc"
+
+#: src/shar.c:2216
+#, c-format
+msgid "Soft limit %s\n"
+msgstr "Límit suau %s\n"
+
+#: src/shar.c:2231
+#, c-format
+msgid "illegal output prefix\n"
+msgstr "el prefix de sortida és iŀlegal\n"
+
+#: src/shar.c:2278 src/unshar.c:413 src/uudecode.c:509 src/uuencode.c:252
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Copyright © %s Free Software Foundation, Inc.\n"
+"Aquest és programari lliure; vegeu el codi font per les condicions de còpia.\n"
+"No hi ha CAP garantia; ni tan sols de COMERCIABILITAT o ADEQUACIÓ A UN\n"
+"PROPÒSIT PARTICULAR.\n"
+
+#: src/shar.c:2347
+#, c-format
+msgid "WARNING: No user interaction in vanilla mode"
+msgstr "AVÍS: No es permet la interacció de l'usuari al mode normal"
+
+#: src/shar.c:2359
+#, c-format
+msgid "WARNING: Non-text storage options overridden"
+msgstr "AVÍS: S'ometen les opcions d'emmagatzemament per a no-text"
+
+#: src/shar.c:2388
+#, c-format
+msgid "Cannot use -a option without -n"
+msgstr "No es pot emprar l'opció -a sense -n"
+
+#: src/shar.c:2394
+#, c-format
+msgid "Cannot use -l or -L option without -o"
+msgstr "No es poden emprar les opcions -l o -L sense -o"
+
+#: src/shar.c:2436
+#, c-format
+msgid "No input files"
+msgstr "No hi ha fitxers d'entrada"
+
+#: src/shar.c:2448
+#, c-format
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "SI US PLAU, evitau shars creats amb -X a Usenet o xarxes públiques"
+
+#: src/shar.c:2514
+#, c-format
+msgid "Created %d files\n"
+msgstr "S'han creat %d fitxers\n"
+
+#: src/unshar.c:167
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "No s'ha trobat ordres del shell a %s"
+
+#: src/unshar.c:183
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s sembla codi C cru, no un arxiu del shell"
+
+#: src/unshar.c:219
+#, c-format
+msgid "Found no shell commands after `cut' in %s"
+msgstr "No s'ha trobat cap ordre del shell després de «cut» a %s"
+
+#: src/unshar.c:240
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "Probablement %s no sigui un arxiu del shell"
+
+#: src/unshar.c:241
+#, c-format
+msgid "The `cut' line was followed by: %s"
+msgstr "La línia «cut» estava seguida per: %s"
+
+#: src/unshar.c:267
+#, c-format
+msgid "Starting `sh' process"
+msgstr "S'està iniciant el proces «sh»"
+
+#: src/unshar.c:316
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -486,102 +511,85 @@ msgstr ""
 "per a les opcions curtes.\n"
 "\n"
 "  -d, --directory=DIRECTORI   canvia a DIRECTORI abans de desempaquetar\n"
-"  -c, --overwrite             passa -c al script shar per sobreescriure "
-"fitxers\n"
+"  -c, --overwrite             passa -c al script shar per sobreescriure fitxers\n"
 "  -e, --exit-0                igual que  «--split-at=\"exit 0\"»\n"
-"  -E, --split-at=CADENA       divideix els shar concatenats després de "
-"CADENA\n"
+"  -E, --split-at=CADENA       divideix els shar concatenats després de CADENA\n"
 "  -f, --force                 igual que «-c»\n"
 "      --help                  mostra aquesta ajuda i surt\n"
 "      --version               mostra informació sobre la versió i surt\n"
 "\n"
 "Si no es dona un FITXER, es llig l'entrada estàndard.\n"
 
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
+#: src/unshar.c:393
 #, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr ""
-"Informeu dels errors a: <%s>.\n"
-"Informeu dels errors de traducció a <ca@dodds.net>.\n"
+msgid "Cannot chdir to `%s'"
+msgstr "No es pot canviar al directori «%s»"
 
-#: src/unshar.c:414 src/uudecode.c:506
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Copyright © %s Free Software Foundation, Inc.\n"
-"Aquest és programari lliure; vegeu el codi font per les condicions de còpia.\n"
-"No hi ha CAP garantia; ni tan sols de COMERCIABILITAT o ADEQUACIÓ A UN\n"
-"PROPÒSIT PARTICULAR.\n"
-
-#: src/unshar.c:445 src/unshar.c:507
+#: src/unshar.c:444 src/unshar.c:506
 #, c-format
 msgid "allocate file name buffer"
 msgstr "no s’ha pogut assignar la memòria intermèdia del nom del fitxer"
 
-#: src/unshar.c:466
+#: src/unshar.c:465
 msgid "standard input"
 msgstr "entrada estàndard"
 
-#: src/unshar.c:528
+#: src/unshar.c:527
 #, c-format
 msgid "allocate file buffer"
 msgstr "assigna la memòria intermèdia del fitxer"
 
-#: src/uudecode.c:114 src/uudecode.c:444
+#: src/uudecode.c:113 src/uudecode.c:444
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: S'ha produït un error d’escriptura"
 
-#: src/uudecode.c:131 src/uudecode.c:218
+#: src/uudecode.c:130 src/uudecode.c:217
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: S’ha trobat el final del fitxer"
 
-#: src/uudecode.c:167
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Manca la línia «end»"
 
-#: src/uudecode.c:227
+#: src/uudecode.c:226
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: hi ha dades a continuació del caràcter d'ompliment «=»"
 
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
+#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: la línia és iŀlegal"
 
-#: src/uudecode.c:303
+#: src/uudecode.c:302
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: El nom del fitxer és iŀlegal: %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:309
 #, c-format
 msgid "No user `%s'"
 msgstr "L'usuari «%s» no existeix"
 
-#: src/uudecode.c:321
+#: src/uudecode.c:320
 #, c-format
 msgid "no memory for %d byte allocation"
 msgstr "no hi ha memòria per a assignar %d octets"
 
-#: src/uudecode.c:346
+#: src/uudecode.c:345
 #, c-format
 msgid "cannot access %s"
 msgstr "no es pot accedir a %s"
 
-#: src/uudecode.c:354
+#: src/uudecode.c:353
 #, c-format
 msgid "freopen of %s"
 msgstr "«freopen» de %s"
 
-#: src/uudecode.c:360
+#: src/uudecode.c:359
 #, c-format
 msgid "chmod of %s"
 msgstr "«chmod» de %s"
@@ -591,12 +599,12 @@ msgstr "«chmod» de %s"
 msgid "%s: No `begin' line"
 msgstr "%s: Manca la línia «begin»"
 
-#: src/uudecode.c:463
+#: src/uudecode.c:464
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Forma d’ús: %s [FITXER]…\n"
 
-#: src/uudecode.c:464
+#: src/uudecode.c:465
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
@@ -609,7 +617,7 @@ msgstr ""
 "      --help                mostra aquesta ajuda i surt\n"
 "      --version             informa de la versió i surt\n"
 
-#: src/uudecode.c:530
+#: src/uudecode.c:533
 #, c-format
 msgid ""
 "You cannot specify an output file when processing\n"
@@ -618,840 +626,290 @@ msgstr ""
 "No podeu especificar un fitxer de sortida quan es processen\n"
 "múltiples fitxers d'entrada.\n"
 
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
+#: src/uuencode.c:133 src/uuencode.c:301 src/uuencode.c:308
 #, c-format
 msgid "Write error"
 msgstr "S'ha produït un error d’escriptura"
 
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
+#: src/uuencode.c:155 src/uuencode.c:186 src/uuencode.c:188
 #, c-format
 msgid "Read error"
 msgstr "S'ha produït un error de lectura"
 
-#: src/uuencode.c:226
+#: src/uuencode.c:206
+#, c-format
+msgid "Usage: %s [INFILE] REMOTEFILE\n"
+msgstr "Forma d’ús: %s [FITXERENTRADA] FITXERREMOT\n"
+
+#: src/uuencode.c:207
+msgid ""
+"\n"
+"  -m, --base64    use base64 encoding as of RFC1521\n"
+"      --help      display this help and exit\n"
+"      --version   output version information and exit\n"
+msgstr ""
+"\n"
+"  -m, --base64    usar base64 tal i com s'indica en el RFC1521\n"
+"      --help      mostra aquesta ajuda i surt\n"
+"      --version   informa de la versió i surt\n"
+
+#: src/uuencode.c:277
 #, c-format
 msgid "fopen-ing %s"
 msgstr "s'està fent «fopen» sobre %s"
 
-#: src/uuencode.c:228
+#: src/uuencode.c:279
 #, c-format
 msgid "fstat-ing %s"
 msgstr "s’està fent «fstat» sobre %s"
 
-#: src/uuencode.c:254
-#, fuzzy, c-format
-msgid "Allocation failure"
-msgstr "assigna la memòria intermèdia del fitxer"
+#. TRANSLATORS:  This is a phony function generated for the purpose of
+#. constructing the strings to be extracted for translation.  Each string
+#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
+#. if you need to look up context.  These strings are all inserted into
+#. the shar-generated shell script so the shar user can create shar archives
+#. with messages localized for one locale.
+#.
+#: src/scripts.x:398
+msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
+msgstr "Nota: no es verifiquen les sumes md5. Considereu instaŀlar GNU coreutils."
 
-# Amb el mateix format que els errors de la libc.  ivb
-#: lib/error.c:188
-msgid "Unknown system error"
-msgstr "S'ha produït un error desconegut del sistema"
+#: src/scripts.x:399
+msgid ""
+"WARNING: not restoring timestamps.  Consider getting and\n"
+"installing GNU `touch', distributed in GNU coreutils..."
+msgstr ""
+"AVÍS: no es restauren les marques de temps. Considereu obtenir i\n"
+"instaŀlar GNU «touch», distribuït amb GNU coreutils…"
 
-#: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
-msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: l’opció «%s» és ambigua\n"
-
-#: lib/getopt.c:624 lib/getopt.c:628
+#: src/scripts.x:401
 #, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: l’opció «--%s» no admet arguments\n"
+msgid "lock directory %s exists"
+msgstr "el directori de blocatge %s existeix"
 
-#: lib/getopt.c:637 lib/getopt.c:642
+#: src/scripts.x:402
 #, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: l’opció «%c%s» no admet arguments\n"
-
-#: lib/getopt.c:685 lib/getopt.c:704
-#, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: l'opció «--%s» necessita un argument\n"
-
-#: lib/getopt.c:742 lib/getopt.c:745
-#, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: l’opció «--%s» no és reconeguda\n"
-
-#: lib/getopt.c:753 lib/getopt.c:756
-#, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: l’opció «%c%s» no és reconeguda\n"
-
-#: lib/getopt.c:805 lib/getopt.c:808
-#, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: l’opció «%c» no és vàlida\n"
-
-#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
-#, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: l’opció «%c» necessita un argument\n"
-
-#: lib/getopt.c:934 lib/getopt.c:950
-#, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: l’opció «-W %s» és ambigua\n"
-
-#: lib/getopt.c:974 lib/getopt.c:992
-#, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: l’opció «-W %s» no admet arguments\n"
-
-#: lib/getopt.c:1013 lib/getopt.c:1031
-#, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: l'opció «-W %s» necessita un argument\n"
-
-#: lib/openat-die.c:38
-#, fuzzy, c-format
-msgid "unable to record current working directory"
+msgid "failed to create %s lock directory"
 msgstr "no s’ha pogut crear el directori de blocatge %s"
 
-#: lib/openat-die.c:57
-#, fuzzy, c-format
-msgid "failed to return to initial working directory"
-msgstr "no s’ha pogut crear el directori de blocatge %s"
-
-#. TRANSLATORS:
-#. Get translations for open and closing quotation marks.
-#. The message catalog should translate "`" to a left
-#. quotation mark suitable for the locale, and similarly for
-#. "'".  For example, a French Unicode local should translate
-#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), respectively.
-#.
-#. If the catalog has no translation, we will try to
-#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
-#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
-#. current locale is not Unicode, locale_quoting_style
-#. will quote 'like this', and clocale_quoting_style will
-#. quote "like this".  You should always include translations
-#. for "`" and "'" even if U+2018 and U+2019 are appropriate
-#. for your locale.
-#.
-#. If you don't know what to put here, please see
-#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
-#. and use glyphs suitable for your language.
-#: lib/quotearg.c:312
-msgid "`"
-msgstr ""
-
-#: lib/quotearg.c:313
-msgid "'"
-msgstr ""
-
-#: lib/xalloc-die.c:34
-msgid "memory exhausted"
-msgstr ""
-
-#: lib/xstrtol-error.c:63
+#: src/scripts.x:403
 #, c-format
-msgid "invalid %s%s argument '%s'"
-msgstr ""
+msgid "x - created lock directory %s."
+msgstr "x - s’ha creat el directori de blocatge %s."
 
-#: lib/xstrtol-error.c:68
+#: src/scripts.x:404
 #, c-format
-msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
+msgid "x - failed to create lock directory %s."
+msgstr "x - no s’ha pogut crear el directori de blocatge %s."
 
-#: lib/xstrtol-error.c:72
+#: src/scripts.x:405
 #, c-format
-msgid "%s%s argument '%s' too large"
-msgstr ""
+msgid "x - created directory %s."
+msgstr "x - s’ha creat el directori %s."
 
-#: libopts/autoopts.c:53
-#, fuzzy, c-format
-msgid "malloc of %d bytes failed\n"
+#: src/scripts.x:406
+#, c-format
+msgid "x - failed to create directory %s."
+msgstr "x - no s’ha pogut crear el directori %s."
+
+#: src/scripts.x:407
+msgid "yes"
+msgstr "sí"
+
+#: src/scripts.x:408
+msgid "overwrite this file"
+msgstr "sobreescriu aquest fitxer"
+
+#: src/scripts.x:409
+msgid "no"
+msgstr "no"
+
+#: src/scripts.x:410
+msgid "skip this file"
+msgstr "omet aquest fitxer"
+
+#: src/scripts.x:411
+msgid "all"
+msgstr "tots"
+
+#: src/scripts.x:412
+msgid "overwrite all files"
+msgstr "sobreescriu tots els fitxers"
+
+#: src/scripts.x:413
+msgid "none"
+msgstr "cap"
+
+#: src/scripts.x:414
+msgid "overwrite no files"
+msgstr "no sobreescrigues cap fitxer"
+
+#: src/scripts.x:415
+msgid "help"
+msgstr "ajuda"
+
+#: src/scripts.x:416
+msgid "explain choices"
+msgstr "explica les opcions"
+
+#: src/scripts.x:417
+msgid "quit"
+msgstr "surt"
+
+#: src/scripts.x:418
+msgid "exit immediately"
+msgstr "surt immediatament"
+
+#: src/scripts.x:419
+msgid ""
+"Archives must be unpacked in sequence!\n"
+"Please unpack part `cat ${lock_dir}/seq` next."
+msgstr ""
+"Els arxius s'han de desempaquetar en seqüència!\n"
+"Desempaqueteu a continuació la part `cat ${lock_dir}/seq`."
+
+#: src/scripts.x:421
+#, c-format
+msgid "restore of %s failed"
 msgstr "ha fallat la restauració de %s"
 
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
+#: src/scripts.x:422
 #, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
+msgid "End of part %d, continue with part %d"
+msgstr "Final de la part %d, continua amb la part %d"
 
-#: libopts/autoopts.c:66
+#: src/scripts.x:423
 #, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
+msgid "End of %s part %d"
+msgstr "Final de la part %2$d del fitxer %1$s"
 
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, fuzzy, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "ha fallat la restauració de %s"
-
-#: libopts/version.c:124
+#: src/scripts.x:424
 #, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
-
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: l’opció «%s» és ambigua\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
-
-#: libopts/find.c:90 libopts/find.c:95
-#, c-format
-msgid "  %s%s\n"
-msgstr ""
-
-#: libopts/check.c:159
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
-
-#: libopts/version.c:164
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-
-#: libopts/check.c:58
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
-
-#: libopts/restore.c:109
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
-
-#: libopts/usage.c:836
-#, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
-
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
-#, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-#: libopts/makeshell.c:759
-#, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr ""
-
-#: libopts/configfile.c:1168
-#, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr ""
-
-#: libopts/text_mmap.c:100
-#, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr ""
-
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr ""
-
-#: libopts/file.c:76
-msgid "stat-ing for directory"
-msgstr ""
-
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: No és un fitxer ordinari"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "s'està fent «fopen» sobre %s"
-
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "s'està fent «fopen» sobre %s"
-
-#: libopts/makeshell.c:837
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-#: libopts/find.c:439 libopts/reset.c:108
-#, fuzzy, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: l’opció «%c» no és vàlida\n"
-
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: l’opció «%c» no és vàlida\n"
-
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: l’opció «--%s» no és reconeguda\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: l’opció «%c» no és vàlida\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:497
-#, fuzzy, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: l'opció «--%s» necessita un argument\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: l’opció «--%s» no admet arguments\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-#: libopts/save.c:512
-#, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr ""
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: l'opció «-W %s» necessita un argument\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:179 libopts/save.c:233
-#, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr ""
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr ""
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
-msgstr "S'està decodificant el fitxer %s amb «uudecode»"
-
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
-
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:73
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
-
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "L'opció -C és obsoleta, empreu -Z en el seu lloc"
-
-#~ msgid "popen(3) on: %s"
-#~ msgstr "popen(3) en: %s"
-
-#~ msgid "fopen(3) of file %s"
-#~ msgstr "fopen(3) del fitxer %s"
-
-#~ msgid "compressed"
-#~ msgstr "comprimit amb «compress»"
-
-#~ msgid "gzipped"
-#~ msgstr "comprimit amb «gzip»"
+msgid "restoration warning:  size of %s is not %s"
+msgstr "avís de restauració:  la mida de %s no és %s"
+
+#: src/scripts.x:425
+msgid "(text)"
+msgstr "(text)"
+
+#: src/scripts.x:426
+msgid "(compressed)"
+msgstr "(comprimit)"
+
+#: src/scripts.x:427
+msgid "(gzipped)"
+msgstr "(comprimit amb «gzip»)"
 
 # És bzip2, empra l'opció j de tar. jm
-#~ msgid "bzipped"
-#~ msgstr "comprimit amb «bzip2»"
+#: src/scripts.x:428
+msgid "(bzipped)"
+msgstr "(comprimit amb «bzip2»)"
 
-#~ msgid "binary"
-#~ msgstr "binari"
+#: src/scripts.x:429
+msgid "(binary)"
+msgstr "(binari)"
 
-#~ msgid "pipe(2) failed"
-#~ msgstr "ha fallat pipe(2)"
+#: src/scripts.x:430
+msgid "archive"
+msgstr "arxiu"
 
-#~ msgid "Could not fork"
-#~ msgstr "No s'ha pogut fer «fork»"
+#: src/scripts.x:431
+#, c-format
+msgid "File %s is continued in part %d"
+msgstr "El fitxer %s continua a la part %d"
 
-#~ msgid "allocating output file name"
-#~ msgstr "s'està assignant el nom del fitxer de sortida"
+#: src/scripts.x:432
+msgid "Please unpack part 1 first!"
+msgstr "Desempaqueteu la primera part primer!"
 
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ "\n"
-#~ "Selecting files:\n"
-#~ msgstr ""
-#~ "Els arguments obligatoris per a les opcions llargues també són "
-#~ "obligatoris\n"
-#~ "per a les opcions curtes.\n"
-#~ "\n"
-#~ "Obtenció d'ajuda:\n"
-#~ "      --help              mostra aquesta ajuda i surt\n"
-#~ "      --version           informa de la versió i surt\n"
-#~ "  -q, --quiet, --silent   no mostres missatges detallats localment\n"
-#~ "\n"
-#~ "Selecció de fitxers:\n"
+#: src/scripts.x:433
+msgid "Please unpack part ${shar_sequence} next!"
+msgstr "Desempaqueteu la part ${shar_sequence} a continuació!"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     permet -[BTzZ] a les llistes de fitxers per a\n"
-#~ "                          canviar el mode\n"
+#: src/scripts.x:434
+#, c-format
+msgid "x - STILL SKIPPING %s"
+msgstr "x - ENCARA S'ESTÀ OMETENT %s"
 
-#~ msgid ""
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ msgstr ""
-#~ "  -p, --intermix-type     permet -[BTz] a les llistes de fitxers per a\n"
-#~ "                          canviar el mode\n"
-#~ "\n"
+#: src/scripts.x:435
+#, c-format
+msgid "continuing file %s"
+msgstr "s'està continuant amb el fitxer %s"
 
-#~ msgid ""
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "  -t, --translate           translate messages in the script\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
-#~ msgstr ""
-#~ "  -S, --stdin-file-list   llig la llista de fitxers de l'entrada "
-#~ "estàndard\n"
-#~ "\n"
-#~ "Divisió de la sortida:\n"
-#~ "  -o, --output-prefix=PREFIX    desa l'eixida al fitxer PREFIX.01 fins a\n"
-#~ "                                PREFIX.NN\n"
-#~ "  -l, --whole-size-limit=MIDA   divideix l'arxiu, no els fitxers, a\n"
-#~ "                                MIDA kilobytes\n"
-#~ "  -L, --split-size-limit=MIDA   divideix l'arxiu o fitxers a MIDA "
-#~ "kilobytes\n"
-#~ "\n"
-#~ "Control de les capçaleres shar:\n"
-#~ "  -n, --archive-name=NOM    empra NOM per a documentar l'arxiu\n"
-#~ "  -s, --submitter=ADREÇA    sobreescriu el nom del creador\n"
-#~ "  -a, --net-headers         mostra capçaleres Submitted-by: i Archive-"
-#~ "name:\n"
-#~ "  -c, --cut-mark            comença el shar amb una línia de tall\n"
-#~ "  -t, --translate           tradueix els missatges del script\n"
-#~ "\n"
-#~ "Selecció del mode d'emmagatzemament dels fitxers:\n"
-#~ "  -M, --mixed-uuencode         decideix dinàmicament sobre l'ús "
-#~ "d'uuencode\n"
-#~ "                               (per defecte)\n"
-#~ "  -T, --text-files             tracta tots els fitxers com si foren de "
-#~ "text\n"
-#~ "  -B, --uuencode               tracta tots els fitxers com si foren "
-#~ "binaris,\n"
-#~ "                               empra uuencode\n"
-#~ "  -z, --gzip                   comprimeix amb gzip i codifica amb "
-#~ "uuencode\n"
-#~ "                               tots els fitxers\n"
-#~ "  -g, --level-for-gzip=NIVELL  passa -NIVELL (9 per defecte) al gzip\n"
-#~ "  -j, --bzip2                  comprimeix amb bzip2 i codifica amb "
-#~ "uuencode\n"
-#~ "                               tots els fitxers\n"
+#: src/scripts.x:436
+msgid "(empty)"
+msgstr "(buit)"
 
-#~ msgid ""
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "  -Z, --compress               comprimeix amb compress i codifica amb "
-#~ "uuencode\n"
-#~ "                               tots els fitxers\n"
-#~ "  -b, --bits-per-code=BITS     passa -bBITS (12 per defecte) al compress\n"
+#: src/scripts.x:437
+#, c-format
+msgid "x - overwriting %s"
+msgstr "x - s'està sobreescrivint %s"
 
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Protecció contra la transmissió:\n"
-#~ "  -w, --no-character-count     no empres «wc -c» per a comprovar la mida\n"
-#~ "  -D, --no-md5-digest          no empres el resum «md5sum» per a "
-#~ "verificar\n"
-#~ "  -F, --force-prefix           força el caràcter de prefix en cada línia\n"
-#~ "  -d, --here-delimiter=CADENA  empra CADENA per a delimitar els fitxers "
-#~ "al shar\n"
-#~ "\n"
-#~ "Producció de diferents tipus de shar:\n"
-#~ "  -V, --vanilla-operation   produeix shars molt sencills i poc exigents\n"
-#~ "  -P, --no-piping           empra exclusivament fitxers temporals en "
-#~ "desfer\n"
-#~ "                            el shar\n"
-#~ "  -x, --no-check-existing   sobreescriu sense confirmar els fitxers "
-#~ "existents\n"
-#~ "  -X, --query-user          demana a l'usuari abans de sobreescriure "
-#~ "fitxers\n"
-#~ "                            (no per a xarxa)\n"
-#~ "  -m, --no-timestamp        no restaures les dates i hores de modificació "
-#~ "del\n"
-#~ "                            fitxer\n"
-#~ "  -Q, --quiet-unshar        evita els missatges de depuració en desfer el "
-#~ "shar\n"
-#~ "  -f, --basename            restaura en un directori, malgrat la "
-#~ "jerarquia\n"
-#~ "      --no-i18n             no produeixes un script shell "
-#~ "internacionalitzat\n"
+#: src/scripts.x:438
+#, c-format
+msgid "overwrite %s"
+msgstr "sobreescriu %s"
 
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Es requereix l'opció -o amb -l o -L, es requereix l'opció -n amb -a.\n"
+#: src/scripts.x:439
+#, c-format
+msgid "SKIPPING %s"
+msgstr "S'ESTÀ OMETENT %s"
 
-#~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr "L'opció -g implica -z, l'opció -b implica -Z.\n"
+#: src/scripts.x:440
+msgid "extraction aborted"
+msgstr "s'ha avortat l'extracció"
 
-#~ msgid "Option -g implies -z.\n"
-#~ msgstr "L'opció -g implica l'opció -z.\n"
+#: src/scripts.x:441
+#, c-format
+msgid "x - SKIPPING %s (file already exists)"
+msgstr "x - S'ESTÀ OMETENT %s (el fitxer ja existeix)"
 
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "el límit «%s» de la mida del fitxer no és vàlid"
+#: src/scripts.x:442
+#, c-format
+msgid "x - extracting %s %s"
+msgstr "x - s’està extraient %s %s"
 
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "No s'ha seleccionat DEBUG durant la construcció"
+#: src/scripts.x:443
+#, c-format
+msgid "File %s is complete"
+msgstr "El fitxer %s és complet"
 
-#~ msgid "Hard limit %s\n"
-#~ msgstr "Límit dur %s\n"
-
-#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr ""
-#~ "Aquest sistema no implementa l'opció -Z («compress»), empreu -Z en el seu "
-#~ "lloc"
-
-#~ msgid "Soft limit %s\n"
-#~ msgstr "Límit suau %s\n"
-
-#~ msgid "illegal output prefix\n"
-#~ msgstr "el prefix de sortida és iŀlegal\n"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr "AVÍS: No es permet la interacció de l'usuari al mode normal"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "AVÍS: S'ometen les opcions d'emmagatzemament per a no-text"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "No es pot emprar l'opció -a sense -n"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "No es poden emprar les opcions -l o -L sense -o"
-
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Forma d’ús: %s [FITXERENTRADA] FITXERREMOT\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64    usar base64 tal i com s'indica en el RFC1521\n"
-#~ "      --help      mostra aquesta ajuda i surt\n"
-#~ "      --version   informa de la versió i surt\n"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part `cat ${lock_dir}/seq` next."
-#~ msgstr ""
-#~ "Els arxius s'han de desempaquetar en seqüència!\n"
-#~ "Desempaqueteu a continuació la part `cat ${lock_dir}/seq`."
+#: src/scripts.x:444
+#, c-format
+msgid "uudecoding file %s"
+msgstr "S'està decodificant el fitxer %s amb «uudecode»"
 
 # Usa quote().  ivb
 # Missatge informatiu.  ivb
-#~ msgid "uncompressing file %s"
-#~ msgstr "S'està descomprimint el fitxer %s amb «uncompress»"
+#: src/scripts.x:445
+#, c-format
+msgid "uncompressing file %s"
+msgstr "S'està descomprimint el fitxer %s amb «uncompress»"
 
-#~ msgid "gunzipping file %s"
-#~ msgstr "S'està descomprimint el fitxer %s amb «gunzip»"
+#: src/scripts.x:446
+#, c-format
+msgid "gunzipping file %s"
+msgstr "S'està descomprimint el fitxer %s amb «gunzip»"
 
-#~ msgid "bunzipping file %s"
-#~ msgstr "S'està descomprimint el fitxer %s amb «bunzip2»"
+#: src/scripts.x:447
+#, c-format
+msgid "bunzipping file %s"
+msgstr "S'està descomprimint el fitxer %s amb «bunzip2»"
+
+#: src/scripts.x:448
+msgid "MD5 check failed"
+msgstr "Ha fallat la comprovació de la suma MD5"
+
+#: src/scripts.x:449
+msgid "You have unpacked the last part"
+msgstr "Heu desempaquetat l'última part"
+
+#: src/scripts.x:450
+#, c-format
+msgid "x - removed lock directory %s."
+msgstr "x - s'ha suprimit el directori: %s."
+
+#: src/scripts.x:451
+#, c-format
+msgid "x - failed to remove lock directory %s."
+msgstr "x - no s'ha pogut suprimir el directori de blocatge %s."

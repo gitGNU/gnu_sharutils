@@ -1,624 +1,607 @@
 # Greek messages for GNU sharutils.
 # Copyright © 1998 Free Software Foundation, Inc.
 # Simos KSenitellis <simos@teiath.gr>, 1998.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: GNU sharutils 4.2\n"
-"Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 1996-12-03 21:41+0100\n"
 "PO-Revision-Date: 1998-06-20 18:03+0200\n"
 "Last-Translator: Simos KSenitellis <simos@teiath.gr>\n"
 "Language-Team: Greek <simos@teiath.gr>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-7\n"
 "Content-Transfer-Encoding: 8-bit\n"
-
-#. TRANSLATORS:  This is a phony function generated for the purpose of
-#. constructing the strings to be extracted for translation.  Each string
-#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
-#. if you need to look up context.  These strings are all inserted into
-#. the shar-generated shell script so the shar user can create shar archives
-#. with messages localized for one locale.
-#.
-#: src/scripts.x:395
-msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-
-# 
+#
+# File: lib/error.c, line: 91
+msgid "Unknown system error"
+msgstr "Άγνωστο σφάλμα συστήματος"
+#
+# File: lib/getopt.c, line: 583
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: η επιλογή `%s' είναι διφορούμενη\n"
+#
+# File: lib/getopt.c, line: 607
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: η επιλογή `--%s' δε δέχεται όρισμα\n"
+#
+# File: lib/getopt.c, line: 612
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: η επιλογή `%c%s' δε δέχεται όρισμα\n"
+#
+# File: lib/getopt.c, line: 629
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: η επιλογή `%s' απαιτεί όρισμα\n"
+#
+#. --option
+# File: lib/getopt.c, line: 658
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: μη αναγνωρίσιμη επιλογή `--%s'\n"
+#
+#. +option or -option
+# File: lib/getopt.c, line: 662
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: μη αναγνωρίσιμη επιλογή `%c%s'\n"
+#
+#. 1003.2 specifies the format of this message.
+# File: lib/getopt.c, line: 688
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: μη αποδεκτή επιλογή -- %c\n"
+#
+# File: lib/getopt.c, line: 691
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: μη έγκυρη επιλογή -- %c\n"
+#
+# File: lib/getopt.c, line: 727
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: η επιλογή απαιτεί όρισμα -- %c\n"
+#
+# File: lib/xmalloc.c, line: 82
+msgid "Memory exhausted"
+msgstr "Η μνήμη εξαντλήθηκε"
+#
 # File: src/shar.c, line: 573
-#: src/scripts.x:396
-#, fuzzy
-msgid ""
-"WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
+msgid "WARNING: not restoring timestamps.  Consider getting and"
 msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: δεν επαναφέρονται οι ημερομηνίες των αρχείων."
-
-# 
+#
+# File: src/shar.c, line: 575
+msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
+msgstr ""
+"Εγκαταστήστε την GNU \\`touch', που διατίθεται με τα GNU File Utilities..."
+#
+# File: src/shar.c, line: 586
+msgid "failed to create locking directory"
+msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
+#
 # File: src/shar.c, line: 596
 # File: src/shar.c, line: 2156
-#: src/scripts.x:398
-#, fuzzy, c-format
-msgid "lock directory %s exists"
+msgid "lock directory"
 msgstr "κατάλογος κλειδώματος"
-
-# 
-# File: src/shar.c, line: 586
-#: src/scripts.x:399
-#, fuzzy, c-format
-msgid "failed to create %s lock directory"
-msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
-
-# 
-# File: src/shar.c, line: 586
-#: src/scripts.x:400
-#, fuzzy, c-format
-msgid "x - created lock directory %s."
-msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
-
-# 
-# File: src/shar.c, line: 586
-#: src/scripts.x:401
-#, fuzzy, c-format
-msgid "x - failed to create lock directory %s."
-msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
-
-# 
-#: src/scripts.x:402
-#, fuzzy, c-format
-msgid "x - created directory %s."
-msgstr "δημιουργία καταλόγου"
-
-# 
-# File: src/shar.c, line: 586
-#: src/scripts.x:403
-#, fuzzy, c-format
-msgid "x - failed to create directory %s."
-msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
-
-#: src/scripts.x:404
-msgid "yes"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 1180
-#: src/scripts.x:405
-#, fuzzy
-msgid "overwrite this file"
-msgstr "αντιγραφή από πάνω"
-
-#: src/scripts.x:406
-msgid "no"
-msgstr ""
-
-#: src/scripts.x:407
-msgid "skip this file"
-msgstr ""
-
-#: src/scripts.x:408 libopts/enum.c:488
-msgid "all"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 1180
-#: src/scripts.x:409
-#, fuzzy
-msgid "overwrite all files"
-msgstr "αντιγραφή από πάνω"
-
-#: src/scripts.x:410 libopts/enum.c:493
-msgid "none"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 1180
-#: src/scripts.x:411
-#, fuzzy
-msgid "overwrite no files"
-msgstr "αντιγραφή από πάνω"
-
-#: src/scripts.x:412
-msgid "help"
-msgstr ""
-
-#: src/scripts.x:413
-msgid "explain choices"
-msgstr ""
-
-#: src/scripts.x:414
-msgid "quit"
-msgstr ""
-
-#: src/scripts.x:415
-msgid "exit immediately"
-msgstr ""
-
-# 
+#
+# File: src/shar.c, line: 596
+# File: src/shar.c, line: 637
+msgid "created"
+msgstr "δημιουργήθηκε"
+#
+# File: src/shar.c, line: 597
+# File: src/shar.c, line: 637
+msgid "failed to create"
+msgstr "δεν ήταν δυνατή η δημιουργία"
+#
+# File: src/shar.c, line: 627
+msgid "Too many directories for mkdir generation"
+msgstr "Πάρα πολλοί κατάλογοι για χρήση της mkdir"
+#
+# File: src/shar.c, line: 687
+# File: src/shar.c, line: 914
+#, c-format
+msgid "Cannot access %s"
+msgstr "Αδυναμία πρόσβασης στο %s"
+#
+# File: src/shar.c, line: 740
+# File: src/shar.c, line: 1876
+msgid "-C is being deprecated, use -Z instead"
+msgstr "το -C δεν συνίσταται πια, χρησιμοποιήστε -Z"
+#
+# File: src/shar.c, line: 793
+# File: src/unshar.c, line: 367
+msgid "Cannot get current directory name"
+msgstr "Αδυναμία εύρεσης του ονόματος του τρέχοντος καταλόγου"
+#
+# File: src/shar.c, line: 879
+msgid "Must unpack archives in sequence!"
+msgstr "Τα αρχεία πρέπει να αναδιπλωθούν με συγκεκριμένη σειρά!"
+#
+# File: src/shar.c, line: 880
+# File: src/shar.c, line: 1413
+msgid "Please unpack part"
+msgstr "Παρακαλώ αναδιπλώστε το τμήμα"
+#
+# File: src/shar.c, line: 880
+# File: src/shar.c, line: 1414
+msgid "next!"
+msgstr "επόμενο!"
+#
+# File: src/shar.c, line: 909
+#, c-format
+msgid "%s: Not a regular file"
+msgstr "%s: Δεν είναι κανονικό αρχείο"
+#
+# File: src/shar.c, line: 924
+#, c-format
+msgid "In shar: remaining size %ld\n"
+msgstr "Στο shar: εναπομείνον μέγεθος %ld\n"
+#
+#. Change to another file.
+# File: src/shar.c, line: 935
+# File: src/shar.c, line: 1319
+#, c-format
+msgid "New file, remaining %ld, "
+msgstr "Νέο αρχείο, απομένουν %ld, "
+#
+# File: src/shar.c, line: 936
+# File: src/shar.c, line: 1320
+#, c-format
+msgid "Limit still %d\n"
+msgstr "Το όριο είναι ακόμα %d\n"
+#
 # File: src/shar.c, line: 952
 # File: src/shar.c, line: 1329
 # File: src/shar.c, line: 1518
 # File: src/shar.c, line: 1536
-#: src/scripts.x:416
-#, fuzzy, c-format
-msgid "restore of %s failed"
+msgid "restore of"
 msgstr "επανάκτηση του"
-
-# 
-# File: src/shar.c, line: 954
-# File: src/shar.c, line: 1340
-#: src/scripts.x:417
-#, fuzzy, c-format
-msgid "End of part %d, continue with part %d"
-msgstr "συνέχεια με τμήμα"
-
-# 
+#
+# File: src/shar.c, line: 952
+# File: src/shar.c, line: 1329
+# File: src/shar.c, line: 1518
+# File: src/shar.c, line: 1536
+msgid "failed"
+msgstr "αποτυχία"
+#
 # File: src/shar.c, line: 953
 # File: src/shar.c, line: 1339
-#: src/scripts.x:418
-#, fuzzy, c-format
-msgid "End of %s part %d"
+msgid "End of part"
 msgstr "Τέλος τμήματος"
-
-#: src/scripts.x:419
-#, c-format
-msgid "restoration warning:  size of %s is not %s"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 1133
-#: src/scripts.x:420 src/shar.c:1306
-msgid "(text)"
-msgstr "(κείμενο)"
-
-# 
-# File: src/shar.c, line: 1066
-#: src/scripts.x:421
-msgid "(compressed)"
-msgstr "(συμπιεσμένο)"
-
-# 
-# File: src/shar.c, line: 1067
-#: src/scripts.x:422
-msgid "(gzipped)"
-msgstr "(συμπιεσμένο με gzip)"
-
-# 
-# File: src/shar.c, line: 1067
-#: src/scripts.x:423
-#, fuzzy
-msgid "(bzipped)"
-msgstr "(συμπιεσμένο με gzip)"
-
-# 
-# File: src/shar.c, line: 1068
-#: src/scripts.x:424
-msgid "(binary)"
-msgstr "(δυαδικό)"
-
-# 
-# File: src/shar.c, line: 1346
-#: src/scripts.x:425
-msgid "archive"
-msgstr "αρχείο"
-
-# 
-# File: src/shar.c, line: 1350
-#: src/scripts.x:426
-#, fuzzy, c-format
-msgid "File %s is continued in part %d"
-msgstr "συνεχίζεται στο τμήμα"
-
-# 
-# File: src/shar.c, line: 1410
-#: src/scripts.x:427
-msgid "Please unpack part 1 first!"
-msgstr "Παρακαλώ αναδιπλώστε το τμήμα 1 πρώτα!"
-
-# 
-# File: src/shar.c, line: 1410
-#: src/scripts.x:428
-#, fuzzy
-msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Παρακαλώ αναδιπλώστε το τμήμα 1 πρώτα!"
-
-# 
-# File: src/shar.c, line: 1427
-#: src/scripts.x:429
-#, fuzzy, c-format
-msgid "x - STILL SKIPPING %s"
-msgstr "ΑΚΟΜΑ ΠΡΟΣΠΕΡΝΟΝΤΑΙ"
-
-# 
-# File: src/shar.c, line: 1434
-#: src/scripts.x:430
-#, fuzzy, c-format
-msgid "continuing file %s"
-msgstr "συνέχεια στο αρχείο"
-
-# 
-# File: src/shar.c, line: 1003
-#: src/scripts.x:431
-msgid "(empty)"
-msgstr "(κένο)"
-
-# 
-# File: src/shar.c, line: 1179
-#: src/scripts.x:432
-#, fuzzy, c-format
-msgid "x - overwriting %s"
-msgstr "αντιγράφεται από πάνω"
-
-# 
-# File: src/shar.c, line: 1180
-#: src/scripts.x:433
-#, fuzzy, c-format
-msgid "overwrite %s"
-msgstr "αντιγραφή από πάνω"
-
-# 
-# File: src/shar.c, line: 1183
-# File: src/shar.c, line: 1188
-#: src/scripts.x:434
-#, fuzzy, c-format
-msgid "SKIPPING %s"
-msgstr "ΠΡΟΣΠΕΡΑΣΜΑ"
-
-# 
-# File: src/shar.c, line: 1182
-#: src/scripts.x:435
-msgid "extraction aborted"
-msgstr "η εξαγωγή διακόπηκε ανώμαλα"
-
-# 
-# File: src/shar.c, line: 1188
-#: src/scripts.x:436
-#, fuzzy, c-format
-msgid "x - SKIPPING %s (file already exists)"
-msgstr "(το αρχείο ήδη υπάρχει)"
-
-# 
-# File: src/shar.c, line: 1211
-#: src/scripts.x:437
-#, fuzzy, c-format
-msgid "x - extracting %s %s"
-msgstr "διαδικασία εξαγωγής"
-
-# 
-# File: src/shar.c, line: 1455
-#: src/scripts.x:438
-#, fuzzy, c-format
-msgid "File %s is complete"
-msgstr "είναι πλήρες"
-
-# 
-# File: src/shar.c, line: 1464
-#: src/scripts.x:439
-#, fuzzy, c-format
-msgid "uudecoding file %s"
-msgstr "διαδικασία uudecode στο αρχείο"
-
-# 
-# File: src/shar.c, line: 1552
-#: src/scripts.x:440
-msgid "MD5 check failed"
-msgstr "Αποτυχία ελέγχου με MD5"
-
-# 
-# File: src/shar.c, line: 2143
-#: src/scripts.x:441
-msgid "You have unpacked the last part"
-msgstr "Έχετε αναδιπλώσει και το τελευταίο τμήμα"
-
-# 
-# File: src/shar.c, line: 596
-# File: src/shar.c, line: 2156
-#: src/scripts.x:442
-#, fuzzy, c-format
-msgid "x - removed lock directory %s."
-msgstr "κατάλογος κλειδώματος"
-
-# 
-# File: src/shar.c, line: 586
-#: src/scripts.x:443
-#, fuzzy, c-format
-msgid "x - failed to remove lock directory %s."
-msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
-
-# 
-# File: src/shar.c, line: 1027
-#: src/shar-opts.c:1680
-#, fuzzy, c-format
-msgid "Cannot reopen %s as stdin"
-msgstr "Δεν είναι δυνατό το άνοιγμα του αρχείου %s"
-
-#: src/shar-opts.c:1790
-msgid "shar usage error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1826
-msgid "shar fatal error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1863
-#, c-format
-msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
-
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
-msgid "No memory for duping translated strings\n"
-msgstr ""
-
-#: src/shar.c:372
-#, c-format
-msgid "printf formatting error:  %s\n"
-msgstr ""
-
-#: src/shar.c:423
-msgid "sharutils bug - no status"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 627
-#: src/shar.c:788
-msgid "Too many directories for mkdir generation"
-msgstr "Πάρα πολλοί κατάλογοι για χρήση της mkdir"
-
-# 
-# File: src/shar.c, line: 687
-# File: src/shar.c, line: 914
-#: src/shar.c:871 src/shar.c:1541
-#, c-format
-msgid "Cannot access %s"
-msgstr "Αδυναμία πρόσβασης στο %s"
-
-# 
-# File: src/shar.c, line: 793
-# File: src/unshar.c, line: 367
-#: src/shar.c:948 src/unshar.c:376
-#, c-format
-msgid "Cannot get current directory name"
-msgstr "Αδυναμία εύρεσης του ονόματος του τρέχοντος καταλόγου"
-
-# 
-# File: src/shar.c, line: 935
-# File: src/shar.c, line: 1319
-#: src/shar.c:1005 src/shar.c:1346
-#, fuzzy, c-format
-msgid "New file, remaining %s, "
-msgstr "Νέο αρχείο, απομένουν %ld, "
-
-# 
-# File: src/shar.c, line: 936
-# File: src/shar.c, line: 1320
-#: src/shar.c:1006 src/shar.c:1347
-#, fuzzy, c-format
-msgid "Limit still %s\n"
-msgstr "Το όριο είναι ακόμα %d\n"
-
-# 
+#
+# File: src/shar.c, line: 954
+# File: src/shar.c, line: 1340
+msgid "continue with part"
+msgstr "συνέχεια με τμήμα"
+#
 # File: src/shar.c, line: 967
 # File: src/shar.c, line: 1430
-#: src/shar.c:1028
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Αρχή αρχείου %s\n"
-
-# 
-# File: src/unshar.c, line: 158
-#: src/shar.c:1081
-#, fuzzy
-msgid "Could not popen command"
-msgstr "Δεν βρέθηκαν εντολές φλοιού στο %s"
-
-# 
+#
+# File: src/shar.c, line: 1002
+msgid "empty"
+msgstr "κενό"
+#
+# File: src/shar.c, line: 1003
+msgid "(empty)"
+msgstr "(κένο)"
+#
 # File: src/shar.c, line: 1027
-#: src/shar.c:1162
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Δεν είναι δυνατό το άνοιγμα του αρχείου %s"
-
-# 
-# File: src/shar.c, line: 1132
-#: src/shar.c:1296 src/shar.c:1305
-msgid "text"
-msgstr "κείμενο"
-
-#: src/shar.c:1311 src/shar.c:1322
-msgid "call"
-msgstr ""
-
-# 
+#
+# File: src/shar.c, line: 1064
+msgid "compressed"
+msgstr "συμπιεσμένο"
+#
+# File: src/shar.c, line: 1065
+msgid "gzipped"
+msgstr "συμπιεσμένο με gzip"
+#
+# File: src/shar.c, line: 1065
+msgid "binary"
+msgstr "δυαδικό"
+#
+# File: src/shar.c, line: 1066
+msgid "(compressed)"
+msgstr "(συμπιεσμένο)"
+#
+# File: src/shar.c, line: 1067
+msgid "(gzipped)"
+msgstr "(συμπιεσμένο με gzip)"
+#
+# File: src/shar.c, line: 1068
+msgid "(binary)"
+msgstr "(δυαδικό)"
+#
+# File: src/shar.c, line: 1081
+msgid "Could not fork"
+msgstr "Αδυναμία εκτέλεσης δικράνωσης"
+#
 # File: src/shar.c, line: 1086
 # File: src/shar.c, line: 1138
-#: src/shar.c:1335
 #, c-format
 msgid "File %s (%s)"
 msgstr "Αρχείο %s (%s)"
-
-# 
-# File: src/shar.c, line: 1434
-#: src/shar.c:1426
-#, fuzzy, c-format
-msgid "Continuing file %s\n"
-msgstr "συνέχεια στο αρχείο"
-
-# 
-# File: src/shar.c, line: 909
-#: src/shar.c:1536
-#, c-format
-msgid "%s: Not a regular file"
-msgstr "%s: Δεν είναι κανονικό αρχείο"
-
-# 
-# File: src/shar.c, line: 924
-#: src/shar.c:1563
-#, fuzzy, c-format
-msgid "In shar: remaining size %s\n"
-msgstr "Στο shar: εναπομείνον μέγεθος %ld\n"
-
-# 
-# File: src/shar.c, line: 1002
-#: src/shar.c:1583
-msgid "empty"
-msgstr "κενό"
-
-# 
+#
+# File: src/shar.c, line: 1132
+msgid "text"
+msgstr "κείμενο"
+#
+# File: src/shar.c, line: 1133
+msgid "(text)"
+msgstr "(κείμενο)"
+#
+# File: src/shar.c, line: 1179
+msgid "overwriting"
+msgstr "αντιγράφεται από πάνω"
+#
+# File: src/shar.c, line: 1180
+msgid "overwrite"
+msgstr "αντιγραφή από πάνω"
+#
+# File: src/shar.c, line: 1181
+msgid "[no, yes, all, quit] (no)?"
+msgstr "[no, yes, all, quit] (no)?"
+#
+# File: src/shar.c, line: 1182
+msgid "extraction aborted"
+msgstr "η εξαγωγή διακόπηκε ανώμαλα"
+#
+# File: src/shar.c, line: 1183
+# File: src/shar.c, line: 1188
+msgid "SKIPPING"
+msgstr "ΠΡΟΣΠΕΡΑΣΜΑ"
+#
+# File: src/shar.c, line: 1188
+msgid "(file already exists)"
+msgstr "(το αρχείο ήδη υπάρχει)"
+#
 # File: src/shar.c, line: 1206
-#: src/shar.c:1622
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Αποθήκευση του %s (%s)"
-
-#: src/shar.c:1807
-#, c-format
-msgid "Invalid format for output file names (%s): %s"
-msgstr ""
-
-#: src/shar.c:1822
-msgid "more than one format element"
-msgstr ""
-
-#: src/shar.c:1827
-msgid "no conversion character"
-msgstr ""
-
-#: src/shar.c:1836
-msgid "format is too wide"
-msgstr ""
-
-#: src/shar.c:1848
-msgid "invalid conversion character"
-msgstr ""
-
-# 
+#
+# File: src/shar.c, line: 1211
+msgid "extracting"
+msgstr "διαδικασία εξαγωγής"
+#
+# File: src/shar.c, line: 1345
+msgid "End of"
+msgstr "Τέλος του"
+#
+# File: src/shar.c, line: 1346
+msgid "archive"
+msgstr "αρχείο"
+#
+# File: src/shar.c, line: 1347
+msgid "part"
+msgstr "τμήμα"
+#
+# File: src/shar.c, line: 1349
+# File: src/shar.c, line: 1455
+msgid "File"
+msgstr "Αρχείο"
+#
+# File: src/shar.c, line: 1350
+msgid "is continued in part"
+msgstr "συνεχίζεται στο τμήμα"
+#
+# File: src/shar.c, line: 1410
+msgid "Please unpack part 1 first!"
+msgstr "Παρακαλώ αναδιπλώστε το τμήμα 1 πρώτα!"
+#
+# File: src/shar.c, line: 1427
+msgid "STILL SKIPPING"
+msgstr "ΑΚΟΜΑ ΠΡΟΣΠΕΡΝΟΝΤΑΙ"
+#
+# File: src/shar.c, line: 1434
+msgid "continuing file"
+msgstr "συνέχεια στο αρχείο"
+#
+# File: src/shar.c, line: 1455
+msgid "is complete"
+msgstr "είναι πλήρες"
+#
+# File: src/shar.c, line: 1464
+msgid "uudecoding file"
+msgstr "διαδικασία uudecode στο αρχείο"
+#
+# File: src/shar.c, line: 1478
+msgid "uncompressing file"
+msgstr "αποσυμπίεση αρχείου"
+#
+# File: src/shar.c, line: 1489
+msgid "gunzipping file"
+msgstr "αποσυμπίεση αρχείου με gunzip"
+#
+# File: src/shar.c, line: 1552
+msgid "MD5 check failed"
+msgstr "Αποτυχία ελέγχου με MD5"
+#
+# File: src/shar.c, line: 1593
+msgid "original size"
+msgstr "αρχικό μέγεθος"
+#
+# File: src/shar.c, line: 1594
+msgid "current size"
+msgstr "τρέχον μέγεθος"
+#
 # File: src/shar.c, line: 1647
-#: src/shar.c:1889
-#, fuzzy
-msgid "Opening"
+#, c-format
+msgid "Opening `%s'"
 msgstr "Άνοιγμα του `%s'"
-
-# 
+#
 # File: src/shar.c, line: 1658
-#: src/shar.c:1904
-#, fuzzy
-msgid "Closing"
+#, c-format
+msgid "Closing `%s'"
 msgstr "Κλείσιμο του `%s'"
-
-# 
-# File: src/shar.c, line: 2078
-#: src/shar.c:2015
-msgid "No input files"
-msgstr "Δεν υπάρχουν αρχεία εισόδου"
-
-# 
-# File: src/shar.c, line: 2102
-#: src/shar.c:2032
-#, c-format
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "ΠΑΡΑΚΑΛΩ αποφύγετε τα -X shar στο Usenet ή στα δημόσια δίκτυα"
-
-#: src/shar.c:2056
-#, c-format
-msgid ""
-"The '%s' option may not be intermixed with file names\n"
-"unless the --intermix-type option has been specified."
-msgstr ""
-
-#: src/shar.c:2074
-#, c-format
-msgid "The '%s' option must appear before any file names"
-msgstr ""
-
-#: src/shar.c:2110
-#, c-format
-msgid ""
-"invalid compaction type:  %s\n"
-"the known types are:\n"
-msgstr ""
-
-#: src/shar.c:2149
-msgid "files on command line and --input-file-list specified"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 2145
-#: src/shar.c:2198
-#, c-format
-msgid "Created %d files\n"
-msgstr "Δημιουργήθηκαν %d αρχεία\n"
-
-# 
-# File: src/unshar.c, line: 385
-#: src/unshar-opts.c:433 src/unshar.c:394
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Δεν είναι δυνατή η αλλαγή στο κατάλογο `%s'"
-
-# 
-# File: src/unshar.c, line: 158
-#: src/unshar.c:168
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "Δεν βρέθηκαν εντολές φλοιού στο %s"
-
-# 
-# File: src/unshar.c, line: 174
-#: src/unshar.c:184
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "Το %s μοιάζει με καθαρό κώδικα C και όχι με αρχείο φλοιού"
-
-# 
-# File: src/unshar.c, line: 210
-#: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "Δεν βρέθηκαν εντολές φλοιού μετά το `cut' στο %s"
-
-# 
-# File: src/unshar.c, line: 231
-#: src/unshar.c:241
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "Το %s δεν φαίνεται να είναι αρχείου φλοιού"
-
-# 
-# File: src/unshar.c, line: 232
-#: src/unshar.c:242
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "Η γραμμή `cut' ακολουθούνταν από: %s"
-
-# 
-# File: src/unshar.c, line: 258
-#: src/unshar.c:268
-#, c-format
-msgid "Starting `sh' process"
-msgstr "Εκκίνηση διεργασίας `sh'"
-
-# 
+#
 # File: src/shar.c, line: 1670
 # File: src/unshar.c, line: 302
 # File: src/uudecode.c, line: 370
 # File: src/uuencode.c, line: 211
-#: src/unshar.c:312 src/uudecode.c:459
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Δοκιμάστε `%s --help' για περισσότερες πληροφορίες.\n"
-
-# 
+#
 # File: src/shar.c, line: 1674
 # File: src/unshar.c, line: 306
-#: src/unshar.c:316
 #, c-format
 msgid "Usage: %s [OPTION]... [FILE]...\n"
 msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... [ΑΡΧΕΙΟ]...\n"
-
-# 
+#
+# File: src/shar.c, line: 1675
+msgid ""
+"Mandatory arguments to long options are mandatory for short options too.\n"
+msgstr ""
+"Οι υποχρεωτικοί παράμετροι στα περιφραστικά ορίσματα είναι υποχρεωτικοί\n"
+"και για τα σύντομα ορίσματα.\n"
+#
+# File: src/shar.c, line: 1678
+msgid ""
+"\n"
+"Giving feedback:\n"
+"      --help              display this help and exit\n"
+"      --version           output version information and exit\n"
+"  -q, --quiet, --silent   do not output verbose messages locally\n"
+"\n"
+"Selecting files:\n"
+"  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+"  -S, --stdin-file-list   read file list from standard input\n"
+"\n"
+"Splitting output:\n"
+"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
+msgstr ""
+"\n"
+"Για ανάδραση:\n"
+"      --help              εμφάνιση αυτής της βοήθειας και έξοδος\n"
+"      --version           εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+"  -q, --quiet, --silent   αποφυγή εμφάνισης περιφραστικών μηνυμάτων τοπικά\n"
+"\n"
+"Επιλογή αρχείων:\n"
+"  -p, --intermix-type     δυνατότητα χρήσης των  -[BTzZ] σε λίστες αρχείων\n"
+"                          για αλλαγή δικαιωμάτων\n"
+"  -S, --stdin-file-list   ανάγνωση λίστας αρχείων από κανονική είσοδο\n"
+"\n"
+"Διαμοίρασμα εξόδου:\n"
+"  -o, --output-prefix=ΠΡΟΘΕΜΑ  εξοδος σε αρχεία ΠΡΟΘΕΜΑ.01 μέχρι ΠΡΟΘΕΜΑ.NN\n"
+"  -l, --whole-size-limit=ΜΕΓΕΘΟΣ  διαμοίρασμα τελικού αρχείου, όχι των "
+"ενδιάμεσων,\n"
+"                                    σε ΜΕΓΕΘΟΣ Kbytes\n"
+"  -L, --split-size-limit=ΜΕΓΕΘΟΣ  διαμοίρασμα τελικού αρχείου ή των "
+"ενδιάμεσων\n"
+"                                    σε ΜΕΓΕΘΟΣ Kbytes\n"
+#
+# File: src/shar.c, line: 1694
+msgid ""
+"\n"
+"Controlling the shar headers:\n"
+"  -n, --archive-name=NAME   use NAME to document the archive\n"
+"  -s, --submitter=ADDRESS   override the submitter name\n"
+"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+"  -c, --cut-mark            start the shar with a cut line\n"
+"\n"
+"Selecting how files are stocked:\n"
+"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+"  -T, --text-files             treat all files as text\n"
+"  -B, --uuencode               treat all files as binary, use uuencode\n"
+"  -z, --gzip                   gzip and uuencode all files\n"
+"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+"  -Z, --compress               compress and uuencode all files\n"
+"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+msgstr ""
+"\n"
+"Έλεγχος των κεφαλίδων shar:\n"
+"  -n, --archive-name=ONOMA  χρήση του ΟΝΟΜΑ για όνομα αρχείου\n"
+"  -s, --submitter=ΔΙΕΥΘΥΝΣΗ  παράκαμψη του ονόματος του αποστολέα\n"
+"  -a, --net-headers         χρήση Submitted-by: και Archive-name: κεφαλίδων\n"
+"  -c, --cut-mark            αρχή του shar με γραμμή διακοπής\n"
+"\n"
+"Επιλογή του πως θα στοιβάζονται τα αρχεία:\n"
+"  -M, --mixed-uuencode         απόφαση δυναμικά για uuencode (εξ ορισμού)\n"
+"  -T, --text-files             μεταχείρηση όλων των αρχείων σαν αρχεία "
+"κειμένου\n"
+"  -B, --uuencode               μεταχείρηση των αρχείων σαν δυαδικά, χρήση "
+"uuencode\n"
+"  -z, --gzip                   gzip και uuencode όλων των αρχείων\n"
+"  -g, --level-for-gzip=ΕΠΙΠΕΔΟ  χρήση -ΕΠΙΠΕΔΟ συμπίεσης (εξ ορισμού 9) στο "
+"gzip\n"
+"  -Z, --compress               συμπίεση και uuencode για όλα τα αρχεία\n"
+"  -b, --bits-per-code=BITS     χρήση -bBITS (εξ ορισμού 12) στη συμπίεση\n"
+#
+# File: src/shar.c, line: 1711
+msgid ""
+"\n"
+"Protecting against transmission:\n"
+"  -w, --no-character-count      do not use `wc -c' to check size\n"
+"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+"  -F, --force-prefix            force the prefix character on every line\n"
+"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
+"\n"
+"Producing different kinds of shars:\n"
+"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+"  -P, --no-piping           exclusively use temporary files at unshar time\n"
+"  -x, --no-check-existing   blindly overwrite existing files\n"
+"  -X, --query-user          ask user before overwriting files (not for Net)\n"
+"  -m, --no-timestamp        do not restore file modification dates & times\n"
+"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+"  -f, --basename            restore in one directory, despite hierarchy\n"
+"      --no-i18n             do not produce internationalized shell script\n"
+msgstr ""
+"\n"
+"Προστασία στη μετάδοση:\n"
+"  -w, --no-character-count      αποφυγή χρήσης `wc -c' για έλεγχο μεγέθους\n"
+"  -D, --no-md5-digest           αποφυγή χρήσης `md5sum' για έλεγχο "
+"εγκυρότητας\n"
+"  -F, --force-prefix            επιβολή χαρακτήρα προθέματος σε κάθε γραμμή\n"
+"  -d, --here-delimiter=STRING   χρήση STRING για διαχωρισμό αρχείων στο "
+"shar\n"
+"\n"
+"Δημιουργία διαφορετικών ειδών shar:\n"
+"  -V, --vanilla-operation   δημιουργία απλών και χωρίς απαιτήσεις αρχείων "
+"shar\n"
+"  -P, --no-piping           αποκλειστική χρήση προσωρινών αρχείων όταν "
+"γίνεται unshar\n"
+"  -x, --no-check-existing   τυφλή εγγραφή πάνω σε τυχόν προϋπάρχοντα "
+"αρχείων\n"
+"  -X, --query-user          ερώτηση χρήστη για εγγραφή σε προϋπάρχοντα "
+"αρχεία (όχι για Net)\n"
+"  -m, --no-timestamp        χωρίς επανάκτηση ημερομηνιών/ωρών τροποποίησης "
+"των αρχείων\n"
+"  -Q, --quiet-unshar        αποφυγή περιφραστικών μηνυμάτων κατά το unshar\n"
+"  -f, --basename            ανάκτηση σε ένα κατάλογο, αν και υπάρχει "
+"ιεραρχία\n"
+"      --no-i18n             να μη δημιουργηθεί αρχείο script υποστήριξης "
+"τοπικής γλώσσας\n"
+#
+# File: src/shar.c, line: 1729
+msgid ""
+"\n"
+"Option -o is required with -l or -L, option -n is required with -a.\n"
+"Option -g implies -z, option -b implies -Z.\n"
+msgstr ""
+"\n"
+"Η επιλογή -o απαιτείται με -l ή -L, η επιλογή -n απαιτείται με -a.\n"
+"Η επιλογή -g υπονοεί -z, η επιλογή -b υπονοεί -Z.\n"
+#
+# File: src/shar.c, line: 1734
+# File: src/unshar.c, line: 320
+# File: src/uudecode.c, line: 380
+# File: src/uuencode.c, line: 220
+msgid "Report bugs to <bug-gnu-utils@prep.ai.mit.edu>.\n"
+msgstr "Αναφέρατε σφάλματα στο <bug-gnu-utils@prep.ai.mit.edu>.\n"
+#
+# File: src/shar.c, line: 1816
+msgid "DEBUG was not selected at compile time"
+msgstr "Δεν είχε επιλεγεί DEBUG στη ώρα της μεταγλώττισης"
+#
+# File: src/shar.c, line: 1837
+#, c-format
+msgid "Hard limit %dk\n"
+msgstr "Σθεναρό όριο %dk\n"
+#
+# File: src/shar.c, line: 1904
+#, c-format
+msgid "Soft limit %dk\n"
+msgstr "Ελαστικό όριο %dk\n"
+#
+# File: src/shar.c, line: 1963
+# File: src/unshar.c, line: 405
+# File: src/uudecode.c, line: 418
+# File: src/uuencode.c, line: 260
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Πνευματικά Δικαιώματα (C) %s Free Software Foundation, Inc.\n"
+"Αυτό είναι ελεύθερο λογισμικό· δείτε το πηγαίο κώδικα για τους κανόνες αντιγραφής.\n"
+"Δεν υπάρχει ΚΑΜΙΑ εγγύηση· ούτε ακόμα για ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑ ΓΙΑ\n"
+"ΓΙΑ ΕΝΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ.\n"
+#
+# File: src/shar.c, line: 2011
+msgid "WARNING: No user interaction in vanilla mode"
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Δεν υπάρχει διαλογικότητα σε απλή κατάσταση"
+#
+# File: src/shar.c, line: 2022
+msgid "WARNING: Non-text storage options overridden"
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επιλογές αποθήκευσης μη-κειμένου παρακάμφθηκαν"
+#
+# File: src/shar.c, line: 2078
+msgid "No input files"
+msgstr "Δεν υπάρχουν αρχεία εισόδου"
+#
+# File: src/shar.c, line: 2084
+msgid "Cannot use -a option without -n"
+msgstr "Δεν είναι δυνατό να χρησιμοποιηθεί η επιλογή -a χωρίς το -n"
+#
+# File: src/shar.c, line: 2090
+msgid "Cannot use -l or -L option without -o"
+msgstr "Δεν είναι δυνατό να χρησιμοποιηθούν οι επιλογές -l ή -L χωρίς το -o"
+#
+# File: src/shar.c, line: 2102
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "ΠΑΡΑΚΑΛΩ αποφύγετε τα -X shar στο Usenet ή στα δημόσια δίκτυα"
+#
+# File: src/shar.c, line: 2143
+msgid "You have unpacked the last part"
+msgstr "Έχετε αναδιπλώσει και το τελευταίο τμήμα"
+#
+# File: src/shar.c, line: 2145
+#, c-format
+msgid "Created %d files\n"
+msgstr "Δημιουργήθηκαν %d αρχεία\n"
+#
+# File: src/shar.c, line: 2156
+msgid "removed"
+msgstr "διαγράφτηκε"
+#
+# File: src/shar.c, line: 2157
+msgid "failed to remove"
+msgstr "αποτυχία στη διαγραφή"
+#
+# File: src/unshar.c, line: 158
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "Δεν βρέθηκαν εντολές φλοιού στο %s"
+#
+# File: src/unshar.c, line: 174
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "Το %s μοιάζει με καθαρό κώδικα C και όχι με αρχείο φλοιού"
+#
+# File: src/unshar.c, line: 210
+#, c-format
+msgid "Found no shell commands after `cut' in %s"
+msgstr "Δεν βρέθηκαν εντολές φλοιού μετά το `cut' στο %s"
+#
+#. Cut here message lied to us.
+# File: src/unshar.c, line: 231
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "Το %s δεν φαίνεται να είναι αρχείου φλοιού"
+#
+# File: src/unshar.c, line: 232
+#, c-format
+msgid "The `cut' line was followed by: %s"
+msgstr "Η γραμμή `cut' ακολουθούνταν από: %s"
+#
+# File: src/unshar.c, line: 258
+msgid "Starting `sh' process"
+msgstr "Εκκίνηση διεργασίας `sh'"
+#
 # File: src/unshar.c, line: 307
-#: src/unshar.c:317
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -645,140 +628,60 @@ msgstr ""
 "      --version               εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
 "\n"
 "Αν δεν υπάρχει αρχείο εισόδου, ανάγνωση από κανονική είσοδο.\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
+#
+# File: src/unshar.c, line: 385
 #, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 1963
-# File: src/unshar.c, line: 405
-# File: src/uudecode.c, line: 418
-# File: src/uuencode.c, line: 260
-#: src/unshar.c:414 src/uudecode.c:506
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Πνευματικά Δικαιώματα (C) %s Free Software Foundation, Inc.\n"
-"Αυτό είναι ελεύθερο λογισμικό· δείτε το πηγαίο κώδικα για τους κανόνες αντιγραφής.\n"
-"Δεν υπάρχει ΚΑΜΙΑ εγγύηση· ούτε ακόμα για ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑ ΓΙΑ\n"
-"ΓΙΑ ΕΝΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ.\n"
-
-#: src/unshar.c:445 src/unshar.c:507
-#, c-format
-msgid "allocate file name buffer"
-msgstr ""
-
-# 
+msgid "Cannot chdir to `%s'"
+msgstr "Δεν είναι δυνατή η αλλαγή στο κατάλογο `%s'"
+#
 # File: src/unshar.c, line: 448
-#: src/unshar.c:466
 msgid "standard input"
 msgstr "κανονική είσοδος"
-
-#: src/unshar.c:528
-#, c-format
-msgid "allocate file buffer"
-msgstr ""
-
-# 
-# File: src/uuencode.c, line: 305
-#: src/uudecode.c:114 src/uudecode.c:444
-#, fuzzy, c-format
-msgid "%s: Write error"
-msgstr "Σφάλμα εγγραφής"
-
-# 
+#
 # File: src/uudecode.c, line: 98
 # File: src/uudecode.c, line: 196
-#: src/uudecode.c:131 src/uudecode.c:218
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Σύντομο αρχείου"
-
-# 
+#
 # File: src/uudecode.c, line: 141
-#: src/uudecode.c:167
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Δεν υπάρχει γραμμή `end'"
-
-# 
+#
 # File: src/uudecode.c, line: 205
-#: src/uudecode.c:227
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: ακολουθούν δεδομένα μετά το χαρακτήρα padding `='"
-
-# 
+#
 # File: src/uudecode.c, line: 229
 # File: src/uudecode.c, line: 237
 # File: src/uudecode.c, line: 251
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: μη αποδεκτή γραμμή"
-
-# 
-# File: src/uudecode.c, line: 229
-# File: src/uudecode.c, line: 237
-# File: src/uudecode.c, line: 251
-#: src/uudecode.c:303
-#, fuzzy, c-format
-msgid "%s: Illegal file name: %s"
-msgstr "%s: μη αποδεκτή γραμμή"
-
-# 
-# File: src/uudecode.c, line: 328
-#: src/uudecode.c:310
-#, fuzzy, c-format
-msgid "No user `%s'"
-msgstr "%s: Δεν υπάρχει χρήστης `%s'"
-
-#: src/uudecode.c:321
-#, c-format
-msgid "no memory for %d byte allocation"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 687
-# File: src/shar.c, line: 914
-#: src/uudecode.c:346
-#, fuzzy, c-format
-msgid "cannot access %s"
-msgstr "Αδυναμία πρόσβασης στο %s"
-
-#: src/uudecode.c:354
-#, c-format
-msgid "freopen of %s"
-msgstr ""
-
-#: src/uudecode.c:360
-#, c-format
-msgid "chmod of %s"
-msgstr ""
-
-# 
+#
 # File: src/uudecode.c, line: 289
-#: src/uudecode.c:385
 #, c-format
 msgid "%s: No `begin' line"
 msgstr "%s: Δεν υπάρχει γραμμή `begin'"
-
-# 
+#
+# File: src/uudecode.c, line: 321
+#, c-format
+msgid "%s: Illegal ~user"
+msgstr "%s: Μη έγκυρο ~user"
+#
+# File: src/uudecode.c, line: 328
+#, c-format
+msgid "%s: No user `%s'"
+msgstr "%s: Δεν υπάρχει χρήστης `%s'"
+#
 # File: src/uudecode.c, line: 374
-#: src/uudecode.c:463
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Χρήση: %s [ΑΡΧΕΙΟ]...\n"
-
-# 
+#
 # File: src/uudecode.c, line: 375
-#: src/uudecode.c:464
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
@@ -792,992 +695,31 @@ msgstr ""
 "  -v, --version            εμφάνιση πληροφοριών έκδοσης προγράμματος και "
 "έξοδος\n"
 "  -o, --output-file=ΑΡΧΕΙΟ  απ'ευθείας έξοδος στο ΑΡΧΕΙΟ\n"
-
-#: src/uudecode.c:530
-#, c-format
-msgid ""
-"You cannot specify an output file when processing\n"
-"multiple input files.\n"
-msgstr ""
-
-# 
-# File: src/uuencode.c, line: 305
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
-#, c-format
-msgid "Write error"
-msgstr "Σφάλμα εγγραφής"
-
-# 
+#
 # File: src/uuencode.c, line: 198
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
-#, c-format
 msgid "Read error"
 msgstr "Σφάλμα ανάγνωσης"
-
-# 
-# File: src/shar.c, line: 1647
-#: src/uuencode.c:226
-#, fuzzy, c-format
-msgid "fopen-ing %s"
-msgstr "Άνοιγμα του `%s'"
-
-# 
-# File: src/shar.c, line: 967
-# File: src/shar.c, line: 1430
-#: src/uuencode.c:228
-#, fuzzy, c-format
-msgid "fstat-ing %s"
-msgstr "Αρχή αρχείου %s\n"
-
-#: src/uuencode.c:254
-#, c-format
-msgid "Allocation failure"
-msgstr ""
-
-# 
-# File: lib/error.c, line: 91
-#: lib/error.c:188
-msgid "Unknown system error"
-msgstr "Άγνωστο σφάλμα συστήματος"
-
-# 
-# File: lib/getopt.c, line: 583
-#: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
-msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: η επιλογή `%s' είναι διφορούμενη\n"
-
-# 
-# File: lib/getopt.c, line: 607
-#: lib/getopt.c:624 lib/getopt.c:628
-#, fuzzy, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: η επιλογή `--%s' δε δέχεται όρισμα\n"
-
-# 
-# File: lib/getopt.c, line: 612
-#: lib/getopt.c:637 lib/getopt.c:642
-#, fuzzy, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: η επιλογή `%c%s' δε δέχεται όρισμα\n"
-
-# 
-# File: lib/getopt.c, line: 629
-#: lib/getopt.c:685 lib/getopt.c:704
-#, fuzzy, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: η επιλογή `%s' απαιτεί όρισμα\n"
-
-# 
-# File: lib/getopt.c, line: 658
-#: lib/getopt.c:742 lib/getopt.c:745
-#, fuzzy, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: μη αναγνωρίσιμη επιλογή `--%s'\n"
-
-# 
-# File: lib/getopt.c, line: 662
-#: lib/getopt.c:753 lib/getopt.c:756
-#, fuzzy, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: μη αναγνωρίσιμη επιλογή `%c%s'\n"
-
-# 
-# File: lib/getopt.c, line: 691
-#: lib/getopt.c:805 lib/getopt.c:808
-#, fuzzy, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: μη έγκυρη επιλογή -- %c\n"
-
-# 
-# File: lib/getopt.c, line: 727
-#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
-#, fuzzy, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: η επιλογή απαιτεί όρισμα -- %c\n"
-
-# 
-# File: lib/getopt.c, line: 583
-#: lib/getopt.c:934 lib/getopt.c:950
-#, fuzzy, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: η επιλογή `%s' είναι διφορούμενη\n"
-
-# 
-# File: lib/getopt.c, line: 607
-#: lib/getopt.c:974 lib/getopt.c:992
-#, fuzzy, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: η επιλογή `--%s' δε δέχεται όρισμα\n"
-
-# 
-# File: lib/getopt.c, line: 629
-#: lib/getopt.c:1013 lib/getopt.c:1031
-#, fuzzy, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: η επιλογή `%s' απαιτεί όρισμα\n"
-
-# 
-# File: src/shar.c, line: 586
-#: lib/openat-die.c:38
-#, fuzzy, c-format
-msgid "unable to record current working directory"
-msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
-
-# 
-# File: src/shar.c, line: 586
-#: lib/openat-die.c:57
-#, fuzzy, c-format
-msgid "failed to return to initial working directory"
-msgstr "δεν ήταν δυνατή η δημιουργία καταλόγου κλειδώματος"
-
-#. TRANSLATORS:
-#. Get translations for open and closing quotation marks.
-#. The message catalog should translate "`" to a left
-#. quotation mark suitable for the locale, and similarly for
-#. "'".  For example, a French Unicode local should translate
-#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), respectively.
-#.
-#. If the catalog has no translation, we will try to
-#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
-#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
-#. current locale is not Unicode, locale_quoting_style
-#. will quote 'like this', and clocale_quoting_style will
-#. quote "like this".  You should always include translations
-#. for "`" and "'" even if U+2018 and U+2019 are appropriate
-#. for your locale.
-#.
-#. If you don't know what to put here, please see
-#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
-#. and use glyphs suitable for your language.
-#: lib/quotearg.c:312
-msgid "`"
-msgstr ""
-
-#: lib/quotearg.c:313
-msgid "'"
-msgstr ""
-
-# 
-# File: lib/xmalloc.c, line: 82
-#: lib/xalloc-die.c:34
-#, fuzzy
-msgid "memory exhausted"
-msgstr "Η μνήμη εξαντλήθηκε"
-
-#: lib/xstrtol-error.c:63
-#, c-format
-msgid "invalid %s%s argument '%s'"
-msgstr ""
-
-#: lib/xstrtol-error.c:68
-#, c-format
-msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
-
-#: lib/xstrtol-error.c:72
-#, c-format
-msgid "%s%s argument '%s' too large"
-msgstr ""
-
-#: libopts/autoopts.c:53
-#, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr ""
-
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-
-#: libopts/autoopts.c:66
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
-
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr ""
-
-#: libopts/version.c:124
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
-
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-# 
-# File: lib/getopt.c, line: 583
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: η επιλογή `%s' είναι διφορούμενη\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
-
-#: libopts/find.c:90 libopts/find.c:95
-#, c-format
-msgid "  %s%s\n"
-msgstr ""
-
-#: libopts/check.c:159
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
-
-#: libopts/version.c:164
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-
-#: libopts/check.c:58
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
-
-#: libopts/restore.c:109
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
-
-#: libopts/usage.c:836
-#, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
-
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
-#, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-#: libopts/makeshell.c:759
-#, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr ""
-
-#: libopts/configfile.c:1168
-#, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr ""
-
-#: libopts/text_mmap.c:100
-#, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr ""
-
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr ""
-
-# 
-#: libopts/file.c:76
-#, fuzzy
-msgid "stat-ing for directory"
-msgstr "δημιουργία καταλόγου"
-
-# 
-# File: src/shar.c, line: 909
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: Δεν είναι κανονικό αρχείο"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 1434
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "συνέχεια στο αρχείο"
-
-# 
-# File: src/shar.c, line: 1434
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "συνέχεια στο αρχείο"
-
-#: libopts/makeshell.c:837
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-# 
-# File: lib/getopt.c, line: 688
-#: libopts/find.c:439 libopts/reset.c:108
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: μη αποδεκτή επιλογή -- %c\n"
-
-# 
-# File: lib/getopt.c, line: 688
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: μη αποδεκτή επιλογή -- %c\n"
-
-# 
-# File: lib/getopt.c, line: 658
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: μη αναγνωρίσιμη επιλογή `--%s'\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-# 
-# File: lib/getopt.c, line: 691
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: μη έγκυρη επιλογή -- %c\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-# 
-# File: lib/getopt.c, line: 629
-#: libopts/find.c:497
-#, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: η επιλογή `%s' απαιτεί όρισμα\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-# 
-# File: lib/getopt.c, line: 612
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: η επιλογή `%c%s' δε δέχεται όρισμα\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-#: libopts/save.c:512
-#, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr ""
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-# 
-# File: lib/getopt.c, line: 629
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: η επιλογή `%s' απαιτεί όρισμα\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:179 libopts/save.c:233
-#, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr ""
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr ""
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 967
-# File: src/shar.c, line: 1430
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
-msgstr "Αρχή αρχείου %s\n"
-
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
-
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:73
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
-
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
-# 
-# File: src/shar.c, line: 575
-#~ msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
-#~ msgstr ""
-#~ "Εγκαταστήστε την GNU \\`touch', που διατίθεται με τα GNU File Utilities..."
-
-# 
-# File: src/shar.c, line: 596
-# File: src/shar.c, line: 637
-#~ msgid "created"
-#~ msgstr "δημιουργήθηκε"
-
-# 
-# File: src/shar.c, line: 597
-# File: src/shar.c, line: 637
-#~ msgid "failed to create"
-#~ msgstr "δεν ήταν δυνατή η δημιουργία"
-
-# 
-# File: src/shar.c, line: 740
-# File: src/shar.c, line: 1876
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "το -C δεν συνίσταται πια, χρησιμοποιήστε -Z"
-
-# 
-# File: src/shar.c, line: 879
-#~ msgid "Must unpack archives in sequence!"
-#~ msgstr "Τα αρχεία πρέπει να αναδιπλωθούν με συγκεκριμένη σειρά!"
-
-# 
-# File: src/shar.c, line: 880
-# File: src/shar.c, line: 1413
-#~ msgid "Please unpack part"
-#~ msgstr "Παρακαλώ αναδιπλώστε το τμήμα"
-
-# 
-# File: src/shar.c, line: 880
-# File: src/shar.c, line: 1414
-#~ msgid "next!"
-#~ msgstr "επόμενο!"
-
-# 
-# File: src/shar.c, line: 952
-# File: src/shar.c, line: 1329
-# File: src/shar.c, line: 1518
-# File: src/shar.c, line: 1536
-#~ msgid "failed"
-#~ msgstr "αποτυχία"
-
-# 
-# File: src/shar.c, line: 1064
-#~ msgid "compressed"
-#~ msgstr "συμπιεσμένο"
-
-# 
-# File: src/shar.c, line: 1065
-#~ msgid "gzipped"
-#~ msgstr "συμπιεσμένο με gzip"
-
-# 
-# File: src/shar.c, line: 1065
-#~ msgid "binary"
-#~ msgstr "δυαδικό"
-
-# 
-# File: src/shar.c, line: 1081
-#~ msgid "Could not fork"
-#~ msgstr "Αδυναμία εκτέλεσης δικράνωσης"
-
-# 
-# File: src/shar.c, line: 1181
-#~ msgid "[no, yes, all, quit] (no)?"
-#~ msgstr "[no, yes, all, quit] (no)?"
-
-# 
-# File: src/shar.c, line: 1345
-#~ msgid "End of"
-#~ msgstr "Τέλος του"
-
-# 
-# File: src/shar.c, line: 1347
-#~ msgid "part"
-#~ msgstr "τμήμα"
-
-# 
-# File: src/shar.c, line: 1349
-# File: src/shar.c, line: 1455
-#~ msgid "File"
-#~ msgstr "Αρχείο"
-
-# 
-# File: src/shar.c, line: 1478
-#~ msgid "uncompressing file"
-#~ msgstr "αποσυμπίεση αρχείου"
-
-# 
-# File: src/shar.c, line: 1489
-#~ msgid "gunzipping file"
-#~ msgstr "αποσυμπίεση αρχείου με gunzip"
-
-# 
-# File: src/shar.c, line: 1593
-#~ msgid "original size"
-#~ msgstr "αρχικό μέγεθος"
-
-# 
-# File: src/shar.c, line: 1594
-#~ msgid "current size"
-#~ msgstr "τρέχον μέγεθος"
-
-# 
-# File: src/shar.c, line: 1675
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ msgstr ""
-#~ "Οι υποχρεωτικοί παράμετροι στα περιφραστικά ορίσματα είναι υποχρεωτικοί\n"
-#~ "και για τα σύντομα ορίσματα.\n"
-
-# 
-# File: src/shar.c, line: 1678
-#~ msgid ""
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ "\n"
-#~ "Selecting files:\n"
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Για ανάδραση:\n"
-#~ "      --help              εμφάνιση αυτής της βοήθειας και έξοδος\n"
-#~ "      --version           εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
-#~ "  -q, --quiet, --silent   αποφυγή εμφάνισης περιφραστικών μηνυμάτων "
-#~ "τοπικά\n"
-#~ "\n"
-#~ "Επιλογή αρχείων:\n"
-#~ "  -p, --intermix-type     δυνατότητα χρήσης των  -[BTzZ] σε λίστες "
-#~ "αρχείων\n"
-#~ "                          για αλλαγή δικαιωμάτων\n"
-#~ "  -S, --stdin-file-list   ανάγνωση λίστας αρχείων από κανονική είσοδο\n"
-#~ "\n"
-#~ "Διαμοίρασμα εξόδου:\n"
-#~ "  -o, --output-prefix=ΠΡΟΘΕΜΑ  εξοδος σε αρχεία ΠΡΟΘΕΜΑ.01 μέχρι ΠΡΟΘΕΜΑ."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=ΜΕΓΕΘΟΣ  διαμοίρασμα τελικού αρχείου, όχι των "
-#~ "ενδιάμεσων,\n"
-#~ "                                    σε ΜΕΓΕΘΟΣ Kbytes\n"
-#~ "  -L, --split-size-limit=ΜΕΓΕΘΟΣ  διαμοίρασμα τελικού αρχείου ή των "
-#~ "ενδιάμεσων\n"
-#~ "                                    σε ΜΕΓΕΘΟΣ Kbytes\n"
-
-# 
-# File: src/shar.c, line: 1694
-#~ msgid ""
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Έλεγχος των κεφαλίδων shar:\n"
-#~ "  -n, --archive-name=ONOMA  χρήση του ΟΝΟΜΑ για όνομα αρχείου\n"
-#~ "  -s, --submitter=ΔΙΕΥΘΥΝΣΗ  παράκαμψη του ονόματος του αποστολέα\n"
-#~ "  -a, --net-headers         χρήση Submitted-by: και Archive-name: "
-#~ "κεφαλίδων\n"
-#~ "  -c, --cut-mark            αρχή του shar με γραμμή διακοπής\n"
-#~ "\n"
-#~ "Επιλογή του πως θα στοιβάζονται τα αρχεία:\n"
-#~ "  -M, --mixed-uuencode         απόφαση δυναμικά για uuencode (εξ "
-#~ "ορισμού)\n"
-#~ "  -T, --text-files             μεταχείρηση όλων των αρχείων σαν αρχεία "
-#~ "κειμένου\n"
-#~ "  -B, --uuencode               μεταχείρηση των αρχείων σαν δυαδικά, χρήση "
-#~ "uuencode\n"
-#~ "  -z, --gzip                   gzip και uuencode όλων των αρχείων\n"
-#~ "  -g, --level-for-gzip=ΕΠΙΠΕΔΟ  χρήση -ΕΠΙΠΕΔΟ συμπίεσης (εξ ορισμού 9) "
-#~ "στο gzip\n"
-#~ "  -Z, --compress               συμπίεση και uuencode για όλα τα αρχεία\n"
-#~ "  -b, --bits-per-code=BITS     χρήση -bBITS (εξ ορισμού 12) στη συμπίεση\n"
-
-# 
-# File: src/shar.c, line: 1711
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Προστασία στη μετάδοση:\n"
-#~ "  -w, --no-character-count      αποφυγή χρήσης `wc -c' για έλεγχο "
-#~ "μεγέθους\n"
-#~ "  -D, --no-md5-digest           αποφυγή χρήσης `md5sum' για έλεγχο "
-#~ "εγκυρότητας\n"
-#~ "  -F, --force-prefix            επιβολή χαρακτήρα προθέματος σε κάθε "
-#~ "γραμμή\n"
-#~ "  -d, --here-delimiter=STRING   χρήση STRING για διαχωρισμό αρχείων στο "
-#~ "shar\n"
-#~ "\n"
-#~ "Δημιουργία διαφορετικών ειδών shar:\n"
-#~ "  -V, --vanilla-operation   δημιουργία απλών και χωρίς απαιτήσεις αρχείων "
-#~ "shar\n"
-#~ "  -P, --no-piping           αποκλειστική χρήση προσωρινών αρχείων όταν "
-#~ "γίνεται unshar\n"
-#~ "  -x, --no-check-existing   τυφλή εγγραφή πάνω σε τυχόν προϋπάρχοντα "
-#~ "αρχείων\n"
-#~ "  -X, --query-user          ερώτηση χρήστη για εγγραφή σε προϋπάρχοντα "
-#~ "αρχεία (όχι για Net)\n"
-#~ "  -m, --no-timestamp        χωρίς επανάκτηση ημερομηνιών/ωρών "
-#~ "τροποποίησης των αρχείων\n"
-#~ "  -Q, --quiet-unshar        αποφυγή περιφραστικών μηνυμάτων κατά το "
-#~ "unshar\n"
-#~ "  -f, --basename            ανάκτηση σε ένα κατάλογο, αν και υπάρχει "
-#~ "ιεραρχία\n"
-#~ "      --no-i18n             να μη δημιουργηθεί αρχείο script υποστήριξης "
-#~ "τοπικής γλώσσας\n"
-
-# 
-# File: src/shar.c, line: 1729
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Η επιλογή -o απαιτείται με -l ή -L, η επιλογή -n απαιτείται με -a.\n"
-#~ "Η επιλογή -g υπονοεί -z, η επιλογή -b υπονοεί -Z.\n"
-
-# 
-# File: src/shar.c, line: 1734
-# File: src/unshar.c, line: 320
-# File: src/uudecode.c, line: 380
-# File: src/uuencode.c, line: 220
-#~ msgid "Report bugs to <bug-gnu-utils@prep.ai.mit.edu>.\n"
-#~ msgstr "Αναφέρατε σφάλματα στο <bug-gnu-utils@prep.ai.mit.edu>.\n"
-
-# 
-# File: src/shar.c, line: 1816
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "Δεν είχε επιλεγεί DEBUG στη ώρα της μεταγλώττισης"
-
-# 
-# File: src/shar.c, line: 1837
-#~ msgid "Hard limit %dk\n"
-#~ msgstr "Σθεναρό όριο %dk\n"
-
-# 
-# File: src/shar.c, line: 1904
-#~ msgid "Soft limit %dk\n"
-#~ msgstr "Ελαστικό όριο %dk\n"
-
-# 
-# File: src/shar.c, line: 2011
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Δεν υπάρχει διαλογικότητα σε απλή κατάσταση"
-
-# 
-# File: src/shar.c, line: 2022
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επιλογές αποθήκευσης μη-κειμένου παρακάμφθηκαν"
-
-# 
-# File: src/shar.c, line: 2084
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Δεν είναι δυνατό να χρησιμοποιηθεί η επιλογή -a χωρίς το -n"
-
-# 
-# File: src/shar.c, line: 2090
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "Δεν είναι δυνατό να χρησιμοποιηθούν οι επιλογές -l ή -L χωρίς το -o"
-
-# 
-# File: src/shar.c, line: 2156
-#~ msgid "removed"
-#~ msgstr "διαγράφτηκε"
-
-# 
-# File: src/shar.c, line: 2157
-#~ msgid "failed to remove"
-#~ msgstr "αποτυχία στη διαγραφή"
-
-# 
-# File: src/uudecode.c, line: 321
-#~ msgid "%s: Illegal ~user"
-#~ msgstr "%s: Μη έγκυρο ~user"
-
-# 
+#
 # File: src/uuencode.c, line: 215
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Χρήση: %s [ΑΡΧΕΙΟΕΙΣΟΔΟΥ] ΑΠΟΜΑΚΡΥΣΜΕΝΟΑΡΧΕΙΟ\n"
-
-# 
+#, c-format
+msgid "Usage: %s [INFILE] REMOTEFILE\n"
+msgstr "Χρήση: %s [ΑΡΧΕΙΟΕΙΣΟΔΟΥ] ΑΠΟΜΑΚΡΥΣΜΕΝΟΑΡΧΕΙΟ\n"
+#
 # File: src/uuencode.c, line: 216
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64    χρήση κωδικοποίησης base64 κατά το RFC1521\n"
-#~ "      --help      εμφάνιση αυτής της βοήθειας και έξοδος\n"
-#~ "      --version   εμφάνιση πληροφοριών έκδοσης προγράμματος και έξοδος\n"
+msgid ""
+"\n"
+"  -m, --base64    use base64 encoding as of RFC1521\n"
+"      --help      display this help and exit\n"
+"      --version   output version information and exit\n"
+msgstr ""
+"\n"
+"  -m, --base64    χρήση κωδικοποίησης base64 κατά το RFC1521\n"
+"      --help      εμφάνιση αυτής της βοήθειας και έξοδος\n"
+"      --version   εμφάνιση πληροφοριών έκδοσης προγράμματος και έξοδος\n"
+#
+# File: src/uuencode.c, line: 305
+msgid "Write error"
+msgstr "Σφάλμα εγγραφής"
+#
+#~ msgid "creating directory"
+#~ msgstr "δημιουργία καταλόγου"

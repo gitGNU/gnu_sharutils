@@ -6,469 +6,593 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sharutils-4.3.70\n"
-"Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 2002-07-06 19:54+0200\n"
 "PO-Revision-Date: 2002-08-05 11:43GMT\n"
 "Last-Translator: Gábor István <stive@mezobereny.hu>\n"
 "Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
-"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.5\n"
 
-#. TRANSLATORS:  This is a phony function generated for the purpose of
-#. constructing the strings to be extracted for translation.  Each string
-#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
-#. if you need to look up context.  These strings are all inserted into
-#. the shar-generated shell script so the shar user can create shar archives
-#. with messages localized for one locale.
-#.
-#: src/scripts.x:395
-msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
+#: lib/error.c:129 lib/error.c:157
+msgid "Unknown system error"
+msgstr "Ismeretlen rendszerhiba"
 
-#: src/scripts.x:396
-#, fuzzy
-msgid ""
-"WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
+#: lib/getopt.c:694
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: a `%s' kapcsoló nem egyértelmû\n"
+
+#: lib/getopt.c:719
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: a `--%s' kapcsoló nem enged meg argumentumot\n"
+
+#: lib/getopt.c:724
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: a `%c%s' kapcsoló nem enged meg argumentumot\n"
+
+#: lib/getopt.c:742 lib/getopt.c:915
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: a `%s' kapcsolóhoz argumentum szükséges\n"
+
+#: lib/getopt.c:771
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: a `--%s' kapcsoló ismeretlen\n"
+
+#: lib/getopt.c:775
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: a `%c%s' kapcsoló ismeretlen\n"
+
+#: lib/getopt.c:801
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: illegális kapcsoló -- %c\n"
+
+#: lib/getopt.c:804
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: érvénytelen kapcsoló -- %c\n"
+
+#: lib/getopt.c:834 lib/getopt.c:964
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: a kapcsolónak szüksége van egy argumentumra -- %c\n"
+
+#: lib/getopt.c:881
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: a `-W %s' kapcsoló nem egyértelmû\n"
+
+#: lib/getopt.c:899
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: a `-W %s' kapcsoló nem enged meg argumentumot\n"
+
+#: lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr "elfogyott a memória"
+
+#: src/shar.c:579
+msgid "WARNING: not restoring timestamps.  Consider getting and"
 msgstr "FIGYELEM: nem lehet helyre állítani az idõbélyeget. Szerezze be a és"
 
-#: src/scripts.x:398
-#, fuzzy, c-format
-msgid "lock directory %s exists"
+#: src/shar.c:581
+msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
+msgstr "telepítse a GNU \\'touch'-ot, amit a File Utilites csomagban találja meg..."
+
+#: src/shar.c:592
+msgid "failed to create locking directory"
+msgstr "nem sikerült rázolni a könyvtárat"
+
+#: src/shar.c:602 src/shar.c:2193
+msgid "lock directory"
 msgstr "könyvtár zárolása"
 
-#: src/scripts.x:399
-#, fuzzy, c-format
-msgid "failed to create %s lock directory"
-msgstr "nem sikerült rázolni a könyvtárat"
+#: src/shar.c:602 src/shar.c:643
+msgid "created"
+msgstr "létrehozva"
 
-#: src/scripts.x:400
-#, fuzzy, c-format
-msgid "x - created lock directory %s."
-msgstr "nem sikerült rázolni a könyvtárat"
+#: src/shar.c:603 src/shar.c:643
+msgid "failed to create"
+msgstr "nem sikerült létrehozni"
 
-#: src/scripts.x:401
-#, fuzzy, c-format
-msgid "x - failed to create lock directory %s."
-msgstr "nem sikerült rázolni a könyvtárat"
-
-#: src/scripts.x:402
-#, fuzzy, c-format
-msgid "x - created directory %s."
-msgstr "nem sikerült rázolni a könyvtárat"
-
-#: src/scripts.x:403
-#, fuzzy, c-format
-msgid "x - failed to create directory %s."
-msgstr "nem sikerült rázolni a könyvtárat"
-
-#: src/scripts.x:404
-msgid "yes"
-msgstr ""
-
-#: src/scripts.x:405
-#, fuzzy
-msgid "overwrite this file"
-msgstr "felülírva"
-
-#: src/scripts.x:406
-msgid "no"
-msgstr ""
-
-#: src/scripts.x:407
-msgid "skip this file"
-msgstr ""
-
-#: src/scripts.x:408 libopts/enum.c:488
-msgid "all"
-msgstr ""
-
-#: src/scripts.x:409
-#, fuzzy
-msgid "overwrite all files"
-msgstr "felülírva"
-
-#: src/scripts.x:410 libopts/enum.c:493
-msgid "none"
-msgstr ""
-
-#: src/scripts.x:411
-#, fuzzy
-msgid "overwrite no files"
-msgstr "felülírva"
-
-#: src/scripts.x:412
-msgid "help"
-msgstr ""
-
-#: src/scripts.x:413
-msgid "explain choices"
-msgstr ""
-
-#: src/scripts.x:414
-msgid "quit"
-msgstr ""
-
-#: src/scripts.x:415
-msgid "exit immediately"
-msgstr ""
-
-#: src/scripts.x:416
-#, fuzzy, c-format
-msgid "restore of %s failed"
-msgstr "helyreállítás"
-
-#: src/scripts.x:417
-#, fuzzy, c-format
-msgid "End of part %d, continue with part %d"
-msgstr "folytatás ezzel a résszel"
-
-#: src/scripts.x:418
-#, fuzzy, c-format
-msgid "End of %s part %d"
-msgstr "Vége a résznek"
-
-#: src/scripts.x:419
-#, c-format
-msgid "restoration warning:  size of %s is not %s"
-msgstr ""
-
-#: src/scripts.x:420 src/shar.c:1306
-msgid "(text)"
-msgstr "(szöveg)"
-
-#: src/scripts.x:421
-msgid "(compressed)"
-msgstr "(tömörített)"
-
-#: src/scripts.x:422
-msgid "(gzipped)"
-msgstr "(gzippel tömörítve)"
-
-#: src/scripts.x:423
-#, fuzzy
-msgid "(bzipped)"
-msgstr "(gzippel tömörítve)"
-
-#: src/scripts.x:424
-msgid "(binary)"
-msgstr "(bináris)"
-
-#: src/scripts.x:425
-msgid "archive"
-msgstr "archív fájl"
-
-#: src/scripts.x:426
-#, fuzzy, c-format
-msgid "File %s is continued in part %d"
-msgstr "rész folytatva"
-
-#: src/scripts.x:427
-msgid "Please unpack part 1 first!"
-msgstr "Kérem csomagolja az elsõ részt!"
-
-#: src/scripts.x:428
-#, fuzzy
-msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Kérem csomagolja az elsõ részt!"
-
-#: src/scripts.x:429
-#, fuzzy, c-format
-msgid "x - STILL SKIPPING %s"
-msgstr "MÉG MINDIG ÁTUGROM"
-
-#: src/scripts.x:430
-#, fuzzy, c-format
-msgid "continuing file %s"
-msgstr "fájl folytatása"
-
-#: src/scripts.x:431
-msgid "(empty)"
-msgstr "(üres)"
-
-#: src/scripts.x:432
-#, fuzzy, c-format
-msgid "x - overwriting %s"
-msgstr "felülírás"
-
-#: src/scripts.x:433
-#, fuzzy, c-format
-msgid "overwrite %s"
-msgstr "felülírva"
-
-#: src/scripts.x:434
-#, fuzzy, c-format
-msgid "SKIPPING %s"
-msgstr "ÁTUGRÁS"
-
-#: src/scripts.x:435
-msgid "extraction aborted"
-msgstr "Kitömörítés megszakítva"
-
-#: src/scripts.x:436
-#, fuzzy, c-format
-msgid "x - SKIPPING %s (file already exists)"
-msgstr "(fájl már létezik)"
-
-#: src/scripts.x:437
-#, fuzzy, c-format
-msgid "x - extracting %s %s"
-msgstr "kitömörítés"
-
-#: src/scripts.x:438
-#, fuzzy, c-format
-msgid "File %s is complete"
-msgstr "kész"
-
-#: src/scripts.x:439
-#, fuzzy, c-format
-msgid "uudecoding file %s"
-msgstr "fájl uudekódólása"
-
-#: src/scripts.x:440
-msgid "MD5 check failed"
-msgstr "MD5 ellenõrzés sikertelen"
-
-#: src/scripts.x:441
-msgid "You have unpacked the last part"
-msgstr "Ön kicsomagolta az utolsó részt is"
-
-#: src/scripts.x:442
-#, fuzzy, c-format
-msgid "x - removed lock directory %s."
-msgstr "könyvtár zárolása"
-
-#: src/scripts.x:443
-#, fuzzy, c-format
-msgid "x - failed to remove lock directory %s."
-msgstr "nem sikerült rázolni a könyvtárat"
-
-#: src/shar-opts.c:1680
-#, fuzzy, c-format
-msgid "Cannot reopen %s as stdin"
-msgstr "Nem lehet megnyitni a '%s' fájlt"
-
-#: src/shar-opts.c:1790
-msgid "shar usage error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1826
-msgid "shar fatal error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1863
-#, c-format
-msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
-
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
-msgid "No memory for duping translated strings\n"
-msgstr ""
-
-#: src/shar.c:372
-#, c-format
-msgid "printf formatting error:  %s\n"
-msgstr ""
-
-#: src/shar.c:423
-msgid "sharutils bug - no status"
-msgstr ""
-
-#: src/shar.c:788
+#: src/shar.c:633
 msgid "Too many directories for mkdir generation"
 msgstr "Túl sok a könyvtár ennek az mkdir verziónak"
 
-#: src/shar.c:871 src/shar.c:1541
+#: src/shar.c:693 src/shar.c:920
 #, c-format
 msgid "Cannot access %s"
 msgstr "A %s-t nem lehet elérni"
 
-#: src/shar.c:948 src/unshar.c:376
-#, c-format
+#: src/shar.c:746 src/shar.c:1914
+msgid "-C is being deprecated, use -Z instead"
+msgstr "a '-C'-vel való kezdés kifogásolható , használja helyette a '-Z'-t "
+
+#: src/shar.c:799 src/unshar.c:368
 msgid "Cannot get current directory name"
 msgstr "Nem lehet megtudni az könyvtár nevét"
 
-#: src/shar.c:1005 src/shar.c:1346
-#, fuzzy, c-format
-msgid "New file, remaining %s, "
-msgstr "Új fájl, megmaradt %ld,"
+#: src/shar.c:885
+msgid "Must unpack archives in sequence!"
+msgstr "Ki kell csomagolni az archívumot ehhez!"
 
-#: src/shar.c:1006 src/shar.c:1347
-#, fuzzy, c-format
-msgid "Limit still %s\n"
-msgstr "A határ %d\n"
+#: src/shar.c:886 src/shar.c:1419
+msgid "Please unpack part"
+msgstr "Kérem csomagolja ki"
 
-#: src/shar.c:1028
-#, c-format
-msgid "Starting file %s\n"
-msgstr "A %s fájl indítása\n"
+#: src/shar.c:886 src/shar.c:1420
+msgid "next!"
+msgstr "következõ!"
 
-#: src/shar.c:1081
-#, fuzzy
-msgid "Could not popen command"
-msgstr "Találtam egy nem parancsértelmezõ parancsot a %s-ben"
-
-#: src/shar.c:1162
-#, c-format
-msgid "Cannot open file %s"
-msgstr "Nem lehet megnyitni a '%s' fájlt"
-
-#: src/shar.c:1296 src/shar.c:1305
-msgid "text"
-msgstr "szöveg"
-
-#: src/shar.c:1311 src/shar.c:1322
-msgid "call"
-msgstr ""
-
-#: src/shar.c:1335
-#, c-format
-msgid "File %s (%s)"
-msgstr "Fájl %s (%s)"
-
-#: src/shar.c:1426
-#, fuzzy, c-format
-msgid "Continuing file %s\n"
-msgstr "fájl folytatása"
-
-#: src/shar.c:1536
+#: src/shar.c:915
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Nem reguláris fájl"
 
-#: src/shar.c:1563
-#, fuzzy, c-format
-msgid "In shar: remaining size %s\n"
+#: src/shar.c:930
+#, c-format
+msgid "In shar: remaining size %ld\n"
 msgstr "In shar: fennmaradó hely %ld\n"
 
-#: src/shar.c:1583
+#: src/shar.c:941 src/shar.c:1325
+#, c-format
+msgid "New file, remaining %ld, "
+msgstr "Új fájl, megmaradt %ld,"
+
+#: src/shar.c:942 src/shar.c:1326
+#, c-format
+msgid "Limit still %d\n"
+msgstr "A határ %d\n"
+
+#: src/shar.c:958 src/shar.c:1335 src/shar.c:1526 src/shar.c:1544
+msgid "restore of"
+msgstr "helyreállítás"
+
+#: src/shar.c:958 src/shar.c:1335 src/shar.c:1526 src/shar.c:1544
+msgid "failed"
+msgstr "sikertelen"
+
+#: src/shar.c:959 src/shar.c:1345
+msgid "End of part"
+msgstr "Vége a résznek"
+
+#: src/shar.c:960 src/shar.c:1346
+msgid "continue with part"
+msgstr "folytatás ezzel a résszel"
+
+#: src/shar.c:973 src/shar.c:1436
+#, c-format
+msgid "Starting file %s\n"
+msgstr "A %s fájl indítása\n"
+
+#: src/shar.c:1008
 msgid "empty"
 msgstr "üres"
 
-#: src/shar.c:1622
+#: src/shar.c:1009
+msgid "(empty)"
+msgstr "(üres)"
+
+#: src/shar.c:1033
+#, c-format
+msgid "Cannot open file %s"
+msgstr "Nem lehet megnyitni a '%s' fájlt"
+
+#: src/shar.c:1070
+msgid "compressed"
+msgstr "tömörített"
+
+#: src/shar.c:1071
+msgid "gzipped"
+msgstr "gzippel tömörítve"
+
+#: src/shar.c:1071
+msgid "binary"
+msgstr "bináris"
+
+#: src/shar.c:1072
+msgid "(compressed)"
+msgstr "(tömörített)"
+
+#: src/shar.c:1073
+msgid "(gzipped)"
+msgstr "(gzippel tömörítve)"
+
+#: src/shar.c:1074
+msgid "(binary)"
+msgstr "(bináris)"
+
+#: src/shar.c:1087
+msgid "Could not fork"
+msgstr "Nem lehet eldönteni"
+
+#: src/shar.c:1092 src/shar.c:1144
+#, c-format
+msgid "File %s (%s)"
+msgstr "Fájl %s (%s)"
+
+#: src/shar.c:1138
+msgid "text"
+msgstr "szöveg"
+
+#: src/shar.c:1139
+msgid "(text)"
+msgstr "(szöveg)"
+
+#: src/shar.c:1185
+msgid "overwriting"
+msgstr "felülírás"
+
+#: src/shar.c:1186
+msgid "overwrite"
+msgstr "felülírva"
+
+#: src/shar.c:1187
+msgid "[no, yes, all, quit] (no)?"
+msgstr "[nem, igen, az összest,kilép] (nem)?"
+
+#: src/shar.c:1188
+msgid "extraction aborted"
+msgstr "Kitömörítés megszakítva"
+
+#: src/shar.c:1189 src/shar.c:1194
+msgid "SKIPPING"
+msgstr "ÁTUGRÁS"
+
+#: src/shar.c:1194
+msgid "(file already exists)"
+msgstr "(fájl már létezik)"
+
+#: src/shar.c:1212
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Mentés %s (%s)"
 
-#: src/shar.c:1807
+#: src/shar.c:1217
+msgid "extracting"
+msgstr "kitömörítés"
+
+#: src/shar.c:1351
+msgid "End of"
+msgstr "Vége"
+
+#: src/shar.c:1352
+msgid "archive"
+msgstr "archív fájl"
+
+#: src/shar.c:1353
+msgid "part"
+msgstr "rész"
+
+#: src/shar.c:1355 src/shar.c:1461
+msgid "File"
+msgstr "Fájl"
+
+#: src/shar.c:1356
+msgid "is continued in part"
+msgstr "rész folytatva"
+
+#: src/shar.c:1416
+msgid "Please unpack part 1 first!"
+msgstr "Kérem csomagolja az elsõ részt!"
+
+#: src/shar.c:1433
+msgid "STILL SKIPPING"
+msgstr "MÉG MINDIG ÁTUGROM"
+
+#: src/shar.c:1440
+msgid "continuing file"
+msgstr "fájl folytatása"
+
+#: src/shar.c:1461
+msgid "is complete"
+msgstr "kész"
+
+#: src/shar.c:1470
+msgid "uudecoding file"
+msgstr "fájl uudekódólása"
+
+#: src/shar.c:1484
+msgid "uncompressing file"
+msgstr "fájl kicsomagolása"
+
+#: src/shar.c:1495
+msgid "gunzipping file"
+msgstr "fájl kicsomagolása"
+
+#: src/shar.c:1560
+msgid "MD5 check failed"
+msgstr "MD5 ellenõrzés sikertelen"
+
+#: src/shar.c:1601
+msgid "original size"
+msgstr "az eredeti méret"
+
+#: src/shar.c:1602
+msgid "current size"
+msgstr "az aktuális méret"
+
+#: src/shar.c:1655
 #, c-format
-msgid "Invalid format for output file names (%s): %s"
-msgstr ""
-
-#: src/shar.c:1822
-msgid "more than one format element"
-msgstr ""
-
-#: src/shar.c:1827
-msgid "no conversion character"
-msgstr ""
-
-#: src/shar.c:1836
-msgid "format is too wide"
-msgstr ""
-
-#: src/shar.c:1848
-msgid "invalid conversion character"
-msgstr ""
-
-#: src/shar.c:1889
-#, fuzzy
-msgid "Opening"
+msgid "Opening `%s'"
 msgstr "A '%s' megnyitása"
 
-#: src/shar.c:1904
-#, fuzzy
-msgid "Closing"
+#: src/shar.c:1666
+#, c-format
+msgid "Closing `%s'"
 msgstr "A '%s' bezárása"
 
-#: src/shar.c:2015
-msgid "No input files"
-msgstr "Nincs bementi fájl"
-
-#: src/shar.c:2032
-#, c-format
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr ""
-"KÉREM kerülja a '-X' -es megosztást a Useneten vagy egyéb nyilvános hálózaton"
-
-#: src/shar.c:2056
-#, c-format
-msgid ""
-"The '%s' option may not be intermixed with file names\n"
-"unless the --intermix-type option has been specified."
-msgstr ""
-
-#: src/shar.c:2074
-#, c-format
-msgid "The '%s' option must appear before any file names"
-msgstr ""
-
-#: src/shar.c:2110
-#, c-format
-msgid ""
-"invalid compaction type:  %s\n"
-"the known types are:\n"
-msgstr ""
-
-#: src/shar.c:2149
-msgid "files on command line and --input-file-list specified"
-msgstr ""
-
-#: src/shar.c:2198
-#, c-format
-msgid "Created %d files\n"
-msgstr "Létrehozva a %d fájl\n"
-
-#: src/unshar-opts.c:433 src/unshar.c:394
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Nem lehet belépni a '%s' könyvtárba"
-
-#: src/unshar.c:168
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "Találtam egy nem parancsértelmezõ parancsot a %s-ben"
-
-#: src/unshar.c:184
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "A %s C kódnak néz ki és nem parancsértelmezõ archívumnak"
-
-#: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "Találtam egy nem parancsértelmezõ parancsot a %s cut után"
-
-#: src/unshar.c:241
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "%s talán nem parancsértelmezõ archív"
-
-#: src/unshar.c:242
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "A kivágás sort %s követte"
-
-#: src/unshar.c:268
-#, c-format
-msgid "Starting `sh' process"
-msgstr "'sh' mûvelet indítása"
-
-#: src/unshar.c:312 src/uudecode.c:459
+#: src/shar.c:1678 src/unshar.c:302 src/uudecode.c:400 src/uuencode.c:208
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Próbálja a `%s --help'-et több információért.\n"
 
-#: src/unshar.c:316
+#: src/shar.c:1682 src/unshar.c:306
 #, c-format
 msgid "Usage: %s [OPTION]... [FILE]...\n"
 msgstr "Használat: %s [KAPCSOLÓ]... [FÁJL]...\n"
 
-#: src/unshar.c:317
+#: src/shar.c:1683
+msgid "Mandatory arguments to long options are mandatory for short options too.\n"
+msgstr ""
+"Ha egy hosszú kapcsolóhoz kötelezõ argumentumot megadni, akkor ez a megfelelõ\n"
+"rövid kapcsolónál is kötelezõ.\n"
+
+#: src/shar.c:1686
+msgid ""
+"\n"
+"Giving feedback:\n"
+"      --help              display this help and exit\n"
+"      --version           output version information and exit\n"
+"  -q, --quiet, --silent   do not output verbose messages locally\n"
+msgstr ""
+"\n"
+"Vissza jelzést ad\n"
+"      --help              megjeleníti ezt a segítséget és kilép\n"
+"      --version           kiírja a verziószámot és kilép\n"
+"  -q, --quiet, --silent   nem ír ki semilyen üzenetez helyileg\n"
+
+#: src/shar.c:1694
+msgid ""
+"\n"
+"Selecting files:\n"
+"  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+"  -S, --stdin-file-list   read file list from standard input\n"
+msgstr ""
+"\n"
+"Fájl kiválasztása:\n"
+"  -p, --intermix-type     engedélyezi a -[BTzZ] módok választásást a fájl listában\n"
+"  -S, --stdin-file-list   fájl listát olvas szabványos bemenetrõl\n"
+
+#: src/shar.c:1701
+msgid ""
+"\n"
+"Selecting files:\n"
+"  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+"  -S, --stdin-file-list   read file list from standard input\n"
+msgstr ""
+"\n"
+"Fájl kiválasztása:\n"
+"  -p, --intermix-type     engedélyezi a -[BTz] módok választásást a fájl listában\n"
+"  -S, --stdin-file-list   fájl listát olvas szabványos bemenetrõl\n"
+
+#: src/shar.c:1708
+msgid ""
+"\n"
+"Splitting output:\n"
+"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
+msgstr ""
+"\n"
+"A kimenet szétvágása:\n"
+"  -o, --output-prefix=ELÕTÉT   a fájlmeneti fájlok ELÕTÉT.01-tõl ELÕTÉT.NN-ig lesznek\n"
+"  -l, --whole-size-limit=MÉRET   szétvágja az archívumot,a bemenetet nem vágja, MÉRET kilobájtra\n"
+"  -L, --split-size-limit=MÉRET   szétvágja az archívumot,a bemenetet ha kell vágja, MÉRET kilobájtra\n"
+
+#: src/shar.c:1715
+msgid ""
+"\n"
+"Controlling the shar headers:\n"
+"  -n, --archive-name=NAME   use NAME to document the archive\n"
+"  -s, --submitter=ADDRESS   override the submitter name\n"
+"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+"  -c, --cut-mark            start the shar with a cut line\n"
+"\n"
+"Selecting how files are stocked:\n"
+"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+"  -T, --text-files             treat all files as text\n"
+"  -B, --uuencode               treat all files as binary, use uuencode\n"
+"  -z, --gzip                   gzip and uuencode all files\n"
+"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+msgstr ""
+"\n"
+"A shar fejléc kezelése:\n"
+"  -n, --archive-name=NÉV       a NEVet használja a dokumentum arcíválához\n"
+"  -s, --submitter=CÍM      átírja a kitöltlõ nevét\n"
+"  -a, --net-headers         kiírja a kitöltõ és az archív név fejléceket\n"
+"  -c, --cut-mark            a shar indítása a sor kitvágásával\n"
+"\n"
+"A fájl tárolásának kiválasztása:\n"
+"  -M, --mixed-uuencode         dinamikusan uudekódolás (alapbeállítás)\n"
+"  -T, --text-files             az összes fájlt szövegként kezeli\n"
+"  -B, --uuencode               az összes fájlt binárisként kezeli, használja az uuencode-ot\n"
+"  -z, --gzip                   gzippli és uuenkódolja az összes fájlt\n"
+"  -g, --level-for-gzip=SZINT   meghatározza a gzip tömörítés SZINTjét (alapból 9)\n"
+
+#: src/shar.c:1731
+msgid ""
+"  -Z, --compress               compress and uuencode all files\n"
+"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+msgstr ""
+"  -Z, --compress               tömöríti és uuenkódolja az összes fájlt\n"
+"  -b, --bits-per-code=BITEK     átad egy -bBITEKet (alapból 12)  a tömörítõnek\n"
+
+#: src/shar.c:1736
+msgid ""
+"\n"
+"Protecting against transmission:\n"
+"  -w, --no-character-count      do not use `wc -c' to check size\n"
+"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+"  -F, --force-prefix            force the prefix character on every line\n"
+"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
+"\n"
+"Producing different kinds of shars:\n"
+"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+"  -P, --no-piping           exclusively use temporary files at unshar time\n"
+"  -x, --no-check-existing   blindly overwrite existing files\n"
+"  -X, --query-user          ask user before overwriting files (not for Net)\n"
+"  -m, --no-timestamp        do not restore file modification dates & times\n"
+"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+"  -f, --basename            restore in one directory, despite hierarchy\n"
+"      --no-i18n             do not produce internationalized shell script\n"
+msgstr ""
+"\n"
+"Az átvitel védelme:\n"
+"  -w, --no-character-count      nem használja a `wc -c'-t a méret ellenõrzéshez\n"
+"  -D, --no-md5-digest           nem használja az `md5sum'-t az aláírás ellenõrzést\n"
+"  -F, --force-prefix            kierõleleti az elõtét karakterket minden sorban\n"
+"  -d, --here-delimiter=SZTRING   a SZTRINGET használja a fájlok elválasztásához\n"
+"\n"
+"Különbözõ fajtájú megosztások:\n"
+"  -V, --vanilla-operation   létrehozz egy nagyon egyszerû és beazonosíthatatlan fájlt\n"
+"  -P, --no-piping           különlegesen használja az ideiglenes fájlt az kicsomagolás során\n"
+"  -x, --no-check-existing   nem kérdez rá a felülírásra\n"
+"  -X, --query-user          rákérdez a fájl felülírására (nem a netten)\n"
+"  -m, --no-timestamp        nem állítja vissza a módosítás dátumát és idejét\n"
+"  -Q, --quiet-unshar        nem foglalja az idõt a kicsomagolás alatt az üzenetekkel\n"
+"  -f, --basename            helyreállít egy könyvtárat, az egész hiarerhiával\n"
+"      --no-i18n             nem egy nemzetközileg is használató parancsállományt hoz létre\n"
+
+#: src/shar.c:1754
+msgid ""
+"\n"
+"Option -o is required with -l or -L, option -n is required with -a.\n"
+msgstr ""
+"\n"
+"A '-o' opciónak vagy a '-l' vagy a '-L'-re van szüksége, a '-n' opciónak a '-a'-ra van szüksége.\n"
+
+#: src/shar.c:1759
+msgid "Option -g implies -z, option -b implies -Z.\n"
+msgstr "A '-g' magába foglalja a '-z'-t és a '-b' a '-Z'-t.\n"
+
+#: src/shar.c:1763
+msgid "Option -g implies -z.\n"
+msgstr "A '-g' magába foglalja a '-z'.\n"
+
+#. TRANSLATORS: add the contact address for your translation team!
+#: src/shar.c:1768 src/unshar.c:321 src/uudecode.c:411 src/uuencode.c:218
+#, c-format
+msgid "Report bugs to <%s>.\n"
+msgstr "Hibajelentéseket a(z) <%s> címre küldj.\n"
+
+#: src/shar.c:1850
+msgid "DEBUG was not selected at compile time"
+msgstr "A hiba keresés nincs volt kiválasztva a fordítás alatt"
+
+#: src/shar.c:1871
+#, c-format
+msgid "Hard limit %dk\n"
+msgstr "Szigorú határ %dk\n"
+
+#: src/shar.c:1910
+msgid "This system doesn't support -Z ('compress'), use -z instead"
+msgstr "Ez a rendszer nem támogatja a '-Z'-t  ('compress'), használja a '-z'-t helyette"
+
+#: src/shar.c:1942
+#, c-format
+msgid "Soft limit %dk\n"
+msgstr "Finom határ %dk\n"
+
+#: src/shar.c:2001 src/unshar.c:406 src/uudecode.c:449 src/uuencode.c:258
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Ez a szoftver egy szabad program; a részletekért nézze meg a másolási feltételeket.  A\n"
+"program mûködésére NINCS semmilyen garancia\n"
+
+#: src/shar.c:2048
+msgid "WARNING: No user interaction in vanilla mode"
+msgstr "FIGYELEM: A vanilla módba nincs semilyen felhasználói beavatkozásra lehetõség"
+
+#: src/shar.c:2059
+msgid "WARNING: Non-text storage options overridden"
+msgstr "FIGYELEM : Nem szöveges tárolás opció felülírva"
+
+#: src/shar.c:2115
+msgid "No input files"
+msgstr "Nincs bementi fájl"
+
+#: src/shar.c:2121
+msgid "Cannot use -a option without -n"
+msgstr "Az '-a' opciót nem használhatja az '-n' nélkül"
+
+#: src/shar.c:2127
+msgid "Cannot use -l or -L option without -o"
+msgstr "A '-l' vagy a 'L' opciót nem használhatja a '-o' nélkül"
+
+#: src/shar.c:2139
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "KÉREM kerülja a '-X' -es megosztást a Useneten vagy egyéb nyilvános hálózaton"
+
+#: src/shar.c:2180
+msgid "You have unpacked the last part"
+msgstr "Ön kicsomagolta az utolsó részt is"
+
+#: src/shar.c:2182
+#, c-format
+msgid "Created %d files\n"
+msgstr "Létrehozva a %d fájl\n"
+
+#: src/shar.c:2193
+msgid "removed"
+msgstr "eltávolítva"
+
+#: src/shar.c:2194
+msgid "failed to remove"
+msgstr "nem sikerült eltávolítani"
+
+#: src/unshar.c:158
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "Találtam egy nem parancsértelmezõ parancsot a %s-ben"
+
+#: src/unshar.c:174
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "A %s C kódnak néz ki és nem parancsértelmezõ archívumnak"
+
+#: src/unshar.c:210
+#, c-format
+msgid "Found no shell commands after `cut' in %s"
+msgstr "Találtam egy nem parancsértelmezõ parancsot a %s cut után"
+
+#: src/unshar.c:231
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "%s talán nem parancsértelmezõ archív"
+
+#: src/unshar.c:232
+#, c-format
+msgid "The `cut' line was followed by: %s"
+msgstr "A kivágás sort %s követte"
+
+#: src/unshar.c:258
+msgid "Starting `sh' process"
+msgstr "'sh' mûvelet indítása"
+
+#: src/unshar.c:307
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -482,8 +606,7 @@ msgid ""
 "\n"
 "If no FILE, standard input is read.\n"
 msgstr ""
-"Ha egy hosszú kapcsolóhoz kötelezõ argumentumot megadni, akkor ez a "
-"megfelelõ\n"
+"Ha egy hosszú kapcsolóhoz kötelezõ argumentumot megadni, akkor ez a megfelelõ\n"
 "rövid kapcsolónál is kötelezõ.\n"
 "  -d, --directory=KÖNYVTÁR   belép a KÖNYVTÁRba mielöt kicsomagol\n"
 "  -c, --overwrite             a fájlokat felülírja\n"
@@ -495,978 +618,109 @@ msgstr ""
 "\n"
 "Ha nincs bemeneti fájl akkor a szabványos bemenetrõl olvas.\n"
 
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
+#: src/unshar.c:386
 #, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr "Hibajelentéseket a(z) <%s> címre küldj.\n"
+msgid "Cannot chdir to `%s'"
+msgstr "Nem lehet belépni a '%s' könyvtárba"
 
-#: src/unshar.c:414 src/uudecode.c:506
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"Ez a szoftver egy szabad program; a részletekért nézze meg a másolási feltételeket.  A\n"
-"program mûködésére NINCS semmilyen garancia\n"
-
-#: src/unshar.c:445 src/unshar.c:507
-#, c-format
-msgid "allocate file name buffer"
-msgstr ""
-
-#: src/unshar.c:466
+#: src/unshar.c:449
 msgid "standard input"
 msgstr "szabványos bemenet"
 
-#: src/unshar.c:528
-#, c-format
-msgid "allocate file buffer"
-msgstr ""
-
-#: src/uudecode.c:114 src/uudecode.c:444
-#, fuzzy, c-format
-msgid "%s: Write error"
-msgstr "%s: írás hiba"
-
-#: src/uudecode.c:131 src/uudecode.c:218
+#: src/uudecode.c:101 src/uudecode.c:199
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Rövid fájl"
 
-#: src/uudecode.c:167
+#: src/uudecode.c:144
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s Nincs 'end' sor"
 
-#: src/uudecode.c:227
+#: src/uudecode.c:208
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: az adatokat az `=' sortöltõ szó követi"
 
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
+#: src/uudecode.c:232 src/uudecode.c:240 src/uudecode.c:254
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: érvénytelen sor"
 
-#: src/uudecode.c:303
-#, fuzzy, c-format
-msgid "%s: Illegal file name: %s"
-msgstr "%s: érvénytelen sor"
-
-#: src/uudecode.c:310
-#, fuzzy, c-format
-msgid "No user `%s'"
-msgstr "%s: Nem felh. '%s'"
-
-#: src/uudecode.c:321
-#, c-format
-msgid "no memory for %d byte allocation"
-msgstr ""
-
-#: src/uudecode.c:346
-#, c-format
-msgid "cannot access %s"
-msgstr "%s: hozzáférés sikertelen"
-
-#: src/uudecode.c:354
-#, c-format
-msgid "freopen of %s"
-msgstr ""
-
-#: src/uudecode.c:360
-#, c-format
-msgid "chmod of %s"
-msgstr ""
-
-#: src/uudecode.c:385
+#: src/uudecode.c:294
 #, c-format
 msgid "%s: No `begin' line"
 msgstr "%s: Nincs 'begin' sor"
 
-#: src/uudecode.c:463
+#: src/uudecode.c:326
+#, c-format
+msgid "%s: Illegal ~user"
+msgstr "%s: Érvénytelen ~felhasználó"
+
+#: src/uudecode.c:333
+#, c-format
+msgid "%s: No user `%s'"
+msgstr "%s: Nem felh. '%s'"
+
+#: src/uudecode.c:349
+#, c-format
+msgid "cannot access %s"
+msgstr "%s: hozzáférés sikertelen"
+
+#: src/uudecode.c:353
+#, c-format
+msgid "denied writing FIFO (%s)"
+msgstr "megtagadta a (%s) FIFO írását"
+
+#: src/uudecode.c:357
+#, c-format
+msgid "not following symlink (%s)"
+msgstr "nem követem a (%s) szimbolikus hivatkozást"
+
+#: src/uudecode.c:388
+#, c-format
+msgid "%s: write error"
+msgstr "%s: írás hiba"
+
+#: src/uudecode.c:404
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Használat: %s [FÁJL]...\n"
 
-#: src/uudecode.c:464
+#: src/uudecode.c:405
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
 "      --help               display this help and exit\n"
 "      --version            output version information and exit\n"
 msgstr ""
-"Ha egy hosszú kapcsolóhoz kötelezõ argumentumot megadni, akkor ez a "
-"megfelelõ\n"
+"Ha egy hosszú kapcsolóhoz kötelezõ argumentumot megadni, akkor ez a megfelelõ\n"
 "rövid kapcsolónál is kötelezõ.\n"
 "  -o, --output-file=FÁJL   közvetken kimenet a FÁJLba\n"
 "      --help               meg jeleniti ezt a segítséget és kilép\n"
 "      --version            kiírja a verzió információkat és kilép\n"
 
-#: src/uudecode.c:530
-#, c-format
-msgid ""
-"You cannot specify an output file when processing\n"
-"multiple input files.\n"
-msgstr ""
-
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
-#, c-format
-msgid "Write error"
-msgstr "Írási hiba"
-
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
-#, c-format
+#: src/uuencode.c:193 src/uuencode.c:195
 msgid "Read error"
 msgstr "Olvasási hiba"
 
-#: src/uuencode.c:226
-#, fuzzy, c-format
-msgid "fopen-ing %s"
-msgstr "A '%s' megnyitása"
-
-#: src/uuencode.c:228
-#, fuzzy, c-format
-msgid "fstat-ing %s"
-msgstr "A %s fájl indítása\n"
-
-#: src/uuencode.c:254
+#: src/uuencode.c:212
 #, c-format
-msgid "Allocation failure"
-msgstr ""
+msgid "Usage: %s [INFILE] REMOTEFILE\n"
+msgstr "Használat: %s [BEFILE] KÜLSÕFÁJL\n"
 
-#: lib/error.c:188
-msgid "Unknown system error"
-msgstr "Ismeretlen rendszerhiba"
-
-#: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
-msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: a `%s' kapcsoló nem egyértelmû\n"
-
-#: lib/getopt.c:624 lib/getopt.c:628
-#, fuzzy, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: a `--%s' kapcsoló nem enged meg argumentumot\n"
-
-#: lib/getopt.c:637 lib/getopt.c:642
-#, fuzzy, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: a `%c%s' kapcsoló nem enged meg argumentumot\n"
-
-#: lib/getopt.c:685 lib/getopt.c:704
-#, fuzzy, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: a `%s' kapcsolóhoz argumentum szükséges\n"
-
-#: lib/getopt.c:742 lib/getopt.c:745
-#, fuzzy, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: a `--%s' kapcsoló ismeretlen\n"
-
-#: lib/getopt.c:753 lib/getopt.c:756
-#, fuzzy, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: a `%c%s' kapcsoló ismeretlen\n"
-
-#: lib/getopt.c:805 lib/getopt.c:808
-#, fuzzy, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: érvénytelen kapcsoló -- %c\n"
-
-#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
-#, fuzzy, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: a kapcsolónak szüksége van egy argumentumra -- %c\n"
-
-#: lib/getopt.c:934 lib/getopt.c:950
-#, fuzzy, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: a `-W %s' kapcsoló nem egyértelmû\n"
-
-#: lib/getopt.c:974 lib/getopt.c:992
-#, fuzzy, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: a `-W %s' kapcsoló nem enged meg argumentumot\n"
-
-#: lib/getopt.c:1013 lib/getopt.c:1031
-#, fuzzy, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: a `%s' kapcsolóhoz argumentum szükséges\n"
-
-#: lib/openat-die.c:38
-#, fuzzy, c-format
-msgid "unable to record current working directory"
-msgstr "nem sikerült rázolni a könyvtárat"
-
-#: lib/openat-die.c:57
-#, fuzzy, c-format
-msgid "failed to return to initial working directory"
-msgstr "nem sikerült rázolni a könyvtárat"
-
-#. TRANSLATORS:
-#. Get translations for open and closing quotation marks.
-#. The message catalog should translate "`" to a left
-#. quotation mark suitable for the locale, and similarly for
-#. "'".  For example, a French Unicode local should translate
-#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), respectively.
-#.
-#. If the catalog has no translation, we will try to
-#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
-#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
-#. current locale is not Unicode, locale_quoting_style
-#. will quote 'like this', and clocale_quoting_style will
-#. quote "like this".  You should always include translations
-#. for "`" and "'" even if U+2018 and U+2019 are appropriate
-#. for your locale.
-#.
-#. If you don't know what to put here, please see
-#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
-#. and use glyphs suitable for your language.
-#: lib/quotearg.c:312
-msgid "`"
-msgstr ""
-
-#: lib/quotearg.c:313
-msgid "'"
-msgstr ""
-
-#: lib/xalloc-die.c:34
-msgid "memory exhausted"
-msgstr "elfogyott a memória"
-
-#: lib/xstrtol-error.c:63
-#, c-format
-msgid "invalid %s%s argument '%s'"
-msgstr ""
-
-#: lib/xstrtol-error.c:68
-#, c-format
-msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
-
-#: lib/xstrtol-error.c:72
-#, c-format
-msgid "%s%s argument '%s' too large"
-msgstr ""
-
-#: libopts/autoopts.c:53
-#, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr ""
-
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-
-#: libopts/autoopts.c:66
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
-
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr ""
-
-#: libopts/version.c:124
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
-
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: a `%s' kapcsoló nem egyértelmû\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
-
-#: libopts/find.c:90 libopts/find.c:95
-#, c-format
-msgid "  %s%s\n"
-msgstr ""
-
-#: libopts/check.c:159
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
-
-#: libopts/version.c:164
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-
-#: libopts/check.c:58
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
-
-#: libopts/restore.c:109
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
-
-#: libopts/usage.c:836
-#, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
-
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
-#, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-#: libopts/makeshell.c:759
-#, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr ""
-
-#: libopts/configfile.c:1168
-#, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr ""
-
-#: libopts/text_mmap.c:100
-#, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr ""
-
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr ""
-
-#: libopts/file.c:76
-#, fuzzy
-msgid "stat-ing for directory"
-msgstr "könyvtár zárolása"
-
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: Nem reguláris fájl"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "fájl folytatása"
-
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "fájl folytatása"
-
-#: libopts/makeshell.c:837
-#, c-format
+#: src/uuencode.c:213
 msgid ""
 "\n"
-"= = = = = = = =\n"
+"  -m, --base64    use base64 encoding as of RFC1521\n"
+"      --help      display this help and exit\n"
+"      --version   output version information and exit\n"
+msgstr ""
 "\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-#: libopts/find.c:439 libopts/reset.c:108
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: illegális kapcsoló -- %c\n"
-
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: illegális kapcsoló -- %c\n"
-
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: a `--%s' kapcsoló ismeretlen\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: érvénytelen kapcsoló -- %c\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:497
-#, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: a `%s' kapcsolóhoz argumentum szükséges\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: a `%c%s' kapcsoló nem enged meg argumentumot\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-#: libopts/save.c:512
-#, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr ""
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: a `%s' kapcsolóhoz argumentum szükséges\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:179 libopts/save.c:233
-#, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr ""
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr ""
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
-msgstr "A %s fájl indítása\n"
-
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
-
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:73
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
-
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
-#~ msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
-#~ msgstr ""
-#~ "telepítse a GNU \\'touch'-ot, amit a File Utilites csomagban találja "
-#~ "meg..."
-
-#~ msgid "created"
-#~ msgstr "létrehozva"
-
-#~ msgid "failed to create"
-#~ msgstr "nem sikerült létrehozni"
-
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "a '-C'-vel való kezdés kifogásolható , használja helyette a '-Z'-t "
-
-#~ msgid "Must unpack archives in sequence!"
-#~ msgstr "Ki kell csomagolni az archívumot ehhez!"
-
-#~ msgid "Please unpack part"
-#~ msgstr "Kérem csomagolja ki"
-
-#~ msgid "next!"
-#~ msgstr "következõ!"
-
-#~ msgid "failed"
-#~ msgstr "sikertelen"
-
-#~ msgid "compressed"
-#~ msgstr "tömörített"
-
-#~ msgid "gzipped"
-#~ msgstr "gzippel tömörítve"
-
-#~ msgid "binary"
-#~ msgstr "bináris"
-
-#~ msgid "Could not fork"
-#~ msgstr "Nem lehet eldönteni"
-
-#~ msgid "[no, yes, all, quit] (no)?"
-#~ msgstr "[nem, igen, az összest,kilép] (nem)?"
-
-#~ msgid "End of"
-#~ msgstr "Vége"
-
-#~ msgid "part"
-#~ msgstr "rész"
-
-#~ msgid "File"
-#~ msgstr "Fájl"
-
-#~ msgid "uncompressing file"
-#~ msgstr "fájl kicsomagolása"
-
-#~ msgid "gunzipping file"
-#~ msgstr "fájl kicsomagolása"
-
-#~ msgid "original size"
-#~ msgstr "az eredeti méret"
-
-#~ msgid "current size"
-#~ msgstr "az aktuális méret"
-
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ msgstr ""
-#~ "Ha egy hosszú kapcsolóhoz kötelezõ argumentumot megadni, akkor ez a "
-#~ "megfelelõ\n"
-#~ "rövid kapcsolónál is kötelezõ.\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Vissza jelzést ad\n"
-#~ "      --help              megjeleníti ezt a segítséget és kilép\n"
-#~ "      --version           kiírja a verziószámot és kilép\n"
-#~ "  -q, --quiet, --silent   nem ír ki semilyen üzenetez helyileg\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Selecting files:\n"
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Fájl kiválasztása:\n"
-#~ "  -p, --intermix-type     engedélyezi a -[BTzZ] módok választásást a fájl "
-#~ "listában\n"
-#~ "  -S, --stdin-file-list   fájl listát olvas szabványos bemenetrõl\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Selecting files:\n"
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Fájl kiválasztása:\n"
-#~ "  -p, --intermix-type     engedélyezi a -[BTz] módok választásást a fájl "
-#~ "listában\n"
-#~ "  -S, --stdin-file-list   fájl listát olvas szabványos bemenetrõl\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ msgstr ""
-#~ "\n"
-#~ "A kimenet szétvágása:\n"
-#~ "  -o, --output-prefix=ELÕTÉT   a fájlmeneti fájlok ELÕTÉT.01-tõl ELÕTÉT."
-#~ "NN-ig lesznek\n"
-#~ "  -l, --whole-size-limit=MÉRET   szétvágja az archívumot,a bemenetet nem "
-#~ "vágja, MÉRET kilobájtra\n"
-#~ "  -L, --split-size-limit=MÉRET   szétvágja az archívumot,a bemenetet ha "
-#~ "kell vágja, MÉRET kilobájtra\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ msgstr ""
-#~ "\n"
-#~ "A shar fejléc kezelése:\n"
-#~ "  -n, --archive-name=NÉV       a NEVet használja a dokumentum "
-#~ "arcíválához\n"
-#~ "  -s, --submitter=CÍM      átírja a kitöltlõ nevét\n"
-#~ "  -a, --net-headers         kiírja a kitöltõ és az archív név fejléceket\n"
-#~ "  -c, --cut-mark            a shar indítása a sor kitvágásával\n"
-#~ "\n"
-#~ "A fájl tárolásának kiválasztása:\n"
-#~ "  -M, --mixed-uuencode         dinamikusan uudekódolás (alapbeállítás)\n"
-#~ "  -T, --text-files             az összes fájlt szövegként kezeli\n"
-#~ "  -B, --uuencode               az összes fájlt binárisként kezeli, "
-#~ "használja az uuencode-ot\n"
-#~ "  -z, --gzip                   gzippli és uuenkódolja az összes fájlt\n"
-#~ "  -g, --level-for-gzip=SZINT   meghatározza a gzip tömörítés SZINTjét "
-#~ "(alapból 9)\n"
-
-#~ msgid ""
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "  -Z, --compress               tömöríti és uuenkódolja az összes fájlt\n"
-#~ "  -b, --bits-per-code=BITEK     átad egy -bBITEKet (alapból 12)  a "
-#~ "tömörítõnek\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Az átvitel védelme:\n"
-#~ "  -w, --no-character-count      nem használja a `wc -c'-t a méret "
-#~ "ellenõrzéshez\n"
-#~ "  -D, --no-md5-digest           nem használja az `md5sum'-t az aláírás "
-#~ "ellenõrzést\n"
-#~ "  -F, --force-prefix            kierõleleti az elõtét karakterket minden "
-#~ "sorban\n"
-#~ "  -d, --here-delimiter=SZTRING   a SZTRINGET használja a fájlok "
-#~ "elválasztásához\n"
-#~ "\n"
-#~ "Különbözõ fajtájú megosztások:\n"
-#~ "  -V, --vanilla-operation   létrehozz egy nagyon egyszerû és "
-#~ "beazonosíthatatlan fájlt\n"
-#~ "  -P, --no-piping           különlegesen használja az ideiglenes fájlt az "
-#~ "kicsomagolás során\n"
-#~ "  -x, --no-check-existing   nem kérdez rá a felülírásra\n"
-#~ "  -X, --query-user          rákérdez a fájl felülírására (nem a netten)\n"
-#~ "  -m, --no-timestamp        nem állítja vissza a módosítás dátumát és "
-#~ "idejét\n"
-#~ "  -Q, --quiet-unshar        nem foglalja az idõt a kicsomagolás alatt az "
-#~ "üzenetekkel\n"
-#~ "  -f, --basename            helyreállít egy könyvtárat, az egész "
-#~ "hiarerhiával\n"
-#~ "      --no-i18n             nem egy nemzetközileg is használató "
-#~ "parancsállományt hoz létre\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "A '-o' opciónak vagy a '-l' vagy a '-L'-re van szüksége, a '-n' opciónak "
-#~ "a '-a'-ra van szüksége.\n"
-
-#~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr "A '-g' magába foglalja a '-z'-t és a '-b' a '-Z'-t.\n"
-
-#~ msgid "Option -g implies -z.\n"
-#~ msgstr "A '-g' magába foglalja a '-z'.\n"
-
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "A hiba keresés nincs volt kiválasztva a fordítás alatt"
-
-#~ msgid "Hard limit %dk\n"
-#~ msgstr "Szigorú határ %dk\n"
-
-#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr ""
-#~ "Ez a rendszer nem támogatja a '-Z'-t  ('compress'), használja a '-z'-t "
-#~ "helyette"
-
-#~ msgid "Soft limit %dk\n"
-#~ msgstr "Finom határ %dk\n"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr ""
-#~ "FIGYELEM: A vanilla módba nincs semilyen felhasználói beavatkozásra "
-#~ "lehetõség"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "FIGYELEM : Nem szöveges tárolás opció felülírva"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Az '-a' opciót nem használhatja az '-n' nélkül"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "A '-l' vagy a 'L' opciót nem használhatja a '-o' nélkül"
-
-#~ msgid "removed"
-#~ msgstr "eltávolítva"
-
-#~ msgid "failed to remove"
-#~ msgstr "nem sikerült eltávolítani"
-
-#~ msgid "%s: Illegal ~user"
-#~ msgstr "%s: Érvénytelen ~felhasználó"
-
-#~ msgid "denied writing FIFO (%s)"
-#~ msgstr "megtagadta a (%s) FIFO írását"
-
-#~ msgid "not following symlink (%s)"
-#~ msgstr "nem követem a (%s) szimbolikus hivatkozást"
-
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Használat: %s [BEFILE] KÜLSÕFÁJL\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64    a base64 enkódólást az RFC1521 szerint végzi el\n"
-#~ "      --help      megjeleniti ezt a segítséget és kilép\n"
-#~ "      --version   kiírja a verzió információt és kilép\n"
+"  -m, --base64    a base64 enkódólást az RFC1521 szerint végzi el\n"
+"      --help      megjeleniti ezt a segítséget és kilép\n"
+"      --version   kiírja a verzió információt és kilép\n"
+
+#: src/uuencode.c:303 src/uuencode.c:305
+msgid "Write error"
+msgstr "Írási hiba"

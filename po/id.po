@@ -7,468 +7,731 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sharutils 4.9\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-09-04 15:59-0700\n"
+"POT-Creation-Date: 2010-02-21 17:15-0800\n"
 "PO-Revision-Date: 2010-02-27 12:00+0700\n"
 "Last-Translator: Arif E. Nugroho <arif_endro@yahoo.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. TRANSLATORS:  This is a phony function generated for the purpose of
-#. constructing the strings to be extracted for translation.  Each string
-#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
-#. if you need to look up context.  These strings are all inserted into
-#. the shar-generated shell script so the shar user can create shar archives
-#. with messages localized for one locale.
-#.
-#: src/scripts.x:395
-msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr ""
-"Catatan: tidak memverifikasi md5sums. Pertimbangkan memasang GNU coreutils."
+#: lib/error.c:153
+msgid "Unknown system error"
+msgstr "Error sistem tidak diketahui"
 
-#: src/scripts.x:396
-#, fuzzy
-msgid ""
-"WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
-msgstr ""
-"PERINGATAN: tidak mengembalikan jejak waktu. Pertimbangkan untuk mendapatkan "
-"dan\n"
-"memasang GNU `touch'\\'', yang disebarkan dalam GNU coreutils..."
-
-#: src/scripts.x:398
-#, fuzzy, c-format
-msgid "lock directory %s exists"
-msgstr "kunci direktori '%s' ada"
-
-#: src/scripts.x:399
-#, fuzzy, c-format
-msgid "failed to create %s lock directory"
-msgstr "gagal membuat direktori kunci '%s'"
-
-#: src/scripts.x:400
-#, fuzzy, c-format
-msgid "x - created lock directory %s."
-msgstr "x - terbuat direktori kunci '%s'."
-
-#: src/scripts.x:401
-#, fuzzy, c-format
-msgid "x - failed to create lock directory %s."
-msgstr "x - gagal membuat direktori kunci '%s'."
-
-#: src/scripts.x:402
-#, fuzzy, c-format
-msgid "x - created directory %s."
-msgstr "x - terbuat direktori '%s'."
-
-#: src/scripts.x:403
-#, fuzzy, c-format
-msgid "x - failed to create directory %s."
-msgstr "x - gagal untuk membuat direktori '%s'."
-
-#: src/scripts.x:404
-msgid "yes"
-msgstr "ya"
-
-#: src/scripts.x:405
-msgid "overwrite this file"
-msgstr "overwrite berkas ini"
-
-#: src/scripts.x:406
-msgid "no"
-msgstr "tidak"
-
-#: src/scripts.x:407
-msgid "skip this file"
-msgstr "lewati berkas ini"
-
-#: src/scripts.x:408 libopts/enum.c:488
-msgid "all"
-msgstr "semua"
-
-#: src/scripts.x:409
-msgid "overwrite all files"
-msgstr "overwrite semua berkas"
-
-#: src/scripts.x:410 libopts/enum.c:493
-msgid "none"
-msgstr "kosong"
-
-#: src/scripts.x:411
-msgid "overwrite no files"
-msgstr "tidak overwrite berkas apapun"
-
-#: src/scripts.x:412
-msgid "help"
-msgstr "bantuan"
-
-#: src/scripts.x:413
-msgid "explain choices"
-msgstr "jelaskan pilihan"
-
-#: src/scripts.x:414
-msgid "quit"
-msgstr "berhenti"
-
-#: src/scripts.x:415
-msgid "exit immediately"
-msgstr "keluar secara langsung"
-
-#: src/scripts.x:416
-#, fuzzy, c-format
-msgid "restore of %s failed"
-msgstr "pengembalian dari '%s' gagal"
-
-#: src/scripts.x:417
+#: lib/getopt.c:529 lib/getopt.c:545
 #, c-format
-msgid "End of part %d, continue with part %d"
-msgstr "Akhir dari bagian %d, melanjutkan dengan bagian %d"
+msgid "%s: option '%s' is ambiguous\n"
+msgstr "%s: pilihan '%s' rancu\n"
 
-#: src/scripts.x:418
+#: lib/getopt.c:578 lib/getopt.c:582
 #, c-format
-msgid "End of %s part %d"
-msgstr "Akhir dari %s bagian %d"
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: pilihan '--%s' tidak mengijinkan sebuah argumen\n"
 
-#: src/scripts.x:419
-#, fuzzy, c-format
-msgid "restoration warning:  size of %s is not %s"
-msgstr "'peringatan pengembalian: ukuran dari '%s' bukan %s'\n"
-
-#: src/scripts.x:420 src/shar.c:1306
-msgid "(text)"
-msgstr "(teks)"
-
-#: src/scripts.x:421
-msgid "(compressed)"
-msgstr "(terkompres)"
-
-#: src/scripts.x:422
-msgid "(gzipped)"
-msgstr "(ter-gzip)"
-
-#: src/scripts.x:423
-msgid "(bzipped)"
-msgstr "(ter-bzip)"
-
-#: src/scripts.x:424
-msgid "(binary)"
-msgstr "(binari)"
-
-#: src/scripts.x:425
-msgid "archive"
-msgstr "archive"
-
-#: src/scripts.x:426
+#: lib/getopt.c:591 lib/getopt.c:596
 #, c-format
-msgid "File %s is continued in part %d"
-msgstr "Berkas %s dilanjutkan dalam bagian %d"
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: pilihan '%c%s' tidak mengijinkan sebuah argumen\n"
 
-#: src/scripts.x:427
-msgid "Please unpack part 1 first!"
-msgstr "Mohon uraikan bagian 1 terlebih dahulu!"
-
-#: src/scripts.x:428
-#, fuzzy
-msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Mohon uraikan bagian '${shar_sequence}' selanjutnya!"
-
-#: src/scripts.x:429
-#, fuzzy, c-format
-msgid "x - STILL SKIPPING %s"
-msgstr "TETAP MELEWATI %s"
-
-#: src/scripts.x:430
+#: lib/getopt.c:639 lib/getopt.c:658 lib/getopt.c:961 lib/getopt.c:980
 #, c-format
-msgid "continuing file %s"
-msgstr "melanjutkan berkas %s"
+msgid "%s: option '%s' requires an argument\n"
+msgstr "%s: pilihan '%s' membutuhkan sebuah argumen\n"
 
-#: src/scripts.x:431
-msgid "(empty)"
-msgstr "(kosong)"
-
-#: src/scripts.x:432
-#, fuzzy, c-format
-msgid "x - overwriting %s"
-msgstr "penulisan-paksa '%s'"
-
-#: src/scripts.x:433
-#, fuzzy, c-format
-msgid "overwrite %s"
-msgstr "tulis-paksa '%s'"
-
-#: src/scripts.x:434
-#, fuzzy, c-format
-msgid "SKIPPING %s"
-msgstr "MELEWATKAN '%s'"
-
-#: src/scripts.x:435
-msgid "extraction aborted"
-msgstr "ekstrasi dibatalkan"
-
-#: src/scripts.x:436
-#, fuzzy, c-format
-msgid "x - SKIPPING %s (file already exists)"
-msgstr "MELEWATKAN '%s' (berkas telah ada)"
-
-#: src/scripts.x:437
+#: lib/getopt.c:696 lib/getopt.c:699
 #, c-format
-msgid "x - extracting %s %s"
-msgstr "x - mengekstrak %s %s"
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: pilihan '--%s' tidak diketahui\n"
 
-#: src/scripts.x:438
+#: lib/getopt.c:707 lib/getopt.c:710
 #, c-format
-msgid "File %s is complete"
-msgstr "Berkas %s lengkap"
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: pilihan '%c%s' tidak dikenal\n"
 
-#: src/scripts.x:439
+#: lib/getopt.c:759 lib/getopt.c:762
 #, c-format
-msgid "uudecoding file %s"
-msgstr "uudekoding berkas %s"
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: pilihan -- '%c' tidak valid\n"
 
-#: src/scripts.x:440
-msgid "MD5 check failed"
-msgstr "pemeriksaan MD5 gagal"
-
-#: src/scripts.x:441
-msgid "You have unpacked the last part"
-msgstr "Anda telan mengurai bagian terakhir"
-
-#: src/scripts.x:442
-#, fuzzy, c-format
-msgid "x - removed lock directory %s."
-msgstr "x - dihapus direktori kunci '%s'."
-
-#: src/scripts.x:443
-#, fuzzy, c-format
-msgid "x - failed to remove lock directory %s."
-msgstr "x - gagal untuk menghapus direktori kunci '%s'."
-
-#: src/shar-opts.c:1680
-#, fuzzy, c-format
-msgid "Cannot reopen %s as stdin"
-msgstr "Tidak dapat membuka berkas %s"
-
-#: src/shar-opts.c:1790
-msgid "shar usage error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1826
-msgid "shar fatal error:\n"
-msgstr ""
-
-#: src/shar-opts.c:1863
+#: lib/getopt.c:812 lib/getopt.c:829 lib/getopt.c:1032 lib/getopt.c:1050
 #, c-format
-msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr ""
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: pilihan membutuhkan sebuah argumen -- '%c'\n"
 
-#: src/shar-opts.c:1979 src/unshar-opts.c:590 src/uudecode-opts.c:455
-#: src/uuencode-opts.c:500
-#, fuzzy
-msgid "No memory for duping translated strings\n"
-msgstr "tidak ada memori untuk alokasi %d byte"
+#: lib/getopt.c:882 lib/getopt.c:898
+#, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: pilihan '-W %s' rancu\n"
 
-#: src/shar.c:372
+#: lib/getopt.c:922 lib/getopt.c:940
+#, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: pilihan '-W %s' tidak mengijinkan sebuah argumen\n"
+
+#: src/shar.c:348
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "kesalahan pembentukan printf: %s\n"
 
-#: src/shar.c:423
-#, fuzzy
-msgid "sharutils bug - no status"
+#: src/shar.c:387
+#, c-format
+msgid "sharutils bug - no status\n"
 msgstr "kesalahan sharutils - tidak ada status\n"
 
-#: src/shar.c:788
+#: src/shar.c:641
+msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
+msgstr "Catatan: tidak memverifikasi md5sums. Pertimbangkan memasang GNU coreutils."
+
+#: src/shar.c:675
+msgid ""
+"WARNING: not restoring timestamps.  Consider getting and\n"
+"installing GNU `touch'\\'', distributed in GNU coreutils..."
+msgstr ""
+"PERINGATAN: tidak mengembalikan jejak waktu. Pertimbangkan untuk mendapatkan dan\n"
+"memasang GNU `touch'\\'', yang disebarkan dalam GNU coreutils..."
+
+#: src/shar.c:685
+#, c-format
+msgid "lock directory '%s' exists"
+msgstr "kunci direktori '%s' ada"
+
+#: src/shar.c:690
+#, c-format
+msgid "failed to create '%s' lock directory"
+msgstr "gagal membuat direktori kunci '%s'"
+
+#: src/shar.c:694
+#, c-format
+msgid "x - created lock directory '%s'."
+msgstr "x - terbuat direktori kunci '%s'."
+
+#: src/shar.c:696
+#, c-format
+msgid "x - failed to create lock directory '%s'."
+msgstr "x - gagal membuat direktori kunci '%s'."
+
+#: src/shar.c:704
+msgid "yes"
+msgstr "ya"
+
+#: src/shar.c:704
+msgid "overwrite this file"
+msgstr "overwrite berkas ini"
+
+#: src/shar.c:705
+msgid "no"
+msgstr "tidak"
+
+#: src/shar.c:705
+msgid "skip this file"
+msgstr "lewati berkas ini"
+
+#: src/shar.c:706
+msgid "all"
+msgstr "semua"
+
+#: src/shar.c:706
+msgid "overwrite all files"
+msgstr "overwrite semua berkas"
+
+#: src/shar.c:707
+msgid "none"
+msgstr "kosong"
+
+#: src/shar.c:707
+msgid "overwrite no files"
+msgstr "tidak overwrite berkas apapun"
+
+#: src/shar.c:708
+msgid "help"
+msgstr "bantuan"
+
+#: src/shar.c:708
+msgid "explain choices"
+msgstr "jelaskan pilihan"
+
+#: src/shar.c:709
+msgid "quit"
+msgstr "berhenti"
+
+#: src/shar.c:709
+msgid "exit immediately"
+msgstr "keluar secara langsung"
+
+#: src/shar.c:749
+#, c-format
 msgid "Too many directories for mkdir generation"
 msgstr "Terlalu banyak direktori untuk pemakaian mkdir"
 
-#: src/shar.c:871 src/shar.c:1541
+#: src/shar.c:770
+#, c-format
+msgid "x - created directory '%s'."
+msgstr "x - terbuat direktori '%s'."
+
+#: src/shar.c:772
+#, c-format
+msgid "x - failed to create directory '%s'."
+msgstr "x - gagal untuk membuat direktori '%s'."
+
+#: src/shar.c:839 src/shar.c:1539
 #, c-format
 msgid "Cannot access %s"
 msgstr "Tidak dapat mengakses %s"
 
-#: src/shar.c:948 src/unshar.c:376
+#: src/shar.c:893
+#, c-format
+msgid "-C is being deprecated, use -Z instead"
+msgstr "-C sudah ditinggalkan, lebih baik gunakan -Z"
+
+#: src/shar.c:934 src/unshar.c:375
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Tidak dapat memperoleh nama direktori sekarang"
 
-#: src/shar.c:1005 src/shar.c:1346
+#: src/shar.c:998
+msgid ""
+"Archives must be unpacked in sequence!\n"
+"Please unpack part '`cat ${lock_dir}/seq`' next."
+msgstr ""
+"Archives harus di unpack dalam urutan!\n"
+"Mohon unpack bagian '`cat ${lock_dir}/seq`' selanjutnya."
+
+#: src/shar.c:1009 src/shar.c:1336
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Berkas baru, sisa %s, "
 
-#: src/shar.c:1006 src/shar.c:1347
+#: src/shar.c:1010 src/shar.c:1337
 #, c-format
 msgid "Limit still %s\n"
 msgstr "Batas tetap %s\n"
 
-#: src/shar.c:1028
+#: src/shar.c:1016 src/shar.c:1729 src/shar.c:1746
+#, c-format
+msgid "restore of '%s' failed"
+msgstr "pengembalian dari '%s' gagal"
+
+#: src/shar.c:1020
+#, c-format
+msgid "End of part %d, continue with part %d"
+msgstr "Akhir dari bagian %d, melanjutkan dengan bagian %d"
+
+#: src/shar.c:1034 src/shar.c:1429
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Memulai berkas %s\n"
 
-#: src/shar.c:1081
-#, fuzzy
-msgid "Could not popen command"
+#: src/shar.c:1085
+#, c-format
+msgid "Could not popen 'wc' command:  %s\n"
 msgstr "Tidak dapat popen perintah 'wc': %s\n"
 
-#: src/shar.c:1162
+#: src/shar.c:1120
+#, c-format
+msgid "'restoration warning:  size of '%s' is not %s'\n"
+msgstr "'peringatan pengembalian: ukuran dari '%s' bukan %s'\n"
+
+#: src/shar.c:1148
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Tidak dapat membuka berkas %s"
 
-#: src/shar.c:1296 src/shar.c:1305
+#: src/shar.c:1203
+#, c-format
+msgid "popen(3) on: %s"
+msgstr "popen(3) di: %s"
+
+#: src/shar.c:1226
+#, c-format
+msgid "fopen(3) of file %s"
+msgstr "fopen(3) dari berkas %s"
+
+#: src/shar.c:1279
 msgid "text"
 msgstr "teks"
 
-#: src/shar.c:1311 src/shar.c:1322
-msgid "call"
-msgstr ""
+#: src/shar.c:1280
+msgid "(text)"
+msgstr "(teks)"
 
-#: src/shar.c:1335
+#: src/shar.c:1289
+msgid "compressed"
+msgstr "terkompres"
+
+#: src/shar.c:1290
+msgid "gzipped"
+msgstr "ter-gzip"
+
+#: src/shar.c:1291
+msgid "bzipped"
+msgstr "ter-bzip"
+
+#: src/shar.c:1292
+msgid "binary"
+msgstr "binari"
+
+#: src/shar.c:1295
+msgid "(compressed)"
+msgstr "(terkompres)"
+
+#: src/shar.c:1296
+msgid "(gzipped)"
+msgstr "(ter-gzip)"
+
+#: src/shar.c:1297
+msgid "(bzipped)"
+msgstr "(ter-bzip)"
+
+#: src/shar.c:1298
+msgid "(binary)"
+msgstr "(binari)"
+
+#: src/shar.c:1303
+#, c-format
+msgid "pipe(2) failed"
+msgstr "pipe(2) gagal"
+
+#: src/shar.c:1314
+#, c-format
+msgid "Could not fork"
+msgstr "Tidak dapat fork"
+
+#: src/shar.c:1326
 #, c-format
 msgid "File %s (%s)"
 msgstr "Berkas %s (%s)"
 
-#: src/shar.c:1426
-#, fuzzy, c-format
-msgid "Continuing file %s\n"
+#: src/shar.c:1345
+#, c-format
+msgid "restore of '%s' failed\n"
+msgstr "pengembalian dari '%s' gagal\n"
+
+#: src/shar.c:1354
+#, c-format
+msgid "End of part %ld, continue with part %ld"
+msgstr "Akhir dari bagian %ld, melanjutkan dengan bagian %ld"
+
+#: src/shar.c:1360
+#, c-format
+msgid "End of %s part %d"
+msgstr "Akhir dari %s bagian %d"
+
+#: src/shar.c:1361
+msgid "archive"
+msgstr "archive"
+
+#: src/shar.c:1365
+#, c-format
+msgid "File %s is continued in part %d"
+msgstr "Berkas %s dilanjutkan dalam bagian %d"
+
+#: src/shar.c:1408
+msgid "Please unpack part 1 first!"
+msgstr "Mohon uraikan bagian 1 terlebih dahulu!"
+
+#: src/shar.c:1412
+msgid "Please unpack part '${shar_sequence}' next!"
+msgstr "Mohon uraikan bagian '${shar_sequence}' selanjutnya!"
+
+#: src/shar.c:1423
+#, c-format
+msgid "STILL SKIPPING %s"
+msgstr "TETAP MELEWATI %s"
+
+#: src/shar.c:1431
+#, c-format
+msgid "continuing file %s"
 msgstr "melanjutkan berkas %s"
 
-#: src/shar.c:1536
+#: src/shar.c:1534
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Bukan sebuah berkas regular"
 
-#: src/shar.c:1563
+#: src/shar.c:1556
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "Dalam shar: ukuran yang tersisa %s\n"
 
-#: src/shar.c:1583
+#: src/shar.c:1574
 msgid "empty"
 msgstr "kosong"
 
-#: src/shar.c:1622
+#: src/shar.c:1575
+msgid "(empty)"
+msgstr "(kosong)"
+
+#: src/shar.c:1598
+#, c-format
+msgid "overwriting '%s'"
+msgstr "penulisan-paksa '%s'"
+
+#: src/shar.c:1600
+#, c-format
+msgid "overwrite '%s'"
+msgstr "tulis-paksa '%s'"
+
+#: src/shar.c:1604
+#, c-format
+msgid "SKIPPING '%s'"
+msgstr "MELEWATKAN '%s'"
+
+#: src/shar.c:1605
+msgid "extraction aborted"
+msgstr "ekstrasi dibatalkan"
+
+#: src/shar.c:1609
+#, c-format
+msgid "SKIPPING '%s' (file already exists)"
+msgstr "MELEWATKAN '%s' (berkas telah ada)"
+
+#: src/shar.c:1619
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Menyimpan %s (%s)"
 
-#: src/shar.c:1807
-#, fuzzy, c-format
-msgid "Invalid format for output file names (%s): %s"
-msgstr "format tidak valid (jumlah field terlalu lebar): '%s'\n"
+#: src/shar.c:1623
+#, c-format
+msgid "x - extracting %s %s"
+msgstr "x - mengekstrak %s %s"
+
+#: src/shar.c:1670
+#, c-format
+msgid "File %s is complete"
+msgstr "Berkas %s lengkap"
+
+#: src/shar.c:1677
+#, c-format
+msgid "uudecoding file %s"
+msgstr "uudekoding berkas %s"
+
+#: src/shar.c:1687
+#, c-format
+msgid "uncompressing file %s"
+msgstr "unkompres berkas %s"
+
+#: src/shar.c:1695
+#, c-format
+msgid "gunzipping file %s"
+msgstr "gunzipping berkas %s"
+
+#: src/shar.c:1703
+#, c-format
+msgid "bunzipping file %s"
+msgstr "bunzipping berkas %s"
+
+#: src/shar.c:1758
+msgid "MD5 check failed"
+msgstr "pemeriksaan MD5 gagal"
 
 #: src/shar.c:1822
-msgid "more than one format element"
-msgstr ""
+#, c-format
+msgid "allocating output file name"
+msgstr "mengalokasikan nama berkas keluaran"
 
-#: src/shar.c:1827
-msgid "no conversion character"
-msgstr ""
-
-#: src/shar.c:1836
-msgid "format is too wide"
-msgstr ""
-
-#: src/shar.c:1848
-msgid "invalid conversion character"
-msgstr ""
-
-#: src/shar.c:1889
-#, fuzzy
-msgid "Opening"
+#: src/shar.c:1828
+#, c-format
+msgid "Opening `%s'"
 msgstr "Membuka `%s'"
 
-#: src/shar.c:1904
-#, fuzzy
-msgid "Closing"
+#: src/shar.c:1839
+#, c-format
+msgid "Closing `%s'"
 msgstr "Menutup `%s'"
 
-#: src/shar.c:2015
-msgid "No input files"
-msgstr "Tidak ada berkas masukan"
-
-#: src/shar.c:2032
-#, c-format
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "Mohon hindari -X shars di Usenet atau jaringan publik"
-
-#: src/shar.c:2056
-#, c-format
-msgid ""
-"The '%s' option may not be intermixed with file names\n"
-"unless the --intermix-type option has been specified."
-msgstr ""
-
-#: src/shar.c:2074
-#, c-format
-msgid "The '%s' option must appear before any file names"
-msgstr ""
-
-#: src/shar.c:2110
-#, c-format
-msgid ""
-"invalid compaction type:  %s\n"
-"the known types are:\n"
-msgstr ""
-
-#: src/shar.c:2149
-msgid "files on command line and --input-file-list specified"
-msgstr ""
-
-#: src/shar.c:2198
-#, c-format
-msgid "Created %d files\n"
-msgstr "Dibuat %d berkas\n"
-
-#: src/unshar-opts.c:433 src/unshar.c:394
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Tidak dapat chdir ke `%s'"
-
-#: src/unshar.c:168
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "Tidak ditemukan perintah shell dalam %s"
-
-#: src/unshar.c:184
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s sepertinya kode mentah C, bukan sebuah archive shell"
-
-#: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "Tidak ditemukan perintah shell setelah `cut' dalam %s"
-
-#: src/unshar.c:241
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "%s mungkin bukan sebuah shell archive"
-
-#: src/unshar.c:242
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "Baris `cut' diikuti dengan: %s"
-
-#: src/unshar.c:268
-#, c-format
-msgid "Starting `sh' process"
-msgstr "Memulai proses `sh'"
-
-#: src/unshar.c:312 src/uudecode.c:459
+#: src/shar.c:1851 src/unshar.c:311 src/uudecode.c:475 src/uuencode.c:202
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Coba `%s --help' untuk informasi lebih lanjut.\n"
 
-#: src/unshar.c:316
+#: src/shar.c:1855 src/unshar.c:315
 #, c-format
 msgid "Usage: %s [OPTION]... [FILE]...\n"
 msgstr "Penggunaan: %s [PILIHAN]... [BERKAS]...\n"
 
-#: src/unshar.c:317
+#: src/shar.c:1856
+msgid "Mandatory arguments to long options are mandatory for short options too.\n"
+msgstr "argumen wajib untuk pilihan panjang juga wajib untuk pilihan pendek juga.\n"
+
+#: src/shar.c:1859
+msgid ""
+"\n"
+"Giving feedback:\n"
+"      --help              display this help and exit\n"
+"      --version           output version information and exit\n"
+"  -q, --quiet, --silent   do not output verbose messages locally\n"
+msgstr ""
+"\n"
+"Memberikan umpan balik:\n"
+"      --help              tampilkan bantuan ini dan keluar\n"
+"      --version           keluarkan informasi versi dan keluar\n"
+"  -q, --quiet, --silent   jangan keluarkan pesan ramai secara lokal\n"
+
+#: src/shar.c:1867
+msgid ""
+"\n"
+"Selecting files:\n"
+"  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
+"  -S, --stdin-file-list   read file list from standard input\n"
+msgstr ""
+"\n"
+"Pemilihan berkas:\n"
+"  -p, --intermix-type     ijinkan -[BTzZ] dalam daftar berkas untuk mengubah mode\n"
+"  -S, --stdin-file-list   baca daftar berkas dari standar masukan\n"
+
+#: src/shar.c:1874
+msgid ""
+"\n"
+"Selecting files:\n"
+"  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
+"  -S, --stdin-file-list   read file list from standard input\n"
+msgstr ""
+"\n"
+"Pemilihan berkas:\n"
+"  -p, --intermix-type     ijinkan -[BTz] dalam daftar berkas untuk mengubah mode\n"
+"  -S, --stdin-file-list   baca daftar berkas dari masukan standar\n"
+
+#: src/shar.c:1881
+msgid ""
+"\n"
+"Splitting output:\n"
+"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
+"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
+"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
+msgstr ""
+"\n"
+"Membagi keluaran:\n"
+"  -o, --output-prefix=AWALAN    keluaran ke berkas AWALAN.01 sampai AWALAN.NN\n"
+"  -l, --whole-size-limit=BESAR  bagi archive, bukan berkas, ke BESAR kilobytes\n"
+"  -L, --split-size-limit=BESAR  bagi archive, atau berkas, ke BESAR kilobytes\n"
+
+#: src/shar.c:1888
+msgid ""
+"\n"
+"Controlling the shar headers:\n"
+"  -n, --archive-name=NAME   use NAME to document the archive\n"
+"  -s, --submitter=ADDRESS   override the submitter name\n"
+"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
+"  -c, --cut-mark            start the shar with a cut line\n"
+"  -t, --translate           translate messages in the script\n"
+"\n"
+"Selecting how files are stocked:\n"
+"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
+"  -T, --text-files             treat all files as text\n"
+"  -B, --uuencode               treat all files as binary, use uuencode\n"
+"  -z, --gzip                   gzip and uuencode all files\n"
+"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
+"  -j, --bzip2                  bzip2 and uuencode all files\n"
+msgstr ""
+"\n"
+"Pengontrolan shar dikepala:\n"
+"  -n, --archive-name=NAMA   gunakan NAMA untuk dokumen archive\n"
+"  -s, --submitter=ALAMAT    override nama pengirim\n"
+"  -a, --net-headers         keluarkan Submitted-by: dan Archive-name: dikepala\n"
+"  -c, --cut-mark            start shar dengan sebuah baris potong\n"
+"  -t, --translate           terjemahkan pesan dalam script\n"
+"\n"
+"Pilih bagaimana berkas distock:\n"
+"  -M, --mixed-uuencode      secara dinamis tentukan uuencoding (baku)\n"
+"  -T, --text-files          perlakukan seluruh berkas sebagai teks\n"
+"  -B, --uuencode            perlakukan seluruh berkas sebagai binari, gunakan uuencode\n"
+"  -z, --gzip                gzip dan uuencode seluruh berkas\n"
+"  -g, --level-for-gzip=TING lewatkan -TINGKAT (baku 9) ke gzip\n"
+"  -j, --bzip2               bzip2 dan uuencode seluruh berkas\n"
+
+#: src/shar.c:1906
+msgid ""
+"  -Z, --compress               compress and uuencode all files\n"
+"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
+msgstr ""
+"  -Z, --compress               kompres dan uuencode seluruh berkas\n"
+"  -b, --bits-per-code=BITS     lewatkan -bBITS (baku 12) ke kompres\n"
+
+#: src/shar.c:1911
+msgid ""
+"\n"
+"Protecting against transmission:\n"
+"  -w, --no-character-count      do not use `wc -c' to check size\n"
+"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
+"  -F, --force-prefix            force the prefix character on every line\n"
+"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
+"\n"
+"Producing different kinds of shars:\n"
+"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
+"  -P, --no-piping           exclusively use temporary files at unshar time\n"
+"  -x, --no-check-existing   blindly overwrite existing files\n"
+"  -X, --query-user          ask user before overwriting files (not for Net)\n"
+"  -m, --no-timestamp        do not restore file modification dates & times\n"
+"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
+"  -f, --basename            restore in one directory, despite hierarchy\n"
+"      --no-i18n             do not produce internationalized shell script\n"
+msgstr ""
+"\n"
+"Proteksi terhadap transmisi:\n"
+"  -w, --no-character-count  jangan gunakan `wc -c' untuk memeriksa ukuran\n"
+"  -D, --no-md5-digest       jangan gunakan `md5sum' digest untuk verifikasi\n"
+"  -F, --force-prefix        paksa awalan karakter disetiap baris\n"
+"  -d, --here-delimiter=STR  gunakan STIRNG untuk membatasi berkas dalam shar\n"
+"\n"
+"Menghasilkan jenis yang berbeda dari shars:\n"
+"  -V, --vanilla-operation   menghasilkan shars sangat sederhana dan undemanding\n"
+"  -P, --no-piping           secara ekslusif gunakan berkas sementara pada saat unshar\n"
+"  -x, --no-check-existing   secara buat overwrite berkas yang sudah ada\n"
+"  -X, --query-user          tanya pengguna sebelum overwriting berkas (tidak untuk Net)\n"
+"  -m, --no-timestamp        jangan kembalikan tanggal dan waktu modifikasi berkas\n"
+"  -Q, --quiet-unshar        hindari pesan ramai pada saat unshar\n"
+"  -f, --basename            kembalikan dalam satu direktori, daripada hierarki\n"
+"      --no-i18n             jangan hasilkan shell script yang diinternasionalkan\n"
+
+#: src/shar.c:1929
+msgid ""
+"\n"
+"Option -o is required with -l or -L, option -n is required with -a.\n"
+msgstr ""
+"\n"
+"Pilihan -o dibutuhkan dengan -l atau -L, pilihan -n dibutuhkan dengan -a.\n"
+
+#: src/shar.c:1933
+msgid "Option -g implies -z, option -b implies -Z.\n"
+msgstr "Pilihan -g mengimplikasikan -z, pilihan -b mengimplikasikan -Z.\n"
+
+#: src/shar.c:1936
+msgid "Option -g implies -z.\n"
+msgstr "Pilihan -g mengimplikasikan -z.\n"
+
+#. TRANSLATORS: add the contact address for your translation team!
+#: src/shar.c:1940 src/unshar.c:330 src/uudecode.c:486 src/uuencode.c:212
+#, c-format
+msgid "Report bugs to <%s>.\n"
+msgstr "Laporkan bugs ke <%s>. Untuk bug dalam terjemahan ke translation-team-id@lists.sourceforge.net\n"
+
+#: src/shar.c:1998
+#, c-format
+msgid "invalid file size limit `%s'"
+msgstr "batas ukuran berkas `%s' tidak valid"
+
+#: src/shar.c:2034
+#, c-format
+msgid "invalid format (count field too wide): '%s'\n"
+msgstr "format tidak valid (jumlah field terlalu lebar): '%s'\n"
+
+#: src/shar.c:2097
+#, c-format
+msgid "DEBUG was not selected at compile time"
+msgstr "DEBUG tidak dipilih pada waktu kompilasi"
+
+#: src/shar.c:2117
+#, c-format
+msgid "Hard limit %s\n"
+msgstr "Batas keras %s\n"
+
+#: src/shar.c:2159
+#, c-format
+msgid "This system doesn't support -Z ('compress'), use -z instead"
+msgstr "Sistem ini tidak mendukung -Z ('compress'), lebih baik gunakan -z"
+
+#: src/shar.c:2192
+#, c-format
+msgid "Soft limit %s\n"
+msgstr "Batas lembut %s\n"
+
+#: src/shar.c:2207
+#, c-format
+msgid "illegal output prefix\n"
+msgstr "awalan keluaran tidak legal\n"
+
+#: src/shar.c:2254 src/unshar.c:413 src/uudecode.c:524 src/uuencode.c:252
+#, c-format, no-wrap
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Hak Cipta (C) %s Free Software Foundation, Inc.\n"
+"Ini adalah aplikasi bebas; lihat kode program untuk kondisi penyalinan.\n"
+"TIDAK ADA GARANSI; bahkan untuk PERDAGANGAN atau KECOCOKAN UNTUK SUATU TUJUAN TERTENTU.\n"
+
+#: src/shar.c:2301
+#, c-format
+msgid "WARNING: No user interaction in vanilla mode"
+msgstr "PERINGATAN: Tidak ada interaksi pengguna dalam mode vanilla"
+
+#: src/shar.c:2313
+#, c-format
+msgid "WARNING: Non-text storage options overridden"
+msgstr "PERINGATAN: Pilihan bukan-teks penyimpanan dipaksakan"
+
+#: src/shar.c:2371
+#, c-format
+msgid "No input files"
+msgstr "Tidak ada berkas masukan"
+
+#: src/shar.c:2377
+#, c-format
+msgid "Cannot use -a option without -n"
+msgstr "Tidak dapat menggunakan pilihan -a tanpa -n"
+
+#: src/shar.c:2383
+#, c-format
+msgid "Cannot use -l or -L option without -o"
+msgstr "Tidak dapat menggunakan pilihan -l atau -L tanpa -o"
+
+#: src/shar.c:2395
+#, c-format
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "Mohon hindari -X shars di Usenet atau jaringan publik"
+
+#: src/shar.c:2434
+msgid "You have unpacked the last part"
+msgstr "Anda telan mengurai bagian terakhir"
+
+#: src/shar.c:2436
+#, c-format
+msgid "Created %d files\n"
+msgstr "Dibuat %d berkas\n"
+
+#: src/shar.c:2441
+#, c-format
+msgid "x - removed lock directory '%s'."
+msgstr "x - dihapus direktori kunci '%s'."
+
+#: src/shar.c:2443
+#, c-format
+msgid "x - failed to remove lock directory '%s'."
+msgstr "x - gagal untuk menghapus direktori kunci '%s'."
+
+#: src/unshar.c:167
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "Tidak ditemukan perintah shell dalam %s"
+
+#: src/unshar.c:183
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s sepertinya kode mentah C, bukan sebuah archive shell"
+
+#: src/unshar.c:219
+#, c-format
+msgid "Found no shell commands after `cut' in %s"
+msgstr "Tidak ditemukan perintah shell setelah `cut' dalam %s"
+
+#: src/unshar.c:240
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "%s mungkin bukan sebuah shell archive"
+
+#: src/unshar.c:241
+#, c-format
+msgid "The `cut' line was followed by: %s"
+msgstr "Baris `cut' diikuti dengan: %s"
+
+#: src/unshar.c:267
+#, c-format
+msgid "Starting `sh' process"
+msgstr "Memulai proses `sh'"
+
+#: src/unshar.c:316
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
@@ -485,113 +748,108 @@ msgstr ""
 "Argumen wajib ke pilihan panjang juga wajib untuk pilihan pendek juga.\n"
 "\n"
 "  -d, --directory=DIREKTORI   ubah ke DIREKTORI sebelum menguraikan\n"
-"  -c, --overwrite             lewatkan -c ke script shar untuk overwriting "
-"berkas\n"
+"  -c, --overwrite             lewatkan -c ke script shar untuk overwriting berkas\n"
 "  -e, --exit-0                sama seperti `--split-at=\"exit 0\"'\n"
 "  -E, --split-at=STRING       bagi concatenated shars setelah STRING\n"
 "  -f, --force                 sama seperti `-c'\n"
 "      --help                  tampilkan bantuan ini dan keluar\n"
 "      --version               keluarkan informasi versi dan keluar\n"
 
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
+#: src/unshar.c:393
 #, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr ""
-"Laporkan bugs ke <%s>. Untuk bug dalam terjemahan ke translation-team-"
-"id@lists.sourceforge.net\n"
+msgid "Cannot chdir to `%s'"
+msgstr "Tidak dapat chdir ke `%s'"
 
-#: src/unshar.c:414 src/uudecode.c:506
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Hak Cipta (C) %s Free Software Foundation, Inc.\n"
-"Ini adalah aplikasi bebas; lihat kode program untuk kondisi penyalinan.\n"
-"TIDAK ADA GARANSI; bahkan untuk PERDAGANGAN atau KECOCOKAN UNTUK SUATU TUJUAN TERTENTU.\n"
-
-#: src/unshar.c:445 src/unshar.c:507
+#: src/unshar.c:444 src/unshar.c:506
 #, c-format
 msgid "allocate file name buffer"
 msgstr "alokasikan penyangga nama berkas"
 
-#: src/unshar.c:466
+#: src/unshar.c:465
 msgid "standard input"
 msgstr "standar masukan"
 
-#: src/unshar.c:528
+#: src/unshar.c:527
 #, c-format
 msgid "allocate file buffer"
 msgstr "alokasikan penyangga berkas"
 
-#: src/uudecode.c:114 src/uudecode.c:444
+#: src/uudecode.c:116 src/uudecode.c:459
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Tulis error"
 
-#: src/uudecode.c:131 src/uudecode.c:218
+#: src/uudecode.c:134 src/uudecode.c:222
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Berkas pendek"
 
-#: src/uudecode.c:167
+#: src/uudecode.c:170
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Tidak ada baris `end'"
 
-#: src/uudecode.c:227
+#: src/uudecode.c:231
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: data diikuti karakter padding `='"
 
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
+#: src/uudecode.c:255 src/uudecode.c:263 src/uudecode.c:277
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: baris tidak legal"
 
-#: src/uudecode.c:303
+#: src/uudecode.c:307
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Nama berkas tidak legal: %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:314
 #, c-format
 msgid "No user `%s'"
 msgstr "Tidak ada pengguna `%s'"
 
-#: src/uudecode.c:321
+#: src/uudecode.c:325
 #, c-format
 msgid "no memory for %d byte allocation"
 msgstr "tidak ada memori untuk alokasi %d byte"
 
-#: src/uudecode.c:346
+#: src/uudecode.c:350
 #, c-format
 msgid "cannot access %s"
 msgstr "tidak dapat mengakses %s"
 
-#: src/uudecode.c:354
+#: src/uudecode.c:355
+#, c-format
+msgid "denied writing FIFO (%s)"
+msgstr "ditolak penulisan FIFO (%s)"
+
+#: src/uudecode.c:360
+#, c-format
+msgid "not following symlink (%s)"
+msgstr "tidak mengikuti symlink (%s)"
+
+#: src/uudecode.c:368
 #, c-format
 msgid "freopen of %s"
 msgstr "freopen dari %s"
 
-#: src/uudecode.c:360
+#: src/uudecode.c:374
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod dari %s"
 
-#: src/uudecode.c:385
+#: src/uudecode.c:400
 #, c-format
 msgid "%s: No `begin' line"
 msgstr "%s: Tidak ada baris `begin'"
 
-#: src/uudecode.c:463
+#: src/uudecode.c:479
 #, c-format
 msgid "Usage: %s [FILE]...\n"
 msgstr "Penggunaan: %s [BERKAS]...\n"
 
-#: src/uudecode.c:464
+#: src/uudecode.c:480
 msgid ""
 "Mandatory arguments to long options are mandatory to short options too.\n"
 "  -o, --output-file=FILE   direct output to FILE\n"
@@ -603,854 +861,51 @@ msgstr ""
 "      --help               tampilkan pesan bantuan ini dan keluar\n"
 "      --version            keluarkan informasi versi dan keluar\n"
 
-#: src/uudecode.c:530
-#, c-format
-msgid ""
-"You cannot specify an output file when processing\n"
-"multiple input files.\n"
-msgstr ""
-
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
+#: src/uuencode.c:133 src/uuencode.c:301 src/uuencode.c:308
 #, c-format
 msgid "Write error"
 msgstr "Tulis error"
 
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
+#: src/uuencode.c:155 src/uuencode.c:186 src/uuencode.c:188
 #, c-format
 msgid "Read error"
 msgstr "Baca error"
 
-#: src/uuencode.c:226
+#: src/uuencode.c:206
+#, c-format
+msgid "Usage: %s [INFILE] REMOTEFILE\n"
+msgstr "Penggunaan: %s [BERKAS MASUKAN] BERKAS REMOTE\n"
+
+#: src/uuencode.c:207
+msgid ""
+"\n"
+"  -m, --base64    use base64 encoding as of RFC1521\n"
+"      --help      display this help and exit\n"
+"      --version   output version information and exit\n"
+msgstr ""
+"\n"
+"  -m, --base64    gunakan pengkodean base64 seperti dalam RFC1521\n"
+"      --help      tampilkan bantuan ini dan keluar\n"
+"      --version   keluarkan informasi versi dan keluar\n"
+
+#: src/uuencode.c:277
 #, c-format
 msgid "fopen-ing %s"
 msgstr "fopen-ing %s"
 
-#: src/uuencode.c:228
+#: src/uuencode.c:279
 #, c-format
 msgid "fstat-ing %s"
 msgstr "fstat-ing %s"
 
-#: src/uuencode.c:254
-#, fuzzy, c-format
-msgid "Allocation failure"
-msgstr "alokasikan penyangga berkas"
-
-#: lib/error.c:188
-msgid "Unknown system error"
-msgstr "Error sistem tidak diketahui"
-
-#: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
-msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: pilihan '%s' rancu\n"
-
-#: lib/getopt.c:624 lib/getopt.c:628
-#, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: pilihan '--%s' tidak mengijinkan sebuah argumen\n"
-
-#: lib/getopt.c:637 lib/getopt.c:642
-#, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: pilihan '%c%s' tidak mengijinkan sebuah argumen\n"
-
-#: lib/getopt.c:685 lib/getopt.c:704
-#, fuzzy, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: pilihan '%s' membutuhkan sebuah argumen\n"
-
-#: lib/getopt.c:742 lib/getopt.c:745
-#, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: pilihan '--%s' tidak diketahui\n"
-
-#: lib/getopt.c:753 lib/getopt.c:756
-#, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: pilihan '%c%s' tidak dikenal\n"
-
-#: lib/getopt.c:805 lib/getopt.c:808
-#, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: pilihan -- '%c' tidak valid\n"
-
-#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
-#, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: pilihan membutuhkan sebuah argumen -- '%c'\n"
-
-#: lib/getopt.c:934 lib/getopt.c:950
-#, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: pilihan '-W %s' rancu\n"
-
-#: lib/getopt.c:974 lib/getopt.c:992
-#, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: pilihan '-W %s' tidak mengijinkan sebuah argumen\n"
-
-#: lib/getopt.c:1013 lib/getopt.c:1031
-#, fuzzy, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: pilihan '%s' membutuhkan sebuah argumen\n"
-
-#: lib/openat-die.c:38
-#, fuzzy, c-format
-msgid "unable to record current working directory"
-msgstr "gagal membuat direktori kunci '%s'"
-
-#: lib/openat-die.c:57
-#, fuzzy, c-format
-msgid "failed to return to initial working directory"
-msgstr "gagal membuat direktori kunci '%s'"
-
-#. TRANSLATORS:
-#. Get translations for open and closing quotation marks.
-#. The message catalog should translate "`" to a left
-#. quotation mark suitable for the locale, and similarly for
-#. "'".  For example, a French Unicode local should translate
-#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
-#. QUOTATION MARK), respectively.
-#.
-#. If the catalog has no translation, we will try to
-#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
-#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
-#. current locale is not Unicode, locale_quoting_style
-#. will quote 'like this', and clocale_quoting_style will
-#. quote "like this".  You should always include translations
-#. for "`" and "'" even if U+2018 and U+2019 are appropriate
-#. for your locale.
-#.
-#. If you don't know what to put here, please see
-#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
-#. and use glyphs suitable for your language.
-#: lib/quotearg.c:312
-msgid "`"
-msgstr ""
-
-#: lib/quotearg.c:313
-msgid "'"
-msgstr ""
-
-#: lib/xalloc-die.c:34
-msgid "memory exhausted"
-msgstr "kehabisan memori"
-
-#: lib/xstrtol-error.c:63
-#, c-format
-msgid "invalid %s%s argument '%s'"
-msgstr ""
-
-#: lib/xstrtol-error.c:68
-#, c-format
-msgid "invalid suffix in %s%s argument '%s'"
-msgstr ""
-
-#: lib/xstrtol-error.c:72
-#, c-format
-msgid "%s%s argument '%s' too large"
-msgstr ""
-
-#: libopts/autoopts.c:53
-#, fuzzy, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr "pengembalian dari '%s' gagal\n"
-
-#: libopts/init.c:54
-msgid "AutoOpts function called without option descriptor\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis exceeds the compiled library version:  "
-msgstr ""
-
-#: libopts/init.c:85
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-
-#: libopts/autoopts.c:66
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
-
-#: libopts/init.c:89
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:79
-#, fuzzy, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "pengembalian dari '%s' gagal\n"
-
-#: libopts/version.c:124
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tcopyright (c) 1999-2012 by Bruce Korb - all rights reserved\n"
-msgstr ""
-
-#: libopts/find.c:568
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:55
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:230
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: pilihan '%s' rancu\n"
-
-#: libopts/find.c:87
-msgid "  The following options match:\n"
-msgstr ""
-
-#: libopts/find.c:269
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr ""
-
-#: libopts/find.c:90 libopts/find.c:95
-#, c-format
-msgid "  %s%s\n"
-msgstr ""
-
-#: libopts/check.c:159
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr ""
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:867
-msgid "version, usage and configuration options:"
-msgstr ""
-
-#: libopts/makeshell.c:261
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr ""
-
-#: libopts/version.c:164
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-
-#: libopts/check.c:58
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr ""
-
-#: libopts/restore.c:109
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr ""
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr ""
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr ""
-
-#: libopts/find.c:193 libopts/find.c:400
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr ""
-
-#: libopts/usage.c:836
-#, c-format
-msgid " --- %-14s %s\n"
-msgstr ""
-
-#: libopts/usage.c:834
-msgid "This option has been disabled"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:77 libopts/autoopts.c:214
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:911
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/usage.c:275
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-
-#: libopts/usage.c:250 libopts/usage.c:255
-#, c-format
-msgid "%%-%ds %%s\n"
-msgstr ""
-
-#: libopts/makeshell.c:267
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr ""
-
-#: libopts/makeshell.c:759
-#, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr ""
-
-#: libopts/configfile.c:1168
-#, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr ""
-
-#: libopts/text_mmap.c:100
-#, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr ""
-
-#: libopts/file.c:49 libopts/file.c:75 libopts/file.c:87 libopts/file.c:109
-#: libopts/file.c:136
-#, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr ""
-
-#: libopts/file.c:76
-msgid "stat-ing for directory"
-msgstr ""
-
-#: libopts/file.c:88
-#, fuzzy
-msgid "stat-ing for regular file"
-msgstr "%s: Bukan sebuah berkas regular"
-
-#: libopts/file.c:50
-msgid "stat-ing for non-existant file"
-msgstr ""
-
-#: libopts/file.c:110
-#, fuzzy
-msgid "open-ing file"
-msgstr "fopen-ing %s"
-
-#: libopts/file.c:137
-#, fuzzy
-msgid "fopen-ing file"
-msgstr "fopen-ing %s"
-
-#: libopts/makeshell.c:837
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-
-#: libopts/find.c:439 libopts/reset.c:108
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: pilihan -- %c tidak legal\n"
-
-#: libopts/find.c:247 libopts/find.c:741 libopts/reset.c:116
-#, fuzzy, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: pilihan -- %c tidak legal\n"
-
-#: libopts/find.c:311
-#, fuzzy, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: pilihan '--%s' tidak diketahui\n"
-
-#: libopts/enum.c:155 libopts/enum.c:165
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr ""
-
-#: libopts/usage.c:486 libopts/usage.c:800
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:358
-#, fuzzy, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: pilihan -- '%c' tidak valid\n"
-
-#: libopts/enum.c:162
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:497
-#, fuzzy, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: pilihan '%s' membutuhkan sebuah argumen\n"
-
-#: libopts/autoopts.c:164
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:92
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr ""
-
-#: libopts/find.c:603
-#, fuzzy, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: pilihan '--%s' tidak mengijinkan sebuah argumen\n"
-
-#: libopts/check.c:149
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr ""
-
-#: libopts/save.c:512
-#, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr ""
-
-#: libopts/usage.c:277
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:230
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:91
-#, fuzzy
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "%s: pilihan '%s' membutuhkan sebuah argumen\n"
-
-#: libopts/usage.c:1026
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:962 libopts/usage.c:1020
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:179 libopts/save.c:233
-#, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr ""
-
-#: libopts/restore.c:150
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/save.c:128
-#, c-format
-msgid "'%s' not defined\n"
-msgstr ""
-
-#: libopts/autoopts.c:254
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr ""
-
-#: libopts/check.c:91
-#, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr ""
-
-#: libopts/configfile.c:1178 libopts/makeshell.c:684 libopts/save.c:252
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:151
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr ""
-
-#: libopts/time.c:112
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr ""
-
-#: libopts/time.c:51
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr ""
-
-#: libopts/usage.c:1021 libopts/usage.c:1027
-#, c-format
-msgid " %3s %s"
-msgstr ""
-
-#: libopts/usage.c:282
-msgid "The '-#<number>' option may omit the hash char\n"
-msgstr ""
-
-#: libopts/alias.c:82 libopts/autoopts.c:219
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/usage.c:278
-msgid "All arguments are named options.\n"
-msgstr ""
-
-#: libopts/makeshell.c:176 libopts/makeshell.c:859 libopts/usage.c:234
-#: libopts/usage.c:309 libopts/version.c:170
-msgid "Write failure to output file"
-msgstr ""
-
-#: libopts/usage.c:703
-#, fuzzy, c-format
-msgid " - reading file %s"
-msgstr "uudekoding berkas %s"
-
-#: libopts/usage.c:304 libopts/version.c:108 libopts/version.c:130
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-
-#: libopts/usage.c:675 libopts/usage.c:909
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/usage.c:285
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/reset.c:86
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/check.c:45
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr ""
-
-#: libopts/init.c:119
-msgid "-_^"
-msgstr ""
-
-#: libopts/enum.c:163
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set "
-"them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:196
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:73
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:514
-msgid "These additional options are:"
-msgstr ""
-
-#: libopts/usage.c:871
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
-#~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "-C sudah ditinggalkan, lebih baik gunakan -Z"
-
-#~ msgid ""
-#~ "Archives must be unpacked in sequence!\n"
-#~ "Please unpack part '`cat ${lock_dir}/seq`' next."
-#~ msgstr ""
-#~ "Archives harus di unpack dalam urutan!\n"
-#~ "Mohon unpack bagian '`cat ${lock_dir}/seq`' selanjutnya."
-
-#~ msgid "popen(3) on: %s"
-#~ msgstr "popen(3) di: %s"
-
-#~ msgid "fopen(3) of file %s"
-#~ msgstr "fopen(3) dari berkas %s"
-
-#~ msgid "compressed"
-#~ msgstr "terkompres"
-
-#~ msgid "gzipped"
-#~ msgstr "ter-gzip"
-
-#~ msgid "bzipped"
-#~ msgstr "ter-bzip"
-
-#~ msgid "binary"
-#~ msgstr "binari"
-
-#~ msgid "pipe(2) failed"
-#~ msgstr "pipe(2) gagal"
-
-#~ msgid "Could not fork"
-#~ msgstr "Tidak dapat fork"
-
-#~ msgid "End of part %ld, continue with part %ld"
-#~ msgstr "Akhir dari bagian %ld, melanjutkan dengan bagian %ld"
-
-#~ msgid "uncompressing file %s"
-#~ msgstr "unkompres berkas %s"
-
-#~ msgid "gunzipping file %s"
-#~ msgstr "gunzipping berkas %s"
-
-#~ msgid "bunzipping file %s"
-#~ msgstr "bunzipping berkas %s"
-
-#~ msgid "allocating output file name"
-#~ msgstr "mengalokasikan nama berkas keluaran"
-
-#~ msgid ""
-#~ "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ msgstr ""
-#~ "argumen wajib untuk pilihan panjang juga wajib untuk pilihan pendek "
-#~ "juga.\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Giving feedback:\n"
-#~ "      --help              display this help and exit\n"
-#~ "      --version           output version information and exit\n"
-#~ "  -q, --quiet, --silent   do not output verbose messages locally\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Memberikan umpan balik:\n"
-#~ "      --help              tampilkan bantuan ini dan keluar\n"
-#~ "      --version           keluarkan informasi versi dan keluar\n"
-#~ "  -q, --quiet, --silent   jangan keluarkan pesan ramai secara lokal\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Selecting files:\n"
-#~ "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Pemilihan berkas:\n"
-#~ "  -p, --intermix-type     ijinkan -[BTzZ] dalam daftar berkas untuk "
-#~ "mengubah mode\n"
-#~ "  -S, --stdin-file-list   baca daftar berkas dari standar masukan\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Selecting files:\n"
-#~ "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-#~ "  -S, --stdin-file-list   read file list from standard input\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Pemilihan berkas:\n"
-#~ "  -p, --intermix-type     ijinkan -[BTz] dalam daftar berkas untuk "
-#~ "mengubah mode\n"
-#~ "  -S, --stdin-file-list   baca daftar berkas dari masukan standar\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX."
-#~ "NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE "
-#~ "kilobytes\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Membagi keluaran:\n"
-#~ "  -o, --output-prefix=AWALAN    keluaran ke berkas AWALAN.01 sampai "
-#~ "AWALAN.NN\n"
-#~ "  -l, --whole-size-limit=BESAR  bagi archive, bukan berkas, ke BESAR "
-#~ "kilobytes\n"
-#~ "  -L, --split-size-limit=BESAR  bagi archive, atau berkas, ke BESAR "
-#~ "kilobytes\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Controlling the shar headers:\n"
-#~ "  -n, --archive-name=NAME   use NAME to document the archive\n"
-#~ "  -s, --submitter=ADDRESS   override the submitter name\n"
-#~ "  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-#~ "  -c, --cut-mark            start the shar with a cut line\n"
-#~ "  -t, --translate           translate messages in the script\n"
-#~ "\n"
-#~ "Selecting how files are stocked:\n"
-#~ "  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-#~ "  -T, --text-files             treat all files as text\n"
-#~ "  -B, --uuencode               treat all files as binary, use uuencode\n"
-#~ "  -z, --gzip                   gzip and uuencode all files\n"
-#~ "  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-#~ "  -j, --bzip2                  bzip2 and uuencode all files\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Pengontrolan shar dikepala:\n"
-#~ "  -n, --archive-name=NAMA   gunakan NAMA untuk dokumen archive\n"
-#~ "  -s, --submitter=ALAMAT    override nama pengirim\n"
-#~ "  -a, --net-headers         keluarkan Submitted-by: dan Archive-name: "
-#~ "dikepala\n"
-#~ "  -c, --cut-mark            start shar dengan sebuah baris potong\n"
-#~ "  -t, --translate           terjemahkan pesan dalam script\n"
-#~ "\n"
-#~ "Pilih bagaimana berkas distock:\n"
-#~ "  -M, --mixed-uuencode      secara dinamis tentukan uuencoding (baku)\n"
-#~ "  -T, --text-files          perlakukan seluruh berkas sebagai teks\n"
-#~ "  -B, --uuencode            perlakukan seluruh berkas sebagai binari, "
-#~ "gunakan uuencode\n"
-#~ "  -z, --gzip                gzip dan uuencode seluruh berkas\n"
-#~ "  -g, --level-for-gzip=TING lewatkan -TINGKAT (baku 9) ke gzip\n"
-#~ "  -j, --bzip2               bzip2 dan uuencode seluruh berkas\n"
-
-#~ msgid ""
-#~ "  -Z, --compress               compress and uuencode all files\n"
-#~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-#~ msgstr ""
-#~ "  -Z, --compress               kompres dan uuencode seluruh berkas\n"
-#~ "  -b, --bits-per-code=BITS     lewatkan -bBITS (baku 12) ke kompres\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Protecting against transmission:\n"
-#~ "  -w, --no-character-count      do not use `wc -c' to check size\n"
-#~ "  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-#~ "  -F, --force-prefix            force the prefix character on every line\n"
-#~ "  -d, --here-delimiter=STRING   use STRING to delimit the files in the "
-#~ "shar\n"
-#~ "\n"
-#~ "Producing different kinds of shars:\n"
-#~ "  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-#~ "  -P, --no-piping           exclusively use temporary files at unshar "
-#~ "time\n"
-#~ "  -x, --no-check-existing   blindly overwrite existing files\n"
-#~ "  -X, --query-user          ask user before overwriting files (not for "
-#~ "Net)\n"
-#~ "  -m, --no-timestamp        do not restore file modification dates & "
-#~ "times\n"
-#~ "  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-#~ "  -f, --basename            restore in one directory, despite hierarchy\n"
-#~ "      --no-i18n             do not produce internationalized shell "
-#~ "script\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Proteksi terhadap transmisi:\n"
-#~ "  -w, --no-character-count  jangan gunakan `wc -c' untuk memeriksa "
-#~ "ukuran\n"
-#~ "  -D, --no-md5-digest       jangan gunakan `md5sum' digest untuk "
-#~ "verifikasi\n"
-#~ "  -F, --force-prefix        paksa awalan karakter disetiap baris\n"
-#~ "  -d, --here-delimiter=STR  gunakan STIRNG untuk membatasi berkas dalam "
-#~ "shar\n"
-#~ "\n"
-#~ "Menghasilkan jenis yang berbeda dari shars:\n"
-#~ "  -V, --vanilla-operation   menghasilkan shars sangat sederhana dan "
-#~ "undemanding\n"
-#~ "  -P, --no-piping           secara ekslusif gunakan berkas sementara pada "
-#~ "saat unshar\n"
-#~ "  -x, --no-check-existing   secara buat overwrite berkas yang sudah ada\n"
-#~ "  -X, --query-user          tanya pengguna sebelum overwriting berkas "
-#~ "(tidak untuk Net)\n"
-#~ "  -m, --no-timestamp        jangan kembalikan tanggal dan waktu "
-#~ "modifikasi berkas\n"
-#~ "  -Q, --quiet-unshar        hindari pesan ramai pada saat unshar\n"
-#~ "  -f, --basename            kembalikan dalam satu direktori, daripada "
-#~ "hierarki\n"
-#~ "      --no-i18n             jangan hasilkan shell script yang "
-#~ "diinternasionalkan\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Option -o is required with -l or -L, option -n is required with -a.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Pilihan -o dibutuhkan dengan -l atau -L, pilihan -n dibutuhkan dengan -"
-#~ "a.\n"
-
-#~ msgid "Option -g implies -z, option -b implies -Z.\n"
-#~ msgstr "Pilihan -g mengimplikasikan -z, pilihan -b mengimplikasikan -Z.\n"
-
-#~ msgid "Option -g implies -z.\n"
-#~ msgstr "Pilihan -g mengimplikasikan -z.\n"
-
-#~ msgid "invalid file size limit `%s'"
-#~ msgstr "batas ukuran berkas `%s' tidak valid"
-
-#~ msgid "DEBUG was not selected at compile time"
-#~ msgstr "DEBUG tidak dipilih pada waktu kompilasi"
-
-#~ msgid "Hard limit %s\n"
-#~ msgstr "Batas keras %s\n"
-
-#~ msgid "This system doesn't support -Z ('compress'), use -z instead"
-#~ msgstr "Sistem ini tidak mendukung -Z ('compress'), lebih baik gunakan -z"
-
-#~ msgid "Soft limit %s\n"
-#~ msgstr "Batas lembut %s\n"
-
-#~ msgid "illegal output prefix\n"
-#~ msgstr "awalan keluaran tidak legal\n"
-
-#~ msgid "WARNING: No user interaction in vanilla mode"
-#~ msgstr "PERINGATAN: Tidak ada interaksi pengguna dalam mode vanilla"
-
-#~ msgid "WARNING: Non-text storage options overridden"
-#~ msgstr "PERINGATAN: Pilihan bukan-teks penyimpanan dipaksakan"
-
-#~ msgid "Cannot use -a option without -n"
-#~ msgstr "Tidak dapat menggunakan pilihan -a tanpa -n"
-
-#~ msgid "Cannot use -l or -L option without -o"
-#~ msgstr "Tidak dapat menggunakan pilihan -l atau -L tanpa -o"
-
-#~ msgid "denied writing FIFO (%s)"
-#~ msgstr "ditolak penulisan FIFO (%s)"
-
-#~ msgid "not following symlink (%s)"
-#~ msgstr "tidak mengikuti symlink (%s)"
-
-#~ msgid "Usage: %s [INFILE] REMOTEFILE\n"
-#~ msgstr "Penggunaan: %s [BERKAS MASUKAN] BERKAS REMOTE\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "  -m, --base64    use base64 encoding as of RFC1521\n"
-#~ "      --help      display this help and exit\n"
-#~ "      --version   output version information and exit\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  -m, --base64    gunakan pengkodean base64 seperti dalam RFC1521\n"
-#~ "      --help      tampilkan bantuan ini dan keluar\n"
-#~ "      --version   keluarkan informasi versi dan keluar\n"
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: pilihan -- %c tidak legal\n"
+
+#~ msgid "memory exhausted"
+#~ msgstr "kehabisan memori"
 
 #~ msgid "WARNING: not restoring timestamps.  Consider getting and"
-#~ msgstr ""
-#~ "PERINGATAN: tidak mengembalikan tanda waktu. Pertimbangkan mendapatkan dan"
+#~ msgstr "PERINGATAN: tidak mengembalikan tanda waktu. Pertimbangkan mendapatkan dan"
 
 #~ msgid "%s: Illegal ~user"
 #~ msgstr "%s: Tidak legal ~user"
