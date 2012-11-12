@@ -37,12 +37,12 @@ declare -r program=$progdir/$(basename $0)
 unset CDPATH
 
 die() {
-    echo "${prog} failure: $*" >&2
+    echo "${prog} failure: $*"
     kill -TERM ${progpid}
     sleep 1
     kill -9 $progpid
     exit 1
-}
+} >&2
 
 init() {
     case $(set -o) in
@@ -77,35 +77,22 @@ init() {
                 -e 's/\([0-9]*\.[0-9]*\)\..*/\1/' -e 1q
     )
 
-    nl='
-'
+    nl=$'\n'
     case "$VERBOSE" in
     [tT1-9yY]* ) set -x ;;
     * ) set +x ;;
     esac
 
-    cd ${progdir%-bld}/po && {
-        rsync -Lrtvz translationproject.org::tp/latest/sharutils/ po-tmp
-        for f in *.po
+    cd ${progdir%-bld}
+    rsync -Lrtvz  translationproject.org::tp/latest/sharutils/ po
+    cd ${progdir}
+    test "/$progdir" = "/${progdir%-bld}" || {
+        for f in ${progdir%-bld}/po/*.po
         do
-            prev=$(fgrep PO-Revision-Date: $f)
-            if ! test -f po-tmp/$f
-            then rm -f $f
-
-            elif fgrep "$prev" po-tmp/$f >/dev/null 2>&1
-            then rm -f po-tmp/$f
-            else mv -f po-tmp/$f $f
-            fi
-        done
-        for f in $(find po-tmp -type f)
-        do
-            g=${f#po-tmp/}
-            d=$(dirname $g)
-            test -d ${d} || mkdir ${d}
-            mv $f $d/.
-        done
-        rm -rf po-tmp
-        cd -
+            g=po/$(basename $f)
+            rm -f $g
+            ln $f $g || ln -s $f $g
+        done 2>/dev/null
     }
 }
 
