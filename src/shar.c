@@ -245,6 +245,7 @@ static int debugging_mode = 0;
 /* Other global variables.  */
 
 int uuencode_file = -1;
+int opt_idx = 0;
 
 /* The name this program was run with. */
 const char *program_name;
@@ -2006,12 +2007,12 @@ configure_shar (int * argc_p, char *** argv_p)
 	  list[(*argc_p)++] = xstrdup (pz);
 	}
       *argv_p = list;
-      optidx  = 0;
+      opt_idx  = 0;
     }
 
   /* Diagnose various usage errors.  */
 
-  if (optidx >= *argc_p)
+  if (opt_idx >= *argc_p)
     usage_message (_("No input files"));
 
   if (HAVE_OPT(WHOLE_SIZE_LIMIT))
@@ -2024,7 +2025,7 @@ configure_shar (int * argc_p, char *** argv_p)
 
   /* Start making the archive file.  */
 
-  generate_full_header (*argc_p - optidx, &(*argv_p)[optidx]);
+  generate_full_header (*argc_p - opt_idx, &(*argv_p)[opt_idx]);
 
   if (HAVE_OPT(QUERY_USER))
     {
@@ -2136,15 +2137,15 @@ initialize(int * argcp, char *** argvp)
   bindtextdomain (PACKAGE, LOCALEDIR);
   textdomain (PACKAGE);
 
-  optidx = optionProcess (&sharOptions, *argcp, *argvp);
-  if (optidx == *argcp)
+  opt_idx = optionProcess (&sharOptions, *argcp, *argvp);
+  if (opt_idx == *argcp)
     {
       if (! HAVE_OPT(INPUT_FILE_LIST))
         SET_OPT_INPUT_FILE_LIST("-");
     }
   else
     {
-      if (HAVE_OPT(INPUT_FILE_LIST) && (optidx != *argcp))
+      if (HAVE_OPT(INPUT_FILE_LIST) && (opt_idx != *argcp))
         usage_message(
           _("files on command line and --input-file-list specified"));
     }
@@ -2166,9 +2167,9 @@ main (int argc, char ** argv)
 
   /* Process positional parameters and files.  */
 
-  while (optidx < argc)
+  while (opt_idx < argc)
     {
-      char * arg = argv[optidx++];
+      char * arg = argv[opt_idx++];
       struct stat sb;
       if (stat (arg, &sb) != 0)
         {
