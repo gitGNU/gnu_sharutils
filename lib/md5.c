@@ -46,8 +46,21 @@
 #endif
 
 #ifdef WORDS_BIGENDIAN
-# define SWAP(n)							\
-    (((n) << 24) | (((n) & 0xff00) << 8) | (((n) >> 8) & 0xff00) | ((n) >> 24))
+md5_uint32
+SWAP(md5_uint32 n)
+{
+  union {
+    unsigned char cv[sizeof(md5_uint32)];
+    md5_uint32    uiv;
+  } v, res;
+
+  res.cv[0] = v.cv[sizeof(md5_uint32) - 0];
+  res.cv[1] = v.cv[sizeof(md5_uint32) - 1];
+  res.cv[2] = v.cv[sizeof(md5_uint32) - 2];
+  res.cv[3] = v.cv[sizeof(md5_uint32) - 3];
+  return res.uiv;
+}
+
 #else
 # define SWAP(n) (n)
 #endif
@@ -79,9 +92,7 @@ md5_init_ctx (ctx)
    IMPORTANT: On some systems it is required that RESBUF is correctly
    aligned for a 32 bits value.  */
 void *
-md5_read_ctx (ctx, resbuf)
-     const struct md5_ctx *ctx;
-     void *resbuf;
+md5_read_ctx (const struct md5_ctx * ctx, void * resbuf)
 {
   ((md5_uint32 *) resbuf)[0] = SWAP (ctx->A);
   ((md5_uint32 *) resbuf)[1] = SWAP (ctx->B);
@@ -128,9 +139,7 @@ md5_finish_ctx (struct md5_ctx * ctx, void * resbuf)
    resulting message digest number will be written into the 16 bytes
    beginning at RESBLOCK.  */
 int
-md5_stream (stream, resblock)
-     FILE *stream;
-     void *resblock;
+md5_stream (FILE * stream, void *resblock)
 {
   /* Important: BLOCKSIZE must be a multiple of 64.  */
 #define BLOCKSIZE 4096
@@ -185,10 +194,7 @@ md5_stream (stream, resblock)
    output yields to the wanted ASCII representation of the message
    digest.  */
 void *
-md5_buffer (buffer, len, resblock)
-     const char *buffer;
-     size_t len;
-     void *resblock;
+md5_buffer (const char * buffer, size_t len, void * resblock)
 {
   struct md5_ctx ctx;
 
@@ -204,10 +210,7 @@ md5_buffer (buffer, len, resblock)
 
 
 void
-md5_process_bytes (buffer, len, ctx)
-     const void *buffer;
-     size_t len;
-     struct md5_ctx *ctx;
+md5_process_bytes (const void * buffer, size_t len, struct md5_ctx * ctx)
 {
   /* When we already have some bits in our internal buffer concatenate
      both inputs first.  */
@@ -262,10 +265,7 @@ md5_process_bytes (buffer, len, ctx)
    It is assumed that LEN % 64 == 0.  */
 
 void
-md5_process_block (buffer, len, ctx)
-     const void *buffer;
-     size_t len;
-     struct md5_ctx *ctx;
+md5_process_block (const void * buffer, size_t len, struct md5_ctx * ctx)
 {
   md5_uint32 correct_words[16];
   const md5_uint32 *words = buffer;
@@ -300,7 +300,7 @@ md5_process_block (buffer, len, ctx)
 	 before the computation.  To reduce the work for the next steps
 	 we store the swapped words in the array CORRECT_WORDS.  */
 
-#define OP(a, b, c, d, s, T)						\
+#define OPA(a, b, c, d, s, T)						\
       do								\
         {								\
 	  a += FF (b, c, d) + (*cwp++ = SWAP (*words)) + T;		\
@@ -314,31 +314,31 @@ md5_process_block (buffer, len, ctx)
 	 They are defined in RFC 1321 as
 
 	 T[i] = (int) (4294967296.0 * fabs (sin (i))), i=1..64, or
-	 perl -e 'foreach(1..64){printf "0x%08x\n", int (4294967296 * abs (sin $_))}'
+	 perl -e 'foreach(1..64) {
+             printf "0x%08x\n", int (4294967296 * abs (sin $_))}'
        */
 
       /* Round 1.  */
-      OP (A, B, C, D,  7, 0xd76aa478);
-      OP (D, A, B, C, 12, 0xe8c7b756);
-      OP (C, D, A, B, 17, 0x242070db);
-      OP (B, C, D, A, 22, 0xc1bdceee);
-      OP (A, B, C, D,  7, 0xf57c0faf);
-      OP (D, A, B, C, 12, 0x4787c62a);
-      OP (C, D, A, B, 17, 0xa8304613);
-      OP (B, C, D, A, 22, 0xfd469501);
-      OP (A, B, C, D,  7, 0x698098d8);
-      OP (D, A, B, C, 12, 0x8b44f7af);
-      OP (C, D, A, B, 17, 0xffff5bb1);
-      OP (B, C, D, A, 22, 0x895cd7be);
-      OP (A, B, C, D,  7, 0x6b901122);
-      OP (D, A, B, C, 12, 0xfd987193);
-      OP (C, D, A, B, 17, 0xa679438e);
-      OP (B, C, D, A, 22, 0x49b40821);
+      OPA (A, B, C, D,  7, 0xd76aa478);
+      OPA (D, A, B, C, 12, 0xe8c7b756);
+      OPA (C, D, A, B, 17, 0x242070db);
+      OPA (B, C, D, A, 22, 0xc1bdceee);
+      OPA (A, B, C, D,  7, 0xf57c0faf);
+      OPA (D, A, B, C, 12, 0x4787c62a);
+      OPA (C, D, A, B, 17, 0xa8304613);
+      OPA (B, C, D, A, 22, 0xfd469501);
+      OPA (A, B, C, D,  7, 0x698098d8);
+      OPA (D, A, B, C, 12, 0x8b44f7af);
+      OPA (C, D, A, B, 17, 0xffff5bb1);
+      OPA (B, C, D, A, 22, 0x895cd7be);
+      OPA (A, B, C, D,  7, 0x6b901122);
+      OPA (D, A, B, C, 12, 0xfd987193);
+      OPA (C, D, A, B, 17, 0xa679438e);
+      OPA (B, C, D, A, 22, 0x49b40821);
 
-      /* For the second to fourth round we have the possibly swapped words
+      /* For the next three rounds, we have the possibly swapped words
 	 in CORRECT_WORDS.  Redefine the macro to take an additional first
 	 argument specifying the function to use.  */
-#undef OP
 #define OP(f, a, b, c, d, k, s, T)					\
       do 								\
 	{								\
