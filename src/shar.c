@@ -2154,9 +2154,9 @@ initialize(int * argcp, char *** argvp)
   initialization_done = 1;
 }
 
-/*---.
-| ?  |
-`---*/
+/**
+ * Process a file hierarchy into a shell archive.
+ */
 
 int
 main (int argc, char ** argv)
