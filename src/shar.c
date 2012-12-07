@@ -1966,7 +1966,17 @@ configure_shar (int * argc_p, char *** argv_p)
 
   open_output ();
   if (isatty (fileno (output)) && isatty (STDERR_FILENO))
-    freopen ("/dev/null", fwriteonly_mode, stderr);
+    {
+      /*
+       * Output is going to a TTY device, and so is stderr.
+       * Redirect stderr to /dev/null in that case so that
+       * the results are not cluttered with chatter.
+       */
+      FILE * fp = freopen ("/dev/null", fwriteonly_mode, stderr);
+      if (fp != stderr)
+        error (SHAR_EXIT_FAILED, errno,
+               _("reopening stderr to /dev/null"));
+    }
 
   memset ((char *) byte_is_binary, 1, sizeof (byte_is_binary));
   /* \n \v and \r disrupt the output  */
@@ -2007,7 +2017,7 @@ configure_shar (int * argc_p, char *** argv_p)
 	  list[(*argc_p)++] = xstrdup (pz);
 	}
       *argv_p = list;
-      opt_idx  = 0;
+      opt_idx = 0;
     }
 
   /* Diagnose various usage errors.  */
@@ -2053,8 +2063,8 @@ check_intermixing (tOptions * opts, tOptDesc * od)
   (void)od;
 
   if (initialization_done && ! HAVE_OPT(INTERMIX_TYPE))
-  usage_message (
-    _("The '%s' option may not be intermixed with file names\n\
+    usage_message (
+      _("The '%s' option may not be intermixed with file names\n\
 unless the --intermix-type option has been specified."), od->pz_Name);
 }
 
