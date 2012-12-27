@@ -1,3 +1,18 @@
+2012-12-22  Bruce Korb  <bkorb@gnu.org>
+
+	* src/uudecode-opts.def (ignore-chmod): new option to allow
+	POSIX preferences.  (Erroring out is compliant, but not
+	preferred behavior.)
+	(exit-name): document all the exit codes.
+	(detail/doc-section): improve command description.
+	(exit-name): add uudecode exit codes
+	* src/uudecode.c (everywhere): use the exit codes
+	(reopen_output): check for --ignore-chmod option and/or
+	POSIXLY_CORRECT environment variable before returning an error
+	on a bad result from fchmod().
+	(main): strip out option handling code and call optionProcess().
+	* tests/shar-3: adjust
+
 2012-08-11  Bruce Korb  <bkorb@gnu.org>
 
 	* .gnuploadrc: support gnu upload script

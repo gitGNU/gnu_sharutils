@@ -1,5 +1,5 @@
 
-static const char cright_years_z[] =
+static char const cright_years_z[] =
 
 /* uudecode utility.
    Copyright (C) */ "1994-1996, 2002, 2005-2012";
@@ -53,7 +53,7 @@ static const char cright_years_z[] =
 #define  UUDECODE_C  1
 #include "local.h"
 #include "liballoca.h"
-
+#include "uudecode-opts.h"
 
 #if HAVE_LOCALE_H
 #else
@@ -78,25 +78,16 @@ static const char cright_years_z[] =
 
 struct passwd *getpwnam ();
 
-static struct option longopts[] =
-{
-  { "version", no_argument, NULL, 'v' },
-  { "help", no_argument, NULL, 'h' },
-  { "output-file", required_argument, NULL, 'o' },
-  { NULL, 0, NULL, 0 }
-};
-
-static int read_stduu  __P ((const char *inname, const char *outname));
-static int read_base64 __P ((const char *inname, const char *outname));
-static int decode __P ((const char *, const char *));
-static void usage __P ((int))
-#if defined __GNUC__ && ((__GNUC__ == 2 && __GNUC_MINOR__ >= 5) || __GNUC__ > 2)
-     __attribute__ ((noreturn))
-#endif
-;
+static uudecode_exit_code_t read_stduu (const char *inname, const char *outname);
+static uudecode_exit_code_t read_base64(const char *inname, const char *outname);
+static uudecode_exit_code_t decode (const char * in_name);
 
 #ifndef NUL
 #define NUL '\0'
+#endif
+
+#ifndef STDOUT_FILENO
+#define STDOUT_FILENO 1
 #endif
 
 /* The name this program was run with. */
@@ -109,14 +100,15 @@ const char *program_name;
 # define S_ISLNK(m) (((m) & S_IFMT) == S_IFLNK)
 #endif
 
-#define TRY_PUTCHAR(c) do { \
-                         if (putchar (c) == EOF) { \
-                           error (0, 0, _("%s: Write error"), outname); \
-                           return 1; \
-                         } \
-                       } while (0)
+#define TRY_PUTCHAR(c)                                  \
+  do {                                                  \
+    if (putchar (c) == EOF) {                           \
+      error (0, 0, _("%s: Write error"), outname);      \
+      return UUDECODE_EXIT_NO_OUTPUT;                   \
+    }                                                   \
+  } while (0)
 
-static int
+static uudecode_exit_code_t
 read_stduu (char const * inname, char const * outname)
 {
   char buf[2 * BUFSIZ];
@@ -129,7 +121,7 @@ read_stduu (char const * inname, char const * outname)
       if (fgets ((char *) buf, sizeof(buf), stdin) == NULL)
 	{
 	  error (0, 0, _("%s: Short file"), inname);
-	  return EXIT_FAILURE;
+	  return UUDECODE_EXIT_INVALID;
 	}
       p = buf;
 
@@ -153,22 +145,29 @@ read_stduu (char const * inname, char const * outname)
 	}
     }
 
+  /*
+   * We must now find an "end" line, with or without a '\r' character.
+   */
   do {
     if (fgets (buf, sizeof(buf), stdin) == NULL)
       break;
 
-    if (strcmp (buf, "end\n") == 0)
-      return EXIT_SUCCESS;
+    if (buf[0] != 'e') break;
+    if (buf[1] != 'n') break;
+    if (buf[2] != 'd') break;
+    if (buf[3] == '\n')
+      return UUDECODE_EXIT_SUCCESS;
 
-    if (strcmp (buf, "end\r\n") == 0)
-      return EXIT_SUCCESS;
+    if (buf[3] != '\r') break;
+    if (buf[4] == '\n')
+      return UUDECODE_EXIT_SUCCESS;
   } while (0);
 
   error (0, 0, _("%s: No `end' line"), inname);
-  return EXIT_FAILURE;
+  return UUDECODE_EXIT_INVALID;
 }
 
-static int
+static uudecode_exit_code_t
 read_base64 (char const * inname, char const * outname)
 {
   static const char b64_tab[256] =
@@ -216,7 +215,7 @@ read_base64 (char const * inname, char const * outname)
       if (fgets (buf, sizeof(buf), stdin) == NULL)
 	{
 	  error (0, 0, _("%s: Short file"), inname);
-	  return EXIT_FAILURE;
+	  return UUDECODE_EXIT_INVALID;
 	}
       p = (unsigned char *) buf;
 
@@ -225,7 +224,7 @@ read_base64 (char const * inname, char const * outname)
       if (last_data != 0)
 	{
 	  error (0, 0, _("%s: data following `=' padding character"), inname);
-	  return EXIT_FAILURE;
+	  return UUDECODE_EXIT_INVALID;
 	}
 
       /* The following implementation of the base64 decoding might look
@@ -249,7 +248,7 @@ read_base64 (char const * inname, char const * outname)
 	    if (*p == '\n' || *p++ == '=')
 	      {
 		error (0, 0, _("%s: illegal line"), inname);
-		return 1;
+		return UUDECODE_EXIT_INVALID;
 	      }
 	  c2 = b64_tab[*p++];
 
@@ -257,7 +256,7 @@ read_base64 (char const * inname, char const * outname)
 	    if (*p++ == '\n')
 	      {
 		error (0, 0, _("%s: illegal line"), inname);
-		return 1;
+		return UUDECODE_EXIT_INVALID;
 	      }
 	  if (*p == '=')
 	    {
@@ -271,7 +270,7 @@ read_base64 (char const * inname, char const * outname)
 	    if (*p++ == '\n')
 	      {
 		error (0, 0, _("%s: illegal line"), inname);
-		return 1;
+		return UUDECODE_EXIT_INVALID;
 	      }
 	  TRY_PUTCHAR (c1 << 2 | c2 >> 4);
 	  TRY_PUTCHAR (c2 << 4 | c3 >> 2);
@@ -285,7 +284,7 @@ read_base64 (char const * inname, char const * outname)
 	}
     }
 
-  return EXIT_SUCCESS;
+  return UUDECODE_EXIT_SUCCESS;
 }
 
 
@@ -307,7 +306,7 @@ expand_tilde (char * buf)
   pw = getpwnam (buf + 1);
   if (pw == NULL)
     {
-      error (0, 0, _("No user `%s'"), buf + 1);
+      error (0, 0, _("No user '%s'"), buf + 1);
       return NULL;
     }
   nm_len = strlen (pw->pw_dir);
@@ -329,52 +328,64 @@ expand_tilde (char * buf)
   return outname;
 }
 
-/*
+/**
  * Create output file and set mode.
  */
-static int
+static uudecode_exit_code_t
 reopen_output (char const * outname, int mode)
 {
-  struct stat attr;
-  FILE* fp;
-
   /* Check out file if it exists */
   if (!access(outname, F_OK))
     {
+      struct stat attr;
       if (lstat(outname, &attr) == -1)
         {
           error (0, errno, _("cannot access %s"), outname);
-          return EXIT_FAILURE;
+          return UUDECODE_EXIT_NO_OUTPUT;
         }
     }
 
-  fp = freopen (outname, FOPEN_WRITE_BINARY, stdout);
-  if (fp != stdout)
-    {
-      error (0, errno, _("freopen of %s"), outname);
-      return EXIT_FAILURE;
-    }
+  {
+    FILE * fp = freopen (outname, FOPEN_WRITE_BINARY, stdout);
+    if (fp != stdout)
+      {
+        error (0, errno, _("freopen of %s"), outname);
+        return UUDECODE_EXIT_NO_OUTPUT;
+      }
+  }
 
-  if (UU_CHMOD(outname, fileno (fp), mode) != 0)
+  if (UU_CHMOD(outname, STDOUT_FILENO, mode) != 0)
     {
       error (0, errno, _("chmod of %s"), outname);
-      return EXIT_FAILURE;
+      if (! HAVE_OPT(IGNORE_CHMOD))
+        {
+          char const * p = getenv("POSIXLY_CORRECT");
+          if (p == NULL)
+            return UUDECODE_EXIT_NO_OUTPUT;
+        }
     }
 
-  return EXIT_SUCCESS;
+  return UUDECODE_EXIT_SUCCESS;
 }
 
-static int
-decode (char const * inname,
-        char const * forced_outname)
+/**
+ * Decode one file.
+ *
+ * @param[in] inname  name of encoded file.  "stdin" means either a file
+ *                    by that name, or the unnamed standard input.
+ *
+ * @returns one of the enumerated values of uudecode_exit_code_t.
+ */
+static uudecode_exit_code_t
+decode (char const * inname)
 {
   char *pz;
   int   mode;
   char  buf[2 * BUFSIZ] = { NUL };
   char *outname;
   int   do_base64 = 0;
-  int   rval;
   int   allocated_outname = 0;
+  uudecode_exit_code_t rval;
 
   /* Search for header line.  */
 
@@ -383,7 +394,7 @@ decode (char const * inname,
       if (fgets (buf, sizeof (buf), stdin) == NULL)
 	{
 	  error (0, 0, _("%s: No `begin' line"), inname);
-	  return EXIT_FAILURE;
+	  return UUDECODE_EXIT_INVALID;
 	}
 
       if (strncmp (buf, "begin", 5) == 0)
@@ -399,8 +410,8 @@ decode (char const * inname,
     }
 
   /* If the output file name is given on the command line this rules.  */
-  if (forced_outname != NULL)
-    outname = (char *) forced_outname;
+  if (HAVE_OPT(OUTPUT_FILE))
+    outname = (char *) OPT_ARG(OUTPUT_FILE);
   else
     {
       if (buf[0] != '~')
@@ -411,7 +422,7 @@ decode (char const * inname,
 
           outname = expand_tilde (buf);
           if (outname == NULL)
-            return EXIT_FAILURE;
+            return UUDECODE_EXIT_NO_OUTPUT;
           allocated_outname = 1;
         }
 
@@ -426,7 +437,7 @@ decode (char const * inname,
      && (strcmp (outname, "-") != 0) )
     {
       rval = reopen_output (outname, mode);
-      if (rval != EXIT_SUCCESS)
+      if (rval != UUDECODE_EXIT_SUCCESS)
         goto fail_return;
     }
 
@@ -439,10 +450,11 @@ decode (char const * inname,
   else
     rval = read_stduu (inname, outname);
 
-  if (rval == EXIT_SUCCESS && (ferror(stdout) || fflush(stdout) != 0))
+  if (  (rval == UUDECODE_EXIT_SUCCESS)
+     && (ferror(stdout) || fflush(stdout) != 0))
     {
       error (0, 0, _("%s: Write error"), outname);
-      rval = EXIT_FAILURE;
+      rval = UUDECODE_EXIT_NO_OUTPUT;
     }
 
  fail_return:
@@ -452,102 +464,57 @@ decode (char const * inname,
   return rval;
 }
 
-static void
-usage (int status)
-{
-  if (status != 0)
-    fprintf (stderr, _("Try `%s --help' for more information.\n"),
-	     program_name);
-  else
-    {
-      printf (_("Usage: %s [FILE]...\n"), program_name);
-      fputs (_("\
-Mandatory arguments to long options are mandatory to short options too.\n\
-  -o, --output-file=FILE   direct output to FILE\n\
-      --help               display this help and exit\n\
-      --version            output version information and exit\n"), stdout);
-      /* TRANSLATORS: add the contact address for your translation team! */
-      printf (_("Report bugs to <%s>.\n"), PACKAGE_BUGREPORT);
-    }
-  exit (status);
-}
-
+/**
+ * The main procedure.
+ */
 int
 main (int argc, char const * const * argv)
 {
-  int opt;
-  int exit_status;
-  const char *outname;
+  uudecode_exit_code_t exit_status = UUDECODE_EXIT_SUCCESS;
 
   program_name = argv[0];
-  outname = NULL;
   setlocale (LC_ALL, "");
 
   /* Set the text message domain.  */
   bindtextdomain (PACKAGE, LOCALEDIR);
   textdomain (PACKAGE);
 
-  while (opt = getopt_long (argc, (void *)argv, "o:", longopts, (int *) NULL),
-	 opt != EOF)
-    {
-      switch (opt)
-	{
-	case 'h':
-	  usage (EXIT_SUCCESS);
+  {
+    int ct = optionProcess (&uudecodeOptions, argc, (char **)(void *)argv);
+    argc -= ct;
+    argv += ct;
+  }
 
-	case 'o':
-	  outname = optarg;
-	  break;
+  switch (argc) {
+  case 0:
+    exit_status = decode ("stdin");
+    break;
 
-	case 'v':
-	  printf ("%s (GNU %s) %s\n", basename (program_name),
-		  PACKAGE, VERSION);
-	  /* xgettext: no-wrap */
-	  printf (_("Copyright (C) %s Free Software Foundation, Inc.\n\
-This is free software; see the source for copying conditions.  There is NO\n\
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\
-"),
-		  cright_years_z);
-	  exit (EXIT_SUCCESS);
-
-	case 0:
-	  break;
-
-	default:
-	  usage (EXIT_FAILURE);
-	}
-    }
-
-  if (optind == argc)
-    exit_status = decode ("stdin", outname) == 0 ? EXIT_SUCCESS : EXIT_FAILURE;
-  else
-    {
-      /* IF output file is specified,
-       * and there is more than one file on cmd line ... */
-      if ((outname != NULL) &&
-          (optind + 1 < argc))
-        {
-          fprintf(stderr, _("You cannot specify an output file when processing\n\
+  case 1:
+    if (HAVE_OPT(OUTPUT_FILE))
+      {
+        usage_message(_("You cannot specify an output file when processing\n\
 multiple input files.\n"));
-          usage (EXIT_FAILURE);
-        }
+        /* NOTREACHED */
+      }
+    /* FALLTHROUGH */
 
-      exit_status = EXIT_SUCCESS;
-      do
-	{
-	  if (freopen (argv[optind], "r", stdin) != NULL)
-	    {
-	      exit_status |= decode (argv[optind], outname);
-	    }
-	  else
-	    {
-	      error (0, errno, "%s", argv[optind]);
-	      exit_status = EXIT_FAILURE;
-	    }
-	  optind++;
-	}
-      while (optind < argc);
-    }
+  default:
+    while (--argc >= 0)
+      {
+        char const * f = *(argv++);
+
+        if (freopen (f, "r", stdin) != NULL)
+          {
+            exit_status |= decode (f);
+          }
+        else
+          {
+            error (0, errno, "%s", f);
+            exit_status |= UUDECODE_EXIT_NO_INPUT;
+          }
+      }
+  }
 
   exit (exit_status);
 }

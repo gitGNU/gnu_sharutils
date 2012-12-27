@@ -21,7 +21,8 @@ top_builddir=`cd ${top_builddir} ; pwd`
 
 nocompression=false
 cd ${top_builddir}
-rm -f $(find * -type f -name '*~')
+tmpfiles=$(find * -type f -name '*~')
+test -n "$tmpfiles" && rm -f $tmpfiles
 {
   ctypes='gzip bzip2 xz'
   for f in `ls -1A`
@@ -52,15 +53,15 @@ rm -f $(find * -type f -name '*~')
 } > ${testdir}/list
 ${shar} -pq ${opts} -I${testdir}/list
 
-cd ${testdir}
-mkdir ${testname}.d
-opts=-d${testname}.d
+mkdir ${testdir}/${testname}.d
+cd ${testdir}/${testname}.d
 
-for f in ${testname}-*.shar
+for f in ../${testname}-*.shar
 do
-  ${unshar} ${opts} ${f} || exit 1
+  ${unshar} ${f} || exit 1
 done >/dev/null
 
+cd ..
 if diff -r ${top_builddir} ${testname}.d
 then :
 else

@@ -1665,7 +1665,7 @@ finish_sharing_file (const char * lname, const char * lname_q,
 
       /* Set the permissions as they were.  */
 
-      fprintf (output, "  chmod %04o %s\n",
+      fprintf (output, SM_restore_mode,
 	       (unsigned) (struct_stat.st_mode & 0777), rname_q);
 
       /* Report an error if any of the above failed.  */

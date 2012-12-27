@@ -84,7 +84,9 @@ init() {
     esac
 
     cd ${progdir%-bld}
-    rsync -Lrtvz  translationproject.org::tp/latest/sharutils/ po
+    rsync -Lrtvz  translationproject.org::tp/latest/sharutils/ po || \
+        die "rsync failed"
+
     cd ${progdir}
     test "/$progdir" = "/${progdir%-bld}" || {
         for f in ${progdir%-bld}/po/*.po

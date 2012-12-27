@@ -21,22 +21,38 @@ prog-title  = 'decode an encoded file';
 argument    = '[ file ... ]';
 full-usage  = `cat uudecode-full-help.txt`;
 short-usage = `cat uudecode-short-help.txt`;
+usage-message;
+die-code;
+option-format = texi;
 
-explain = 'If @file{file} is not provided, then standard input is decoded.';
+explain = 'If no @file{file}(s) are provided, then standard input is decoded.';
 help-value;
 
 detail = <<- _EODetail_
-	@file{Uudecode} transforms uuencoded @file{files} (or standard input)
-	into the original form.  The resulting file is named @file{name} (or
-	@file{outfile} if the \-o option is given) and will have the mode of
-	the original file except that setuid and execute bits are not
-	retained.  If @file{outfile} or @file{name} is /dev/stdout the result
-	will be written to standard output. @file{uudecode} ignores any
-	leading and trailing lines.  The program determines from the header
-	which of the two supported encoding schemes was used.
+	@file{Uudecode} transforms uuencoded files into their original form.
+
+	The encoded file(s) may be specified on the command line, or one may
+	be read from standard input.  The output file name is specified in
+	the encoded file, but may be overridden with the @option{-o} option.
+	It will have the mode of the original file, except that setuid and
+	execute bits are not retained.  If the output file is specified to
+	be @file{/dev/stdout} or @file{-}, the result will be written to
+	standard output. If there are multiple input files and the second or
+	subsquent file specifies standard output, the decoded data will be
+	written to the same file as the previous output.  Don't do that.
+
+	@file{uudecode} ignores any leading and trailing lines.  It looks
+	for a line that starts with "@samp{begin}" and proceeds until the
+	end-of-encoding marker is found.  The program determines from the
+	header line of the encoded file which of the two supported encoding
+	schemes was used.
 	_EODetail_;
 
-include = '#include <error.h>' "\n" '#include <errno.h>';
+include = <<- _EOInclude_
+	#include <error.h>
+	#include <errno.h>
+	#include <string.h>
+	_EOInclude_;
 
 flag = {
     name        = output-file;
@@ -49,10 +65,34 @@ flag = {
 	  if (fp != stdout)
 	    {
 	      error (0, errno, "%s", pOptDesc->optArg.argString);
-	      exit (UUDECODE_EXIT_FAILURE);
+	      exit (UUDECODE_EXIT_NO_OUTPUT);
 	    }
 	_EOCode_;
+
     doc = <<- _EODoc_
+	If specifed, decoded data are written to this file.  When multiple
+	inputs are specified on the command line, this option cannot be
+	specified.  All decoded data must be written to the file name
+	encoded in the data.
+	_EODoc_;
+};
+
+flag = {
+    name        = ignore-chmod;
+    value       = c;
+    descrip     = 'Ignore @code{fchmod(3P)} errors';
+    doc = <<- _EODoc_
+	By default, if the output file permissions cannot be changed to
+	the permissions specified in the encoded data, the file will not
+	be written out and execution stops.  This option will cause that
+	error to be ignored.  The resulting file will have all the data,
+	but the incorrect mode settings.
+
+	@code{fchmod()} errors are also ignored if
+	@env{POSIXLY_CORRECT} is set in the environment.  RE:
+	@indicateurl{http://austingroupbugs.net/view.php?id=635}
+
+	A warning is always emitted when @code{fchmod()} fails.
 	_EODoc_;
 };
 
@@ -60,9 +100,11 @@ doc-section = {
     ds-type = BUGS;
     ds-format = texi;
     ds-text = <<- _EOText_
-	If more than one file is provided and the -o option is given, or if
-	more than one @file{name} in the encoded files are the same, then the
-	result is probably not what is expected.
+	If more than one @file{name} in the encoded files are the same, or
+	if the second or following input files specifies standard output
+	for the output file, then the result is probably not what is expected.
+	Specifically, standard output will be appended to and named output
+	files will be replaced.
 	_EOText_;
 };
 
@@ -73,3 +115,28 @@ doc-section = {
 	This implementation is compliant with P1003.2b/D11.
 	_EOText_;
 };
+
+doc-section = {
+    ds-type = 'EXIT STATUS';
+    ds-format = texi;
+    ds-text = <<- _EOText_
+	The exit status codes are (mostly) warning codes.
+	As such, each code is "or"-ed into the final exit code as the input
+	files are processed.  For example, an exit code of '6' is not listed
+	above.  It is the sum of @code{EXIT_INVALID} and @code{EXIT_NO_INPUT}.
+	It would mean that at least one input file contained invalid
+	data and also at least one input file could not be found at all.
+	_EOText_;
+};
+
+exit-name[1]    = option-error;
+exit-desc[1]    = 'The command options were misconfigured.';
+exit-name[2]    = invalid;
+exit-desc[2]    = '(warning) One or more input files contained no valid data';
+exit-name[4]    = no-input;
+exit-desc[4]    = '(warning) The specified input file was not found';
+exit-name[8]    = no-output;
+exit-desc[8]    =
+   'The specified output file could not be created (error); or else one of '
+   'the output files could not be written or its access mode could not '
+   'be changed (warnings).  The accompanying message(s) will distinguish.';
