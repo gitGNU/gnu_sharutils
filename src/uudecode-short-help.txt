@@ -1,2 +1,2 @@
-./uudecode: unrecognized option '--error-bogus-option-name'
-Try `./uudecode --help' for more information.
+uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13
+USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]

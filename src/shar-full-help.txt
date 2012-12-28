@@ -1,4 +1,4 @@
-shar (GNU sharutils) - create a shell archive - Ver. 4.12
+shar (GNU sharutils) - create a shell archive - Ver. 4.13
 USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]
 
 

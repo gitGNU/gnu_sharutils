@@ -6,8 +6,18 @@ AutoGen Definitions options;
 prog-name   = unshar;
 prog-title  = 'unpack a shar archive';
 argument    = '[ file ... ]';
-full-usage  = `cat unshar-full-help.txt`;
-short-usage = `cat unshar-short-help.txt`;
+#shell
+test -f unshar-full-help.txt && {
+  echo 'full-usage = <<- _EOUsage_'
+  cat unshar-full-help.txt
+  echo '_EOUsage_;'
+}
+test -f unshar-short-help.txt && {
+  echo 'short-usage = <<- _EOUsage_'
+  cat unshar-short-help.txt
+  echo '_EOUsage_;'
+}
+#endshell
 
 detail = <<- _EODetail_
 	Unshar scans the input files (typically email messages) looking for

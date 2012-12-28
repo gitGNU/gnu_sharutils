@@ -19,8 +19,18 @@ AutoGen Definitions options;
 prog-name   = uuencode;
 prog-title  = 'encode a file into email friendly text';
 argument    = '[ in-file ] output-name';
-full-usage  = `cat uuencode-full-help.txt`;
-short-usage = `cat uuencode-short-help.txt`;
+#shell
+test -f uuencode-full-help.txt && {
+  echo 'full-usage = <<- _EOUsage_'
+  cat uuencode-full-help.txt
+  echo '_EOUsage_;'
+}
+test -f uuencode-short-help.txt && {
+  echo 'short-usage = <<- _EOUsage_'
+  cat uuencode-short-help.txt
+  echo '_EOUsage_;'
+}
+#endshell
 
 detail = <<- _EODetail_
 	@file{uuencode} is used to create an ASCII representation of a file

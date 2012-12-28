@@ -1,3 +1,11 @@
+2012-12-27  Bruce Korb  <bkorb@gnu.org>
+
+	* doc/sharutils.texi: remove doc of non-existant scripts
+	* src/Makefile.am: add rule to update help text
+	* src/*-opts.def: Do not emit usage text values when we don't
+	have them.  This makes it possible to re-create it (see above).
+	* src/*help.txt: regenerated
+
 2012-12-22  Bruce Korb  <bkorb@gnu.org>
 
 	* src/uudecode-opts.def (ignore-chmod): new option to allow

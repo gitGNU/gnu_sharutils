@@ -20,8 +20,18 @@ AutoGen Definitions options;
 prog-name   = shar;
 prog-title  = 'create a shell archive';
 argument    = '[file ...]';
-full-usage  = `cat shar-full-help.txt`;
-short-usage = `cat shar-short-help.txt`;
+#shell
+test -f shar-full-help.txt && {
+  echo 'full-usage = <<- _EOUsage_'
+  cat shar-full-help.txt
+  echo '_EOUsage_;'
+}
+test -f shar-short-help.txt && {
+  echo 'short-usage = <<- _EOUsage_'
+  cat shar-short-help.txt
+  echo '_EOUsage_;'
+}
+#endshell
 
 explain     = <<- _EOExplain_
 	If no @file{file}s are specified, the list of input files is read

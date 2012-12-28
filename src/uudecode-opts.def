@@ -19,8 +19,18 @@ AutoGen Definitions options;
 prog-name   = uudecode;
 prog-title  = 'decode an encoded file';
 argument    = '[ file ... ]';
-full-usage  = `cat uudecode-full-help.txt`;
-short-usage = `cat uudecode-short-help.txt`;
+#shell
+test -f uudecode-full-help.txt && {
+  echo 'full-usage = <<- _EOUsage_'
+  cat uudecode-full-help.txt
+  echo '_EOUsage_;'
+}
+test -f uudecode-short-help.txt && {
+  echo 'short-usage = <<- _EOUsage_'
+  cat uudecode-short-help.txt
+  echo '_EOUsage_;'
+}
+#endshell
 usage-message;
 die-code;
 option-format = texi;

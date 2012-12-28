@@ -1,4 +1,4 @@
-uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.12
+uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13
 USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name
 
    -m, --base64               convert using base 64
