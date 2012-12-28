@@ -141,12 +141,8 @@ compress-link:
 usage-text: $(bin_PROGRAMS)
 	$(SHELL) mk-help.sh $@ $(bin_PROGRAMS)
 
-help-text :
-	rm -f *help.txt
-	for f in *opts.def ; do autogen $$f ; done
-	$(MAKE) $(bin_PROGRAMS)
+help-text : mk-help.sh
+	MAKE="$(MAKE)" \
 	$(SHELL) mk-help.sh $@ $(bin_PROGRAMS)
-	for f in *opts.def ; do autogen $$f ; done
-	$(MAKE) $(bin_PROGRAMS)
 
 ## src/Makefile.am ends here

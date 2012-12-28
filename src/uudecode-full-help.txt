@@ -1,4 +1,4 @@
-uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13
+uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.1
 USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
 
    -o, --output-file=str      direct output to file

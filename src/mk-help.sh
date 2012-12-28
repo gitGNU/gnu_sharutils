@@ -1,33 +1,66 @@
 #! /bin/sh
 
+case "X$VERBOSE" in
+X[TtYy]* | 1 )
+    set -x
+    ;;
+esac
+
 target=$1 ; shift
+tmpdir=$(mktemp -d mkhelp-XXXXXX)
+trap "rm -rf $tmpdir" 0
 
 die() {
     echo "mk-help fatal error:  $*"
     trap '' 0
-    rm -f ${target}-tmp *.HELP
+    echo $tmpdir left intact
     exit 1
 } 1>&2
 
-mkhelp() {
-    ./$1 $2 2>&1 | grep -v illegal > $3.HELP
-    if cmp -s $3.HELP $3.txt
-    then rm -f $3.HELP
-    else mv -f $3.HELP $3.txt
-         echo $3 has been updated
-    fi
+get_help() {
+    ./$1 $2 2>&1 | grep -v illegal > $tmpdir/$3.txt
+    cmp -s $tmpdir/$3.txt $3.txt || {
+        mv $tmpdir/$3.txt $3.txt
+        echo $3 has been updated
+    }
 }
 
-touch ${target}-tmp
-trap "rm -f ${target}-tmp *.HELP" 0
+mkusage() {
+    touch $tmpdir/usage-text
 
-for f in "$@"
-do
-    test -x "$f" || die "$f program has not been built"
-    mkhelp $f --help $f-full-help
-    mkhelp $f --error-bogus-option-name $f-short-help
-done
+    for f in "$@"
+    do
+        test -x "$f" || die "$f program has not been built"
+        get_help $f --help $f-full-help
+        get_help $f --error-bogus-option-name $f-short-help
+    done
 
-mv -f ${target}-tmp ${target}
+    mv $tmpdir/usage-text .
+}
+
+mkhelp() {
+    touch $tmpdir/help-text
+    rm -f *-help.txt
+    for f ; do autogen $f-opts.def ; done
+    ${MAKE} "$@"
+    target=usage-text
+    mkusage "$@"
+    for f ; do autogen $f-opts.def ; done
+    ${MAKE} "$@"
+    dd=$(pwd | sed s/-bld//)
+    test "X$dd" = "X$PWD" && return 0
+    for f in *-help.txt
+    do
+        rm -f $dd/$f
+        ln $f $dd/.
+    done
+    mv $tmpdir/help-text .
+}
+
+case $target in
+usage-text ) mkusage "$@" ;;
+help-text )  mkhelp  "$@" ;;
+esac
+
 trap '' 0
 exit 0
