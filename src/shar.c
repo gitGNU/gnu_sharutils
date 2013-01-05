@@ -2,7 +2,7 @@
 static const char cright_years_z[] =
 
 /* Handle so called `shell archives'.
-   Copyright (C) */ "1994-1996, 2002, 2005-2012";
+   Copyright (C) */ "1994-2013";
 
 /* Free Software Foundation, Inc.
 
@@ -16,9 +16,9 @@ static const char cright_years_z[] =
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License
-   along with this program; if not, see:  http://www.gnu.org/licenses.
-*/
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 /*
    A note about translated strings:
@@ -303,7 +303,7 @@ static void close_output (int next_part_no);
 /* Walking tree routines.  */
 
 /* Define a type just for easing ansi2knr's life.  */
-typedef int (*walker_t) __P ((const char *, const char *));
+typedef int (*walker_t) (const char *, const char *);
 
 #include "scripts.x"
 
@@ -977,7 +977,7 @@ generate_full_header (int argc, char * const * argv)
       /* May be split, provide for white space for an explanation.  */
 
       fputs ("#\n", output);
-      archive_type_position = ftello (output);
+      archive_type_position = ftell (output);
       fprintf (output, explain_text_fmt, "", "");
     }
 
@@ -1055,7 +1055,7 @@ change_files (const char * restore_name, off_t * remaining_size)
 
   generate_configure ();
 
-  first_file_position = ftello (output);
+  first_file_position = ftell (output);
 }
 
 /* Emit shell script text to validate the restored file size
@@ -1382,7 +1382,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
     {
       /* Rewrite the info lines on the first header.  */
 
-      fseeko (output, archive_type_position, SEEK_SET);
+      fseek (output, archive_type_position, SEEK_SET);
       fprintf (output, explain_text_fmt, explain_1, explain_2);
     }
   close_output (part_number + 1);
@@ -1432,7 +1432,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
            line_prefix, OPT_ARG(HERE_DELIMITER),
            uuencode_file ? "${lock_dir}/uue" : restore);
 
-  (*size_left) = OPT_VALUE_WHOLE_SIZE_LIMIT - ftello (output);
+  (*size_left) = OPT_VALUE_WHOLE_SIZE_LIMIT - ftell (output);
   *split_flag  = 1;
 }
 
@@ -1555,7 +1555,7 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
    */
   if (HAVE_OPT(WHOLE_SIZE_LIMIT))
     {
-      off_t current_size = ftello (output);
+      off_t current_size = ftell (output);
       off_t encoded_size = 1024 + (uuencode_file
                ? (struct_stat.st_size + struct_stat.st_size / 3)
                : struct_stat.st_size);
@@ -1567,7 +1567,7 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
           && (encoded_size > *size_left_p))
         {
           change_files (*rnameq_p, size_left_p);
-          current_size = ftello (output);
+          current_size = ftell (output);
           *size_left_p = OPT_VALUE_WHOLE_SIZE_LIMIT - current_size;
         }
     }
@@ -2045,7 +2045,7 @@ configure_shar (int * argc_p, char *** argv_p)
       fputs ("shar_wish=\n", output);
     }
 
-  first_file_position = ftello (output);
+  first_file_position = ftell (output);
 }
 
 /**

@@ -2,7 +2,7 @@
 static const char cright_years_z[] =
 
 /* Handle so called `shell archives'.
-   Copyright (C) */ "1994-1996, 2002, 2005-2012";
+   Copyright (C) */ "1994-2013";
 
 /* Free Software Foundation, Inc.
 
@@ -151,14 +151,14 @@ find_archive (name, file, start)
   static char res1[BUFSIZ], res2[BUFSIZ], res3[BUFSIZ], res4[BUFSIZ];
   static char *result[] = {res1, res2, res3, res4};
 
-  fseeko (file, start, SEEK_SET);
+  fseek (file, start, SEEK_SET);
 
   while (1)
     {
 
       /* Record position of the start of this line.  */
 
-      position = ftello (file);
+      position = ftell (file);
 
       /* Read next line, fail if no more and no previous process.  */
 
@@ -195,7 +195,7 @@ find_archive (name, file, start)
 	  || starting_with (buffer, "cat ")
 	  || starting_with (buffer, "if "))
 	{
-	  fseeko (file, position, SEEK_SET);
+	  fseek (file, position, SEEK_SET);
 	  return 1;
 	}
 
@@ -213,7 +213,7 @@ find_archive (name, file, start)
 
 	  while (1)
 	    {
-	      position = ftello (file);
+	      position = ftell (file);
 
 	      if (!fgets (buffer, BUFSIZ, file))
 		{
@@ -232,7 +232,7 @@ find_archive (name, file, start)
 	  if (*buffer == '#' || *buffer == ':'
 	      || (('a' <= *buffer) && ('z' >= *buffer)))
 	    {
-	      fseeko (file, position, SEEK_SET);
+	      fseek (file, position, SEEK_SET);
 	      return 1;
 	    }
 
@@ -293,7 +293,7 @@ unarchive_shar_file (name, file)
 	  pclose (shell_process);
 
 	  if (more_to_read)
-	    current_position = ftello (file);
+	    current_position = ftell (file);
 	  else
 	    break;
 	}

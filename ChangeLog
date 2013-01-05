@@ -1,4 +1,30 @@
+2013-01-05  Peter Pisar  <ppisar@redhat.com>
+
+	* lib/md5.[ch]: deleted.
+	* lib/basename.h: deleted
+	* bootstrap: pull crypto/md5 from gnulib
+	do not include basename.h any more.
+
+2013-01-05  Karl Berry  <karl@freefriends.org>
+
+	* doc/sharutils.texi: sharutils doesn't own the GFDL
+
+2013-01-05  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar-opts.def: deprecate duplicate options and polish
+	* src/shar-std.def: polish
+	* src/unshar-opts.def: polish
+	* src/uudecode-opts.def: polish
+	* src/uuencode-opts.def: polish
+	* everywhere: Happy 2013 new year
+
+2013-01-05  Xose Vazquez Perez <xose.vazquez@gmail.com>
+
+	* doc/*.1: needed re-generation to fix missing newline.
+
 2012-12-27  Bruce Korb  <bkorb@gnu.org>
+
+	4.13.1 released
 
 	* doc/sharutils.texi: remove doc of non-existant scripts
 	* src/Makefile.am: add rule to update help text

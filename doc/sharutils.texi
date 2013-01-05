@@ -12,7 +12,6 @@
 * unshar: (sharutils)unshar Invocation.         Explode a shell archive.
 * uudecode: (sharutils)uudecode Invocation.     Restore file from 7-bits.
 * uuencode: (sharutils)uuencode Invocation.     Force binary file to 7-bits.
-* doc-license: GNU Free Documentation License.  Documentation license.
 @end direntry
 
 @finalout

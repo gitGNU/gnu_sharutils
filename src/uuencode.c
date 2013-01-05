@@ -2,7 +2,7 @@
 static const char cright_years_z[] =
 
 /* uuencode utility.
-   Copyright (C) */ "1994-1996, 2002, 2005-2012";
+   Copyright (C) */ "1994-2013";
 
 /* Free Software Foundation, Inc.
 
@@ -76,8 +76,8 @@ static const char cright_years_z[] =
 #define	IRWALL_MODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
 char * output_name = NULL;
 
-static inline void try_putchar __P ((int));
-static void encode __P ((void));
+static inline void try_putchar (int);
+static void encode (void);
 
 /* The name this program was run with. */
 const char *program_name;

@@ -1,6 +1,6 @@
 AutoGen Definitions options;
 /*
-   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+   Copyright (C) 1994-2013 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ AutoGen Definitions options;
    You should have received a copy of the GNU General Public License
  */
 copyright = {
-    date    = "1994-1996, 2002, 2005-2012";
+    date    = "1994-2013";
     type    = gpl;
     owner   = "Free Software Foundation, Inc.";
     eaddr   = 'bug-gnu-utils@gnu.org';
@@ -56,11 +56,10 @@ doc-section     = {
 #endif
 
 doc-section     = {
-    ds-type     = 'REPORTING BUGS';
+    ds-type     = 'BUGS';
     ds-format   = texi;
     ds-text     = <<- _EOText_
-	Report bugs to @email{bug-gnu-utils@@gnu.org}.
-	Please put @samp{sharutils} in the subject line.
-	It helps to spot the message.
+	Please put @samp{sharutils} in the subject line for emailed bug
+	reports.  It helps to spot the message.
 	_EOText_;
 };

@@ -1,8 +1,8 @@
 # Configure template for GNU shar utilities. -*- Mode: M4 -*-
-# Copyright (C) 1994-1996, 2002, 2005, 2010-2012 Free Software Foundation, Inc.
+# Copyright (C) 1994-2013 Free Software Foundation, Inc.
 # Process this file with autoconf to produce a configure script.
 #
-AC_INIT([GNU sharutils],[4.13.1],[bug-gnu-utils@gnu.org])
+AC_INIT([GNU sharutils],[4.13.2],[bug-gnu-utils@gnu.org])
 AC_CONFIG_SRCDIR([src/shar.c])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([1.1 dist-bzip2])
@@ -41,7 +41,7 @@ AC_SUBST([AM_CFLAGS])
 
 dnl FIXME: Check that mailer accepts -s.
 [PATH_save="$PATH"; PATH="$PATH:/usr/sbin:/usr/ucb:/usr/bin:/bin"]
-AC_PATH_PROGS(MAILER, [Mail mailx elm mush mail], [no])
+AC_PATH_PROGS(MAILER, [mailx elm mush mail], [no])
 [PATH="$PATH_save"]
 
 AC_PATH_PROGS(SH,  [bash sh], [no])

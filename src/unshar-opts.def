@@ -60,7 +60,7 @@ flag = {
     descrip     = 'Overwrite any pre-existing files';
     doc = <<- _EODoc_
 	This option is passed through as an option to the shar file.  Many
-	shell archive scripts accept a @file{-c} argument to indicate that
+	shell archive scripts accept a @option{-c} argument to indicate that
 	existing files should be overwritten.
 	_EODoc_;
 };
@@ -76,11 +76,11 @@ flag = {
     value       = E;
     arg-type    = string;
     arg-name    = split-pat;
-    descrip     = 'separate archives on @file{split-pat} lines';
+    descrip     = 'separate archives on @var{split-pat} lines';
     settable;
 
     doc = <<- _EODoc_
-	With this option, @file{unshar} isolates each different shell archive
+	With this option, @command{unshar} isolates each different shell archive
 	from the others which have been placed in the same file, unpacking each
 	in turn, from the beginning of the file to the end.  Its proper
 	operation relies on the fact that many shar files are terminated by a
@@ -105,4 +105,9 @@ flag = {
 	This option is equivalent to (and conflicts with)
 	@code{--split-at="exit 0"}.
 	_EODoc_;
+};
+
+doc-section = {
+    ds-type = 'SEE ALSO';
+    ds-text = 'shar(1)';
 };

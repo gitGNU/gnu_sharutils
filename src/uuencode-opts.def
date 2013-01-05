@@ -1,6 +1,6 @@
 AutoGen Definitions options;
 /*
-   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+   Copyright (C) 1994-2013 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -35,15 +35,15 @@ test -f uuencode-short-help.txt && {
 detail = <<- _EODetail_
 	@file{uuencode} is used to create an ASCII representation of a file
 	that can be sent over channels that may otherwise corrupt the data.
-	Specifically, email cannot handle binary data and will often even insert
-	a character when the six character sequence "\nFrom " is seen.
+	Specifically, email cannot handle binary data and will often even
+	insert a character when the six character sequence "\nFrom " is seen.
 
-	@file{uuencode} will read @file{in-file} if provided and otherwise read data
-	from standard in and write the encoded form to standard out.
+	@file{uuencode} will read @file{in-file} if provided and otherwise
+	read data from standard in and write the encoded form to standard out.
 	The output will begin with a header line for use by @file{uudecode}
-	giving it the resulting suggested file @file{output-name} and access mode.
-	If the @file{output-name} is specifically @file{/dev/stdout}, then
-	@file{uudecode} will emit the decoded file to standard out.
+	giving it the resulting suggested file @file{output-name} and access
+	mode.  If the @file{output-name} is specifically @file{/dev/stdout},
+	then @file{uudecode} will emit the decoded file to standard out.
 
 	@strong{Note}: @file{uuencode} uses buffered input and assumes that it
 	is not hand typed from a tty.  The consequence is that at a tty, you
@@ -64,8 +64,9 @@ flag = {
     doc = <<- _EODoc_
 	By default, @file{uuencode} will encode using the traditional
 	conversion.  It is slower and less compact than base 64.
-	The encoded form of the file is expanded by 37% for UU encoding and by 35%
-	for base64 encoding (3 bytes become 4 plus control information).
+	The encoded form of the file is expanded by 37% for UU encoding
+	and by 35% for base64 encoding (3 bytes become 4 plus control
+	information).
 	_EODoc_;
 };
 
@@ -97,7 +98,6 @@ doc-section = {
 	hex-encode:
 	@end example
 	unless you specify the @code{-h} (encode-file-name) option.
-
 	_EOText_;
 };
 
@@ -105,6 +105,11 @@ doc-section = {
     ds-type = HISTORY;
     ds-format = texi;
     ds-text = <<- _EOText_
-	The @file{uuencode} command first appeared in BSD 4.0.
+	The @command{uuencode} command first appeared in BSD 4.0.
 	_EOText_;
+};
+
+doc-section = {
+    ds-type = 'SEE ALSO';
+    ds-text = 'uudecode(1)';
 };

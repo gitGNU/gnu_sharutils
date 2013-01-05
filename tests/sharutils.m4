@@ -1,18 +1,18 @@
 # sharutils.m4 serial 2 (sharutils-4.3.75)
-dnl Copyright (C) 2002 Free Software Foundation, Inc.
+dnl Copyright (C) 2002-2013 Free Software Foundation, Inc.
 dnl This file is free software, distributed under the terms of the GNU
 dnl General Public License.
-
+dnl
 dnl Authors:
 dnl   Karl Eichwalder <ke@suse.de>, 2002.
-
-AC_DEFUN([CHECK_COMPRESS],
+dnl
+AC_DEFUN([CHECK_COMPRESS_AND_LINK],
 [
   AC_PATH_PROGS(COMPRESS, [compress], [no])
   if test $COMPRESS != no; then
     cp $srcdir/COPYING tCOPYING
     AC_MSG_CHECKING([whether compress works])
-    if compress tCOPYING >/dev/null 2>&1; then
+    if compress tCOPYING >/dev/null 2>&1 && test -f tCOPYING.Z ; then
       AC_DEFINE([HAVE_COMPRESS], [1],
                 [Define if compress is available.])
       AC_MSG_RESULT([yes])
@@ -26,11 +26,6 @@ AC_DEFUN([CHECK_COMPRESS],
     ADD_SCRIPT="$ADD_SCRIPT compress-dummy"
     AC_CONFIG_FILES([src/compress-dummy])
   fi
-])
-
-AC_DEFUN([CHECK_COMPRESS_AND_LINK],
-[
-  CHECK_COMPRESS
   if test $COMPRESS = no; then
     AC_ARG_ENABLE([compress-link],
       [AS_HELP_STRING([--enable-compress-link],

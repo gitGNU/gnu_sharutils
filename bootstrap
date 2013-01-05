@@ -2,7 +2,7 @@
 
 ## bootstrap file for sharutils
 ##
-## Copyright (C) 1995-1996, 2002, 2007, 2011-2012 Free Software Foundation, Inc.
+## Copyright (C) 1995-2013 Free Software Foundation, Inc.
 ##
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -217,6 +217,7 @@ setup_configure() {
 	gettext
 	inttostr
 	malloc-gnu
+	crypto/md5
 	mktime
 	pathmax
 	popen
@@ -258,7 +259,6 @@ update_include_list() {
     {
       sed -n 's/^ *#include/#include/p' ../import-log.txt
       echo '#include "error.h"'
-      echo '#include "basename.h"'
       echo '#include "locale.h"'
       echo '#include "system.h"'
     } | sort -u)

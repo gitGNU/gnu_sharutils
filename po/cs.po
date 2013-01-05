@@ -3,17 +3,14 @@
 # This file is distributed under the same license as the sharutils package.
 # David Sauer <xsauer@fel.cvut.cz>, 1997.
 # Vladimir Michl <Vladimir.Michl@upol.cz>, 1998.
-# Petr Pisar <petr.pisar@atlas.cz>, 2010, 2011, 2012.
-#
-# Notes: 1 unstanslated message, still untranslatable, require redefinition
-#        user asks keys
+# Petr Pisar <petr.pisar@atlas.cz>, 2010, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.12\n"
+"Project-Id-Version: sharutils 4.13.2\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-11 10:56-0700\n"
-"PO-Revision-Date: 2012-08-13 21:36+0200\n"
+"POT-Creation-Date: 2013-01-04 22:38-0800\n"
+"PO-Revision-Date: 2013-01-05 12:35+0100\n"
 "Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
@@ -28,11 +25,11 @@ msgstr ""
 #. the shar-generated shell script so the shar user can create shar archives
 #. with messages localized for one locale.
 #.
-#: src/scripts.x:395
+#: src/scripts.x:397
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
 msgstr "Poznámka: Kontrolní součty MD5 se neověřují. Zvažte instalaci GNU coreutils."
 
-#: src/scripts.x:396
+#: src/scripts.x:398
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
 "installing GNU `touch', distributed in GNU coreutils..."
@@ -40,361 +37,371 @@ msgstr ""
 "POZOR: časové značky se neobnovují. Zvažte instalaci nástroje GNU „touch“,\n"
 "který je dodáván v GNU coreutils."
 
-#: src/scripts.x:398
+#: src/scripts.x:400
 #, c-format
 msgid "lock directory %s exists"
 msgstr "adresář pro zámky %s existuje"
 
-#: src/scripts.x:399
+#: src/scripts.x:401
 #, c-format
 msgid "failed to create %s lock directory"
 msgstr "adresář pro zámky %s nebylo možné vytvořit"
 
-#: src/scripts.x:400
+#: src/scripts.x:402
 #, c-format
 msgid "x - created lock directory %s."
 msgstr "x − vytvořen adresář pro zámky %s."
 
-#: src/scripts.x:401
+#: src/scripts.x:403
 #, c-format
 msgid "x - failed to create lock directory %s."
 msgstr "x – adresář pro zámky %s nebylo možné vytvořit."
 
-#: src/scripts.x:402
+#: src/scripts.x:404
 #, c-format
 msgid "x - created directory %s."
 msgstr "x – adresář pro zámky %s vytvořen."
 
-#: src/scripts.x:403
+#: src/scripts.x:405
 #, c-format
 msgid "x - failed to create directory %s."
 msgstr "x – adresář %s nebylo možné vytvořit."
 
-#: src/scripts.x:404
+#: src/scripts.x:406
 msgid "yes"
 msgstr "ano"
 
-#: src/scripts.x:405
+#: src/scripts.x:407
 msgid "overwrite this file"
 msgstr "přepsat tento soubor"
 
-#: src/scripts.x:406
+#: src/scripts.x:408
 msgid "no"
 msgstr "ne"
 
-#: src/scripts.x:407
+#: src/scripts.x:409
 msgid "skip this file"
 msgstr "přeskočit tento soubor"
 
-#: src/scripts.x:408
+#: src/scripts.x:410 libopts/enum.c:486
 msgid "all"
 msgstr "vše"
 
-#: src/scripts.x:409
+#: src/scripts.x:411
 msgid "overwrite all files"
 msgstr "přepsat všechny soubory"
 
-#: src/scripts.x:410
+#: src/scripts.x:412 libopts/enum.c:491
 msgid "none"
 msgstr "nic"
 
-#: src/scripts.x:411
+#: src/scripts.x:413
 msgid "overwrite no files"
 msgstr "nepřepsat žádné soubory"
 
-#: src/scripts.x:412
+#: src/scripts.x:414
 msgid "help"
 msgstr "pomoc"
 
-#: src/scripts.x:413
+#: src/scripts.x:415
 msgid "explain choices"
 msgstr "vysvětlit možnosti"
 
-#: src/scripts.x:414
+#: src/scripts.x:416
 msgid "quit"
 msgstr "konec"
 
-#: src/scripts.x:415
+#: src/scripts.x:417
 msgid "exit immediately"
 msgstr "okamžitě skončit"
 
-#: src/scripts.x:416
+#: src/scripts.x:418
 #, c-format
 msgid "restore of %s failed"
 msgstr "obnovení %s selhalo"
 
-#: src/scripts.x:417
+#: src/scripts.x:419
+#, c-format
+msgid "  chmod %04o %s\n"
+msgstr "  chmod %04o %s\n"
+
+#: src/scripts.x:420
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "Konec části %d, pokračujte s částí %d"
 
-#: src/scripts.x:418
+#: src/scripts.x:421
 #, c-format
 msgid "End of %s part %d"
 msgstr "Konec %s, část %d"
 
-#: src/scripts.x:419
+#: src/scripts.x:422
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
 msgstr "upozornění při obnově: velikost %s není %s"
 
-#: src/scripts.x:420 src/shar.c:1306
+#: src/scripts.x:423 src/shar.c:1307
 msgid "(text)"
 msgstr "(textový)"
 
-#: src/scripts.x:421
+#: src/scripts.x:424
 msgid "(compressed)"
 msgstr "(komprimovaný)"
 
-#: src/scripts.x:422
+#: src/scripts.x:425
 msgid "(gzipped)"
 msgstr "(gzipovaný)"
 
-#: src/scripts.x:423
+#: src/scripts.x:426
 msgid "(bzipped)"
 msgstr "(bzipovaný)"
 
-#: src/scripts.x:424
+#: src/scripts.x:427
 msgid "(binary)"
 msgstr "(binární)"
 
-#: src/scripts.x:425
+#: src/scripts.x:428
 msgid "archive"
 msgstr "archívu"
 
-#: src/scripts.x:426
+#: src/scripts.x:429
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "Soubor %s pokračuje v části %d"
 
-#: src/scripts.x:427
+#: src/scripts.x:430
 msgid "Please unpack part 1 first!"
 msgstr "Prosím, rozbalte část číslo 1 jako první!"
 
-#: src/scripts.x:428
+#: src/scripts.x:431
 msgid "Please unpack part ${shar_sequence} next!"
 msgstr "Prosím, jako další rozbalte část ${shar_sequence}!"
 
-#: src/scripts.x:429
+#: src/scripts.x:432
 #, c-format
 msgid "x - STILL SKIPPING %s"
 msgstr "x – STÁLE PŘESKAKUJI %s"
 
-#: src/scripts.x:430
+#: src/scripts.x:433
 #, c-format
 msgid "continuing file %s"
 msgstr "pokračování souboru %s"
 
-#: src/scripts.x:431
+#: src/scripts.x:434
 msgid "(empty)"
 msgstr "(prázdný)"
 
-#: src/scripts.x:432
+#: src/scripts.x:435
 #, c-format
 msgid "x - overwriting %s"
 msgstr "x – přepisuje se %s"
 
-#: src/scripts.x:433
+#: src/scripts.x:436
 #, c-format
 msgid "overwrite %s"
 msgstr "přepsat %s"
 
-#: src/scripts.x:434
+#: src/scripts.x:437
 #, c-format
 msgid "SKIPPING %s"
 msgstr "PŘESKAKUJI %s"
 
-#: src/scripts.x:435
+#: src/scripts.x:438
 msgid "extraction aborted"
 msgstr "rozbalování ukončeno předčasně"
 
-#: src/scripts.x:436
+#: src/scripts.x:439
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
 msgstr "x – PŘESKAKUJE SE %s (soubor již existuje)"
 
-#: src/scripts.x:437
+#: src/scripts.x:440
 #, c-format
 msgid "x - extracting %s %s"
 msgstr "x – rozbaluje se %s %s"
 
-#: src/scripts.x:438
+#: src/scripts.x:441
 #, c-format
 msgid "File %s is complete"
 msgstr "Soubor %s zpracován"
 
-#: src/scripts.x:439
+#: src/scripts.x:442
 #, c-format
 msgid "uudecoding file %s"
 msgstr "uudekódování souboru %s"
 
-#: src/scripts.x:440
+#: src/scripts.x:443
 msgid "MD5 check failed"
 msgstr "kontrola MD5 selhala"
 
-#: src/scripts.x:441
+#: src/scripts.x:444
 msgid "You have unpacked the last part"
 msgstr "Máte rozbalenu poslední část"
 
-#: src/scripts.x:442
+#: src/scripts.x:445
 #, c-format
 msgid "x - removed lock directory %s."
 msgstr "x – adresář pro zámky %s odstraněn."
 
-#: src/scripts.x:443
+#: src/scripts.x:446
 #, c-format
 msgid "x - failed to remove lock directory %s."
 msgstr "x – adresář pro zámky %s nebylo možné odstranit."
 
-#: src/shar-opts.c:1650
+#: src/shar-opts.c:1681
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "%s nelze znovu otevřít jako standardní vstup"
 
-#: src/shar-opts.c:1742
+#: src/shar-opts.c:1791
 msgid "shar usage error:\n"
 msgstr "chybné použití sharu:\n"
 
-#: src/shar-opts.c:1778
+#: src/shar-opts.c:1827
 msgid "shar fatal error:\n"
-msgstr "nepřekonatelné chyba v shar:\n"
+msgstr "nepřekonatelná chyba v shar:\n"
 
 # TODO: rephrase fserr
-#: src/shar-opts.c:1815
+#: src/shar-opts.c:1864 src/uudecode-opts.c:483
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
 
-#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
-#: src/uuencode-opts.c:479
+#: src/shar-opts.c:1983 src/unshar-opts.c:593 src/uudecode-opts.c:602
+#: src/uuencode-opts.c:503
 msgid "No memory for duping translated strings\n"
 msgstr "Nedostatek paměti pro duplikaci přeložených řetězců\n"
 
-#: src/shar.c:372
+#: src/shar.c:373
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "chyba formátování printf: %s\n"
 
-#: src/shar.c:423
+#: src/shar.c:424
 msgid "sharutils bug - no status"
 msgstr "chyba sharutils – chybí status"
 
-#: src/shar.c:788
+#: src/shar.c:789
 msgid "Too many directories for mkdir generation"
 msgstr "Příliš mnoho adresářů pro mkdir"
 
-#: src/shar.c:871 src/shar.c:1541
+#: src/shar.c:872 src/shar.c:1542
 #, c-format
 msgid "Cannot access %s"
 msgstr "Pro přístup k %s chybí práva"
 
-#: src/shar.c:948 src/unshar.c:376
+#: src/shar.c:949 src/unshar.c:376
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Jméno aktuálního adresáře nelze zjistit"
 
-#: src/shar.c:1005 src/shar.c:1346
+#: src/shar.c:1006 src/shar.c:1347
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Nový soubor, zbývá %s, "
 
-#: src/shar.c:1006 src/shar.c:1347
+#: src/shar.c:1007 src/shar.c:1348
 #, c-format
 msgid "Limit still %s\n"
 msgstr "Limit zůstává %s\n"
 
-#: src/shar.c:1028
+#: src/shar.c:1029
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Začíná soubor %s\n"
 
-#: src/shar.c:1081
+#: src/shar.c:1082
 msgid "Could not popen command"
 msgstr "Nebylo možné spustit příkaz přes popen"
 
-#: src/shar.c:1162
+#: src/shar.c:1163
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Soubor %s nelze otevřít"
 
-#: src/shar.c:1296 src/shar.c:1305
+#: src/shar.c:1297 src/shar.c:1306
 msgid "text"
 msgstr "textový"
 
-#: src/shar.c:1311 src/shar.c:1322
+#: src/shar.c:1312 src/shar.c:1323
 msgid "call"
 msgstr "volání"
 
-#: src/shar.c:1335
+#: src/shar.c:1336
 #, c-format
 msgid "File %s (%s)"
 msgstr "Soubor %s (%s)"
 
-#: src/shar.c:1426
+#: src/shar.c:1427
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Pokračování souboru %s\n"
 
-#: src/shar.c:1536
+#: src/shar.c:1537
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Není obyčejný soubor"
 
-#: src/shar.c:1563
+#: src/shar.c:1564
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "V shar: zbývající velikost %s\n"
 
-#: src/shar.c:1583
+#: src/shar.c:1584
 msgid "empty"
 msgstr "prázdný"
 
 # Error while...
-#: src/shar.c:1622
+#: src/shar.c:1623
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Ukládání %s (%s)"
 
-#: src/shar.c:1807
+#: src/shar.c:1808
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Neplatný formát pro názvy výstupního souboru (%s): %s"
 
-#: src/shar.c:1822
+#: src/shar.c:1823
 msgid "more than one format element"
 msgstr "více jak jeden formátovací prvek"
 
-#: src/shar.c:1827
+#: src/shar.c:1828
 msgid "no conversion character"
 msgstr "žádný převodní znak"
 
-#: src/shar.c:1836
+#: src/shar.c:1837
 msgid "format is too wide"
 msgstr "formát je příliš široký"
 
-#: src/shar.c:1848
+#: src/shar.c:1849
 msgid "invalid conversion character"
 msgstr "neplatný převodní znak"
 
 # Error while...
-#: src/shar.c:1889
+#: src/shar.c:1890
 msgid "Opening"
 msgstr "Otevírání"
 
-#: src/shar.c:1904
+#: src/shar.c:1905
 msgid "Closing"
 msgstr "Uzavírání"
 
-#: src/shar.c:2015
+#: src/shar.c:1978
+#, c-format
+msgid "reopening stderr to /dev/null"
+msgstr "chybový výstup se znovu otevírá jako /dev/null"
+
+#: src/shar.c:2026
 msgid "No input files"
 msgstr "Vstupní soubory nejsou zadány"
 
-#: src/shar.c:2032
+#: src/shar.c:2043
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "PROSÍM, nepoužívejte -X soubory v USENETu nebo veřejných sítích"
 
-#: src/shar.c:2056
+#: src/shar.c:2067
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -403,12 +410,12 @@ msgstr ""
 "Přepínač „%s“ nesmí být namíchán s názvy souborů\n"
 "pokud nebyl zadán přepínač --intermix-type."
 
-#: src/shar.c:2074
+#: src/shar.c:2085
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Přepínač „%s“ musí předcházet všem názvům souborů"
 
-#: src/shar.c:2110
+#: src/shar.c:2121
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -417,16 +424,16 @@ msgstr ""
 "neplatný druh komprese: %s\n"
 "známé druhy jsou:\n"
 
-#: src/shar.c:2149
+#: src/shar.c:2160
 msgid "files on command line and --input-file-list specified"
 msgstr "zadány soubory na příkazovém řádku i --input-file-list"
 
-#: src/shar.c:2198
+#: src/shar.c:2209
 #, c-format
 msgid "Created %d files\n"
 msgstr "Souborů vytvořeno: %d\n"
 
-#: src/unshar-opts.c:427 src/unshar.c:394
+#: src/unshar-opts.c:433 src/unshar.c:394
 #, c-format
 msgid "Cannot chdir to `%s'"
 msgstr "Adresář nelze změnit na „%s“"
@@ -461,7 +468,7 @@ msgstr "Řádek „cut“ byl následován: %s"
 msgid "Starting `sh' process"
 msgstr "Startuji proces „sh“"
 
-#: src/unshar.c:312 src/uudecode.c:459
+#: src/unshar.c:312
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Více informací získáte příkazem „%s --help“.\n"
@@ -499,14 +506,14 @@ msgstr ""
 "Pokud SOUBOR nebude zadán, bude čten standardní vstup.\n"
 
 #. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
+#: src/unshar.c:331
 #, c-format
 msgid "Report bugs to <%s>.\n"
 msgstr ""
 "Chyby v programu hlaste na <%s> (anglicky).\n"
 "Chyby v překladu na <translation-team-cs@lists.sourceforge.net> (česky).\n"
 
-#: src/unshar.c:414 src/uudecode.c:506
+#: src/unshar.c:414
 #, c-format, no-wrap
 msgid ""
 "Copyright (C) %s Free Software Foundation, Inc.\n"
@@ -532,88 +539,78 @@ msgstr "standardní vstup"
 #: src/unshar.c:528
 #, c-format
 msgid "allocate file buffer"
-msgstr "alokace buffer souboru"
+msgstr "alokace bufferu souboru"
 
-#: src/uudecode.c:114 src/uudecode.c:444
+#: src/uudecode-opts.c:410
+msgid "uudecode usage error:\n"
+msgstr "chybné použití uudecode:\n"
+
+#: src/uudecode-opts.c:446
+msgid "uudecode fatal error:\n"
+msgstr "nepřekonatelná chyba v uudecode:\n"
+
+#: src/uudecode.c:106 src/uudecode.c:456
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Chyba při zápisu"
 
-#: src/uudecode.c:131 src/uudecode.c:218
+#: src/uudecode.c:123 src/uudecode.c:217
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Krátký soubor"
 
-#: src/uudecode.c:167
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Chybí řádek „end“"
 
-#: src/uudecode.c:227
+#: src/uudecode.c:226
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: data následující „=“ jsou vyplňovací znaky"
 
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
+#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: nepřípustný řádek"
 
-#: src/uudecode.c:303
+#: src/uudecode.c:302
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Nepřípustný název souboru: %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:309
 #, c-format
-msgid "No user `%s'"
+msgid "No user '%s'"
 msgstr "Uživatel „%s“ neexistuje"
 
 # TODO: plural
-#: src/uudecode.c:321
+#: src/uudecode.c:320
 #, c-format
 msgid "no memory for %d byte allocation"
 msgstr "nedostatek paměti pro alokaci %d bajtů"
 
-#: src/uudecode.c:346
+#: src/uudecode.c:343
 #, c-format
 msgid "cannot access %s"
 msgstr "nelze přistoupit k %s"
 
-#: src/uudecode.c:354
+#: src/uudecode.c:352
 #, c-format
 msgid "freopen of %s"
 msgstr "freopen() nad %s"
 
-#: src/uudecode.c:360
+#: src/uudecode.c:359
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod nad %s"
 
-#: src/uudecode.c:385
+#: src/uudecode.c:396
 #, c-format
 msgid "%s: No `begin' line"
 msgstr "%s: Chybí řádek „begin“"
 
-#: src/uudecode.c:463
-#, c-format
-msgid "Usage: %s [FILE]...\n"
-msgstr "Použití: %s [SOUBOR]…\n"
-
-#: src/uudecode.c:464
-msgid ""
-"Mandatory arguments to long options are mandatory to short options too.\n"
-"  -o, --output-file=FILE   direct output to FILE\n"
-"      --help               display this help and exit\n"
-"      --version            output version information and exit\n"
-msgstr ""
-"Povinné argumenty dlouhých formátů přepínačů, jsou závazné i pro krátké formy.\n"
-"  -o, --output-file=SOUBOR výstup do souboru SOUBOR\n"
-"      --help               vypíše tuto nápovědu a skončí\n"
-"      --version            vypíše označení verze a skončí\n"
-
-#: src/uudecode.c:530
-#, c-format
+#: src/uudecode.c:496
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
@@ -763,6 +760,487 @@ msgstr "argument „%3$s“ přepínače %1$s%2$s má neplatnou příponu"
 #, c-format
 msgid "%s%s argument '%s' too large"
 msgstr "přepínač %s%s má příliš dlouhý argument „%s“"
+
+# TODO: pluralize
+#: libopts/autoopts.c:51
+#, c-format
+msgid "malloc of %d bytes failed\n"
+msgstr "alokace %d bajtů paměti selhala\n"
+
+#: libopts/init.c:52
+msgid "AutoOpts function called without option descriptor\n"
+msgstr "Funkce AutoOpts byla zavolána bez popisu přepínačů\n"
+
+#: libopts/init.c:85
+msgid "\tThis exceeds the compiled library version:  "
+msgstr "\tToto překračuje verzi knihovny v době překladu: "
+
+#: libopts/init.c:83
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+"Chyba při zpracování automatických přepínačů!\n"
+"\t%s zavolalo funkci AutoOpts s verzí struktury %d:%d:%d.\n"
+
+# TODO: Pluralize
+#: libopts/autoopts.c:64
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr "realokace %d bajtů na adrese 0x%p selhala\n"
+
+#: libopts/init.c:87
+msgid "\tThis is less than the minimum library version:  "
+msgstr "\tToto je méně než minimální verze knihovny:  "
+
+#: libopts/autoopts.c:77
+#, c-format
+msgid "strdup of %d byte string failed\n"
+msgstr "zdvojení %dbajtového řetězce selhala\n"
+
+#: libopts/version.c:120
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+"Automated Options verze %s\n"
+"\tCopyright © 1999–2013 Bruce Korb – všechna práva vyhrazena\n"
+
+#: libopts/find.c:585
+msgid "AutoOpts lib error: defaulted to option with optional arg\n"
+msgstr "Chyba knihovny AutoOpts: návrat k přepínači s volitelným argumentem\n"
+
+#: libopts/alias.c:53
+msgid "(AutoOpts bug):  Aliasing option is out of range."
+msgstr "(Chyba AutoOpts): alias přepínače je mimo rozsah."
+
+#: libopts/enum.c:228
+#, c-format
+msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
+msgstr "Chyba %s: klíčové slovo „%s“ není pro %s jednoznačné\n"
+
+#: libopts/find.c:104
+msgid "  The following options match:\n"
+msgstr "  Následující přepínače se shodují:\n"
+
+# TODO: Pluralize
+#: libopts/find.c:286
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr "%s: nejednoznačný název přepínače: %s (odpovídá %d přepínačům)\n"
+
+#: libopts/find.c:107 libopts/find.c:112
+#, c-format
+msgid "  %s%s\n"
+msgstr "  %s%s\n"
+
+#: libopts/check.c:157
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr "%s: Vyžadovány argumenty z příkazového řádku\n"
+
+#: libopts/alias.c:78 libopts/autoopts.c:215
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr "%d %s%s přepínačů dovoleno\n"
+
+#: libopts/usage.c:872
+msgid "version, usage and configuration options:"
+msgstr "přepínače pro verzi, návod na použití a nastavení:"
+
+#: libopts/makeshell.c:266
+#, c-format
+msgid "Error %d (%s) from the pipe(2) syscall\n"
+msgstr "Chyba %d (%s) z volání pipe(2)\n"
+
+#: libopts/version.c:160
+#, c-format
+msgid ""
+"ERROR: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and copyright notice\n"
+msgstr ""
+"CHYBA: argument přepínače verze „%c“ není platný. Použití:\n"
+"\t„v“ – pouze verze\n"
+"\t„c“ – verze a autorská práva\n"
+"\t„n“ – verze a poznámka o autorských právech\n"
+
+#: libopts/check.c:56
+#, c-format
+msgid "ERROR:  %s option conflicts with the %s option\n"
+msgstr "CHYBA: přepínač %s je v rozporu s přepínačem %s\n"
+
+# TODO: Pluralize
+#: libopts/restore.c:108
+#, c-format
+msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
+msgstr "%s(optionSaveState): chyba: %d bajtů nelze alokovat\n"
+
+#: libopts/configfile.c:593
+msgid "auto-options"
+msgstr "automatické přepínače"
+
+#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
+msgid "program"
+msgstr "program"
+
+#: libopts/usage.c:654
+msgid "\t\t\t\t- default option for unnamed options\n"
+msgstr "\t\t\t\t– výchozí přepínač pro nepojmenované přepínače\n"
+
+#: libopts/usage.c:569
+#, c-format
+msgid "\t\t\t\t- disabled as --%s\n"
+msgstr "\t\t\t\t– vypnuto jako --%s\n"
+
+#: libopts/find.c:210 libopts/find.c:417
+#, c-format
+msgid "%s: The ``%s'' option has been disabled"
+msgstr "%s: Přepínač „%s“ byl vypnut"
+
+#: libopts/usage.c:839
+msgid "This option has been disabled"
+msgstr "Tento přepínač byl vypnut"
+
+#: libopts/alias.c:73 libopts/autoopts.c:210
+msgid "-equivalence"
+msgstr "-equivalence"
+
+#: libopts/alias.c:75 libopts/autoopts.c:212
+msgid "ERROR:  only "
+msgstr "CHYBA: pouze "
+
+#: libopts/usage.c:916
+#, c-format
+msgid " - examining environment variables named %s_*\n"
+msgstr " – zkoumají se proměnné prostředí s názvem %s_*\n"
+
+#: libopts/configfile.c:1170
+#, c-format
+msgid "File error %d (%s) opening %s for loading options\n"
+msgstr "Chyba %d (%s) při otevírání souboru %s při načítání přepínačů\n"
+
+#: libopts/text_mmap.c:98
+#, c-format
+msgid "fs error %d (%s) reading file %s\n"
+msgstr "chyba souborového systému %d (%s) při čtení ze souboru %s\n"
+
+#: libopts/file.c:135
+msgid "fopen-ing file"
+msgstr "otevírání souboru"
+
+#: libopts/file.c:74
+msgid "stat-ing for directory"
+msgstr "zjišťování údajů o adresáři"
+
+#: libopts/file.c:86
+msgid "stat-ing for regular file"
+msgstr "zjišťování údajů o obyčejném souboru"
+
+#: libopts/file.c:48
+msgid "stat-ing for non-existant file"
+msgstr "zjišťování údajů o neexistujícím souboru"
+
+#: libopts/file.c:108
+msgid "open-ing file"
+msgstr "otevírání souboru"
+
+#: libopts/file.c:47 libopts/file.c:73 libopts/file.c:85 libopts/file.c:107
+#: libopts/file.c:134
+#, c-format
+msgid "fs error %d (%s) on %s %s for option %s\n"
+msgstr "chyba souborového systému %d (%s) v %s %s u přepínače %s\n"
+
+#: libopts/usage.c:273
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+msgstr ""
+"Přepínače se zadávají jako dva spojovníky následované názvem nebo jako\n"
+"jeden spojovník následovaný znakem příznaku.\n"
+
+#: libopts/makeshell.c:272
+#, c-format
+msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
+msgstr "chyba souborového systému %d (%s) při volání fork – nelze získat návod pro %s\n"
+
+#: libopts/makeshell.c:802
+#, c-format
+msgid "fs error %d (%s) on freopen\n"
+msgstr "chyba souborového systému %d (%s) při provádění freopen\n"
+
+#: libopts/makeshell.c:880
+#, c-format
+msgid ""
+"\n"
+"= = = = = = = =\n"
+"\n"
+"This incarnation of genshell will produce\n"
+"a shell script to parse the options for %s:\n"
+"\n"
+msgstr ""
+"\n"
+"= = = = = = = =\n"
+"\n"
+"Tato verze genshellu vyrobí shellový skript\n"
+"pro rozbor přepínačů %s:\n"
+"\n"
+
+#: libopts/find.c:456 libopts/reset.c:106
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: neznámý přepínač – %c\n"
+
+#: libopts/find.c:264 libopts/find.c:758 libopts/reset.c:114
+#, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: neznámý přepínač – %s\n"
+
+#: libopts/find.c:328
+#, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: neznámý přepínač rozšíření prodejce – %s\n"
+
+#: libopts/enum.c:153 libopts/enum.c:163
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr " nebo celé číslo od %d do %d\n"
+
+#: libopts/usage.c:484 libopts/usage.c:805
+#, c-format
+msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
+msgstr "CHYBA AutoOpts: chybný popis přepínače %s\n"
+
+#: libopts/find.c:375
+#, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: neplatný název přepínače: %s\n"
+
+#: libopts/enum.c:160
+#, c-format
+msgid "  or an integer mask with any of the lower %d bits set\n"
+msgstr " nebo celočíselná maska s nastaveným některým ze spodních %d bitů\n"
+
+#: libopts/find.c:514
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: přepínač „%s“ vyžaduje argument\n"
+
+#: libopts/autoopts.c:162
+#, c-format
+msgid ""
+"Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'"
+msgstr ""
+"Zrovnoceňovaný přepínač %s“ byl zrovnoceněn\n"
+"s „%s“ i „%s“"
+
+#: libopts/check.c:90
+#, c-format
+msgid "ERROR:  The %s option is required\n"
+msgstr "CHYBA: Je vyžadován přepínač %s\n"
+
+#: libopts/find.c:620
+#, c-format
+msgid "%s: option `%s' cannot have an argument\n"
+msgstr "%s: přepínač „%s“ nemůže mít argument\n"
+
+#: libopts/check.c:147
+#, c-format
+msgid "%s: Command line arguments not allowed\n"
+msgstr "%s: Argumenty na příkazovém řádku nejsou dovoleny\n"
+
+#: libopts/save.c:510
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr "chyba %d (%s) při vytváření %s\n"
+
+#: libopts/usage.c:275
+msgid "Options are specified by single or double hyphens and their name.\n"
+msgstr "Přepínače se zadávají jedním nebo dvěma spojovníky a svým názvem.\n"
+
+#: libopts/enum.c:228
+#, c-format
+msgid "%s error:  `%s' does not match any %s keywords\n"
+msgstr "Chyba %s: „%s“ neodpovídá žádnému klíčovému slovu %s\n"
+
+#: libopts/reset.c:89
+msgid "The 'reset-option' option requires an argument\n"
+msgstr "Přepínač „reset-option“ vyžaduje argument\n"
+
+#: libopts/usage.c:1031
+msgid "   Arg Option-Name    Description\n"
+msgstr "   Arg NázevPřepínače Popis\n"
+
+#: libopts/usage.c:967 libopts/usage.c:1025
+msgid "  Flg Arg Option-Name    Description\n"
+msgstr "  Pří Arg NázevPřepínače Popis\n"
+
+#: libopts/save.c:177 libopts/save.c:231
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr "chyba %d (%s) při zjišťování údajů o %s\n"
+
+#: libopts/restore.c:149
+#, c-format
+msgid "%s(optionRestore): error: no saved option state\n"
+msgstr "%s(optionRestore): chyba: chybí uložený stav přepínače\n"
+
+#: libopts/autoopts.c:252
+#, c-format
+msgid "'%s' is not a command line option\n"
+msgstr "„%s“ není přepínačem na příkazovém řádku\n"
+
+#: libopts/time.c:110
+#, c-format
+msgid "%s error:  `%s' is not a recognizable date/time\n"
+msgstr "chyba %s: „%s“ není rozpoznatelné datum nebo čas\n"
+
+#: libopts/save.c:126
+#, c-format
+msgid "'%s' not defined\n"
+msgstr "„%s“ není definováno\n"
+
+#: libopts/time.c:49
+#, c-format
+msgid "%s error:  `%s' is not a recognizable time duration\n"
+msgstr "chyba %s: „%s“ není rozpoznatelná délka trvání\n"
+
+#: libopts/check.c:89
+#, c-format
+msgid "ERROR:  The %s option must appear %d times\n"
+msgstr "CHYBA: Přepínač %s musí se vyskytovat %dkrát\n"
+
+#: libopts/configfile.c:1180 libopts/makeshell.c:727 libopts/save.c:250
+#, c-format
+msgid "error:  cannot load options from non-regular file %s\n"
+msgstr "chyba: přepínače nelze načíst ze zvláštního souboru %s\n"
+
+#: libopts/numeric.c:149
+#, c-format
+msgid "%s error:  `%s' is not a recognizable number\n"
+msgstr "chyba %s: „%s“ není rozpoznatelné číslo\n"
+
+#: libopts/alias.c:80 libopts/autoopts.c:217
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr "dovolen je jeden přepínač %s%s\n"
+
+#: libopts/makeshell.c:177 libopts/makeshell.c:902 libopts/usage.c:232
+#: libopts/usage.c:307 libopts/version.c:166
+msgid "Write failure to output file"
+msgstr "Chyba při zápisu do výstupního souboru"
+
+#: libopts/usage.c:701
+#, c-format
+msgid " - reading file %s"
+msgstr " – čtení ze souboru %s"
+
+#: libopts/usage.c:302 libopts/version.c:104 libopts/version.c:126
+#, c-format
+msgid ""
+"\n"
+"please send bug reports to:  %s\n"
+msgstr ""
+"\n"
+"Prosím, chybová hlášení zasílejte anglicky na: %s\n"
+
+#: libopts/usage.c:673 libopts/usage.c:914
+msgid ""
+"\n"
+"The following option preset mechanisms are supported:\n"
+msgstr ""
+"\n"
+"Podporovány jsou následující mechanismy předvoleb:\n"
+
+#: libopts/numeric.c:54
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr "chyba %s: hodnota přepínače %s %ld je mimo rozsah.\n"
+
+#: libopts/numeric.c:62
+#, c-format
+msgid "%sIt must lie in one of the ranges:\n"
+msgstr "%s Musí ležet v jednom z těchto rozsahů:\n"
+
+#: libopts/numeric.c:62
+#, c-format
+msgid "%sIt must be in the range:\n"
+msgstr "%s Musí ležet v tomto rozsahu:\n"
+
+#: libopts/usage.c:283
+msgid "Operands and options may be intermixed.  They will be reordered.\n"
+msgstr "Operandy a přepínače se mohou míchat. Budou uspořádány.\n"
+
+#: libopts/check.c:43
+#, c-format
+msgid "ERROR:  %s option requires the %s option\n"
+msgstr "CHYBA: přepínač %s vyžaduje přepínač %s\n"
+
+#: libopts/usage.c:401
+msgid "requires these options:\n"
+msgstr "vyžaduje tyto přepínače:\n"
+
+#: libopts/usage.c:1043
+msgid "   Arg Option-Name   Req?  Description\n"
+msgstr "   Arg Přepínač      Pov?  Popis\n"
+
+#: libopts/usage.c:1037
+msgid "  Flg Arg Option-Name   Req?  Description\n"
+msgstr "  Pří Arg Přepínač      Pov?  Popis\n"
+
+#: libopts/reset.c:84
+msgid "The --reset-option has not been configured.\n"
+msgstr "Přepínač --reset-option nebyl nastaven.\n"
+
+#: libopts/init.c:117
+msgid "-_^"
+msgstr "-_^"
+
+#: libopts/enum.c:161
+msgid ""
+"or you may use a numeric representation.  Preceding these with a '!' will\n"
+"clear the bits, specifying 'none' will clear all bits, and 'all' will set them\n"
+"all.  Multiple entries may be passed as an option argument list.\n"
+msgstr ""
+"nebo lze použít číselný zápis. Předcházející „!“ vyčistí tyto bity, „none“\n"
+"vyčistí všechny bity a „all“ nastaví všechny bity. Více položek lze předat\n"
+"jako seznam argumentů přepínače.\n"
+
+#: libopts/enum.c:194
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr "chyba %s: %s přesahuje počet klíčových slov %s\n"
+
+#: libopts/enum.c:71
+#, c-format
+msgid "The valid \"%s\" option keywords are:\n"
+msgstr "Platná klíčová slova přepínače „%s“ jsou:\n"
+
+#: libopts/usage.c:876
+msgid "The next option supports vendor supported extra options:"
+msgstr "Následující přepínač podporuje rozšiřující přepínače prodejce:"
+
+#: libopts/usage.c:512
+msgid "These additional options are:"
+msgstr "Tyto dodatečné přepínače jsou:"
+
+#~ msgid "Usage: %s [FILE]...\n"
+#~ msgstr "Použití: %s [SOUBOR]…\n"
+
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory to short options too.\n"
+#~ "  -o, --output-file=FILE   direct output to FILE\n"
+#~ "      --help               display this help and exit\n"
+#~ "      --version            output version information and exit\n"
+#~ msgstr ""
+#~ "Povinné argumenty dlouhých formátů přepínačů, jsou závazné i pro krátké formy.\n"
+#~ "  -o, --output-file=SOUBOR výstup do souboru SOUBOR\n"
+#~ "      --help               vypíše tuto nápovědu a skončí\n"
+#~ "      --version            vypíše označení verze a skončí\n"
 
 #~ msgid "-C is being deprecated, use -Z instead"
 #~ msgstr "-C není podporován, místo něj použijte -Z"
@@ -989,9 +1467,6 @@ msgstr "přepínač %s%s má příliš dlouhý argument „%s“"
 
 #~ msgid "bunzipping file %s"
 #~ msgstr "dekomprese bzipového souboru %s"
-
-#~ msgid "%s: illegal option -- %c\n"
-#~ msgstr "%s: neznámý přepínač -- %c\n"
 
 #~ msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
 #~ msgstr "GNU \\`touch`, z balíčku GNU File Utilities ..."

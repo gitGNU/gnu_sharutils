@@ -1,11 +1,11 @@
 #! /bin/sh
 
-# Time-stamp: "2011-01-14 17:41:02 bkorb"
+# Time-stamp: "2013-01-03 13:48:41 bkorb"
 # Version:    "$Revision: 1.6 $
 
 ## Create the manual hierarchy
 ##
-## Copyright (C) 2005-2007, 2011 Free Software Foundation, Inc.
+## Copyright (C) 2005-2013 Free Software Foundation, Inc.
 ##
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by

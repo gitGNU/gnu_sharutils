@@ -1,15 +1,15 @@
 # Polish translation for sharutils.
 # Copyright (C) 2005, 2006, 2010, 2011, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2012.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2013.
 # partially based on initial translation by Wojtek Ślusarczyk of PLD, 1999.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.12\n"
+"Project-Id-Version: sharutils 4.13.2\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-11 10:56-0700\n"
-"PO-Revision-Date: 2012-08-20 19:02+0200\n"
+"POT-Creation-Date: 2013-01-04 22:38-0800\n"
+"PO-Revision-Date: 2013-01-05 13:13+0100\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -24,11 +24,11 @@ msgstr ""
 #. the shar-generated shell script so the shar user can create shar archives
 #. with messages localized for one locale.
 #.
-#: src/scripts.x:395
+#: src/scripts.x:397
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
 msgstr "Uwaga: sumy md5 nie są sprawdzane. Do tego potrzebne są GNU coreutils."
 
-#: src/scripts.x:396
+#: src/scripts.x:398
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
 "installing GNU `touch', distributed in GNU coreutils..."
@@ -36,358 +36,368 @@ msgstr ""
 "UWAGA: nie odtwarzanie znaczników czasu. Proszę rozważyć\n"
 "doinstalowanie pakietu GNU `touch' z pakietu GNU coreutils..."
 
-#: src/scripts.x:398
+#: src/scripts.x:400
 #, c-format
 msgid "lock directory %s exists"
 msgstr "katalog blokujący %s istnieje"
 
-#: src/scripts.x:399
+#: src/scripts.x:401
 #, c-format
 msgid "failed to create %s lock directory"
 msgstr "nie udało się utworzyć katalogu blokującego %s"
 
-#: src/scripts.x:400
+#: src/scripts.x:402
 #, c-format
 msgid "x - created lock directory %s."
 msgstr "x - utworzono katalog blokujący %s."
 
-#: src/scripts.x:401
+#: src/scripts.x:403
 #, c-format
 msgid "x - failed to create lock directory %s."
 msgstr "x - nie udało się utworzyć katalogu blokującego %s."
 
-#: src/scripts.x:402
+#: src/scripts.x:404
 #, c-format
 msgid "x - created directory %s."
 msgstr "x - utworzono katalog %s."
 
-#: src/scripts.x:403
+#: src/scripts.x:405
 #, c-format
 msgid "x - failed to create directory %s."
 msgstr "x - nie udało się utworzyć katalogu %s."
 
-#: src/scripts.x:404
+#: src/scripts.x:406
 msgid "yes"
 msgstr "tak"
 
-#: src/scripts.x:405
+#: src/scripts.x:407
 msgid "overwrite this file"
 msgstr "nadpisanie tego pliku"
 
-#: src/scripts.x:406
+#: src/scripts.x:408
 msgid "no"
 msgstr "nie"
 
-#: src/scripts.x:407
+#: src/scripts.x:409
 msgid "skip this file"
 msgstr "pominięcie tego pliku"
 
-#: src/scripts.x:408
+#: src/scripts.x:410 libopts/enum.c:486
 msgid "all"
 msgstr "wszystkie"
 
-#: src/scripts.x:409
+#: src/scripts.x:411
 msgid "overwrite all files"
 msgstr "nadpisanie wszystkich plików"
 
-#: src/scripts.x:410
+#: src/scripts.x:412 libopts/enum.c:491
 msgid "none"
 msgstr "żaden"
 
-#: src/scripts.x:411
+#: src/scripts.x:413
 msgid "overwrite no files"
 msgstr "nie nadpisywanie żadnego pliku"
 
-#: src/scripts.x:412
+#: src/scripts.x:414
 msgid "help"
 msgstr "pomoc"
 
-#: src/scripts.x:413
+#: src/scripts.x:415
 msgid "explain choices"
 msgstr "wyjaśnienie opcji"
 
-#: src/scripts.x:414
+#: src/scripts.x:416
 msgid "quit"
 msgstr "koniec"
 
-#: src/scripts.x:415
+#: src/scripts.x:417
 msgid "exit immediately"
 msgstr "natychmiastowe zakończenie"
 
-#: src/scripts.x:416
+#: src/scripts.x:418
 #, c-format
 msgid "restore of %s failed"
 msgstr "przywrócenie %s nie powiodło się"
 
-#: src/scripts.x:417
+#: src/scripts.x:419
+#, c-format
+msgid "  chmod %04o %s\n"
+msgstr "  chmod %04o %s\n"
+
+#: src/scripts.x:420
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "Koniec części %d, ciąg dalszy w części %d"
 
-#: src/scripts.x:418
+#: src/scripts.x:421
 #, c-format
 msgid "End of %s part %d"
 msgstr "Koniec części %2$d %1$s"
 
-#: src/scripts.x:419
+#: src/scripts.x:422
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
 msgstr "uwaga odzyskiwania: rozmiar %s nie wynosi %s"
 
-#: src/scripts.x:420 src/shar.c:1306
+#: src/scripts.x:423 src/shar.c:1307
 msgid "(text)"
 msgstr "(tekst)"
 
-#: src/scripts.x:421
+#: src/scripts.x:424
 msgid "(compressed)"
 msgstr "(skompresowany"
 
-#: src/scripts.x:422
+#: src/scripts.x:425
 msgid "(gzipped)"
 msgstr "(skompresowany gzipem)"
 
-#: src/scripts.x:423
+#: src/scripts.x:426
 msgid "(bzipped)"
 msgstr "(skompresowany bzipem)"
 
-#: src/scripts.x:424
+#: src/scripts.x:427
 msgid "(binary)"
 msgstr "(binarny)"
 
-#: src/scripts.x:425
+#: src/scripts.x:428
 msgid "archive"
 msgstr "archiwum"
 
-#: src/scripts.x:426
+#: src/scripts.x:429
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "Plik %s będzie kontynuowany w części %d"
 
-#: src/scripts.x:427
+#: src/scripts.x:430
 msgid "Please unpack part 1 first!"
 msgstr "Proszę najpierw rozpakować pierwszą część!"
 
-#: src/scripts.x:428
+#: src/scripts.x:431
 msgid "Please unpack part ${shar_sequence} next!"
 msgstr "Proszę następnie rozpakować część ${shar_sequence}!"
 
-#: src/scripts.x:429
+#: src/scripts.x:432
 #, c-format
 msgid "x - STILL SKIPPING %s"
 msgstr "x - NADAL POMINIĘTO %s"
 
-#: src/scripts.x:430
+#: src/scripts.x:433
 #, c-format
 msgid "continuing file %s"
 msgstr "ciąg dalszy pliku %s"
 
-#: src/scripts.x:431
+#: src/scripts.x:434
 msgid "(empty)"
 msgstr "(pusty)"
 
-#: src/scripts.x:432
+#: src/scripts.x:435
 #, c-format
 msgid "x - overwriting %s"
 msgstr "x - nadpisywanie %s"
 
-#: src/scripts.x:433
+#: src/scripts.x:436
 #, c-format
 msgid "overwrite %s"
 msgstr "nadpisać %s"
 
-#: src/scripts.x:434
+#: src/scripts.x:437
 #, c-format
 msgid "SKIPPING %s"
 msgstr "POMINIĘTO %s"
 
-#: src/scripts.x:435
+#: src/scripts.x:438
 msgid "extraction aborted"
 msgstr "rozpakowywanie przerwane"
 
-#: src/scripts.x:436
+#: src/scripts.x:439
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
 msgstr "x - POMINIĘTO %s (plik już istnieje)"
 
-#: src/scripts.x:437
+#: src/scripts.x:440
 #, c-format
 msgid "x - extracting %s %s"
 msgstr "x - rozpakowywanie %s %s"
 
-#: src/scripts.x:438
+#: src/scripts.x:441
 #, c-format
 msgid "File %s is complete"
 msgstr "Plik %s jest kompletny"
 
-#: src/scripts.x:439
+#: src/scripts.x:442
 #, c-format
 msgid "uudecoding file %s"
 msgstr "dekodowanie pliku %s programem uudecode"
 
-#: src/scripts.x:440
+#: src/scripts.x:443
 msgid "MD5 check failed"
 msgstr "Sprawdzenie sumy kontrolnej MD5 nie powiodło się"
 
-#: src/scripts.x:441
+#: src/scripts.x:444
 msgid "You have unpacked the last part"
 msgstr "Rozpakowano ostatnią część"
 
-#: src/scripts.x:442
+#: src/scripts.x:445
 #, c-format
 msgid "x - removed lock directory %s."
 msgstr "x - usunięto katalog blokujący %s."
 
-#: src/scripts.x:443
+#: src/scripts.x:446
 #, c-format
 msgid "x - failed to remove lock directory %s."
 msgstr "x - nie udało się usunąć katalogu blokującego %s."
 
-#: src/shar-opts.c:1650
+#: src/shar-opts.c:1681
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "Nie można ponownie otworzyć %s jako standardowego wejścia"
 
-#: src/shar-opts.c:1742
+#: src/shar-opts.c:1791
 msgid "shar usage error:\n"
 msgstr "Błąd użycia shara:\n"
 
-#: src/shar-opts.c:1778
+#: src/shar-opts.c:1827
 msgid "shar fatal error:\n"
 msgstr "Błąd krytyczny shara:\n"
 
-#: src/shar-opts.c:1815
+#: src/shar-opts.c:1864 src/uudecode-opts.c:483
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr "fserr %d (%s) podczas wykonywania '%s' na %s\n"
 
-#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
-#: src/uuencode-opts.c:479
+#: src/shar-opts.c:1983 src/unshar-opts.c:593 src/uudecode-opts.c:602
+#: src/uuencode-opts.c:503
 msgid "No memory for duping translated strings\n"
 msgstr "Brak pamięci do powielenia przetłumaczonych napisów\n"
 
-#: src/shar.c:372
+#: src/shar.c:373
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "Błąd formatowania printf: %s\n"
 
-#: src/shar.c:423
+#: src/shar.c:424
 msgid "sharutils bug - no status"
 msgstr "Błąd sharutils - brak statusu"
 
-#: src/shar.c:788
+#: src/shar.c:789
 msgid "Too many directories for mkdir generation"
 msgstr "Zbyt wiele katalogów dla programu mkdir"
 
-#: src/shar.c:871 src/shar.c:1541
+#: src/shar.c:872 src/shar.c:1542
 #, c-format
 msgid "Cannot access %s"
 msgstr "Brak dostępu do %s"
 
-#: src/shar.c:948 src/unshar.c:376
+#: src/shar.c:949 src/unshar.c:376
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Nie można pobrać nazwy bieżącego katalogu"
 
-#: src/shar.c:1005 src/shar.c:1346
+#: src/shar.c:1006 src/shar.c:1347
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Nowy plik, pozostało %s, "
 
-#: src/shar.c:1006 src/shar.c:1347
+#: src/shar.c:1007 src/shar.c:1348
 #, c-format
 msgid "Limit still %s\n"
 msgstr "Ograniczenie rozmiaru to nadal %s\n"
 
-#: src/shar.c:1028
+#: src/shar.c:1029
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Początkowy plik %s\n"
 
-#: src/shar.c:1081
+#: src/shar.c:1082
 msgid "Could not popen command"
 msgstr "Nie udało się wywołać polecenia przez popen"
 
-#: src/shar.c:1162
+#: src/shar.c:1163
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Nie można otworzyć pliku %s"
 
-#: src/shar.c:1296 src/shar.c:1305
+#: src/shar.c:1297 src/shar.c:1306
 msgid "text"
 msgstr "tekst"
 
-#: src/shar.c:1311 src/shar.c:1322
+#: src/shar.c:1312 src/shar.c:1323
 msgid "call"
 msgstr "wywołania"
 
-#: src/shar.c:1335
+#: src/shar.c:1336
 #, c-format
 msgid "File %s (%s)"
 msgstr "Plik %s (%s)"
 
-#: src/shar.c:1426
+#: src/shar.c:1427
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Ciąg dalszy pliku %s\n"
 
-#: src/shar.c:1536
+#: src/shar.c:1537
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: To nie jest zwykły plik"
 
-#: src/shar.c:1563
+#: src/shar.c:1564
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "W shar: pozostały rozmiar %s\n"
 
-#: src/shar.c:1583
+#: src/shar.c:1584
 msgid "empty"
 msgstr "pusty"
 
-#: src/shar.c:1622
+#: src/shar.c:1623
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Zapisywanie %s (%s)"
 
-#: src/shar.c:1807
+#: src/shar.c:1808
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Błędny format dla nazw pliku wyjściowego (%s): %s"
 
-#: src/shar.c:1822
+#: src/shar.c:1823
 msgid "more than one format element"
 msgstr "więcej niż jeden element formatujący"
 
-#: src/shar.c:1827
+#: src/shar.c:1828
 msgid "no conversion character"
 msgstr "brak znaku konwersji"
 
-#: src/shar.c:1836
+#: src/shar.c:1837
 msgid "format is too wide"
 msgstr "format zbyt długi"
 
-#: src/shar.c:1848
+#: src/shar.c:1849
 msgid "invalid conversion character"
 msgstr "błądny znak konwersji"
 
-#: src/shar.c:1889
+#: src/shar.c:1890
 msgid "Opening"
 msgstr "Otwieranie"
 
-#: src/shar.c:1904
+#: src/shar.c:1905
 msgid "Closing"
 msgstr "Zamykanie"
 
-#: src/shar.c:2015
+#: src/shar.c:1978
+#, c-format
+msgid "reopening stderr to /dev/null"
+msgstr "ponowne otwieranie stderr jako /dev/null"
+
+#: src/shar.c:2026
 msgid "No input files"
 msgstr "Brak pliku wejściowego"
 
-#: src/shar.c:2032
+#: src/shar.c:2043
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "PROSZĘ unikać archiwów -X na Usenecie i w sieciach publicznych"
 
-#: src/shar.c:2056
+#: src/shar.c:2067
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -396,12 +406,12 @@ msgstr ""
 "Opcji '%s' nie można mieszać z nazwami plików,\n"
 "chyba że podano opcję --intermix-type."
 
-#: src/shar.c:2074
+#: src/shar.c:2085
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Opcja '%s' musi być podana przed jakąkolwiek nazwą pliku"
 
-#: src/shar.c:2110
+#: src/shar.c:2121
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -410,16 +420,16 @@ msgstr ""
 "błędny rodzaj kompresji: %s\n"
 "znane rodzaje to:\n"
 
-#: src/shar.c:2149
+#: src/shar.c:2160
 msgid "files on command line and --input-file-list specified"
 msgstr "przekazano pliki w linii poleceń wraz z opcją --input-file-list"
 
-#: src/shar.c:2198
+#: src/shar.c:2209
 #, c-format
 msgid "Created %d files\n"
 msgstr "Utworzono %d plików\n"
 
-#: src/unshar-opts.c:427 src/unshar.c:394
+#: src/unshar-opts.c:433 src/unshar.c:394
 #, c-format
 msgid "Cannot chdir to `%s'"
 msgstr "Nie można zmienić katalogu na `%s'"
@@ -454,7 +464,7 @@ msgstr "Po linii `cut' następuje: %s"
 msgid "Starting `sh' process"
 msgstr "Uruchamianie procesu `sh'"
 
-#: src/unshar.c:312 src/uudecode.c:459
+#: src/unshar.c:312
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Wywołanie `%s --help' poda więcej informacji.\n"
@@ -491,14 +501,14 @@ msgstr ""
 "Jeżeli nie podano PLIKU, dane zostaną pobrane ze standardowego wejścia.\n"
 
 #. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
+#: src/unshar.c:331
 #, c-format
 msgid "Report bugs to <%s>.\n"
 msgstr ""
 "Błędy w programie należy zgłaszać na adres <%s>, natomiast błędy\n"
 "w tłumaczeniu - na <translation-team-pl@lists.sourceforge.net>.\n"
 
-#: src/unshar.c:414 src/uudecode.c:506
+#: src/unshar.c:414
 #, c-format, no-wrap
 msgid ""
 "Copyright (C) %s Free Software Foundation, Inc.\n"
@@ -524,85 +534,75 @@ msgstr "standardowe wejście"
 msgid "allocate file buffer"
 msgstr "przydzielanie bufora na pliki"
 
-#: src/uudecode.c:114 src/uudecode.c:444
+#: src/uudecode-opts.c:410
+msgid "uudecode usage error:\n"
+msgstr "Błąd użycia uudecode:\n"
+
+#: src/uudecode-opts.c:446
+msgid "uudecode fatal error:\n"
+msgstr "Błąd krytyczny uudecode:\n"
+
+#: src/uudecode.c:106 src/uudecode.c:456
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Błąd zapisu"
 
-#: src/uudecode.c:131 src/uudecode.c:218
+#: src/uudecode.c:123 src/uudecode.c:217
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Krótki plik"
 
-#: src/uudecode.c:167
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Brak lini `end'"
 
-#: src/uudecode.c:227
+#: src/uudecode.c:226
 #, c-format
 msgid "%s: data following `=' padding character"
 msgstr "%s: dane następujące po znaku dopełniającym `='"
 
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
+#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
 #, c-format
 msgid "%s: illegal line"
 msgstr "%s: niedozwolona linia"
 
-#: src/uudecode.c:303
+#: src/uudecode.c:302
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: niedozwolona nazwa pliku: %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:309
 #, c-format
-msgid "No user `%s'"
-msgstr "Brak użytkownika `%s'"
+msgid "No user '%s'"
+msgstr "Brak użytkownika '%s'"
 
-#: src/uudecode.c:321
+#: src/uudecode.c:320
 #, c-format
 msgid "no memory for %d byte allocation"
 msgstr "brak pamięci (bajtów do przydzielenia: %d)"
 
-#: src/uudecode.c:346
+#: src/uudecode.c:343
 #, c-format
 msgid "cannot access %s"
 msgstr "brak dostępu do %s"
 
-#: src/uudecode.c:354
+#: src/uudecode.c:352
 #, c-format
 msgid "freopen of %s"
 msgstr "freopen %s"
 
-#: src/uudecode.c:360
+#: src/uudecode.c:359
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod %s"
 
-#: src/uudecode.c:385
+#: src/uudecode.c:396
 #, c-format
 msgid "%s: No `begin' line"
 msgstr "%s: Brak linii `begin'"
 
-#: src/uudecode.c:463
-#, c-format
-msgid "Usage: %s [FILE]...\n"
-msgstr "Składnia: %s [PLIK]...\n"
-
-#: src/uudecode.c:464
-msgid ""
-"Mandatory arguments to long options are mandatory to short options too.\n"
-"  -o, --output-file=FILE   direct output to FILE\n"
-"      --help               display this help and exit\n"
-"      --version            output version information and exit\n"
-msgstr ""
-"Argumenty obowiązkowe dla opcji długich obowiązują również dla opcji krótkich.\n"
-"  -o, --output-file=PLIK   zapis bezpośrednio do PLIKU\n"
-"      --help               wyświetlenie tego opisu i zakończenie\n"
-"      --version            wyświetlenie informacji o wersji i zakończenie\n"
-
-#: src/uudecode.c:530
-#, c-format
+#: src/uudecode.c:496
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
@@ -749,3 +749,466 @@ msgstr "błędny przyrostek argumentu %s%s '%s'"
 #, c-format
 msgid "%s%s argument '%s' too large"
 msgstr "argument %s%s '%s' zbyt długi"
+
+#: libopts/autoopts.c:51
+#, c-format
+msgid "malloc of %d bytes failed\n"
+msgstr "przydzielenie %d bajtów nie powiodło się\n"
+
+#: libopts/init.c:52
+msgid "AutoOpts function called without option descriptor\n"
+msgstr "Funkcja AutoOpts wywołana bez deskryptora opcji\n"
+
+#: libopts/init.c:85
+msgid "\tThis exceeds the compiled library version:  "
+msgstr "\tJest większa od wersji skompilowanej biblioteki: "
+
+#: libopts/init.c:83
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+"Błąd przetwarzania Automated Options!\n"
+"\t%s wywołał funkcję AutoOpts z wersją struktury %d:%d:%d.\n"
+
+#: libopts/autoopts.c:64
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr "realloc %d bajtów pod 0x%p nie powiodło się\n"
+
+#: libopts/init.c:87
+msgid "\tThis is less than the minimum library version:  "
+msgstr "\tJest mniejsza od minimalnej wersji biblioteki: "
+
+#: libopts/autoopts.c:77
+#, c-format
+msgid "strdup of %d byte string failed\n"
+msgstr "strdup łańcucha o długości %d nie powiodło się\n"
+
+#: libopts/version.c:120
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+"Automated Options wersja %s\n"
+"\tCopyright (C) 1999-2013 Bruce Korb - wszelkie prawa zastrzeżone\n"
+
+#: libopts/find.c:585
+msgid "AutoOpts lib error: defaulted to option with optional arg\n"
+msgstr "Błąd biblioteki AutoOpts: domyślna opcja z opcjonalnym argumentem\n"
+
+#: libopts/alias.c:53
+msgid "(AutoOpts bug):  Aliasing option is out of range."
+msgstr "(usterka AutoOpts): alias do opcji spoza zakresu."
+
+#: libopts/enum.c:228
+#, c-format
+msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
+msgstr "Błąd %s: słowo kluczowe `%s' jest niejednoznaczne dla %s\n"
+
+#: libopts/find.c:104
+msgid "  The following options match:\n"
+msgstr "  Pasują następujące opcje:\n"
+
+#: libopts/find.c:286
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr "%s: niejednoznaczna nazwa opcji: %s (pasuje do %d opcji)\n"
+
+#: libopts/find.c:107 libopts/find.c:112
+#, c-format
+msgid "  %s%s\n"
+msgstr "  %s%s\n"
+
+#: libopts/check.c:157
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr "%s: wymagane argumenty linii poleceń\n"
+
+#: libopts/alias.c:78 libopts/autoopts.c:215
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr "dozwolonych opcji %2$s%3$s: %1$d\n"
+
+#: libopts/usage.c:872
+msgid "version, usage and configuration options:"
+msgstr "opcje dotyczące wersji i składni:"
+
+#: libopts/makeshell.c:266
+#, c-format
+msgid "Error %d (%s) from the pipe(2) syscall\n"
+msgstr "Błąd %d (%s) wywołania systemowego pipe(2)\n"
+
+#: libopts/version.c:160
+#, c-format
+msgid ""
+"ERROR: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and copyright notice\n"
+msgstr ""
+"BŁĄD: niepoprawny argument opcji wersji '%c'. Obsługiwane są:\n"
+"\t'v' - tylko wersja\n"
+"\t'c' - wersja i prawa autorskie\n"
+"\t'n' - wersja i informacja o prawach autorskich\n"
+
+#: libopts/check.c:56
+#, c-format
+msgid "ERROR:  %s option conflicts with the %s option\n"
+msgstr "BŁĄD: opcja %s jest w konflikcie z opcją %s\n"
+
+#: libopts/restore.c:108
+#, c-format
+msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
+msgstr "%s(optionSaveState): błąd: nie można przydzielić %d bajtów\n"
+
+#: libopts/configfile.c:593
+msgid "auto-options"
+msgstr "opcje automatyczne"
+
+#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
+msgid "program"
+msgstr "program"
+
+#: libopts/usage.c:654
+msgid "\t\t\t\t- default option for unnamed options\n"
+msgstr "\t\t\t\t- opcja domyślna dla opcji nie nazwanych\n"
+
+#: libopts/usage.c:569
+#, c-format
+msgid "\t\t\t\t- disabled as --%s\n"
+msgstr "\t\t\t\t- wyłączane przez --%s\n"
+
+#: libopts/find.c:210 libopts/find.c:417
+#, c-format
+msgid "%s: The ``%s'' option has been disabled"
+msgstr "%s: opcja \"%s\" została wyłączona"
+
+#: libopts/usage.c:839
+msgid "This option has been disabled"
+msgstr "Ta opcja została wyłączona"
+
+#: libopts/alias.c:73 libopts/autoopts.c:210
+msgid "-equivalence"
+msgstr "równoważnych "
+
+#: libopts/alias.c:75 libopts/autoopts.c:212
+msgid "ERROR:  only "
+msgstr "BŁĄD: tylko "
+
+#: libopts/usage.c:916
+#, c-format
+msgid " - examining environment variables named %s_*\n"
+msgstr " - sprawdzanie zmiennych środowiska o nazwie %s_*\n"
+
+#: libopts/configfile.c:1170
+#, c-format
+msgid "File error %d (%s) opening %s for loading options\n"
+msgstr "Błąd %d (%s) podczas otwierania pliku %s w celu wczytania opcji\n"
+
+#: libopts/text_mmap.c:98
+#, c-format
+msgid "fs error %d (%s) reading file %s\n"
+msgstr "błąd fs %d (%s) podczas wczytywania pliku %s\n"
+
+#: libopts/file.c:135
+msgid "fopen-ing file"
+msgstr "otwierania pliku przez fopen"
+
+#: libopts/file.c:74
+msgid "stat-ing for directory"
+msgstr "wykonywania stat na katalogu"
+
+#: libopts/file.c:86
+msgid "stat-ing for regular file"
+msgstr "wykonywania stat na zwykłym pliku"
+
+#: libopts/file.c:48
+msgid "stat-ing for non-existant file"
+msgstr "wykonywania stat na nie istniejącym pliku"
+
+#: libopts/file.c:108
+msgid "open-ing file"
+msgstr "otwierania pliku"
+
+#: libopts/file.c:47 libopts/file.c:73 libopts/file.c:85 libopts/file.c:107
+#: libopts/file.c:134
+#, c-format
+msgid "fs error %d (%s) on %s %s for option %s\n"
+msgstr "błąd fs %d (%s) podczas %s %s dla opcji %s\n"
+
+#: libopts/usage.c:273
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+msgstr ""
+"Opcje podaje się przez podwójny minus i nazwę lub pojedynczy minus\n"
+"i znak flagi.\n"
+
+#: libopts/makeshell.c:272
+#, c-format
+msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
+msgstr "błąd fs %d (%s) podczas wywołania fork - nie można uzyskać składni %s\n"
+
+#: libopts/makeshell.c:802
+#, c-format
+msgid "fs error %d (%s) on freopen\n"
+msgstr "błąd fs %d (%s) podczas wykonywania freopen\n"
+
+#: libopts/makeshell.c:880
+#, c-format
+msgid ""
+"\n"
+"= = = = = = = =\n"
+"\n"
+"This incarnation of genshell will produce\n"
+"a shell script to parse the options for %s:\n"
+"\n"
+msgstr ""
+"\n"
+"= = = = = = = =\n"
+"\n"
+"To wcielenie programu genshell utworzy\n"
+"skrypt powłoki analizujący opcje dla %s:\n"
+"\n"
+
+#: libopts/find.c:456 libopts/reset.c:106
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: niedozwolona opcja -- %c\n"
+
+#: libopts/find.c:264 libopts/find.c:758 libopts/reset.c:114
+#, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: niedozwolona opcja -- %s\n"
+
+#: libopts/find.c:328
+#, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: nieznana opcja rozszerzenia producenta -- %s\n"
+
+#: libopts/enum.c:153 libopts/enum.c:163
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr "  lub liczba całkowita od %d do %d\n"
+
+#: libopts/usage.c:484 libopts/usage.c:805
+#, c-format
+msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
+msgstr "BŁĄD AutoOpts: błędny deskryptor opcji dla %s\n"
+
+#: libopts/find.c:375
+#, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: błędna nazwa opcji: %s\n"
+
+#: libopts/enum.c:160
+#, c-format
+msgid "  or an integer mask with any of the lower %d bits set\n"
+msgstr "  lub maska całkowitoliczbowa z ustawionym dowolnym z %d mniej znaczących bitów\n"
+
+#: libopts/find.c:514
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: opcja `%s' musi mieć argument\n"
+
+#: libopts/autoopts.c:162
+#, c-format
+msgid ""
+"Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'"
+msgstr ""
+"Opcja równoważna '%s' odpowiada jednocześnie\n"
+"\t'%s' i '%s'"
+
+#: libopts/check.c:90
+#, c-format
+msgid "ERROR:  The %s option is required\n"
+msgstr "BŁĄD: opcja %s jest wymagana\n"
+
+#: libopts/find.c:620
+#, c-format
+msgid "%s: option `%s' cannot have an argument\n"
+msgstr "%s: opcja `%s' nie może mieć argumentów\n"
+
+#: libopts/check.c:147
+#, c-format
+msgid "%s: Command line arguments not allowed\n"
+msgstr "%s: argumenty linii poleceń nie są dozwolone\n"
+
+#: libopts/save.c:510
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr "błąd %d (%s) podczas tworzenia %s\n"
+
+#: libopts/usage.c:275
+msgid "Options are specified by single or double hyphens and their name.\n"
+msgstr "Opcje podaje się przez pojedynczy lub podwójny minus oraz nazwę.\n"
+
+#: libopts/enum.c:228
+#, c-format
+msgid "%s error:  `%s' does not match any %s keywords\n"
+msgstr "błąd %s: `%s' nie pasuje do żadnego ze słów kluczowych %s\n"
+
+#: libopts/reset.c:89
+msgid "The 'reset-option' option requires an argument\n"
+msgstr "Opcja 'reset-option' musi mieć argument\n"
+
+#: libopts/usage.c:1031
+msgid "   Arg Option-Name    Description\n"
+msgstr "   Arg Nazwa opcji    Opis\n"
+
+#: libopts/usage.c:967 libopts/usage.c:1025
+msgid "  Flg Arg Option-Name    Description\n"
+msgstr "  Flg Arg Nazwa opcji    Opis\n"
+
+#: libopts/save.c:177 libopts/save.c:231
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr "błąd %d (%s) podczas wykonywania stat na %s\n"
+
+#: libopts/restore.c:149
+#, c-format
+msgid "%s(optionRestore): error: no saved option state\n"
+msgstr "%s(optionRestore): błąd: brak zapisanego stanu opcji\n"
+
+#: libopts/autoopts.c:252
+#, c-format
+msgid "'%s' is not a command line option\n"
+msgstr "'%s' nie jest opcją linii poleceń\n"
+
+#: libopts/time.c:110
+#, c-format
+msgid "%s error:  `%s' is not a recognizable date/time\n"
+msgstr "błąd %s: `%s' nie jest rozpoznawanym formatem daty/czasu\n"
+
+#: libopts/save.c:126
+#, c-format
+msgid "'%s' not defined\n"
+msgstr "'%s' nie jest zdefiniowane\n"
+
+#: libopts/time.c:49
+#, c-format
+msgid "%s error:  `%s' is not a recognizable time duration\n"
+msgstr "błąd %s: `%s' nie jest rozpoznawanym formatem okresu czasu\n"
+
+#: libopts/check.c:89
+#, c-format
+msgid "ERROR:  The %s option must appear %d times\n"
+msgstr "BŁĄD: opcja %s musi wystąpić %d razy\n"
+
+#: libopts/configfile.c:1180 libopts/makeshell.c:727 libopts/save.c:250
+#, c-format
+msgid "error:  cannot load options from non-regular file %s\n"
+msgstr "błąd: nie można wczytać opcji z pliku %s nie będącego zwykłym plikiem\n"
+
+#: libopts/numeric.c:149
+#, c-format
+msgid "%s error:  `%s' is not a recognizable number\n"
+msgstr "błąd %s: `%s' nie jest rozpoznawane jako liczba\n"
+
+#: libopts/alias.c:80 libopts/autoopts.c:217
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr "dozwolona jedna opcja %2$s%1$s\n"
+
+#: libopts/makeshell.c:177 libopts/makeshell.c:902 libopts/usage.c:232
+#: libopts/usage.c:307 libopts/version.c:166
+msgid "Write failure to output file"
+msgstr "Błąd zapisu do pliku wyjściowego"
+
+#: libopts/usage.c:701
+#, c-format
+msgid " - reading file %s"
+msgstr " - odczyt pliku %s"
+
+#: libopts/usage.c:302 libopts/version.c:104 libopts/version.c:126
+#, c-format
+msgid ""
+"\n"
+"please send bug reports to:  %s\n"
+msgstr ""
+"\n"
+"Raporty o błędach prosimy wysyłać na adres: %s\n"
+
+#: libopts/usage.c:673 libopts/usage.c:914
+msgid ""
+"\n"
+"The following option preset mechanisms are supported:\n"
+msgstr ""
+"\n"
+"Obsługiwane są następujące mechanizmy ustawiania opcji:\n"
+
+#: libopts/numeric.c:54
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr "błąd %s: wartość opcji %s %ld jest spoza zakresu.\n"
+
+#: libopts/numeric.c:62
+#, c-format
+msgid "%sIt must lie in one of the ranges:\n"
+msgstr "%sMusi należeć do jednego z następujących przedziałów:\n"
+
+#: libopts/numeric.c:62
+#, c-format
+msgid "%sIt must be in the range:\n"
+msgstr "%sMusi należeć do przedziału:\n"
+
+#: libopts/usage.c:283
+msgid "Operands and options may be intermixed.  They will be reordered.\n"
+msgstr "Argumenty i opcje mogą być mieszane - zostaną uporządkowane.\n"
+
+#: libopts/check.c:43
+#, c-format
+msgid "ERROR:  %s option requires the %s option\n"
+msgstr "BŁĄD: opcja %s wymaga opcji %s\n"
+
+#: libopts/usage.c:401
+msgid "requires these options:\n"
+msgstr "wymaga następujących opcji:\n"
+
+#: libopts/usage.c:1043
+msgid "   Arg Option-Name   Req?  Description\n"
+msgstr "   Arg Nazwa opcji   Wym?  Opis\n"
+
+#: libopts/usage.c:1037
+msgid "  Flg Arg Option-Name   Req?  Description\n"
+msgstr "  Flg Arg Nazwa opcji   Wym?  Opis\n"
+
+#: libopts/reset.c:84
+msgid "The --reset-option has not been configured.\n"
+msgstr "Opcja --reset-option nie została skonfigurowana.\n"
+
+#: libopts/init.c:117
+msgid "-_^"
+msgstr "-_^"
+
+#: libopts/enum.c:161
+msgid ""
+"or you may use a numeric representation.  Preceding these with a '!' will\n"
+"clear the bits, specifying 'none' will clear all bits, and 'all' will set them\n"
+"all.  Multiple entries may be passed as an option argument list.\n"
+msgstr ""
+"lub można użyć reprezentacji liczbowej. Poprzedzenie znakiem '!' wyczyści\n"
+"bity, podanie 'none' wyczyści wszystkie bity, a 'all' ustawi wszystkie.\n"
+"Wiele elementów można przekazać jako listę argumentów opcji.\n"
+
+#: libopts/enum.c:194
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr "błąd %s: %s przekracza liczbę słów kluczowych %s\n"
+
+#: libopts/enum.c:71
+#, c-format
+msgid "The valid \"%s\" option keywords are:\n"
+msgstr "Poprawne słowa kluczowe opcji \"%s\" to:\n"
+
+#: libopts/usage.c:876
+msgid "The next option supports vendor supported extra options:"
+msgstr "Następna opcja obsługuje dodatkowe opcje wspierane przez producenta:"
+
+#: libopts/usage.c:512
+msgid "These additional options are:"
+msgstr "Te dodatkowe opcje to:"

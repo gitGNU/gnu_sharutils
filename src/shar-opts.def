@@ -1,6 +1,6 @@
 AutoGen Definitions options;
 /*
-   Copyright (C) 1994-1996, 2002, 2005-2012 Free Software Foundation, Inc.
+   Copyright (C) 1994-2013 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -41,20 +41,22 @@ explain     = <<- _EOExplain_
 detail      = <<- _EODetail_
 	@command{shar} creates "shell archives" (or shar files) which are in
 	text format and can be emailed.  These files may be unpacked later by
-	executing them with /bin/sh.  The resulting archive is sent to
+	executing them with @file{/bin/sh}.  The resulting archive is sent to
 	standard out unless the @option{-o} option is given.  A wide range of
 	features provide extensive flexibility in manufacturing shars and in
-	specifying shar "smartness".  Archives may be "vanilla" or
-	comprehensive.
+	specifying @command{shar} "smartness".  Archives may be fairly simple
+	(@option{--vanilla-operation}) or essentially a mailable @command{tar}
+	archive.
 
 	Options may be specified in any order until a @code{file} argument is
-	recognized.  If the @code{intermix-type} option has been specified,
-	more compression and encoding options will be recognized after the
-	file @code{file} argument.
+	recognized.  If the @option{--intermix-type} option has been specified,
+	more compression and encoding options will be recognized between the
+	@file{file} arguments.
 
-	Though this program supports uuencoded files, uuencoding is deprecated.
-	If you are emailing files, please consider mime-encoded files.
-	Base 64 is the preferred encoding method.
+	Though this program supports @command{uuencode}-d files, they
+	are deprecated.  If you are emailing files, please consider
+	mime-encoded files.  If you do @command{uuencode}, base 64 is the
+	preferred encoding method.
 	_EODetail_;
 
 usage-message;
@@ -114,29 +116,35 @@ flag = {
     call-proc   = set_compaction;
     settable;
     doc = <<- _EODoc_
+	The @command{gzip}, @command{bzip2} and @command{compress} compactor
+	commands may be specified by the program name as the option name,
+	e.g. @option{--gzip}.  Those options, however, are being deprecated.
+	There is also the @command{xz} compactor now.  Specify @command{xz}
+	with @option{-C xz} or @option{--compactor=xz}.
 
-	@command{compress}, @command{gzip} and @command{bzip2} are specified by name
-	and have tailored options.  There is also @command{xz} now.  Specify
-	@command{xz} with @option{-C xz} or @option{--compactor=xz}.
+	Specifying the compactor "@samp{none}" will then disable file
+	compression, even for non-text files.  Any other compactor will force
+	uuencoding of files, and the recipient must have @command{uudecode} to
+	unpack the archive.  (Compressed files are never processed as plain
+	text.)
 
-	Specifying the compactor "none" will then disable file compression.
-
-	Any compression other than "none" will force uuencoding of files.
-	(Compressed files are never processed as plain text.)
+	Specifying the compactor @command{compress} is deprecated.
 	_EODoc_;
 };
 
 flag = {
-    name        = compress;
-    value       = Z;
-    ifdef       = HAVE_COMPRESS;
-    descrip     = '@command{compress} and @command{uuencode} files';
-    max         = NOLIMIT;
-    flag-code   = '    SET_OPT_COMPACTOR("compress");';
+    name        = level-of-compression;
+    value       = g;
+    arg-type    = number;
+    arg-name    = LEVEL;
+    arg-range   = '1->9';
+    arg-default = 9;
+    descrip     = 'pass @file{LEVEL} for compression';
     doc = <<- _EODoc_
-	@command{compress} and @command{uuencode} all files prior to
-	packing.  The recipient must have @command{uudecode} and
-	@command{compress} in order to unpack.
+	Some compression programs allow for a level of compression.  The
+	default is @code{9}, but this option allows you to specify something
+	else.  This value is used by @command{gzip}, @command{bzip2} and
+	@command{xz}, but not @command{compress}.
 	_EODoc_;
 };
 
@@ -146,6 +154,7 @@ flag = {
     descrip     = '@command{bzip2} and @command{uuencode} files';
     max         = NOLIMIT;
     flag-code   = '    SET_OPT_COMPACTOR("bzip2");';
+    deprecated;
     doc = <<- _EODoc_
 	@command{bzip2} compress and @command{uuencode} all files
 	prior to packing.  The recipient must have @command{uudecode}
@@ -159,6 +168,7 @@ flag = {
     descrip     = '@command{gzip} and @command{uuencode} files';
     max         = NOLIMIT;
     flag-code   = '    SET_OPT_COMPACTOR("gzip");';
+    deprecated;
     doc = <<- _EODoc_
 	@command{gzip} compress and @command{uuencode} all files prior
 	to packing.  The recipient must have @command{uudecode} and
@@ -167,24 +177,24 @@ flag = {
 };
 
 flag = {
-    name        = level-of-compression;
-    value       = g;
-    arg-type    = number;
-    arg-name    = LEVEL;
-    arg-range   = '1->9';
-    arg-default = 9;
-    descrip     = 'pass @file{LEVEL} for compression';
+    name        = compress;
+    value       = Z;
+    ifdef       = HAVE_COMPRESS;
+    descrip     = '@command{compress} and @command{uuencode} files';
+    max         = NOLIMIT;
+    flag-code   = '    SET_OPT_COMPACTOR("compress");';
+    deprecated;
     doc = <<- _EODoc_
-	Some compression programs allow for a level of compression.  The default
-	is @code{9}, but this option allows you to specify something else.
-	This value is used by @command{gzip}, @command{bzip2} and @command{xz},
-	but not @command{compress}.
+	@command{compress} and @command{uuencode} all files prior to
+	packing.  The recipient must have @command{uudecode} and
+	@command{compress} in order to unpack.
 	_EODoc_;
 };
 
 flag = {
     name        = level-for-gzip;
     aliases     = level-of-compression;
+    deprecated;
 };
 
 flag = {
@@ -201,6 +211,7 @@ flag = {
     descrip     = 'pass @file{bits} (default 12) to compress';
     doc =
     "This is the compression factor used by the @command{compress} program.";
+    deprecated;
 };
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
@@ -226,7 +237,7 @@ flag = {
     doc = <<- _EODoc_
 	Automatically determine if the files are text or binary and archive
 	correctly.  Files found to be binary are uuencoded prior to packing.
-	This is the default behavior for @file{shar}.
+	This is the default behavior for @command{shar}.
 
 	For a file to be considered a text file instead of a binary file,
 	all the following should be true:
@@ -295,10 +306,10 @@ flag = {
     call-proc   = validate_opt_context;
     settable;
     doc = <<- _EODoc_
-	Save the archive to files PREFIX.01 thru PREFIX.nn instead of sending
-	all output to standard out.  Must be specified when the
-	@code{whole-size-limit} or @code{split-size-limit} options are
-	specified.
+	Save the archive to files @file{prefix.01} thru @file{prefix.nn}
+	instead of sending all output to standard out.  Must be specified when
+	the @option{--whole-size-limit} or @option{--split-size-limit}
+	options are specified.
 
 	When @var{prefix} contains a @samp{%} character, @var{prefix} is then
 	interpreted as a @code{sprintf} format, which should be able to display
@@ -318,9 +329,9 @@ flag = {
     equivalence = whole-size-limit;
     descrip     = 'split archive, not files, to @i{size}';
     doc = <<- _EODoc_
-	Limit the output file size to SIZE bytes, but don't split input files.
-	If SIZE is less than 1024, then it will be multiplied by 1024.
-	The value may also be specified with a k, K, m or M suffix.
+	Limit the output file size to @file{size} bytes, but don't split input
+	files.  If @file{size} is less than 1024, then it will be multiplied
+	by 1024.  The value may also be specified with a k, K, m or M suffix.
 	The number is then multiplied by 1000, 1024, 1000000, or 1048576,
 	respectively.  4M (4194304) is the maximum allowed.
 
@@ -340,12 +351,16 @@ flag = {
     equivalence = whole-size-limit;
     descrip     = 'split archive or files to @i{size}';
     doc = <<- _EODoc_
-	Limit output file size to XXk bytes and split files if necessary.  The
-	archive parts created with this option must be unpacked in correct
-	order.  If the recipient of the shell archives wants to put all of
-	them in a single email folder (file), they will have to be saved in
-	the correct order for @command{unshar} to unpack them all at once (using
-	one of the split archive options).  @xref{unshar Invocation}.
+	Limit output file size to @file{size} bytes, splitting files if
+	necessary.  The allowed values are specified as with the
+	@option{--whole-size-limit} option.
+
+	The archive parts created with this option must be unpacked in the
+	correct order.  If the recipient of the shell archives wants to put
+	all of them in a single email folder (file), they will have to be
+	saved in the correct order for @command{unshar} to unpack them all at
+	once (using one of the split archive options).
+	@xref{unshar Invocation}.
 	_EODoc_;
 };
 
@@ -367,17 +382,14 @@ flag = {
 	_EOCode_;
 
     doc = <<- _EODoc_
-	This option causes the named file to be reopened as standard input.
-	If specified, no file names may appear on the command line.  If no
-	files are found on the input line, then standard input is read for
+	This option causes @file{file} to be reopened as standard input.  If
+	no files are found on the input line, then standard input is read for
 	input file names.  Use of this option will prohibit input files from
 	being listed on the command line.
 
-	Read list of files to be packed from the standard input rather than
-	from the command line.  Input must be in a form similar to that
-	generated by the find command, one filename per line.  This switch is
-	especially useful when the command line will not hold the list of
-	files to be packed.
+	Input must be in a form similar to that generated by @command{find},
+	one filename per line.  This switch is especially useful when the
+	command line will not hold the list of files to be archived.
 
 	If the @option{--intermix-type} option is specified on the command
 	line, then the compression options may be included in the standard
@@ -397,6 +409,7 @@ flag = {
     value       = S;
     descrip     = 'read file list from standard input';
     flag-code   = '    SET_OPT_INPUT_FILE_LIST("-");';
+    deprecated;
 
     doc = <<- _EODoc_
 	This option is actually a no-op.  It is a wrapper for
@@ -417,11 +430,11 @@ flag = {
     value       = n;
     arg-type    = string;
     arg-name    = NAME;
-    descrip     = 'use @i{name} to document the archive';
+    descrip     = 'use @file{name} to document the archive';
     call-proc   = validate_opt_context;
     doc = <<- _EODoc_
-	Name of archive to be included in the header of the shar files.
-	See the @option{--net-headers} option.
+	Name of archive to be included in the subject header of the shar
+	files.  See the @option{--net-headers} option.
 	_EODoc_;
 };
 
@@ -601,7 +614,7 @@ flag = {
 	_EOCode_;
 
     doc = <<- _EODoc_
-	This option produces @dfn{vanilla} shars which rely only upon the
+	This option produces @samp{vanilla} shars which rely only upon the
 	existence of @command{echo}, @command{test} and @command{sed} in the
 	unpacking environment.
 
