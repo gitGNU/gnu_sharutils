@@ -32,15 +32,13 @@ unshar_LDADD    = $(LDADD)
 bin_PROGRAMS    = shar unshar
 
 shar_opt_code   = shar-opts.c   shar-opts.h
-unshar_opt_code = unshar-opts.c unshar-opts.h
 encode_opt_code = uuencode-opts.c uuencode-opts.h
 decode_opt_code = uudecode-opts.c uudecode-opts.h
 
 shar_opts       = shar-opts.def
-unshar_opts	= unshar-opts.def
 encode_opts	= uuencode-opts.def
 decode_opts	= uudecode-opts.def
-options_defs    = shar-std.def $(shar_opts) $(unshar_opts) \
+options_defs    = shar-std.def $(shar_opts) \
 	$(encode_opts) $(decode_opts)
 usage_texts     = \
 	shar-full-help.txt shar-short-help.txt \
@@ -58,9 +56,6 @@ DECODE_DEP_ARG  = -MF$(DEPDIR)/uudecode-opts.dep -MP -MT$@
 endif
 # UUCODE
 
-UNSHAR_DEP_ARG  = -MF$(DEPDIR)/unshar-opts.dep -MP -MT$@
-@am__include@ @am__quote@./$(DEPDIR)/unshar-opts.dep@am__quote@
-
 SHAR_DEP_ARG  = -MF$(DEPDIR)/shar-opts.dep -MP
 @am__include@ @am__quote@./$(DEPDIR)/shar-opts.dep@am__quote@
 
@@ -71,7 +66,6 @@ ENCODE_DEP_ARG  =
 DECODE_DEP_ARG  =
 endif
 # UUCODE
-UNSHAR_DEP_ARG  =
 SHAR_DEP_ARG    =
 endif
 # AMDEP
@@ -115,17 +109,13 @@ endif
 endif
 # UUCODE
 
-shar_SOURCES     = shar.c     local.h $(shar_opt_code)   encode.c scripts.x
-unshar_SOURCES   = unshar.c   local.h $(unshar_opt_code) encode.c
+shar_SOURCES    = shar.c   local.h encode.c scripts.x $(shar_opt_code)
+unshar_SOURCES  = unshar.c local.h encode.c
 
 if AMDEP
 shar-opts.c shar-opts.h : $(DEPDIR)/shar-opts.dep
 $(DEPDIR)/shar-opts.dep : shar-opts.def shar-std.def
 	$(AUTOGEN) $(SHAR_DEP_ARG) shar-opts.def
-
-unshar-opts.c unshar-opts.h : $(DEPDIR)/unshar-opts.dep
-$(DEPDIR)/unshar-opts.dep : unshar-opts.def shar-std.def
-	$(AUTOGEN) $(UNSHAR_DEP_ARG) unshar-opts.def
 endif
 # AMDEP
 
@@ -137,11 +127,9 @@ compress-link:
 	test -f $(DESTDIR)$(bindir)/compress-dummy \
 	  && ln -sf compress-dummy $(DESTDIR)$(bindir)/compress
 
-usage-text: $(bin_PROGRAMS)
+help-text : mk-help.sh $(bin_PROGRAMS)
 	$(SHELL) mk-help.sh $@ $(bin_PROGRAMS)
 
-help-text : mk-help.sh
-	MAKE="$(MAKE)" \
-	$(SHELL) mk-help.sh $@ $(bin_PROGRAMS)
+.PHONY : help-text
 
 ## src/Makefile.am ends here

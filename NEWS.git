@@ -2,6 +2,17 @@ GNU sharutils NEWS - User visible changes.
 Copyright (C) 1994-2013
     Free Software Foundation, Inc.
 
+Version 4.13.4 - February 2013, by Bruce Korb
+
+* output file names may be encoded in the uuencoded file.
+  By specifying '--encode' on the command line, the output
+  file name will be base64 encoded in the uuencode file.
+
+Version 4.13.3 - January 2013, by Bruce Korb
+
+* fix malformatted docs
+* update automake
+
 Version 4.13.2 - January 2013, by Bruce Korb
 
 * add option and POSIXLY_CORRECT environment variable usage

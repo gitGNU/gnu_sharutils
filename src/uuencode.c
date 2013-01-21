@@ -60,7 +60,6 @@ static const char cright_years_z[] =
 \=======================================================*/
 
 #define  UUENCODE_C  1
-#include "local.h"
 #include "uuencode-opts.h"
 
 #if HAVE_LOCALE_H
@@ -75,15 +74,12 @@ static const char cright_years_z[] =
 
 #define	IRWALL_MODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
 char * output_name = NULL;
+char * input_name = NULL;
 
 static inline void try_putchar (int);
 static void encode (void);
 
-/* The name this program was run with. */
-const char *program_name;
-
-/* The two currently defined translation tables.  The first is the
-   standard uuencoding, the second is base64 encoding.  */
+/* standard uuencoding translation table  */
 const char uu_std[64] =
 {
   '`', '!', '"', '#', '$', '%', '&', '\'',
@@ -96,18 +92,6 @@ const char uu_std[64] =
   'X', 'Y', 'Z', '[', '\\', ']', '^', '_'
 };
 
-const char uu_base64[64] =
-{
-  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-  'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
-  'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-  'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
-  'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-  'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-  'w', 'x', 'y', 'z', '0', '1', '2', '3',
-  '4', '5', '6', '7', '8', '9', '+', '/'
-};
-
 /* Pointer to the translation table we currently use.  */
 const char * trans_ptr = uu_std;
 
@@ -118,7 +102,7 @@ static inline void
 try_putchar (int c)
 {
   if (putchar (c) == EOF)
-    error (EXIT_FAILURE, 0, _("Write error"));
+    fserr (UUENCODE_EXIT_FAILURE, "putchar", _("standard output"));
 }
 
 /*------------------------------------------------.
@@ -145,57 +129,61 @@ encode_block (char * out, unsigned char const * in, size_t in_len)
       unsigned char lc = (in_len > 1) ? in[1] : '\0';
       *(out++) = ENC (in[0] >> 2);
       *(out++) = ENC (((in[0] & 0x03) << 4) + ((lc >> 4) & 0x0F));
-
-      if (HAVE_OPT(BASE64))
-        {
-          *(out++) = (in_len > 1) ? ENC ((lc & 0x0F) << 2) : '=';
-          *(out++) = '=';
-        }
-      else
-        {
-          *(out++) = ENC ((lc & 0x0F) << 2);
-          *(out++) = ENC (0);
-        }
+      *(out++) = ENC ((lc & 0x0F) << 2);
+      *(out++) = ENC (0);
     }
 
-  *(out++) = '\n';
   return out - start;
 }
 
-/*------------------------------------------------.
-| Copy from IN to OUT, encoding as you go along.  |
-`------------------------------------------------*/
+/*------------------------------------------.
+| Copy from IN to OUT, encoding as you go.  |
+`------------------------------------------*/
 
 static void
 encode (void)
 {
-  register int n;
   int finishing = 0;
-  unsigned char buf[45];
-  char buf_out[60];
 
-  while ( !finishing && (n = fread (buf, 1, sizeof(buf), stdin)) > 0 )
+  do
     {
-      if (n < 45)
+      unsigned char buf[45];
+      char   buf_out[64];
+      int    rdct = fread (buf, 1, sizeof(buf), stdin);
+      size_t wrct = sizeof (buf_out);
+
+      if (rdct <= 0)
         {
-          if (feof (stdin))
-            finishing = 1;
-          else
-            error (EXIT_FAILURE, 0, _("Read error"));
+          if (ferror (stdin))
+            fserr (UUENCODE_EXIT_FAILURE, "fread", input_name);
+          break;
+        }
+
+      if (rdct < 45)
+        {
+          if (! feof (stdin))
+            fserr (UUENCODE_EXIT_FAILURE, "fread", input_name);
+          finishing = 1;
         }
 
       if (! HAVE_OPT(BASE64))
-        try_putchar (ENC (n));
+        {
+          try_putchar (ENC ((unsigned int)rdct));
+          wrct = encode_block (buf_out, buf, rdct);
+        }
+      else
+        {
+          base64_encode ((char *)buf, (size_t)rdct, buf_out, wrct);
+          wrct = strlen(buf_out);
+        }
 
-      n = encode_block (buf_out, buf, n);
-      if (fwrite (buf_out, 1, n, stdout) != n)
-        error (EXIT_FAILURE, errno, _("Write error"));
-    }
+      buf_out[wrct++] = '\n';
+      if (fwrite (buf_out, 1, wrct, stdout) != wrct)
+        fserr (UUENCODE_EXIT_FAILURE, "fwrite", _("standard output"));
+    } while (! finishing);
 
-  if (ferror (stdin))
-    error (EXIT_FAILURE, 0, _("Read error"));
   if (fclose (stdin) != 0)
-    error (EXIT_FAILURE, errno, _("Read error"));
+    fserr (UUENCODE_EXIT_FAILURE, "fclose", input_name);
 
   if (! HAVE_OPT(BASE64))
     {
@@ -207,9 +195,20 @@ encode (void)
 static void
 process_opts (int argc, char ** argv, int * mode)
 {
-  int ct = optionProcess (&uuencodeOptions, argc, argv);
-  argc -= ct;
-  argv += ct;
+  /* Set global variables.  */
+  setlocale (LC_ALL, "");
+
+  /* Set the text message domain.  */
+  bindtextdomain (PACKAGE, LOCALEDIR);
+  textdomain (PACKAGE);
+
+  input_name = _("standard input");
+
+  {
+    int ct = optionProcess (&uuencodeOptions, argc, argv);
+    argc -= ct;
+    argv += ct;
+  }
 
   switch (argc)
     {
@@ -222,10 +221,11 @@ process_opts (int argc, char ** argv, int * mode)
 #endif
 
 	FILE * fp = freopen (*argv, FOPEN_READ_BINARY, stdin);
+        input_name = *argv;
 	if (fp != stdin)
-	  error (EXIT_FAILURE, errno, _("fopen-ing %s"), *argv);
+          fserr (UUENCODE_EXIT_FAILURE, _("freopen of stdin"), input_name);
 	if (fstat (fileno (stdin), &sb) != 0)
-	  error (EXIT_FAILURE, errno, _("fstat-ing %s"), *argv);
+          fserr (UUENCODE_EXIT_FAILURE, "fstat", input_name);
 	*mode = sb.st_mode & (S_IRWXU | S_IRWXG | S_IRWXO);
         output_name = argv[1];
 	break;
@@ -243,22 +243,17 @@ process_opts (int argc, char ** argv, int * mode)
 
     case 0:
     default:
-      USAGE (EXIT_FAILURE);
+      USAGE (UUENCODE_EXIT_USAGE_ERROR);
     }
 
   if (HAVE_OPT(ENCODE_FILE_NAME))
     {
       size_t nmlen = strlen (output_name);
-      char * p = malloc (nmlen + (nmlen > 1) + 3);
+      size_t bfsz  = nmlen + (nmlen / 3) + 4;;
+      char * p = malloc (bfsz);
       if (p == NULL)
-        error (EXIT_FAILURE, ENOMEM, _("Allocation failure"));
-      nmlen = encode_block (p, (unsigned char *)output_name, nmlen);
-      if (HAVE_OPT(BASE64))
-        {
-          while ((nmlen > 0) && (p[nmlen-1] == '='))
-            nmlen--;
-        }
-      p[nmlen] = '\0';
+        fserr (UUENCODE_EXIT_FAILURE, "malloc", _("file name"));
+      base64_encode ((char *)output_name, nmlen, p, bfsz);
       output_name = p;
     }
 }
@@ -267,30 +262,24 @@ int
 main (int argc, char ** argv)
 {
   int mode;
-  /* Set global variables.  */
-  program_name = argv[0];
-  setlocale (LC_ALL, "");
-
-  /* Set the text message domain.  */
-  bindtextdomain (PACKAGE, LOCALEDIR);
-  textdomain (PACKAGE);
-
   process_opts (argc, argv, &mode);
 
   if (printf ("begin%s%s %o %s\n",
               HAVE_OPT(BASE64) ? "-base64" : "",
               HAVE_OPT(ENCODE_FILE_NAME) ? "-encoded" : "",
 	      mode, output_name) < 0)
-    error (EXIT_FAILURE, errno, _("Write error"));
+    fserr (UUENCODE_EXIT_FAILURE, "printf", _("standard output"));
 
   encode ();
 
-  if (ferror (stdout) ||
-      puts (HAVE_OPT(BASE64) ? "====" : "end") == EOF ||
-      fclose (stdout) != 0)
-    error (EXIT_FAILURE, errno, _("Write error"));
+  if (ferror (stdout))
+    fserr (UUENCODE_EXIT_FAILURE, "ferror", _("standard output"));
+  if (puts (HAVE_OPT(BASE64) ? "====" : "end") == EOF)
+    fserr (UUENCODE_EXIT_FAILURE, "puts", _("standard output"));
+  if (fclose (stdout) != 0)
+    fserr (UUENCODE_EXIT_FAILURE, "fclose", _("standard output"));
 
-  exit (EXIT_SUCCESS);
+  exit (UUENCODE_EXIT_SUCCESS);
 }
 /*
  * Local Variables:

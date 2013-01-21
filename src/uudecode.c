@@ -51,15 +51,16 @@ static char const cright_years_z[] =
 /* Reworked to GNU style by Ian Lance Taylor, ian@airs.com, August 93.  */
 
 #define  UUDECODE_C  1
-#include "local.h"
-#include "liballoca.h"
 #include "uudecode-opts.h"
+#include "liballoca.h"
 
 #if HAVE_LOCALE_H
 #else
 # define setlocale(Category, Locale)
 #endif
-#define _(str) gettext (str)
+#ifndef _
+# define _(str) (str)
+#endif
 
 /*=====================================================================\
 | uudecode [FILE ...]						       |
@@ -82,6 +83,8 @@ static uudecode_exit_code_t read_stduu (const char *inname, const char *outname)
 static uudecode_exit_code_t read_base64(const char *inname, const char *outname);
 static uudecode_exit_code_t decode (const char * in_name);
 
+static bool do_base64 = false;
+
 #ifndef NUL
 #define NUL '\0'
 #endif
@@ -90,9 +93,6 @@ static uudecode_exit_code_t decode (const char * in_name);
 #define STDOUT_FILENO 1
 #endif
 
-/* The name this program was run with. */
-const char *program_name;
-
 /* Single character decode.  */
 #define	DEC(Char) (((Char) - ' ') & 077)
 
@@ -100,12 +100,10 @@ const char *program_name;
 # define S_ISLNK(m) (((m) & S_IFMT) == S_IFLNK)
 #endif
 
-#define TRY_PUTCHAR(c)                                  \
-  do {                                                  \
-    if (putchar (c) == EOF) {                           \
-      error (0, 0, _("%s: Write error"), outname);      \
-      return UUDECODE_EXIT_NO_OUTPUT;                   \
-    }                                                   \
+#define TRY_PUTCHAR(c)                                          \
+  do {                                                          \
+    if (putchar (c) == EOF)                                     \
+      fserr (UUDECODE_EXIT_NO_OUTPUT, "putchar", outname);      \
   } while (0)
 
 static uudecode_exit_code_t
@@ -116,14 +114,10 @@ read_stduu (char const * inname, char const * outname)
   while (1)
     {
       int n;
-      char *p;
+      char * p = buf;
 
       if (fgets ((char *) buf, sizeof(buf), stdin) == NULL)
-	{
-	  error (0, 0, _("%s: Short file"), inname);
-	  return UUDECODE_EXIT_INVALID;
-	}
-      p = buf;
+        die (UUDECODE_EXIT_INVALID, _("%s: Short file"), inname);
 
       /* N is used to avoid writing out all the characters at the end of
 	 the file.  */
@@ -137,12 +131,18 @@ read_stduu (char const * inname, char const * outname)
 	  TRY_PUTCHAR (DEC (p[1]) << 4 | DEC (p[2]) >> 2);
 	  TRY_PUTCHAR (DEC (p[2]) << 6 | DEC (p[3]));
         }
-      if (n > 0)
-	{
+      switch (n)
+        {
+        case 0: break;
+        case 1:
 	  TRY_PUTCHAR (DEC (p[0]) << 2 | DEC (p[1]) >> 4);
-	  if (n >= 2)
-	    TRY_PUTCHAR (DEC (p[1]) << 4 | DEC (p[2]) >> 2);
-	}
+          break;
+
+        case 2:
+	  TRY_PUTCHAR (DEC (p[0]) << 2 | DEC (p[1]) >> 4);
+          TRY_PUTCHAR (DEC (p[1]) << 4 | DEC (p[2]) >> 2);
+          break;
+        }
     }
 
   /*
@@ -163,168 +163,91 @@ read_stduu (char const * inname, char const * outname)
       return UUDECODE_EXIT_SUCCESS;
   } while (0);
 
-  error (0, 0, _("%s: No `end' line"), inname);
+  die (UUDECODE_EXIT_INVALID, _("%s: No `end' line"), inname);
+  /* NOTREACHED */
   return UUDECODE_EXIT_INVALID;
 }
 
 static uudecode_exit_code_t
 read_base64 (char const * inname, char const * outname)
 {
-  static const char b64_tab[256] =
-  {
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*000-007*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*010-017*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*020-027*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*030-037*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*040-047*/
-    '\177', '\177', '\177', '\76',  '\177', '\177', '\177', '\77',  /*050-057*/
-    '\64',  '\65',  '\66',  '\67',  '\70',  '\71',  '\72',  '\73',  /*060-067*/
-    '\74',  '\75',  '\177', '\177', '\177', '\100', '\177', '\177', /*070-077*/
-    '\177', '\0',   '\1',   '\2',   '\3',   '\4',   '\5',   '\6',   /*100-107*/
-    '\7',   '\10',  '\11',  '\12',  '\13',  '\14',  '\15',  '\16',  /*110-117*/
-    '\17',  '\20',  '\21',  '\22',  '\23',  '\24',  '\25',  '\26',  /*120-127*/
-    '\27',  '\30',  '\31',  '\177', '\177', '\177', '\177', '\177', /*130-137*/
-    '\177', '\32',  '\33',  '\34',  '\35',  '\36',  '\37',  '\40',  /*140-147*/
-    '\41',  '\42',  '\43',  '\44',  '\45',  '\46',  '\47',  '\50',  /*150-157*/
-    '\51',  '\52',  '\53',  '\54',  '\55',  '\56',  '\57',  '\60',  /*160-167*/
-    '\61',  '\62',  '\63',  '\177', '\177', '\177', '\177', '\177', /*170-177*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*200-207*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*210-217*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*220-227*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*230-237*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*240-247*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*250-257*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*260-267*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*270-277*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*300-307*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*310-317*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*320-327*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*330-337*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*340-347*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*350-357*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*360-367*/
-    '\177', '\177', '\177', '\177', '\177', '\177', '\177', '\177', /*370-377*/
-  };
-  char buf[2 * BUFSIZ];
+  char buf_in[2 * BUFSIZ];
+  char buf_out[2 * BUFSIZ];
+  struct base64_decode_context ctx;
+  base64_decode_ctx_init (&ctx);
 
-  while (1)
+  for (;;)
     {
-      int last_data = 0;
-      unsigned char *p;
+      size_t outlen = sizeof(buf_out);
 
-      if (fgets (buf, sizeof(buf), stdin) == NULL)
-	{
-	  error (0, 0, _("%s: Short file"), inname);
-	  return UUDECODE_EXIT_INVALID;
-	}
-      p = (unsigned char *) buf;
+      if (fgets (buf_in, sizeof(buf_in), stdin) == NULL)
+	fserr (UUDECODE_EXIT_INVALID, _("%s: Short file"), inname);
 
-      if (memcmp (buf, "====", 4) == 0)
+      if (memcmp (buf_in, "====", 4) == 0)
 	break;
-      if (last_data != 0)
-	{
-	  error (0, 0, _("%s: data following `=' padding character"), inname);
-	  return UUDECODE_EXIT_INVALID;
-	}
 
-      /* The following implementation of the base64 decoding might look
-	 a bit clumsy but I only try to follow the POSIX standard:
-	 ``All line breaks or other characters not found in the table
-	   [with base64 characters] shall be ignored by decoding
-	   software.''  */
-      while (*p != '\n')
-	{
-	  char c1, c2, c3;
+      if (! base64_decode_ctx (&ctx, buf_in, strlen(buf_in), buf_out, &outlen))
+        die (UUDECODE_EXIT_INVALID, _("%s: invalid input"), inname);
 
-	  while ((b64_tab[*p] & '\100') != 0)
-	    if (*p == '\n' || *p++ == '=')
-	      break;
-	  if (*p == '\n')
-	    /* This leaves the loop.  */
-	    continue;
-	  c1 = b64_tab[*p++];
-
-	  while ((b64_tab[*p] & '\100') != 0)
-	    if (*p == '\n' || *p++ == '=')
-	      {
-		error (0, 0, _("%s: illegal line"), inname);
-		return UUDECODE_EXIT_INVALID;
-	      }
-	  c2 = b64_tab[*p++];
-
-	  while (b64_tab[*p] == '\177')
-	    if (*p++ == '\n')
-	      {
-		error (0, 0, _("%s: illegal line"), inname);
-		return UUDECODE_EXIT_INVALID;
-	      }
-	  if (*p == '=')
-	    {
-	      TRY_PUTCHAR (c1 << 2 | c2 >> 4);
-	      last_data = 1;
-	      break;
-	    }
-	  c3 = b64_tab[*p++];
-
-	  while (b64_tab[*p] == '\177')
-	    if (*p++ == '\n')
-	      {
-		error (0, 0, _("%s: illegal line"), inname);
-		return UUDECODE_EXIT_INVALID;
-	      }
-	  TRY_PUTCHAR (c1 << 2 | c2 >> 4);
-	  TRY_PUTCHAR (c2 << 4 | c3 >> 2);
-	  if (*p == '=')
-	    {
-	      last_data = 1;
-	      break;
-	    }
-	  else
-	    TRY_PUTCHAR (c3 << 6 | b64_tab[*p++]);
-	}
+      if (fwrite (buf_out, outlen, 1, stdout) != 1)
+        fserr (UUDECODE_EXIT_NO_OUTPUT, "fwrite", outname);
+      TRY_PUTCHAR ('\n');
     }
 
   return UUDECODE_EXIT_SUCCESS;
 }
 
-
+/**
+ * replace a leading tilde character with either the home directory of
+ * the login name that follows it, or with the home directory of the
+ * current user if a directory separator follows it.
+ *
+ * @param[in] buf  the original file name
+ * @returns either the expanded name or the original buffer address.
+ */
 static char *
 expand_tilde (char * buf)
 {
   char * outname;
-  int nm_len, n1;
-  struct passwd *pw;
-  char * pz = buf + 1;
-  while (*pz != '/')
-    ++pz;
-  if (*pz == NUL)
+  char const * homedir;
+
+  if (buf[1] == '/')
     {
-      error (0, 0, _("%s: Illegal file name: %s"), program_name, buf);
-      return NULL;
+      homedir = getenv("HOME");
+      if (homedir == NULL)
+        die (UUDECODE_EXIT_INVALID, _("cannot expand $HOME"));
+      buf += 2;
     }
-  *pz++ = NUL;
-  pw = getpwnam (buf + 1);
-  if (pw == NULL)
+  else
     {
-      error (0, 0, _("No user '%s'"), buf + 1);
-      return NULL;
+      struct passwd *pw;
+      char * pz = buf + 1;
+      while (*pz != '/')
+        ++pz;
+      if (*pz == NUL)
+        {
+          error (0, 0, _("%s: Illegal file name: %s"), program_name, buf);
+          return NULL;
+        }
+      *pz++ = NUL;
+      pw = getpwnam (buf + 1);
+      if (pw == NULL)
+        {
+          error (0, 0, _("No user '%s'"), buf + 1);
+          return NULL;
+        }
+      homedir = pw->pw_dir;
+      buf = pz;
     }
-  nm_len = strlen (pw->pw_dir);
-  n1 = strlen (pz);
 
   {
-    size_t sz = nm_len + n1 + 2;
+    size_t sz = strlen (homedir) + strlen (buf) + 2;
     outname = (char *) malloc (sz);
     if (outname == NULL)
-      {
-        error (0, 0, _("no memory for %d byte allocation"), (int)sz);
-        return NULL;
-      }
+      fserr (UUDECODE_EXIT_NO_MEM, "malloc", _("output file name"));
   }
 
-  memcpy (outname, pw->pw_dir, (size_t) nm_len);
-  outname[nm_len] = '/';
-  memcpy (outname + nm_len + 1, pz, (size_t) (n1 + 1));
+  sprintf (outname, "%s/%s", homedir, buf);
   return outname;
 }
 
@@ -348,10 +271,7 @@ reopen_output (char const * outname, int mode)
   {
     FILE * fp = freopen (outname, FOPEN_WRITE_BINARY, stdout);
     if (fp != stdout)
-      {
-        error (0, errno, _("freopen of %s"), outname);
-        return UUDECODE_EXIT_NO_OUTPUT;
-      }
+      fserr (UUDECODE_EXIT_NO_OUTPUT, "freopen", outname);
   }
 
   if (UU_CHMOD(outname, STDOUT_FILENO, mode) != 0)
@@ -366,6 +286,33 @@ reopen_output (char const * outname, int mode)
     }
 
   return UUDECODE_EXIT_SUCCESS;
+}
+
+static void
+decode_fname (char * buf)
+{
+  size_t sz  = strlen (buf);
+  char * out = malloc (2*sz + 4);
+
+  if (sz == 0)
+    die (UUDECODE_EXIT_INVALID, _("output name is empty"));
+
+  {
+    char * tmp = out + sz + 4;
+    struct base64_decode_context ctx;
+
+    if (out == NULL)
+      fserr(UUDECODE_EXIT_NO_MEM, "malloc", _("output file name"));
+
+    memcpy(out, buf, sz);
+    out[sz+0] = out[sz+1] = '=';
+    out[sz+2] = '\0';
+    if (! base64_decode (out, sz + 2, tmp, &sz))
+      die (UUDECODE_EXIT_INVALID, _("invalid base64 encoded name: %s"), buf);
+    memcpy (buf, tmp, sz);
+    buf[sz] = '\0';
+  }
+  free (out);
 }
 
 /**
@@ -383,8 +330,8 @@ decode (char const * inname)
   int   mode;
   char  buf[2 * BUFSIZ] = { NUL };
   char *outname;
-  int   do_base64 = 0;
-  int   allocated_outname = 0;
+  bool  allocated_outname = false;
+  bool  encoded_fname = false;
   uudecode_exit_code_t rval;
 
   /* Search for header line.  */
@@ -393,19 +340,48 @@ decode (char const * inname)
     {
       if (fgets (buf, sizeof (buf), stdin) == NULL)
 	{
-	  error (0, 0, _("%s: No `begin' line"), inname);
-	  return UUDECODE_EXIT_INVALID;
+        bad_beginning:
+	  die (UUDECODE_EXIT_INVALID,
+               _("%s: Invalid or missing 'begin' line"), inname);
 	}
 
       if (strncmp (buf, "begin", 5) == 0)
 	{
-	  if (sscanf (buf+5, "-base64 %o %[^\n]", &mode, buf) == 2)
-	    {
-	      do_base64 = 1;
-	      break;
+          char * scan = buf+5;
+          if (*scan == '-')
+            {
+              static char const base64[]  = "ase64";
+              static char const encoded[] = "encoded";
+            check_begin_option:
+              if (*++scan == 'b')
+                {
+                  if (strncmp (scan+1, base64, sizeof (base64) - 1) != 0)
+                    goto bad_beginning;
+                  if (do_base64)
+                    goto bad_beginning;
+                  do_base64 = true;
+                  scan += sizeof (base64); /* chars + 'b' */
+                }
+              else
+                {
+                  if (strncmp (scan, encoded, sizeof (encoded) - 1) != 0)
+                    goto bad_beginning;
+                  if (encoded_fname)
+                    goto bad_beginning;
+                  encoded_fname = true;
+                  scan += sizeof (encoded) - 1; /* 'e' is included */
+                }
+
+              switch (*scan) {
+              case ' ': break; /* no more begin options */
+              case '-': goto check_begin_option;
+              default:  goto bad_beginning;
+              }
 	    }
-	  if (sscanf (buf+5, " %o %[^\n]", &mode, buf) == 2)
+
+	  if (sscanf (scan, " %o %[^\n]", &mode, buf) == 2)
 	    break;
+          goto bad_beginning;
 	}
     }
 
@@ -414,6 +390,9 @@ decode (char const * inname)
     outname = (char *) OPT_ARG(OUTPUT_FILE);
   else
     {
+      if (encoded_fname)
+        decode_fname (buf);
+
       if (buf[0] != '~')
 	outname = buf;
       else
@@ -423,7 +402,7 @@ decode (char const * inname)
           outname = expand_tilde (buf);
           if (outname == NULL)
             return UUDECODE_EXIT_NO_OUTPUT;
-          allocated_outname = 1;
+          allocated_outname = true;
         }
 
       /* Be certain there is no trailing white space */
@@ -441,8 +420,8 @@ decode (char const * inname)
         goto fail_return;
     }
 
-  /* We differenciate decoding standard UU encoding and base64.  A
-     common function would only slow down the program.  */
+  /* We use different functions for different encoding methods.
+     A common function would slow down the program.  */
 
   /* For each input line:  */
   if (do_base64)
@@ -472,7 +451,6 @@ main (int argc, char const * const * argv)
 {
   uudecode_exit_code_t exit_status = UUDECODE_EXIT_SUCCESS;
 
-  program_name = argv[0];
   setlocale (LC_ALL, "");
 
   /* Set the text message domain.  */
@@ -485,36 +463,37 @@ main (int argc, char const * const * argv)
     argv += ct;
   }
 
-  switch (argc) {
-  case 0:
-    exit_status = decode ("stdin");
-    break;
+  switch (argc)
+    {
+    case 0:
+      exit_status = decode (_("standard input"));
+      break;
 
-  case 1:
-    if (HAVE_OPT(OUTPUT_FILE))
-      {
-        usage_message(_("You cannot specify an output file when processing\n\
+    default:
+      if (HAVE_OPT(OUTPUT_FILE))
+        {
+          usage_message(_("You cannot specify an output file when processing\n\
 multiple input files.\n"));
-        /* NOTREACHED */
-      }
-    /* FALLTHROUGH */
+          /* NOTREACHED */
+        }
+      /* FALLTHROUGH */
 
-  default:
-    while (--argc >= 0)
-      {
-        char const * f = *(argv++);
+    case 1:
+      while (--argc >= 0)
+        {
+          char const * f = *(argv++);
 
-        if (freopen (f, "r", stdin) != NULL)
-          {
-            exit_status |= decode (f);
-          }
-        else
-          {
-            error (0, errno, "%s", f);
-            exit_status |= UUDECODE_EXIT_NO_INPUT;
-          }
-      }
-  }
+          if (freopen (f, "r", stdin) != NULL)
+            {
+              exit_status |= decode (f);
+            }
+          else
+            {
+              error (0, errno, "%s", f);
+              exit_status |= UUDECODE_EXIT_NO_INPUT;
+            }
+        }
+    }
 
   exit (exit_status);
 }

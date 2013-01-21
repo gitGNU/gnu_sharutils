@@ -1,3 +1,40 @@
+2013-01-12  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: allow for some issues to be warnings (rsync failures)
+	added new modules: base64, ctype, gendocs
+	(system.h): make sure it is included first
+	(unshar-opts.c): we create it, but do not compile it yet.
+	* doc/Makefile.am: add rule to create doc tree with gendocs
+	* doc/gnudoc.tpl: removed, obsolete
+	* doc/mkgnudoc.sh: likewise
+	* doc/uuencode.5: cleanup
+	* lib/system.h (USE_UNLOCKED_IO): always
+	(stdbool.h): provide alternative
+	* src/Makefile.am: add rules for updating help text
+	* src/mk-help.sh: adjust
+	* src/*-help.txt: adjust
+	* src/shar-std.def: emit some more common stuff
+	* src/local.h.git: migrate config.h and unlocked io requirements to
+	the system.h header
+	* src/unshar-opts.def: when this becomes auto-opt-ed, it will use
+	a generated main.  Partially tested, so disabled for now.
+	* src/uudecode-opts.def (output): do not freopen when the file
+	name is "-" or "/dev/stdout".
+	* src/uudecode.c: remove all base64 stuff and use gnulib.
+	(decode_fname): new.  Use when "begin-encode" is discovered.
+	(decode): rewrite the begin line parser to accept both "-base64"
+	and "-encode" options.
+	* src/uuencode.c: remove all base64 stuff and use gnulib.
+	* tests/Makefile.am: add shar-4 test
+	* tests/shar-2: improve debugability
+	* tests/shar-3: likewise
+	* tests/shar-4: new -- test "-o /dev/stdout" option to uudecode
+	* po/getpo.sh: removed - rsync is used now
+
+2013-01-05  Bruce Korb  <bkorb@gnu.org>
+
+	4.13.2 released
+
 2013-01-05  Peter Pisar  <ppisar@redhat.com>
 
 	* lib/md5.[ch]: deleted.

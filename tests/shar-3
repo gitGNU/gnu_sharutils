@@ -1,75 +1,117 @@
 #! /bin/sh
 
 test "X${VERBOSE}" = Xtrue && {
+  exec 7> /tmp/shar-3-log.txt
   set -x
-  PS4="> "
+  BASH_XTRACEFD=7
+  PS4='>$FUNCNAME> '
 }
 
-current_dir=`pwd`
-TMPDIR=${TMPDIR=/tmp}
-export TMPDIR
-testname=shar-3
-testdir=${TMPDIR}/${testname}-$$.d
-rm -rf ${testdir}
-(umask 077 ; mkdir ${testdir}) || exit 1
-opts="-o ${testdir}/${testname}-%04d.shar"
-opts="${opts} -L256K -n ${testname}-test -s ${testname}"
+init() {
+  current_dir=`pwd`
+  TMPDIR=${TMPDIR=/tmp}
+  TMPDIR=`cd $TMPDIR >/dev/null && pwd`
+  export TMPDIR
+  testname=`basename $0`
+  testdir=${TMPDIR}/${testname}-$$.d
+  rm -rf ${testdir}
+  (umask 077 ; mkdir ${testdir}) || exit 1
 
-shar=`cd ../src ; pwd`/shar
-unshar=`cd ../src ; pwd`/unshar
-top_builddir=`cd ${top_builddir} ; pwd`
-
-nocompression=false
-cd ${top_builddir}
-tmpfiles=$(find * -type f -name '*~')
-test -n "$tmpfiles" && rm -f $tmpfiles
-{
-  ctypes='gzip bzip2 xz'
-  for f in `ls -1A`
-  do
-    case "`file $f`" in
-
-    *'directory'* | *text*'long lines'* )
-      echo --compact=`set -- $ctypes ; echo $1`
-      ctypes=`set -- $ctypes ; echo $2 $3 $1`
-      nocompression=false
-      ;;
-
-    *' text' )
-      $nocompression || {
-        echo --compact=none
-        nocompression=true
-      }
-      ;;
-
-    * )
-      echo --compact=`set -- $ctypes ; echo $1`
-      ctypes=`set -- $ctypes ; echo $2 $3 $1`
-      nocompression=false
-      ;;
-    esac
-    echo $f
+  # See which compressors are available.
+  #
+  ctypes=
+  for f in gzip bzip2 xz
+  do g=`command -v "$f" 2>/dev/null`
+     test -x "$g" && {
+       ctypes="$ctypes $f"
+       eval $f=\"$g\"
+     }
   done
-} > ${testdir}/list
-${shar} -pq ${opts} -I${testdir}/list
 
-mkdir ${testdir}/${testname}.d
-cd ${testdir}/${testname}.d
+  shar=`cd ../src >/dev/null && pwd`/shar
+  unshar=`cd ../src >/dev/null && pwd`/unshar
+  : ${top_builddir=..}
+  top_builddir=`cd ${top_builddir} >/dev/null && pwd`
 
-for f in ../${testname}-*.shar
-do
-  ${unshar} ${f} || exit 1
-done >/dev/null
+  nocompression=false
+  cd ${top_builddir}/..
 
-cd ..
-if diff -r ${top_builddir} ${testname}.d
-then :
-else
-  echo ${top_builddir} and ${testdir}/${testname}.d differ
+  basedir=`basename ${top_builddir}`
+  tar cf ${testdir}/${basedir}.tar ${basedir}
+}
+
+unroll_tar() {
+  cd ${testdir}
+  tar xf ${basedir}.tar
+  mv ${basedir} base-$$
+}
+
+mk_shar() {
+  cd ${testdir}/base-$$
+
+  # Get rid of temp files ("po" directory, mostly)
+  # and get rid of empty directories (shar doesn't copy them)
+  #
+  tmpfiles=`find . -type f -name '*~'`
+  test -n "$tmpfiles" && rm -f $tmpfiles
+  tmpfiles=`find . -type d -depth`
+  for f in $tmpfiles
+  do rmdir $f ; done 2>/dev/null 1>&2
+
+  {
+    for f in `ls -1A`
+    do
+        case "`file $f`" in
+
+        *'directory'* | *text*'long lines'* )
+          echo --compact=`set -- $ctypes ; echo $1`
+          ctypes=`set -- $ctypes ; echo $2 $3 $1`
+          nocompression=false
+          ;;
+
+        *' text' )
+          $nocompression || {
+            echo --compact=none
+            nocompression=true
+          }
+          ;;
+
+        * )
+          echo --compact=`set -- $ctypes ; echo $1`
+          ctypes=`set -- $ctypes ; echo $2 $3 $1`
+          nocompression=false
+          ;;
+        esac
+        echo $f
+    done
+  } > ${testdir}/list
+  opts="-o ${testdir}/${testname}-%04d.shar"
+  opts="${opts} -L256K -n ${testname}-test -s ${testname}"
+  ${shar} -pq ${opts} -I${testdir}/list
+}
+
+un_shar() {
+  mkdir ${testdir}/${testname}.d
+  cd ${testdir}/${testname}.d
+
+  for f in ../${testname}-*.shar
+  do
+      ${unshar} ${f} || exit 1
+  done >/dev/null
+}
+
+init
+unroll_tar
+mk_shar
+un_shar
+
+cd ${testdir}
+diff_txt=`diff -r base-$$ ${testname}.d` || {
+  echo ${testdir}/base-$$ and ${testname}.d differ
+  echo "$diff_txt"
   exit 1
-fi
+} 1>&2
 
-cd ${current_dir}
 rm -rf ${testdir}
 exit 0
 

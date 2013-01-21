@@ -18,7 +18,7 @@
 
 ## Process this file with automake to produce Makefile.in.
 
-TESTS = uutest-1 shar-1 shar-2 shar-3
+TESTS = uutest-1 shar-1 shar-2 shar-3 shar-4
 TESTS_ENVIRONMENT = \
   top_srcdir=$(top_srcdir) \
   PATH=`cd ../src && pwd`:"$$PATH" \

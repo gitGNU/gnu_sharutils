@@ -41,7 +41,6 @@ static const char cright_years_z[] =
        no effect on these comment strings.
  */
 #define  SHAR_C  1
-#include "local.h"
 #include "shar-opts.h"
 
 #include <ctype.h>
@@ -246,9 +245,6 @@ static int debugging_mode = 0;
 
 int uuencode_file = -1;
 int opt_idx = 0;
-
-/* The name this program was run with. */
-const char *program_name;
 
 /* File onto which the shar script is being written.  */
 static FILE *output = NULL;
@@ -1298,6 +1294,8 @@ open_shar_input (
       *file_type_remote_p = SM_type_text;
 
       infp = fopen (local_name, freadonly_mode);
+      if (infp == NULL)
+        fserr (SHAR_EXIT_FAILED, "fopen", local_name);
     }
   else
     {
@@ -1328,12 +1326,10 @@ open_shar_input (
 
           close (pipex[1]);
           infp = fdopen (pipex[0], freadonly_mode);
+          if (infp == NULL)
+            fserr (SHAR_EXIT_FAILED, "fdopen", _("pipe[1]"));
         }
     }
-
-  if (infp == NULL)
-    error (SHAR_EXIT_FAILED, errno,
-           _("File %s (%s)"), local_name, *file_type_p);
 
   return infp;
 }
@@ -2139,7 +2135,6 @@ set_compaction (tOptions * opts, tOptDesc * od)
 static void
 initialize(int * argcp, char *** argvp)
 {
-  program_name = **argvp;
   sharpid = (int) getpid ();
   setlocale (LC_ALL, "");
 

@@ -15,23 +15,11 @@ AutoGen Definitions options;
    You should have received a copy of the GNU General Public License
  */
 #define NEED_AUTHORS
+prog-name   = `progname=shar ; echo $progname`;
 #include shar-std.def
 
-prog-name   = shar;
 prog-title  = 'create a shell archive';
 argument    = '[file ...]';
-#shell
-test -f shar-full-help.txt && {
-  echo 'full-usage = <<- _EOUsage_'
-  cat shar-full-help.txt
-  echo '_EOUsage_;'
-}
-test -f shar-short-help.txt && {
-  echo 'short-usage = <<- _EOUsage_'
-  cat shar-short-help.txt
-  echo '_EOUsage_;'
-}
-#endshell
 
 explain     = <<- _EOExplain_
 	If no @file{file}s are specified, the list of input files is read
@@ -59,8 +47,6 @@ detail      = <<- _EODetail_
 	preferred encoding method.
 	_EODetail_;
 
-usage-message;
-die-code;
 exit-name[1]  = option-error;
 exit-desc[1]  = 'The command options were misconfigured.';
 exit-name[2]  = file-not-found;
@@ -73,8 +59,6 @@ exit-name[63] = bug;
 exit-desc[63] = 'There is a shar command bug.  Please report it.';
 
 include = <<- _EOInclude_
-	#include <string.h>
-
 	int initialization_done = 0;
 	int optidx = 0;
 	_EOInclude_;
@@ -521,7 +505,7 @@ flag = {
 flag = {
     name        = xmit-defenses;
     documentation;
-    descrip     = 'Protecting against transmission issues:';
+    descrip     = 'Protecting against transmission issues';
     texi-text   = <<- _EOTexiText_
 	Transmission of shell archives is not always free of errors.  So one
 	should make consistency checks on the receiving site.  A very simple
@@ -595,7 +579,7 @@ flag = {
 flag = {
     name        = shar-flavors;
     documentation;
-    descrip     = 'Producing different kinds of shars:';
+    descrip     = 'Producing different kinds of shars';
 };
 
 flag = {
@@ -736,7 +720,7 @@ flag = {
 flag = {
     name        = internationalization;
     documentation;
-    descrip     = 'Internationalization options:';
+    descrip     = 'Internationalization options';
 };
 
 flag = {

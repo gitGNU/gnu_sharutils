@@ -14,25 +14,11 @@ AutoGen Definitions options;
 
    You should have received a copy of the GNU General Public License
  */
+prog-name   = `progname=uudecode ; echo $progname`;
 #include shar-std.def
 
-prog-name   = uudecode;
 prog-title  = 'decode an encoded file';
 argument    = '[ file ... ]';
-#shell
-test -f uudecode-full-help.txt && {
-  echo 'full-usage = <<- _EOUsage_'
-  cat uudecode-full-help.txt
-  echo '_EOUsage_;'
-}
-test -f uudecode-short-help.txt && {
-  echo 'short-usage = <<- _EOUsage_'
-  cat uudecode-short-help.txt
-  echo '_EOUsage_;'
-}
-#endshell
-usage-message;
-die-code;
 option-format = texi;
 
 explain = 'If no @file{file}(s) are provided, then standard input is decoded.';
@@ -55,7 +41,8 @@ detail = <<- _EODetail_
 	for a line that starts with "@samp{begin}" and proceeds until the
 	end-of-encoding marker is found.  The program determines from the
 	header line of the encoded file which of the two supported encoding
-	schemes was used.
+	schemes was used and whether or not the output file name has been
+	encoded with base64 encoding.  See @file{uuencode(5)}.
 	_EODetail_;
 
 include = <<- _EOInclude_
@@ -71,12 +58,25 @@ flag = {
     arg-name    = file;
     descrip     = 'direct output to @file{file}';
     flag-code   = <<- _EOCode_
-	  FILE * fp = freopen (pOptDesc->optArg.argString, "w", stdout);
-	  if (fp != stdout)
+	  FILE * fp;
+	  switch (*pOptDesc->optArg.argString)
 	    {
-	      error (0, errno, "%s", pOptDesc->optArg.argString);
-	      exit (UUDECODE_EXIT_NO_OUTPUT);
+	    case '-':
+	      if (pOptDesc->optArg.argString[1] == '\0')
+	        return;
+	      break;
+
+	    case '/':
+	      if (strcmp (pOptDesc->optArg.argString + 1, "dev/stdout") == 0)
+	        return;
+
+	    default:
+	      break;
 	    }
+	  fp = freopen (pOptDesc->optArg.argString, "w", stdout);
+	  if (fp != stdout)
+	    fserr (UUDECODE_EXIT_NO_OUTPUT, "freopen-ing for stdout",
+	           pOptDesc->optArg.argString);
 	_EOCode_;
 
     doc = <<- _EODoc_
@@ -141,7 +141,7 @@ doc-section = {
 
 doc-section = {
     ds-type = 'SEE ALSO';
-    ds-text = 'uuencode(1)';
+    ds-text = 'uuencode(1), uuencode(5)';
 };
 
 exit-name[1]    = option-error;
@@ -150,6 +150,8 @@ exit-name[2]    = invalid;
 exit-desc[2]    = '(warning) One or more input files contained no valid data';
 exit-name[4]    = no-input;
 exit-desc[4]    = '(warning) The specified input file was not found';
+exit-name[9]    = no-mem;
+exit-desc[9]    = 'No process memory available';
 exit-name[8]    = no-output;
 exit-desc[8]    =
    'The specified output file could not be created (error); or else one of '

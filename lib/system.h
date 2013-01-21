@@ -21,10 +21,16 @@
 choke me -- I need config.h
 #endif
 #include "config.h"
+
+#ifndef USE_UNLOCKED_IO
+#  define USE_UNLOCKED_IO 1
+#endif
+
 #include <sys/types.h>
 #include <sys/stat.h>
 
 #include <errno.h>
+#include <error.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -35,6 +41,12 @@ choke me -- I need config.h
 #ifndef HAVE_INTMAX_T
 #define HAVE_INTMAX_T
 typedef long intmax_t;
+#endif
+
+#ifdef HAVE_STDBOOL_H
+#include <stdbool.h>
+#else
+typedef enum {false = 0, true = 1} bool;
 #endif
 
 #if !HAVE_DECL_STRTOIMAX && !defined strtoimax

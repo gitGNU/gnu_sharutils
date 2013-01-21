@@ -1,23 +1,11 @@
 AutoGen Definitions options;
 
 #define NEED_AUTHORS
+prog-name   = `progname=unshar; echo $progname`;
 #include shar-std.def
 
-prog-name   = unshar;
 prog-title  = 'unpack a shar archive';
 argument    = '[ file ... ]';
-#shell
-test -f unshar-full-help.txt && {
-  echo 'full-usage = <<- _EOUsage_'
-  cat unshar-full-help.txt
-  echo '_EOUsage_;'
-}
-test -f unshar-short-help.txt && {
-  echo 'short-usage = <<- _EOUsage_'
-  cat unshar-short-help.txt
-  echo '_EOUsage_;'
-}
-#endshell
 
 detail = <<- _EODetail_
 	Unshar scans the input files (typically email messages) looking for
@@ -25,13 +13,51 @@ detail = <<- _EODetail_
 	input is processed instead.  It then passes each archive discovered
 	through an invocation of the shell program to unpack it.
 	_EODetail_;
-
-include = <<- _EOF_
-	#include <errno.h>
-	#include <error.h>
-	#include <unistd.h>
+#if 0
+main = {
+    main-type    = for-each;
+    handler-proc = unshar_file;
+    handler-type = file-r;
+    stdin-input;
+    main-init    = <<- _EOF_
+	    setlocale (LC_ALL, "");
+	    bindtextdomain (PACKAGE, LOCALEDIR);
+	    textdomain (PACKAGE);
+	#ifdef __MSDOS__
+	    setbuf (stdout, NULL);
+	    setbuf (stderr, NULL);
+	#endif
 	_EOF_;
 
+    main-fini = <<- _EOF_
+	    if (temp_file != NULL)
+	      {
+	        unlink (temp_file);
+	        free (temp_file);
+	      }
+	_EOF_;
+};
+
+include = 'char * temp_file = NULL;';
+export  = 'char * temp_file;';
+
+exit-desc[1]  = 'There was an error in command usage.';
+
+exit-name[2]  = popen-problem;
+exit-desc[2]  = 'cannot spawn or write to a shell process';
+
+exit-name[3]  = cannot-create;
+exit-desc[3]  = 'cannot create output file';
+
+exit-name[4]  = bad-directory;
+exit-desc[4]  = 'the working directory structure is invalid';
+
+exit-name[5]  = NOMEM;
+exit-desc[5]  = 'memory allocation failure';
+
+exit-name[6]  = invalid;
+exit-desc[6]  = 'invalid input, does not contain a shar file';
+#endif
 help-value;
 
 flag = {
@@ -39,19 +65,14 @@ flag = {
     value       = d;
     arg-type    = string;
     arg-name    = dir;
-    descrip     = 'change directory to @file{dir} first';
-    flag-code   = <<- _EOCode_
-	  int res = chdir (pOptDesc->optArg.argString);
-	  if (res == -1)
-	    {
-	      error (2, 0, _("Cannot chdir to `%s'"),
-	             pOptDesc->optArg.argString);
-	      USAGE(UNSHAR_EXIT_FAILURE);
-	    }
-	_EOCode_;
+    descrip     = 'change directory to @file{dir} before unpacking';
 
-    doc =
-    "Before unpacking any files, change the current directory to @file{dir}.";
+    doc = <<- _EODoc_
+	The input file names are relative to the current directory
+	when the program was started.  This option tells @command{unshar}
+	to insert a @code{cd <dir>} commad at the start of the
+	@command{shar} text written to the shell.
+	_EODoc_;
 };
 
 flag = {
@@ -104,6 +125,15 @@ flag = {
 	Most shell archives end with a line consisting of simply "exit 0".
 	This option is equivalent to (and conflicts with)
 	@code{--split-at="exit 0"}.
+	_EODoc_;
+};
+
+flag = {
+    name        = debug;
+    value       = D;
+    descrip     = 'debug the shell code';
+    doc = <<- _EODoc_
+	"set -x" will be emitted into the code the shell interprets.
 	_EODoc_;
 };
 

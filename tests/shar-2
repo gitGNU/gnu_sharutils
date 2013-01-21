@@ -2,8 +2,10 @@
 
 test "X${VERBOSE}" = Xtrue && {
   set -x
-  PS4="> "
-}
+  PS4='> '
+  exec 8>&2
+  debug_unshar='--debug'
+} || exec 8>/dev/null
 
 tmppfx=shar-2-$$
 
@@ -18,9 +20,9 @@ do
     while test $f -lt 32
     do  printf "\\$f"
         f=`expr $f + 1`
-    done
+    done 2>/dev/null
     printf "\nThis file is ${dir}/second\n"
-  } > ${dir}/second 2>/dev/null
+  } > ${dir}/second
 done
 
 : ${SHAR=`cd ../src ; pwd`/shar}
@@ -32,7 +34,7 @@ done
 : ${DIFF=diff}
 
 cd ${tmppfx}.dir
-${UNSHAR} ../${tmppfx}.shar || exit 1
+${UNSHAR} ${debug_unshar} ../${tmppfx}.shar || exit 1
 cd -
 
 ${DIFF} -r ${tmppfx}.d ${tmppfx}.dir || exit 1

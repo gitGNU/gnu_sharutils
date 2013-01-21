@@ -41,6 +41,25 @@ load-opts-value = r;
 option-doc-format = texi;
 config-header   = config.h;
 no-misuse-usage;
+usage-message;
+die-code;
+
+export  = '#include "local.h"'"\nchar const * const program_name;";
+
+#shell
+echo "include = 'char const * const program_name = \"${progname}\";';"
+
+test -f ${progname}-full-help.txt && {
+  echo 'full-usage = <<_EOUsage_'
+  cat ${progname}-full-help.txt
+  echo '_EOUsage_;'
+}
+test -f ${progname}-short-help.txt && {
+  echo 'short-usage = <<_EOUsage_'
+  cat ${progname}-short-help.txt
+  echo '_EOUsage_;'
+}
+#endshell
 
 #ifdef NEED_AUTHORS
 doc-section     = {

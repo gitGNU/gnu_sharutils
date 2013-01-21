@@ -18,8 +18,6 @@
 ## with this program; if not, write to the Free Software Foundation, Inc.,
 ## 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-## $Id: bootstrap,v 1.62 2011/04/26 19:36:37 bkorb Exp $
-
 # This script is used to insert the current version number into the various
 # files that need the current version number, and it inserts the current
 # gettext version number into the AM_GNU_GETTEXT_VERSION macro
@@ -42,6 +40,11 @@ die() {
     sleep 1
     kill -9 $progpid
     exit 1
+} >&2
+
+warn() {
+    echo "${prog} WARNING: $*"
+    sleep 1
 } >&2
 
 init() {
@@ -85,7 +88,7 @@ init() {
 
     cd ${progdir%-bld}
     rsync -Lrtvz  translationproject.org::tp/latest/sharutils/ po || \
-        die "rsync failed"
+        warn "rsync failed"
 
     cd ${progdir}
     test "/$progdir" = "/${progdir%-bld}" || {
@@ -209,12 +212,15 @@ setup_configure() {
 
     gnulib_libs="
 	alloca
+	base64
+	ctype
 	dirname
 	error
 	fdl
 	getcwd
 	getopt-gnu
 	gettext
+	gendocs
 	inttostr
 	malloc-gnu
 	crypto/md5
@@ -260,14 +266,13 @@ update_include_list() {
       sed -n 's/^ *#include/#include/p' ../import-log.txt
       echo '#include "error.h"'
       echo '#include "locale.h"'
-      echo '#include "system.h"'
-    } | sort -u)
+    } | sed '/["<]system\.h[">]/d' | sort -u)
 
   # separate them by quoting type:  <> vs. ""
   # and append a backslash to all but the last line.
   # sed(1) requires this for inserting text.
   #
-  ilist=$(
+  ilist='#include "system.h"'$'\\\n'$(
     {
       echo "$ilist" | fgrep '<'
       echo ''
@@ -285,13 +290,14 @@ generate_option_code() {
     cd src
     for def in *-opts.def
     do
-        autogen $def
+        autogen --trace=every --trace-out=${def%.def}.log $def
         autogen -b ${def%-opts.def} -Tagman-cmd.tpl $def
         mv -f ${def%-opts.def}.1 ../doc
         autogen -Tagtexi-cmd.tpl -DSECTION=chapter $def
         mv -f invoke-${def%-opts.def}.texi ../doc/.
         rm -f invoke-${def%-opts.def}.menu
     done
+    rm -f unshar-opts.[ch]
     cd ..
     {
         echo '# List of files which containing translatable strings.'

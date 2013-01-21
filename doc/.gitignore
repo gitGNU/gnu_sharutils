@@ -4,3 +4,4 @@
 /version.texi
 /invoke-*.texi
 *.info*
+gendocs_template

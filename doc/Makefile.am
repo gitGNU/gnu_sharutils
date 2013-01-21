@@ -23,10 +23,11 @@ texi_files      = fdl.texi version.texi \
 	invoke-shar.texi invoke-unshar.texi \
 	invoke-uudecode.texi invoke-uuencode.texi
 
+cmds            = shar unshar uuencode uudecode
+
 dist_man1_MANS  = shar.1 unshar.1
 dist_man5_MANS  =
-man_files       = $(dist_man1_MANS) \
-	shar.1 unshar.1 uuencode.1 uudecode.1 uuencode.5
+man_files       = $(cmds:=.1) uuencode.5
 
 if UUCODE
   dist_man1_MANS += uuencode.1
@@ -34,14 +35,15 @@ if UUCODE
   man1_MANS = uudecode.1
 endif
 
-CLEANFILES  = $(man1_MANS)  $(man5_MANS)
+CLEANFILES  = $(man1_MANS)
 EXTRA_DIST  = $(texi_files) $(man_files)
 
 sharutils.txt :
 	makeinfo --no-split --fill-column=70 --paragraph-indent=0 --no-headers \
 		--output=$@ sharutils.texi
 
-gnudocs: sharutils.txt sharutils.info
-	@chmod +x ${top_srcdir}/doc/mkgnudoc.sh ; \
-	MAKE=$(MAKE) ; export MAKE ; \
-	${top_srcdir}/doc/mkgnudoc.sh $(PACKAGE_STRING)
+gnudocs:
+	title=`sed -n '/^@settitle/{;s/@settitle *//;p;q;}' sharutils.texi` ; \
+	$(SHELL) $(top_srcdir)/gendocs.sh sharutils "$$title"
+
+.PHONY : gnudocs

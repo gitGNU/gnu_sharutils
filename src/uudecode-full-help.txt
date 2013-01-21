@@ -1,4 +1,4 @@
-uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.1
+uudecode (GNU sharutils) - decode an encoded file
 USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
 
    -o, --output-file=str      direct output to file
@@ -8,31 +8,31 @@ USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
    -!, --more-help            Extended usage information passed thru pager
    -R, --save-opts[=arg]      Save the option state to a config file
    -r, --load-opts=str        Load options from a config file
-				- disabled as --no-load-opts
-				- may appear multiple times
+                                - disabled as --no-load-opts
+                                - may appear multiple times
 
 Options are specified by doubled hyphens and their name or by a single
 hyphen and the flag character.
 
-If no ``file''(s) are provided, then standard input is decoded.
+If no 'file'(s) are provided, then standard input is decoded.
 
 The following option preset mechanisms are supported:
  - reading file $HOME/.sharrc
 
-``Uudecode'' transforms uuencoded files into their original form.
+'Uudecode' transforms uuencoded files into their original form.
 
 The encoded file(s) may be specified on the command line, or one may be
 read from standard input.  The output file name is specified in the encoded
-file, but may be overridden with the ``-o'' option.  It will have the mode
-of the original file, except that setuid and execute bits are not retained.
-If the output file is specified to be ``/dev/stdout'' or ``-'', the result
-will be written to standard output.  If there are multiple input files and
-the second or subsquent file specifies standard output, the decoded data
-will be written to the same file as the previous output.  Don't do that.
+file, but may be overridden with the '-o' option.  It will have the mode of
+the original file, except that setuid and execute bits are not retained.  If
+the output file is specified to be '/dev/stdout' or '-', the result will be
+written to standard output.  If there are multiple input files and the
+second or subsquent file specifies standard output, the decoded data will
+be written to the same file as the previous output.  Don't do that.
 
-``uudecode'' ignores any leading and trailing lines.  It looks for a line
-that starts with "``begin''" and proceeds until the end-of-encoding marker
-is found.  The program determines from the header line of the encoded file
+'uudecode' ignores any leading and trailing lines.  It looks for a line
+that starts with "'begin'" and proceeds until the end-of-encoding marker is
+found.  The program determines from the header line of the encoded file
 which of the two supported encoding schemes was used.
 
 please send bug reports to:  bug-gnu-utils@gnu.org

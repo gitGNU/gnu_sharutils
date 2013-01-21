@@ -2,10 +2,10 @@
 # Copyright (C) 1994-2013 Free Software Foundation, Inc.
 # Process this file with autoconf to produce a configure script.
 #
-AC_INIT([GNU sharutils],[4.13.2],[bug-gnu-utils@gnu.org])
+AC_INIT([GNU sharutils],[4.13.4pre3],[bug-gnu-utils@gnu.org])
 AC_CONFIG_SRCDIR([src/shar.c])
 AC_CONFIG_HEADERS([config.h])
-AM_INIT_AUTOMAKE([1.1 dist-bzip2])
+AM_INIT_AUTOMAKE([1.5 dist-xz])
 AC_USE_SYSTEM_EXTENSIONS
 AC_SUBST(DIST_ALPHA)
 AC_PROG_CC

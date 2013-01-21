@@ -1,0 +1,51 @@
+#! /bin/sh
+
+bname=`basename $0`
+
+test "X${VERBOSE}" = Xtrue && {
+  set -x
+  PS4=">$bname> "
+}
+
+bindir=`cd ../src >/dev/null && pwd`
+curdir=`pwd`
+tbase=${bname}-$$
+trap "cd $curdir ; rm -rf $tbase*" exit
+
+PATH=$bindir:$PATH
+umask 077
+echo hello | uuencode --base64 --encode-file-name ${bname}.txt > $tbase.uu
+cat > $tbase.xx <<_EOF_
+begin-base64-encoded 600 c2hhci00LnR4dA==
+aGVsbG8K
+====
+_EOF_
+
+cmp -s $tbase.xx $tbase.uu || {
+  diff -u $tbase.xx $tbase.uu
+  exit 1
+}
+
+res=`uudecode -o - $tbase.uu 2>&1`
+test "X$res" = Xhello || {
+  echo "result was not 'hello' but rather '$res'" >&2
+  exit 1
+}
+
+test -f ${bname}.txt && {
+  echo "accidentally created ${bname}.txt" >&2
+  rm -f ${bname}.txt
+  exit 1
+}
+
+exit 0
+
+## Local Variables:
+## mode: shell-script
+## tab-width: 8
+## indent-tabs-mode: nil
+## sh-indentation: 2
+## sh-basic-offset: 2
+## End:
+
+## end of shar-4

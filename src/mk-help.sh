@@ -6,7 +6,6 @@ X[TtYy]* | 1 )
     ;;
 esac
 
-target=$1 ; shift
 tmpdir=$(mktemp -d mkhelp-XXXXXX)
 trap "rm -rf $tmpdir" 0
 
@@ -19,6 +18,7 @@ die() {
 
 get_help() {
     ./$1 $2 2>&1 | grep -v illegal > $tmpdir/$3.txt
+    $tabify $tmpdir/$3.txt
     cmp -s $tmpdir/$3.txt $3.txt || {
         mv $tmpdir/$3.txt $3.txt
         echo $3 has been updated
@@ -39,28 +39,30 @@ mkusage() {
 }
 
 mkhelp() {
-    touch $tmpdir/help-text
-    rm -f *-help.txt
-    for f ; do autogen $f-opts.def ; done
+    : ${MAKE=make}
+    tabify=$(command -v tabify)
+    if test -x "$tabify" && "$tabify" --remove --help >/dev/null 2>&1
+    then
+        tabify="$tabify --remove"
+    else
+        tabify=:
+    fi
+    for f ; do rm -f $f-help.txt ; autogen $f-opts.def ; done
     ${MAKE} "$@"
-    target=usage-text
     mkusage "$@"
     for f ; do autogen $f-opts.def ; done
     ${MAKE} "$@"
-    dd=$(pwd | sed s/-bld//)
+    dd=$(pwd | sed s@-bld/src@/src@)
     test "X$dd" = "X$PWD" && return 0
     for f in *-help.txt
     do
         rm -f $dd/$f
         ln $f $dd/.
     done
-    mv $tmpdir/help-text .
 }
 
-case $target in
-usage-text ) mkusage "$@" ;;
-help-text )  mkhelp  "$@" ;;
-esac
-
+test $# -eq 0 && set -- shar unshar uudecode uuencode
+mkhelp  "$@"
+rm -rf $tmpdir
 trap '' 0
 exit 0

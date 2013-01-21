@@ -21,14 +21,6 @@
 #ifndef SHARUTILS_LOCAL_H
 #define SHARUTILS_LOCAL_H 1
 
-#ifdef HAVE_CONFIG_H
-# include <config.h>
-#endif
-
-#ifndef USE_UNLOCKED_IO
-#  define USE_UNLOCKED_IO 1
-#endif
-
 INCLUDE-LIST
 
 #ifdef SHAR_C

@@ -1,4 +1,4 @@
-uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13.1
+uuencode (GNU sharutils) - encode a file into email friendly text
 USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name
 
    -m, --base64               convert using base 64
@@ -8,8 +8,8 @@ USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name
    -!, --more-help            Extended usage information passed thru pager
    -R, --save-opts[=arg]      Save the option state to a config file
    -r, --load-opts=str        Load options from a config file
-				- disabled as --no-load-opts
-				- may appear multiple times
+                                - disabled as --no-load-opts
+                                - may appear multiple times
 
 Options are specified by doubled hyphens and their name or by a single
 hyphen and the flag character.
@@ -17,19 +17,19 @@ hyphen and the flag character.
 The following option preset mechanisms are supported:
  - reading file $HOME/.sharrc
 
-``uuencode'' is used to create an ASCII representation of a file that can
-be sent over channels that may otherwise corrupt the data.  Specifically,
+'uuencode' is used to create an ASCII representation of a file that can be
+sent over channels that may otherwise corrupt the data.  Specifically,
 email cannot handle binary data and will often even insert a character when
 the six character sequence "\nFrom " is seen.
 
-``uuencode'' will read ``in-file'' if provided and otherwise read data from
+'uuencode' will read 'in-file' if provided and otherwise read data from
 standard in and write the encoded form to standard out.  The output will
-begin with a header line for use by ``uudecode'' giving it the resulting
-suggested file ``output-name'' and access mode.  If the ``output-name'' is
-specifically ``/dev/stdout'', then ``uudecode'' will emit the decoded file
-to standard out.
+begin with a header line for use by 'uudecode' giving it the resulting
+suggested file 'output-name' and access mode.  If the 'output-name' is
+specifically '/dev/stdout', then 'uudecode' will emit the decoded file to
+standard out.
 
-``Note'': ``uuencode'' uses buffered input and assumes that it is not hand
+'Note': 'uuencode' uses buffered input and assumes that it is not hand
 typed from a tty.  The consequence is that at a tty, you may need to hit
 Ctl-D several times to terminate input.
 
