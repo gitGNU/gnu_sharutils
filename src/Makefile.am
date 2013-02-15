@@ -128,8 +128,7 @@ compress-link:
 	  && ln -sf compress-dummy $(DESTDIR)$(bindir)/compress
 
 help-text : mk-help.sh $(bin_PROGRAMS)
+	touch $@
 	$(SHELL) mk-help.sh $@ $(bin_PROGRAMS)
-
-.PHONY : help-text
 
 ## src/Makefile.am ends here

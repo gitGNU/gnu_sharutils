@@ -1,7 +1,7 @@
 shar (GNU sharutils) - create a shell archive
-USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]
+Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]
 
-specifying compression:
+Specifying compression:
    -p, --intermix-type        specify compression for input files
                                 - prohibits the option: vanilla-operation
    -C, --compactor=str        specify compaction (compression) program
@@ -11,12 +11,12 @@ specifying compression:
                                 - It must be in the range: 1 to 9
        --level-for-gzip=num   This is an alias for 'level-of-compression'
 
-specifying file encoding methodology:
+Specifying file encoding methodology:
    -M, --mixed-uuencode       decide uuencoding for each file
    -B, --uuencode             treat all files as binary
    -T, --text-files           treat all files as text
 
-specifying file selection and output modes:
+Specifying file selection and output modes:
    -o, --output-prefix=str    print output to file PREFIX.nn
    -l, --whole-size-limit=num split archive, not files, to size
                                 - requires the option: output-prefix
@@ -55,15 +55,15 @@ Producing different kinds of shars:
    -Q, --quiet-unshar         avoid verbose messages at unshar time
    -f, --basename             restore in one directory, despite hierarchy
 
-Internationalization options::
+Internationalization options:
        --no-i18n              do not internationalize
        --print-text-domain-dir  print directory with shar messages
 
-user feedback/entertainment:
+User feedback/entertainment:
    -q, --quiet                do not output verbose messages
        --silent               This is an alias for 'quiet'
 
-version, usage and configuration options:
+Version, usage and configuration options:
    -v, --version[=arg]        Output version information and exit
    -h, --help                 Display extended usage information and exit
    -!, --more-help            Extended usage information passed thru pager
@@ -97,4 +97,4 @@ If you do 'uuencode', base 64 is the preferred encoding method.
 
 Shar supports reading a configuration file:  $HOME/.sharrc
 
-please send bug reports to:  bug-gnu-utils@gnu.org
+Please send bug reports to:  <bug-gnu-utils@gnu.org>

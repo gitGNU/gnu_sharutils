@@ -52,12 +52,12 @@ echo "include = 'char const * const program_name = \"${progname}\";';"
 test -f ${progname}-full-help.txt && {
   echo 'full-usage = <<_EOUsage_'
   cat ${progname}-full-help.txt
-  echo '_EOUsage_;'
+  printf '\n_EOUsage_;\n'
 }
 test -f ${progname}-short-help.txt && {
   echo 'short-usage = <<_EOUsage_'
   cat ${progname}-short-help.txt
-  echo '_EOUsage_;'
+  printf '\n_EOUsage_;\n'
 }
 #endshell
 

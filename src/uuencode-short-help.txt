@@ -1,2 +1,2 @@
 uuencode (GNU sharutils) - encode a file into email friendly text
-USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name
+Usage:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name

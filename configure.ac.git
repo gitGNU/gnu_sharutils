@@ -2,7 +2,7 @@
 # Copyright (C) 1994-2013 Free Software Foundation, Inc.
 # Process this file with autoconf to produce a configure script.
 #
-AC_INIT([GNU sharutils],[4.13.4pre3],[bug-gnu-utils@gnu.org])
+AC_INIT([GNU sharutils],[4.13.4pre5],[bug-gnu-utils@gnu.org])
 AC_CONFIG_SRCDIR([src/shar.c])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([1.5 dist-xz])
@@ -44,7 +44,7 @@ dnl FIXME: Check that mailer accepts -s.
 AC_PATH_PROGS(MAILER, [mailx elm mush mail], [no])
 [PATH="$PATH_save"]
 
-AC_PATH_PROGS(SH,  [bash sh], [no])
+AC_PATH_PROGS(SH,  [bash ksh dash sh], [no])
 AC_PATH_PROGS(TAR, [gnutar targnu gtar tar], [tar])
 
 dnl in m4/sharutils.m4
@@ -79,15 +79,6 @@ AC_CHECK_FUNCS([fchmod isascii strchr])
 AC_FUNC_CLOSEDIR_VOID
 AC_FUNC_FSEEKO
 AC_REPLACE_FUNCS([memset mktime strftime xmalloc xstrdup])
-
-AC_MSG_CHECKING([for /etc/systemid])
-[if test -f /etc/systemid; then]
-  AC_MSG_RESULT([yes])
-  AC_DEFINE(HAVE_ETC_SYSTEMID, 1,
-            [Define if the current hostname may be found in /etc/systemid.])
-[else]
-  AC_MSG_RESULT([no])
-[fi]
 [AUTOGEN=`command -v autogen`
 $AUTOGEN --version >/dev/null 2>&1 || AUTOGEN='touch $@']
 AC_SUBST(AUTOGEN)

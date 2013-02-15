@@ -90,7 +90,7 @@ flag = {
 flag = {
     name        = ignore-chmod;
     value       = c;
-    descrip     = 'Ignore @code{fchmod(3P)} errors';
+    descrip     = 'ignore @code{fchmod(3P)} errors';
     doc = <<- _EODoc_
 	By default, if the output file permissions cannot be changed to
 	the permissions specified in the encoded data, the file will not

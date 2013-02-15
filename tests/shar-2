@@ -35,7 +35,7 @@ done
 
 cd ${tmppfx}.dir
 ${UNSHAR} ${debug_unshar} ../${tmppfx}.shar || exit 1
-cd -
+cd ..
 
 ${DIFF} -r ${tmppfx}.d ${tmppfx}.dir || exit 1
 

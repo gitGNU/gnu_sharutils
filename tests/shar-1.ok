@@ -1,13 +1,13 @@
 #!/bin/sh
 # This is a shell archive (produced by __PACKAGE_STRING__).
 # To extract the files from this archive, save it to some FILE, remove
-# everything before the `#!/bin/sh' line above, then type `sh FILE'.
+# everything before the '#!/bin/sh' line above, then type 'sh FILE'.
 #
 lock_dir=_sh<PID>
 # Made on ...
 # Source directory was ...
 #
-# Existing files will *not* be overwritten, unless `-c' is specified.
+# Existing files will *not* be overwritten, unless '-c' is specified.
 #
 # This shar contains:
 # length mode       name
@@ -95,7 +95,7 @@ else
   shar_touch=:
   echo
   ${echo} 'WARNING: not restoring timestamps.  Consider getting and
-installing GNU `touch'\'', distributed in GNU coreutils...'
+installing GNU '\''touch'\'', distributed in GNU coreutils...'
   echo
 fi
 rm -f ${st1} ${st2} ${st2tr} ${st3} ${f}

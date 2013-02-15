@@ -54,7 +54,6 @@ static const char cright_years_z[] =
 #include "md5.c"
 #include "md5.h"
 #include "quotearg.h"
-#include "whoami.c"
 #include "xalloc.h"
 #include "xgetcwd.h"
 
@@ -66,6 +65,8 @@ static const char cright_years_z[] =
 #ifndef NUL
 #  define NUL '\0'
 #endif
+
+#include "scripts.x"
 
 /* Character which goes in front of each line.  */
 #define DEFAULT_LINE_PREFIX_1 'X'
@@ -148,16 +149,9 @@ struct tm *localtime ();
 # define TYPE_MAXIMUM(t) ((t) (~ (t) 0 - TYPE_MINIMUM (t)))
 #endif
 
-static char const explain_fmt_fmt[] = "# %%-%ds\n# %%-%ds\n";
-static char explain_text_fmt[sizeof(explain_fmt_fmt)];
-
-static char const explain_1[] =
-  "This is part 1 of a multipart archive.";
-static int  const explain_1_len = sizeof(explain_1) - 1;
-
-static char const explain_2[] =
-  "Do not concatenate these parts, unpack them in orderwith `/bin/sh'.";
-static int  const explain_2_len = sizeof(explain_2) - 1;
+static char explain_text_fmt[sizeof(explain_fmt_fmt_z)];
+static int  const explain_1_len = sizeof(explain_1_z) - 1;
+static int  const explain_2_len = sizeof(explain_2_z) - 1;
 
 typedef enum {
   QUOT_ID_LNAME,
@@ -166,9 +160,6 @@ typedef enum {
   QUOT_ID_GOOD_STATUS,
   QUOT_ID_BAD_STATUS
 } quot_id_t;
-
-static char const cut_mark_line[] =
-  "---- Cut Here and feed the following to sh ----\n";
 
 typedef struct {
   char const *  cmpr_name;
@@ -258,8 +249,6 @@ static off_t first_file_position = 0;
 /* Actual output filename.  */
 static char *output_filename = NULL;
 
-static char *submitter_address = NULL;
-
 /* Output file ordinal.  FIXME: also flag for -o.  */
 static int part_number = 0;
 
@@ -286,8 +275,9 @@ static char** mkdir_already;
 # define DEBUG_PRINT(Format, Value) \
     if (debugging_mode)					\
       {							\
+	static char const _f[] = Format;		\
 	char buf[INT_BUFSIZE_BOUND (off_t)];		\
-	printf (Format, offtostr (Value, buf));		\
+	printf (_f, offtostr (Value, buf));		\
       }
 #else
 # define DEBUG_PRINT(Format, Value)
@@ -300,8 +290,6 @@ static void close_output (int next_part_no);
 
 /* Define a type just for easing ansi2knr's life.  */
 typedef int (*walker_t) (const char *, const char *);
-
-#include "scripts.x"
 
 static void
 init_shar_msg(void)
@@ -402,7 +390,7 @@ echo_status (const char*  test,
   *scribble = NUL;
   good_quot = format_report (QUOT_ID_GOOD_STATUS, ok_fmt, what);
   bad_quot  = format_report (QUOT_ID_BAD_STATUS, bad_fmt, what);
-  die_str   = die_on_failure ? "\n     exit 1" : "";
+  die_str   = die_on_failure ? show_status_dies_z : "";
 
   if (good_quot != NULL)
     {
@@ -697,13 +685,13 @@ generate_configure (void)
 	{
 	  if (HAVE_OPT(QUERY_USER))
 	    /* Check if /dev/tty exists.  If yes, define shar_tty to
-	       `/dev/tty', else, leave it empty.  */
+	       '/dev/tty', else, leave it empty.  */
 
 	    fputs (dev_tty_check_z, output);
 
 	  /* Try to find a way to echo a message without newline.  Set
-	     shar_n to `-n' or nothing for an echo option, and shar_c
-	     to `\c' or nothing for a string terminator.  */
+	     shar_n to '-n' or nothing for an echo option, and shar_c
+	     to '\c' or nothing for a string terminator.  */
 
 	  fputs (echo_checks_z, output);
 	}
@@ -716,16 +704,14 @@ generate_configure (void)
 
   if ((! HAVE_OPT(WHOLE_SIZE_LIMIT)) || (part_number == 1))
     {
-      static char const lock_dir[] = "${lock_dir}";
-
-      echo_status (ck_lockdir_z, NULL, SM_lock_dir_exists, lock_dir, 1);
+      echo_status (ck_lockdir_z, NULL, SM_lock_dir_exists, lock_dir_z, 1);
 
       /* Create locking directory.  */
       if (HAVE_OPT(VANILLA_OPERATION))
-	echo_status ("mkdir ${lock_dir}", NULL, SM_no_lock_dir, lock_dir, 1);
+	echo_status (make_lock_dir_z, NULL, SM_no_lock_dir, lock_dir_z, 1);
       else
-	echo_status ("mkdir ${lock_dir}", SM_x_lock_dir_created,
-                     SM_x_no_lock_dir, lock_dir, 1);
+	echo_status (make_lock_dir_z, SM_x_lock_dir_created,
+                     SM_x_no_lock_dir, lock_dir_z, 1);
     }
   else
     {
@@ -799,11 +785,11 @@ generate_mkdir (const char *path)
 
   quoted_path = quotearg_n_style (
     QUOT_ID_PATH, shell_always_quoting_style, path);
-  fprintf (output, "if test ! -d %s; then\n", quoted_path);
+  fprintf (output, dir_check_z, quoted_path);
   if (! HAVE_OPT(QUIET_UNSHAR))
     {
-      fprintf (output, "  mkdir %s\n", quoted_path);
-      echo_status ("test $? -eq 0", SM_x_dir_created, SM_x_no_dir, path, 1);
+      fprintf (output, dir_create_z, quoted_path);
+      echo_status (aok_check_z, SM_x_dir_created, SM_x_no_dir, path, 1);
     }
   else
     fprintf (output, "  mkdir %s || exit 1\n", quoted_path);
@@ -885,6 +871,73 @@ generate_one_header_line (const char *local_name, const char *restore_name)
   return 0;
 }
 
+static void
+print_caution_notes (FILE * fp)
+{
+  {
+    char const * msg;
+
+    if (! HAVE_OPT(NO_CHECK_EXISTING))
+      msg = exist_keep_z;
+    else if (HAVE_OPT(QUERY_USER))
+      msg = exist_ask_z;
+    else
+      msg = exist_kill_z;
+
+    fprintf (fp, exist_note_z, msg);
+  }
+
+  if (HAVE_OPT(SPLIT_SIZE_LIMIT))
+    {
+      int len = snprintf (explain_text_fmt, sizeof (explain_text_fmt),
+                          explain_fmt_fmt_z, explain_1_len, explain_2_len);
+      if ((unsigned)len >= sizeof (explain_text_fmt))
+        strcpy (explain_text_fmt, "#%-256s\n#%-256s\n");
+
+      /* May be split, provide for white space for an explanation.  */
+
+      fputs ("#\n", output);
+      archive_type_position = ftell (output);
+      fprintf (fp, explain_text_fmt, "", "");
+    }
+}
+
+static void
+print_header_stamp (FILE * fp)
+{
+  {
+    char const * pz = HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) : "";
+    char const * ch = HAVE_OPT(ARCHIVE_NAME) ? ", a shell" : "a shell";
+
+    fprintf (fp, file_leader_z, pz, ch, PACKAGE, VERSION, sharpid);
+  }
+
+  {
+    static char const ftime_fmt[] = "%Y-%m-%d %H:%M %Z";
+    /*
+     * All fields are two characters, except %Y is four.
+     */
+    char buffer[sizeof (ftime_fmt) + 4];
+    time_t now;
+    struct tm * local_time;
+    time (&now);
+    local_time = localtime (&now);
+    strftime (buffer, sizeof (buffer) - 1, ftime_fmt, local_time);
+    fprintf (fp, made_on_comment_z, buffer, OPT_ARG(SUBMITTER));
+  }
+
+  {
+    char * c_dir = xgetcwd ();
+    if (c_dir != NULL)
+      {
+        fprintf (fp, source_dir_comment_z, c_dir);
+        free (c_dir);
+      }
+    else
+      error (0, errno, _("Cannot get current directory name"));
+  }
+}
+
 /*---.
 | ?  |
 `---*/
@@ -892,9 +945,6 @@ generate_one_header_line (const char *local_name, const char *restore_name)
 static void
 generate_full_header (int argc, char * const * argv)
 {
-  time_t now;
-  struct tm *local_time;
-  char buffer[80];		/* FIXME: No fix limit in GNU... */
   int counter;
 
   for (counter = 0; counter < argc; counter++)
@@ -911,72 +961,20 @@ generate_full_header (int argc, char * const * argv)
 
   if (HAVE_OPT(NET_HEADERS))
     {
-      fprintf (output, "Submitted-by: %s\n", submitter_address);
-      fprintf (output, "Archive-name: %s%s%02d\n\n",
-	       OPT_ARG(ARCHIVE_NAME),
-               (strchr (OPT_ARG(ARCHIVE_NAME), '/')) ? "" : "/part",
-	       part_number ? part_number : 1);
+      static char const by[] =
+        "Submitted-by: %s\nArchive-name: %s%s%02d\n\n";
+      bool has_slash = (strchr (OPT_ARG(ARCHIVE_NAME), '/') != NULL);
+      int  part = (part_number > 0) ? part_number : 1;
+
+      fprintf (output, by, OPT_ARG(SUBMITTER), OPT_ARG(ARCHIVE_NAME),
+               has_slash ? "" : "/part", part);
     }
 
   if (HAVE_OPT(CUT_MARK))
-    fputs (cut_mark_line, output);
-  {
-    char const * pz = HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) : "";
-    char const * ch = HAVE_OPT(ARCHIVE_NAME) ? ", a shell" : "a shell";
+    fputs (cut_mark_line_z, output);
 
-    fprintf (output, file_leader_z, pz, ch, PACKAGE, VERSION, sharpid);
-  }
-
-  time (&now);
-  local_time = localtime (&now);
-  strftime (buffer, 79, "%Y-%m-%d %H:%M %Z", local_time);
-  fprintf (output, "# Made on %s by <%s>.\n",
-	   buffer, submitter_address);
-
-  {
-    char * current_directory = xgetcwd ();
-    if (current_directory)
-      {
-        fprintf (output, "# Source directory was `%s'.\n",
-                 current_directory);
-        free (current_directory);
-      }
-    else
-      error (0, errno, _("Cannot get current directory name"));
-  }
-
-  {
-    static char const fmt[] =
-      "#\n# Existing files %s.\n";
-    char const * msg;
-
-    if (! HAVE_OPT(NO_CHECK_EXISTING))
-      msg = "will *not* be overwritten, unless `-c' is specified";
-    else if (HAVE_OPT(QUERY_USER))
-      msg = "MAY be overwritten";
-    else
-      msg = "WILL be overwritten";
-    fprintf(output, fmt, msg);
-  }
-
-  if (HAVE_OPT(QUERY_USER))
-    fputs ("# The unsharer will be INTERACTIVELY queried.\n",
-	   output);
-
-  if (HAVE_OPT(SPLIT_SIZE_LIMIT))
-    {
-      int len = snprintf (explain_text_fmt, sizeof (explain_text_fmt),
-                          explain_fmt_fmt, explain_1_len, explain_2_len);
-      if ((unsigned)len >= sizeof (explain_text_fmt))
-        strcpy (explain_text_fmt, "#%-256s\n#%-256s\n");
-
-      /* May be split, provide for white space for an explanation.  */
-
-      fputs ("#\n", output);
-      archive_type_position = ftell (output);
-      fprintf (output, explain_text_fmt, "", "");
-    }
-
+  print_header_stamp (output);
+  print_caution_notes (output);
   fputs (contents_z, output);
 
   for (counter = 0; counter < argc; counter++)
@@ -999,8 +997,8 @@ change_files (const char * restore_name, off_t * remaining_size)
 {
   /* Change to another file.  */
 
-  DEBUG_PRINT (_("New file, remaining %s, "), *remaining_size);
-  DEBUG_PRINT (_("Limit still %s\n"), OPT_VALUE_WHOLE_SIZE_LIMIT);
+  DEBUG_PRINT ("New file, remaining %s, ", *remaining_size);
+  DEBUG_PRINT ("Limit still %s\n", OPT_VALUE_WHOLE_SIZE_LIMIT);
 
   /* Close the "&&" and report an error if any of the above
      failed.  */
@@ -1026,18 +1024,19 @@ change_files (const char * restore_name, off_t * remaining_size)
 
   if (HAVE_OPT(NET_HEADERS))
     {
-      fprintf (output, "Submitted-by: %s\n", submitter_address);
+      fprintf (output, "Submitted-by: %s\n", OPT_ARG(SUBMITTER));
       fprintf (output, "Archive-name: %s%s%02d\n\n", OPT_ARG(ARCHIVE_NAME),
 	       strchr (OPT_ARG(ARCHIVE_NAME), '/') ? "" : "/part",
 	       part_number ? part_number : 1);
     }
 
   if (HAVE_OPT(CUT_MARK))
-    fputs (cut_mark_line, output);
+    fputs (cut_mark_line_z, output);
 
   {
     static const char part_z[] = "part %02d of %s ";
-    char const * nm = HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) : "a multipart";
+    char const * nm = HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) :
+      "a multipart";
     off_t len = sizeof(part_z) + strlen(nm) + 16;
     if (scribble_size < len)
       {
@@ -1055,7 +1054,7 @@ change_files (const char * restore_name, off_t * remaining_size)
 }
 
 /* Emit shell script text to validate the restored file size
-   Validate the transferred file using simple `wc' command. */
+   Validate the transferred file using simple 'wc' command. */
 static void
 emit_char_ct_validation (
      char const *local_name,
@@ -1150,7 +1149,7 @@ file_needs_encoding (char const * fname)
 
   /* Read the input file, seeking for one non-ASCII character.  Considering the
      average file size, even reading the whole file (if it is text) would
-     usually be faster than invoking `file'.  */
+     usually be faster than invoking 'file'.  */
 
   infp = fopen (fname, freadonly_mode);
 
@@ -1340,8 +1339,8 @@ open_shar_input (
 static void
 split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
 {
-  DEBUG_PRINT (_("New file, remaining %s, "), (*size_left));
-  DEBUG_PRINT (_("Limit still %s\n"), OPT_VALUE_WHOLE_SIZE_LIMIT);
+  DEBUG_PRINT ("New file, remaining %s, ", (*size_left));
+  DEBUG_PRINT ("Limit still %s\n", OPT_VALUE_WHOLE_SIZE_LIMIT);
 
   fprintf (output, "%s\n", OPT_ARG(HERE_DELIMITER));
 
@@ -1379,7 +1378,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
       /* Rewrite the info lines on the first header.  */
 
       fseek (output, archive_type_position, SEEK_SET);
-      fprintf (output, explain_text_fmt, explain_1, explain_2);
+      fprintf (output, explain_text_fmt, explain_1_z, explain_2_z);
     }
   close_output (part_number + 1);
 
@@ -1389,7 +1388,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
 
   if (HAVE_OPT(NET_HEADERS))
     {
-      fprintf (output, "Submitted-by: %s\n", submitter_address);
+      fprintf (output, "Submitted-by: %s\n", OPT_ARG(SUBMITTER));
       fprintf (output, "Archive-name: %s%s%02d\n\n",
                OPT_ARG(ARCHIVE_NAME),
                strchr (OPT_ARG(ARCHIVE_NAME), '/') ? "" : "/part",
@@ -1397,7 +1396,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
     }
 
   if (HAVE_OPT(CUT_MARK))
-    fputs (cut_mark_line, output);
+    fputs (cut_mark_line_z, output);
 
   fprintf (output, continue_archive_z,
            basename (output_filename), part_number,
@@ -1466,25 +1465,26 @@ process_shar_input (FILE * input, off_t * size_left, int * split_flag,
           /* Old mail programs interpret ~ directives.  */
           && scribble[0] != '~'
 
-          /* Avoid mailing lines which are just `.'.  */
+          /* Avoid mailing lines which are just '.'.  */
           && scribble[0] != '.'
 
 #if STRNCMP_IS_FAST
           && strncmp (scribble, OPT_ARG(HERE_DELIMITER), here_delimiter_length)
 
-          /* unshar -e: avoid `exit 0'.  */
+          /* unshar -e: avoid 'exit 0'.  */
           && strncmp (scribble, "exit 0", 6)
 
-          /* Don't let mail prepend a `>'.  */
+          /* Don't let mail prepend a '>'.  */
           && strncmp (scribble, "From", 4)
 #else
           && (scribble[0] != OPT_ARG(HERE_DELIMITER)[0]
-              || strncmp (scribble, OPT_ARG(HERE_DELIMITER), here_delimiter_length))
+              || strncmp (scribble, OPT_ARG(HERE_DELIMITER),
+                          here_delimiter_length))
 
-          /* unshar -e: avoid `exit 0'.  */
+          /* unshar -e: avoid 'exit 0'.  */
           && (scribble[0] != 'e' || strncmp (scribble, "exit 0", 6))
 
-          /* Don't let mail prepend a `>'.  */
+          /* Don't let mail prepend a '>'.  */
           && (scribble[0] != 'F' || strncmp (scribble, "From", 4))
 #endif
           )
@@ -1557,7 +1557,7 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
                : struct_stat.st_size);
 
       *size_left_p = OPT_VALUE_WHOLE_SIZE_LIMIT - current_size;
-      DEBUG_PRINT (_("In shar: remaining size %s\n"), *size_left_p);
+      DEBUG_PRINT ("In shar: remaining size %s\n", *size_left_p);
 
       if (!HAVE_OPT(SPLIT_SIZE_LIMIT) && current_size > first_file_position
           && (encoded_size > *size_left_p))
@@ -1672,7 +1672,7 @@ finish_sharing_file (const char * lname, const char * lname_q,
           && (fp = fopen (lname, freadonly_mode)) != NULL
 	  && md5_stream (fp, md5buffer) == 0)
 	{
-	  /* Validate the transferred file using `md5sum' command.  */
+	  /* Validate the transferred file using 'md5sum' command.  */
 	  size_t cnt;
 	  did_md5 = 1;
 
@@ -1909,7 +1909,6 @@ close_output (int part)
  * @param[in,out] pz   string to trim
  * @returns the first non-blank character in "pz".
  */
-
 static char *
 trim (char * pz)
 {
@@ -1926,6 +1925,27 @@ trim (char * pz)
   while (isspace (pz[-1]))  pz--;
   *pz = NUL;
   return res;
+}
+
+/**
+ * Guess at a submitter email address.  Get the current login name and
+ * current host name and hope that that is reasonable.
+ *
+ * @returns an allocated string containing "login@thishostname".
+ */
+static void
+set_submitter (void)
+{
+  char buffer[256];
+  char * uname = getuser (getuid ());
+  size_t len   = strlen (uname);
+  if (uname == NULL)
+    fserr (SHAR_EXIT_FAILED, "getpwuid", "getuid()");
+  
+  memcpy (buffer, uname, len);
+  buffer[len++] = '@';
+  gethostname (buffer + len, sizeof (buffer) - len);
+  SET_OPT_SUBMITTER(buffer);
 }
 
 /**
@@ -1956,9 +1976,8 @@ configure_shar (int * argc_p, char *** argv_p)
     SET_OPT_MIXED_UUENCODE;
 
   /* Set defaults for unset options.  */
-
-  if (!submitter_address)
-    submitter_address = get_submitter (NULL);
+  if (! HAVE_OPT(SUBMITTER))
+    set_submitter ();
 
   open_output ();
   if (isatty (fileno (output)) && isatty (STDERR_FILENO))

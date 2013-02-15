@@ -11,10 +11,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.13.3\n"
+"Project-Id-Version: sharutils 4.13.4pre4\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-01-06 18:22-0800\n"
-"PO-Revision-Date: 2013-01-07 21:01+0200\n"
+"POT-Creation-Date: 2013-02-09 08:49-0800\n"
+"PO-Revision-Date: 2013-02-10 13:16+0200\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
@@ -30,637 +30,1046 @@ msgstr ""
 #. the shar-generated shell script so the shar user can create shar archives
 #. with messages localized for one locale.
 #.
-#: src/scripts.x:397
+#: src/scripts.x:449
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
 msgstr "Nota: non se están comprobando as sumas de comprobación MD5. Considere instalar GNU coreutils."
 
-#: src/scripts.x:398
+#: src/scripts.x:450
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
+"installing GNU 'touch', distributed in GNU coreutils..."
 msgstr ""
-"AVISO: non se están a restaurar as marcas de tempo.  Considere obter e instalar\n"
-"GNU «touch», que se distribúe en GNU coreutils..."
+"AVISO: non se están a restaurar as marcas de tempo.\n"
+"Considere obter e instalar GNU «touch», que se distribúe\n"
+"en GNU coreutils..."
 
-#: src/scripts.x:400
+#: src/scripts.x:452
 #, c-format
 msgid "lock directory %s exists"
 msgstr "o directorio de bloqueo %s existe"
 
-#: src/scripts.x:401
+#: src/scripts.x:453
 #, c-format
 msgid "failed to create %s lock directory"
 msgstr "produciuse un erro ao crear o directorio de bloqueo %s"
 
-#: src/scripts.x:402
+#: src/scripts.x:454
 #, c-format
 msgid "x - created lock directory %s."
 msgstr "x - creouse o directorio de bloqueo %s."
 
-#: src/scripts.x:403
+#: src/scripts.x:455
 #, c-format
 msgid "x - failed to create lock directory %s."
 msgstr "x - produciuse un erro ao crear o directorio de bloqueo %s."
 
-#: src/scripts.x:404
+#: src/scripts.x:456
 #, c-format
 msgid "x - created directory %s."
 msgstr "x - creouse o directorio %s."
 
-#: src/scripts.x:405
+#: src/scripts.x:457
 #, c-format
 msgid "x - failed to create directory %s."
 msgstr "x - produciuse un erro ao crear o directorio %s."
 
-#: src/scripts.x:406
+#: src/scripts.x:458
 msgid "yes"
 msgstr "si"
 
-#: src/scripts.x:407
+#: src/scripts.x:459
 msgid "overwrite this file"
 msgstr "sobrescribir este ficheiro"
 
-#: src/scripts.x:408
+#: src/scripts.x:460
 msgid "no"
 msgstr "non"
 
-#: src/scripts.x:409
+#: src/scripts.x:461
 msgid "skip this file"
 msgstr "omitir este ficheiro"
 
-#: src/scripts.x:410 libopts/enum.c:486
+#: src/scripts.x:462
 msgid "all"
 msgstr "todo"
 
-#: src/scripts.x:411
+#: src/scripts.x:463
 msgid "overwrite all files"
 msgstr "sobrescribir todos os ficheiros"
 
-#: src/scripts.x:412 libopts/enum.c:491
+#: src/scripts.x:464
 msgid "none"
 msgstr "nada"
 
-#: src/scripts.x:413
+#: src/scripts.x:465
 msgid "overwrite no files"
 msgstr "non sobrescribir ningún ficheiro"
 
-#: src/scripts.x:414
+#: src/scripts.x:466
 msgid "help"
 msgstr "axuda"
 
-#: src/scripts.x:415
+#: src/scripts.x:467
 msgid "explain choices"
 msgstr "explicar as opcións"
 
-#: src/scripts.x:416
+#: src/scripts.x:468
 msgid "quit"
 msgstr "saír"
 
-#: src/scripts.x:417
+#: src/scripts.x:469
 msgid "exit immediately"
 msgstr "saír inmediatamente"
 
-#: src/scripts.x:418
+#: src/scripts.x:470
 #, c-format
 msgid "restore of %s failed"
 msgstr "produciuse un erro ao restaurar %s"
 
-#: src/scripts.x:419
+#: src/scripts.x:471
 #, c-format
 msgid "  chmod %04o %s\n"
 msgstr "  chmod %04o %s\n"
 
-#: src/scripts.x:420
+#: src/scripts.x:472
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "Fin da parte %d, séguese coa parte %d"
 
-#: src/scripts.x:421
+#: src/scripts.x:473
 #, c-format
 msgid "End of %s part %d"
 msgstr "Fin de %s parte %d"
 
-#: src/scripts.x:422
+#: src/scripts.x:474
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
-msgstr ""
+msgstr "advertencia de restauración:  o tamaño de %s non é %s"
 
-#: src/scripts.x:423 src/shar.c:1307
+#: src/scripts.x:475 src/shar.c:1303
 msgid "(text)"
 msgstr "(texto)"
 
-#: src/scripts.x:424
+#: src/scripts.x:476
 msgid "(compressed)"
 msgstr "(comprimido)"
 
-#: src/scripts.x:425
+#: src/scripts.x:477
 msgid "(gzipped)"
 msgstr "(comprimido con gzip)"
 
-#: src/scripts.x:426
+#: src/scripts.x:478
 msgid "(bzipped)"
 msgstr "(comprimido con bzip)"
 
-#: src/scripts.x:427
+#: src/scripts.x:479
 msgid "(binary)"
 msgstr "(binario)"
 
-#: src/scripts.x:428
+#: src/scripts.x:480
 msgid "archive"
 msgstr "arquivo"
 
-#: src/scripts.x:429
+#: src/scripts.x:481
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "O ficheiro %s continúase na parte %d"
 
-#: src/scripts.x:430
+#: src/scripts.x:482
 msgid "Please unpack part 1 first!"
 msgstr "Desempaquete primeiro a parte 1!"
 
-#: src/scripts.x:431
+#: src/scripts.x:483
 msgid "Please unpack part ${shar_sequence} next!"
 msgstr "Desempaquete a continuación a parte ${shar_sequence}!"
 
-#: src/scripts.x:432
+#: src/scripts.x:484
 #, c-format
 msgid "x - STILL SKIPPING %s"
 msgstr "x - AÍNDA OMITINDO %s"
 
-#: src/scripts.x:433
+#: src/scripts.x:485
 #, c-format
 msgid "continuing file %s"
 msgstr "continuando o ficheiro %s"
 
-#: src/scripts.x:434
+#: src/scripts.x:486
 msgid "(empty)"
 msgstr "(baleiro)"
 
-#: src/scripts.x:435
+#: src/scripts.x:487
 #, c-format
 msgid "x - overwriting %s"
 msgstr "x - sobrescribindo %s"
 
-#: src/scripts.x:436
+#: src/scripts.x:488
 #, c-format
 msgid "overwrite %s"
 msgstr "sobrescribir %s"
 
-#: src/scripts.x:437
+#: src/scripts.x:489
 #, c-format
 msgid "SKIPPING %s"
 msgstr "OMITINDO %s"
 
-#: src/scripts.x:438
+#: src/scripts.x:490
 msgid "extraction aborted"
 msgstr "extracción interrompida"
 
-#: src/scripts.x:439
+#: src/scripts.x:491
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
 msgstr "x - OMITINDO %s (o ficheiro xa existe)"
 
-#: src/scripts.x:440
+#: src/scripts.x:492
 #, c-format
 msgid "x - extracting %s %s"
 msgstr "x - extraendo %s %s"
 
-#: src/scripts.x:441
+#: src/scripts.x:493
 #, c-format
 msgid "File %s is complete"
 msgstr "O ficheiro %s está completo"
 
-#: src/scripts.x:442
+#: src/scripts.x:494
 #, c-format
 msgid "uudecoding file %s"
 msgstr "executando uudecode no ficheiro %s"
 
-#: src/scripts.x:443
+#: src/scripts.x:495
 msgid "MD5 check failed"
 msgstr "Produciuse un erro ao comprobar o MD5"
 
-#: src/scripts.x:444
+#: src/scripts.x:496
 msgid "You have unpacked the last part"
 msgstr "Desempaquetouse a última parte"
 
-#: src/scripts.x:445
+#: src/scripts.x:497
 #, c-format
 msgid "x - removed lock directory %s."
 msgstr "x - retirouse o directorio de bloqueo %s."
 
-#: src/scripts.x:446
+#: src/scripts.x:498
 #, c-format
 msgid "x - failed to remove lock directory %s."
 msgstr "x - produciuse un erro ao retirar o directorio de bloqueo %s."
 
-#: src/shar-opts.c:1674
+#: src/shar-opts.c:1656
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "Non é posíbel reabrir %s como stdin"
 
-#: src/shar-opts.c:1784
+#: src/shar-opts.c:1766
 msgid "shar usage error:\n"
 msgstr "Erro de uso de shar:\n"
 
-#: src/shar-opts.c:1820
+#: src/shar-opts.c:1802
 msgid "shar fatal error:\n"
 msgstr "Erro moi grave de shar:\n"
 
-#: src/shar-opts.c:1857 src/unshar-opts.c:564 src/uudecode-opts.c:483
-#: src/uuencode-opts.c:474
+#: src/shar-opts.c:1839 src/uudecode-opts.c:493 src/uuencode-opts.c:447
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr ""
 
-#: src/shar-opts.c:1976 src/unshar-opts.c:683 src/uudecode-opts.c:602
-#: src/uuencode-opts.c:593
+#: src/shar-opts.c:1963 src/uudecode-opts.c:617 src/uuencode-opts.c:571
 msgid "No memory for duping translated strings\n"
+msgstr "Non hai memoria dabondo para realizar dup das cadeas traducidas\n"
+
+#: src/shar-opts.c:2026
+msgid ""
+"shar (GNU sharutils) 4.13.4pre4\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"shar (GNU sharutils) 4.13.4pre4\n"
+"Copyright © 1994-2013 da Free Software Foundation, Inc., todos os dereitos\n"
+"reservados. Isto é software libre. Ten licenza para o seu uso, modificación e\n"
+"redistribución baixo as condicións da Licenza pública xeral de GNU, tanto na\n"
+"versión 3 como en calquera versión posterior <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/shar-opts.c:2033
+msgid ""
+"shar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"shar é software libre: pode redistribuílo ou modificalo baixo as\n"
+"condicións da Licenza pública xeral GNU tal como a publica a Free\n"
+"Software Foundation; tanto na versión 3 da Licenza como (segundo o seu\n"
+"criterio) en calquera versión posterior.\n"
+"\n"
+
+#: src/shar-opts.c:2037
+msgid ""
+"shar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"shar distribúese esperando que sexa útil, mais SEN NINGUNHA GARANTÍA;\n"
+"mesmo sen a garantía implícita de VALOR COMERCIAL ou ADECUACIÓN PARA UN\n"
+"PROPÓSITO PARTICULAR. Para máis detalles vexa a Licenza pública xeral GNU.\n"
+"\n"
+
+#: src/shar-opts.c:2041 src/uudecode-opts.c:695 src/uuencode-opts.c:649
+msgid ""
+"You should have received a copy of the GNU General Public License along\n"
+"with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+"Debeu recibir unha copia da Licenza pública xeral GNU xunto con este\n"
+"programa; en caso contrario, olle <http://www.gnu.org/licenses/>.\n"
+
+#: src/shar-opts.c:2045
+#, c-format
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
 msgstr ""
 
-#: src/shar-opts.c:2051
-#, fuzzy
-msgid "create a shell archiv"
-msgstr "%s probabelmente non é un arquivo de shell"
-
-#: src/shar-opts.c:2053
+#: src/shar-opts.c:2049
 msgid ""
-"shar (GNU sharutils) - create a shell archive - Ver. 4.13.3\n"
-"USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+"If no 'file's are specified, the list of input files is read from a\n"
+"standard input.  Standard input must not be a terminal.\n"
+msgstr ""
+
+#: src/shar-opts.c:2053 src/shar-opts.c:2140
+msgid ""
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
 "\n"
+msgstr ""
+
+#: src/shar-opts.c:2060 src/shar-opts.c:2147
+msgid ""
+"Options may be specified in any order until a 'file' argument is\n"
+"recognized.  If the '--intermix-type' option has been specified, more\n"
+"compression and encoding options will be recognized between the 'file'\n"
+"arguments.\n"
 "\n"
+msgstr ""
+
+#: src/shar-opts.c:2064
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base 64 is the preferred encoding method.\n"
+msgstr ""
+
+#: src/shar-opts.c:2069
+msgid "shar (GNU sharutils) 4.13.4pre4"
+msgstr "shar (GNU sharutils) 4.13.4pre4"
+
+#: src/shar-opts.c:2072
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2074
+msgid ""
 "specifying compression:\n"
-"\n"
 "   -p, --intermix-type        specify compression for input files\n"
-"                                - prohibits these options:\n"
-"                                vanilla-operation\n"
+"                                - prohibits the option: vanilla-operation\n"
+msgstr ""
+
+#: src/shar-opts.c:2077
+msgid ""
 "   -C, --compactor=str        specify compaction (compression) program\n"
-"                                - prohibits these options:\n"
-"                                vanilla-operation\n"
+"                                - prohibits the option: vanilla-operation\n"
 "                                - may appear multiple times\n"
+msgstr ""
+
+#: src/shar-opts.c:2080
+msgid ""
 "   -g, --level-of-compression=num pass LEVEL for compression\n"
-"                                - It must be in the range:\n"
-"                                  1 to 9\n"
+"                                - It must be in the range: 1 to 9\n"
+msgstr ""
+
+#: src/shar-opts.c:2082
+msgid ""
 "       --level-for-gzip=num   This is an alias for 'level-of-compression'\n"
 "\n"
+msgstr ""
+
+#: src/shar-opts.c:2083
+msgid ""
 "specifying file encoding methodology:\n"
-"\n"
 "   -M, --mixed-uuencode       decide uuencoding for each file\n"
-"   -B, --uuencode             treat all files as binary\n"
-"                                - an alternate for mixed-uuencode\n"
+msgstr ""
+
+#: src/shar-opts.c:2085
+msgid "   -B, --uuencode             treat all files as binary\n"
+msgstr ""
+
+#: src/shar-opts.c:2086
+msgid ""
 "   -T, --text-files           treat all files as text\n"
-"                                - an alternate for mixed-uuencode\n"
 "\n"
-"specifying file selection and output modes:\n"
+msgstr ""
+"   -T, --text-files           tratar todos os ficheiros como texto\n"
 "\n"
-"   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+
+#: src/shar-opts.c:2087
+msgid "specifying file selection and output modes:\n"
+msgstr ""
+
+#: src/shar-opts.c:2088
+msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+msgstr ""
+
+#: src/shar-opts.c:2089
+msgid ""
 "   -l, --whole-size-limit=num split archive, not files, to size\n"
-"                                - requires these options:\n"
-"                                output-prefix\n"
-"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - requires the option: output-prefix\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G\n"
 "                                - It must lie in one of the ranges:\n"
-"                                  8 to 1023, or\n"
-"                                  8192 to 4194304\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+msgstr ""
+
+#: src/shar-opts.c:2094
+msgid ""
 "   -L, --split-size-limit=num split archive or files to size\n"
-"                                - requires these options:\n"
-"                                output-prefix\n"
-"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - requires the option: output-prefix\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G\n"
 "                                - It must lie in one of the ranges:\n"
-"                                  8 to 1023, or\n"
-"                                  8192 to 4194304\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
 "                                - an alternate for whole-size-limit\n"
+msgstr ""
+
+#: src/shar-opts.c:2100
+msgid ""
 "   -I, --input-file-list=str  read file list from a file\n"
 "\n"
+msgstr ""
+
+#: src/shar-opts.c:2101
+msgid ""
 "Controlling the shar headers:\n"
-"\n"
 "   -n, --archive-name=str     use name to document the archive\n"
-"   -s, --submitter=str        override the submitter name\n"
+msgstr ""
+
+#: src/shar-opts.c:2103
+msgid "   -s, --submitter=str        override the submitter name\n"
+msgstr ""
+
+#: src/shar-opts.c:2104
+msgid ""
 "   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
-"                                - requires these options:\n"
-"                                archive-name\n"
-"   -c, --cut-mark             start the shar with a cut line\n"
+"                                - requires the option: archive-name\n"
+msgstr ""
+
+#: src/shar-opts.c:2106
+msgid "   -c, --cut-mark             start the shar with a cut line\n"
+msgstr ""
+
+#: src/shar-opts.c:2107
+msgid ""
 "   -t, --translate            translate messages in the script\n"
 "\n"
-"Protecting against transmission issues::\n"
+msgstr ""
+"   -t, --translate            traducir as mensaxes do script\n"
 "\n"
-"       --no-character-count   do not use `wc -c' to check size\n"
-"   -D, --no-md5-digest        do not use md5sum digest to verify\n"
-"   -F, --force-prefix         apply the prefix character on every line\n"
+
+#: src/shar-opts.c:2108
+msgid ""
+"Protecting against transmission issues:\n"
+"       --no-character-count   do not use 'wc -c' to check size\n"
+msgstr ""
+
+#: src/shar-opts.c:2110
+msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
+msgstr ""
+
+#: src/shar-opts.c:2111
+msgid "   -F, --force-prefix         apply the prefix character on every line\n"
+msgstr ""
+
+#: src/shar-opts.c:2112
+msgid ""
 "   -d, --here-delimiter=str   use delim to delimit the files\n"
 "\n"
-"Producing different kinds of shars::\n"
-"\n"
+msgstr ""
+
+#: src/shar-opts.c:2113
+msgid ""
+"Producing different kinds of shars:\n"
 "   -V, --vanilla-operation    produce very simple shars\n"
-"   -P, --no-piping            use temporary files between programs\n"
-"   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr ""
+
+#: src/shar-opts.c:2115
+msgid "   -P, --no-piping            use temporary files between programs\n"
+msgstr "   -P, --no-piping            usar ficheiros temporais para intercambiar datos entre programas\n"
+
+#: src/shar-opts.c:2116
+msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr ""
+
+#: src/shar-opts.c:2117
+msgid ""
 "   -X, --query-user           ask user before overwriting files\n"
-"                                - prohibits these options:\n"
-"                                vanilla-operation\n"
-"   -m, --no-timestamp         do not restore modification times\n"
-"   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+"                                - prohibits the option: vanilla-operation\n"
+msgstr ""
+
+#: src/shar-opts.c:2119
+msgid "   -m, --no-timestamp         do not restore modification times\n"
+msgstr "   -m, --no-timestamp         non restaurar as datas/horas de modificación\n"
+
+#: src/shar-opts.c:2120
+msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+msgstr ""
+
+#: src/shar-opts.c:2121
+msgid ""
 "   -f, --basename             restore in one directory, despite hierarchy\n"
 "\n"
-"Internationalization options::\n"
-"\n"
+msgstr ""
+
+#: src/shar-opts.c:2122
+msgid ""
+"Internationalization options:\n"
 "       --no-i18n              do not internationalize\n"
+msgstr ""
+"Opcións de internacionalización:\n"
+"       --no-i18n              non internacionalizar\n"
+
+#: src/shar-opts.c:2124
+msgid ""
 "       --print-text-domain-dir  print directory with shar messages\n"
 "\n"
+msgstr ""
+
+#: src/shar-opts.c:2125
+msgid ""
 "user feedback/entertainment:\n"
-"\n"
 "   -q, --quiet                do not output verbose messages\n"
+msgstr ""
+
+#: src/shar-opts.c:2127
+msgid ""
 "       --silent               This is an alias for 'quiet'\n"
 "\n"
-"version, usage and configuration options:\n"
+msgstr ""
+"       --silent               Isto é un alias para «quiet»\n"
 "\n"
-"   -v, --version[=arg]        Output version information and exit\n"
-"   -h, --help                 Display extended usage information and exit\n"
-"   -!, --more-help            Extended usage information passed thru pager\n"
-"   -R, --save-opts[=arg]      Save the option state to a config file\n"
+
+#: src/shar-opts.c:2128
+msgid "version, usage and configuration options:\n"
+msgstr "versión, modo de uso e opcións de configuración:\n"
+
+#: src/shar-opts.c:2129
+msgid "   -v, --version[=arg]        Output version information and exit\n"
+msgstr "  -V, --version[=arg]         Mostra a información da versión e sae\n"
+
+#: src/shar-opts.c:2130
+msgid "   -h, --help                 Display extended usage information and exit\n"
+msgstr "   -h, --help                 Mostrar información de uso estendida e saír\n"
+
+#: src/shar-opts.c:2131
+msgid "   -!, --more-help            Extended usage information passed thru pager\n"
+msgstr ""
+
+#: src/shar-opts.c:2132
+msgid "   -R, --save-opts[=arg]      Save the option state to a config file\n"
+msgstr "   -R, --save-opts[=arg]      Gardar o estado da opción nun ficheiro de configuración\n"
+
+#: src/shar-opts.c:2133
+msgid ""
 "   -r, --load-opts=str        Load options from a config file\n"
 "                                - disabled as --no-load-opts\n"
 "                                - may appear multiple times\n"
 "\n"
+msgstr ""
+
+#: src/shar-opts.c:2136 src/uuencode-opts.c:686
+msgid ""
 "Options are specified by doubled hyphens and their name or by a single\n"
 "hyphen and the flag character.\n"
 "\n"
+msgstr ""
+"As opcións especifícanse mediante guións dobres e o seu nome ou\n"
+"mediante un único guión e o carácter do parámetro.\n"
+"\n"
+
+#: src/shar-opts.c:2138
+msgid ""
 "If no 'file's are specified, the list of input files is read from a\n"
 "standard input.  Standard input must not be a terminal.\n"
 "\n"
-"The following option preset mechanisms are supported:\n"
-" - reading file $HOME/.sharrc\n"
-"\n"
-"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
-"and can be emailed.  These files may be unpacked later by executing them\n"
-"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
-"'-o' option is given.  A wide range of features provide extensive\n"
-"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
-"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
-"mailable 'tar' archive.\n"
-"\n"
-"Options may be specified in any order until a 'file' argument is\n"
-"recognized.  If the '--intermix-type' option has been specified, more\n"
-"compression and encoding options will be recognized between the 'file'\n"
-"arguments.\n"
-"\n"
-"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
-"you are emailing files, please consider mime-encoded files.  If you do\n"
-"'uuencode', base 64 is the preferred encoding method.\n"
-"\n"
-"please send bug reports to:  bug-gnu-utils@gnu.org"
 msgstr ""
 
-#: src/shar-opts.c:2150
+#: src/shar-opts.c:2151
 msgid ""
-"shar (GNU sharutils) - create a shell archive - Ver. 4.13.3\n"
-"USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]"
-msgstr ""
-
-#: src/shar-opts.c:2153
-msgid ""
-"If no 'file's are specified, the list of input files is read from a\n"
-"standard input.  Standard input must not be a terminal"
-msgstr ""
-
-#: src/shar-opts.c:2156
-msgid ""
-"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
-"and can be emailed.  These files may be unpacked later by executing them\n"
-"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
-"'-o' option is given.  A wide range of features provide extensive\n"
-"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
-"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
-"mailable 'tar' archive.\n"
+"Though this program supports 'uuencode'-d files, they are deprecated.\n"
+"If you are emailing files, please consider mime-encoded files.\n"
+"If you do 'uuencode', base 64 is the preferred encoding method.\n"
 "\n"
-"Options may be specified in any order until a 'file' argument is\n"
-"recognized.  If the '--intermix-type' option has been specified, more\n"
-"compression and encoding options will be recognized between the 'file'\n"
-"arguments.\n"
-"\n"
-"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
-"you are emailing files, please consider mime-encoded files.  If you do\n"
-"'uuencode', base 64 is the preferred encoding method"
 msgstr ""
 
-#: src/shar-opts.c:2171 src/unshar-opts.c:780 src/uudecode-opts.c:729
-#: src/uuencode-opts.c:717
-msgid "This program is released under the terms of the GNU General Public License, version 3 or later."
-msgstr "Este programa publícase baixo os termos da Licenza Pública Xeral de GNU, versión 3 ou posterior."
+#: src/shar-opts.c:2154
+msgid ""
+"Shar supports reading a configuration file:  $HOME/.sharrc\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"Shar admite a lectura dun ficheiro de configuración:  $HOME/.sharrc\n"
+"\n"
+"Envíe os informes de fallo a:  <bug-gnu-utils@gnu.org>\n"
 
-#: src/shar.c:373
+#: src/shar-opts.c:2158
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+msgstr ""
+
+#: ../autoopts.c:51 ../autoopts.c:77
+#, c-format
+msgid "allocation of %d bytes failed\n"
+msgstr "produciuse un erro ao asignar %d bytes\n"
+
+#: ../init.c:49
+msgid "AutoOpts function called without option descriptor\n"
+msgstr "Chamouse á función de AutoOpts sen un descritor de opcións\n"
+
+#: ../init.c:85
+msgid "\tThis exceeds the compiled library version:  "
+msgstr "        Isto excede á versión compilada da biblioteca:"
+
+#: ../init.c:83
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+
+#: ../autoopts.c:64
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr ""
+
+#: ../init.c:87
+msgid "\tThis is less than the minimum library version:  "
+msgstr ""
+
+#: ../version.c:118
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+"Automated Options versión %s\n"
+"\tCopyright (C) 1999-2013 de Bruce Korb - todos os dereitos reservados\n"
+
+#: ../usage.c:308
+#, c-format
+msgid "(AutoOpts bug):  %s.\n"
+msgstr "(fallo de AutoOpts):  %s.\n"
+
+#: ../reset.c:84
+msgid "optionResetOpt() called, but reset-option not configured"
+msgstr ""
+
+#: ../usage.c:327
+msgid "could not locate the 'help' option"
+msgstr "non foi posíbel atopar a opción «help»"
+
+#: ../autoopts.c:342
+msgid "optionProcess() was called with invalid data"
+msgstr "chamouse a optionProcess() con datos incorrectos"
+
+#: ../usage.c:735
+msgid "invalid argument type specified"
+msgstr "especificouse un tipo de argumento incorrecto"
+
+#: ../find.c:585
+msgid "defaulted to option with optional arg"
+msgstr ""
+
+#: ../alias.c:72
+msgid "Aliasing option is out of range."
+msgstr ""
+
+#: ../enum.c:228
+#, c-format
+msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
+msgstr "erro de %s:  a palabra clave «%s» é ambigua para %s\n"
+
+#: ../find.c:104
+msgid "  The following options match:\n"
+msgstr "  As seguintes opcións coinciden:\n"
+
+#: ../find.c:286
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr "%s: nome de opción ambiguo: %s (coinciden %d opcións)\n"
+
+#: ../check.c:160
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr "%s: requírense argumentos de liña de ordes\n"
+
+#: ../alias.c:39
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr ""
+
+#: ../makeshell.c:77
+#, c-format
+msgid "%s error %d (%s) calling %s for '%s'\n"
+msgstr ""
+
+#: ../makeshell.c:289
+msgid "interprocess pipe"
+msgstr "canalización entre procesos"
+
+#: ../version.c:165
+#, c-format
+msgid ""
+"error: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and full copyright notice\n"
+msgstr ""
+"erro: argumento de opción de versión «%c» non válido. Modo de uso:\n"
+"\t«v» - só a versión\n"
+"\t«c» - versión e copyright\n"
+"\t«n» - versión e aviso de copyright completo\n"
+
+#: ../check.c:57
+#, c-format
+msgid "%s error:  the '%s' and '%s' options conflict\n"
+msgstr "erro de %s: hai un conflito entre as opcións «%s» e «%s»\n"
+
+#: ../find.c:210 ../find.c:417
+#, c-format
+msgid "%s: The '%s' option has been disabled"
+msgstr "%s: desactivouse a opción «%s»"
+
+#: ../alias.c:34
+msgid "-equivalence"
+msgstr ""
+
+#: ../find.c:456 ../reset.c:104
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: opción inaceptábel -- %c\n"
+
+#: ../find.c:264 ../find.c:742 ../reset.c:112
+#, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: opción inaceptábel -- %s\n"
+
+#: ../find.c:328
+#, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr ""
+
+#: ../enum.c:153 ../enum.c:163
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr "  ou un enteiro entre %d e %d\n"
+
+#: ../usage.c:734 ../usage.c:1055
+#, c-format
+msgid "%s error:  invalid option descriptor for %s\n"
+msgstr ""
+
+#: ../find.c:375
+#, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: nome de opción non válido: %s\n"
+
+#: ../find.c:514
+#, c-format
+msgid "%s: option '%s' requires an argument\n"
+msgstr "%s: a opción «%s» require un argumento\n"
+
+#: ../autoopts.c:162
+#, c-format
+msgid ""
+"(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'"
+msgstr ""
+
+#: ../check.c:93
+#, c-format
+msgid "%s error:  The %s option is required\n"
+msgstr "Erro de %s: requírese a opción %s\n"
+
+#: ../find.c:619
+#, c-format
+msgid "%s: option '%s' cannot have an argument\n"
+msgstr "%s: a opción «%s» non permite ningún argumento\n"
+
+#: ../check.c:150
+#, c-format
+msgid "%s: Command line arguments not allowed\n"
+msgstr "%s: non se permiten argumentos de liña de ordes\n"
+
+#: ../save.c:527
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr "erro %d (%s) ao crear %s\n"
+
+#: ../enum.c:228
+#, c-format
+msgid "%s error:  '%s' does not match any %s keywords\n"
+msgstr "Erro de %s: «%s» non coincide con ningunha palabra clave de %s\n"
+
+#: ../reset.c:87
+#, c-format
+msgid "%s error: The '%s' option requires an argument\n"
+msgstr "Erro de %s: a opción «%s» require un argumento\n"
+
+#: ../save.c:180 ../save.c:234
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr "produciuse o erro %d (%s) ao executar stat en %s\n"
+
+#: ../restore.c:139
+#, c-format
+msgid "%s error: no saved option state\n"
+msgstr "erro de %s: non hai estado de opción gardado\n"
+
+#: ../autoopts.c:237
+#, c-format
+msgid "'%s' is not a command line option\n"
+msgstr "«%s» non é unha opción de liña de ordes\n"
+
+#: ../time.c:110
+#, c-format
+msgid "%s error:  '%s' is not a recognizable date/time\n"
+msgstr "Erro de %s: «%s» non é unha data/hora recoñecíbel\n"
+
+#: ../save.c:128
+#, c-format
+msgid "'%s' not defined\n"
+msgstr "«%s» non está definido\n"
+
+#: ../time.c:49
+#, c-format
+msgid "%s error:  '%s' is not a recognizable time duration\n"
+msgstr "Erro de %s: «%s» non é un tempo de duración recoñecíbel\n"
+
+#: ../check.c:91
+#, c-format
+msgid "%s error:  The %s option must appear %d times\n"
+msgstr "Erro de %s: a opción %s debe aparecer %d veces\n"
+
+#: ../numeric.c:149
+#, c-format
+msgid "%s error:  '%s' is not a recognizable number\n"
+msgstr "Erro de %s: «%s» non é un número recoñecíbel\n"
+
+#: ../enum.c:194
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr ""
+
+#: ../usage.c:347
+#, c-format
+msgid "More info with: \"%s %s\"\n"
+msgstr "Máis información con: «%s %s»\n"
+
+#: ../alias.c:41
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr ""
+
+#: ../makeshell.c:191 ../makeshell.c:926 ../usage.c:302 ../usage.c:428
+#: ../usage.c:624 ../version.c:172 src/uuencode.c:105 src/uuencode.c:182
+#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+msgid "standard output"
+msgstr "saída estándar"
+
+#: ../usage.c:302 ../usage.c:428 ../usage.c:624 ../version.c:172
+msgid "standard error"
+msgstr "saída de erro estándar"
+
+#: ../makeshell.c:191 ../makeshell.c:926 ../usage.c:301 ../usage.c:427
+#: ../usage.c:623 ../version.c:171
+msgid "write"
+msgstr ""
+
+#: ../numeric.c:54
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr ""
+
+#: ../check.c:43
+#, c-format
+msgid "%s error:  %s option requires the %s option\n"
+msgstr "Erro de %s: a opción %s require a opción %s\n"
+
+#: ../save.c:127 ../save.c:179 ../save.c:233 ../save.c:252 ../save.c:526
+#, c-format
+msgid "%s warning:  cannot save options - %s not regular file\n"
+msgstr ""
+
+#: src/shar.c:356
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "erro de formato de printf:  %s\n"
 
-#: src/shar.c:424
+#: src/shar.c:407
 msgid "sharutils bug - no status"
 msgstr "fallo de sharutils - sen estado"
 
-#: src/shar.c:789
+#: src/shar.c:770
 msgid "Too many directories for mkdir generation"
 msgstr "Demasiados directorios para xerar con mkdir"
 
-#: src/shar.c:872 src/shar.c:1542
+#: src/shar.c:853 src/shar.c:1537
 #, c-format
 msgid "Cannot access %s"
 msgstr "Non é posíbel acceder a %s"
 
-#: src/shar.c:949 src/unshar.c:376
+#: src/shar.c:936 src/unshar.c:376
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Non é posíbel obter o nome do directorio actual"
 
-#: src/shar.c:1006 src/shar.c:1347
+#: src/shar.c:999 src/shar.c:1341
 #, c-format
 msgid "New file, remaining %s, "
 msgstr "Novo ficheiro, quedan %s, "
 
-#: src/shar.c:1007 src/shar.c:1348
+#: src/shar.c:1000 src/shar.c:1342
 #, c-format
 msgid "Limit still %s\n"
 msgstr "O límite é aínda %s\n"
 
-#: src/shar.c:1029
+#: src/shar.c:1022
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Comezando ficheiro %s\n"
 
-#: src/shar.c:1082
+#: src/shar.c:1076
 msgid "Could not popen command"
 msgstr "Non foi posíbel executar popen na orde"
 
-#: src/shar.c:1163
+#: src/shar.c:1157
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Non é posíbel executar open no ficheiro %s"
 
-#: src/shar.c:1297 src/shar.c:1306
+#: src/shar.c:1291 src/shar.c:1302
 msgid "text"
 msgstr "texto"
 
-#: src/shar.c:1312 src/shar.c:1323
+#: src/shar.c:1308 src/shar.c:1319
 msgid "call"
 msgstr "chamada"
 
-#: src/shar.c:1336
-#, c-format
-msgid "File %s (%s)"
-msgstr "Ficheiro %s (%s)"
+#: src/shar.c:1328
+msgid "pipe[1]"
+msgstr ""
 
-#: src/shar.c:1427
+#: src/shar.c:1421
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Continuando o ficheiro %s\n"
 
-#: src/shar.c:1537
+#: src/shar.c:1532
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Non é un ficheiro normal"
 
-#: src/shar.c:1564
+#: src/shar.c:1559
 #, c-format
 msgid "In shar: remaining size %s\n"
 msgstr "No shar: queda un tamaño de %s\n"
 
-#: src/shar.c:1584
+#: src/shar.c:1579
 msgid "empty"
 msgstr "baleiro"
 
-#: src/shar.c:1623
+#: src/shar.c:1618
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Gardando %s (%s)"
 
-#: src/shar.c:1808
+#: src/shar.c:1803
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Formato non válido para os nomes dos ficheiros de saída (%s): %s"
 
-#: src/shar.c:1823
+#: src/shar.c:1818
 msgid "more than one format element"
 msgstr "máis dun elemento de formato"
 
-#: src/shar.c:1828
+#: src/shar.c:1823
 msgid "no conversion character"
 msgstr ""
 
-#: src/shar.c:1837
+#: src/shar.c:1832
 msgid "format is too wide"
 msgstr "o formato é demasiado longo"
 
-#: src/shar.c:1849
+#: src/shar.c:1844
 msgid "invalid conversion character"
 msgstr ""
 
-#: src/shar.c:1890
+#: src/shar.c:1885
 msgid "Opening"
 msgstr "Abrindo"
 
-#: src/shar.c:1905
+#: src/shar.c:1900
 msgid "Closing"
 msgstr "Pechando"
 
-#: src/shar.c:1978
+#: src/shar.c:1992
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "reabrindo stderr para /dev/null"
 
-#: src/shar.c:2026
+#: src/shar.c:2040
 msgid "No input files"
 msgstr "Non hai ficheiros de entrada"
 
-#: src/shar.c:2043
+#: src/shar.c:2057
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "POR FAVOR, evite os shar -X en Usenet ou en redes públicas"
 
-#: src/shar.c:2067
+#: src/shar.c:2081
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
 
-#: src/shar.c:2085
+#: src/shar.c:2099
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "A opción «%s» debe aparecer antes de calquera nome de ficheiro"
 
-#: src/shar.c:2121
+#: src/shar.c:2135
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
 "the known types are:\n"
 msgstr ""
 
-#: src/shar.c:2160
+#: src/shar.c:2173
 msgid "files on command line and --input-file-list specified"
 msgstr "especificaronse ficheiros na liña de ordes e --input-file-list"
 
-#: src/shar.c:2209
+#: src/shar.c:2222
 #, c-format
 msgid "Created %d files\n"
 msgstr "Creáronse %d ficheiros\n"
-
-#: src/unshar-opts.c:433 src/unshar.c:394
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Non é posíbel cambiar ao directorio «%s»"
-
-#: src/unshar-opts.c:491
-msgid "unshar usage error:\n"
-msgstr "Erro de uso de unshar:\n"
-
-#: src/unshar-opts.c:527
-msgid "unshar fatal error:\n"
-msgstr "erro moi grave de unshar:\n"
-
-#: src/unshar-opts.c:758
-msgid "unpack a shar archiv"
-msgstr ""
-
-#: src/unshar-opts.c:760
-#, fuzzy
-msgid ""
-"Usage: ./unshar [OPTION]... [FILE]...\n"
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
-"  -c, --overwrite             pass -c to shar script for overwriting files\n"
-"  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=STRING       split concatenated shars after STRING\n"
-"  -f, --force                 same as `-c'\n"
-"      --help                  display this help and exit\n"
-"      --version               output version information and exit\n"
-"\n"
-"If no FILE, standard input is read.\n"
-"Report bugs to <bug-gnu-utils@gnu.org>."
-msgstr ""
-"Os argumentos obrigatorios para as opcións longas son tamén obrigatorios para\n"
-"as opcións curtas.\n"
-"\n"
-"  -d, --directory=DIRECTORIO  cambiar a DIRECTORIO antes de desempaquetar\n"
-"  -c, --overwrite             pasarlle -c ao script shar para sobrescribir\n"
-"                              ficheiros\n"
-"  -e, --exit-0                o mesmo que «--split-at=\"exit 0\"»\n"
-"  -E, --split-at=CADEA        dividir shars concatenados despois de CADEA\n"
-"  -f, --force                 o mesmo que «-c»\n"
-"      --help                  mostrar esta axuda e saír\n"
-"      --version               mostrar a información da versión e saír\n"
-"\n"
-"Se non se indica FICHEIRO, lese da entrada estándar.\n"
-
-#: src/unshar-opts.c:772
-msgid ""
-"./unshar: unrecognized option '--error-bogus-option-name'\n"
-"Try `./unshar --help' for more information."
-msgstr ""
-
-#: src/unshar-opts.c:775
-msgid ""
-"Unshar scans the input files (typically email messages) looking for the\n"
-"start of a shell archive.  If no files are given, then standard input is\n"
-"processed instead.  It then passes each archive discovered through an\n"
-"invocation of the shell program to unpack it"
-msgstr ""
 
 #: src/unshar.c:168
 #, c-format
@@ -736,6 +1145,11 @@ msgstr ""
 msgid "Report bugs to <%s>.\n"
 msgstr "Envíe os informes de fallo a <%s>.\n"
 
+#: src/unshar.c:394
+#, c-format
+msgid "Cannot chdir to `%s'"
+msgstr "Non é posíbel cambiar ao directorio «%s»"
+
 #: src/unshar.c:414
 #, c-format, no-wrap
 msgid ""
@@ -745,14 +1159,15 @@ msgid ""
 msgstr ""
 "Copyright (C) %s Free Software Foundation, Inc.\n"
 "Isto é software libre; para ver as condicións de copia consulte o código\n"
-"fonte. Non hai NINGUNHA garantía; nin sequera de COMERCIABILIDADE nin VALIDEZ PARA UN FIN PARTICULAR.\n"
+"fonte. Non hai NINGUNHA garantía; nin sequera de COMERCIABILIDADE nin\n"
+"VALIDEZ PARA UN FIN PARTICULAR.\n"
 
 #: src/unshar.c:445 src/unshar.c:507
 #, c-format
 msgid "allocate file name buffer"
 msgstr ""
 
-#: src/unshar.c:466
+#: src/unshar.c:466 src/uudecode.c:469 src/uuencode.c:205
 msgid "standard input"
 msgstr "entrada estándar"
 
@@ -761,43 +1176,76 @@ msgstr "entrada estándar"
 msgid "allocate file buffer"
 msgstr "asignar búfer de ficheiro"
 
-#: src/uudecode-opts.c:410
+#: src/uudecode-opts.c:420
 msgid "uudecode usage error:\n"
 msgstr "erro de uso de uudecode:\n"
 
-#: src/uudecode-opts.c:446
+#: src/uudecode-opts.c:456
 msgid "uudecode fatal error:\n"
 msgstr "erro moi grave de uudecode:\n"
 
-#: src/uudecode-opts.c:677
-msgid "decode an encoded fil"
+#: src/uudecode-opts.c:680
+msgid ""
+"uudecode (GNU sharutils) 4.13.4pre4\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uudecode (GNU sharutils) 4.13.4pre4\n"
+"Copyright © 1994-2013 da Free Software Foundation, Inc., todos os dereitos\n"
+"reservados. Isto é software libre. Ten licenza para o seu uso, modificación e\n"
+"redistribución baixo as condicións da Licenza pública xeral de GNU, tanto na\n"
+"versión 3 como en calquera versión posterior <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/uudecode-opts.c:687
+msgid ""
+"uudecode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+"uudecode é software libre: pode redistribuílo ou modificalo baixo as\n"
+"condicións da Licenza pública xeral GNU tal como a publica a Free\n"
+"Software Foundation; tanto na versión 3 da Licenza como (segundo o seu\n"
+"criterio) en calquera versión posterior.\n"
+"\n"
+
+#: src/uudecode-opts.c:691
+msgid ""
+"uudecode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"uudecode distribúese esperando que sexa útil, mais SEN NINGUNHA GARANTÍA;\n"
+"mesmo sen a garantía implícita de VALOR COMERCIAL ou ADECUACIÓN PARA UN\n"
+"PROPÓSITO PARTICULAR. Para máis detalles vexa a Licenza pública xeral GNU.\n"
+"\n"
+
+#: src/uudecode-opts.c:699
+#, c-format
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
 msgstr ""
 
-#: src/uudecode-opts.c:679
+#: src/uudecode-opts.c:703
+msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
+msgstr ""
+
+#: src/uudecode-opts.c:706 src/uudecode-opts.c:739
 msgid ""
-"uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.3\n"
-"USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
-"\n"
-"   -o, --output-file=str      direct output to file\n"
-"   -c, --ignore-chmod         Ignore fchmod(3P) errors\n"
-"   -v, --version[=arg]        Output version information and exit\n"
-"   -h, --help                 Display extended usage information and exit\n"
-"   -!, --more-help            Extended usage information passed thru pager\n"
-"   -R, --save-opts[=arg]      Save the option state to a config file\n"
-"   -r, --load-opts=str        Load options from a config file\n"
-"                                - disabled as --no-load-opts\n"
-"                                - may appear multiple times\n"
-"\n"
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-"\n"
-"If no 'file'(s) are provided, then standard input is decoded.\n"
-"\n"
-"The following option preset mechanisms are supported:\n"
-" - reading file $HOME/.sharrc\n"
-"\n"
 "'Uudecode' transforms uuencoded files into their original form.\n"
 "\n"
+msgstr ""
+"uudecode transforma ficheiros codificados con uuencode á súa forma orixinal.\n"
+"\n"
+
+#: src/uudecode-opts.c:707 src/uudecode-opts.c:740
+msgid ""
 "The encoded file(s) may be specified on the command line, or one may be\n"
 "read from standard input.  The output file name is specified in the encoded\n"
 "file, but may be overridden with the '-o' option.  It will have the mode of\n"
@@ -807,49 +1255,98 @@ msgid ""
 "second or subsquent file specifies standard output, the decoded data will\n"
 "be written to the same file as the previous output.  Don't do that.\n"
 "\n"
-"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
-"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
-"found.  The program determines from the header line of the encoded file\n"
-"which of the two supported encoding schemes was used.\n"
-"\n"
-"please send bug reports to:  bug-gnu-utils@gnu.org"
-msgstr ""
-
-#: src/uudecode-opts.c:710
-msgid ""
-"uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.3\n"
-"USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]"
-msgstr ""
-
-#: src/uudecode-opts.c:713
-msgid "If no 'file'(s) are provided, then standard input is decoded"
 msgstr ""
 
 #: src/uudecode-opts.c:715
 msgid ""
-"'Uudecode' transforms uuencoded files into their original form.\n"
-"\n"
-"The encoded file(s) may be specified on the command line, or one may be\n"
-"read from standard input.  The output file name is specified in the encoded\n"
-"file, but may be overridden with the '-o' option.  It will have the mode of\n"
-"the original file, except that setuid and execute bits are not retained.  If\n"
-"the output file is specified to be '/dev/stdout' or '-', the result will be\n"
-"written to standard output.  If there are multiple input files and the\n"
-"second or subsquent file specifies standard output, the decoded data will\n"
-"be written to the same file as the previous output.  Don't do that.\n"
-"\n"
 "'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
 "that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
 "found.  The program determines from the header line of the encoded file\n"
-"which of the two supported encoding schemes was used"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
 msgstr ""
 
-#: src/uudecode.c:106 src/uudecode.c:456
-#, c-format
-msgid "%s: Write error"
-msgstr "%s: Erro de escritura"
+#: src/uudecode-opts.c:722
+msgid "uudecode (GNU sharutils) 4.13.4pre4"
+msgstr "uudecode (GNU sharutils) 4.13.4pre4"
 
-#: src/uudecode.c:123 src/uudecode.c:217
+#: src/uudecode-opts.c:725
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:727
+msgid "   -o, --output-file=str      direct output to file\n"
+msgstr "   -o, --output-file=cadea    saída directa ao ficheiro\n"
+
+#: src/uudecode-opts.c:728
+msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
+msgstr "   -c, --ignore-chmod         ignorar os erros de fchmod(3P)\n"
+
+#: src/uudecode-opts.c:729 src/uuencode-opts.c:679
+msgid "   -v, --version[=arg]        output version information and exit\n"
+msgstr "  -V, --version[=arg]         mostrar a información da versión e saír\n"
+
+#: src/uudecode-opts.c:730 src/uuencode-opts.c:680
+msgid "   -h, --help                 display extended usage information and exit\n"
+msgstr "   -h, --help                 mostrar información de uso estendida e saír\n"
+
+#: src/uudecode-opts.c:731 src/uuencode-opts.c:681
+msgid "   -!, --more-help            extended usage information passed thru pager\n"
+msgstr ""
+
+#: src/uudecode-opts.c:732 src/uuencode-opts.c:682
+msgid "   -R, --save-opts[=arg]      save the option state to a config file\n"
+msgstr "   -R, --save-opts[=arg]      gardar o estado da opción nun ficheiro de configuración\n"
+
+#: src/uudecode-opts.c:733 src/uuencode-opts.c:683
+msgid ""
+"   -r, --load-opts=str        load options from a config file\n"
+"                                - disabled as --no-load-opts\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:736
+#, fuzzy
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file'(s) are provided, then standard input is decoded.\n"
+"\n"
+msgstr ""
+"As opcións especifícanse mediante guións dobres e o seu nome ou\n"
+"mediante un único guión e o carácter do parámetro.\n"
+
+#: src/uudecode-opts.c:748
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:753
+msgid ""
+"'Uudecode' supports reading a configuration file:  $HOME/.sharrc\n"
+"\n"
+"please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"'Uudecode' admite a lectura dun ficheiro de configuración:  $HOME/.sharrc\n"
+"\n"
+"Envíe os informes de fallo a:  <bug-gnu-utils@gnu.org>\n"
+
+#: src/uudecode-opts.c:757
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+msgstr ""
+
+#: src/uudecode.c:120 src/uudecode.c:184
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Ficheiro curto"
@@ -859,52 +1356,59 @@ msgstr "%s: Ficheiro curto"
 msgid "%s: No `end' line"
 msgstr "%s: Non hai liña «end»"
 
-#: src/uudecode.c:226
+#: src/uudecode.c:190
 #, c-format
-msgid "%s: data following `=' padding character"
-msgstr "%s: datos tralo carácter de recheo «=»"
+msgid "%s: invalid input"
+msgstr "%s: entrada incorrecta"
 
-#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
-#, c-format
-msgid "%s: illegal line"
-msgstr "%s: liña inaceptábel"
+#: src/uudecode.c:218
+msgid "cannot expand $HOME"
+msgstr "non foi posíbel expandir $HOME"
 
-#: src/uudecode.c:302
+#: src/uudecode.c:229
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: nome de ficheiro inaceptábel: %s"
 
-#: src/uudecode.c:309
+#: src/uudecode.c:236
 #, c-format
 msgid "No user '%s'"
 msgstr "Non hai tal usuario «%s»"
 
-#: src/uudecode.c:320
-#, c-format
-msgid "no memory for %d byte allocation"
-msgstr "non hai memoria suficiente para a asignación de %d bytes"
+#: src/uudecode.c:247 src/uudecode.c:305
+msgid "output file name"
+msgstr "nome do ficheiro de saída"
 
-#: src/uudecode.c:343
+#: src/uudecode.c:266
 #, c-format
 msgid "cannot access %s"
 msgstr "non é posíbel acceder a %s"
 
-#: src/uudecode.c:352
-#, c-format
-msgid "freopen of %s"
-msgstr "freeopen de %s"
-
-#: src/uudecode.c:359
+#: src/uudecode.c:279
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod de %s"
 
-#: src/uudecode.c:396
-#, c-format
-msgid "%s: No `begin' line"
-msgstr "%s: Non hai liña «begin»"
+#: src/uudecode.c:298
+msgid "output name is empty"
+msgstr "o nome de saída está baleiro"
 
-#: src/uudecode.c:496
+#: src/uudecode.c:311
+#, c-format
+msgid "invalid base64 encoded name: %s"
+msgstr ""
+
+#: src/uudecode.c:345
+#, c-format
+msgid "%s: Invalid or missing 'begin' line"
+msgstr "%s: Non hai liña «begin» ou é incorrecta"
+
+#: src/uudecode.c:435
+#, c-format
+msgid "%s: Write error"
+msgstr "%s: Erro de escritura"
+
+#: src/uudecode.c:475
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
@@ -912,44 +1416,73 @@ msgstr ""
 "Non é posíbel especificar un ficheiro de saída ao\n"
 "procesar varios ficheiros de entrada.\n"
 
-#: src/uuencode-opts.c:401
+#: src/uuencode-opts.c:374
 msgid "uuencode usage error:\n"
 msgstr "erro de uso de uuencode:\n"
 
-#: src/uuencode-opts.c:437
+#: src/uuencode-opts.c:410
 msgid "uuencode fatal error:\n"
 msgstr "erro moi grave de uuencode:\n"
 
-#: src/uuencode-opts.c:668
-msgid "encode a file into email friendly tex"
+#: src/uuencode-opts.c:634
+msgid ""
+"uuencode (GNU sharutils) 4.13.4pre4\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uuencode (GNU sharutils) 4.13.4pre4\n"
+"Copyright © 1994-2013 da Free Software Foundation, Inc., todos os dereitos\n"
+"reservados. Isto é software libre. Ten licenza para o seu uso, modificación e\n"
+"redistribución baixo as condicións da Licenza pública xeral de GNU, tanto na\n"
+"versión 3 como en calquera versión posterior <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/uuencode-opts.c:641
+msgid ""
+"uuencode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+"uuencode é software libre: pode redistribuílo ou modificalo baixo as\n"
+"condicións da Licenza pública xeral GNU tal como a publica a Free\n"
+"Software Foundation; tanto na versión 3 da Licenza como (segundo o seu\n"
+"criterio) en calquera versión posterior.\n"
+"\n"
+
+#: src/uuencode-opts.c:645
+msgid ""
+"uuencode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"uuencode distribúese esperando que sexa útil, mais SEN NINGUNHA GARANTÍA;\n"
+"mesmo sen a garantía implícita de VALOR COMERCIAL ou ADECUACIÓN PARA UN\n"
+"PROPÓSITO PARTICULAR. Para máis detalles vexa a Licenza pública xeral GNU.\n"
+"\n"
+
+#: src/uuencode-opts.c:653
+#, c-format
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  %s [ -<flag> | --<name> ]... [ in-file ] output-name\n"
 msgstr ""
 
-#: src/uuencode-opts.c:670
+#: src/uuencode-opts.c:657 src/uuencode-opts.c:688
 msgid ""
-"uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13.3\n"
-"USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
-"\n"
-"   -m, --base64               convert using base 64\n"
-"   -e, --encode-file-name     encode the output file name\n"
-"   -v, --version[=arg]        Output version information and exit\n"
-"   -h, --help                 Display extended usage information and exit\n"
-"   -!, --more-help            Extended usage information passed thru pager\n"
-"   -R, --save-opts[=arg]      Save the option state to a config file\n"
-"   -r, --load-opts=str        Load options from a config file\n"
-"                                - disabled as --no-load-opts\n"
-"                                - may appear multiple times\n"
-"\n"
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-"\n"
-"The following option preset mechanisms are supported:\n"
-" - reading file $HOME/.sharrc\n"
-"\n"
 "'uuencode' is used to create an ASCII representation of a file that can be\n"
 "sent over channels that may otherwise corrupt the data.  Specifically,\n"
 "email cannot handle binary data and will often even insert a character when\n"
 "the six character sequence \"\\nFrom \" is seen.\n"
 "\n"
+msgstr ""
+
+#: src/uuencode-opts.c:661 src/uuencode-opts.c:692
+msgid ""
 "'uuencode' will read 'in-file' if provided and otherwise read data from\n"
 "standard in and write the encoded form to standard out.  The output will\n"
 "begin with a header line for use by 'uudecode' giving it the resulting\n"
@@ -957,62 +1490,65 @@ msgid ""
 "specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
 "standard out.\n"
 "\n"
+msgstr ""
+
+#: src/uuencode-opts.c:667
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+msgstr ""
+
+#: src/uuencode-opts.c:672
+msgid "uuencode (GNU sharutils) 4.13.4pre4"
+msgstr "uuencode (GNU sharutils) 4.13.4pre4"
+
+#: src/uuencode-opts.c:675
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:677
+msgid "   -m, --base64               convert using base 64\n"
+msgstr "   -m, --base64               converter empregando base 64\n"
+
+#: src/uuencode-opts.c:678
+msgid "   -e, --encode-file-name     encode the output file name\n"
+msgstr ""
+
+#: src/uuencode-opts.c:698
+msgid ""
 "'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
 "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
 "Ctl-D several times to terminate input.\n"
 "\n"
-"please send bug reports to:  bug-gnu-utils@gnu.org"
 msgstr ""
 
-#: src/uuencode-opts.c:700
+#: src/uuencode-opts.c:701
 msgid ""
-"uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13.3\n"
-"USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name"
+"uuencode supports reading a configuration file:  $HOME/.sharrc\n"
+"\n"
+"please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
 msgstr ""
+"uuencode admite a lectura dun ficheiro de configuración:  $HOME/.sharrc\n"
+"\n"
+"Envíe os informes de fallo a:  <bug-gnu-utils@gnu.org>\n"
 
-#: src/uuencode-opts.c:703
+#: src/uuencode-opts.c:705
 msgid ""
-"'uuencode' is used to create an ASCII representation of a file that can be\n"
-"sent over channels that may otherwise corrupt the data.  Specifically,\n"
-"email cannot handle binary data and will often even insert a character when\n"
-"the six character sequence \"\\nFrom \" is seen.\n"
-"\n"
-"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
-"standard in and write the encoded form to standard out.  The output will\n"
-"begin with a header line for use by 'uudecode' giving it the resulting\n"
-"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
-"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
-"standard out.\n"
-"\n"
-"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
-"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
-"Ctl-D several times to terminate input"
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
 msgstr ""
-
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
-#, c-format
-msgid "Write error"
-msgstr "Erro de escritura"
-
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
-#, c-format
-msgid "Read error"
-msgstr "Erro de lectura"
 
 #: src/uuencode.c:226
-#, c-format
-msgid "fopen-ing %s"
-msgstr "executando fopen en %s"
+msgid "freopen of stdin"
+msgstr "freeopen de entrada estándar"
 
-#: src/uuencode.c:228
-#, c-format
-msgid "fstat-ing %s"
-msgstr "executando fstat en %s"
-
-#: src/uuencode.c:254
-#, c-format
-msgid "Allocation failure"
-msgstr "Fallo de asignación"
+#: src/uuencode.c:255
+msgid "file name"
+msgstr "nome de ficheiro"
 
 #: lib/error.c:188
 msgid "Unknown system error"
@@ -1131,459 +1667,169 @@ msgstr ""
 msgid "%s%s argument '%s' too large"
 msgstr "%s%s o argumento «%s» é demasiado grande"
 
-#: libopts/autoopts.c:51
-#, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr "produciuse un erro ao executar malloc para %d bytes\n"
-
-#: libopts/init.c:52
-msgid "AutoOpts function called without option descriptor\n"
-msgstr "Chamouse á función de AutoOpts sen un descritor de opcións\n"
-
-#: libopts/init.c:85
-msgid "\tThis exceeds the compiled library version:  "
-msgstr "        Isto excede á versión compilada da biblioteca:"
-
-#: libopts/init.c:83
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-
-#: libopts/autoopts.c:64
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr ""
-
-#: libopts/init.c:87
-msgid "\tThis is less than the minimum library version:  "
-msgstr ""
-
-#: libopts/autoopts.c:77
-#, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "produciuse un erro ao executar strdup dunha cadea de %d bytes\n"
-
-#: libopts/version.c:120
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
-msgstr ""
-"Automated Options versión %s\n"
-"\tCopyright (C) 1999-2013 de Bruce Korb - todos os dereitos reservados\n"
-
-#: libopts/find.c:585
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr ""
-
-#: libopts/alias.c:53
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr ""
-
-#: libopts/enum.c:228
-#, fuzzy, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "%s: a opción «-W %s» é ambigua\n"
-
-#: libopts/find.c:104
-msgid "  The following options match:\n"
-msgstr "  As seguintes opcións coinciden:\n"
-
-#: libopts/find.c:286
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr "%s: nome de opción ambiguo: %s (coinciden %d opcións)\n"
-
-#: libopts/find.c:107 libopts/find.c:112
-#, c-format
-msgid "  %s%s\n"
-msgstr "  %s%s\n"
-
-#: libopts/check.c:157
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr "%s: requírense argumentos de liña de ordes\n"
-
-#: libopts/alias.c:78 libopts/autoopts.c:215
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr ""
-
-#: libopts/usage.c:872
-msgid "version, usage and configuration options:"
-msgstr "versión, modo de uso e opcións de configuración:"
-
-#: libopts/makeshell.c:266
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr "Erro %d (%s) da chamada ao sistema pipe(2)\n"
-
-#: libopts/version.c:160
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-"ERRO: argumento de opción de versión '%c' non válido. Modo de uso:\n"
-"\t'v' - só a versión\n"
-"\t'c' - versión e copyright\n"
-"\t'n' - versión e aviso de copyright\n"
-
-#: libopts/check.c:56
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr "ERRO: a opción %s choca coa opción %s\n"
-
-#: libopts/restore.c:108
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr "%s(optionSaveState): erro: non é posíbel asignar %d bytes\n"
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr "auto-options"
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr "programa"
-
-#: libopts/usage.c:654
-msgid "\t\t\t\t- default option for unnamed options\n"
-msgstr "\t\t\t\t- opción predefinida para as opcións sen nome\n"
-
-#: libopts/usage.c:569
-#, c-format
-msgid "\t\t\t\t- disabled as --%s\n"
-msgstr "\t\t\t\t- desactivado como --%s\n"
-
-#: libopts/find.c:210 libopts/find.c:417
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr "%s: desactivouse a opción «%s»"
-
-#: libopts/usage.c:839
-msgid "This option has been disabled"
-msgstr "Desactivouse esta opción"
-
-#: libopts/alias.c:73 libopts/autoopts.c:210
-msgid "-equivalence"
-msgstr ""
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "ERROR:  only "
-msgstr ""
-
-#: libopts/usage.c:916
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr ""
-
-#: libopts/configfile.c:1170
-#, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr "Erro de ficheiro %d (%s) ao abrir %s para cargar opcións\n"
-
-#: libopts/text_mmap.c:98
-#, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr "erro %d do sistema de ficheiros (%s) ao ler o ficheiro %s\n"
-
-#: libopts/file.c:135
-msgid "fopen-ing file"
-msgstr "executando fopen no ficheiro"
-
-#: libopts/file.c:74
-msgid "stat-ing for directory"
-msgstr "executando stat no directorio"
-
-#: libopts/file.c:86
-msgid "stat-ing for regular file"
-msgstr "executando stat para ficheiro normal"
-
-#: libopts/file.c:48
-msgid "stat-ing for non-existant file"
-msgstr "executando stat nun ficheiro inexistente"
-
-#: libopts/file.c:108
-msgid "open-ing file"
-msgstr "executando open no ficheiro"
-
-#: libopts/file.c:47 libopts/file.c:73 libopts/file.c:85 libopts/file.c:107
-#: libopts/file.c:134
-#, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr ""
-
-#: libopts/usage.c:273
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-"As opcións especifícanse mediante guións dobres e o seu nome ou\n"
-"mediante un único guión e o carácter do parámetro.\n"
-
-#: libopts/makeshell.c:272
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr "erro %d do sistema de ficheiros (%s) ao executar fork - non é posíbel obter %s para usar\n"
-
-#: libopts/makeshell.c:802
-#, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr ""
-
-#: libopts/makeshell.c:880
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"Esta encarnación de genshell xerará un script\n"
-"de shell para analizar as opcións para %s:\n"
-"\n"
-
-#: libopts/find.c:456 libopts/reset.c:106
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: opción inaceptábel -- %c\n"
-
-#: libopts/find.c:264 libopts/find.c:758 libopts/reset.c:114
-#, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: opción inaceptábel -- %s\n"
-
-#: libopts/find.c:328
-#, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr ""
-
-#: libopts/enum.c:153 libopts/enum.c:163
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr "  ou un enteiro entre %d e %d\n"
-
-#: libopts/usage.c:484 libopts/usage.c:805
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr ""
-
-#: libopts/find.c:375
-#, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: nome de opción non válido: %s\n"
-
-#: libopts/enum.c:160
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr ""
-
-#: libopts/find.c:514
-#, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: a opción «%s» require un argumento\n"
-
-#: libopts/autoopts.c:162
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-
-#: libopts/check.c:90
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr "ERRO:  requírese a opción %s\n"
-
-#: libopts/find.c:620
-#, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: a opción «%s» non permite ningún argumento\n"
-
-#: libopts/check.c:147
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr "%s: non se permiten argumentos de liña de ordes\n"
-
-#: libopts/save.c:510
-#, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr "erro %d (%s) ao crear %s\n"
-
-#: libopts/usage.c:275
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr ""
-
-#: libopts/enum.c:228
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr ""
-
-#: libopts/reset.c:89
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "A opción «-reset-option» require un argumento\n"
-
-#: libopts/usage.c:1031
-msgid "   Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/usage.c:967 libopts/usage.c:1025
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr ""
-
-#: libopts/save.c:177 libopts/save.c:231
-#, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr "produciuse o erro %d (%s) ao executar stat en %s\n"
-
-#: libopts/restore.c:149
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr ""
-
-#: libopts/autoopts.c:252
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr "«%s» non é unha opción de liña de ordes\n"
-
-#: libopts/time.c:110
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr "Erro de %s: «%s» non é unha data/hora recoñecíbel\n"
-
-#: libopts/save.c:126
-#, c-format
-msgid "'%s' not defined\n"
-msgstr "«%s» non está definido\n"
-
-#: libopts/time.c:49
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr "Erro de %s: «%s» non é un tempo de duración recoñecíbel\n"
-
-#: libopts/check.c:89
-#, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr "ERRO:  a opción %s debe aparecer %d veces\n"
-
-#: libopts/configfile.c:1180 libopts/makeshell.c:727 libopts/save.c:250
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr ""
-
-#: libopts/numeric.c:149
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr "Erro de %s: «%s» non é un número recoñecíbel\n"
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr ""
-
-#: libopts/makeshell.c:177 libopts/makeshell.c:902 libopts/usage.c:232
-#: libopts/usage.c:307 libopts/version.c:166
-msgid "Write failure to output file"
-msgstr "Fallo de escritura no ficheiro de saída"
-
-#: libopts/usage.c:701
-#, c-format
-msgid " - reading file %s"
-msgstr " - lendo o ficheiro %s"
-
-#: libopts/usage.c:302 libopts/version.c:104 libopts/version.c:126
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-"\n"
-"envíe informes de fallos a:  %s\n"
-
-#: libopts/usage.c:673 libopts/usage.c:914
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-
-#: libopts/numeric.c:54
-#, c-format
-msgid "%s error:  %s option value %ld is out of range.\n"
-msgstr ""
-
-#: libopts/numeric.c:62
-#, c-format
-msgid "%sIt must lie in one of the ranges:\n"
-msgstr "%sDebe estar nun dos intervalos:\n"
-
-#: libopts/numeric.c:62
-#, c-format
-msgid "%sIt must be in the range:\n"
-msgstr "%sDebe estar no intervalo:\n"
-
-#: libopts/usage.c:283
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr ""
-
-#: libopts/check.c:43
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr "ERRO:  a opción %s require a opción %s\n"
-
-#: libopts/usage.c:401
-msgid "requires these options:\n"
-msgstr "require estas opcións:\n"
-
-#: libopts/usage.c:1043
-msgid "   Arg Option-Name   Req?  Description\n"
-msgstr ""
-
-#: libopts/usage.c:1037
-msgid "  Flg Arg Option-Name   Req?  Description\n"
-msgstr ""
-
-#: libopts/reset.c:84
-msgid "The --reset-option has not been configured.\n"
-msgstr ""
-
-#: libopts/init.c:117
-msgid "-_^"
-msgstr "-_^"
-
-#: libopts/enum.c:161
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-
-#: libopts/enum.c:194
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr ""
-
-#: libopts/enum.c:71
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr ""
-
-#: libopts/usage.c:876
-msgid "The next option supports vendor supported extra options:"
-msgstr ""
-
-#: libopts/usage.c:512
-msgid "These additional options are:"
-msgstr "Estas opcións adicionais son:"
+#, fuzzy
+#~ msgid "create a shell archiv"
+#~ msgstr "%s probabelmente non é un arquivo de shell"
+
+#~ msgid "This program is released under the terms of the GNU General Public License, version 3 or later."
+#~ msgstr "Este programa publícase baixo os termos da Licenza Pública Xeral de GNU, versión 3 ou posterior."
+
+#~ msgid "File %s (%s)"
+#~ msgstr "Ficheiro %s (%s)"
+
+#~ msgid "unshar usage error:\n"
+#~ msgstr "Erro de uso de unshar:\n"
+
+#~ msgid "unshar fatal error:\n"
+#~ msgstr "erro moi grave de unshar:\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: ./unshar [OPTION]... [FILE]...\n"
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
+#~ "  -c, --overwrite             pass -c to shar script for overwriting files\n"
+#~ "  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=STRING       split concatenated shars after STRING\n"
+#~ "  -f, --force                 same as `-c'\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If no FILE, standard input is read.\n"
+#~ "Report bugs to <bug-gnu-utils@gnu.org>."
+#~ msgstr ""
+#~ "Os argumentos obrigatorios para as opcións longas son tamén obrigatorios para\n"
+#~ "as opcións curtas.\n"
+#~ "\n"
+#~ "  -d, --directory=DIRECTORIO  cambiar a DIRECTORIO antes de desempaquetar\n"
+#~ "  -c, --overwrite             pasarlle -c ao script shar para sobrescribir\n"
+#~ "                              ficheiros\n"
+#~ "  -e, --exit-0                o mesmo que «--split-at=\"exit 0\"»\n"
+#~ "  -E, --split-at=CADEA        dividir shars concatenados despois de CADEA\n"
+#~ "  -f, --force                 o mesmo que «-c»\n"
+#~ "      --help                  mostrar esta axuda e saír\n"
+#~ "      --version               mostrar a información da versión e saír\n"
+#~ "\n"
+#~ "Se non se indica FICHEIRO, lese da entrada estándar.\n"
+
+#~ msgid "%s: data following `=' padding character"
+#~ msgstr "%s: datos tralo carácter de recheo «=»"
+
+#~ msgid "%s: illegal line"
+#~ msgstr "%s: liña inaceptábel"
+
+#~ msgid "no memory for %d byte allocation"
+#~ msgstr "non hai memoria suficiente para a asignación de %d bytes"
+
+#~ msgid "Write error"
+#~ msgstr "Erro de escritura"
+
+#~ msgid "fopen-ing %s"
+#~ msgstr "executando fopen en %s"
+
+#~ msgid "fstat-ing %s"
+#~ msgstr "executando fstat en %s"
+
+#~ msgid "Allocation failure"
+#~ msgstr "Fallo de asignación"
+
+#~ msgid "strdup of %d byte string failed\n"
+#~ msgstr "produciuse un erro ao executar strdup dunha cadea de %d bytes\n"
+
+#~ msgid "  %s%s\n"
+#~ msgstr "  %s%s\n"
+
+#~ msgid "Error %d (%s) from the pipe(2) syscall\n"
+#~ msgstr "Erro %d (%s) da chamada ao sistema pipe(2)\n"
+
+#~ msgid "ERROR:  %s option conflicts with the %s option\n"
+#~ msgstr "ERRO: a opción %s choca coa opción %s\n"
+
+#~ msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
+#~ msgstr "%s(optionSaveState): erro: non é posíbel asignar %d bytes\n"
+
+#~ msgid "auto-options"
+#~ msgstr "auto-options"
+
+#~ msgid "program"
+#~ msgstr "programa"
+
+#~ msgid "\t\t\t\t- default option for unnamed options\n"
+#~ msgstr "\t\t\t\t- opción predefinida para as opcións sen nome\n"
+
+#~ msgid "\t\t\t\t- disabled as --%s\n"
+#~ msgstr "\t\t\t\t- desactivado como --%s\n"
+
+#~ msgid "This option has been disabled"
+#~ msgstr "Desactivouse esta opción"
+
+#~ msgid "File error %d (%s) opening %s for loading options\n"
+#~ msgstr "Erro de ficheiro %d (%s) ao abrir %s para cargar opcións\n"
+
+#~ msgid "fopen-ing file"
+#~ msgstr "executando fopen no ficheiro"
+
+#~ msgid "stat-ing for directory"
+#~ msgstr "executando stat no directorio"
+
+#~ msgid "stat-ing for regular file"
+#~ msgstr "executando stat para ficheiro normal"
+
+#~ msgid "stat-ing for non-existant file"
+#~ msgstr "executando stat nun ficheiro inexistente"
+
+#~ msgid "open-ing file"
+#~ msgstr "executando open no ficheiro"
+
+#~ msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
+#~ msgstr "erro %d do sistema de ficheiros (%s) ao executar fork - non é posíbel obter %s para usar\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "= = = = = = = =\n"
+#~ "\n"
+#~ "This incarnation of genshell will produce\n"
+#~ "a shell script to parse the options for %s:\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "= = = = = = = =\n"
+#~ "\n"
+#~ "Esta encarnación de genshell xerará un script\n"
+#~ "de shell para analizar as opcións para %s:\n"
+#~ "\n"
+
+#~ msgid "%s: option `%s' requires an argument\n"
+#~ msgstr "%s: a opción «%s» require un argumento\n"
+
+#~ msgid "Write failure to output file"
+#~ msgstr "Fallo de escritura no ficheiro de saída"
+
+#~ msgid " - reading file %s"
+#~ msgstr " - lendo o ficheiro %s"
+
+#~ msgid ""
+#~ "\n"
+#~ "please send bug reports to:  %s\n"
+#~ msgstr ""
+#~ "\n"
+#~ "envíe informes de fallos a:  %s\n"
+
+#~ msgid "%sIt must lie in one of the ranges:\n"
+#~ msgstr "%sDebe estar nun dos intervalos:\n"
+
+#~ msgid "%sIt must be in the range:\n"
+#~ msgstr "%sDebe estar no intervalo:\n"
+
+#~ msgid "requires these options:\n"
+#~ msgstr "require estas opcións:\n"
+
+#~ msgid "-_^"
+#~ msgstr "-_^"
+
+#~ msgid "These additional options are:"
+#~ msgstr "Estas opcións adicionais son:"
 
 #~ msgid "Usage: %s [FILE]...\n"
 #~ msgstr "Uso: %s [FICHEIRO]...\n"
@@ -1647,9 +1893,6 @@ msgstr "Estas opcións adicionais son:"
 
 #~ msgid "part"
 #~ msgstr "parte"
-
-#~ msgid "file"
-#~ msgstr "ficheiro"
 
 #~ msgid "still skipping"
 #~ msgstr "saltando"

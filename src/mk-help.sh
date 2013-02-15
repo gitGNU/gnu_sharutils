@@ -17,7 +17,7 @@ die() {
 } 1>&2
 
 get_help() {
-    ./$1 $2 2>&1 | grep -v illegal > $tmpdir/$3.txt
+    AUTOOPTS_USAGE=compute ./$1 $2 2>&1 | grep -v illegal > $tmpdir/$3.txt
     $tabify $tmpdir/$3.txt
     cmp -s $tmpdir/$3.txt $3.txt || {
         mv $tmpdir/$3.txt $3.txt
@@ -47,7 +47,6 @@ mkhelp() {
     else
         tabify=:
     fi
-    for f ; do rm -f $f-help.txt ; autogen $f-opts.def ; done
     ${MAKE} "$@"
     mkusage "$@"
     for f ; do autogen $f-opts.def ; done

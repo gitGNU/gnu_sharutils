@@ -31,6 +31,10 @@ text = {
 };
 #endif
 
+text = {
+  name = aok_check;
+  body = "test $? -eq 0"; omit-nl;
+};
 
 text = {
   name = break_line;
@@ -51,6 +55,17 @@ text = {
 };
 
 text = {
+  name = clobber_check;
+  body = <<- _EOBody_
+	if test "X$1" = "X-c"
+	then keep_file=''
+	else keep_file=true
+	fi
+	echo=echo
+	_EOBody_;
+};
+
+text = {
   name = contents;
   body = <<- _EOBody_
 	#
@@ -64,12 +79,17 @@ text = {
   name = continue_archive;
   body = <<- _EOBody_
 	#!/bin/sh
-	# This is `%s' (part %d of %s).
-	# Do not concatenate these parts, unpack them in order with `/bin/sh'.
-	# File `%s' is being continued...
+	# This is '%s' (part %d of %s).
+	# Do not concatenate these parts, unpack them in order with '/bin/sh'.
+	# File '%s' is being continued...
 	#
 	lock_dir=_sh%05d
 	_EOBody_;
+};
+
+text = {
+  name = cut_mark_line;
+  body = "---- Cut Here and feed the following to sh ----\n";
 };
 
 text = {
@@ -91,6 +111,16 @@ text = {
 };
 
 text = {
+  name = dir_check;
+  body = "if test ! -d %s; then";
+};
+
+text = {
+  name = dir_create;
+  body = "  mkdir %s";
+};
+
+text = {
   name = echo_checks;
   body = <<- _EOBody_
 	if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null
@@ -104,44 +134,44 @@ text = {
 
 text = {
   name = echo_string;
-  body = <<- _EOBody_
-	${echo} %s
-	_EOBody_;
+  body = "${echo} %s";
 };
 
 text = {
-  name = split_file;
-  body = <<- _EOBody_
-	: > ${lock_dir}/continued
-	_EOBody_;
+  name = exist_note;
+  body = "#\n# Existing files %s.";
 };
 
 text = {
-  name = split_continue_quietly;
-  body = "if test -f ${lock_dir}/continued; then";
+  name = exist_keep;
+  body = "will *not* be overwritten, unless '-c' is specified"; omit-nl;
 };
 
 text = {
-  name = split_continue;
-  body = "if test ! -f ${lock_dir}/continued\nthen ${echo} ";
+  name = exist_kill;
+  body = "WILL be overwritten"; omit-nl;
 };
 
 text = {
-  name = split_resume;
-  body = <<- _EOBody_
-	  rm -f ${lock_dir}/continued
-	  sed 's/^%c//' << '%s' >> %s &&
-	_EOBody_;
+  name = exist_ask;
+  body = "MAY be overwritten.\n"
+      "# The unsharer will be INTERACTIVELY queried"; omit-nl;
 };
 
 text = {
-  name = otherwise;
-  body = "\nelse";
+  name = explain_1;
+  body = "This is part 1 of a multipart archive.";
 };
 
 text = {
-  name = mode_fmt;
-  body = "begin 600 %s";
+  name = explain_2;
+  body = "Do not concatenate these parts, "
+         "unpack them in order with '/bin/sh'.";
+};
+
+text = {
+  name = explain_fmt_fmt;
+  body = "# %%-%ds\n# %%-%ds\n";
 };
 
 text = {
@@ -150,7 +180,7 @@ text = {
 	#!/bin/sh
 	# This is %s%s archive (produced by GNU %s %s).
 	# To extract the files from this archive, save it to some FILE, remove
-	# everything before the `#!/bin/sh' line above, then type `sh FILE'.
+	# everything before the '#!/bin/sh' line above, then type 'sh FILE'.
 	#
 	lock_dir=_sh%05d
 	_EOBody_;
@@ -206,22 +236,18 @@ text = {
 };
 
 text = {
-  name = clobber_check;
-  body = <<- _EOBody_
-	if test "X$1" = "X-c"
-	then keep_file=''
-	else keep_file=true
-	fi
-	echo=echo
-	_EOBody_;
+  name = lock_dir;
+  body = "${lock_dir}"; omit-nl;
 };
 
 text = {
-  name = pre_exist;
-  body = <<- _EOBody_
-	if test -n "${keep_file}" && test -f %s
-	then
-	_EOBody_;
+  name = made_on_comment;
+  body = "# Made on %s by <%s>.";
+};
+
+text = {
+  name = make_lock_dir;
+  body = "mkdir ${lock_dir}"; omit-nl;
 };
 
 text = {
@@ -242,6 +268,24 @@ text = {
 	  then (
 	       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} %s: '%s'
 	       ) << \%s
+	_EOBody_;
+};
+
+text = {
+  name = mode_fmt;
+  body = "begin 600 %s";
+};
+
+text = {
+  name = otherwise;
+  body = "\nelse";
+};
+
+text = {
+  name = pre_exist;
+  body = <<- _EOBody_
+	if test -n "${keep_file}" && test -f %s
+	then
 	_EOBody_;
 };
 
@@ -369,6 +413,39 @@ text = {
 };
 
 text = {
+  name = show_status_dies;
+  body = "\n     exit 1"; omit-nl;
+};
+
+text = {
+  name = source_dir_comment;
+  body = "# Source directory was '%s'.";
+};
+
+text = {
+  name = split_file;
+  body = ": > ${lock_dir}/continued";
+};
+
+text = {
+  name = split_continue_quietly;
+  body = "if test -f ${lock_dir}/continued; then";
+};
+
+text = {
+  name = split_continue; omit-nl;
+  body = "if test ! -f ${lock_dir}/continued\nthen ${echo} ";
+};
+
+text = {
+  name = split_resume;
+  body = <<- _EOBody_
+	  rm -f ${lock_dir}/continued
+	  sed 's/^%c//' << '%s' >> %s &&
+	_EOBody_;
+};
+
+text = {
   name = timestamp;
   body = <<- _EOBody_
 	f=shar-touch.$$
@@ -427,7 +504,7 @@ shar-msg = {
   sm-xform  = apostrophe;
   sm-body   = <<- _EOBody_
 	WARNING: not restoring timestamps.  Consider getting and
-	installing GNU `touch', distributed in GNU coreutils...
+	installing GNU 'touch', distributed in GNU coreutils...
 	_EOBody_;
 };
 

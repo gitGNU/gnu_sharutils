@@ -19,7 +19,7 @@ prog-name   = `progname=shar ; echo $progname`;
 #include shar-std.def
 
 prog-title  = 'create a shell archive';
-argument    = '[file ...]';
+argument    = '[<file>...]';
 
 explain     = <<- _EOExplain_
 	If no @file{file}s are specified, the list of input files is read
@@ -73,7 +73,7 @@ export = <<- _EOExport_
 flag = {
     name        = compression;
     documentation;
-    descrip     = 'specifying compression';
+    descrip     = 'Specifying compression';
 };
 
 flag = {
@@ -202,7 +202,7 @@ flag = {
 
 flag = {
     name        = encoding;
-    descrip     = 'specifying file encoding methodology';
+    descrip     = 'Specifying file encoding methodology';
     documentation = <<- _EODoc_
 	Files may be stored in the shar either as plain text or uuencoded.
 	By default, the program selects which by examining the file.
@@ -278,7 +278,7 @@ flag = {
 flag = {
     name        = in-out;
     documentation;
-    descrip     = 'specifying file selection and output modes';
+    descrip     = 'Specifying file selection and output modes';
 };
 
 flag = {
@@ -320,7 +320,7 @@ flag = {
 	respectively.  4M (4194304) is the maximum allowed.
 
 	Unlike the @code{split-size-limit} option, this allows the recipient
-	of the shell archives to be unpacked in any order.
+	of the shar files to unpack them in any order.
 	_EODoc_;
 };
 
@@ -427,6 +427,7 @@ flag = {
     value       = s;
     arg-type    = string;
     arg-name    = 'WHO@WHERE';
+    settable;
     descrip     = 'override the submitter name';
     call-proc   = validate_opt_context;
     doc = <<- _EODoc_
@@ -764,7 +765,7 @@ flag = {
 flag = {
     name        = feedback;
     documentation;
-    descrip     = 'user feedback/entertainment';
+    descrip     = 'User feedback/entertainment';
 };
 
 flag = {
