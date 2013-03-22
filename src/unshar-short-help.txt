@@ -1,1 +1,3 @@
-Try `./unshar --help' for more information.
+unshar (GNU sharutils) - unpack a shar archive
+Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
+more info with: "unshar --help"

@@ -1,2 +1,3 @@
 shar (GNU sharutils) - create a shell archive
-Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]
+Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]
+more info with: "shar --help"

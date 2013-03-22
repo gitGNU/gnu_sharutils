@@ -1,11 +1,23 @@
 AutoGen Definitions options;
 
+export = <<- _EOExport_
+	#include <stddef.h>
+
+	extern size_t       separator_str_len;
+	_EOExport_;
+
+include = <<- _EOInclude_
+	size_t separator_str_len = 6;
+
+	extern void init_unshar (void);
+	_EOInclude_;
+
 #define NEED_AUTHORS
 prog-name   = `progname=unshar; echo $progname`;
 #include shar-std.def
 
 prog-title  = 'unpack a shar archive';
-argument    = '[ file ... ]';
+argument    = '[<file>...]';
 
 detail = <<- _EODetail_
 	Unshar scans the input files (typically email messages) looking for
@@ -13,33 +25,14 @@ detail = <<- _EODetail_
 	input is processed instead.  It then passes each archive discovered
 	through an invocation of the shell program to unpack it.
 	_EODetail_;
-#if 0
+
 main = {
     main-type    = for-each;
     handler-proc = unshar_file;
     handler-type = file-r;
     stdin-input;
-    main-init    = <<- _EOF_
-	    setlocale (LC_ALL, "");
-	    bindtextdomain (PACKAGE, LOCALEDIR);
-	    textdomain (PACKAGE);
-	#ifdef __MSDOS__
-	    setbuf (stdout, NULL);
-	    setbuf (stderr, NULL);
-	#endif
-	_EOF_;
-
-    main-fini = <<- _EOF_
-	    if (temp_file != NULL)
-	      {
-	        unlink (temp_file);
-	        free (temp_file);
-	      }
-	_EOF_;
+    main-init    = '    init_unshar ();';
 };
-
-include = 'char * temp_file = NULL;';
-export  = 'char * temp_file;';
 
 exit-desc[1]  = 'There was an error in command usage.';
 
@@ -57,7 +50,7 @@ exit-desc[5]  = 'memory allocation failure';
 
 exit-name[6]  = invalid;
 exit-desc[6]  = 'invalid input, does not contain a shar file';
-#endif
+
 help-value;
 
 flag = {
@@ -78,7 +71,7 @@ flag = {
 flag = {
     name        = overwrite;
     value       = c;
-    descrip     = 'Overwrite any pre-existing files';
+    descrip     = 'overwrite any pre-existing files';
     doc = <<- _EODoc_
 	This option is passed through as an option to the shar file.  Many
 	shell archive scripts accept a @option{-c} argument to indicate that
@@ -98,6 +91,9 @@ flag = {
     arg-type    = string;
     arg-name    = split-pat;
     descrip     = 'separate archives on @var{split-pat} lines';
+    arg-default = "exit 0";
+    flag-code   =
+        '    separator_str_len = strlen (pOptDesc->optArg.argString);';
     settable;
 
     doc = <<- _EODoc_
@@ -119,7 +115,7 @@ flag = {
     value       = e;
     flags-cant  = split-at;
     descrip     = 'split archives at "exit 0" lines';
-    flag-code   = '  SET_OPT_SPLIT_AT("exit 0");';
+    flag-code   = '    SET_OPT_SPLIT_AT("exit 0");';
 
     doc = <<- _EODoc_
 	Most shell archives end with a line consisting of simply "exit 0".

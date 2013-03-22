@@ -1,5 +1,11 @@
 2013-02-17  Bruce Korb  <bkorb@gnu.org>
 
+	* src/Makefile.am: process the unshar option code
+	* src/unshar-opts.def: make ready for use
+	* src/unshar.c: use the generated option code
+
+2013-02-17  Bruce Korb  <bkorb@gnu.org>
+
 	* src/shar.c (whoami.c): not needed -- do not include
 	(scripts.x): move more blocks of text to scripts.def and source
 	the file earlier in the file.

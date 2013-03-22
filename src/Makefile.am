@@ -31,14 +31,16 @@ shar_LDADD      = $(LDADD)
 unshar_LDADD    = $(LDADD)
 bin_PROGRAMS    = shar unshar
 
-shar_opt_code   = shar-opts.c   shar-opts.h
+shar_opt_code   = shar-opts.c     shar-opts.h
+unshar_opt_code = unshar-opts.c   unshar-opts.h
 encode_opt_code = uuencode-opts.c uuencode-opts.h
 decode_opt_code = uudecode-opts.c uudecode-opts.h
 
 shar_opts       = shar-opts.def
+unshar_opts     = unshar-opts.def
 encode_opts	= uuencode-opts.def
 decode_opts	= uudecode-opts.def
-options_defs    = shar-std.def $(shar_opts) \
+options_defs    = shar-std.def $(shar_opts) $(unshar_opts) \
 	$(encode_opts) $(decode_opts)
 usage_texts     = \
 	shar-full-help.txt shar-short-help.txt \
@@ -59,6 +61,9 @@ endif
 SHAR_DEP_ARG  = -MF$(DEPDIR)/shar-opts.dep -MP
 @am__include@ @am__quote@./$(DEPDIR)/shar-opts.dep@am__quote@
 
+UNSHAR_DEP_ARG  = -MF$(DEPDIR)/unshar-opts.dep -MP
+@am__include@ @am__quote@./$(DEPDIR)/unshar-opts.dep@am__quote@
+
 else
 # AMDEP
 if UUCODE
@@ -67,6 +72,7 @@ DECODE_DEP_ARG  =
 endif
 # UUCODE
 SHAR_DEP_ARG    =
+UNSHAR_DEP_ARG  =
 endif
 # AMDEP
 
@@ -110,12 +116,16 @@ endif
 # UUCODE
 
 shar_SOURCES    = shar.c   local.h encode.c scripts.x $(shar_opt_code)
-unshar_SOURCES  = unshar.c local.h encode.c
+unshar_SOURCES  = unshar.c local.h encode.c $(unshar_opt_code)
 
 if AMDEP
 shar-opts.c shar-opts.h : $(DEPDIR)/shar-opts.dep
 $(DEPDIR)/shar-opts.dep : shar-opts.def shar-std.def
 	$(AUTOGEN) $(SHAR_DEP_ARG) shar-opts.def
+
+unshar-opts.c unshar-opts.h : $(DEPDIR)/unshar-opts.dep
+$(DEPDIR)/unshar-opts.dep : unshar-opts.def shar-std.def
+	$(AUTOGEN) $(UNSHAR_DEP_ARG) unshar-opts.def
 endif
 # AMDEP
 

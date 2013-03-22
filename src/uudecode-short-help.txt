@@ -1,2 +1,3 @@
 uudecode (GNU sharutils) - decode an encoded file
 Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
+more info with: "uudecode --help"

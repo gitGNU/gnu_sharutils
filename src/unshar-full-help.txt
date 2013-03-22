@@ -1,13 +1,33 @@
-Usage: ./unshar [OPTION]... [FILE]...
-Mandatory arguments to long options are mandatory for short options too.
+unshar (GNU sharutils) - unpack a shar archive
+Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
 
-  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking
-  -c, --overwrite             pass -c to shar script for overwriting files
-  -e, --exit-0                same as `--split-at="exit 0"'
-  -E, --split-at=STRING       split concatenated shars after STRING
-  -f, --force                 same as `-c'
-      --help                  display this help and exit
-      --version               output version information and exit
+   -d, --directory=str        change directory to dir before unpacking
+   -c, --overwrite            overwrite any pre-existing files
+   -f, --force                an alias for the 'overwrite' option
+   -E, --split-at=str         separate archives on split-pat lines
+   -e, --exit-0               split archives at "exit 0" lines
+                                - prohibits the option split-at
+   -D, --debug                debug the shell code
+   -v, --version[=arg]        output version information and exit
+   -h, --help                 display extended usage information and exit
+   -!, --more-help            extended usage information passed thru pager
+   -R, --save-opts[=arg]      save the option state to a config file
+   -r, --load-opts=str        load options from a config file
+                                - disabled as --no-load-opts
+                                - may appear multiple times
 
-If no FILE, standard input is read.
-Report bugs to <bug-gnu-utils@gnu.org>.
+Options are specified by doubled hyphens and their name or by a single
+hyphen and the flag character.
+
+If no arguments are provided, input arguments are read from stdin,
+one per line; blank and '#'-prefixed lines are comments.
+'stdin' may not be a terminal (tty).
+
+The following option preset mechanisms are supported:
+ - reading file $HOME/.sharrc
+Unshar scans the input files (typically email messages) looking for the
+start of a shell archive.  If no files are given, then standard input is
+processed instead.  It then passes each archive discovered through an
+invocation of the shell program to unpack it.
+
+please send bug reports to:  <bug-gnu-utils@gnu.org>

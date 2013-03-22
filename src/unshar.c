@@ -1,10 +1,6 @@
 
-static const char cright_years_z[] =
-
-/* Handle so called `shell archives'.
-   Copyright (C) */ "1994-2013";
-
-/* Free Software Foundation, Inc.
+/* Handle so called 'shell archives'.
+   Copyright (C) 1994-2013 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -20,478 +16,279 @@ static const char cright_years_z[] =
    along with this program; if not, see:  http://www.gnu.org/licenses.
 */
 
-/* Unpackage one or more shell archive files.  The `unshar' program is a
+/* Unpackage one or more shell archive files.  The 'unshar' program is a
    filter which removes the front part of a file and passes the rest to
-   the `sh' command.  It understands phrases like "cut here", and also
-   knows about shell comment characters and the Unix commands `echo',
-   `cat', and `sed'.  */
+   the 'sh' command.  It understands phrases like "cut here", and also
+   knows about shell comment characters and the Unix commands 'echo',
+   'cat', and 'sed'.  */
 
-#define  UNSHAR_C  1
-#include "local.h"
+#define UNSHAR_C 1
+#include "unshar-opts.h"
+
+#include <sys/stat.h>
+
+#include <ctype.h>
+#include <fcntl.h>
 
 #include "xgetcwd.h"
 
-#if HAVE_LOCALE_H
+/*
+ * FIXME: actually configure this stuff:
+ */
+#if defined(_SC_PAGESIZE)
+# define GET_PAGE_SIZE  sysconf (_SC_PAGESIZE)
+#elif defined(_SC_PAGE_SIZE)
+# define GET_PAGE_SIZE  sysconf (_SC_PAGE_SIZE)
+#elif defined(HAVE_GETPAGESIZE)
+# define GET_PAGE_SIZE  getpagesize()
 #else
+# define GET_PAGE_SIZE  8192
+#endif
+
+#ifndef HAVE_LOCALE_H
 # define setlocale(Category, Locale)
 #endif
-#define _(str) gettext (str)
-
-/* Buffer size for shell process input.  */
-#define SHELL_BUFFER_SIZE 8196
 
 #define EOL '\n'
 
-/* The name this program was run with. */
-const char *program_name;
+/** amount of data to read and write at once */
+size_t       rw_base_size = 0;
 
-/* If non-zero, display usage information and exit.  */
-static int show_help = 0;
+/** a buffer of that size */
+char *       rw_buffer    = NULL;
 
-/* If non-zero, print the version on standard output and exit.  */
-static int show_version = 0;
-
-static int pass_c_flag = 0;
-static int continue_reading = 0;
-static const char *exit_string = "exit 0";
-static size_t exit_string_length;
-static char *current_directory;
-
-/*-------------------------------------------------------------------.
-| Match the leftmost part of a string.  Returns 1 if initial	     |
-| characters of DATA match PATTERN exactly; else 0.  This was	     |
-| formerly a function.  But because we always have a constant string |
-| as the seconf argument and the length of the second argument is a  |
-| lot of shorter than the buffer the first argument is pointing at,  |
-| we simply use `memcmp'.  And one more point: even if the `memcmp'  |
-| function does not work correct for 8 bit characters it does not    |
-| matter here.  We are only interested in equal or not equal	     |
-| information.							     |
-`-------------------------------------------------------------------*/
-
-#define starting_with(data, pattern)					    \
-  (memcmp (data, pattern, sizeof (pattern) - 1) == 0)
-
-static FILE* load_stdin (char **p_name_buf);
-
-/*-------------------------------------------------------------------------.
-| For a DATA string and a PATTERN containing one or more embedded	   |
-| asterisks (matching any number of characters), return non-zero if the	   |
-| match succeeds, and set RESULT_ARRAY[I] to the characters matched by the |
-| I'th *.								   |
-`-------------------------------------------------------------------------*/
-
-static int
-matched_by (data, pattern, result_array)
-     const char *data;
-     const char *pattern;
-     char **result_array;
+/**
+ * see if the line looks like C program code.
+ * Check for start of comment ("//" or "/*") and directives.
+ *
+ * @param[in] buf buffer containing current input line
+ * @returns true or false
+ */
+static bool
+looks_like_c_code (char const * buf)
 {
-  const char *pattern_cursor = NULL;
-  const char *data_cursor = NULL;
-  char *result_cursor = NULL;
-  int number_of_results = 0;
+  static char const * const directives[] = {
+    "include", "define", "ifdef", "ifndef", "if",
+    "pragma", "undef", "elif", "error", "line", NULL };
 
-  while (1)
-    if (*pattern == '*')
+  while (isspace ((int) *buf))  buf++;
+  switch (*(buf++))
+    {
+    case '#':
       {
-	pattern_cursor = ++pattern;
-	data_cursor = data;
-	result_cursor = result_array[number_of_results++];
-	*result_cursor = '\0';
+        int ix = 0;
+        while (isspace ((int) *buf))  buf++;
+        for (;;) {
+          char const * dir = directives[ix++];
+          size_t ln;
+          if (dir == NULL)
+            return false;
+          ln = strlen (dir);
+          if ((strncmp (buf, dir, ln) == 0) && isspace ((int)buf[ln]))
+            return true;
+        }
       }
-    else if (*data == *pattern)
-      {
-	if (*pattern == '\0')
-	  /* The pattern matches.  */
-	  return 1;
 
-	pattern++;
-	data++;
-      }
-    else
-      {
-	if (*data == '\0')
-	  /* The pattern fails: no more data.  */
-	  return 0;
+    case '/':
+      return ((*buf == '*') || (*buf == '/'));
 
-	if (pattern_cursor == NULL)
-	  /* The pattern fails: no star to adjust.  */
-	  return 0;
-
-	/* Restart pattern after star.  */
-
-	pattern = pattern_cursor;
-	*result_cursor++ = *data_cursor;
-	*result_cursor = '\0';
-
-	/* Rescan after copied char.  */
-
-	data = ++data_cursor;
-      }
+    default: return false;
+    }
 }
 
-/*------------------------------------------------------------------------.
-| Associated with a given file NAME, position FILE at the start of the	  |
-| shell command portion of a shell archive file.  Scan file from position |
-| START.								  |
-`------------------------------------------------------------------------*/
-
-static int
-find_archive (name, file, start)
-     const char *name;
-     FILE *file;
-     off_t start;
+/**
+ * see if the line looks like shell program code.
+ * Check for start of comment ("#") and a few commands (":" and others).
+ *
+ * @param[in] buf buffer containing current input line
+ * @returns true or false
+ */
+static bool
+looks_like_shell_code (char const * buf)
 {
-  char buffer[BUFSIZ];
+  while (isspace ((int) *buf))  buf++;
+  switch (*buf)
+    {
+    case '#': case ':':
+      return true;
+    default:
+      if (islower ((int)*buf))
+        break;
+      return false;
+    }
+
+  {
+    static char const * const cmn_cmds[] = {
+      "echo", "sed", "cat", "if", NULL };
+
+    int ix = 0;
+    for (;;) {
+      char const * cmd = cmn_cmds[ix++];
+      size_t ln;
+      if (cmd == NULL)
+        return false;
+      ln = strlen (cmd);
+      if ((strncmp (buf, cmd, ln) == 0) && isspace ((int)buf[ln]))
+        return true;
+    }
+  }
+}
+
+/**
+ * see if the line contains a cut mark.
+ * "cut" can be spelled either that way or as "tear" and is either
+ * all lower case or all upper case.  That word must be followed by either
+ * another copy of that word or the word "here", and both must be in the
+ * same case.  (All upper or all lower.)
+ *
+ * @param[in] buf buffer containing current input line
+ * @returns true or false
+ */
+static bool
+this_is_cut_line (char const * buf)
+{
+  static char const * const kwds[] = {
+    "cut", "CUT", "tear", "TEAR" };
+  static char const * const here_here[] = {
+    "here", "HERE" };
+  int ix = 0;
+
+  for (;;)
+    {
+      char const * kw  = kwds[ix];
+      char const * fnd = strstr (buf, kw);
+      if (fnd != NULL)
+        {
+          buf = fnd + strlen (kw);
+          break;
+        }
+
+      if (++ix >= 4)
+        return false;
+    }
+
+  {
+    char const * fnd = strstr (buf, kwds[ix]);
+    if (fnd != NULL)
+      return true;
+    fnd = strstr (buf, here_here[ix & 1]);
+    return (fnd != NULL);
+  }
+}
+
+/**
+ * Check the line following a cut line.  The next non-blank line
+ * must start with a command or a shell comment character ('#').
+ *
+ * @param[in]  name     input file name (for error message)
+ * @param[in]  file     file pointer of input
+ *
+ * @returns true if valid, false otherwise
+ */
+static bool
+next_line_is_valid (char const * name, FILE * file)
+{
   off_t position;
 
-  /* Results from star matcher.  */
+  /* Read next line after "cut here", skipping blank lines.  */
 
-  static char res1[BUFSIZ], res2[BUFSIZ], res3[BUFSIZ], res4[BUFSIZ];
-  static char *result[] = {res1, res2, res3, res4};
+  for (;;)
+    {
+      char * buf;
+      position = ftell (file);
+      buf = fgets (rw_buffer, rw_base_size, file);
+      if (buf == NULL)
+        {
+          error (0, 0, _("Found no shell commands after cut line in %s"), name);
+          return false;
+        }
 
+      while (isspace ((int)*buf))  buf++;
+      if (*buf != '\0')
+        break;
+    }
+
+  /* Win if line starts with a comment character of lower case letter.  */
+  if (islower ((int)*rw_buffer) || (*rw_buffer == '#') || (*rw_buffer == ':'))
+    {
+      fseek (file, position, SEEK_SET);
+      return true;
+    }
+
+  /* Cut here message lied to us.  */
+
+  error (0, 0, _("%s is probably not a shell archive"), name);
+  error (0, 0, _("The 'cut line' was followed by: %s"), rw_buffer);
+  return false;
+}
+
+/**
+ * Associated with a given file NAME, position FILE at the start of the
+ * shell command portion of a shell archive file.  Scan file from position
+ * START.
+ */
+static bool
+find_archive (char const * name, FILE * file, off_t start)
+{
   fseek (file, start, SEEK_SET);
 
   while (1)
     {
-
       /* Record position of the start of this line.  */
-
-      position = ftell (file);
+      off_t position = ftell (file);
 
       /* Read next line, fail if no more and no previous process.  */
-
-      if (!fgets (buffer, BUFSIZ, file))
+      if (!fgets (rw_buffer, BUFSIZ, file))
 	{
 	  if (!start)
 	    error (0, 0, _("Found no shell commands in %s"), name);
-	  return 0;
+	  return false;
 	}
 
-      /* Bail out if we see C preprocessor commands or C comments.  */
-
-      if (starting_with (buffer, "#include")
-	  || starting_with (buffer, "# include")
-	  || starting_with (buffer, "#define")
-	  || starting_with (buffer, "# define")
-	  || starting_with (buffer, "#ifdef")
-	  || starting_with (buffer, "# ifdef")
-	  || starting_with (buffer, "#ifndef")
-	  || starting_with (buffer, "# ifndef")
-	  || starting_with (buffer, "/*"))
+      /*
+       * Bail out if we see C preprocessor commands or C comments.
+       */
+      if (looks_like_c_code (rw_buffer))
 	{
 	  error (0, 0, _("%s looks like raw C code, not a shell archive"),
 		 name);
-	  return 0;
+	  return false;
 	}
 
       /* Does this line start with a shell command or comment.  */
 
-      if (starting_with (buffer, "#")
-	  || starting_with (buffer, ":")
-	  || starting_with (buffer, "echo ")
-	  || starting_with (buffer, "sed ")
-	  || starting_with (buffer, "cat ")
-	  || starting_with (buffer, "if "))
+      if (looks_like_shell_code (rw_buffer))
 	{
 	  fseek (file, position, SEEK_SET);
-	  return 1;
+	  return true;
 	}
 
-      /* Does this line say "Cut here".  */
-
-      if (matched_by (buffer, "*CUT*HERE*", result) ||
-	  matched_by (buffer, "*cut*here*", result) ||
-	  matched_by (buffer, "*TEAR*HERE*", result) ||
-	  matched_by (buffer, "*tear*here*", result) ||
-	  matched_by (buffer, "*CUT*CUT*", result) ||
-	  matched_by (buffer, "*cut*cut*", result))
-	{
-
-	  /* Read next line after "cut here", skipping blank lines.  */
-
-	  while (1)
-	    {
-	      position = ftell (file);
-
-	      if (!fgets (buffer, BUFSIZ, file))
-		{
-		  error (0, 0, _("Found no shell commands after `cut' in %s"),
-			 name);
-		  return 0;
-		}
-
-	      if (*buffer != '\n')
-		break;
-	    }
-
-	  /* Win if line starts with a comment character of lower case
-	     letter.  */
-
-	  if (*buffer == '#' || *buffer == ':'
-	      || (('a' <= *buffer) && ('z' >= *buffer)))
-	    {
-	      fseek (file, position, SEEK_SET);
-	      return 1;
-	    }
-
-	  /* Cut here message lied to us.  */
-
-	  error (0, 0, _("%s is probably not a shell archive"), name);
-	  error (0, 0, _("The `cut' line was followed by: %s"), buffer);
-	  return 0;
-	}
+      /*
+       * Does this line say "Cut here"?
+       */
+      if (this_is_cut_line (rw_buffer))
+        return next_line_is_valid (name, file);
     }
 }
 
-/*-----------------------------------------------------------------.
-| Unarchive a shar file provided on file NAME.  The file itself is |
-| provided on the already opened FILE.				   |
-`-----------------------------------------------------------------*/
-
-static void
-unarchive_shar_file (name, file)
-     const char *name;
-     FILE *file;
-{
-  char buffer[SHELL_BUFFER_SIZE];
-  FILE *shell_process;
-  off_t current_position = 0;
-  char *more_to_read;
-
-  while (find_archive (name, file, current_position))
-    {
-      printf ("%s:\n", name);
-      shell_process = popen (pass_c_flag ? "sh -s - -c" : "sh", "w");
-      if (!shell_process)
-	error (EXIT_FAILURE, errno, _("Starting `sh' process"));
-
-      if (!continue_reading)
-	{
-	  size_t len;
-
-	  while ((len = fread (buffer, 1, SHELL_BUFFER_SIZE, file)) != 0)
-	    fwrite (buffer, 1, len, shell_process);
-#if 0
-	  /* Don't know whether a test is appropriate here.  */
-	  if (ferror (shell_process) != 0)
-	    fwrite (buffer, length, 1, shell_process);
-#endif
-	  pclose (shell_process);
-	  break;
-	}
-      else
-	{
-	  while (more_to_read = fgets (buffer, SHELL_BUFFER_SIZE, file),
-		 more_to_read != NULL)
-	    {
-	      fputs (buffer, shell_process);
-	      if (!strncmp (exit_string, buffer, exit_string_length))
-		break;
-	    }
-	  pclose (shell_process);
-
-	  if (more_to_read)
-	    current_position = ftell (file);
-	  else
-	    break;
-	}
-    }
-}
-
-/*-----------------------------.
-| Explain how to use program.  |
-`-----------------------------*/
-
-static void
-usage (status)
-     int status;
-{
-  if (status != EXIT_SUCCESS)
-    fprintf (stderr, _("Try `%s --help' for more information.\n"),
-	     program_name);
-  else
-    {
-      printf (_("Usage: %s [OPTION]... [FILE]...\n"), program_name);
-      fputs (_("\
-Mandatory arguments to long options are mandatory for short options too.\n\
-\n\
-  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n\
-  -c, --overwrite             pass -c to shar script for overwriting files\n\
-  -e, --exit-0                same as `--split-at=\"exit 0\"'\n\
-  -E, --split-at=STRING       split concatenated shars after STRING\n\
-  -f, --force                 same as `-c'\n\
-      --help                  display this help and exit\n\
-      --version               output version information and exit\n\
-\n\
-If no FILE, standard input is read.\n"),
-	     stdout);
-      /* TRANSLATORS: add the contact address for your translation team! */
-      printf (_("Report bugs to <%s>.\n"), PACKAGE_BUGREPORT);
-    }
-  exit (status);
-}
-
-/*--------------------------------------.
-| Decode options and launch execution.  |
-`--------------------------------------*/
-
-static const struct option long_options[] =
-{
-  {"directory", required_argument, NULL, 'd'},
-  {"exit-0", no_argument, NULL, 'e'},
-  {"force", no_argument, NULL, 'f'},
-  {"overwrite", no_argument, NULL, 'c'},
-  {"split-at", required_argument, NULL, 'E'},
-
-  {"help", no_argument, &show_help, 1},
-  {"version", no_argument, &show_version, 1},
-
-  { NULL, 0, NULL, 0 },
-};
-
-int
-main (argc, argv)
-     int argc;
-     char *const *argv;
-{
-  FILE *file;
-  char* name_buffer = NULL;
-  int optchar;
-
-  program_name = argv[0];
-  setlocale (LC_ALL, "");
-
-  /* Set the text message domain.  */
-  bindtextdomain (PACKAGE, LOCALEDIR);
-  textdomain (PACKAGE);
-
-#ifdef __MSDOS__
-  setbuf (stdout, NULL);
-  setbuf (stderr, NULL);
-#endif
-
-  if (current_directory = xgetcwd (), !current_directory)
-    error (EXIT_FAILURE, errno, _("Cannot get current directory name"));
-
-  /* Process options.  */
-
-  while (optchar = getopt_long (argc, argv, "E:cd:ef", long_options, NULL),
-	 optchar != EOF)
-    switch (optchar)
-      {
-      case '\0':
-	break;
-
-      case 'c':
-      case 'f':
-	pass_c_flag = 1;
-	break;
-
-      case 'd':
-	if (chdir (optarg) == -1)
-	  error (2, 0, _("Cannot chdir to `%s'"), optarg);
-	break;
-
-      case 'E':
-	exit_string = optarg;
-	/* Fall through.  */
-
-      case 'e':
-	continue_reading = 1;
-	exit_string_length = strlen (exit_string);
-	break;
-
-      default:
-	usage (EXIT_FAILURE);
-      }
-
-  if (show_version)
-    {
-      printf ("%s (GNU %s) %s\n", basename (program_name), PACKAGE, VERSION);
-      /* xgettext: no-wrap */
-      printf (_("Copyright (C) %s Free Software Foundation, Inc.\n\
-This is free software; see the source for copying conditions.  There is NO\n\
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\
-"),
-	      cright_years_z);
-      exit (EXIT_SUCCESS);
-    }
-
-  if (show_help)
-    usage (EXIT_SUCCESS);
-
-  if (optind < argc)
-    {
-      size_t buflen = 0;
-      argv += optind;
-
-      for (;;)
-        {
-          char* arg = *(argv++);
-          size_t sz;
-          if (arg == NULL)
-            break;
-
-          sz = strlen (current_directory) + strlen (arg) + 2;
-          if (sz > buflen)
-            {
-              buflen = sz + 32;
-              name_buffer = (name_buffer == NULL)
-                ? malloc (buflen)
-                : realloc (name_buffer, buflen);
-              if (name_buffer == NULL)
-                error (EXIT_FAILURE, ENOMEM, _("allocate file name buffer"));
-            }
-
-          if (*arg == '/')
-            strcpy (name_buffer, arg);
-          else
-            {
-              char *cp = stpcpy (name_buffer, current_directory);
-              *cp++ = '/';
-              strcpy (cp, arg);
-            }
-          if (file = fopen (name_buffer, "r"), !file)
-            error (EXIT_FAILURE, errno, name_buffer);
-          unarchive_shar_file (name_buffer, file);
-          fclose (file);
-        }
-    }
-  else
-    {
-      file = load_stdin (&name_buffer);
-
-      unarchive_shar_file (_("standard input"), file);
-
-      fclose (file);
-      unlink (name_buffer);
-    }
-
-  exit (EXIT_SUCCESS);
-}
-
-
-static FILE*
-load_stdin (char **p_name_buf)
+/**
+ * load a file that does not support ftell/seek.
+ * Create a temporary file and suck up all the file data, writing it out
+ * to the temporary file.  Return a file pointer to this temporary file,
+ * and a pointer to the allocated string containing the file name.
+ * The file must be removed and the name pointer deallocated.
+ *
+ * @param[out] tmp_fname    temporary file name
+ * @param[in]  infp         input data file pointer (usually stdin)
+ *
+ * @returns a file pointer to the temporary file
+ */
+static FILE *
+load_file (char const ** tmp_fname, FILE * infp)
 {
   static const char z_tmpfile[] = "unsh.XXXXXX";
-  char *pz_fname;
-  FILE *fp;
-
-  /*
-   * FIXME: actually configure this stuff:
-   */
-#if defined(_SC_PAGESIZE)
-  long pg_sz = sysconf (_SC_PAGESIZE);
-#elif defined(_SC_PAGE_SIZE)
-  long pg_sz = sysconf (_SC_PAGE_SIZE);
-#elif defined(HAVE_GETPAGESIZE)
-  long pg_sz = getpagesize();
-#else
-# define pg_sz 8192
-#endif
+  char * pz_fname;
+  FILE * outfp;
 
   {
     size_t name_size;
@@ -501,42 +298,131 @@ load_stdin (char **p_name_buf)
       pz_tmp = "/tmp";
 
     name_size = strlen (pz_tmp) + sizeof (z_tmpfile) + 1;
-    *p_name_buf = pz_fname = malloc (name_size);
+    *tmp_fname = pz_fname = malloc (name_size);
 
     if (pz_fname == NULL)
-      error (EXIT_FAILURE, ENOMEM, _("allocate file name buffer"));
-
+      fserr (UNSHAR_EXIT_NOMEM, "malloc", _("file name buffer"));
+    
     sprintf (pz_fname, "%s/%s", pz_tmp, z_tmpfile);
   }
 
   {
     int fd = mkstemp (pz_fname);
     if (fd < 0)
-      error (EXIT_FAILURE, errno, pz_fname);
-
-    fp = fdopen (fd, "w+");
+      fserr (UNSHAR_EXIT_CANNOT_CREATE, "mkstemp", z_tmpfile);
+    
+    outfp = fdopen (fd, "w+");
   }
 
-  if (fp == NULL)
-    error (EXIT_FAILURE, errno, pz_fname);
+  if (outfp == NULL)
+    fserr (UNSHAR_EXIT_CANNOT_CREATE, "fdopen", pz_fname);
 
-  {
-    char *buf = malloc (pg_sz);
-    size_t size_read;
+  for (;;)
+    {
+      size_t size_read = fread (rw_buffer, 1, rw_base_size, infp);
+      if (size_read == 0)
+        break;
+      fwrite (rw_buffer, size_read, 1, outfp);
+    }
 
-    if (buf == NULL)
-      error (EXIT_FAILURE, ENOMEM, _("allocate file buffer"));
+  rewind (outfp);
 
-    while (size_read = fread (buf, 1, pg_sz, stdin),
-           size_read != 0)
-      fwrite (buf, size_read, 1, fp);
+  return outfp;
+}
 
-    free (buf);
-  }
+/**
+ * Unarchive a shar file provided on file NAME.  The file itself is
+ * provided on the already opened FILE pointer.  If the file position
+ * cannot be determined, we suck up all the data and use a temporary.
+ */
+int
+unshar_file (const char * name, FILE * file)
+{
+  char const * tmp_fname = NULL;
+  off_t curr_pos = ftell (file);
 
-  rewind (fp);
+  if (curr_pos < 0)
+    {
+      file = load_file (&tmp_fname, file);
+      curr_pos = ftell (file);
+      if (curr_pos < 0)
+        fserr (UNSHAR_EXIT_CANNOT_CREATE, "ftell", tmp_fname);
+    }
+      
+  while (find_archive (name, file, curr_pos))
+    {
+      char const * cmd = HAVE_OPT(OVERWRITE) ? "sh -s - -c" : "sh";
+      FILE * shell_fp = popen (cmd, "w");
 
-  return fp;
+      if (shell_fp == NULL)
+	fserr (UNSHAR_EXIT_POPEN_PROBLEM, "popen", cmd);
+      if (HAVE_OPT(DIRECTORY))
+        fprintf (shell_fp, "cd %s >/dev/null || exit 1\n", OPT_ARG(DIRECTORY));
+      printf ("%s:\n", name);
+      if (! HAVE_OPT(SPLIT_AT))
+	{
+          for (;;)
+            {
+              size_t len = fread (rw_buffer, 1, rw_base_size, file);
+              if (len == 0)
+                break;
+              fwrite (rw_buffer, 1, len, shell_fp);
+            }
+
+	  pclose (shell_fp);
+	  break;
+	}
+      else
+	{
+          char * text_in;
+
+	  while (text_in = fgets (rw_buffer, rw_base_size, file),
+		 text_in != NULL)
+	    {
+	      fputs (rw_buffer, shell_fp);
+	      if (!strncmp (OPT_ARG(SPLIT_AT), rw_buffer, separator_str_len))
+		break;
+	    }
+	  pclose (shell_fp);
+
+	  if (text_in == NULL)
+	    break;
+
+          curr_pos = ftell (file);
+	}
+    }
+
+  if (tmp_fname != NULL)
+    {
+      unlink (tmp_fname);
+      free ((void *)tmp_fname);
+    }
+
+  return UNSHAR_EXIT_SUCCESS;
+}
+
+/**
+ * unshar initialization.  Do all the initializations necessary to be ready
+ * to start processing files.  I18N stuff, file descriptors for source and
+ * destination files, and allocation of I/O buffers.
+ *
+ * This routine works or does not return.
+ */
+void
+init_unshar (void)
+{
+  setlocale (LC_ALL, "");
+  bindtextdomain (PACKAGE, LOCALEDIR);
+  textdomain (PACKAGE);
+#ifdef __MSDOS__
+  setbuf (stdout, NULL);
+  setbuf (stderr, NULL);
+#endif
+
+  rw_base_size = GET_PAGE_SIZE;
+  rw_buffer    = malloc (rw_base_size);
+  if (rw_buffer == NULL)
+    fserr (UNSHAR_EXIT_NOMEM, "malloc", _("read/write buffer"));
 }
 
 /*
@@ -546,4 +432,4 @@ load_stdin (char **p_name_buf)
  * tab-width: 8
  * indent-tabs-mode: nil
  * End:
- * end of agen5/autogen.c */
+ * end of unshar.c */

@@ -8,7 +8,7 @@ Specifying compression:
                                 - prohibits the option: vanilla-operation
                                 - may appear multiple times
    -g, --level-of-compression=num pass LEVEL for compression
-                                - It must be in the range: 1 to 9
+                                - it must be in the range: 1 to 9
        --level-for-gzip=num   This is an alias for 'level-of-compression'
 
 Specifying file encoding methodology:
@@ -21,12 +21,12 @@ Specifying file selection and output modes:
    -l, --whole-size-limit=num split archive, not files, to size
                                 - requires the option: output-prefix
                                 - is scalable with a suffix: k/K/m/M/g/G
-                                - It must lie in one of the ranges:
+                                - it must lie in one of the ranges:
                                   8 to 1023, or 8192 to 4194304
    -L, --split-size-limit=num split archive or files to size
                                 - requires the option: output-prefix
                                 - is scalable with a suffix: k/K/m/M/g/G
-                                - It must lie in one of the ranges:
+                                - it must lie in one of the ranges:
                                   8 to 1023, or 8192 to 4194304
                                 - an alternate for whole-size-limit
    -I, --input-file-list=str  read file list from a file
@@ -64,11 +64,11 @@ User feedback/entertainment:
        --silent               This is an alias for 'quiet'
 
 Version, usage and configuration options:
-   -v, --version[=arg]        Output version information and exit
-   -h, --help                 Display extended usage information and exit
-   -!, --more-help            Extended usage information passed thru pager
-   -R, --save-opts[=arg]      Save the option state to a config file
-   -r, --load-opts=str        Load options from a config file
+   -v, --version[=arg]        output version information and exit
+   -h, --help                 display extended usage information and exit
+   -!, --more-help            extended usage information passed thru pager
+   -R, --save-opts[=arg]      save the option state to a config file
+   -r, --load-opts=str        load options from a config file
                                 - disabled as --no-load-opts
                                 - may appear multiple times
 
