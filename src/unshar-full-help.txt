@@ -1,19 +1,19 @@
 unshar (GNU sharutils) - unpack a shar archive
-Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
+Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]
 
-   -d, --directory=str        change directory to dir before unpacking
+   -d, --directory=DIR        change directory to DIR before unpacking
    -c, --overwrite            overwrite any pre-existing files
    -f, --force                an alias for the 'overwrite' option
-   -E, --split-at=str         separate archives on split-pat lines
-   -e, --exit-0               split archives at "exit 0" lines
-                                - prohibits the option split-at
+   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines
+   -e, --exit-0               split input on "exit 0" lines
+                                - prohibits the option 'split-at'
    -D, --debug                debug the shell code
-   -v, --version[=arg]        output version information and exit
+   -v, --version[=MODE]       output version information and exit
    -h, --help                 display extended usage information and exit
    -!, --more-help            extended usage information passed thru pager
-   -R, --save-opts[=arg]      save the option state to a config file
-   -r, --load-opts=str        load options from a config file
-                                - disabled as --no-load-opts
+   -R, --save-opts[=FILE]     save the option state to the config file FILE
+   -r, --load-opts=FILE       load options from the config file FILE
+                                - disabled as '--no-load-opts'
                                 - may appear multiple times
 
 Options are specified by doubled hyphens and their name or by a single
@@ -25,9 +25,10 @@ one per line; blank and '#'-prefixed lines are comments.
 
 The following option preset mechanisms are supported:
  - reading file $HOME/.sharrc
-Unshar scans the input files (typically email messages) looking for the
+
+'unshar' scans the input files (typically email messages) looking for the
 start of a shell archive.  If no files are given, then standard input is
 processed instead.  It then passes each archive discovered through an
 invocation of the shell program to unpack it.
 
-please send bug reports to:  <bug-gnu-utils@gnu.org>
+Please send bug reports to:  <bug-gnu-utils@gnu.org>

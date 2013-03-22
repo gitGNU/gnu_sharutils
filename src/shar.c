@@ -887,7 +887,7 @@ print_caution_notes (FILE * fp)
     fprintf (fp, exist_note_z, msg);
   }
 
-  if (HAVE_OPT(SPLIT_SIZE_LIMIT))
+  if (HAVE_OPT(WHOLE_SIZE_LIMIT))
     {
       int len = snprintf (explain_text_fmt, sizeof (explain_text_fmt),
                           explain_fmt_fmt_z, explain_1_len, explain_2_len);
@@ -1371,7 +1371,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
       fprintf (output, echo_string_z, scribble);
     }
 
-  fwrite (split_file_z, sizeof (split_file_z), 1, output);
+  fwrite (split_file_z, sizeof (split_file_z) - 1, 1, output);
 
   if (part_number == 1)
     {
@@ -1379,6 +1379,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
 
       fseek (output, archive_type_position, SEEK_SET);
       fprintf (output, explain_text_fmt, explain_1_z, explain_2_z);
+      fseek (output, 0, SEEK_END);
     }
   close_output (part_number + 1);
 
@@ -1547,7 +1548,7 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
   /*
    * If file size is limited, either splitting files or not,
    * get the current output length.  Switch files if we split on file
-   * boundaries and there is not enough space.
+   * boundaries and there may not be enough space.
    */
   if (HAVE_OPT(WHOLE_SIZE_LIMIT))
     {
@@ -1559,8 +1560,9 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
       *size_left_p = OPT_VALUE_WHOLE_SIZE_LIMIT - current_size;
       DEBUG_PRINT ("In shar: remaining size %s\n", *size_left_p);
 
-      if (!HAVE_OPT(SPLIT_SIZE_LIMIT) && current_size > first_file_position
-          && (encoded_size > *size_left_p))
+      if (  (WHICH_OPT_WHOLE_SIZE_LIMIT != VALUE_OPT_SPLIT_SIZE_LIMIT)
+         && (current_size > first_file_position)
+         && (encoded_size > *size_left_p))
         {
           change_files (*rnameq_p, size_left_p);
           current_size = ftell (output);
@@ -1851,13 +1853,14 @@ parse_output_base_name (char const * arg)
       static char const sfx[] = ".%02d";
       size_t len = strlen (arg);
       char * fmt = xmalloc(len + sizeof (sfx));
+      int    svd = initialization_done;
       memcpy (fmt, arg, len);
       memcpy (fmt + len, sfx, sizeof (sfx));
 
       /* this is allowed to happen after initialization. */
       initialization_done = 0;
       SET_OPT_OUTPUT_PREFIX(fmt);
-      initialization_done = 1;
+      initialization_done = svd;
     }
 }
 
@@ -2216,7 +2219,7 @@ main (int argc, char ** argv)
 
   /* Delete the sequence file, if any.  */
 
-  if (HAVE_OPT(SPLIT_SIZE_LIMIT) && part_number > 1)
+  if (HAVE_OPT(WHOLE_SIZE_LIMIT) && part_number > 1)
     {
       fprintf (output, echo_string_z, SM_you_are_done);
       if (HAVE_OPT(QUIET))

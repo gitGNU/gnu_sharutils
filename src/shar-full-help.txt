@@ -1,56 +1,61 @@
 shar (GNU sharutils) - create a shell archive
-Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]
+Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]
 
-Specifying compression:
+Specify compression:
    -p, --intermix-type        specify compression for input files
-                                - prohibits the option: vanilla-operation
-   -C, --compactor=str        specify compaction (compression) program
-                                - prohibits the option: vanilla-operation
+                                - prohibits the option 'vanilla-operation'
+   -C, --compactor=PROG       specify compaction (compression) program PROG
+                                - prohibits the option 'vanilla-operation'
                                 - may appear multiple times
-   -g, --level-of-compression=num pass LEVEL for compression
+                                - it must be known to shar: xz gzip bzip2
+   -g, --level-of-compression=LEVEL
+                              pass LEVEL for compression
                                 - it must be in the range: 1 to 9
-       --level-for-gzip=num   This is an alias for 'level-of-compression'
 
-Specifying file encoding methodology:
+Specify file encoding methodology:
    -M, --mixed-uuencode       decide uuencoding for each file
    -B, --uuencode             treat all files as binary
+                                - an alternate for mixed-uuencode
    -T, --text-files           treat all files as text
+                                - an alternate for mixed-uuencode
 
 Specifying file selection and output modes:
    -o, --output-prefix=str    print output to file PREFIX.nn
-   -l, --whole-size-limit=num split archive, not files, to size
-                                - requires the option: output-prefix
-                                - is scalable with a suffix: k/K/m/M/g/G
+   -l, --whole-size-limit=SIZE
+                              split archive, not files, to SIZE
+                                - requires the option 'output-prefix'
+                                - is scalable with a suffix: k/K/m/M/g/G/t/T
                                 - it must lie in one of the ranges:
                                   8 to 1023, or 8192 to 4194304
-   -L, --split-size-limit=num split archive or files to size
-                                - requires the option: output-prefix
-                                - is scalable with a suffix: k/K/m/M/g/G
+   -L, --split-size-limit=SIZE
+                              split archive or files to SIZE
+                                - requires the option 'output-prefix'
+                                - is scalable with a suffix: k/K/m/M/g/G/t/T
                                 - it must lie in one of the ranges:
                                   8 to 1023, or 8192 to 4194304
-                                - an alternate for whole-size-limit
-   -I, --input-file-list=str  read file list from a file
+                                - an alternate for 'whole-size-limit'
+   -I, --input-file-list=FILE read file list from FILE
 
 Controlling the shar headers:
-   -n, --archive-name=str     use name to document the archive
-   -s, --submitter=str        override the submitter name
+   -n, --archive-name=NAME    use NAME to document the archive
+   -s, --submitter=NAME       override the submitter name with NAME
    -a, --net-headers          output Submitted-by: & Archive-name: headers
-                                - requires the option: archive-name
+                                - requires the option 'archive-name'
    -c, --cut-mark             start the shar with a cut line
    -t, --translate            translate messages in the script
 
 Protecting against transmission issues:
-       --no-character-count   do not use 'wc -c' to check size
+       --no-character-count   do not use `wc -c' to check size
    -D, --no-md5-digest        do not use md5sum digest to verify
    -F, --force-prefix         apply the prefix character on every line
-   -d, --here-delimiter=str   use delim to delimit the files
+   -d, --here-delimiter=DELIM use DELIM to delimit the files
 
 Producing different kinds of shars:
    -V, --vanilla-operation    produce very simple shars
    -P, --no-piping            use temporary files between programs
    -x, --no-check-existing    blindly overwrite existing files
    -X, --query-user           ask user before overwriting files
-                                - prohibits the option: vanilla-operation
+                                - prohibits the option 'vanilla-operation'
    -m, --no-timestamp         do not restore modification times
    -Q, --quiet-unshar         avoid verbose messages at unshar time
    -f, --basename             restore in one directory, despite hierarchy
@@ -61,22 +66,24 @@ Internationalization options:
 
 User feedback/entertainment:
    -q, --quiet                do not output verbose messages
-       --silent               This is an alias for 'quiet'
+       --silent               an alias for the 'quiet' option
 
 Version, usage and configuration options:
-   -v, --version[=arg]        output version information and exit
+   -v, --version[=MODE]       output version information and exit
    -h, --help                 display extended usage information and exit
    -!, --more-help            extended usage information passed thru pager
-   -R, --save-opts[=arg]      save the option state to a config file
-   -r, --load-opts=str        load options from a config file
-                                - disabled as --no-load-opts
+   -R, --save-opts[=FILE]     save the option state to a config file FILE
+   -r, --load-opts=FILE       load options from the config file FILE
+                                - disabled with '--no-load-opts'
                                 - may appear multiple times
 
 Options are specified by doubled hyphens and their name or by a single
 hyphen and the flag character.
-
 If no 'file's are specified, the list of input files is read from a
 standard input.  Standard input must not be a terminal.
+
+The following option preset mechanisms are supported:
+ - reading file $HOME/.sharrc
 
 'shar' creates "shell archives" (or shar files) which are in text format
 and can be emailed.  These files may be unpacked later by executing them
@@ -91,10 +98,8 @@ recognized.  If the '--intermix-type' option has been specified, more
 compression and encoding options will be recognized between the 'file'
 arguments.
 
-Though this program supports 'uuencode'-d files, they are deprecated.
-If you are emailing files, please consider mime-encoded files.
-If you do 'uuencode', base 64 is the preferred encoding method.
-
-Shar supports reading a configuration file:  $HOME/.sharrc
+Though this program supports 'uuencode'-d files, they are deprecated.  If
+you are emailing files, please consider mime-encoded files.  If you do
+'uuencode', base64 is the preferred encoding method.
 
 Please send bug reports to:  <bug-gnu-utils@gnu.org>

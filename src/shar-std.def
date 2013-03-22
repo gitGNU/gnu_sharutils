@@ -22,13 +22,7 @@ copyright = {
 };
 
 package         = 'GNU sharutils';
-version         = `
-    sed -n '/^AC_INIT(/{
-	s/.*GNU *sharutils[^,]*, *.//
-	s/.,.*//
-	p
-	q ; }' ../configure.ac
-`;
+version         = '@@sharutils-version@@';
 
 gnu-usage;
 long-opts;

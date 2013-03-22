@@ -18,7 +18,7 @@ prog-name   = `progname=uuencode ; echo $progname`;
 #include shar-std.def
 
 prog-title  = 'encode a file into email friendly text';
-argument    = '[ in-file ] output-name';
+argument    = '[<in-file>] <output-name>';
 
 detail = <<- _EODetail_
 	@file{uuencode} is used to create an ASCII representation of a file
@@ -45,11 +45,11 @@ include = <<- _EOF_
 flag = {
     name        = base64;
     value       = m;
-    descrip     = 'convert using base 64';
+    descrip     = 'convert using base64';
 
     doc = <<- _EODoc_
 	By default, @file{uuencode} will encode using the traditional
-	conversion.  It is slower and less compact than base 64.
+	conversion.  It is slower and less compact than base64.
 	The encoded form of the file is expanded by 37% for UU encoding
 	and by 35% for base64 encoding (3 bytes become 4 plus control
 	information).

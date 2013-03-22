@@ -1,21 +1,24 @@
 uudecode (GNU sharutils) - decode an encoded file
-Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]
+Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]
 
    -o, --output-file=str      direct output to file
    -c, --ignore-chmod         ignore fchmod(3P) errors
-   -v, --version[=arg]        output version information and exit
+   -v, --version[=MODE]       output version information and exit
    -h, --help                 display extended usage information and exit
    -!, --more-help            extended usage information passed thru pager
-   -R, --save-opts[=arg]      save the option state to a config file
-   -r, --load-opts=str        load options from a config file
-                                - disabled as --no-load-opts
+   -R, --save-opts[=FILE]     save the option state to a config file FILE
+   -r, --load-opts=FILE       load options from the config file FILE
+                                - disabled with '--no-load-opts'
                                 - may appear multiple times
 
 Options are specified by doubled hyphens and their name or by a single
 hyphen and the flag character.
 If no 'file'(s) are provided, then standard input is decoded.
 
-'Uudecode' transforms uuencoded files into their original form.
+The following option preset mechanisms are supported:
+ - reading file $HOME/.sharrc
+
+'uudecode' transforms uuencoded files into their original form.
 
 The encoded file(s) may be specified on the command line, or one may be
 read from standard input.  The output file name is specified in the encoded
@@ -32,6 +35,4 @@ found.  The program determines from the header line of the encoded file
 which of the two supported encoding schemes was used and whether or not the
 output file name has been encoded with base64 encoding.  See 'uuencode(5)'.
 
-'Uudecode' supports reading a configuration file:  $HOME/.sharrc
-
-please send bug reports to:  <bug-gnu-utils@gnu.org>
+Please send bug reports to:  <bug-gnu-utils@gnu.org>

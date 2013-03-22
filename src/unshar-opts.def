@@ -90,7 +90,7 @@ flag = {
     value       = E;
     arg-type    = string;
     arg-name    = split-pat;
-    descrip     = 'separate archives on @var{split-pat} lines';
+    descrip     = 'split input on @var{split-pat} lines';
     arg-default = "exit 0";
     flag-code   =
         '    separator_str_len = strlen (pOptDesc->optArg.argString);';
@@ -114,7 +114,7 @@ flag = {
     name        = exit-0;
     value       = e;
     flags-cant  = split-at;
-    descrip     = 'split archives at "exit 0" lines';
+    descrip     = 'split input on "exit 0" lines';
     flag-code   = '    SET_OPT_SPLIT_AT("exit 0");';
 
     doc = <<- _EODoc_

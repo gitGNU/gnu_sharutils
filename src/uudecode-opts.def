@@ -18,14 +18,14 @@ prog-name   = `progname=uudecode ; echo $progname`;
 #include shar-std.def
 
 prog-title  = 'decode an encoded file';
-argument    = '[ file ... ]';
+argument    = '[<file>...]';
 option-format = texi;
 
 explain = 'If no @file{file}(s) are provided, then standard input is decoded.';
 help-value;
 
 detail = <<- _EODetail_
-	@file{Uudecode} transforms uuencoded files into their original form.
+	@file{uudecode} transforms uuencoded files into their original form.
 
 	The encoded file(s) may be specified on the command line, or one may
 	be read from standard input.  The output file name is specified in

@@ -1,4 +1,22 @@
-2013-02-17  Bruce Korb  <bkorb@gnu.org>
+2013-03-09  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: constrain translation fetching to once a day
+	(set_up_po_dir): clean up README construction
+	(setup_configure): extract local.h include list from gnulib-tool
+	* src/shar-full-help.txt: fiddle, per xlation project requests
+	* src/unshar-full-help.txt: likewise
+	* src/uudecode-full-help.txt: likewise
+	* src/uuencode-full-help.txt: likewise
+	* src/unshar-opts.def: likewise
+	* src/shar.c (print_caution_notes): fix option test
+	(split_shar_ed_file): do not write NUL byte and set output file
+	position back to the end, after scribbling on the beginning.
+	(start_sharing_file): fix option test
+	(parse_output_base_name): save current init-done state before setting
+	to false and restore to saved value.
+	* tests/shar-3: fix misordered "find(1)" options
+
+2013-02-24  Bruce Korb  <bkorb@gnu.org>
 
 	* src/Makefile.am: process the unshar option code
 	* src/unshar-opts.def: make ready for use

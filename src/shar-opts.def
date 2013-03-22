@@ -23,7 +23,7 @@ argument    = '[<file>...]';
 
 explain     = <<- _EOExplain_
 	If no @file{file}s are specified, the list of input files is read
-	from a standard input.  Standard input must not be a terminal.
+	from standard input.  Standard input must not be a terminal.
 	_EOExplain_;
 
 detail      = <<- _EODetail_
@@ -43,7 +43,7 @@ detail      = <<- _EODetail_
 
 	Though this program supports @command{uuencode}-d files, they
 	are deprecated.  If you are emailing files, please consider
-	mime-encoded files.  If you do @command{uuencode}, base 64 is the
+	mime-encoded files.  If you do @command{uuencode}, base64 is the
 	preferred encoding method.
 	_EODetail_;
 

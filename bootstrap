@@ -59,6 +59,13 @@ init() {
         git clean -f -x -d .
     } >/dev/null 2>&1
 
+    if test -x ../gnulib/gnulib-tool
+    then gltool=$(cd ../gnulib >/dev/null; pwd)/gnulib-tool
+    else
+        gltool=$(which gnulib-tool)
+    fi
+    test -x "${gltool}" || die "cannot locate gnulib-tool"
+
     test -d m4 && rm -rf m4
     mkdir m4
     ln tests/sharutils.m4 m4/.
@@ -86,11 +93,6 @@ init() {
     * ) set +x ;;
     esac
 
-    cd ${progdir%-bld}
-    rsync -Lrtvz  translationproject.org::tp/latest/sharutils/ po || \
-        warn "rsync failed"
-
-    cd ${progdir}
     test "/$progdir" = "/${progdir%-bld}" || {
         for f in ${progdir%-bld}/po/*.po
         do
@@ -101,11 +103,25 @@ init() {
     }
 }
 
-versioned_files() {
+set_up_src_dir() {
     cd src
+    sed "/^version *=/s/=.*/= '${sharutils_version}';/" shar-std.def > XX
+    mv -f XX shar-std.def
     autogen scripts.def
-    cd ..
 
+    for def in *-opts.def
+    do
+        autogen $def
+        autogen -b ${def%-opts.def} -Tagman-cmd.tpl $def
+        autogen -Tagtexi-cmd.tpl -DSECTION=chapter $def
+        mv -f ${def%-opts.def}.1 invoke-${def%-opts.def}.texi ../doc/.
+        rm -f invoke-${def%-opts.def}.menu
+    done
+
+    cd ..
+}
+
+install_libopts() {
     liboptsdir=libopts
     f=$(autoopts-config libsrc)
     case "$f" in
@@ -130,6 +146,50 @@ versioned_files() {
     cd ..
     sed '/end .* of INVOKE_LIBOPTS_MACROS/q' \
         ${liboptsdir}/m4/libopts.m4 > m4/libopts.m4
+}
+
+set_up_po_dir() {
+    declare last_pull=$(stat -c%Y po/.gitignore)
+    declare now=$(date +%s)
+    declare day_len=$(( 60 * 60 * 24 ))
+    (( now - last_pull > day_len )) && {
+        cd ${progdir%-bld}
+        echo 'resyncing with translation project in' $PWD
+        if rsync -Lrtvz  translationproject.org::tp/latest/sharutils/ po
+        then touch .gitignore
+        else warn "rsync failed"
+        fi
+        cd ${progdir}
+    }
+
+    # Isolate all the .po files so that they are not auto-updated
+    # every time the autotools are run.
+    #
+    cd po
+
+    # Force all the version numbers to match.
+    #
+    declare vexpr='/(GNU sharutils) 4\./'
+    vexpr+="s@ 4\.[0-9pre.]*@ ${sharutils_version}@g"
+    sed -i "$vexpr" *.po
+    chmod 644 *.po
+
+    rm -f ../README
+    {
+        tag='Language file updates:'
+        sed "/^${tag}/q" ../README.git
+        echo
+
+        fgrep PO-Revision-Date: *.po | \
+            sed 's/\.po: *"PO-Revision-Date: */\t/;s/ [0-2][0-9]:.*//' | \
+            sort -t$'\t' -k +2 -r
+    } 1> ../README
+    cd ..
+}
+
+versioned_files() {
+    set_up_src_dir
+    install_libopts
 
     test -d intl || mkdir intl || die "cannot make intl directory"
     month_stamp=$(date '+%B %Y')
@@ -137,25 +197,7 @@ versioned_files() {
     vline="Version ${sharutils_version} - "${month_stamp}
     sed "1,5s/^Version .* by /${vline}, by /" NEWS.git > NEWS
 
-    tag='Language file updates:'
-    sed "/^${tag}/,\$d" README.git > README
-    exec 3>> README
-    echo "${tag}" >&3
-
-    # Isolate all the .po files so that they are not auto-updated
-    # every time the autotools are run.
-    #
-    cd po
-    for f in *.po
-    do
-        cp -fp $f $f-xx
-        mv -f $f-xx $f
-    done
-    fgrep PO-Revision-Date: *.po | \
-        sed 's/\.po: *"PO-Revision-Date: */\t/;s/ [0-2][0-9]:.*//' | \
-        sort -t$'\t' -k +2 -r >&3
-    exec 3>&-
-    cd ..
+    set_up_po_dir
 
     {
         cat <<-  _EOVers_
@@ -197,18 +239,11 @@ setup_configure() {
 
     find . -type f | xargs chmod ugo-x
     chmod -R go-w .
-    chmod a+x tests/*-[1-9] bootstrap
+    chmod a+x tests/*-[1-9] src/mk-help.sh bootstrap
 
     shar_lib_hdrs=$(ls -1 lib | egrep -v '^(CVS|SCCS)$')
     extra_dist=$'\n## begin sharutils extras\n\nEXTRA_DIST += \\\n'$(
         echo "${shar_lib_hdrs}" | columns -I4 --spread=1 --line=' \')
-
-    if test -x ../gnulib/gnulib-tool
-    then glib=$(cd ../gnulib >/dev/null; pwd)/gnulib-tool
-    else
-      glib=$(which gnulib-tool)
-    fi
-    test -x "${glib}" || die "cannot locate gnulib-tool"
 
     gnulib_libs="
 	alloca
@@ -246,9 +281,9 @@ setup_configure() {
 
     echo autopoint --force >&2
     autopoint --force > /dev/null 2>&1
-    echo  ${glib} --import  ... >&2
+    echo  ${gltool} --import  ... >&2
     {
-      ${glib} --import ${gnulib_libs} 2>&1
+      ${gltool} --import ${gnulib_libs} 2>&1
     } | sed '1,/^You may need to add #include/d' | \
       tee import-log.txt
     echo "${extra_dist}" >> lib/Makefile.am
@@ -260,67 +295,55 @@ setup_configure() {
 }
 
 update_include_list() {
-  cd src
+    cd src
 
-  # Collect all the #include directives and unique-ify them
-  #
-  ilist=$(
-    {
-      sed -n 's/^ *#include/#include/p' ../import-log.txt
-      echo '#include "error.h"'
-      echo '#include "locale.h"'
-    } | sed '/["<]system\.h[">]/d' | sort -u)
+    # Collect all the #include directives and unique-ify them
+    #
+    ilist=$(
+        {
+            sed -n 's/^ *#include/#include/p' ../import-log.txt
+            echo '#include "error.h"'
+            echo '#include "locale.h"'
+        } | sed '/["<]system\.h[">]/d' | \
+            sort -u
+    )
 
-  # separate them by quoting type:  <> vs. ""
-  # and append a backslash to all but the last line.
-  # sed(1) requires this for inserting text.
-  #
-  ilist='#include "system.h"'$'\\\n'$(
-    {
-      echo "$ilist" | fgrep '<'
-      echo ''
-      echo "$ilist" | fgrep '"'
-    } | sed 's/$/\\/;$s/\\$//')
+    # separate them by quoting type:  <> vs. ""
+    # and append a backslash to all but the last line.
+    # sed(1) requires this for inserting text.
+    #
+    ilist='#include "system.h"'$'\\\n'$(
+        {
+            echo "$ilist" | fgrep '<'
+            echo ''
+            echo "$ilist" | fgrep '"'
+        } | sed 's/$/\\/;$s/\\$//'
+    )
 
-  # now insert this list into "local.h".
-  #
-  sed "s@^INCLUDE-LIST\$@${ilist}@" local.h.git > local.h
-  cd ..
-  rm -f import-log.txt
+    # now insert this list into "local.h".
+    #
+    sed "s@^INCLUDE-LIST\$@${ilist}@" local.h.git > local.h
+    cd ..
+    rm -f import-log.txt
 }
 
-generate_option_code() {
-    cd src
-    for def in *-opts.def
-    do
-        autogen --trace=every --trace-out=${def%.def}.log $def
-        autogen -b ${def%-opts.def} -Tagman-cmd.tpl $def
-        mv -f ${def%-opts.def}.1 ../doc
-        autogen -Tagtexi-cmd.tpl -DSECTION=chapter $def
-        mv -f invoke-${def%-opts.def}.texi ../doc/.
-        rm -f invoke-${def%-opts.def}.menu
-    done
-
-    cd ..
-    {
-        echo '# List of files which containing translatable strings.'
-        grep '[C]opyright [(]C[)]' $script
-        printf '\n# Package source files\n'
-        ls -1 src/*.[chx]
-        printf '\n# Compatibility library source files\n'
-        ls -1 lib/*.[ch]
-    } > po/POTFILES.in
+list_potfiles() {
+    echo '# List of files which containing translatable strings.'
+    grep '[C]opyright [(]C[)]' $program
+    printf '\n# Package source files\n'
+    ls -1 src/*.[chx]
+    printf '\n# Compatibility library source files\n'
+    ls -1 lib/*.[ch]
 }
 
 PS4='>${FUNCNAME:-bs}> '
-script=$0
 init
 versioned_files
 setup_configure
 update_include_list
-generate_option_code
+list_potfiles > po/POTFILES.in
 trap '' 0
-(exit 0) ; exit
+exit 0
 
 #  Local Variables:
 #  mode: shell-script

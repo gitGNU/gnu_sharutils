@@ -54,7 +54,7 @@ mk_shar() {
   #
   tmpfiles=`find . -type f -name '*~'`
   test -n "$tmpfiles" && rm -f $tmpfiles
-  tmpfiles=`find . -type d -depth`
+  tmpfiles=`find . -depth -type d`
   for f in $tmpfiles
   do rmdir $f ; done 2>/dev/null 1>&2
 
