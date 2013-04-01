@@ -7,10 +7,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.13.3\n"
+"Project-Id-Version: sharutils 4.13.4pre9\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-01-06 18:22-0800\n"
-"PO-Revision-Date: 2013-01-10 19:59+0100\n"
+"POT-Creation-Date: 2013-03-07 13:33-0800\n"
+"PO-Revision-Date: 2013-03-23 11:43+0100\n"
 "Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
@@ -25,362 +25,698 @@ msgstr ""
 #. the shar-generated shell script so the shar user can create shar archives
 #. with messages localized for one locale.
 #.
-#: src/scripts.x:397
+#: src/scripts.x:449
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
 msgstr "Poznámka: Kontrolní součty MD5 se neověřují. Zvažte instalaci GNU coreutils."
 
-#: src/scripts.x:398
+#: src/scripts.x:450
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
+"installing GNU 'touch', distributed in GNU coreutils..."
 msgstr ""
 "POZOR: časové značky se neobnovují. Zvažte instalaci nástroje GNU „touch“,\n"
-"který je dodáván v GNU coreutils."
+"který je dodáván v GNU coreutils…"
 
-#: src/scripts.x:400
+#: src/scripts.x:452
 #, c-format
 msgid "lock directory %s exists"
 msgstr "adresář pro zámky %s existuje"
 
-#: src/scripts.x:401
+#: src/scripts.x:453
 #, c-format
 msgid "failed to create %s lock directory"
 msgstr "adresář pro zámky %s nebylo možné vytvořit"
 
-#: src/scripts.x:402
+#: src/scripts.x:454
 #, c-format
 msgid "x - created lock directory %s."
 msgstr "x − vytvořen adresář pro zámky %s."
 
-#: src/scripts.x:403
+#: src/scripts.x:455
 #, c-format
 msgid "x - failed to create lock directory %s."
 msgstr "x – adresář pro zámky %s nebylo možné vytvořit."
 
-#: src/scripts.x:404
+#: src/scripts.x:456
 #, c-format
 msgid "x - created directory %s."
 msgstr "x – adresář pro zámky %s vytvořen."
 
-#: src/scripts.x:405
+#: src/scripts.x:457
 #, c-format
 msgid "x - failed to create directory %s."
 msgstr "x – adresář %s nebylo možné vytvořit."
 
-#: src/scripts.x:406
+#: src/scripts.x:458
 msgid "yes"
 msgstr "ano"
 
-#: src/scripts.x:407
+#: src/scripts.x:459
 msgid "overwrite this file"
 msgstr "přepsat tento soubor"
 
-#: src/scripts.x:408
+#: src/scripts.x:460
 msgid "no"
 msgstr "ne"
 
-#: src/scripts.x:409
+#: src/scripts.x:461
 msgid "skip this file"
 msgstr "přeskočit tento soubor"
 
-#: src/scripts.x:410 libopts/enum.c:486
+#: src/scripts.x:462
 msgid "all"
 msgstr "vše"
 
-#: src/scripts.x:411
+#: src/scripts.x:463
 msgid "overwrite all files"
 msgstr "přepsat všechny soubory"
 
-#: src/scripts.x:412 libopts/enum.c:491
+#: src/scripts.x:464
 msgid "none"
 msgstr "nic"
 
-#: src/scripts.x:413
+#: src/scripts.x:465
 msgid "overwrite no files"
 msgstr "nepřepsat žádné soubory"
 
-#: src/scripts.x:414
+#: src/scripts.x:466
 msgid "help"
 msgstr "pomoc"
 
-#: src/scripts.x:415
+#: src/scripts.x:467
 msgid "explain choices"
 msgstr "vysvětlit možnosti"
 
-#: src/scripts.x:416
+#: src/scripts.x:468
 msgid "quit"
 msgstr "konec"
 
-#: src/scripts.x:417
+#: src/scripts.x:469
 msgid "exit immediately"
 msgstr "okamžitě skončit"
 
-#: src/scripts.x:418
+#: src/scripts.x:470
 #, c-format
 msgid "restore of %s failed"
 msgstr "obnovení %s selhalo"
 
-#: src/scripts.x:419
+#: src/scripts.x:471
 #, c-format
 msgid "  chmod %04o %s\n"
 msgstr "  chmod %04o %s\n"
 
-#: src/scripts.x:420
+#: src/scripts.x:472
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "Konec části %d, pokračujte s částí %d"
 
-#: src/scripts.x:421
+#: src/scripts.x:473
 #, c-format
 msgid "End of %s part %d"
 msgstr "Konec %s, část %d"
 
-#: src/scripts.x:422
+#: src/scripts.x:474
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
 msgstr "upozornění při obnově: velikost %s není %s"
 
-#: src/scripts.x:423 src/shar.c:1307
+#: src/scripts.x:475 src/shar.c:1304
 msgid "(text)"
 msgstr "(textový)"
 
-#: src/scripts.x:424
+#: src/scripts.x:476
 msgid "(compressed)"
 msgstr "(komprimovaný)"
 
-#: src/scripts.x:425
+#: src/scripts.x:477
 msgid "(gzipped)"
 msgstr "(gzipovaný)"
 
-#: src/scripts.x:426
+#: src/scripts.x:478
 msgid "(bzipped)"
 msgstr "(bzipovaný)"
 
-#: src/scripts.x:427
+#: src/scripts.x:479
 msgid "(binary)"
 msgstr "(binární)"
 
-#: src/scripts.x:428
+#: src/scripts.x:480
 msgid "archive"
 msgstr "archívu"
 
-#: src/scripts.x:429
+#: src/scripts.x:481
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "Soubor %s pokračuje v části %d"
 
-#: src/scripts.x:430
+#: src/scripts.x:482
 msgid "Please unpack part 1 first!"
 msgstr "Prosím, rozbalte část číslo 1 jako první!"
 
-#: src/scripts.x:431
+#: src/scripts.x:483
 msgid "Please unpack part ${shar_sequence} next!"
 msgstr "Prosím, jako další rozbalte část ${shar_sequence}!"
 
-#: src/scripts.x:432
+#: src/scripts.x:484
 #, c-format
 msgid "x - STILL SKIPPING %s"
 msgstr "x – STÁLE PŘESKAKUJI %s"
 
-#: src/scripts.x:433
+#: src/scripts.x:485
 #, c-format
 msgid "continuing file %s"
 msgstr "pokračování souboru %s"
 
-#: src/scripts.x:434
+#: src/scripts.x:486
 msgid "(empty)"
 msgstr "(prázdný)"
 
-#: src/scripts.x:435
+#: src/scripts.x:487
 #, c-format
 msgid "x - overwriting %s"
 msgstr "x – přepisuje se %s"
 
-#: src/scripts.x:436
+#: src/scripts.x:488
 #, c-format
 msgid "overwrite %s"
 msgstr "přepsat %s"
 
-#: src/scripts.x:437
+#: src/scripts.x:489
 #, c-format
 msgid "SKIPPING %s"
 msgstr "PŘESKAKUJI %s"
 
-#: src/scripts.x:438
+#: src/scripts.x:490
 msgid "extraction aborted"
 msgstr "rozbalování ukončeno předčasně"
 
-#: src/scripts.x:439
+#: src/scripts.x:491
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
 msgstr "x – PŘESKAKUJE SE %s (soubor již existuje)"
 
-#: src/scripts.x:440
+#: src/scripts.x:492
 #, c-format
 msgid "x - extracting %s %s"
 msgstr "x – rozbaluje se %s %s"
 
-#: src/scripts.x:441
+#: src/scripts.x:493
 #, c-format
 msgid "File %s is complete"
 msgstr "Soubor %s zpracován"
 
-#: src/scripts.x:442
+#: src/scripts.x:494
 #, c-format
 msgid "uudecoding file %s"
 msgstr "uudekódování souboru %s"
 
-#: src/scripts.x:443
+#: src/scripts.x:495
 msgid "MD5 check failed"
 msgstr "kontrola MD5 selhala"
 
-#: src/scripts.x:444
+#: src/scripts.x:496
 msgid "You have unpacked the last part"
 msgstr "Máte rozbalenu poslední část"
 
-#: src/scripts.x:445
+#: src/scripts.x:497
 #, c-format
 msgid "x - removed lock directory %s."
 msgstr "x – adresář pro zámky %s odstraněn."
 
-#: src/scripts.x:446
+#: src/scripts.x:498
 #, c-format
 msgid "x - failed to remove lock directory %s."
 msgstr "x – adresář pro zámky %s nebylo možné odstranit."
 
-#: src/shar-opts.c:1674
+#: src/shar-opts.c:1867
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "%s nelze znovu otevřít jako standardní vstup"
 
-#: src/shar-opts.c:1784
+#: src/shar-opts.c:1987
 msgid "shar usage error:\n"
 msgstr "chybné použití sharu:\n"
 
-#: src/shar-opts.c:1820
+#: src/shar-opts.c:2023
 msgid "shar fatal error:\n"
 msgstr "nepřekonatelná chyba v shar:\n"
 
 # TODO: rephrase fserr
-#: src/shar-opts.c:1857 src/unshar-opts.c:564 src/uudecode-opts.c:483
-#: src/uuencode-opts.c:474
+#: src/shar-opts.c:2060 src/unshar-opts.c:734 src/uudecode-opts.c:508
+#: src/uuencode-opts.c:459
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr "chyba souborového systému %d (%s) při provádění „%s“ s %s\n"
 
-#: src/shar-opts.c:1976 src/unshar-opts.c:683 src/uudecode-opts.c:602
-#: src/uuencode-opts.c:593
+#: src/shar-opts.c:2185 src/unshar-opts.c:859 src/uudecode-opts.c:633
+#: src/uuencode-opts.c:584
 msgid "No memory for duping translated strings\n"
 msgstr "Nedostatek paměti pro duplikaci přeložených řetězců\n"
 
-#: src/shar-opts.c:2051
-msgid "create a shell archiv"
-msgstr "vytvoří shellový archiv"
-
-#: src/shar-opts.c:2053
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the sharOptions structure noted in the comments below.  The
+#. literal text is defined in shar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. shar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via sharOptions.pzCopyright
+#: src/shar-opts.c:2253
 msgid ""
-"shar (GNU sharutils) - create a shell archive - Ver. 4.13.3\n"
-"USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+"shar (GNU sharutils) 4.13.4pre9\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"shar (GNU sharutils) 4.13.4pre9\n"
+"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
+"šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
+"nebo pozdější <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/shar-opts.c:2260
+msgid ""
+"shar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
 "\n"
+msgstr ""
+"shar je svobodné programové vybavení: máte právo jej šířit a/nebo měnit podle\n"
+"podmínek Obecné veřejné licence GNU (GPL), jak byla uvolněna Free Software\n"
+"Foundation, a to buď ve verzi 3, nebo (dle vašeho uvážení) jakékoliv verzi\n"
+"pozdější.\n"
 "\n"
-"specifying compression:\n"
+
+#: src/shar-opts.c:2264
+msgid ""
+"shar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
 "\n"
+msgstr ""
+"shar je šířen v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY,\n"
+"dokonce bez odvozené záruky na OBCHODOVATELNOST nebo VHODNOST PRO URČITÝ\n"
+"ÚČEL. Pro podrobnosti vizte Obecnou veřejnou licenci GNU (GPL).\n"
+"\n"
+
+#: src/shar-opts.c:2268 src/unshar-opts.c:942 src/uudecode-opts.c:716
+#: src/uuencode-opts.c:667
+msgid ""
+"You should have received a copy of the GNU General Public License along\n"
+"with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+"Spolu s tímto programem byste měli obdržet kopii Obecné veřejné licence GNU.\n"
+"Pokud se tak nestalo, vizte <http://www.gnu.org/licenses/>.\n"
+
+#: src/shar-opts.c:2272
+#, c-format
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"shar (GNU sharutils) – vytváří shellový archiv\n"
+"Použití: %s [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"            [soubor…]\n"
+
+#: src/shar-opts.c:2276
+msgid ""
+"If no 'file's are specified, the list of input files is read from standard\n"
+"input.  Standard input must not be a terminal.\n"
+msgstr ""
+"Není-li zadán žádný soubor, je seznam vstupních souborů načten ze\n"
+"standardního vstupu. Standardní vstup nesmí být terminál.\n"
+
+#: src/shar-opts.c:2280
+msgid ""
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+"„shar“ vyrábí shellové archivy (též soubory shar), což jsou texty, které lze\n"
+"odeslat e-mailem. Tyto souboru lze později rozbalit jejich spuštěním skrze\n"
+"„/bin/sh“. Výsledný archiv je odeslán na standardní výstup, nebyl-li zadán\n"
+"přepínač „-o“. Široká škála funkcí nabízí velkou pružnost při výrobě archivů\n"
+"a při určování „chytrosti“ sharu. Archivy mohou být celkem jednoduché\n"
+"(„--vanilla-operation“) nebo v podstatě tarový archiv zaslatelný poštou.\n"
+
+#: src/shar-opts.c:2287 src/shar-opts.c:2381
+msgid ""
+"Options may be specified in any order until a 'file' argument is\n"
+"recognized.  If the '--intermix-type' option has been specified, more\n"
+"compression and encoding options will be recognized between the 'file'\n"
+"arguments.\n"
+"\n"
+msgstr ""
+"Přepínače lze uvádět v libovolném pořadí až k argumentu souboru. Je-li\n"
+"zadán přepínač „--intermix-type“, další kompresní a kódovací přepínače\n"
+"budou možné mezi argumenty souborů.\n"
+"\n"
+
+#: src/shar-opts.c:2291
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base 64 is the preferred encoding method.\n"
+msgstr ""
+"Ačkoliv tento program podporuje soubory vytvořené nástrojem „uuencode“,\n"
+"není to doporučená metoda. Zasíláte-li soubory e-mailem, prosím, zvažte\n"
+"přenos podle standardu MIME. Použijte-li „uuencode“, bude jako kódování\n"
+"zvolena metoda Base64.\n"
+
+#: src/shar-opts.c:2296
+msgid "shar (GNU sharutils) 4.13.4pre9"
+msgstr "shar (GNU sharutils) 4.13.4pre9"
+
+#: src/shar-opts.c:2299
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"shar (GNU sharutils) – vytváří shellový archiv\n"
+"Použití: shar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"              [<soubor>…]\n"
+"\n"
+
+#: src/shar-opts.c:2301
+msgid ""
+"Specify compression:\n"
 "   -p, --intermix-type        specify compression for input files\n"
-"                                - prohibits these options:\n"
-"                                vanilla-operation\n"
-"   -C, --compactor=str        specify compaction (compression) program\n"
-"                                - prohibits these options:\n"
-"                                vanilla-operation\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"Určení komprese:\n"
+"   -p, --intermix-type        určuje kompresi vstupních souborů\n"
+"                                – zakazuje přepínač „vanilla-operation“\n"
+
+#: src/shar-opts.c:2304
+msgid ""
+"   -C, --compactor=PROG       specify compaction (compression) program PROG\n"
+"                                - prohibits the option 'vanilla-operation'\n"
 "                                - may appear multiple times\n"
-"   -g, --level-of-compression=num pass LEVEL for compression\n"
-"                                - It must be in the range:\n"
-"                                  1 to 9\n"
-"       --level-for-gzip=num   This is an alias for 'level-of-compression'\n"
+"                                - it must be known to shar: xz gzip bzip2\n"
+msgstr ""
+"   -C, --compactor=PROGRAM    určuje kompresní program\n"
+"                                – zakazuje přepínač „vanilla-operation“\n"
+"                                – lze uvést vícekrát\n"
+"                                – musí být znám sharu: xz gzip bzip2\n"
+
+#: src/shar-opts.c:2308
+msgid ""
+"   -g, --level-of-compression=LEVEL\n"
+"                              pass LEVEL for compression\n"
+"                                - it must be in the range: 1 to 9\n"
 "\n"
-"specifying file encoding methodology:\n"
-"\n"
+msgstr ""
+"   -g, --level-of-compression=ÚROVEŇ\n"
+"                              předá ÚROVEŇ komprese\n"
+"                                – musí být v rozsahu: 1 až 9\n"
+
+#: src/shar-opts.c:2311
+msgid ""
+"Specify file encoding methodology:\n"
 "   -M, --mixed-uuencode       decide uuencoding for each file\n"
+msgstr ""
+"Určuje metodiku kódování souboru:\n"
+"   -M, --mixed-uuencode       automaticky se rozhodne, zda použít uuencode\n"
+
+#: src/shar-opts.c:2313
+msgid ""
 "   -B, --uuencode             treat all files as binary\n"
 "                                - an alternate for mixed-uuencode\n"
+msgstr ""
+"   -B, --uuencode             pokládá všechny soubory za binární\n"
+"                                – jiná možnost k mixed-uuencode\n"
+
+#: src/shar-opts.c:2315
+msgid ""
 "   -T, --text-files           treat all files as text\n"
 "                                - an alternate for mixed-uuencode\n"
 "\n"
-"specifying file selection and output modes:\n"
+msgstr ""
+"   -T, --text-files           pokládá všechny soubory za textové\n"
+"                                – jiná možnost k mixed-uuencode\n"
 "\n"
-"   -o, --output-prefix=str    print output to file PREFIX.nn\n"
-"   -l, --whole-size-limit=num split archive, not files, to size\n"
-"                                - requires these options:\n"
-"                                output-prefix\n"
+
+#: src/shar-opts.c:2317
+msgid "Specifying file selection and output modes:\n"
+msgstr "Určuje výběr souboru a režimy výstupu:\n"
+
+#: src/shar-opts.c:2318
+msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+msgstr ""
+"   -o, --output-prefix=řetězec\n"
+"                              výstup do souboru PREFIX.nn\n"
+
+#: src/shar-opts.c:2319
+msgid ""
+"   -l, --whole-size-limit=SIZE\n"
+"                              split archive, not files, to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
 "                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
-"                                - It must lie in one of the ranges:\n"
-"                                  8 to 1023, or\n"
-"                                  8192 to 4194304\n"
-"   -L, --split-size-limit=num split archive or files to size\n"
-"                                - requires these options:\n"
-"                                output-prefix\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+msgstr ""
+"   -l, --whole-size-limit=VELIKOST\n"
+"                              rozdělí archiv, nikoli soubory na části\n"
+"                                – vyžaduje přepínač „output-prefix“\n"
+"                                – lze přidat násobné přípony: k/K/m/M/g/G/t/T\n"
+"                                – musí ležet v jednom z rozsahů:\n"
+"                                  8 až 1023 nebo 8192 až 4194304\n"
+
+#: src/shar-opts.c:2325
+msgid ""
+"   -L, --split-size-limit=SIZE\n"
+"                              split archive or files to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
 "                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
-"                                - It must lie in one of the ranges:\n"
-"                                  8 to 1023, or\n"
-"                                  8192 to 4194304\n"
-"                                - an alternate for whole-size-limit\n"
-"   -I, --input-file-list=str  read file list from a file\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+"                                - an alternate for 'whole-size-limit'\n"
+msgstr ""
+"   -L, --split-size-limit=VELIKOST\n"
+"                              rozdělí archiv nebo soubory na části\n"
+"                                – vyžaduje přepínače „output-prefix“\n"
+"                                – lze přidat násobné přípony: k/K/m/M/g/G/t/T\n"
+"                                – musí ležet v jednom z rozsahů:\n"
+"                                  8 až 1023 nebo 8192 až 4194304\n"
+"                                – jiná možnost k „whole-size-limit“\n"
+
+#: src/shar-opts.c:2332
+msgid ""
+"   -I, --input-file-list=FILE read file list from FILE\n"
 "\n"
+msgstr ""
+"   -I, --input-file-list=SOUBOR\n"
+"                              načte seznam souborů ze SOUBORU\n"
+"\n"
+
+#: src/shar-opts.c:2333
+msgid ""
 "Controlling the shar headers:\n"
-"\n"
-"   -n, --archive-name=str     use name to document the archive\n"
-"   -s, --submitter=str        override the submitter name\n"
+"   -n, --archive-name=NAME    use NAME to document the archive\n"
+msgstr ""
+"Řízení hlaviček archivu shar:\n"
+"   -n, --archive-name=NÁZEV   použije NÁZEV pro dokumentaci archivu\n"
+
+#: src/shar-opts.c:2335
+msgid "   -s, --submitter=NAME       override the submitter name with NAME\n"
+msgstr "   -s, --submitter=JMÉNO      přebije JMÉNO distributora\n"
+
+#: src/shar-opts.c:2336
+msgid ""
 "   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
-"                                - requires these options:\n"
-"                                archive-name\n"
-"   -c, --cut-mark             start the shar with a cut line\n"
+"                                - requires the option 'archive-name'\n"
+msgstr ""
+"   -a, --net-headers          do výstupu umístí hlavičky „Submitted-by:“ a\n"
+"                              „Archive-name:“\n"
+"                                – vyžaduje přepínač „archive-name“\n"
+
+#: src/shar-opts.c:2338
+msgid "   -c, --cut-mark             start the shar with a cut line\n"
+msgstr ""
+"   -c, --cut-mark             na začátek každého výstupního souboru přidá\n"
+"                              řádek označující začátek archivu (cut line)\n"
+
+#: src/shar-opts.c:2339
+msgid ""
 "   -t, --translate            translate messages in the script\n"
 "\n"
-"Protecting against transmission issues::\n"
+msgstr ""
+"   -t, --translate            přeloží zprávy ve skriptu\n"
 "\n"
+
+#: src/shar-opts.c:2340
+msgid ""
+"Protecting against transmission issues:\n"
 "       --no-character-count   do not use `wc -c' to check size\n"
-"   -D, --no-md5-digest        do not use md5sum digest to verify\n"
-"   -F, --force-prefix         apply the prefix character on every line\n"
-"   -d, --here-delimiter=str   use delim to delimit the files\n"
+msgstr ""
+"Ochrana proti chybám při přenosu:\n"
+"       --no-character-count   nepoužívá „wc -c“ na kontrolu velikosti\n"
+
+#: src/shar-opts.c:2342
+msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
+msgstr "   -D, --no-md5-digest        nepoužije „md5sum“\n"
+
+#: src/shar-opts.c:2343
+msgid "   -F, --force-prefix         apply the prefix character on every line\n"
+msgstr "   -F, --force-prefix         použije předponový znak na každém řádku\n"
+
+#: src/shar-opts.c:2344
+msgid ""
+"   -d, --here-delimiter=DELIM use DELIM to delimit the files\n"
 "\n"
-"Producing different kinds of shars::\n"
+msgstr ""
+"   -d, --here-delimiter=ODDĚLOVAČ\n"
+"                              použije ODDĚLOVAČ k oddělení souborů v archivu\n"
 "\n"
+
+#: src/shar-opts.c:2345
+msgid ""
+"Producing different kinds of shars:\n"
 "   -V, --vanilla-operation    produce very simple shars\n"
-"   -P, --no-piping            use temporary files between programs\n"
-"   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr ""
+"Výběr druhu archivu shar:\n"
+"   -V, --vanilla-operation    vyrobí velmi jednoduchý archiv\n"
+
+#: src/shar-opts.c:2347
+msgid "   -P, --no-piping            use temporary files between programs\n"
+msgstr "   -P, --no-piping            použije dočasné soubory při rozbalování\n"
+
+#: src/shar-opts.c:2348
+msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr "   -x, --no-check-existing    slepé přepsání existujících souborů\n"
+
+#: src/shar-opts.c:2349
+msgid ""
 "   -X, --query-user           ask user before overwriting files\n"
-"                                - prohibits these options:\n"
-"                                vanilla-operation\n"
-"   -m, --no-timestamp         do not restore modification times\n"
-"   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"   -X, --query-user           ptá se uživatele před přepsáním souborů\n"
+"                                - zakazuje přepínač „vanilla-operation“\n"
+
+#: src/shar-opts.c:2351
+msgid "   -m, --no-timestamp         do not restore modification times\n"
+msgstr "   -m, --no-timestamp         neobnovuje časy a data změny souboru\n"
+
+#: src/shar-opts.c:2352
+msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+msgstr "   -Q, --quiet-unshar         nevypisuje zprávy při rozbalování\n"
+
+#: src/shar-opts.c:2353
+msgid ""
 "   -f, --basename             restore in one directory, despite hierarchy\n"
 "\n"
-"Internationalization options::\n"
+msgstr ""
+"   -f, --basename             rozbaluje do jednoho adresáře, neuvažuje\n"
+"                              adresářovou strukturu\n"
 "\n"
+
+#: src/shar-opts.c:2354
+msgid ""
+"Internationalization options:\n"
 "       --no-i18n              do not internationalize\n"
+msgstr ""
+"Přepínače internacionalizace:\n"
+"       --no-i18n              nevyrobí internacionalizovaný archiv\n"
+
+#: src/shar-opts.c:2356
+msgid ""
 "       --print-text-domain-dir  print directory with shar messages\n"
 "\n"
-"user feedback/entertainment:\n"
+msgstr ""
+"       --print-text-domain-dir\n"
+"                              vypíše adresář se zprávami sharu\n"
 "\n"
+
+#: src/shar-opts.c:2357
+msgid ""
+"User feedback/entertainment:\n"
 "   -q, --quiet                do not output verbose messages\n"
-"       --silent               This is an alias for 'quiet'\n"
+msgstr ""
+"Hlášení uživateli/zábava:\n"
+"   -q, --quiet                nevypisuje podrobná hlášení\n"
+
+#: src/shar-opts.c:2359
+msgid ""
+"       --silent               an alias for the 'quiet' option\n"
 "\n"
-"version, usage and configuration options:\n"
+msgstr ""
+"       --silent               stejné jako přepínač „quiet“\n"
 "\n"
-"   -v, --version[=arg]        Output version information and exit\n"
-"   -h, --help                 Display extended usage information and exit\n"
-"   -!, --more-help            Extended usage information passed thru pager\n"
-"   -R, --save-opts[=arg]      Save the option state to a config file\n"
-"   -r, --load-opts=str        Load options from a config file\n"
-"                                - disabled as --no-load-opts\n"
+
+#: src/shar-opts.c:2360
+msgid "Version, usage and configuration options:\n"
+msgstr "Verze, návod na použití a přepínače nastavení:\n"
+
+#: src/shar-opts.c:2361 src/unshar-opts.c:974 src/uudecode-opts.c:750
+#: src/uuencode-opts.c:697
+msgid "   -v, --version[=MODE]       output version information and exit\n"
+msgstr "   -v, --version[=REŽIM]      vypíše údaje o verzi a skončí\n"
+
+#: src/shar-opts.c:2362 src/unshar-opts.c:975 src/uudecode-opts.c:751
+#: src/uuencode-opts.c:698
+msgid "   -h, --help                 display extended usage information and exit\n"
+msgstr "   -h, --help                 zobrazí rozšířený návod na použití a skončí\n"
+
+#: src/shar-opts.c:2363 src/unshar-opts.c:976 src/uudecode-opts.c:752
+#: src/uuencode-opts.c:699
+msgid "   -!, --more-help            extended usage information passed thru pager\n"
+msgstr "   -!, --more-help            rozšířený návod na použití skrze stránkovač\n"
+
+#: src/shar-opts.c:2364 src/uudecode-opts.c:753 src/uuencode-opts.c:700
+msgid "   -R, --save-opts[=FILE]     save the option state to a config file FILE\n"
+msgstr "   -R, --save-opts[=SOUBOR]   uloží stav přepínačů do konfiguračního SOUBORU\n"
+
+#: src/shar-opts.c:2365 src/uudecode-opts.c:754 src/uuencode-opts.c:701
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled with '--no-load-opts'\n"
 "                                - may appear multiple times\n"
 "\n"
+msgstr ""
+"   -r, --load-opts=SOUBOR     načte přepínače z konfiguračního SOUBORU\n"
+"                                – lze zakázat pomocí „--no-load-opts“\n"
+"                                – lze použít opakovaně\n"
+"\n"
+
+#: src/shar-opts.c:2368
+msgid ""
 "Options are specified by doubled hyphens and their name or by a single\n"
 "hyphen and the flag character.\n"
-"\n"
 "If no 'file's are specified, the list of input files is read from a\n"
 "standard input.  Standard input must not be a terminal.\n"
 "\n"
-"The following option preset mechanisms are supported:\n"
+msgstr ""
+"Přepínače se zadávají jako dva spojovníky následované názvem nebo jako\n"
+"jeden spojovník následovaný znakem příznaku.\n"
+"Nejsou-li zadány žádné soubory, seznam vstupních souborů je načten ze\n"
+"standardního vstupu. Standardní vstup nesmí být terminál.\n"
+"\n"
+
+#: src/shar-opts.c:2372 src/unshar-opts.c:986 src/uudecode-opts.c:760
+#: src/uuencode-opts.c:706
+msgid "The following option preset mechanisms are supported:\n"
+msgstr "Podporovány jsou následující mechanismy předvoleb:\n"
+
+#: src/shar-opts.c:2373
+msgid ""
 " - reading file $HOME/.sharrc\n"
 "\n"
 "'shar' creates \"shell archives\" (or shar files) which are in text format\n"
@@ -391,187 +727,9 @@ msgid ""
 "Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
 "mailable 'tar' archive.\n"
 "\n"
-"Options may be specified in any order until a 'file' argument is\n"
-"recognized.  If the '--intermix-type' option has been specified, more\n"
-"compression and encoding options will be recognized between the 'file'\n"
-"arguments.\n"
-"\n"
-"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
-"you are emailing files, please consider mime-encoded files.  If you do\n"
-"'uuencode', base 64 is the preferred encoding method.\n"
-"\n"
-"please send bug reports to:  bug-gnu-utils@gnu.org"
 msgstr ""
-"shar (GNU sharutils) – vytváří shellový archiv – verze 4.13.3\n"
-"POUŽITÍ: shar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…              [soubor…]\n"
+" – načtení souboru $HOME/.sharrc\n"
 "\n"
-"Určení komprese:\n"
-"\n"
-"   -p, --intermix-type        určuje kompresi vstupních souborů\n"
-"                                – zakazuje tyto přepínače:\n"
-"                                vanilla-operation\n"
-"   -C, --compactor=řetězec    určuje kompresní program\n"
-"                                – zakazuje tyto přepínače:\n"
-"                                vanilla-operation\n"
-"                                - lze uvést vícekrát\n"
-"   -g, --level-of-compression=číslo\n"
-"                              předá úroveň komprese\n"
-"                                – musí být v rozsahu:\n"
-"                                  1 až 9\n"
-"       --level-for-gzip=číslo\n"
-"                              stejné jako „level-of-compression“\n"
-"\n"
-"Určuje metodiku kódování souboru:\n"
-"\n"
-"   -M, --mixed-uuencode       automaticky se rozhodne, zda použít uuencode\n"
-"   -B, --uuencode             pokládá všechny soubory za binární\n"
-"                                – jiná možnost k mixed-uuencode\n"
-"   -T, --text-files           pokládá všechny soubory za textové\n"
-"                                - jiná možnost k mixed-uuencode\n"
-"\n"
-"Určuje výběr souboru a režimy výstupu:\n"
-"\n"
-"   -o, --output-prefix=řetězec\n"
-"                              výstup do souboru PREFIX.nn\n"
-"   -l, --whole-size-limit=číslo\n"
-"                              rozdělí archiv, nikoli soubory na části\n"
-"                                – vyžaduje tyto přepínače:\n"
-"                                output-prefix\n"
-"                                – lze přidat násobné přípony: k/K/m/M/g/G/t/T\n"
-"                                – musí ležet v jednom z rozsahů:\n"
-"                                  8 až 1023 nebo\n"
-"                                  8192 až 4194304\n"
-"   -L, --split-size-limit=číslo\n"
-"                              rozdělí archiv nebo soubory na části\n"
-"                                – vyžaduje tyto přepínače:\n"
-"                                output-prefix\n"
-"                                – lze přidat násobné přípony: k/K/m/M/g/G/t/T\n"
-"                                – musí ležet v jednom z rozsahů:\n"
-"                                  8 až 1023 nebo\n"
-"                                  8192 až 4194304\n"
-"                                – jiná možnost k whole-size-limit\n"
-"   -I, --input-file-list=řetězec\n"
-"                              načte seznam souborů ze souboru\n"
-"\n"
-"Řízení hlaviček archivu shar:\n"
-"\n"
-"   -n, --archive-name=řetězec\n"
-"                              použije jako jméno archivu\n"
-"   -s, --submitter=řetězec    použije jako jméno distributora\n"
-"   -a, --net-headers          do výstupu umístí hlavičky „Submitted-by:“ a\n"
-"                              „Archive-name:“\n"
-"                                – vyžaduje tyto přepínače:\n"
-"                                archive-name\n"
-"   -c, --cut-mark             na začátek každého výstupního souboru přidá\n"
-"                              řádek označující začátek archivu (cut line)\n"
-"   -t, --translate            přeloží zprávy ve skriptu\n"
-"\n"
-"Ochrana proti chybám přenosu:\n"
-"\n"
-"       --no-character-count   nepoužívá „wc -c“ na kontrolu velikosti\n"
-"   -D, --no-md5-digest        nepoužije „md5sum“\n"
-"   -F, --force-prefix         použije předponový znak na každém řádku\n"
-"   -d, --here-delimiter=řetězec\n"
-"                              použije řetězec k oddělení souborů v archivu\n"
-"\n"
-"Výběr druhu archivu shar:\n"
-"\n"
-"   -V, --vanilla-operation    vyrobí velmi jednoduchý archiv\n"
-"   -P, --no-piping            použije dočasné soubory při rozbalování\n"
-"   -x, --no-check-existing    slepé přepsání existujících souborů\n"
-"   -X, --query-user           ptá se uživatele před přepsáním souborů\n"
-"                                - zakazuje tyto přepínače:\n"
-"                                vanilla-operation\n"
-"   -m, --no-timestamp         neobnovuje časy a data změny souboru\n"
-"   -Q, --quiet-unshar         nevypisuje zprávy při rozbalování\n"
-"   -f, --basename             rozbaluje do jednoho adresáře, neuvažuje\n"
-"                              adresářovou strukturu\n"
-"\n"
-"Přepínače internacionalizace:\n"
-"\n"
-"       --no-i18n              nevyrobí internacionalizovaný archiv\n"
-"       --print-text-domain-dir\n"
-"                              vypíše adresář se zprávami sharu\n"
-"\n"
-"Hlášení uživateli/zábava:\n"
-"\n"
-"   -q, --quiet                nevypisuje podrobná hlášení\n"
-"       --silent               stejné jako „quiet“\n"
-"\n"
-"Verze, návod na použití a přepínače nastavení:\n"
-"\n"
-"   -v, --version[=argument]   vypíše údaje o verzi a skončí\n"
-"   -h, --help                 zobrazí rozšířený návod na použití a skončí\n"
-"   -!, --more-help            Rozšířený návod na použití skrze stránkovač\n"
-"   -R, --save-opts[=argumenty]\n"
-"                              Uloží stav přepínačů do konfiguračního souboru\n"
-"   -r, --load-opts=řetězec    Načte přepínače z konfiguračního souboru\n"
-"                                – lze zakázat pomocí --no-load-opts\n"
-"                                – lze použít opakovaně\n"
-"\n"
-"Přepínače se zadávají jako dva spojovníky a název nebo jeden spojovník a\n"
-"znak příznaku.\n"
-"\n"
-"Nejsou-li zadány žádné soubory, seznam vstupních souborů je načten ze\n"
-"standardního souboru. Standardní vstup nesmí být terminál.\n"
-"\n"
-"Jsou podporovány následující mechanismy přednastavení přepínačů:\n"
-" – načtení ze souboru $HOME/.sharrc\n"
-"\n"
-"„shar“ vyrábí shellové archivy (též soubory shar), což jsou texty, které lze\n"
-"odeslat e-mailem. Tyto souboru lze později rozbalit jejich spuštěním skrze\n"
-"„/bin/sh“. Výsledný archiv je odeslán na standardní výstup, nebyl-li zadán\n"
-"přepínač „-o“. Široká škála funkcí nabízí velkou pružnost při výrobě archivů\n"
-"a při určování „chytrosti“ sharu.\n"
-"Archivy mohou být celkem jednoduché („--vanilla-operation“) nebo v podstatě\n"
-"tarový archiv zaslatelný poštou.\n"
-"\n"
-"Přepínače lze uvádět v libovolném pořadí až k argumentu souboru. Je-li\n"
-"zadán přepínač „--intermix-type“, další kompresní a kódovací přepínače\n"
-"budou možné mezi argumenty souborů.\n"
-"\n"
-"Ačkoliv tento program podporuje soubory vytvořené nástrojem „uuencode“,\n"
-"není to doporučená metoda. Zasíláte-li soubory e-mailem, prosím, zvažte\n"
-"přenos podle standardu MIME. Použijte-li „uuencode“, bude jako kódování\n"
-"zvolena metoda Base64.\n"
-"\n"
-"Chybová hlášení zasílejte (anglicky) na:  bug-gnu-utils@gnu.org"
-
-#: src/shar-opts.c:2150
-msgid ""
-"shar (GNU sharutils) - create a shell archive - Ver. 4.13.3\n"
-"USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]"
-msgstr ""
-"shar (GNU sharutils) – vytváří shellový archiv – verze 4.13.3\n"
-"POUŽITÍ: shar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…              [soubor…]"
-
-#: src/shar-opts.c:2153
-msgid ""
-"If no 'file's are specified, the list of input files is read from a\n"
-"standard input.  Standard input must not be a terminal"
-msgstr ""
-"Není-li zadán žádný soubor, je seznam vstupních souborů načten ze\n"
-"standardního vstupu. Standardní vstup nesmí být terminál"
-
-#: src/shar-opts.c:2156
-msgid ""
-"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
-"and can be emailed.  These files may be unpacked later by executing them\n"
-"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
-"'-o' option is given.  A wide range of features provide extensive\n"
-"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
-"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
-"mailable 'tar' archive.\n"
-"\n"
-"Options may be specified in any order until a 'file' argument is\n"
-"recognized.  If the '--intermix-type' option has been specified, more\n"
-"compression and encoding options will be recognized between the 'file'\n"
-"arguments.\n"
-"\n"
-"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
-"you are emailing files, please consider mime-encoded files.  If you do\n"
-"'uuencode', base 64 is the preferred encoding method"
-msgstr ""
 "„shar“ vyrábí shellové archivy (též soubory shar), což jsou texty, které lze\n"
 "odeslat e-mailem. Tyto souboru lze později rozbalit jejich spuštěním skrze\n"
 "„/bin/sh“. Výsledný archiv je odeslán na standardní výstup, nebyl-li zadán\n"
@@ -579,150 +737,439 @@ msgstr ""
 "a při určování „chytrosti“ sharu. Archivy mohou být celkem jednoduché\n"
 "(„--vanilla-operation“) nebo v podstatě tarový archiv zaslatelný poštou.\n"
 "\n"
-"Přepínače lze uvádět v libovolném pořadí až k argumentu souboru. Je-li\n"
-"zadán přepínač „--intermix-type“, další kompresní a kódovací přepínače\n"
-"budou možné mezi argumenty souborů.\n"
+
+#: src/shar-opts.c:2385
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
 "\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
 "Ačkoliv tento program podporuje soubory vytvořené nástrojem „uuencode“,\n"
 "není to doporučená metoda. Zasíláte-li soubory e-mailem, prosím, zvažte\n"
-"přenos podle standardu MIME. Použijte-li „uuencode“, bude jako kódování\n"
-"zvolena metoda Base64"
+"přenos podle standardu MIME. Použijete-li „uuencode“, bude jako kódování\n"
+"zvolena metoda Base64.\n"
+"\n"
+"Chybová hlášení zasílejte (anglicky) na: <bug-gnu-utils@gnu.org>\n"
+"Chyby v překladu hlaste (česky) na: <translation-team-cs@lists.sourceforge.net>\n"
 
-#: src/shar-opts.c:2171 src/unshar-opts.c:780 src/uudecode-opts.c:729
-#: src/uuencode-opts.c:717
-msgid "This program is released under the terms of the GNU General Public License, version 3 or later."
-msgstr "Tento program je uvolněn pod podmínkami Obecné veřejné licence GNU verze 3 nebo novější."
+#: src/shar-opts.c:2391
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'shar --help' for more information.\n"
+msgstr ""
+"shar (GNU sharutils) – vytváří shellový archiv\n"
+"Použití: shar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"              [<soubor>…]\n"
+"Podrobnosti získáte příkazem „shar --help“.\n"
 
-#: src/shar.c:373
+# TODO: pluralize
+#: ../autoopts.c:60 ../autoopts.c:86
+#, c-format
+msgid "allocation of %d bytes failed\n"
+msgstr "alokace %d bajtů paměti selhala\n"
+
+#: ../init.c:53
+msgid "AutoOpts function called without option descriptor\n"
+msgstr "Funkce AutoOpts byla zavolána bez popisu přepínačů\n"
+
+#: ../init.c:89
+msgid "\tThis exceeds the compiled library version:  "
+msgstr "\tToto překračuje verzi knihovny v době překladu: "
+
+#: ../init.c:87
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+"Chyba při zpracování automatických přepínačů!\n"
+"\t%s zavolalo funkci AutoOpts s verzí struktury %d:%d:%d.\n"
+
+# TODO: Pluralize
+#: ../autoopts.c:73
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr "realokace %d bajtů na adrese 0x%p selhala\n"
+
+#: ../init.c:91
+msgid "\tThis is less than the minimum library version:  "
+msgstr "\tToto je méně než minimální verze knihovny:  "
+
+#: ../version.c:121
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+"Automated Options verze %s\n"
+"\tCopyright © 1999–2013 Bruce Korb – všechna práva vyhrazena\n"
+
+#: ../usage.c:310
+#, c-format
+msgid "(AutoOpts bug):  %s.\n"
+msgstr "(Chyba AutoOpts): %s.\n"
+
+#: ../reset.c:90
+msgid "optionResetOpt() called, but reset-option not configured"
+msgstr "zavoláno optionResetOpt(), avšak přepínač resetu není nastaven"
+
+#: ../usage.c:329
+msgid "could not locate the 'help' option"
+msgstr "přepínač „help“ nelze nalézt"
+
+#: ../autoopts.c:351
+msgid "optionProcess() was called with invalid data"
+msgstr "optionProcess() zavolán s neplatnými daty"
+
+#: ../usage.c:770
+msgid "invalid argument type specified"
+msgstr "zadán neplatný typ argumentu"
+
+#: ../find.c:589
+msgid "defaulted to option with optional arg"
+msgstr "návrat k přepínači s volitelným argumentem"
+
+#: ../alias.c:76
+msgid "aliasing option is out of range."
+msgstr "alias přepínače je mimo rozsah."
+
+#: ../enum.c:229
+#, c-format
+msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
+msgstr "Chyba %s: klíčové slovo „%s“ není pro %s jednoznačné\n"
+
+#: ../find.c:108
+msgid "  The following options match:\n"
+msgstr "  Následující přepínače se shodují:\n"
+
+# TODO: Pluralize
+#: ../find.c:290
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr "%s: nejednoznačný název přepínače: %s (odpovídá %d přepínačům)\n"
+
+#: ../check.c:161
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr "%s: Vyžadovány argumenty z příkazového řádku\n"
+
+#: ../alias.c:43
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr "%d %s%s přepínačů dovoleno\n"
+
+#: ../makeshell.c:81
+#, c-format
+msgid "%s error %d (%s) calling %s for '%s'\n"
+msgstr "%s: chyba %d (%s) při volání %s nad „%s“\n"
+
+#: ../makeshell.c:293
+msgid "interprocess pipe"
+msgstr "roura mezi procesy"
+
+#: ../version.c:168
+#, c-format
+msgid ""
+"error: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and full copyright notice\n"
+msgstr ""
+"chyba: argument přepínače verze „%c“ není platný. Použijte:\n"
+"\t„v“ – pouze verze\n"
+"\t„c“ – verze a autorská práva\n"
+"\t„n“ – verze a autorská práva a shrnutí licence\n"
+
+#: ../check.c:58
+#, c-format
+msgid "%s error:  the '%s' and '%s' options conflict\n"
+msgstr "chyba %s: přepínače „%s“ a „%s“ jsou v rozporu\n"
+
+#: ../find.c:214 ../find.c:421
+#, c-format
+msgid "%s: The '%s' option has been disabled."
+msgstr "%s: Přepínač „%s“ byl vypnut."
+
+#: ../alias.c:38
+msgid "-equivalence"
+msgstr "-equivalence"
+
+#: ../find.c:460 ../reset.c:110
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: neznámý přepínač – %c\n"
+
+#: ../find.c:268 ../find.c:746 ../reset.c:118
+#, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: neznámý přepínač – %s\n"
+
+#: ../find.c:332
+#, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: neznámý přepínač rozšíření prodejce – %s\n"
+
+#: ../enum.c:154 ../enum.c:164
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr " nebo celé číslo od %d do %d\n"
+
+#: ../usage.c:769 ../usage.c:1097
+#, c-format
+msgid "%s error:  invalid option descriptor for %s\n"
+msgstr "chyba %s: chybný popisovač přepínače %s\n"
+
+#: ../find.c:379
+#, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: neplatný název přepínače: %s\n"
+
+#: ../find.c:518
+#, c-format
+msgid "%s: The '%s' option requires an argument.\n"
+msgstr "%s: Přepínač „%s“ vyžaduje argument.\n"
+
+#: ../autoopts.c:171
+#, c-format
+msgid ""
+"(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'"
+msgstr ""
+"(Chyba AutoOpts): Zrovnoceňovaný přepínač %s“ byl zrovnoceněn\n"
+"s „%s“ i „%s“"
+
+#: ../check.c:94
+#, c-format
+msgid "%s error:  The %s option is required\n"
+msgstr "chyba %s: Je vyžadován přepínač %s\n"
+
+#: ../find.c:623
+#, c-format
+msgid "%s: The '%s' option cannot have an argument.\n"
+msgstr "%s: Přepínač „%s“ nemůže mít argument\n"
+
+#: ../check.c:151
+#, c-format
+msgid "%s: Command line arguments are not allowed.\n"
+msgstr "%s: Argumenty na příkazovém řádku nejsou dovoleny.\n"
+
+#: ../save.c:531
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr "chyba %d (%s) při vytváření %s\n"
+
+#: ../enum.c:229
+#, c-format
+msgid "%s error:  '%s' does not match any %s keywords.\n"
+msgstr "Chyba %s: „%s“ neodpovídá žádnému klíčovému slovu %s.\n"
+
+#: ../reset.c:93
+#, c-format
+msgid "%s error: The '%s' option requires an argument.\n"
+msgstr "Chyba %s: Přepínač „%s“ vyžaduje argument.\n"
+
+#: ../save.c:184 ../save.c:238
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr "chyba %d (%s) při zjišťování údajů o %s\n"
+
+#: ../restore.c:143
+#, c-format
+msgid "%s error: no saved option state\n"
+msgstr "Chyba %s: chybí uložený stav přepínače\n"
+
+#: ../autoopts.c:246
+#, c-format
+msgid "'%s' is not a command line option.\n"
+msgstr "„%s“ není přepínačem na příkazovém řádku.\n"
+
+#: ../time.c:114
+#, c-format
+msgid "%s error:  '%s' is not a recognizable date/time.\n"
+msgstr "chyba %s: „%s“ není rozpoznatelné datum nebo čas.\n"
+
+#: ../save.c:132
+#, c-format
+msgid "'%s' not defined\n"
+msgstr "„%s“ není definováno\n"
+
+#: ../time.c:53
+#, c-format
+msgid "%s error:  '%s' is not a recognizable time duration.\n"
+msgstr "chyba %s: „%s“ není rozpoznatelná délka trvání.\n"
+
+#: ../check.c:92
+#, c-format
+msgid "%s error:  The %s option must appear %d times\n"
+msgstr "Chyba %s: Přepínač %s musí se vyskytovat %dkrát\n"
+
+#: ../numeric.c:157
+#, c-format
+msgid "%s error:  '%s' is not a recognizable number.\n"
+msgstr "chyba %s: „%s“ není rozpoznatelné číslo.\n"
+
+#: ../enum.c:195
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr "chyba %s: %s přesahuje počet klíčových slov %s\n"
+
+#: ../usage.c:366
+#, c-format
+msgid "Try '%s %s' for more information.\n"
+msgstr "Více informací získáte příkazem „%s %s“.\n"
+
+#: ../alias.c:45
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr "dovolen je jeden přepínač %s%s\n"
+
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:304 ../usage.c:451
+#: ../usage.c:647 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
+#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+msgid "standard output"
+msgstr "standardní výstup"
+
+#: ../usage.c:304 ../usage.c:451 ../usage.c:647 ../version.c:175
+msgid "standard error"
+msgstr "standardní chybový výstup"
+
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:303 ../usage.c:450
+#: ../usage.c:646 ../version.c:174
+msgid "write"
+msgstr "zápis"
+
+#: ../numeric.c:60
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr "chyba %s: hodnota přepínače %s %ld je mimo rozsah.\n"
+
+#: ../check.c:44
+#, c-format
+msgid "%s error:  %s option requires the %s option\n"
+msgstr "Chyba %s: přepínač %s vyžaduje přepínač %s\n"
+
+#: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:530
+#, c-format
+msgid "%s warning:  cannot save options - %s not regular file\n"
+msgstr "varování %s: přepínače nelze uložit – %s není běžným souborem\n"
+
+#: src/shar.c:357
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "chyba formátování printf: %s\n"
 
-#: src/shar.c:424
+#: src/shar.c:408
 msgid "sharutils bug - no status"
 msgstr "chyba sharutils – chybí status"
 
-#: src/shar.c:789
+#: src/shar.c:771
 msgid "Too many directories for mkdir generation"
 msgstr "Příliš mnoho adresářů pro mkdir"
 
-#: src/shar.c:872 src/shar.c:1542
+#: src/shar.c:854 src/shar.c:1539
 #, c-format
 msgid "Cannot access %s"
 msgstr "Pro přístup k %s chybí práva"
 
-#: src/shar.c:949 src/unshar.c:376
+#: src/shar.c:937
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Jméno aktuálního adresáře nelze zjistit"
 
-#: src/shar.c:1006 src/shar.c:1347
-#, c-format
-msgid "New file, remaining %s, "
-msgstr "Nový soubor, zbývá %s, "
-
-#: src/shar.c:1007 src/shar.c:1348
-#, c-format
-msgid "Limit still %s\n"
-msgstr "Limit zůstává %s\n"
-
-#: src/shar.c:1029
+#: src/shar.c:1023
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Začíná soubor %s\n"
 
-#: src/shar.c:1082
+#: src/shar.c:1077
 msgid "Could not popen command"
 msgstr "Nebylo možné spustit příkaz přes popen"
 
-#: src/shar.c:1163
+#: src/shar.c:1158
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Soubor %s nelze otevřít"
 
-#: src/shar.c:1297 src/shar.c:1306
+#: src/shar.c:1292 src/shar.c:1303
 msgid "text"
 msgstr "textový"
 
-#: src/shar.c:1312 src/shar.c:1323
+#: src/shar.c:1309 src/shar.c:1320
 msgid "call"
 msgstr "volání"
 
-#: src/shar.c:1336
-#, c-format
-msgid "File %s (%s)"
-msgstr "Soubor %s (%s)"
+#: src/shar.c:1329
+msgid "pipe[1]"
+msgstr "roura[1]"
 
-#: src/shar.c:1427
+#: src/shar.c:1423
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Pokračování souboru %s\n"
 
-#: src/shar.c:1537
+#: src/shar.c:1534
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Není obyčejný soubor"
 
-#: src/shar.c:1564
-#, c-format
-msgid "In shar: remaining size %s\n"
-msgstr "V shar: zbývající velikost %s\n"
-
-#: src/shar.c:1584
+#: src/shar.c:1582
 msgid "empty"
 msgstr "prázdný"
 
 # Error while...
-#: src/shar.c:1623
+#: src/shar.c:1621
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Ukládání %s (%s)"
 
-#: src/shar.c:1808
+#: src/shar.c:1806
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Neplatný formát pro názvy výstupního souboru (%s): %s"
 
-#: src/shar.c:1823
+#: src/shar.c:1821
 msgid "more than one format element"
 msgstr "více jak jeden formátovací prvek"
 
-#: src/shar.c:1828
+#: src/shar.c:1826
 msgid "no conversion character"
 msgstr "žádný převodní znak"
 
-#: src/shar.c:1837
+#: src/shar.c:1835
 msgid "format is too wide"
 msgstr "formát je příliš široký"
 
-#: src/shar.c:1849
+#: src/shar.c:1847
 msgid "invalid conversion character"
 msgstr "neplatný převodní znak"
 
 # Error while...
-#: src/shar.c:1890
+#: src/shar.c:1889
 msgid "Opening"
 msgstr "Otevírání"
 
-#: src/shar.c:1905
+#: src/shar.c:1904
 msgid "Closing"
 msgstr "Uzavírání"
 
-#: src/shar.c:1978
+#: src/shar.c:1996
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "chybový výstup se znovu otevírá jako /dev/null"
 
-#: src/shar.c:2026
+#: src/shar.c:2044
 msgid "No input files"
 msgstr "Vstupní soubory nejsou zadány"
 
-#: src/shar.c:2043
+#: src/shar.c:2061
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "PROSÍM, nepoužívejte -X soubory v USENETu nebo veřejných sítích"
 
-#: src/shar.c:2067
+#: src/shar.c:2085
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -731,12 +1178,12 @@ msgstr ""
 "Přepínač „%s“ nesmí být namíchán s názvy souborů\n"
 "pokud nebyl zadán přepínač --intermix-type."
 
-#: src/shar.c:2085
+#: src/shar.c:2103
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Přepínač „%s“ musí předcházet všem názvům souborů"
 
-#: src/shar.c:2121
+#: src/shar.c:2139
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -745,223 +1192,365 @@ msgstr ""
 "neplatný druh komprese: %s\n"
 "známé druhy jsou:\n"
 
-#: src/shar.c:2160
+#: src/shar.c:2177
 msgid "files on command line and --input-file-list specified"
 msgstr "zadány soubory na příkazovém řádku i --input-file-list"
 
-#: src/shar.c:2209
+#: src/shar.c:2226
 #, c-format
 msgid "Created %d files\n"
 msgstr "Souborů vytvořeno: %d\n"
 
-#: src/unshar-opts.c:433 src/unshar.c:394
+#: src/unshar-opts.c:580
 #, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Adresář nelze změnit na „%s“"
+msgid "fs error %d (%s) %s-ing %s\n"
+msgstr "chyba souborového systému %d (%s) při operaci %s nad %s\n"
 
-#: src/unshar-opts.c:491
+#: src/unshar-opts.c:582 src/unshar-opts.c:644 src/uudecode.c:469
+#: src/uuencode.c:205
+msgid "standard input"
+msgstr "standardní vstup"
+
+#: src/unshar-opts.c:661
 msgid "unshar usage error:\n"
 msgstr "chybné použití unsharu:\n"
 
-#: src/unshar-opts.c:527
+#: src/unshar-opts.c:697
 msgid "unshar fatal error:\n"
 msgstr "nepřekonatelná chyba v unshar:\n"
 
-#: src/unshar-opts.c:758
-msgid "unpack a shar archiv"
-msgstr "rozbalí sharový archiv"
-
-#: src/unshar-opts.c:760
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the unsharOptions structure noted in the comments below.  The
+#. literal text is defined in unshar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. unshar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via unsharOptions.pzCopyright
+#: src/unshar-opts.c:927
 msgid ""
-"Usage: ./unshar [OPTION]... [FILE]...\n"
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
-"  -c, --overwrite             pass -c to shar script for overwriting files\n"
-"  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=STRING       split concatenated shars after STRING\n"
-"  -f, --force                 same as `-c'\n"
-"      --help                  display this help and exit\n"
-"      --version               output version information and exit\n"
-"\n"
-"If no FILE, standard input is read.\n"
-"Report bugs to <bug-gnu-utils@gnu.org>."
+"unshar (GNU sharutils) 4.13.4pre9\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"Použití: ./unshar [PŘEPÍNAČE]… [SOUBOR]…\n"
-"Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro jejich\n"
-"krátké formy.\n"
-"\n"
-"  -d, --directory=ADRESÁŘ     aktuální adresář pro zpracovávání\n"
-"  -c, --overwrite             vloží -c pro shar na povolení přepisu souborů\n"
-"  -e, --exit-0                jako --split-at=\"exit 0\"'\n"
-"  -E, --split-at=ŘETĚZEC      rozdělí složený soubor shar po ŘETĚZCI\n"
-"  -f, --force                 jako `-c'\n"
-"      --help                  vypíše tuto nápovědu a skončí\n"
-"      --version               vypíše označení verze a skončí\n"
-"\n"
-"Pokud SOUBOR nebude zadán, bude čten standardní vstup.\n"
-"Chyby hlaste (anglicky) na <bug-gnu-utils@gnu.org>."
+"unshar (GNU sharutils) 4.13.4pre9\n"
+"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
+"šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
+"nebo pozdější <http://gnu.org/licenses/gpl.html>.\n"
 
-#: src/unshar-opts.c:772
+#: src/unshar-opts.c:934
 msgid ""
-"./unshar: unrecognized option '--error-bogus-option-name'\n"
-"Try `./unshar --help' for more information."
+"unshar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
 msgstr ""
-"./unshar: nerozpoznaný přepínač „--error-bogus-option-name“\n"
-"Podrobnosti lze získat příkazem „./unshar --help“."
+"unshar je svobodné programové vybavení: máte právo jej šířit a/nebo měnit podle\n"
+"podmínek Obecné veřejné licence GNU (GPL), jak byla uvolněna Free Software\n"
+"Foundation, a to buď ve verzi 3, nebo (dle vašeho uvážení) jakékoliv verzi\n"
+"pozdější.\n"
+"\n"
 
-#: src/unshar-opts.c:775
+#: src/unshar-opts.c:938
+msgid ""
+"unshar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"unshar je šířen v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY,\n"
+"dokonce bez odvozené záruky na OBCHODOVATELNOST nebo VHODNOST PRO URČITÝ\n"
+"ÚČEL. Pro podrobnosti vizte Obecnou veřejnou licenci GNU (GPL).\n"
+"\n"
+
+#: src/unshar-opts.c:946
+#, c-format
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"unshar (GNU sharutils) – rozbaluje shellový archiv\n"
+"Použití: %s [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"            [<soubor>…]\n"
+
+#: src/unshar-opts.c:950
+msgid ""
+"\n"
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+msgstr ""
+"\n"
+"Nejsou-li zadány žádné argumenty, vstupní argumenty budou načteny ze\n"
+"standardního vstupu, co řádek, to jeden. Prázdné řádky a řádky uvedené „#“\n"
+"jsou komentáře. Standardní vstup nesmí být terminál (TTY).\n"
+
+#: src/unshar-opts.c:956
 msgid ""
 "Unshar scans the input files (typically email messages) looking for the\n"
 "start of a shell archive.  If no files are given, then standard input is\n"
 "processed instead.  It then passes each archive discovered through an\n"
-"invocation of the shell program to unpack it"
+"invocation of the shell program to unpack it.\n"
 msgstr ""
 "Unshar prohledá vstupní soubory (typicky e-mailové zprávy) na začátek\n"
-"shellového archivu. Nejsou-li zadány žádné souboru, pak se zpracuje standardní\n"
-"vstup. Potom každý nalezený archiv spustí skrze shell, aby se archiv rozbalil"
+"shellového archivu. Nejsou-li zadány žádné souboru, pak se zpracuje\n"
+"standardní vstup. Potom každý nalezený archiv spustí skrze shell, aby se\n"
+"archiv rozbalil.\n"
 
-#: src/unshar.c:168
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "V %s nebyly nalezeny žádné příkazy pro shell"
+#: src/unshar-opts.c:962
+msgid "unshar (GNU sharutils) 4.13.4pre9"
+msgstr "unshar (GNU sharutils) 4.13.4pre9"
 
-#: src/unshar.c:184
+#: src/unshar-opts.c:965
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"unshar (GNU sharutils) – rozbalí shellový archiv\n"
+"Použití: unshar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"                [<soubor>…]\n"
+"\n"
+
+#: src/unshar-opts.c:967
+msgid "   -d, --directory=DIR        change directory to DIR before unpacking\n"
+msgstr "   -d, --directory=ADRESÁŘ     před rozbalením přejde do ADRESÁŘE\n"
+
+#: src/unshar-opts.c:968
+msgid "   -c, --overwrite            overwrite any pre-existing files\n"
+msgstr "   -c, --overwrite            přepisuje existující soubory\n"
+
+#: src/unshar-opts.c:969
+msgid "   -f, --force                an alias for the 'overwrite' option\n"
+msgstr "   -f, --force                stejné jako přepínač „overwrite“\n"
+
+#: src/unshar-opts.c:970
+msgid "   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines\n"
+msgstr "   -E, --split-at=VZOR        rozdělí vstup na řádcích odpovídajících VZORU\n"
+
+#: src/unshar-opts.c:971
+msgid ""
+"   -e, --exit-0               split input on \"exit 0\" lines\n"
+"                                - prohibits the option 'split-at'\n"
+msgstr ""
+"   -e, --exit-0               rozdělí vstup na řádcích „exit 0“\n"
+"                                - zakazuje přepínač „split-at“\n"
+
+#: src/unshar-opts.c:973
+msgid "   -D, --debug                debug the shell code\n"
+msgstr "   -D, --debug                ladí shellový kód\n"
+
+#: src/unshar-opts.c:977
+msgid "   -R, --save-opts[=FILE]     save the option state to the config file FILE\n"
+msgstr "   -R, --save-opts[=SOUBOR]   uloží stav přepínačů do konfiguračního SOUBORU\n"
+
+#: src/unshar-opts.c:978
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled as '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"   -r, --load-opts=SOUBOR     načte přepínače z konfiguračního SOUBORU\n"
+"                                – lze zakázat pomocí „--no-load-opts“\n"
+"                                – lze použít opakovaně\n"
+"\n"
+
+#: src/unshar-opts.c:981 src/uuencode-opts.c:704
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"\n"
+msgstr ""
+"Přepínače se zadávají jako dva spojovníky následované názvem nebo jako\n"
+"jeden spojovník následovaný znakem příznaku.\n"
+"\n"
+
+#: src/unshar-opts.c:983
+msgid ""
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+"\n"
+msgstr ""
+"Nejsou-li zadány žádné argumenty, vstupní argumenty budou načteny ze\n"
+"standardního vstupu, co řádek, to jeden. Prázdné řádky a řádky uvedené „#“\n"
+"jsou komentáře. Standardní vstup nesmí být terminál (TTY).\n"
+"\n"
+
+#: src/unshar-opts.c:987
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'unshar' scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+"\n"
+msgstr ""
+" – načtení souboru $HOME/.sharrc\n"
+"\n"
+"„unshar“ prohledá vstupní soubory (typicky e-mailové zprávy) na začátek\n"
+"shellového archivu. Nejsou-li zadány žádné soubory, pak se zpracuje\n"
+"standardní vstup. Potom každý nalezený archiv spustí skrze shell, aby se\n"
+"archiv rozbalil.\n"
+"\n"
+
+#: src/unshar-opts.c:992 src/uudecode-opts.c:776
+msgid "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"Prosím, chybová hlášení zasílejte anglicky na: <bug-gnu-utils@gnu.org>\n"
+"Chyby v překladu hlaste (česky) na: <translation-team-cs@lists.sourceforge.net>\n"
+
+#: src/unshar-opts.c:995
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'unshar --help' for more information.\n"
+msgstr ""
+"unshar (GNU sharutils) – rozbalí shellový archiv\n"
+"Použití: unshar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"                [<soubor>…]\n"
+"Podrobnosti získáte příkazem „unshar --help“.\n"
+
+#: src/unshar.c:202
 #, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s je pravděpodobně C kód, nikoli shellový archiv"
+msgid "Found no shell commands after cut line in %s"
+msgstr "Nenalezeny příkazy pro shell po dělicím řádku v %s"
 
 #: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "Nenalezeny příkazy pro shell po „cut“ v %s"
-
-#: src/unshar.c:241
 #, c-format
 msgid "%s is probably not a shell archive"
 msgstr "%s pravděpodobně není shellový archiv"
 
-#: src/unshar.c:242
+#: src/unshar.c:221
 #, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "Řádek „cut“ byl následován: %s"
+msgid "The 'cut line' was followed by: %s"
+msgstr "Dělicí řádek byl následován: %s"
 
-#: src/unshar.c:268
+#: src/unshar.c:244
 #, c-format
-msgid "Starting `sh' process"
-msgstr "Startuji proces „sh“"
+msgid "Found no shell commands in %s"
+msgstr "V %s nebyly nalezeny žádné příkazy pro shell"
 
-#: src/unshar.c:312
+#: src/unshar.c:253
 #, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "Více informací získáte příkazem „%s --help“.\n"
-
-#: src/unshar.c:316
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Použití: %s [PŘEPÍNAČ]… [SOUBOR]…\n"
-
-#: src/unshar.c:317
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
-"  -c, --overwrite             pass -c to shar script for overwriting files\n"
-"  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=STRING       split concatenated shars after STRING\n"
-"  -f, --force                 same as `-c'\n"
-"      --help                  display this help and exit\n"
-"      --version               output version information and exit\n"
-"\n"
-"If no FILE, standard input is read.\n"
-msgstr ""
-"  Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro jejich\n"
-"krátké formy.\n"
-"\n"
-"  -d, --directory=ADRESÁŘ     aktuální adresář pro zpracovávání\n"
-"  -c, --overwrite             vloží -c pro shar na povolení přepisu souborů\n"
-"  -e, --exit-0                jako --split-at=\"exit 0\"'\n"
-"  -E, --split-at=ŘETĚZEC      rozdělí složený soubor shar po ŘETĚZCI\n"
-"  -f, --force                 jako `-c'\n"
-"      --help                  vypíše tuto nápovědu a skončí\n"
-"      --version               vypíše označení verze a skončí\n"
-"\n"
-"Pokud SOUBOR nebude zadán, bude čten standardní vstup.\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr ""
-"Chyby v programu hlaste na <%s> (anglicky).\n"
-"Chyby v překladu na <translation-team-cs@lists.sourceforge.net> (česky).\n"
-
-#: src/unshar.c:414
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"  Copyright (C) %s Free Software Foundation, Inc.\n"
-"  Toto je volné programové vybavení; podmínky pro kopírování a rozšiřování\n"
-"naleznete ve zdrojových textech. Toto programové vybavení je zcela BEZ ZÁRUKY,\n"
-"a to i bez záruky PRODEJNOSTI nebo VHODNOSTI PRO NĚJAKÝ KONKRÉTNÍ ÚČEL.\n"
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s je pravděpodobně C kód, nikoli shellový archiv"
 
 # Error:...
-#: src/unshar.c:445 src/unshar.c:507
-#, c-format
-msgid "allocate file name buffer"
-msgstr "alokace bufferu pro název souboru"
+#: src/unshar.c:304
+msgid "file name buffer"
+msgstr "buffer pro název souboru"
 
-#: src/unshar.c:466
-msgid "standard input"
-msgstr "standardní vstup"
+#: src/unshar.c:425
+msgid "read/write buffer"
+msgstr "buffer pro čtení/zápis"
 
-# Error:...
-#: src/unshar.c:528
-#, c-format
-msgid "allocate file buffer"
-msgstr "alokace bufferu souboru"
-
-#: src/uudecode-opts.c:410
+#: src/uudecode-opts.c:435
 msgid "uudecode usage error:\n"
 msgstr "chybné použití uudecode:\n"
 
-#: src/uudecode-opts.c:446
+#: src/uudecode-opts.c:471
 msgid "uudecode fatal error:\n"
 msgstr "nepřekonatelná chyba v uudecode:\n"
 
-# TODO: type `fil'
-#: src/uudecode-opts.c:677
-msgid "decode an encoded fil"
-msgstr "dekódování kódovaného souboru"
-
-#: src/uudecode-opts.c:679
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uudecodeOptions structure noted in the comments below.  The
+#. literal text is defined in uudecode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uudecode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uudecodeOptions.pzCopyright
+#: src/uudecode-opts.c:701
 msgid ""
-"uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.3\n"
-"USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+"uudecode (GNU sharutils) 4.13.4pre9\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uudecode (GNU sharutils) 4.13.4pre9\n"
+"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
+"šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
+"nebo pozdější <http://gnu.org/licenses/gpl.html>.\n"
+
+#: src/uudecode-opts.c:708
+msgid ""
+"uudecode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
 "\n"
-"   -o, --output-file=str      direct output to file\n"
-"   -c, --ignore-chmod         Ignore fchmod(3P) errors\n"
-"   -v, --version[=arg]        Output version information and exit\n"
-"   -h, --help                 Display extended usage information and exit\n"
-"   -!, --more-help            Extended usage information passed thru pager\n"
-"   -R, --save-opts[=arg]      Save the option state to a config file\n"
-"   -r, --load-opts=str        Load options from a config file\n"
-"                                - disabled as --no-load-opts\n"
-"                                - may appear multiple times\n"
+msgstr ""
+"uudecode je svobodné programové vybavení: máte právo jej šířit a/nebo měnit\n"
+"podle podmínek Obecné veřejné licence GNU (GPL), jak byla uvolněna Free\n"
+"Software Foundation, a to buď ve verzi 3, nebo (dle vašeho uvážení)\n"
+"jakékoliv verzi pozdější.\n"
 "\n"
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
+
+#: src/uudecode-opts.c:712
+msgid ""
+"uudecode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
 "\n"
-"If no 'file'(s) are provided, then standard input is decoded.\n"
+msgstr ""
+"uudecode je šířen v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY,\n"
+"dokonce bez odvozené záruky na OBCHODOVATELNOST nebo VHODNOST PRO URČITÝ\n"
+"ÚČEL. Pro podrobnosti vizte Obecnou veřejnou licenci GNU (GPL).\n"
 "\n"
-"The following option preset mechanisms are supported:\n"
-" - reading file $HOME/.sharrc\n"
-"\n"
+
+#: src/uudecode-opts.c:720
+#, c-format
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"uudecode (GNU sharutils) – dekóduje kódovaný soubor\n"
+"Použití: %s [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"                  [<soubor>…]\n"
+
+#: src/uudecode-opts.c:724
+msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
+msgstr "Nejsou-li poskytnuty žádné soubory, dekóduje se standardní vstup.\n"
+
+#: src/uudecode-opts.c:727
+msgid ""
 "'Uudecode' transforms uuencoded files into their original form.\n"
 "\n"
+msgstr ""
+"Uudecode převádí soubory kódované nástrojem uuencode do jejich původní podoby.\n"
+"\n"
+
+#: src/uudecode-opts.c:728 src/uudecode-opts.c:763
+msgid ""
 "The encoded file(s) may be specified on the command line, or one may be\n"
 "read from standard input.  The output file name is specified in the encoded\n"
 "file, but may be overridden with the '-o' option.  It will have the mode of\n"
@@ -971,104 +1560,103 @@ msgid ""
 "second or subsquent file specifies standard output, the decoded data will\n"
 "be written to the same file as the previous output.  Don't do that.\n"
 "\n"
-"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
-"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
-"found.  The program determines from the header line of the encoded file\n"
-"which of the two supported encoding schemes was used.\n"
-"\n"
-"please send bug reports to:  bug-gnu-utils@gnu.org"
 msgstr ""
-"uudecode (GNU sharutils) – dekóduje kódovaný soubor – verze 4.13.3\n"
-"POUŽITÍ: uudecode [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
-"                  [ soubor… ]\n"
-"\n"
-"   -o, --output-file=řetězec    Nasměruje výstup do souboru\n"
-"   -c, --ignore-chmod           Ignoruje chyby fchmod(3P)\n"
-"   -v, --version[=argument]     Vypíše údaje o verzi a skončí\n"
-"   -h, --help                   Zobrazí rozšířený návod na použití a skončí\n"
-"   -!, --more-help              Rozšířený návod na použití skrze stránkovač\n"
-"   -R, --save-opts[=argumenty]  Uloží stav přepínačů do konfiguračního souboru\n"
-"   -r, --load-opts=řetězec      Načte přepínače z konfiguračního souboru\n"
-"                                 – lze zakázat pomocí --no-load-opts\n"
-"                                 – lze použít vícekrát\n"
-"\n"
-"Přepínače se zadávají jako dva spojovníky a název nebo jeden spojovník a\n"
-"znak příznaku.\n"
-"\n"
-"Nejsou-li zadány žádné soubory, dekóduje se standardní vstup.\n"
-"\n"
-"Jsou podporovány následující mechanismy přednastavení přepínačů:\n"
-" – načtení ze souboru $HOME/.sharrc\n"
-"\n"
-"Uudecode převádí soubory kódované nástrojem uuencode do jejich původní podoby.\n"
-"\n"
 "Kódované soubory lze uvést na příkazovém řádku, nebo lze jeden načíst ze\n"
 "standardního vstupu. Název výstupního souboru je určen v kódovaném souboru,\n"
-"ale lze jej přebít přepínačem „-o“. Práva budou shodná jako u původního\n"
-"souboru kromě bitu SUID a spustitelnosti, která se neuchovávají. Je-li\n"
+"ale lze jej přebít přepínačem „-o“. Práva budou shodná s původním\n"
+"souborem kromě bitu SUID a spustitelnosti, které se neuchovávají. Je-li\n"
 "výstupní soubor zadán jako „/dev/stdout“ nebo „-“, bude výsledek zapsán na\n"
 "standardní výstup. Je-li více vstupních souborů a druhý nebo další soubor\n"
 "určuje standardní výstup, dekódovaná data budou zapsána do stejného souboru\n"
 "jako předchozí výstup. Nedělejte to.\n"
 "\n"
+
+#: src/uudecode-opts.c:736
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+msgstr ""
 "„uudecode“ ignoruje jakékoliv počáteční a koncové řádky. Hledá řádek, který\n"
 "začíná „'begin'“, a pracuje, dokud nenajde značku konce kódování. Kódovací\n"
 "schéma použité při kódování určí program ze záhlaví kódovaného souboru.\n"
-"\n"
-"Prosím, chybová hlášení zasílejte (anglicky) na: bug-gnu-utils@gnu.org"
+"Totéž se týká názvu výstupního souboru. Vizte „uuencode(5)“.\n"
 
-#: src/uudecode-opts.c:710
+#: src/uudecode-opts.c:743
+msgid "uudecode (GNU sharutils) 4.13.4pre9"
+msgstr "uudecode (GNU sharutils) 4.13.4pre9"
+
+#: src/uudecode-opts.c:746
 msgid ""
-"uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.3\n"
-"USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]"
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
 msgstr ""
-"uudecode (GNU sharutils) – dekóduje kódovaný soubor – verze 4.13.3\n"
-"POUŽITÍ: uudecode [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
-"                  [ soubor… ]"
+"uudecode (GNU sharutils) – dekóduje kódovaný soubor\n"
+"Použití: uudecode [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"                  [<soubor>…]\n"
+"\n"
 
-#: src/uudecode-opts.c:713
-msgid "If no 'file'(s) are provided, then standard input is decoded"
-msgstr "Nejsou-li poskytnuty žádné soubory, dekóduje se standardní vstup"
+#: src/uudecode-opts.c:748
+msgid "   -o, --output-file=str      direct output to file\n"
+msgstr "   -o, --output-file=ŘETĚZEC  nasměruje výstup do souboru\n"
 
-#: src/uudecode-opts.c:715
+#: src/uudecode-opts.c:749
+msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
+msgstr "   -c, --ignore-chmod         ignoruje chyby fchmod(3P)\n"
+
+#: src/uudecode-opts.c:757
 msgid ""
-"'Uudecode' transforms uuencoded files into their original form.\n"
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file'(s) are provided, then standard input is decoded.\n"
 "\n"
-"The encoded file(s) may be specified on the command line, or one may be\n"
-"read from standard input.  The output file name is specified in the encoded\n"
-"file, but may be overridden with the '-o' option.  It will have the mode of\n"
-"the original file, except that setuid and execute bits are not retained.  If\n"
-"the output file is specified to be '/dev/stdout' or '-', the result will be\n"
-"written to standard output.  If there are multiple input files and the\n"
-"second or subsquent file specifies standard output, the decoded data will\n"
-"be written to the same file as the previous output.  Don't do that.\n"
+msgstr ""
+"Přepínače se zadávají jako dva spojovníky následované názvem nebo jako\n"
+"jeden spojovník následovaný znakem příznaku.\n"
+"Nejsou-li zadány žádné soubory, bude dekódován standardní vstup.\n"
 "\n"
+
+#: src/uudecode-opts.c:761
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+" – načtení souboru $HOME/.sharrc\n"
+"\n"
+"„uudecode“ převádí soubory kódované nástrojem uuencode do jejich původní podoby.\n"
+"\n"
+
+#: src/uudecode-opts.c:771
+msgid ""
 "'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
 "that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
 "found.  The program determines from the header line of the encoded file\n"
-"which of the two supported encoding schemes was used"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+"\n"
 msgstr ""
-"Uudecode převádí soubory kódované nástrojem uuencode do jejich původní podoby.\n"
-"\n"
-"Kódované soubory lze uvést na příkazovém řádku, nebo lze jeden načíst ze\n"
-"standardního vstupu. Název výstupního souboru je určen v kódovaném souboru,\n"
-"ale lze jej přebít přepínačem „-o“. Práva budou shodná jako u původního\n"
-"souboru kromě bitu SUID a spustitelnosti, která se neuchovávají. Je-li\n"
-"výstupní soubor zadán jako „/dev/stdout“ nebo „-“, bude výsledek zapsán na\n"
-"standardní výstup. Je-li více vstupních souborů a druhý nebo další soubor\n"
-"určuje standardní výstup, dekódovaná data budou zapsána do stejného souboru\n"
-"jako předchozí výstup. Nedělejte to.\n"
-"\n"
 "„uudecode“ ignoruje jakékoliv počáteční a koncové řádky. Hledá řádek, který\n"
 "začíná „'begin'“, a pracuje, dokud nenajde značku konce kódování. Kódovací\n"
-"schéma použité při kódování určí program ze záhlaví kódovaného souboru"
+"schéma použité při kódování určí program ze záhlaví kódovaného souboru.\n"
+"Totéž se týká názvu výstupního souboru. Vizte „uuencode(5)“.\n"
 
-#: src/uudecode.c:106 src/uudecode.c:456
-#, c-format
-msgid "%s: Write error"
-msgstr "%s: Chyba při zápisu"
+#: src/uudecode-opts.c:779
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'uudecode --help' for more information.\n"
+msgstr ""
+"uudecode (GNU sharutils) – dekóduje kódovaný soubor\n"
+"Použití: uudecode [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+"                  [<soubor>…]\n"
+"Podrobnosti získáte příkazem „uudecode --help“.\n"
 
-#: src/uudecode.c:123 src/uudecode.c:217
+#: src/uudecode.c:120 src/uudecode.c:184
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Krátký soubor"
@@ -1078,90 +1666,206 @@ msgstr "%s: Krátký soubor"
 msgid "%s: No `end' line"
 msgstr "%s: Chybí řádek „end“"
 
-#: src/uudecode.c:226
+#: src/uudecode.c:190
 #, c-format
-msgid "%s: data following `=' padding character"
-msgstr "%s: data následující „=“ jsou vyplňovací znaky"
+msgid "%s: invalid input"
+msgstr "%s: neplatný vstup"
 
-#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
-#, c-format
-msgid "%s: illegal line"
-msgstr "%s: nepřípustný řádek"
+#: src/uudecode.c:218
+msgid "cannot expand $HOME"
+msgstr "nelze vyhodnotit $HOME"
 
-#: src/uudecode.c:302
+#: src/uudecode.c:229
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Nepřípustný název souboru: %s"
 
-#: src/uudecode.c:309
+#: src/uudecode.c:236
 #, c-format
 msgid "No user '%s'"
 msgstr "Uživatel „%s“ neexistuje"
 
-# TODO: plural
-#: src/uudecode.c:320
-#, c-format
-msgid "no memory for %d byte allocation"
-msgstr "nedostatek paměti pro alokaci %d bajtů"
+# Error while...
+#: src/uudecode.c:247 src/uudecode.c:305
+msgid "output file name"
+msgstr "název výstupního souboru"
 
-#: src/uudecode.c:343
+#: src/uudecode.c:266
 #, c-format
 msgid "cannot access %s"
 msgstr "nelze přistoupit k %s"
 
-#: src/uudecode.c:352
-#, c-format
-msgid "freopen of %s"
-msgstr "freopen() nad %s"
-
-#: src/uudecode.c:359
+#: src/uudecode.c:279
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod nad %s"
 
-#: src/uudecode.c:396
-#, c-format
-msgid "%s: No `begin' line"
-msgstr "%s: Chybí řádek „begin“"
+#: src/uudecode.c:298
+msgid "output name is empty"
+msgstr "název výstupu je prázdný"
 
-#: src/uudecode.c:496
+#: src/uudecode.c:311
+#, c-format
+msgid "invalid base64 encoded name: %s"
+msgstr "neplatný název kódovaný v Base64: %s"
+
+#: src/uudecode.c:345
+#, c-format
+msgid "%s: Invalid or missing 'begin' line"
+msgstr "%s: Neplatný nebo chybějící řádek „begin“"
+
+#: src/uudecode.c:435
+#, c-format
+msgid "%s: Write error"
+msgstr "%s: Chyba při zápisu"
+
+#: src/uudecode.c:475
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
 msgstr "Když se zpracovává více vstupních souborů, nelze zadat výstupní soubor.\n"
 
-#: src/uuencode-opts.c:401
+#: src/uuencode-opts.c:386
 msgid "uuencode usage error:\n"
 msgstr "chybné použití uuencode:\n"
 
-#: src/uuencode-opts.c:437
+#: src/uuencode-opts.c:422
 msgid "uuencode fatal error:\n"
 msgstr "nepřekonatelná chyba v uuencode:\n"
 
-# TODO: s/tex/text/
-#: src/uuencode-opts.c:668
-msgid "encode a file into email friendly tex"
-msgstr "kóduje soubor do textu vhodného pro přenos e-mailem"
-
-#: src/uuencode-opts.c:670
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uuencodeOptions structure noted in the comments below.  The
+#. literal text is defined in uuencode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uuencode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uuencodeOptions.pzCopyright
+#: src/uuencode-opts.c:652
 msgid ""
-"uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13.3\n"
-"USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+"uuencode (GNU sharutils) 4.13.4pre9\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uuencode (GNU sharutils) 4.13.4pre9\n"
+"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
+"šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
+"nebo pozdější <http://gnu.org/licenses/gpl.html>.\n"
+
+#: src/uuencode-opts.c:659
+msgid ""
+"uuencode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
 "\n"
-"   -m, --base64               convert using base 64\n"
-"   -e, --encode-file-name     encode the output file name\n"
-"   -v, --version[=arg]        Output version information and exit\n"
-"   -h, --help                 Display extended usage information and exit\n"
-"   -!, --more-help            Extended usage information passed thru pager\n"
-"   -R, --save-opts[=arg]      Save the option state to a config file\n"
-"   -r, --load-opts=str        Load options from a config file\n"
-"                                - disabled as --no-load-opts\n"
-"                                - may appear multiple times\n"
+msgstr ""
+"uuencode je svobodné programové vybavení: máte právo jej šířit a/nebo měnit\n"
+"podle podmínek Obecné veřejné licence GNU (GPL), jak byla uvolněna Free\n"
+"Software Foundation, a to buď ve verzi 3, nebo (dle vašeho uvážení)\n"
+"jakékoliv verzi pozdější.\n"
 "\n"
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
+
+#: src/uuencode-opts.c:663
+msgid ""
+"uuencode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
 "\n"
-"The following option preset mechanisms are supported:\n"
+msgstr ""
+"uuencode je šířen v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY,\n"
+"dokonce bez odvozené záruky na OBCHODOVATELNOST nebo VHODNOST PRO URČITÝ\n"
+"ÚČEL. Pro podrobnosti vizte Obecnou veřejnou licenci GNU (GPL).\n"
+"\n"
+
+#: src/uuencode-opts.c:671
+#, c-format
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  %s [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+msgstr ""
+"uuencode (GNU sharutils) – kóduje soubor do textu vhodného pro e-mail\n"
+"Použití: %s [ -<příznak> | --<název> ]… [<vstupní_soubor>] <název_výstupu>\n"
+
+#: src/uuencode-opts.c:675
+msgid ""
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+"„uuencode“ se používá na vytvoření ASCII reprezentace souboru, která může\n"
+"být odeslána přes kanály, které by jinak mohly poškodit data. Jmenovitě,\n"
+"e-mail nedokáže pojmout binární data a dokonce často vkládá znak, když vidí\n"
+"šestiznakovou posloupnost „\\nFrom “.\n"
+"\n"
+
+#: src/uuencode-opts.c:679 src/uuencode-opts.c:712
+msgid ""
+"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
+"standard in and write the encoded form to standard out.  The output will\n"
+"begin with a header line for use by 'uudecode' giving it the resulting\n"
+"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
+"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
+"standard out.\n"
+"\n"
+msgstr ""
+"„uuencode“ načte „vstupní_soubor“, je-li zadán, jinak čte data ze standardního\n"
+"vstupu a kódovanou podobu zapisuje na standardní výstup. Výstup bude\n"
+"začínat s řádkem záhlaví, který dává „uudecode“ navrhovaný „název_výstupu“\n"
+"souboru a přístupová práva. Je-li „název_výstupu“ „/dev/stdout“,\n"
+"pak „uudecode“ vypíše dekódovaný soubor na standardní výstup.\n"
+"\n"
+
+#: src/uuencode-opts.c:685
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+msgstr ""
+"Poznámka: „uuencode“ používá bufferovaný vstup a předpokládá, že se nejedná\n"
+"o ručně psaný text z terminálu. Důsledek je, že při zadávání z terminálu\n"
+"můžete potřebovat stisknout několikrát Ctrl-D, abyste ukončili vstup.\n"
+
+#: src/uuencode-opts.c:690
+msgid "uuencode (GNU sharutils) 4.13.4pre9"
+msgstr "uuencode (GNU sharutils) 4.13.4pre9"
+
+#: src/uuencode-opts.c:693
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"\n"
+msgstr ""
+"uuencode (GNU sharutils) – kóduje soubor do textu vhodného pro e-mail\n"
+"Použití: uuencode [ -<příznak> | --<název> ]… [<vstupní_soubor>]\n"
+"                  <název_výstupu>\n"
+"\n"
+
+#: src/uuencode-opts.c:695
+msgid "   -m, --base64               convert using base 64\n"
+msgstr "   -m, --base64               převádí pomocí Base64\n"
+
+#: src/uuencode-opts.c:696
+msgid "   -e, --encode-file-name     encode the output file name\n"
+msgstr "   -e, --encode-file-name     začlení název výstupního souboru\n"
+
+#: src/uuencode-opts.c:707
+msgid ""
 " - reading file $HOME/.sharrc\n"
 "\n"
 "'uuencode' is used to create an ASCII representation of a file that can be\n"
@@ -1169,123 +1873,47 @@ msgid ""
 "email cannot handle binary data and will often even insert a character when\n"
 "the six character sequence \"\\nFrom \" is seen.\n"
 "\n"
-"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
-"standard in and write the encoded form to standard out.  The output will\n"
-"begin with a header line for use by 'uudecode' giving it the resulting\n"
-"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
-"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
-"standard out.\n"
+msgstr ""
+" – načtení souboru $HOME/.sharrc\n"
 "\n"
+"„uuencode“ se používá na vytvoření ASCII reprezentace souboru, která může\n"
+"být odeslána přes kanály, které by jinak mohly poškodit data. Jmenovitě,\n"
+"e-mail nedokáže pojmout binární data a dokonce často vkládá znak, když vidí\n"
+"šestiznakovou posloupnost „\\nFrom “.\n"
+"\n"
+
+#: src/uuencode-opts.c:718
+msgid ""
 "'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
 "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
 "Ctl-D several times to terminate input.\n"
 "\n"
-"please send bug reports to:  bug-gnu-utils@gnu.org"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
 msgstr ""
-"uuencode (GNU sharutils) – kóduje soubor do textu vhodného pro e-mail – 4.13.3\n"
-"POUŽITÍ: uuencode [ -<příznak> | --<název> ]… [ vstupní_soubor ] název_výstupu\n"
-"\n"
-"   -m, --base64                Převádí pomocí Base64\n"
-"   -e, --encode-file-name      Začlení název výstupního souboru\n"
-"   -v, --version[=argument]    Vypíše údaje o verzi a skončí\n"
-"   -h, --help                  Zobrazí rozšířený návod na použití a skončí\n"
-"   -!, --more-help             Rozšířený návod na použití skrze stránkovač\n"
-"   -R, --save-opts[=argument]  Uloží stav přepínačů do konfiguračního souboru\n"
-"   -r, --load-opts=řetězec      Načte přepínače z konfiguračního souboru\n"
-"                                 – lze zakázat pomocí --no-load-opts\n"
-"                                 – lze použít vícekrát\n"
-"\n"
-"Přepínače se zadávají jako dva spojovníky a název nebo jeden spojovník a\n"
-"znak příznaku.\n"
-"\n"
-"Jsou podporovány následující mechanismy přednastavení přepínačů:\n"
-" – načtení ze souboru $HOME/.sharrc\n"
-"\n"
-"Uuencode se používá na vytvoření ASCII reprezentace souboru, která může být\n"
-"odeslána přes kanály, které by jinak mohly poškodit data. Jmenovitě, e-mail\n"
-"nedokáže pojmout binární data a dokonce často vkládá znak, když vidí\n"
-"šestiznakovou posloupnost „\\nFrom “.\n"
-"\n"
-"„uuencode“ načte „vstupní_soubor“, je-li zadán, jinak čte data ze standardního\n"
-"vstupu a kódovanou podobu zapisuje na standardní výstup. Výstup bude\n"
-"začínat s řádkem záhlaví, který dává „uudecode“ navrhovaný soubor\n"
-"„název_výstupu“ a přístupová práva. Je-li „název_výstupu“ „/dev/stdout“,\n"
-"pak „uudecode“ vypíše dekódovaný soubor na standardní výstup.\n"
-"\n"
 "Poznámka: „uuencode“ používá bufferovaný vstup a předpokládá, že se nejedná\n"
 "o ručně psaný text z terminálu. Důsledek je, že při zadávání z terminálu\n"
 "můžete potřebovat stisknout několikrát Ctrl-D, abyste ukončili vstup.\n"
 "\n"
-"Prosím, chybová hlášení zasílejte (anglicky) na: bug-gnu-utils@gnu.org"
+"Prosím, chybová hlášení zasílejte (anglicky) na: <bug-gnu-utils@gnu.org>\n"
+"Chyby v překladu hlaste (česky) na: <translation-team-cs@lists.sourceforge.net>\n"
 
-#: src/uuencode-opts.c:700
+#: src/uuencode-opts.c:724
 msgid ""
-"uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13.3\n"
-"USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name"
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"Try 'uuencode --help' for more information.\n"
 msgstr ""
-"uuencode (GNU sharutils) – kóduje soubor do textu vhodného pro e-mail – 4.13.3\n"
-"POUŽITÍ: uuencode [ -<příznak> | --<název> ]… [ vstupní_soubor ] název_výstupu"
+"uuencode (GNU sharutils) – kóduje soubor do textu vhodného pro e-mail\n"
+"Použití: uuencode [ -<příznak> | --<název> ]… [<vstupní_soubor>]\n"
+"                  <název_výstupu>\n"
 
-#: src/uuencode-opts.c:703
-msgid ""
-"'uuencode' is used to create an ASCII representation of a file that can be\n"
-"sent over channels that may otherwise corrupt the data.  Specifically,\n"
-"email cannot handle binary data and will often even insert a character when\n"
-"the six character sequence \"\\nFrom \" is seen.\n"
-"\n"
-"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
-"standard in and write the encoded form to standard out.  The output will\n"
-"begin with a header line for use by 'uudecode' giving it the resulting\n"
-"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
-"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
-"standard out.\n"
-"\n"
-"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
-"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
-"Ctl-D several times to terminate input"
-msgstr ""
-"Uuencode se používá na vytvoření ASCII reprezentace souboru, která může být\n"
-"odeslána přes kanály, které by jinak mohly poškodit data. Jmenovitě, e-mail\n"
-"nedokáže pojmout binární data a dokonce často vkládá znak, když vidí\n"
-"šestiznakovou posloupnost „\\nFrom “.\n"
-"\n"
-"„uuencode“ načte „vstupní_soubor“, je-li zadán, jinak čte data ze standardního\n"
-"vstupu a kódovanou podobu zapisuje na standardní výstup. Výstup bude\n"
-"začínat s řádkem záhlaví, který dává „uudecode“ navrhovaný soubor\n"
-"„název_výstupu“ a přístupová práva. Je-li „název_výstupu“ „/dev/stdout“,\n"
-"pak „uudecode“ vypíše dekódovaný soubor na standardní výstup.\n"
-"\n"
-"Poznámka: „uuencode“ používá bufferovaný vstup a předpokládá, že se nejedná\n"
-"o ručně psaný text z terminálu. Důsledek je, že při zadávání z terminálu\n"
-"můžete potřebovat stisknout několikrát Ctrl-D, abyste ukončili vstup"
-
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
-#, c-format
-msgid "Write error"
-msgstr "Chyba při zápisu"
-
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
-#, c-format
-msgid "Read error"
-msgstr "Chyba při čtení"
-
-# Error whle...
 #: src/uuencode.c:226
-#, c-format
-msgid "fopen-ing %s"
-msgstr "otevření přes fopen %s"
+msgid "freopen of stdin"
+msgstr "freopen() nad standardním vstupem"
 
-# Error whle...
-#: src/uuencode.c:228
-#, c-format
-msgid "fstat-ing %s"
-msgstr "zjišťování informací o souboru %s"
-
-# Error:...
-#: src/uuencode.c:254
-#, c-format
-msgid "Allocation failure"
-msgstr "Alokace selhala"
+#: src/uuencode.c:255
+msgid "file name"
+msgstr "název souboru"
 
 #: lib/error.c:188
 msgid "Unknown system error"
@@ -1404,472 +2032,701 @@ msgstr "argument „%3$s“ přepínače %1$s%2$s má neplatnou příponu"
 msgid "%s%s argument '%s' too large"
 msgstr "přepínač %s%s má příliš dlouhý argument „%s“"
 
-# TODO: pluralize
-#: libopts/autoopts.c:51
-#, c-format
-msgid "malloc of %d bytes failed\n"
-msgstr "alokace %d bajtů paměti selhala\n"
+#~ msgid "create a shell archiv"
+#~ msgstr "vytvoří shellový archiv"
 
-#: libopts/init.c:52
-msgid "AutoOpts function called without option descriptor\n"
-msgstr "Funkce AutoOpts byla zavolána bez popisu přepínačů\n"
+#~ msgid ""
+#~ "shar (GNU sharutils) - create a shell archive - Ver. 4.13.3\n"
+#~ "USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+#~ "\n"
+#~ "\n"
+#~ "specifying compression:\n"
+#~ "\n"
+#~ "   -p, --intermix-type        specify compression for input files\n"
+#~ "                                - prohibits these options:\n"
+#~ "                                vanilla-operation\n"
+#~ "   -C, --compactor=str        specify compaction (compression) program\n"
+#~ "                                - prohibits these options:\n"
+#~ "                                vanilla-operation\n"
+#~ "                                - may appear multiple times\n"
+#~ "   -g, --level-of-compression=num pass LEVEL for compression\n"
+#~ "                                - It must be in the range:\n"
+#~ "                                  1 to 9\n"
+#~ "       --level-for-gzip=num   This is an alias for 'level-of-compression'\n"
+#~ "\n"
+#~ "specifying file encoding methodology:\n"
+#~ "\n"
+#~ "   -M, --mixed-uuencode       decide uuencoding for each file\n"
+#~ "   -B, --uuencode             treat all files as binary\n"
+#~ "                                - an alternate for mixed-uuencode\n"
+#~ "   -T, --text-files           treat all files as text\n"
+#~ "                                - an alternate for mixed-uuencode\n"
+#~ "\n"
+#~ "specifying file selection and output modes:\n"
+#~ "\n"
+#~ "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+#~ "   -l, --whole-size-limit=num split archive, not files, to size\n"
+#~ "                                - requires these options:\n"
+#~ "                                output-prefix\n"
+#~ "                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+#~ "                                - It must lie in one of the ranges:\n"
+#~ "                                  8 to 1023, or\n"
+#~ "                                  8192 to 4194304\n"
+#~ "   -L, --split-size-limit=num split archive or files to size\n"
+#~ "                                - requires these options:\n"
+#~ "                                output-prefix\n"
+#~ "                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+#~ "                                - It must lie in one of the ranges:\n"
+#~ "                                  8 to 1023, or\n"
+#~ "                                  8192 to 4194304\n"
+#~ "                                - an alternate for whole-size-limit\n"
+#~ "   -I, --input-file-list=str  read file list from a file\n"
+#~ "\n"
+#~ "Controlling the shar headers:\n"
+#~ "\n"
+#~ "   -n, --archive-name=str     use name to document the archive\n"
+#~ "   -s, --submitter=str        override the submitter name\n"
+#~ "   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
+#~ "                                - requires these options:\n"
+#~ "                                archive-name\n"
+#~ "   -c, --cut-mark             start the shar with a cut line\n"
+#~ "   -t, --translate            translate messages in the script\n"
+#~ "\n"
+#~ "Protecting against transmission issues::\n"
+#~ "\n"
+#~ "       --no-character-count   do not use `wc -c' to check size\n"
+#~ "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
+#~ "   -F, --force-prefix         apply the prefix character on every line\n"
+#~ "   -d, --here-delimiter=str   use delim to delimit the files\n"
+#~ "\n"
+#~ "Producing different kinds of shars::\n"
+#~ "\n"
+#~ "   -V, --vanilla-operation    produce very simple shars\n"
+#~ "   -P, --no-piping            use temporary files between programs\n"
+#~ "   -x, --no-check-existing    blindly overwrite existing files\n"
+#~ "   -X, --query-user           ask user before overwriting files\n"
+#~ "                                - prohibits these options:\n"
+#~ "                                vanilla-operation\n"
+#~ "   -m, --no-timestamp         do not restore modification times\n"
+#~ "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+#~ "   -f, --basename             restore in one directory, despite hierarchy\n"
+#~ "\n"
+#~ "Internationalization options::\n"
+#~ "\n"
+#~ "       --no-i18n              do not internationalize\n"
+#~ "       --print-text-domain-dir  print directory with shar messages\n"
+#~ "\n"
+#~ "user feedback/entertainment:\n"
+#~ "\n"
+#~ "   -q, --quiet                do not output verbose messages\n"
+#~ "       --silent               This is an alias for 'quiet'\n"
+#~ "\n"
+#~ "version, usage and configuration options:\n"
+#~ "\n"
+#~ "   -v, --version[=arg]        Output version information and exit\n"
+#~ "   -h, --help                 Display extended usage information and exit\n"
+#~ "   -!, --more-help            Extended usage information passed thru pager\n"
+#~ "   -R, --save-opts[=arg]      Save the option state to a config file\n"
+#~ "   -r, --load-opts=str        Load options from a config file\n"
+#~ "                                - disabled as --no-load-opts\n"
+#~ "                                - may appear multiple times\n"
+#~ "\n"
+#~ "Options are specified by doubled hyphens and their name or by a single\n"
+#~ "hyphen and the flag character.\n"
+#~ "\n"
+#~ "If no 'file's are specified, the list of input files is read from a\n"
+#~ "standard input.  Standard input must not be a terminal.\n"
+#~ "\n"
+#~ "The following option preset mechanisms are supported:\n"
+#~ " - reading file $HOME/.sharrc\n"
+#~ "\n"
+#~ "'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+#~ "and can be emailed.  These files may be unpacked later by executing them\n"
+#~ "with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+#~ "'-o' option is given.  A wide range of features provide extensive\n"
+#~ "flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+#~ "Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+#~ "mailable 'tar' archive.\n"
+#~ "\n"
+#~ "Options may be specified in any order until a 'file' argument is\n"
+#~ "recognized.  If the '--intermix-type' option has been specified, more\n"
+#~ "compression and encoding options will be recognized between the 'file'\n"
+#~ "arguments.\n"
+#~ "\n"
+#~ "Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+#~ "you are emailing files, please consider mime-encoded files.  If you do\n"
+#~ "'uuencode', base 64 is the preferred encoding method.\n"
+#~ "\n"
+#~ "please send bug reports to:  bug-gnu-utils@gnu.org"
+#~ msgstr ""
+#~ "shar (GNU sharutils) – vytváří shellový archiv – verze 4.13.3\n"
+#~ "POUŽITÍ: shar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…              [soubor…]\n"
+#~ "\n"
+#~ "Určení komprese:\n"
+#~ "\n"
+#~ "   -p, --intermix-type        určuje kompresi vstupních souborů\n"
+#~ "                                – zakazuje tyto přepínače:\n"
+#~ "                                vanilla-operation\n"
+#~ "   -C, --compactor=řetězec    určuje kompresní program\n"
+#~ "                                – zakazuje tyto přepínače:\n"
+#~ "                                vanilla-operation\n"
+#~ "                                - lze uvést vícekrát\n"
+#~ "   -g, --level-of-compression=číslo\n"
+#~ "                              předá úroveň komprese\n"
+#~ "                                – musí být v rozsahu:\n"
+#~ "                                  1 až 9\n"
+#~ "       --level-for-gzip=číslo\n"
+#~ "                              stejné jako „level-of-compression“\n"
+#~ "\n"
+#~ "Určuje metodiku kódování souboru:\n"
+#~ "\n"
+#~ "   -M, --mixed-uuencode       automaticky se rozhodne, zda použít uuencode\n"
+#~ "   -B, --uuencode             pokládá všechny soubory za binární\n"
+#~ "                                – jiná možnost k mixed-uuencode\n"
+#~ "   -T, --text-files           pokládá všechny soubory za textové\n"
+#~ "                                - jiná možnost k mixed-uuencode\n"
+#~ "\n"
+#~ "Určuje výběr souboru a režimy výstupu:\n"
+#~ "\n"
+#~ "   -o, --output-prefix=řetězec\n"
+#~ "                              výstup do souboru PREFIX.nn\n"
+#~ "   -l, --whole-size-limit=číslo\n"
+#~ "                              rozdělí archiv, nikoli soubory na části\n"
+#~ "                                – vyžaduje tyto přepínače:\n"
+#~ "                                output-prefix\n"
+#~ "                                – lze přidat násobné přípony: k/K/m/M/g/G/t/T\n"
+#~ "                                – musí ležet v jednom z rozsahů:\n"
+#~ "                                  8 až 1023 nebo\n"
+#~ "                                  8192 až 4194304\n"
+#~ "   -L, --split-size-limit=číslo\n"
+#~ "                              rozdělí archiv nebo soubory na části\n"
+#~ "                                – vyžaduje tyto přepínače:\n"
+#~ "                                output-prefix\n"
+#~ "                                – lze přidat násobné přípony: k/K/m/M/g/G/t/T\n"
+#~ "                                – musí ležet v jednom z rozsahů:\n"
+#~ "                                  8 až 1023 nebo\n"
+#~ "                                  8192 až 4194304\n"
+#~ "                                – jiná možnost k whole-size-limit\n"
+#~ "   -I, --input-file-list=řetězec\n"
+#~ "                              načte seznam souborů ze souboru\n"
+#~ "\n"
+#~ "Řízení hlaviček archivu shar:\n"
+#~ "\n"
+#~ "   -n, --archive-name=řetězec\n"
+#~ "                              použije jako jméno archivu\n"
+#~ "   -s, --submitter=řetězec    použije jako jméno distributora\n"
+#~ "   -a, --net-headers          do výstupu umístí hlavičky „Submitted-by:“ a\n"
+#~ "                              „Archive-name:“\n"
+#~ "                                – vyžaduje tyto přepínače:\n"
+#~ "                                archive-name\n"
+#~ "   -c, --cut-mark             na začátek každého výstupního souboru přidá\n"
+#~ "                              řádek označující začátek archivu (cut line)\n"
+#~ "   -t, --translate            přeloží zprávy ve skriptu\n"
+#~ "\n"
+#~ "Ochrana proti chybám přenosu:\n"
+#~ "\n"
+#~ "       --no-character-count   nepoužívá „wc -c“ na kontrolu velikosti\n"
+#~ "   -D, --no-md5-digest        nepoužije „md5sum“\n"
+#~ "   -F, --force-prefix         použije předponový znak na každém řádku\n"
+#~ "   -d, --here-delimiter=řetězec\n"
+#~ "                              použije řetězec k oddělení souborů v archivu\n"
+#~ "\n"
+#~ "Výběr druhu archivu shar:\n"
+#~ "\n"
+#~ "   -V, --vanilla-operation    vyrobí velmi jednoduchý archiv\n"
+#~ "   -P, --no-piping            použije dočasné soubory při rozbalování\n"
+#~ "   -x, --no-check-existing    slepé přepsání existujících souborů\n"
+#~ "   -X, --query-user           ptá se uživatele před přepsáním souborů\n"
+#~ "                                - zakazuje tyto přepínače:\n"
+#~ "                                vanilla-operation\n"
+#~ "   -m, --no-timestamp         neobnovuje časy a data změny souboru\n"
+#~ "   -Q, --quiet-unshar         nevypisuje zprávy při rozbalování\n"
+#~ "   -f, --basename             rozbaluje do jednoho adresáře, neuvažuje\n"
+#~ "                              adresářovou strukturu\n"
+#~ "\n"
+#~ "Přepínače internacionalizace:\n"
+#~ "\n"
+#~ "       --no-i18n              nevyrobí internacionalizovaný archiv\n"
+#~ "       --print-text-domain-dir\n"
+#~ "                              vypíše adresář se zprávami sharu\n"
+#~ "\n"
+#~ "Hlášení uživateli/zábava:\n"
+#~ "\n"
+#~ "   -q, --quiet                nevypisuje podrobná hlášení\n"
+#~ "       --silent               stejné jako „quiet“\n"
+#~ "\n"
+#~ "Verze, návod na použití a přepínače nastavení:\n"
+#~ "\n"
+#~ "   -v, --version[=argument]   vypíše údaje o verzi a skončí\n"
+#~ "   -h, --help                 zobrazí rozšířený návod na použití a skončí\n"
+#~ "   -!, --more-help            Rozšířený návod na použití skrze stránkovač\n"
+#~ "   -R, --save-opts[=argumenty]\n"
+#~ "                              Uloží stav přepínačů do konfiguračního souboru\n"
+#~ "   -r, --load-opts=řetězec    Načte přepínače z konfiguračního souboru\n"
+#~ "                                – lze zakázat pomocí --no-load-opts\n"
+#~ "                                – lze použít opakovaně\n"
+#~ "\n"
+#~ "Přepínače se zadávají jako dva spojovníky a název nebo jeden spojovník a\n"
+#~ "znak příznaku.\n"
+#~ "\n"
+#~ "Nejsou-li zadány žádné soubory, seznam vstupních souborů je načten ze\n"
+#~ "standardního souboru. Standardní vstup nesmí být terminál.\n"
+#~ "\n"
+#~ "Jsou podporovány následující mechanismy přednastavení přepínačů:\n"
+#~ " – načtení ze souboru $HOME/.sharrc\n"
+#~ "\n"
+#~ "„shar“ vyrábí shellové archivy (též soubory shar), což jsou texty, které lze\n"
+#~ "odeslat e-mailem. Tyto souboru lze později rozbalit jejich spuštěním skrze\n"
+#~ "„/bin/sh“. Výsledný archiv je odeslán na standardní výstup, nebyl-li zadán\n"
+#~ "přepínač „-o“. Široká škála funkcí nabízí velkou pružnost při výrobě archivů\n"
+#~ "a při určování „chytrosti“ sharu.\n"
+#~ "Archivy mohou být celkem jednoduché („--vanilla-operation“) nebo v podstatě\n"
+#~ "tarový archiv zaslatelný poštou.\n"
+#~ "\n"
+#~ "Přepínače lze uvádět v libovolném pořadí až k argumentu souboru. Je-li\n"
+#~ "zadán přepínač „--intermix-type“, další kompresní a kódovací přepínače\n"
+#~ "budou možné mezi argumenty souborů.\n"
+#~ "\n"
+#~ "Ačkoliv tento program podporuje soubory vytvořené nástrojem „uuencode“,\n"
+#~ "není to doporučená metoda. Zasíláte-li soubory e-mailem, prosím, zvažte\n"
+#~ "přenos podle standardu MIME. Použijte-li „uuencode“, bude jako kódování\n"
+#~ "zvolena metoda Base64.\n"
+#~ "\n"
+#~ "Chybová hlášení zasílejte (anglicky) na:  bug-gnu-utils@gnu.org"
 
-#: libopts/init.c:85
-msgid "\tThis exceeds the compiled library version:  "
-msgstr "\tToto překračuje verzi knihovny v době překladu: "
+#~ msgid "This program is released under the terms of the GNU General Public License, version 3 or later."
+#~ msgstr "Tento program je uvolněn pod podmínkami Obecné veřejné licence GNU verze 3 nebo novější."
 
-#: libopts/init.c:83
-#, c-format
-msgid ""
-"Automated Options Processing Error!\n"
-"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
-msgstr ""
-"Chyba při zpracování automatických přepínačů!\n"
-"\t%s zavolalo funkci AutoOpts s verzí struktury %d:%d:%d.\n"
+#~ msgid "New file, remaining %s, "
+#~ msgstr "Nový soubor, zbývá %s, "
+
+#~ msgid "Limit still %s\n"
+#~ msgstr "Limit zůstává %s\n"
+
+#~ msgid "File %s (%s)"
+#~ msgstr "Soubor %s (%s)"
+
+#~ msgid "In shar: remaining size %s\n"
+#~ msgstr "V shar: zbývající velikost %s\n"
+
+#~ msgid "Cannot chdir to `%s'"
+#~ msgstr "Adresář nelze změnit na „%s“"
+
+#~ msgid "unpack a shar archiv"
+#~ msgstr "rozbalí sharový archiv"
+
+#~ msgid ""
+#~ "Usage: ./unshar [OPTION]... [FILE]...\n"
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
+#~ "  -c, --overwrite             pass -c to shar script for overwriting files\n"
+#~ "  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=STRING       split concatenated shars after STRING\n"
+#~ "  -f, --force                 same as `-c'\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If no FILE, standard input is read.\n"
+#~ "Report bugs to <bug-gnu-utils@gnu.org>."
+#~ msgstr ""
+#~ "Použití: ./unshar [PŘEPÍNAČE]… [SOUBOR]…\n"
+#~ "Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro jejich\n"
+#~ "krátké formy.\n"
+#~ "\n"
+#~ "  -d, --directory=ADRESÁŘ     aktuální adresář pro zpracovávání\n"
+#~ "  -c, --overwrite             vloží -c pro shar na povolení přepisu souborů\n"
+#~ "  -e, --exit-0                jako --split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=ŘETĚZEC      rozdělí složený soubor shar po ŘETĚZCI\n"
+#~ "  -f, --force                 jako `-c'\n"
+#~ "      --help                  vypíše tuto nápovědu a skončí\n"
+#~ "      --version               vypíše označení verze a skončí\n"
+#~ "\n"
+#~ "Pokud SOUBOR nebude zadán, bude čten standardní vstup.\n"
+#~ "Chyby hlaste (anglicky) na <bug-gnu-utils@gnu.org>."
+
+#~ msgid ""
+#~ "./unshar: unrecognized option '--error-bogus-option-name'\n"
+#~ "Try `./unshar --help' for more information."
+#~ msgstr ""
+#~ "./unshar: nerozpoznaný přepínač „--error-bogus-option-name“\n"
+#~ "Podrobnosti lze získat příkazem „./unshar --help“."
+
+#~ msgid "Starting `sh' process"
+#~ msgstr "Startuji proces „sh“"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Použití: %s [PŘEPÍNAČ]… [SOUBOR]…\n"
+
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
+#~ "  -c, --overwrite             pass -c to shar script for overwriting files\n"
+#~ "  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=STRING       split concatenated shars after STRING\n"
+#~ "  -f, --force                 same as `-c'\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If no FILE, standard input is read.\n"
+#~ msgstr ""
+#~ "  Argumenty povinné v dlouhých formátech přepínačů, jsou povinné i pro jejich\n"
+#~ "krátké formy.\n"
+#~ "\n"
+#~ "  -d, --directory=ADRESÁŘ     aktuální adresář pro zpracovávání\n"
+#~ "  -c, --overwrite             vloží -c pro shar na povolení přepisu souborů\n"
+#~ "  -e, --exit-0                jako --split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=ŘETĚZEC      rozdělí složený soubor shar po ŘETĚZCI\n"
+#~ "  -f, --force                 jako `-c'\n"
+#~ "      --help                  vypíše tuto nápovědu a skončí\n"
+#~ "      --version               vypíše označení verze a skončí\n"
+#~ "\n"
+#~ "Pokud SOUBOR nebude zadán, bude čten standardní vstup.\n"
+
+#~ msgid "Report bugs to <%s>.\n"
+#~ msgstr ""
+#~ "Chyby v programu hlaste na <%s> (anglicky).\n"
+#~ "Chyby v překladu na <translation-team-cs@lists.sourceforge.net> (česky).\n"
+
+#~ msgid ""
+#~ "Copyright (C) %s Free Software Foundation, Inc.\n"
+#~ "This is free software; see the source for copying conditions.  There is NO\n"
+#~ "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+#~ msgstr ""
+#~ "  Copyright (C) %s Free Software Foundation, Inc.\n"
+#~ "  Toto je volné programové vybavení; podmínky pro kopírování a rozšiřování\n"
+#~ "naleznete ve zdrojových textech. Toto programové vybavení je zcela BEZ ZÁRUKY,\n"
+#~ "a to i bez záruky PRODEJNOSTI nebo VHODNOSTI PRO NĚJAKÝ KONKRÉTNÍ ÚČEL.\n"
+
+# Error:...
+#~ msgid "allocate file buffer"
+#~ msgstr "alokace bufferu souboru"
+
+# TODO: type `fil'
+#~ msgid "decode an encoded fil"
+#~ msgstr "dekódování kódovaného souboru"
+
+#~ msgid ""
+#~ "uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.3\n"
+#~ "USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+#~ "\n"
+#~ "   -o, --output-file=str      direct output to file\n"
+#~ "   -c, --ignore-chmod         Ignore fchmod(3P) errors\n"
+#~ "   -v, --version[=arg]        Output version information and exit\n"
+#~ "   -h, --help                 Display extended usage information and exit\n"
+#~ "   -!, --more-help            Extended usage information passed thru pager\n"
+#~ "   -R, --save-opts[=arg]      Save the option state to a config file\n"
+#~ "   -r, --load-opts=str        Load options from a config file\n"
+#~ "                                - disabled as --no-load-opts\n"
+#~ "                                - may appear multiple times\n"
+#~ "\n"
+#~ "Options are specified by doubled hyphens and their name or by a single\n"
+#~ "hyphen and the flag character.\n"
+#~ "\n"
+#~ "If no 'file'(s) are provided, then standard input is decoded.\n"
+#~ "\n"
+#~ "The following option preset mechanisms are supported:\n"
+#~ " - reading file $HOME/.sharrc\n"
+#~ "\n"
+#~ "'Uudecode' transforms uuencoded files into their original form.\n"
+#~ "\n"
+#~ "The encoded file(s) may be specified on the command line, or one may be\n"
+#~ "read from standard input.  The output file name is specified in the encoded\n"
+#~ "file, but may be overridden with the '-o' option.  It will have the mode of\n"
+#~ "the original file, except that setuid and execute bits are not retained.  If\n"
+#~ "the output file is specified to be '/dev/stdout' or '-', the result will be\n"
+#~ "written to standard output.  If there are multiple input files and the\n"
+#~ "second or subsquent file specifies standard output, the decoded data will\n"
+#~ "be written to the same file as the previous output.  Don't do that.\n"
+#~ "\n"
+#~ "'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+#~ "that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+#~ "found.  The program determines from the header line of the encoded file\n"
+#~ "which of the two supported encoding schemes was used.\n"
+#~ "\n"
+#~ "please send bug reports to:  bug-gnu-utils@gnu.org"
+#~ msgstr ""
+#~ "uudecode (GNU sharutils) – dekóduje kódovaný soubor – verze 4.13.3\n"
+#~ "POUŽITÍ: uudecode [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+#~ "                  [ soubor… ]\n"
+#~ "\n"
+#~ "   -o, --output-file=řetězec    Nasměruje výstup do souboru\n"
+#~ "   -c, --ignore-chmod           Ignoruje chyby fchmod(3P)\n"
+#~ "   -v, --version[=argument]     Vypíše údaje o verzi a skončí\n"
+#~ "   -h, --help                   Zobrazí rozšířený návod na použití a skončí\n"
+#~ "   -!, --more-help              Rozšířený návod na použití skrze stránkovač\n"
+#~ "   -R, --save-opts[=argumenty]  Uloží stav přepínačů do konfiguračního souboru\n"
+#~ "   -r, --load-opts=řetězec      Načte přepínače z konfiguračního souboru\n"
+#~ "                                 – lze zakázat pomocí --no-load-opts\n"
+#~ "                                 – lze použít vícekrát\n"
+#~ "\n"
+#~ "Přepínače se zadávají jako dva spojovníky a název nebo jeden spojovník a\n"
+#~ "znak příznaku.\n"
+#~ "\n"
+#~ "Nejsou-li zadány žádné soubory, dekóduje se standardní vstup.\n"
+#~ "\n"
+#~ "Jsou podporovány následující mechanismy přednastavení přepínačů:\n"
+#~ " – načtení ze souboru $HOME/.sharrc\n"
+#~ "\n"
+#~ "Uudecode převádí soubory kódované nástrojem uuencode do jejich původní podoby.\n"
+#~ "\n"
+#~ "Kódované soubory lze uvést na příkazovém řádku, nebo lze jeden načíst ze\n"
+#~ "standardního vstupu. Název výstupního souboru je určen v kódovaném souboru,\n"
+#~ "ale lze jej přebít přepínačem „-o“. Práva budou shodná jako u původního\n"
+#~ "souboru kromě bitu SUID a spustitelnosti, která se neuchovávají. Je-li\n"
+#~ "výstupní soubor zadán jako „/dev/stdout“ nebo „-“, bude výsledek zapsán na\n"
+#~ "standardní výstup. Je-li více vstupních souborů a druhý nebo další soubor\n"
+#~ "určuje standardní výstup, dekódovaná data budou zapsána do stejného souboru\n"
+#~ "jako předchozí výstup. Nedělejte to.\n"
+#~ "\n"
+#~ "„uudecode“ ignoruje jakékoliv počáteční a koncové řádky. Hledá řádek, který\n"
+#~ "začíná „'begin'“, a pracuje, dokud nenajde značku konce kódování. Kódovací\n"
+#~ "schéma použité při kódování určí program ze záhlaví kódovaného souboru.\n"
+#~ "\n"
+#~ "Prosím, chybová hlášení zasílejte (anglicky) na: bug-gnu-utils@gnu.org"
+
+#~ msgid "%s: data following `=' padding character"
+#~ msgstr "%s: data následující „=“ jsou vyplňovací znaky"
+
+#~ msgid "%s: illegal line"
+#~ msgstr "%s: nepřípustný řádek"
+
+# TODO: plural
+#~ msgid "no memory for %d byte allocation"
+#~ msgstr "nedostatek paměti pro alokaci %d bajtů"
+
+# TODO: s/tex/text/
+#~ msgid "encode a file into email friendly tex"
+#~ msgstr "kóduje soubor do textu vhodného pro přenos e-mailem"
+
+#~ msgid ""
+#~ "uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13.3\n"
+#~ "USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+#~ "\n"
+#~ "   -m, --base64               convert using base 64\n"
+#~ "   -e, --encode-file-name     encode the output file name\n"
+#~ "   -v, --version[=arg]        Output version information and exit\n"
+#~ "   -h, --help                 Display extended usage information and exit\n"
+#~ "   -!, --more-help            Extended usage information passed thru pager\n"
+#~ "   -R, --save-opts[=arg]      Save the option state to a config file\n"
+#~ "   -r, --load-opts=str        Load options from a config file\n"
+#~ "                                - disabled as --no-load-opts\n"
+#~ "                                - may appear multiple times\n"
+#~ "\n"
+#~ "Options are specified by doubled hyphens and their name or by a single\n"
+#~ "hyphen and the flag character.\n"
+#~ "\n"
+#~ "The following option preset mechanisms are supported:\n"
+#~ " - reading file $HOME/.sharrc\n"
+#~ "\n"
+#~ "'uuencode' is used to create an ASCII representation of a file that can be\n"
+#~ "sent over channels that may otherwise corrupt the data.  Specifically,\n"
+#~ "email cannot handle binary data and will often even insert a character when\n"
+#~ "the six character sequence \"\\nFrom \" is seen.\n"
+#~ "\n"
+#~ "'uuencode' will read 'in-file' if provided and otherwise read data from\n"
+#~ "standard in and write the encoded form to standard out.  The output will\n"
+#~ "begin with a header line for use by 'uudecode' giving it the resulting\n"
+#~ "suggested file 'output-name' and access mode.  If the 'output-name' is\n"
+#~ "specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
+#~ "standard out.\n"
+#~ "\n"
+#~ "'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+#~ "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+#~ "Ctl-D several times to terminate input.\n"
+#~ "\n"
+#~ "please send bug reports to:  bug-gnu-utils@gnu.org"
+#~ msgstr ""
+#~ "uuencode (GNU sharutils) – kóduje soubor do textu vhodného pro e-mail – 4.13.3\n"
+#~ "POUŽITÍ: uuencode [ -<příznak> | --<název> ]… [ vstupní_soubor ] název_výstupu\n"
+#~ "\n"
+#~ "   -m, --base64                Převádí pomocí Base64\n"
+#~ "   -e, --encode-file-name      Začlení název výstupního souboru\n"
+#~ "   -v, --version[=argument]    Vypíše údaje o verzi a skončí\n"
+#~ "   -h, --help                  Zobrazí rozšířený návod na použití a skončí\n"
+#~ "   -!, --more-help             Rozšířený návod na použití skrze stránkovač\n"
+#~ "   -R, --save-opts[=argument]  Uloží stav přepínačů do konfiguračního souboru\n"
+#~ "   -r, --load-opts=řetězec      Načte přepínače z konfiguračního souboru\n"
+#~ "                                 – lze zakázat pomocí --no-load-opts\n"
+#~ "                                 – lze použít vícekrát\n"
+#~ "\n"
+#~ "Přepínače se zadávají jako dva spojovníky a název nebo jeden spojovník a\n"
+#~ "znak příznaku.\n"
+#~ "\n"
+#~ "Jsou podporovány následující mechanismy přednastavení přepínačů:\n"
+#~ " – načtení ze souboru $HOME/.sharrc\n"
+#~ "\n"
+#~ "Uuencode se používá na vytvoření ASCII reprezentace souboru, která může být\n"
+#~ "odeslána přes kanály, které by jinak mohly poškodit data. Jmenovitě, e-mail\n"
+#~ "nedokáže pojmout binární data a dokonce často vkládá znak, když vidí\n"
+#~ "šestiznakovou posloupnost „\\nFrom “.\n"
+#~ "\n"
+#~ "„uuencode“ načte „vstupní_soubor“, je-li zadán, jinak čte data ze standardního\n"
+#~ "vstupu a kódovanou podobu zapisuje na standardní výstup. Výstup bude\n"
+#~ "začínat s řádkem záhlaví, který dává „uudecode“ navrhovaný soubor\n"
+#~ "„název_výstupu“ a přístupová práva. Je-li „název_výstupu“ „/dev/stdout“,\n"
+#~ "pak „uudecode“ vypíše dekódovaný soubor na standardní výstup.\n"
+#~ "\n"
+#~ "Poznámka: „uuencode“ používá bufferovaný vstup a předpokládá, že se nejedná\n"
+#~ "o ručně psaný text z terminálu. Důsledek je, že při zadávání z terminálu\n"
+#~ "můžete potřebovat stisknout několikrát Ctrl-D, abyste ukončili vstup.\n"
+#~ "\n"
+#~ "Prosím, chybová hlášení zasílejte (anglicky) na: bug-gnu-utils@gnu.org"
+
+#~ msgid "Write error"
+#~ msgstr "Chyba při zápisu"
+
+# Error whle...
+#~ msgid "fopen-ing %s"
+#~ msgstr "otevření přes fopen %s"
+
+# Error whle...
+#~ msgid "fstat-ing %s"
+#~ msgstr "zjišťování informací o souboru %s"
+
+# Error:...
+#~ msgid "Allocation failure"
+#~ msgstr "Alokace selhala"
+
+#~ msgid "strdup of %d byte string failed\n"
+#~ msgstr "zdvojení %dbajtového řetězce selhala\n"
+
+#~ msgid "  %s%s\n"
+#~ msgstr "  %s%s\n"
+
+#~ msgid "Error %d (%s) from the pipe(2) syscall\n"
+#~ msgstr "Chyba %d (%s) z volání pipe(2)\n"
+
+#~ msgid "ERROR:  %s option conflicts with the %s option\n"
+#~ msgstr "CHYBA: přepínač %s je v rozporu s přepínačem %s\n"
 
 # TODO: Pluralize
-#: libopts/autoopts.c:64
-#, c-format
-msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr "realokace %d bajtů na adrese 0x%p selhala\n"
-
-#: libopts/init.c:87
-msgid "\tThis is less than the minimum library version:  "
-msgstr "\tToto je méně než minimální verze knihovny:  "
-
-#: libopts/autoopts.c:77
-#, c-format
-msgid "strdup of %d byte string failed\n"
-msgstr "zdvojení %dbajtového řetězce selhala\n"
-
-#: libopts/version.c:120
-#, c-format
-msgid ""
-"Automated Options version %s\n"
-"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
-msgstr ""
-"Automated Options verze %s\n"
-"\tCopyright © 1999–2013 Bruce Korb – všechna práva vyhrazena\n"
-
-#: libopts/find.c:585
-msgid "AutoOpts lib error: defaulted to option with optional arg\n"
-msgstr "Chyba knihovny AutoOpts: návrat k přepínači s volitelným argumentem\n"
-
-#: libopts/alias.c:53
-msgid "(AutoOpts bug):  Aliasing option is out of range."
-msgstr "(Chyba AutoOpts): alias přepínače je mimo rozsah."
-
-#: libopts/enum.c:228
-#, c-format
-msgid "%s error:  the keyword `%s' is ambiguous for %s\n"
-msgstr "Chyba %s: klíčové slovo „%s“ není pro %s jednoznačné\n"
-
-#: libopts/find.c:104
-msgid "  The following options match:\n"
-msgstr "  Následující přepínače se shodují:\n"
-
-# TODO: Pluralize
-#: libopts/find.c:286
-#, c-format
-msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr "%s: nejednoznačný název přepínače: %s (odpovídá %d přepínačům)\n"
-
-#: libopts/find.c:107 libopts/find.c:112
-#, c-format
-msgid "  %s%s\n"
-msgstr "  %s%s\n"
-
-#: libopts/check.c:157
-#, c-format
-msgid "%s: Command line arguments required\n"
-msgstr "%s: Vyžadovány argumenty z příkazového řádku\n"
-
-#: libopts/alias.c:78 libopts/autoopts.c:215
-#, c-format
-msgid "%d %s%s options allowed\n"
-msgstr "%d %s%s přepínačů dovoleno\n"
-
-#: libopts/usage.c:872
-msgid "version, usage and configuration options:"
-msgstr "přepínače pro verzi, návod na použití a nastavení:"
-
-#: libopts/makeshell.c:266
-#, c-format
-msgid "Error %d (%s) from the pipe(2) syscall\n"
-msgstr "Chyba %d (%s) z volání pipe(2)\n"
-
-#: libopts/version.c:160
-#, c-format
-msgid ""
-"ERROR: version option argument '%c' invalid.  Use:\n"
-"\t'v' - version only\n"
-"\t'c' - version and copyright\n"
-"\t'n' - version and copyright notice\n"
-msgstr ""
-"CHYBA: argument přepínače verze „%c“ není platný. Použití:\n"
-"\t„v“ – pouze verze\n"
-"\t„c“ – verze a autorská práva\n"
-"\t„n“ – verze a poznámka o autorských právech\n"
-
-#: libopts/check.c:56
-#, c-format
-msgid "ERROR:  %s option conflicts with the %s option\n"
-msgstr "CHYBA: přepínač %s je v rozporu s přepínačem %s\n"
-
-# TODO: Pluralize
-#: libopts/restore.c:108
-#, c-format
-msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
-msgstr "%s(optionSaveState): chyba: %d bajtů nelze alokovat\n"
-
-#: libopts/configfile.c:593
-msgid "auto-options"
-msgstr "automatické přepínače"
-
-#: libopts/configfile.c:592 libopts/configfile.c:674 libopts/configfile.c:679
-msgid "program"
-msgstr "program"
-
-#: libopts/usage.c:654
-msgid "\t\t\t\t- default option for unnamed options\n"
-msgstr "\t\t\t\t– výchozí přepínač pro nepojmenované přepínače\n"
-
-#: libopts/usage.c:569
-#, c-format
-msgid "\t\t\t\t- disabled as --%s\n"
-msgstr "\t\t\t\t– vypnuto jako --%s\n"
-
-#: libopts/find.c:210 libopts/find.c:417
-#, c-format
-msgid "%s: The ``%s'' option has been disabled"
-msgstr "%s: Přepínač „%s“ byl vypnut"
-
-#: libopts/usage.c:839
-msgid "This option has been disabled"
-msgstr "Tento přepínač byl vypnut"
-
-#: libopts/alias.c:73 libopts/autoopts.c:210
-msgid "-equivalence"
-msgstr "-equivalence"
-
-#: libopts/alias.c:75 libopts/autoopts.c:212
-msgid "ERROR:  only "
-msgstr "CHYBA: pouze "
-
-#: libopts/usage.c:916
-#, c-format
-msgid " - examining environment variables named %s_*\n"
-msgstr " – zkoumají se proměnné prostředí s názvem %s_*\n"
-
-#: libopts/configfile.c:1170
-#, c-format
-msgid "File error %d (%s) opening %s for loading options\n"
-msgstr "Chyba %d (%s) při otevírání souboru %s při načítání přepínačů\n"
-
-#: libopts/text_mmap.c:98
-#, c-format
-msgid "fs error %d (%s) reading file %s\n"
-msgstr "chyba souborového systému %d (%s) při čtení ze souboru %s\n"
-
-#: libopts/file.c:135
-msgid "fopen-ing file"
-msgstr "otevírání souboru"
-
-#: libopts/file.c:74
-msgid "stat-ing for directory"
-msgstr "zjišťování údajů o adresáři"
-
-#: libopts/file.c:86
-msgid "stat-ing for regular file"
-msgstr "zjišťování údajů o obyčejném souboru"
-
-#: libopts/file.c:48
-msgid "stat-ing for non-existant file"
-msgstr "zjišťování údajů o neexistujícím souboru"
-
-#: libopts/file.c:108
-msgid "open-ing file"
-msgstr "otevírání souboru"
-
-#: libopts/file.c:47 libopts/file.c:73 libopts/file.c:85 libopts/file.c:107
-#: libopts/file.c:134
-#, c-format
-msgid "fs error %d (%s) on %s %s for option %s\n"
-msgstr "chyba souborového systému %d (%s) v %s %s u přepínače %s\n"
-
-#: libopts/usage.c:273
-msgid ""
-"Options are specified by doubled hyphens and their name or by a single\n"
-"hyphen and the flag character.\n"
-msgstr ""
-"Přepínače se zadávají jako dva spojovníky následované názvem nebo jako\n"
-"jeden spojovník následovaný znakem příznaku.\n"
-
-#: libopts/makeshell.c:272
-#, c-format
-msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
-msgstr "chyba souborového systému %d (%s) při volání fork – nelze získat návod pro %s\n"
-
-#: libopts/makeshell.c:802
-#, c-format
-msgid "fs error %d (%s) on freopen\n"
-msgstr "chyba souborového systému %d (%s) při provádění freopen\n"
-
-#: libopts/makeshell.c:880
-#, c-format
-msgid ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"This incarnation of genshell will produce\n"
-"a shell script to parse the options for %s:\n"
-"\n"
-msgstr ""
-"\n"
-"= = = = = = = =\n"
-"\n"
-"Tato verze genshellu vyrobí shellový skript\n"
-"pro rozbor přepínačů %s:\n"
-"\n"
-
-#: libopts/find.c:456 libopts/reset.c:106
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: neznámý přepínač – %c\n"
-
-#: libopts/find.c:264 libopts/find.c:758 libopts/reset.c:114
-#, c-format
-msgid "%s: illegal option -- %s\n"
-msgstr "%s: neznámý přepínač – %s\n"
-
-#: libopts/find.c:328
-#, c-format
-msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: neznámý přepínač rozšíření prodejce – %s\n"
-
-#: libopts/enum.c:153 libopts/enum.c:163
-#, c-format
-msgid "  or an integer from %d through %d\n"
-msgstr " nebo celé číslo od %d do %d\n"
-
-#: libopts/usage.c:484 libopts/usage.c:805
-#, c-format
-msgid "AutoOpts ERROR:  invalid option descriptor for %s\n"
-msgstr "CHYBA AutoOpts: chybný popis přepínače %s\n"
-
-#: libopts/find.c:375
-#, c-format
-msgid "%s: invalid option name: %s\n"
-msgstr "%s: neplatný název přepínače: %s\n"
-
-#: libopts/enum.c:160
-#, c-format
-msgid "  or an integer mask with any of the lower %d bits set\n"
-msgstr " nebo celočíselná maska s nastaveným některým ze spodních %d bitů\n"
-
-#: libopts/find.c:514
-#, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: přepínač „%s“ vyžaduje argument\n"
-
-#: libopts/autoopts.c:162
-#, c-format
-msgid ""
-"Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
-msgstr ""
-"Zrovnoceňovaný přepínač %s“ byl zrovnoceněn\n"
-"s „%s“ i „%s“"
-
-#: libopts/check.c:90
-#, c-format
-msgid "ERROR:  The %s option is required\n"
-msgstr "CHYBA: Je vyžadován přepínač %s\n"
-
-#: libopts/find.c:620
-#, c-format
-msgid "%s: option `%s' cannot have an argument\n"
-msgstr "%s: přepínač „%s“ nemůže mít argument\n"
-
-#: libopts/check.c:147
-#, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr "%s: Argumenty na příkazovém řádku nejsou dovoleny\n"
-
-#: libopts/save.c:510
-#, c-format
-msgid "error %d (%s) creating %s\n"
-msgstr "chyba %d (%s) při vytváření %s\n"
-
-#: libopts/usage.c:275
-msgid "Options are specified by single or double hyphens and their name.\n"
-msgstr "Přepínače se zadávají jedním nebo dvěma spojovníky a svým názvem.\n"
-
-#: libopts/enum.c:228
-#, c-format
-msgid "%s error:  `%s' does not match any %s keywords\n"
-msgstr "Chyba %s: „%s“ neodpovídá žádnému klíčovému slovu %s\n"
-
-#: libopts/reset.c:89
-msgid "The 'reset-option' option requires an argument\n"
-msgstr "Přepínač „reset-option“ vyžaduje argument\n"
-
-#: libopts/usage.c:1031
-msgid "   Arg Option-Name    Description\n"
-msgstr "   Arg NázevPřepínače Popis\n"
-
-#: libopts/usage.c:967 libopts/usage.c:1025
-msgid "  Flg Arg Option-Name    Description\n"
-msgstr "  Pří Arg NázevPřepínače Popis\n"
-
-#: libopts/save.c:177 libopts/save.c:231
-#, c-format
-msgid "error %d (%s) stat-ing %s\n"
-msgstr "chyba %d (%s) při zjišťování údajů o %s\n"
-
-#: libopts/restore.c:149
-#, c-format
-msgid "%s(optionRestore): error: no saved option state\n"
-msgstr "%s(optionRestore): chyba: chybí uložený stav přepínače\n"
-
-#: libopts/autoopts.c:252
-#, c-format
-msgid "'%s' is not a command line option\n"
-msgstr "„%s“ není přepínačem na příkazovém řádku\n"
-
-#: libopts/time.c:110
-#, c-format
-msgid "%s error:  `%s' is not a recognizable date/time\n"
-msgstr "chyba %s: „%s“ není rozpoznatelné datum nebo čas\n"
-
-#: libopts/save.c:126
-#, c-format
-msgid "'%s' not defined\n"
-msgstr "„%s“ není definováno\n"
-
-#: libopts/time.c:49
-#, c-format
-msgid "%s error:  `%s' is not a recognizable time duration\n"
-msgstr "chyba %s: „%s“ není rozpoznatelná délka trvání\n"
-
-#: libopts/check.c:89
-#, c-format
-msgid "ERROR:  The %s option must appear %d times\n"
-msgstr "CHYBA: Přepínač %s musí se vyskytovat %dkrát\n"
-
-#: libopts/configfile.c:1180 libopts/makeshell.c:727 libopts/save.c:250
-#, c-format
-msgid "error:  cannot load options from non-regular file %s\n"
-msgstr "chyba: přepínače nelze načíst ze zvláštního souboru %s\n"
-
-#: libopts/numeric.c:149
-#, c-format
-msgid "%s error:  `%s' is not a recognizable number\n"
-msgstr "chyba %s: „%s“ není rozpoznatelné číslo\n"
-
-#: libopts/alias.c:80 libopts/autoopts.c:217
-#, c-format
-msgid "one %s%s option allowed\n"
-msgstr "dovolen je jeden přepínač %s%s\n"
-
-#: libopts/makeshell.c:177 libopts/makeshell.c:902 libopts/usage.c:232
-#: libopts/usage.c:307 libopts/version.c:166
-msgid "Write failure to output file"
-msgstr "Chyba při zápisu do výstupního souboru"
-
-#: libopts/usage.c:701
-#, c-format
-msgid " - reading file %s"
-msgstr " – čtení ze souboru %s"
-
-#: libopts/usage.c:302 libopts/version.c:104 libopts/version.c:126
-#, c-format
-msgid ""
-"\n"
-"please send bug reports to:  %s\n"
-msgstr ""
-"\n"
-"Prosím, chybová hlášení zasílejte anglicky na: %s\n"
-
-#: libopts/usage.c:673 libopts/usage.c:914
-msgid ""
-"\n"
-"The following option preset mechanisms are supported:\n"
-msgstr ""
-"\n"
-"Podporovány jsou následující mechanismy předvoleb:\n"
-
-#: libopts/numeric.c:54
-#, c-format
-msgid "%s error:  %s option value %ld is out of range.\n"
-msgstr "chyba %s: hodnota přepínače %s %ld je mimo rozsah.\n"
-
-#: libopts/numeric.c:62
-#, c-format
-msgid "%sIt must lie in one of the ranges:\n"
-msgstr "%s Musí ležet v jednom z těchto rozsahů:\n"
-
-#: libopts/numeric.c:62
-#, c-format
-msgid "%sIt must be in the range:\n"
-msgstr "%s Musí ležet v tomto rozsahu:\n"
-
-#: libopts/usage.c:283
-msgid "Operands and options may be intermixed.  They will be reordered.\n"
-msgstr "Operandy a přepínače se mohou míchat. Budou uspořádány.\n"
-
-#: libopts/check.c:43
-#, c-format
-msgid "ERROR:  %s option requires the %s option\n"
-msgstr "CHYBA: přepínač %s vyžaduje přepínač %s\n"
-
-#: libopts/usage.c:401
-msgid "requires these options:\n"
-msgstr "vyžaduje tyto přepínače:\n"
-
-#: libopts/usage.c:1043
-msgid "   Arg Option-Name   Req?  Description\n"
-msgstr "   Arg Přepínač      Pov?  Popis\n"
-
-#: libopts/usage.c:1037
-msgid "  Flg Arg Option-Name   Req?  Description\n"
-msgstr "  Pří Arg Přepínač      Pov?  Popis\n"
-
-#: libopts/reset.c:84
-msgid "The --reset-option has not been configured.\n"
-msgstr "Přepínač --reset-option nebyl nastaven.\n"
-
-#: libopts/init.c:117
-msgid "-_^"
-msgstr "-_^"
-
-#: libopts/enum.c:161
-msgid ""
-"or you may use a numeric representation.  Preceding these with a '!' will\n"
-"clear the bits, specifying 'none' will clear all bits, and 'all' will set them\n"
-"all.  Multiple entries may be passed as an option argument list.\n"
-msgstr ""
-"nebo lze použít číselný zápis. Předcházející „!“ vyčistí tyto bity, „none“\n"
-"vyčistí všechny bity a „all“ nastaví všechny bity. Více položek lze předat\n"
-"jako seznam argumentů přepínače.\n"
-
-#: libopts/enum.c:194
-#, c-format
-msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr "chyba %s: %s přesahuje počet klíčových slov %s\n"
-
-#: libopts/enum.c:71
-#, c-format
-msgid "The valid \"%s\" option keywords are:\n"
-msgstr "Platná klíčová slova přepínače „%s“ jsou:\n"
-
-#: libopts/usage.c:876
-msgid "The next option supports vendor supported extra options:"
-msgstr "Následující přepínač podporuje rozšiřující přepínače prodejce:"
-
-#: libopts/usage.c:512
-msgid "These additional options are:"
-msgstr "Tyto dodatečné přepínače jsou:"
+#~ msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
+#~ msgstr "%s(optionSaveState): chyba: %d bajtů nelze alokovat\n"
+
+#~ msgid "auto-options"
+#~ msgstr "automatické přepínače"
+
+#~ msgid "program"
+#~ msgstr "program"
+
+#~ msgid "\t\t\t\t- default option for unnamed options\n"
+#~ msgstr "\t\t\t\t– výchozí přepínač pro nepojmenované přepínače\n"
+
+#~ msgid "\t\t\t\t- disabled as --%s\n"
+#~ msgstr "\t\t\t\t– vypnuto jako --%s\n"
+
+#~ msgid "This option has been disabled"
+#~ msgstr "Tento přepínač byl vypnut"
+
+#~ msgid "ERROR:  only "
+#~ msgstr "CHYBA: pouze "
+
+#~ msgid " - examining environment variables named %s_*\n"
+#~ msgstr " – zkoumají se proměnné prostředí s názvem %s_*\n"
+
+#~ msgid "File error %d (%s) opening %s for loading options\n"
+#~ msgstr "Chyba %d (%s) při otevírání souboru %s při načítání přepínačů\n"
+
+#~ msgid "fopen-ing file"
+#~ msgstr "otevírání souboru"
+
+#~ msgid "stat-ing for directory"
+#~ msgstr "zjišťování údajů o adresáři"
+
+#~ msgid "stat-ing for regular file"
+#~ msgstr "zjišťování údajů o obyčejném souboru"
+
+#~ msgid "stat-ing for non-existant file"
+#~ msgstr "zjišťování údajů o neexistujícím souboru"
+
+#~ msgid "open-ing file"
+#~ msgstr "otevírání souboru"
+
+#~ msgid "fs error %d (%s) on %s %s for option %s\n"
+#~ msgstr "chyba souborového systému %d (%s) v %s %s u přepínače %s\n"
+
+#~ msgid "fs error %d (%s) on fork - cannot obtain %s usage\n"
+#~ msgstr "chyba souborového systému %d (%s) při volání fork – nelze získat návod pro %s\n"
+
+#~ msgid "fs error %d (%s) on freopen\n"
+#~ msgstr "chyba souborového systému %d (%s) při provádění freopen\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "= = = = = = = =\n"
+#~ "\n"
+#~ "This incarnation of genshell will produce\n"
+#~ "a shell script to parse the options for %s:\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "= = = = = = = =\n"
+#~ "\n"
+#~ "Tato verze genshellu vyrobí shellový skript\n"
+#~ "pro rozbor přepínačů %s:\n"
+#~ "\n"
+
+#~ msgid "  or an integer mask with any of the lower %d bits set\n"
+#~ msgstr " nebo celočíselná maska s nastaveným některým ze spodních %d bitů\n"
+
+#~ msgid "Options are specified by single or double hyphens and their name.\n"
+#~ msgstr "Přepínače se zadávají jedním nebo dvěma spojovníky a svým názvem.\n"
+
+#~ msgid "   Arg Option-Name    Description\n"
+#~ msgstr "   Arg NázevPřepínače Popis\n"
+
+#~ msgid "  Flg Arg Option-Name    Description\n"
+#~ msgstr "  Pří Arg NázevPřepínače Popis\n"
+
+#~ msgid "Write failure to output file"
+#~ msgstr "Chyba při zápisu do výstupního souboru"
+
+#~ msgid " - reading file %s"
+#~ msgstr " – čtení ze souboru %s"
+
+#~ msgid "%sIt must lie in one of the ranges:\n"
+#~ msgstr "%s Musí ležet v jednom z těchto rozsahů:\n"
+
+#~ msgid "%sIt must be in the range:\n"
+#~ msgstr "%s Musí ležet v tomto rozsahu:\n"
+
+#~ msgid "Operands and options may be intermixed.  They will be reordered.\n"
+#~ msgstr "Operandy a přepínače se mohou míchat. Budou uspořádány.\n"
+
+#~ msgid "requires these options:\n"
+#~ msgstr "vyžaduje tyto přepínače:\n"
+
+#~ msgid "   Arg Option-Name   Req?  Description\n"
+#~ msgstr "   Arg Přepínač      Pov?  Popis\n"
+
+#~ msgid "  Flg Arg Option-Name   Req?  Description\n"
+#~ msgstr "  Pří Arg Přepínač      Pov?  Popis\n"
+
+#~ msgid "The --reset-option has not been configured.\n"
+#~ msgstr "Přepínač --reset-option nebyl nastaven.\n"
+
+#~ msgid "-_^"
+#~ msgstr "-_^"
+
+#~ msgid ""
+#~ "or you may use a numeric representation.  Preceding these with a '!' will\n"
+#~ "clear the bits, specifying 'none' will clear all bits, and 'all' will set them\n"
+#~ "all.  Multiple entries may be passed as an option argument list.\n"
+#~ msgstr ""
+#~ "nebo lze použít číselný zápis. Předcházející „!“ vyčistí tyto bity, „none“\n"
+#~ "vyčistí všechny bity a „all“ nastaví všechny bity. Více položek lze předat\n"
+#~ "jako seznam argumentů přepínače.\n"
+
+#~ msgid "The valid \"%s\" option keywords are:\n"
+#~ msgstr "Platná klíčová slova přepínače „%s“ jsou:\n"
+
+#~ msgid "The next option supports vendor supported extra options:"
+#~ msgstr "Následující přepínač podporuje rozšiřující přepínače prodejce:"
+
+#~ msgid "These additional options are:"
+#~ msgstr "Tyto dodatečné přepínače jsou:"
 
 #~ msgid "Usage: %s [FILE]...\n"
 #~ msgstr "Použití: %s [SOUBOR]…\n"
@@ -1911,10 +2768,6 @@ msgstr "Tyto dodatečné přepínače jsou:"
 
 #~ msgid "Could not fork"
 #~ msgstr "Fork nelze provést"
-
-# Error while...
-#~ msgid "allocating output file name"
-#~ msgstr "alokace názvu výstupního souboru"
 
 #~ msgid ""
 #~ "Mandatory arguments to long options are mandatory for short options too.\n"
@@ -2195,3 +3048,59 @@ msgstr "Tyto dodatečné přepínače jsou:"
 
 #~ msgid "%s: Illegal ~user"
 #~ msgstr "%s: Nepřípustný ~uživatel"
+
+#~ msgid ""
+#~ "       --level-for-gzip=num   This is an alias for 'level-of-compression'\n"
+#~ "\n"
+#~ msgstr ""
+#~ "       --level-for-gzip=číslo\n"
+#~ "                              stejné jako „level-of-compression“\n"
+#~ "\n"
+
+#~ msgid "   -h, --help                 Display extended usage information and exit\n"
+#~ msgstr "   -h, --help                 zobrazí rozšířený návod na použití a skončí\n"
+
+#~ msgid "   -!, --more-help            Extended usage information passed thru pager\n"
+#~ msgstr "   -!, --more-help            Rozšířený návod na použití skrze stránkovač\n"
+
+#~ msgid ""
+#~ "If no 'file's are specified, the list of input files is read from a\n"
+#~ "standard input.  Standard input must not be a terminal.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Není-li zadán žádný soubor, je seznam vstupních souborů načten ze\n"
+#~ "standardního vstupu. Standardní vstup nesmí být terminál.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Though this program supports 'uuencode'-d files, they are deprecated.\n"
+#~ "If you are emailing files, please consider mime-encoded files.\n"
+#~ "If you do 'uuencode', base 64 is the preferred encoding method.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Ačkoliv tento program podporuje soubory vytvořené nástrojem „uuencode“,\n"
+#~ "není to doporučená metoda. Zasíláte-li soubory e-mailem, prosím, zvažte\n"
+#~ "přenos podle standardu MIME. Použijete-li „uuencode“, bude jako kódování\n"
+#~ "zvolena metoda Base64.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Shar supports reading a configuration file:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+#~ msgstr ""
+#~ "Shar umí načíst konfigurační soubor:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Prosím, chybová hlášení zasílejte (anglicky) na: <bug-gnu-utils@gnu.org>\n"
+#~ "Chyby v překladu hlaste (česky) na: <translation-team-cs@lists.sourceforge.net>\n"
+
+#~ msgid ""
+#~ "shar (GNU sharutils) - create a shell archive\n"
+#~ "Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+#~ msgstr ""
+#~ "shar (GNU sharutils) – vytváří shellový archiv\n"
+#~ "Použití: shar [ -<příznak> [<hodnota>] | --<název>[{=| }<hodnota>] ]…\n"
+#~ "              [soubor…]\n"
+
+#~ msgid "%s: option `%s' requires an argument\n"
+#~ msgstr "%s: přepínač „%s“ vyžaduje argument\n"

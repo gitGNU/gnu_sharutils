@@ -1,0 +1,43 @@
+#! /bin/sh
+
+prog=`basename $0 .sh`
+progpid=$$
+
+die() {
+    echo "$prog test fatal error:  $*"
+    test "X$list" = X || ls -l $flist
+    test -f base.txt && test -f all.txt && \
+        diff -u base.txt all.txt
+    kill -9 $progpid
+    exit 1
+} 1>&2
+
+tmpdir=`mktemp -d ${prog}-XXXXXX 2>/dev/null`
+test -d "$tmpdir" || {
+    tmpdir=${prog}-$$
+    mkdir $tmpdir || die cannot make directory $tmpdir
+}
+: ${top_builddir=`cd .. >/dev/null && pwd`}
+top_builddir=`cd ${top_builddir} >/dev/null && pwd`
+: ${UUDECODE=$top_builddir/src/uudecode}
+: ${UUENCODE=$top_builddir/src/uuencode}
+nl='
+'
+
+trap "cd `pwd` ; rm -rf $tmpdir" 0
+trap 'trap "" 0
+      die "trapped on error - preserving '$tmpdir'"' ERR
+
+cd $tmpdir || die cannot cd into $tmpdir
+flist='h he hell hello howare-u howareyou'
+
+set -e
+for f in $flist
+do
+    echo "$f" | ${UUENCODE} -em $f > ${f}.uue
+    ${UUDECODE} ${f}.uue
+    echo "$f"
+done > base.txt
+
+cat $flist > all.txt
+cmp all.txt base.txt

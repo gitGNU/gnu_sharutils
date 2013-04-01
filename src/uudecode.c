@@ -191,7 +191,6 @@ read_base64 (char const * inname, char const * outname)
 
       if (fwrite (buf_out, outlen, 1, stdout) != 1)
         fserr (UUDECODE_EXIT_NO_OUTPUT, "fwrite", outname);
-      TRY_PUTCHAR ('\n');
     }
 
   return UUDECODE_EXIT_SUCCESS;
@@ -277,6 +276,11 @@ reopen_output (char const * outname, int mode)
   if (UU_CHMOD(outname, STDOUT_FILENO, mode) != 0)
     {
       error (0, errno, _("chmod of %s"), outname);
+      /*
+       * http://austingroupbugs.net/view.php?id=635
+       * if the mode bits cannot be set, uudecode shall
+       * not treat this as an error.
+       */
       if (! HAVE_OPT(IGNORE_CHMOD))
         {
           char const * p = getenv("POSIXLY_CORRECT");
@@ -305,9 +309,8 @@ decode_fname (char * buf)
       fserr(UUDECODE_EXIT_NO_MEM, "malloc", _("output file name"));
 
     memcpy(out, buf, sz);
-    out[sz+0] = out[sz+1] = '=';
-    out[sz+2] = '\0';
-    if (! base64_decode (out, sz + 2, tmp, &sz))
+    out[sz] = '\0';
+    if (! base64_decode (out, sz, tmp, &sz))
       die (UUDECODE_EXIT_INVALID, _("invalid base64 encoded name: %s"), buf);
     memcpy (buf, tmp, sz);
     buf[sz] = '\0';

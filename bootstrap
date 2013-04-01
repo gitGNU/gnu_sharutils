@@ -31,6 +31,7 @@ declare -r prog=$(basename $0 .sh)
 declare -r progpid=$$
 declare -r progdir=$(cd $(dirname $0) >/dev/null && pwd -P)
 declare -r program=$progdir/$(basename $0)
+declare -r progsrc=$(echo $progdir | sed s/-bld//)
 
 unset CDPATH
 
@@ -94,7 +95,7 @@ init() {
     esac
 
     test "/$progdir" = "/${progdir%-bld}" || {
-        for f in ${progdir%-bld}/po/*.po
+        for f in ${progsrc}/po/*.po
         do
             g=po/$(basename $f)
             rm -f $g
@@ -149,14 +150,14 @@ install_libopts() {
 }
 
 set_up_po_dir() {
-    declare last_pull=$(stat -c%Y po/.gitignore)
+    declare last_pull=$(stat -c%Y ${progsrc}/po/.gitignore)
     declare now=$(date +%s)
     declare day_len=$(( 60 * 60 * 24 ))
     (( now - last_pull > day_len )) && {
-        cd ${progdir%-bld}
+        cd ${progsrc}
         echo 'resyncing with translation project in' $PWD
         if rsync -Lrtvz  translationproject.org::tp/latest/sharutils/ po
-        then touch .gitignore
+        then touch po/.gitignore
         else warn "rsync failed"
         fi
         cd ${progdir}

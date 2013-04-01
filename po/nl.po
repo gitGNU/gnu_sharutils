@@ -2,20 +2,17 @@
 # Copyright (C) 2013 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 #
-# "Das tat mir sehr, sehr gut!"
-#
-# Vertalingen die beginnen met '###' zijn debug-meldingen,
-# die eigenlijk niet in dit bestand voor zouden moeten komen.
+# "Ich nehme nie mehr einen Tremper mit!"
 #
 # Benno Schulenberg <benno@vertaalt.nl>, 2010, 2011, 2012, 2013.
 # Freek de Kruijf <f.de.kruijf@gmail.com>, 2005, 2006, 2010.
 # Erick Branderhorst <branderh@debian.org>, 1996.
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils-4.13.4pre4\n"
+"Project-Id-Version: sharutils-4.13.4pre9\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-02-09 08:49-0800\n"
-"PO-Revision-Date: 2013-02-11 16:34+0100\n"
+"POT-Creation-Date: 2013-03-07 13:33-0800\n"
+"PO-Revision-Date: 2013-03-23 21:34+0100\n"
 "Last-Translator: Benno Schulenberg <benno@vertaalt.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
@@ -149,7 +146,7 @@ msgstr "Einde van %s deel %d"
 msgid "restoration warning:  size of %s is not %s"
 msgstr "herstelwaarschuwing:  grootte van '%s' is niet %s"
 
-#: src/scripts.x:475 src/shar.c:1303
+#: src/scripts.x:475 src/shar.c:1304
 msgid "(text)"
 msgstr "(tekst)"
 
@@ -257,44 +254,63 @@ msgstr "x - vergrendelingsmap '%s' is verwijderd."
 msgid "x - failed to remove lock directory %s."
 msgstr "x - het verwijderen van vergrendelingsmap '%s' is mislukt."
 
-#: src/shar-opts.c:1656
+#: src/shar-opts.c:1867
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "Kan %s niet heropenen als standaardinvoer"
 
-#: src/shar-opts.c:1766
+#: src/shar-opts.c:1987
 msgid "shar usage error:\n"
 msgstr "'shar'-gebruiksfout:\n"
 
-#: src/shar-opts.c:1802
+#: src/shar-opts.c:2023
 msgid "shar fatal error:\n"
 msgstr "fatale 'shar'-fout:\n"
 
-#: src/shar-opts.c:1839 src/uudecode-opts.c:493 src/uuencode-opts.c:447
+#: src/shar-opts.c:2060 src/unshar-opts.c:734 src/uudecode-opts.c:508
+#: src/uuencode-opts.c:459
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
 msgstr "bestandssysteemfout %d (%s) tijdens uitvoeren van '%s' op %s\n"
 
-#: src/shar-opts.c:1963 src/uudecode-opts.c:617 src/uuencode-opts.c:571
+#: src/shar-opts.c:2185 src/unshar-opts.c:859 src/uudecode-opts.c:633
+#: src/uuencode-opts.c:584
 msgid "No memory for duping translated strings\n"
 msgstr "onvoldoende geheugen beschikbaar voor kopiëren van vertaalde tekenreeksen\n"
 
-#: src/shar-opts.c:2026
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the sharOptions structure noted in the comments below.  The
+#. literal text is defined in shar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. shar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via sharOptions.pzCopyright
+#: src/shar-opts.c:2253
 msgid ""
-"shar (GNU sharutils) 4.13.4pre4\n"
+"shar (GNU sharutils) 4.13.4pre9\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (uit GNU sharutils-4.13.4pre4)\n"
+"shar (uit GNU sharutils-4.13.4pre9)\n"
 "Copyright (C) 2013 Free Software Foundation, Inc, alle rechten voorbehouden.\n"
 "\n"
 "Dit is vrije software: u mag het vrijelijk wijzigen en verder verspreiden.\n"
 "De precieze licentie is GPL-3+: GNU General Public License versie 3 of later.\n"
 "Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
 
-#: src/shar-opts.c:2033
+#: src/shar-opts.c:2260
 msgid ""
 "shar is free software: you can redistribute it and/or modify it under the\n"
 "terms of the GNU General Public License as published by the Free Software\n"
@@ -307,7 +323,7 @@ msgstr ""
 "Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
 "\n"
 
-#: src/shar-opts.c:2037
+#: src/shar-opts.c:2264
 msgid ""
 "shar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
@@ -321,7 +337,8 @@ msgstr ""
 "Zie de GNU General Public License voor meer details.\n"
 "\n"
 
-#: src/shar-opts.c:2041 src/uudecode-opts.c:695 src/uuencode-opts.c:649
+#: src/shar-opts.c:2268 src/unshar-opts.c:942 src/uudecode-opts.c:716
+#: src/uuencode-opts.c:667
 msgid ""
 "You should have received a copy of the GNU General Public License along\n"
 "with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
@@ -330,25 +347,25 @@ msgstr ""
 "ontvangen te hebben; is dit niet het geval, dan kunt u deze licentie\n"
 "ook vinden op <http://www.gnu.org/licenses/>.\n"
 
-#: src/shar-opts.c:2045
+#: src/shar-opts.c:2272
 #, c-format
 msgid ""
 "shar (GNU sharutils) - create a shell archive\n"
-"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
 msgstr ""
 "'shar' (uit GNU sharutils) -- Maakt een shell-archief aan.\n"
 "\n"
 "Gebruik:  %s [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
 
-#: src/shar-opts.c:2049
+#: src/shar-opts.c:2276
 msgid ""
-"If no 'file's are specified, the list of input files is read from a\n"
-"standard input.  Standard input must not be a terminal.\n"
+"If no 'file's are specified, the list of input files is read from standard\n"
+"input.  Standard input must not be a terminal.\n"
 msgstr ""
 "Als er geen bestanden gegeven zijn, dan wordt de lijst met invoerbestanden\n"
 "van standaardinvoer gelezen.  Standaardinvoer mag dan geen terminal zijn.\n"
 
-#: src/shar-opts.c:2053 src/shar-opts.c:2140
+#: src/shar-opts.c:2280
 msgid ""
 "'shar' creates \"shell archives\" (or shar files) which are in text format\n"
 "and can be emailed.  These files may be unpacked later by executing them\n"
@@ -360,7 +377,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/shar-opts.c:2060 src/shar-opts.c:2147
+#: src/shar-opts.c:2287 src/shar-opts.c:2381
 msgid ""
 "Options may be specified in any order until a 'file' argument is\n"
 "recognized.  If the '--intermix-type' option has been specified, more\n"
@@ -369,21 +386,21 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/shar-opts.c:2064
+#: src/shar-opts.c:2291
 msgid ""
 "Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
 "you are emailing files, please consider mime-encoded files.  If you do\n"
 "'uuencode', base 64 is the preferred encoding method.\n"
 msgstr ""
 
-#: src/shar-opts.c:2069
-msgid "shar (GNU sharutils) 4.13.4pre4"
-msgstr "shar (uit GNU sharutils-4.13.4pre4)"
+#: src/shar-opts.c:2296
+msgid "shar (GNU sharutils) 4.13.4pre9"
+msgstr "shar (uit GNU sharutils-4.13.4pre9)"
 
-#: src/shar-opts.c:2072
+#: src/shar-opts.c:2299
 msgid ""
 "shar (GNU sharutils) - create a shell archive\n"
-"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
 "\n"
 msgstr ""
 "'shar' (uit GNU sharutils) -- Maakt een shell-archief aan.\n"
@@ -391,109 +408,113 @@ msgstr ""
 "Gebruik:  shar [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
 "\n"
 
-#: src/shar-opts.c:2074
+#: src/shar-opts.c:2301
 msgid ""
-"specifying compression:\n"
+"Specify compression:\n"
 "   -p, --intermix-type        specify compression for input files\n"
-"                                - prohibits the option: vanilla-operation\n"
+"                                - prohibits the option 'vanilla-operation'\n"
 msgstr ""
 
-#: src/shar-opts.c:2077
+#: src/shar-opts.c:2304
 msgid ""
-"   -C, --compactor=str        specify compaction (compression) program\n"
-"                                - prohibits the option: vanilla-operation\n"
+"   -C, --compactor=PROG       specify compaction (compression) program PROG\n"
+"                                - prohibits the option 'vanilla-operation'\n"
 "                                - may appear multiple times\n"
+"                                - it must be known to shar: xz gzip bzip2\n"
 msgstr ""
 
-#: src/shar-opts.c:2080
+#: src/shar-opts.c:2308
 msgid ""
-"   -g, --level-of-compression=num pass LEVEL for compression\n"
-"                                - It must be in the range: 1 to 9\n"
-msgstr ""
-
-#: src/shar-opts.c:2082
-msgid ""
-"       --level-for-gzip=num   This is an alias for 'level-of-compression'\n"
+"   -g, --level-of-compression=LEVEL\n"
+"                              pass LEVEL for compression\n"
+"                                - it must be in the range: 1 to 9\n"
 "\n"
 msgstr ""
 
-#: src/shar-opts.c:2083
+#: src/shar-opts.c:2311
 msgid ""
-"specifying file encoding methodology:\n"
+"Specify file encoding methodology:\n"
 "   -M, --mixed-uuencode       decide uuencoding for each file\n"
 msgstr ""
 "Coderingsmethode:\n"
 "  -M, --mixed-uuencode         'shar' laten beslissen of 'uuencode' nodig is\n"
 "                                 (dit is de standaard)\n"
 
-#: src/shar-opts.c:2085
-msgid "   -B, --uuencode             treat all files as binary\n"
+#: src/shar-opts.c:2313
+msgid ""
+"   -B, --uuencode             treat all files as binary\n"
+"                                - an alternate for mixed-uuencode\n"
 msgstr "  -B, --uuencode               alle bestanden zijn binair, 'uuencode' gebruiken\n"
 
-#: src/shar-opts.c:2086
+#: src/shar-opts.c:2315
 msgid ""
 "   -T, --text-files           treat all files as text\n"
+"                                - an alternate for mixed-uuencode\n"
 "\n"
 msgstr ""
 "  -T, --text-files             alle bestanden als tekstbestanden behandelen\n"
 "\n"
 
-#: src/shar-opts.c:2087
-msgid "specifying file selection and output modes:\n"
+#: src/shar-opts.c:2317
+msgid "Specifying file selection and output modes:\n"
 msgstr "Selectie van bestanden en uitvoermodus:\n"
 
-#: src/shar-opts.c:2088
+#: src/shar-opts.c:2318
 msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
 msgstr "  -o, --output-prefix=NAAM      uitvoer opslaan in bestand NAAM.01 tot NAAM.NN\n"
 
-#: src/shar-opts.c:2089
+#: src/shar-opts.c:2319
+#, fuzzy
 msgid ""
-"   -l, --whole-size-limit=num split archive, not files, to size\n"
-"                                - requires the option: output-prefix\n"
-"                                - is scalable with a suffix: k/K/m/M/g/G\n"
-"                                - It must lie in one of the ranges:\n"
+"   -l, --whole-size-limit=SIZE\n"
+"                              split archive, not files, to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
 "                                  8 to 1023, or 8192 to 4194304\n"
 msgstr "  -l, --whole-size-limit=GETAL  archief splitsen, niet bestanden, tot GETAL kilobytes\n"
 
-#: src/shar-opts.c:2094
+#: src/shar-opts.c:2325
+#, fuzzy
 msgid ""
-"   -L, --split-size-limit=num split archive or files to size\n"
-"                                - requires the option: output-prefix\n"
-"                                - is scalable with a suffix: k/K/m/M/g/G\n"
-"                                - It must lie in one of the ranges:\n"
+"   -L, --split-size-limit=SIZE\n"
+"                              split archive or files to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
 "                                  8 to 1023, or 8192 to 4194304\n"
-"                                - an alternate for whole-size-limit\n"
+"                                - an alternate for 'whole-size-limit'\n"
 msgstr "  -L, --split-size-limit=GETAL  archief of bestanden splitsen, tot GETAL kilobytes\n"
 
-#: src/shar-opts.c:2100
+#: src/shar-opts.c:2332
 msgid ""
-"   -I, --input-file-list=str  read file list from a file\n"
+"   -I, --input-file-list=FILE read file list from FILE\n"
 "\n"
 msgstr ""
 "  -I, --input-file-list=BESTAND  lijst met bestanden uit BESTAND lezen\n"
 "\n"
 
-#: src/shar-opts.c:2101
+#: src/shar-opts.c:2333
 msgid ""
 "Controlling the shar headers:\n"
-"   -n, --archive-name=str     use name to document the archive\n"
+"   -n, --archive-name=NAME    use NAME to document the archive\n"
 msgstr ""
 
-#: src/shar-opts.c:2103
-msgid "   -s, --submitter=str        override the submitter name\n"
+#: src/shar-opts.c:2335
+msgid "   -s, --submitter=NAME       override the submitter name with NAME\n"
 msgstr ""
 
-#: src/shar-opts.c:2104
+#: src/shar-opts.c:2336
 msgid ""
 "   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
-"                                - requires the option: archive-name\n"
+"                                - requires the option 'archive-name'\n"
 msgstr ""
 
-#: src/shar-opts.c:2106
+#: src/shar-opts.c:2338
 msgid "   -c, --cut-mark             start the shar with a cut line\n"
 msgstr "  -c, --cut-mark            het shar-archief beginnen met een 'cut'-regel\n"
 
-#: src/shar-opts.c:2107
+#: src/shar-opts.c:2339
 msgid ""
 "   -t, --translate            translate messages in the script\n"
 "\n"
@@ -501,31 +522,31 @@ msgstr ""
 "  -t, --translate            de berichten in het script vertalen\n"
 "\n"
 
-#: src/shar-opts.c:2108
+#: src/shar-opts.c:2340
 msgid ""
 "Protecting against transmission issues:\n"
-"       --no-character-count   do not use 'wc -c' to check size\n"
+"       --no-character-count   do not use `wc -c' to check size\n"
 msgstr ""
-"Bescherming tegen transmissie:\n"
+"Bescherming tegen transmissieproblemen:\n"
 "      --no-character-count      geen 'wc -c' voor groottecontrole gebruiken\n"
 
-#: src/shar-opts.c:2110
+#: src/shar-opts.c:2342
 msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
 msgstr "  -D, --no-md5-digest           geen 'md5sum'-controlesom gebruiken\n"
 
-#: src/shar-opts.c:2111
+#: src/shar-opts.c:2343
 msgid "   -F, --force-prefix         apply the prefix character on every line\n"
 msgstr "  -F, --force-prefix            een voorvoegteken voor elke regel gebruiken\n"
 
-#: src/shar-opts.c:2112
+#: src/shar-opts.c:2344
 msgid ""
-"   -d, --here-delimiter=str   use delim to delimit the files\n"
+"   -d, --here-delimiter=DELIM use DELIM to delimit the files\n"
 "\n"
 msgstr ""
 "  -d, --here-delimiter=TEKST    deze tekst gebruiken als bestandsscheiding\n"
 "\n"
 
-#: src/shar-opts.c:2113
+#: src/shar-opts.c:2345
 msgid ""
 "Producing different kinds of shars:\n"
 "   -V, --vanilla-operation    produce very simple shars\n"
@@ -533,29 +554,29 @@ msgstr ""
 "Aanmaken van verschillende soorten shars:\n"
 "  -V, --vanilla-operation   zeer eenvoudige en weinigeisende shars aanmaken\n"
 
-#: src/shar-opts.c:2115
+#: src/shar-opts.c:2347
 msgid "   -P, --no-piping            use temporary files between programs\n"
 msgstr "  -P, --no-piping           tijdelijke bestanden gebruiken tijdens 'unshar'\n"
 
-#: src/shar-opts.c:2116
+#: src/shar-opts.c:2348
 msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
 msgstr "  -x, --no-check-existing   bestaande bestanden blindelings overschrijven\n"
 
-#: src/shar-opts.c:2117
+#: src/shar-opts.c:2349
 msgid ""
 "   -X, --query-user           ask user before overwriting files\n"
-"                                - prohibits the option: vanilla-operation\n"
+"                                - prohibits the option 'vanilla-operation'\n"
 msgstr "  -X, --query-user          gebruiker vragen voor overschrijven van bestanden\n"
 
-#: src/shar-opts.c:2119
+#: src/shar-opts.c:2351
 msgid "   -m, --no-timestamp         do not restore modification times\n"
 msgstr "  -m, --no-timestamp        bestandswijzigingsdatums en -tijden niet terugzetten\n"
 
-#: src/shar-opts.c:2120
+#: src/shar-opts.c:2352
 msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
 msgstr "  -Q, --quiet-unshar        meldingen onderdrukken tijdens 'unshar'\n"
 
-#: src/shar-opts.c:2121
+#: src/shar-opts.c:2353
 msgid ""
 "   -f, --basename             restore in one directory, despite hierarchy\n"
 "\n"
@@ -563,126 +584,140 @@ msgstr ""
 "  -f, --basename            terugzetten in één map; de hiërarchie negeren\n"
 "\n"
 
-#: src/shar-opts.c:2122
+#: src/shar-opts.c:2354
 msgid ""
 "Internationalization options:\n"
 "       --no-i18n              do not internationalize\n"
 msgstr ""
 "Internationaliseringsopties:\n"
-"      --no-i18n             het shell-script niet internationaliseren\n"
+"      --no-i18n                 het shell-script niet internationaliseren\n"
 
-#: src/shar-opts.c:2124
+#: src/shar-opts.c:2356
 msgid ""
 "       --print-text-domain-dir  print directory with shar messages\n"
 "\n"
 msgstr ""
+"      --print-text-domain-dir   de map met 'shar'-berichten tonen\n"
+"\n"
 
-#: src/shar-opts.c:2125
+#: src/shar-opts.c:2357
 msgid ""
-"user feedback/entertainment:\n"
+"User feedback/entertainment:\n"
 "   -q, --quiet                do not output verbose messages\n"
 msgstr ""
 "Informatief:\n"
 "  -q, --quiet               geen uitgebreide berichten tonen\n"
 
-#: src/shar-opts.c:2127
+#: src/shar-opts.c:2359
 msgid ""
-"       --silent               This is an alias for 'quiet'\n"
+"       --silent               an alias for the 'quiet' option\n"
 "\n"
 msgstr ""
 "      --silent              hetzelfde als '--quiet'\n"
 "\n"
 
-#: src/shar-opts.c:2128
-msgid "version, usage and configuration options:\n"
+#: src/shar-opts.c:2360
+msgid "Version, usage and configuration options:\n"
 msgstr "Versie-, gebruiks- en configuratie-opties:\n"
 
-#: src/shar-opts.c:2129
-msgid "   -v, --version[=arg]        Output version information and exit\n"
-msgstr "  -v, --version             programmaversie tonen en stoppen\n"
+#: src/shar-opts.c:2361 src/unshar-opts.c:974 src/uudecode-opts.c:750
+#: src/uuencode-opts.c:697
+msgid "   -v, --version[=MODE]       output version information and exit\n"
+msgstr "  -v, --version              programmaversie tonen en stoppen\n"
 
-#: src/shar-opts.c:2130
-msgid "   -h, --help                 Display extended usage information and exit\n"
-msgstr "  -h, --help                deze hulptekst tonen en stoppen\n"
+#: src/shar-opts.c:2362 src/unshar-opts.c:975 src/uudecode-opts.c:751
+#: src/uuencode-opts.c:698
+msgid "   -h, --help                 display extended usage information and exit\n"
+msgstr "  -h, --help                 deze hulptekst tonen en stoppen\n"
 
-#: src/shar-opts.c:2131
-msgid "   -!, --more-help            Extended usage information passed thru pager\n"
-msgstr "  -!, --more-help           deze hulptekst gepagineerd tonen\n"
+#: src/shar-opts.c:2363 src/unshar-opts.c:976 src/uudecode-opts.c:752
+#: src/uuencode-opts.c:699
+msgid "   -!, --more-help            extended usage information passed thru pager\n"
+msgstr "  -!, --more-help            deze hulptekst gepagineerd tonen\n"
 
-#: src/shar-opts.c:2132
-msgid "   -R, --save-opts[=arg]      Save the option state to a config file\n"
+#: src/shar-opts.c:2364 src/uudecode-opts.c:753 src/uuencode-opts.c:700
+msgid "   -R, --save-opts[=FILE]     save the option state to a config file FILE\n"
 msgstr ""
 
-#: src/shar-opts.c:2133
+#: src/shar-opts.c:2365 src/uudecode-opts.c:754 src/uuencode-opts.c:701
 msgid ""
-"   -r, --load-opts=str        Load options from a config file\n"
-"                                - disabled as --no-load-opts\n"
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled with '--no-load-opts'\n"
 "                                - may appear multiple times\n"
 "\n"
 msgstr ""
+"  -r, --load-opts=BESTAND    opties laden uit dit bestand\n"
+"                               (mag meerdere keren voorkomen)\n"
+"\n"
 
-#: src/shar-opts.c:2136 src/uuencode-opts.c:686
+#: src/shar-opts.c:2368
 msgid ""
 "Options are specified by doubled hyphens and their name or by a single\n"
 "hyphen and the flag character.\n"
-"\n"
-msgstr ""
-"Opties worden gegeven door een dubbel streepje plus hun naam,\n"
-"of door een enkel streepje plus de optieletter.\n"
-"\n"
-
-#: src/shar-opts.c:2138
-msgid ""
 "If no 'file's are specified, the list of input files is read from a\n"
 "standard input.  Standard input must not be a terminal.\n"
 "\n"
 msgstr ""
-"Als er geen bestanden gegeven zijn, dan wordt de lijst met invoerbestanden\n"
-"van standaardinvoer gelezen.  Standaardinvoer mag dan geen terminal zijn.\n"
+"Opties worden gegeven door een dubbel streepje plus hun naam,\n"
+"of door een enkel streepje plus de optieletter.\n"
+"Als er geen bestanden gegeven zijn, dan wordt standaardinvoer gedecodeerd.\n"
+"Standaardinvoer mag geen terminal zijn.\n"
 "\n"
 
-#: src/shar-opts.c:2151
+#: src/shar-opts.c:2372 src/unshar-opts.c:986 src/uudecode-opts.c:760
+#: src/uuencode-opts.c:706
+msgid "The following option preset mechanisms are supported:\n"
+msgstr "De volgende optievoorinstellingsmechanismen worden ondersteund:\n"
+
+#: src/shar-opts.c:2373
 msgid ""
-"Though this program supports 'uuencode'-d files, they are deprecated.\n"
-"If you are emailing files, please consider mime-encoded files.\n"
-"If you do 'uuencode', base 64 is the preferred encoding method.\n"
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
 "\n"
 msgstr ""
 
-#: src/shar-opts.c:2154
+#: src/shar-opts.c:2385
 msgid ""
-"Shar supports reading a configuration file:  $HOME/.sharrc\n"
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
 "\n"
 "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
 msgstr ""
-"'shar' accepteert een configuratiebestand:  $HOME/.sharrc\n"
-"\n"
-"Rapporteer gebreken in het programma aan: <bug-gnu-utils@gnu.org>;\n"
-"meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
 
-#: src/shar-opts.c:2158
+#: src/shar-opts.c:2391
 msgid ""
 "shar (GNU sharutils) - create a shell archive\n"
-"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'shar --help' for more information.\n"
 msgstr ""
 "'shar' (uit GNU sharutils) -- Maakt een shell-archief aan.\n"
 "\n"
 "Gebruik:  shar [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
+"\n"
+"Typ 'shar --help' voor meer informatie.\n"
 
-#: ../autoopts.c:51 ../autoopts.c:77
+#: ../autoopts.c:60 ../autoopts.c:86
 #, c-format
 msgid "allocation of %d bytes failed\n"
 msgstr "geheugenreservering van %d bytes is mislukt\n"
 
-#: ../init.c:49
+#: ../init.c:53
 msgid "AutoOpts function called without option descriptor\n"
 msgstr "AutoOpts-functie aangeroepen zonder optie-omschrijver\n"
 
-#: ../init.c:85
+#: ../init.c:89
 msgid "\tThis exceeds the compiled library version:  "
 msgstr "    Dit is groter dan de gecompileerde bibliotheekversie:  "
 
-#: ../init.c:83
+#: ../init.c:87
 #, c-format
 msgid ""
 "Automated Options Processing Error!\n"
@@ -691,16 +726,16 @@ msgstr ""
 "Automated Options-verwerkingsfout!\n"
 "    %s riep AutoOpts-functie aan met structuurversie %d:%d:%d.\n"
 
-#: ../autoopts.c:64
+#: ../autoopts.c:73
 #, c-format
 msgid "realloc of %d bytes at 0x%p failed\n"
 msgstr "geheugenverplaatsing van %d bytes op 0x%p is mislukt\n"
 
-#: ../init.c:87
+#: ../init.c:91
 msgid "\tThis is less than the minimum library version:  "
 msgstr "    Dit is kleiner dan de minimum bibliotheekversie:  "
 
-#: ../version.c:118
+#: ../version.c:121
 #, c-format
 msgid ""
 "Automated Options version %s\n"
@@ -709,69 +744,69 @@ msgstr ""
 "Automated Options -- versie %s\n"
 "    Copyright (C)  Bruce Korb  1999-2013 -- alle rechten voorbehouden\n"
 
-#: ../usage.c:308
+#: ../usage.c:310
 #, c-format
 msgid "(AutoOpts bug):  %s.\n"
 msgstr "**AutoOpts-programmafout**:  %s.\n"
 
-#: ../reset.c:84
+#: ../reset.c:90
 msgid "optionResetOpt() called, but reset-option not configured"
 msgstr "optionResetOpt() werd aangeroepn, maar de 'reset-option' is niet geconfigureerd"
 
-#: ../usage.c:327
+#: ../usage.c:329
 msgid "could not locate the 'help' option"
 msgstr "kan de 'help'-optie niet vinden"
 
-#: ../autoopts.c:342
+#: ../autoopts.c:351
 msgid "optionProcess() was called with invalid data"
 msgstr "optionProcess() werd aangeroepen met ongeldige gegevens"
 
-#: ../usage.c:735
+#: ../usage.c:770
 msgid "invalid argument type specified"
 msgstr "ongeldig argumenttype opgegeven"
 
-#: ../find.c:585
+#: ../find.c:589
 msgid "defaulted to option with optional arg"
 msgstr "als standaard werd een optie met optioneel argument gekozen"
 
-#: ../alias.c:72
-msgid "Aliasing option is out of range."
-msgstr "Aliasing-optie valt buiten bereik."
+#: ../alias.c:76
+msgid "aliasing option is out of range."
+msgstr "aliasing-optie valt buiten bereik"
 
-#: ../enum.c:228
+#: ../enum.c:229
 #, c-format
 msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
 msgstr "%s-fout:  sleutelwoord '%s' is niet eenduidig voor %s\n"
 
-#: ../find.c:104
+#: ../find.c:108
 msgid "  The following options match:\n"
 msgstr "  De volgende opties komen overeen:\n"
 
-#: ../find.c:286
+#: ../find.c:290
 #, c-format
 msgid "%s: ambiguous option name: %s (matches %d options)\n"
 msgstr "%s: niet-eenduidige optienaam: %s (komt overeen met %d opties)\n"
 
-#: ../check.c:160
+#: ../check.c:161
 #, c-format
 msgid "%s: Command line arguments required\n"
 msgstr "%s: Opdrachtregelargumenten zijn vereist\n"
 
-#: ../alias.c:39
+#: ../alias.c:43
 #, c-format
 msgid "%d %s%s options allowed\n"
 msgstr "%d %s%s-opties toegestaan\n"
 
-#: ../makeshell.c:77
+#: ../makeshell.c:81
 #, c-format
 msgid "%s error %d (%s) calling %s for '%s'\n"
 msgstr "%s-fout %d (%s) bij aanroepen van %s voor '%s'\n"
 
-#: ../makeshell.c:289
+#: ../makeshell.c:293
 msgid "interprocess pipe"
 msgstr "interproces-pijp"
 
-#: ../version.c:165
+#: ../version.c:168
 #, c-format
 msgid ""
 "error: version option argument '%c' invalid.  Use:\n"
@@ -784,56 +819,56 @@ msgstr ""
 "    'c' - versie plus copyright\n"
 "    'n' - versie plus copyrighttekst\n"
 
-#: ../check.c:57
+#: ../check.c:58
 #, c-format
 msgid "%s error:  the '%s' and '%s' options conflict\n"
 msgstr "%s-fout:  de optie '%s' en '%s' gaan niet samen\n"
 
-#: ../find.c:210 ../find.c:417
+#: ../find.c:214 ../find.c:421
 #, c-format
-msgid "%s: The '%s' option has been disabled"
+msgid "%s: The '%s' option has been disabled."
 msgstr "%s: optie '%s' is uitgeschakeld"
 
-#: ../alias.c:34
+#: ../alias.c:38
 msgid "-equivalence"
 msgstr "-equivalentie"
 
-#: ../find.c:456 ../reset.c:104
+#: ../find.c:460 ../reset.c:110
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: ongeldige optie -- %c\n"
 
-#: ../find.c:264 ../find.c:742 ../reset.c:112
+#: ../find.c:268 ../find.c:746 ../reset.c:118
 #, c-format
 msgid "%s: illegal option -- %s\n"
 msgstr "%s: ongeldige optie -- %s\n"
 
-#: ../find.c:328
+#: ../find.c:332
 #, c-format
 msgid "%s: unknown vendor extension option -- %s\n"
 msgstr "%s: onbekende leveranciersuitbreidingsoptie -- %s\n"
 
-#: ../enum.c:153 ../enum.c:163
+#: ../enum.c:154 ../enum.c:164
 #, c-format
 msgid "  or an integer from %d through %d\n"
 msgstr "  of een geheel getal van %d tot en met %d\n"
 
-#: ../usage.c:734 ../usage.c:1055
+#: ../usage.c:769 ../usage.c:1097
 #, c-format
 msgid "%s error:  invalid option descriptor for %s\n"
 msgstr "%s-fout:  ongeldige optie-omschrijver voor %s\n"
 
-#: ../find.c:375
+#: ../find.c:379
 #, c-format
 msgid "%s: invalid option name: %s\n"
 msgstr "%s: ongeldige optienaam -- %s\n"
 
-#: ../find.c:514
+#: ../find.c:518
 #, c-format
-msgid "%s: option '%s' requires an argument\n"
+msgid "%s: The '%s' option requires an argument.\n"
 msgstr "%s: optie '%s' vereist een argument\n"
 
-#: ../autoopts.c:162
+#: ../autoopts.c:171
 #, c-format
 msgid ""
 "(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
@@ -842,248 +877,233 @@ msgstr ""
 "**AutoOpts-programmafout**:  Geëquivalenteerde optie '%s' werd\n"
 "    geëquivalenteerd met zowel '%s' als '%s'."
 
-#: ../check.c:93
+#: ../check.c:94
 #, c-format
 msgid "%s error:  The %s option is required\n"
 msgstr "%s-fout:  optie %s is vereist\n"
 
-#: ../find.c:619
+#: ../find.c:623
 #, c-format
-msgid "%s: option '%s' cannot have an argument\n"
+msgid "%s: The '%s' option cannot have an argument.\n"
 msgstr "%s: optie '%s' staat geen argument toe\n"
 
-#: ../check.c:150
+#: ../check.c:151
 #, c-format
-msgid "%s: Command line arguments not allowed\n"
-msgstr "%s: Opdrachtregelargumenten zijn niet toegestaan\n"
+msgid "%s: Command line arguments are not allowed.\n"
+msgstr "%s: opdrachtregelargumenten zijn niet toegestaan\n"
 
-#: ../save.c:527
+#: ../save.c:531
 #, c-format
 msgid "error %d (%s) creating %s\n"
 msgstr "fout %d (%s) bij aanmaken van %s\n"
 
-#: ../enum.c:228
+#: ../enum.c:229
 #, c-format
-msgid "%s error:  '%s' does not match any %s keywords\n"
+msgid "%s error:  '%s' does not match any %s keywords.\n"
 msgstr "%s-fout:  '%s' komt met geen enkel %s-sleutelwoord overeen\n"
 
-#: ../reset.c:87
+#: ../reset.c:93
 #, c-format
-msgid "%s error: The '%s' option requires an argument\n"
-msgstr "%s-fout: optie '%s' vereist een argument\n"
+msgid "%s error: The '%s' option requires an argument.\n"
+msgstr "%s-fout:  optie '%s' vereist een argument\n"
 
-#: ../save.c:180 ../save.c:234
+#: ../save.c:184 ../save.c:238
 #, c-format
 msgid "error %d (%s) stat-ing %s\n"
 msgstr "fout %d (%s) bij opvragen van status van %s\n"
 
-#: ../restore.c:139
+#: ../restore.c:143
 #, c-format
 msgid "%s error: no saved option state\n"
-msgstr "%s-fout: geen opgeslagen optietoestand\n"
+msgstr "%s-fout:  geen opgeslagen optietoestand\n"
 
-#: ../autoopts.c:237
+#: ../autoopts.c:246
 #, c-format
-msgid "'%s' is not a command line option\n"
+msgid "'%s' is not a command line option.\n"
 msgstr "'%s' is geen opdrachtregeloptie\n"
 
-#: ../time.c:110
+#: ../time.c:114
 #, c-format
-msgid "%s error:  '%s' is not a recognizable date/time\n"
+msgid "%s error:  '%s' is not a recognizable date/time.\n"
 msgstr "%s-fout:  '%s' is geen herkenbare datum/tijd\n"
 
-#: ../save.c:128
+#: ../save.c:132
 #, c-format
 msgid "'%s' not defined\n"
 msgstr "'%s' is niet gedefinieerd\n"
 
-#: ../time.c:49
+#: ../time.c:53
 #, c-format
-msgid "%s error:  '%s' is not a recognizable time duration\n"
+msgid "%s error:  '%s' is not a recognizable time duration.\n"
 msgstr "%s-fout:  '%s' is geen herkenbare tijdsduur\n"
 
-#: ../check.c:91
+#: ../check.c:92
 #, c-format
 msgid "%s error:  The %s option must appear %d times\n"
 msgstr "%s-fout:  optie %s moet %d keer voorkomen\n"
 
-#: ../numeric.c:149
+#: ../numeric.c:157
 #, c-format
-msgid "%s error:  '%s' is not a recognizable number\n"
+msgid "%s error:  '%s' is not a recognizable number.\n"
 msgstr "%s-fout:  '%s' is geen herkenbaar getal\n"
 
-#: ../enum.c:194
+#: ../enum.c:195
 #, c-format
 msgid "%s error:  %s exceeds %s keyword count\n"
 msgstr "%s-fout:  %s overschrijdt %s-sleutelwoordenaantal\n"
 
-#: ../usage.c:347
+#: ../usage.c:366
 #, c-format
-msgid "More info with: \"%s %s\"\n"
-msgstr "Meer informatie met: '%s %s'\n"
+msgid "Try '%s %s' for more information.\n"
+msgstr "Typ '%s %s' voor meer informatie.\n"
 
-#: ../alias.c:41
+#: ../alias.c:45
 #, c-format
 msgid "one %s%s option allowed\n"
 msgstr "één %s%s-optie toegestaan\n"
 
-#: ../makeshell.c:191 ../makeshell.c:926 ../usage.c:302 ../usage.c:428
-#: ../usage.c:624 ../version.c:172 src/uuencode.c:105 src/uuencode.c:182
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:304 ../usage.c:451
+#: ../usage.c:647 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
 #: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
 msgid "standard output"
 msgstr "standaarduitvoer"
 
-#: ../usage.c:302 ../usage.c:428 ../usage.c:624 ../version.c:172
+#: ../usage.c:304 ../usage.c:451 ../usage.c:647 ../version.c:175
 msgid "standard error"
 msgstr "standaardfoutuitvoer"
 
-#: ../makeshell.c:191 ../makeshell.c:926 ../usage.c:301 ../usage.c:427
-#: ../usage.c:623 ../version.c:171
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:303 ../usage.c:450
+#: ../usage.c:646 ../version.c:174
 msgid "write"
 msgstr "schrijf"
 
-#: ../numeric.c:54
+#: ../numeric.c:60
 #, c-format
 msgid "%s error:  %s option value %ld is out of range.\n"
 msgstr "%1$s-fout:  waarde %3$ld van optie %2$s valt buiten bereik\n"
 
-#: ../check.c:43
+#: ../check.c:44
 #, c-format
 msgid "%s error:  %s option requires the %s option\n"
 msgstr "%s-fout:  optie %s vereist de optie %s\n"
 
-#: ../save.c:127 ../save.c:179 ../save.c:233 ../save.c:252 ../save.c:526
+#: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:530
 #, c-format
 msgid "%s warning:  cannot save options - %s not regular file\n"
 msgstr "%s-waarschuwing:  kan opties niet opslaan -- %s is geen gewoon bestand\n"
 
-#: src/shar.c:356
+#: src/shar.c:357
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "Opmaakfout in printf():  %s\n"
 
-#: src/shar.c:407
+#: src/shar.c:408
 msgid "sharutils bug - no status"
 msgstr "**Programmafout** in sharutils -- geen afsluitwaarde"
 
-#: src/shar.c:770
+#: src/shar.c:771
 msgid "Too many directories for mkdir generation"
 msgstr "Te veel mappen om aan te maken met 'mkdir'"
 
-#: src/shar.c:853 src/shar.c:1537
+#: src/shar.c:854 src/shar.c:1539
 #, c-format
 msgid "Cannot access %s"
 msgstr "Kan geen toegang krijgen tot %s"
 
-#: src/shar.c:936 src/unshar.c:376
+#: src/shar.c:937
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Kan de naam van de huidige map niet vinden"
 
-#: src/shar.c:999 src/shar.c:1341
-#, c-format
-msgid "New file, remaining %s, "
-msgstr "### Nieuw bestand, nu nog %s, "
-
-#: src/shar.c:1000 src/shar.c:1342
-#, c-format
-msgid "Limit still %s\n"
-msgstr "### De groottelimiet is nog %s\n"
-
-#: src/shar.c:1022
+#: src/shar.c:1023
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Begonnen met bestand %s\n"
 
-#: src/shar.c:1076
+#: src/shar.c:1077
 msgid "Could not popen command"
 msgstr "Functie popen() op opdracht is mislukt"
 
-#: src/shar.c:1157
+#: src/shar.c:1158
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Kan bestand %s niet openen"
 
-#: src/shar.c:1291 src/shar.c:1302
+#: src/shar.c:1292 src/shar.c:1303
 msgid "text"
 msgstr "tekst"
 
-#: src/shar.c:1308 src/shar.c:1319
+#: src/shar.c:1309 src/shar.c:1320
 msgid "call"
 msgstr "aanroep"
 
-#: src/shar.c:1328
+#: src/shar.c:1329
 msgid "pipe[1]"
 msgstr "pijp[1]"
 
-#: src/shar.c:1421
+#: src/shar.c:1423
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Doorgaan met bestand %s\n"
 
-#: src/shar.c:1532
+#: src/shar.c:1534
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Geen gewoon bestand"
 
-#: src/shar.c:1559
-#, c-format
-msgid "In shar: remaining size %s\n"
-msgstr "### In shar: resterende grootte %s\n"
-
-#: src/shar.c:1579
+#: src/shar.c:1582
 msgid "empty"
 msgstr "leeg"
 
-#: src/shar.c:1618
+#: src/shar.c:1621
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Opslaan van %s (%s)"
 
-#: src/shar.c:1803
+#: src/shar.c:1806
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Ongeldige opmaak voor uitvoerbestandsnaam (%s): %s"
 
-#: src/shar.c:1818
+#: src/shar.c:1821
 msgid "more than one format element"
 msgstr "meer dan één opmaakelement"
 
-#: src/shar.c:1823
+#: src/shar.c:1826
 msgid "no conversion character"
 msgstr "geen conversieteken"
 
-#: src/shar.c:1832
+#: src/shar.c:1835
 msgid "format is too wide"
 msgstr "opmaak is te breed"
 
-#: src/shar.c:1844
+#: src/shar.c:1847
 msgid "invalid conversion character"
 msgstr "ongeldig conversieteken"
 
-#: src/shar.c:1885
+#: src/shar.c:1889
 msgid "Opening"
 msgstr "Openen van"
 
-#: src/shar.c:1900
+#: src/shar.c:1904
 msgid "Closing"
 msgstr "Sluiten van"
 
-#: src/shar.c:1992
+#: src/shar.c:1996
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "heropenen van standaardfoutuitvoer naar /dev/null"
 
-#: src/shar.c:2040
+#: src/shar.c:2044
 msgid "No input files"
 msgstr "Geen invoerbestanden"
 
-#: src/shar.c:2057
+#: src/shar.c:2061
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "Vermijd '-X'-shars op Usenet en op openbare netwerken"
 
-#: src/shar.c:2081
+#: src/shar.c:2085
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -1092,12 +1112,12 @@ msgstr ""
 "Optie '%s' mag niet gemengd worden met bestandsnamen\n"
 "tenzij optie '--intermix-type' gegeven is."
 
-#: src/shar.c:2099
+#: src/shar.c:2103
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Optie '%s' moet gegeven worden vóór eventuele bestandsnamen"
 
-#: src/shar.c:2135
+#: src/shar.c:2139
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -1106,145 +1126,295 @@ msgstr ""
 "ongeldig compactietype:  %s\n"
 "de mogelijke types zijn:\n"
 
-#: src/shar.c:2173
+#: src/shar.c:2177
 msgid "files on command line and --input-file-list specified"
 msgstr "zowel bestanden op de opdrachtregel als '--input-file-list' gegeven"
 
-#: src/shar.c:2222
+#: src/shar.c:2226
 #, c-format
 msgid "Created %d files\n"
 msgstr "Er zijn %d bestanden aangemaakt\n"
 
-#: src/unshar.c:168
+#: src/unshar-opts.c:580
 #, c-format
-msgid "Found no shell commands in %s"
-msgstr "Geen shell-opdrachten gevonden in %s"
+msgid "fs error %d (%s) %s-ing %s\n"
+msgstr "bestandssysteemfout %d (%s) bij '%s'-en van %s\n"
 
-#: src/unshar.c:184
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s ziet eruit als een C-programma, niet als een shell-archief"
-
-#: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "Geen shell-opdrachten gevonden na 'cut'-regel in %s"
-
-#: src/unshar.c:241
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "%s is waarschijnlijk geen shell-archief"
-
-#: src/unshar.c:242
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "Na de 'cut'-regel volgde: %s"
-
-#: src/unshar.c:268
-#, c-format
-msgid "Starting `sh' process"
-msgstr "Starten van 'sh'-proces"
-
-#: src/unshar.c:312
-#, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "Typ '%s --help' voor meer informatie.\n"
-
-#: src/unshar.c:316
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Gebruik:  %s [OPTIE]... [BESTAND]...\n"
-
-#: src/unshar.c:317
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
-"  -c, --overwrite             pass -c to shar script for overwriting files\n"
-"  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=STRING       split concatenated shars after STRING\n"
-"  -f, --force                 same as `-c'\n"
-"      --help                  display this help and exit\n"
-"      --version               output version information and exit\n"
-"\n"
-"If no FILE, standard input is read.\n"
-msgstr ""
-"(Een verplicht argument bij een lange optie is ook verplicht bij de korte optie.)\n"
-"\n"
-"  -d, --directory=MAP    naar MAP gaan alvorens uit te pakken\n"
-"  -c, --overwrite        optie '-c' aan shar-script geven voor het\n"
-"                           overschrijven van bestanden\n"
-"  -e, --exit-0           hetzelfde als '--split-at=\"exit 0\"'\n"
-"  -E, --split-at=TEKST   samengevoegde shars splitsen na deze tekst\n"
-"  -f, --force            hetzelfde als '-c'\n"
-"      --help             deze hulptekst tonen en stoppen\n"
-"      --version          programmaversie tonen en stoppen\n"
-"\n"
-"Als er geen BESTAND gegeven is, wordt van standaardinvoer gelezen.\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr ""
-"Rapporteer gebreken in het programma aan <%s>;\n"
-"meld fouten in de vertaling aan <vertaling@vrijschrift.org>.\n"
-
-#: src/unshar.c:394
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Kan huidige map niet instellen op '%s'"
-
-#: src/unshar.c:414
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"Dit is vrije software; zie de programmatekst voor de kopieervoorwaarden.\n"
-"Er is GEEN garantie, zelfs niet voor VERKOOPBAARHEID of GESCHIKTHEID\n"
-"VOOR EEN BEPAALD DOEL.\n"
-
-#: src/unshar.c:445 src/unshar.c:507
-#, c-format
-msgid "allocate file name buffer"
-msgstr "reserveren van buffer voor bestandsnaam"
-
-#: src/unshar.c:466 src/uudecode.c:469 src/uuencode.c:205
+#: src/unshar-opts.c:582 src/unshar-opts.c:644 src/uudecode.c:469
+#: src/uuencode.c:205
 msgid "standard input"
 msgstr "standaardinvoer"
 
-#: src/unshar.c:528
-#, c-format
-msgid "allocate file buffer"
-msgstr "reserveren van bestandsbuffer"
+#: src/unshar-opts.c:661
+msgid "unshar usage error:\n"
+msgstr "'unshar'-gebruiksfout:\n"
 
-#: src/uudecode-opts.c:420
-msgid "uudecode usage error:\n"
-msgstr "'uudecode'-gebruiksfout:\n"
+#: src/unshar-opts.c:697
+msgid "unshar fatal error:\n"
+msgstr "fatale 'unshar'-fout:\n"
 
-#: src/uudecode-opts.c:456
-msgid "uudecode fatal error:\n"
-msgstr "fatale 'uudecode'-fout:\n"
-
-#: src/uudecode-opts.c:680
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the unsharOptions structure noted in the comments below.  The
+#. literal text is defined in unshar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. unshar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via unsharOptions.pzCopyright
+#: src/unshar-opts.c:927
 msgid ""
-"uudecode (GNU sharutils) 4.13.4pre4\n"
+"unshar (GNU sharutils) 4.13.4pre9\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (uit GNU sharutils-4.13.4pre4)\n"
+"unshar (uit GNU sharutils-4.13.4pre9)\n"
 "Copyright (C) 2013 Free Software Foundation, Inc, alle rechten voorbehouden.\n"
 "\n"
 "Dit is vrije software: u mag het vrijelijk wijzigen en verder verspreiden.\n"
 "De precieze licentie is GPL-3+: GNU General Public License versie 3 of later.\n"
 "Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
 
-#: src/uudecode-opts.c:687
+#: src/unshar-opts.c:934
+msgid ""
+"unshar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"Dit is vrije software: u mag het vrijelijk wijzigen en verder verspreiden.\n"
+"De precieze licentie is GPL-3+: GNU General Public License versie 3 of later.\n"
+"Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
+"\n"
+
+#: src/unshar-opts.c:938
+msgid ""
+"unshar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"Dit programma wordt uitgegeven in de hoop dat het nuttig is,\n"
+"maar ZONDER ENIGE GARANTIE; zelfs zonder de impliciete garantie\n"
+"van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.\n"
+"Zie de GNU General Public License voor meer details.\n"
+"\n"
+
+#: src/unshar-opts.c:946
+#, c-format
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"'unshar' (uit GNU sharutils) -- Een shell-archief uitpakken.\n"
+"\n"
+"Gebruik:  %s [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
+
+#: src/unshar-opts.c:950
+msgid ""
+"\n"
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+msgstr ""
+
+#: src/unshar-opts.c:956
+msgid ""
+"Unshar scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+msgstr ""
+
+#: src/unshar-opts.c:962
+msgid "unshar (GNU sharutils) 4.13.4pre9"
+msgstr "unshar (uit GNU sharutils-4.13.4pre9)"
+
+#: src/unshar-opts.c:965
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"'unshar' (uit GNU sharutils) -- Een shell-archief uitpakken.\n"
+"\n"
+"Gebruik:  unshar [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
+"\n"
+
+#: src/unshar-opts.c:967
+msgid "   -d, --directory=DIR        change directory to DIR before unpacking\n"
+msgstr "  -d, --directory=MAP        naar deze map gaan alvorens uit te pakken\n"
+
+#: src/unshar-opts.c:968
+msgid "   -c, --overwrite            overwrite any pre-existing files\n"
+msgstr "  -c, --overwrite            bestaande bestanden overschrijven\n"
+
+#: src/unshar-opts.c:969
+msgid "   -f, --force                an alias for the 'overwrite' option\n"
+msgstr "  -f, --force                hetzelfde als '--overwrite'\n"
+
+#: src/unshar-opts.c:970
+msgid "   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines\n"
+msgstr "  -E, --split-at=TEKST       invoer splitsen bij regels met deze tekst\n"
+
+#: src/unshar-opts.c:971
+msgid ""
+"   -e, --exit-0               split input on \"exit 0\" lines\n"
+"                                - prohibits the option 'split-at'\n"
+msgstr "  -e, --exit-0               invoer splitsen bij \"exit 0\"-regels\n"
+
+#: src/unshar-opts.c:973
+msgid "   -D, --debug                debug the shell code\n"
+msgstr "  -D, --debug                de shell-code debuggen\n"
+
+#: src/unshar-opts.c:977
+msgid "   -R, --save-opts[=FILE]     save the option state to the config file FILE\n"
+msgstr "  -R, --save-opts[=BESTAND]  de optietoestand opslaan in configuratiebestand\n"
+
+#: src/unshar-opts.c:978
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled as '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"  -r, --load-opts=BESTAND    opties laden uit dit bestand\n"
+"                               (mag meerdere keren voorkomen)\n"
+"\n"
+
+#: src/unshar-opts.c:981 src/uuencode-opts.c:704
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"\n"
+msgstr ""
+"Opties worden gegeven door een dubbel streepje plus hun naam,\n"
+"of door een enkel streepje plus de optieletter.\n"
+"\n"
+
+#: src/unshar-opts.c:983
+msgid ""
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:987
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'unshar' scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:992 src/uudecode-opts.c:776
+msgid "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"Rapporteer gebreken in het programma aan: <bug-gnu-utils@gnu.org>;\n"
+"meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
+
+#: src/unshar-opts.c:995
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'unshar --help' for more information.\n"
+msgstr ""
+"'unshar' (uit GNU sharutils) -- Een shell-archief uitpakken.\n"
+"\n"
+"Gebruik:  unshar [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
+"\n"
+"Typ 'unshar --help' voor meer informatie.\n"
+
+#: src/unshar.c:202
+#, c-format
+msgid "Found no shell commands after cut line in %s"
+msgstr "Geen shell-opdrachten gevonden na 'cut'-regel in %s"
+
+#: src/unshar.c:220
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "%s is waarschijnlijk geen shell-archief"
+
+#: src/unshar.c:221
+#, c-format
+msgid "The 'cut line' was followed by: %s"
+msgstr "Na de 'cut'-regel volgde: %s"
+
+#: src/unshar.c:244
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "Geen shell-opdrachten gevonden in %s"
+
+#: src/unshar.c:253
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s ziet eruit als een C-programma, niet als een shell-archief"
+
+#: src/unshar.c:304
+msgid "file name buffer"
+msgstr "bestandsnaambuffer"
+
+#: src/unshar.c:425
+msgid "read/write buffer"
+msgstr "lezen-en-schrijvenbuffer"
+
+#: src/uudecode-opts.c:435
+msgid "uudecode usage error:\n"
+msgstr "'uudecode'-gebruiksfout:\n"
+
+#: src/uudecode-opts.c:471
+msgid "uudecode fatal error:\n"
+msgstr "fatale 'uudecode'-fout:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uudecodeOptions structure noted in the comments below.  The
+#. literal text is defined in uudecode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uudecode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uudecodeOptions.pzCopyright
+#: src/uudecode-opts.c:701
+msgid ""
+"uudecode (GNU sharutils) 4.13.4pre9\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uudecode (uit GNU sharutils-4.13.4pre9)\n"
+"Copyright (C) 2013 Free Software Foundation, Inc, alle rechten voorbehouden.\n"
+"\n"
+"Dit is vrije software: u mag het vrijelijk wijzigen en verder verspreiden.\n"
+"De precieze licentie is GPL-3+: GNU General Public License versie 3 of later.\n"
+"Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
+
+#: src/uudecode-opts.c:708
 msgid ""
 "uudecode is free software: you can redistribute it and/or modify it under\n"
 "the terms of the GNU General Public License as published by the Free\n"
@@ -1257,7 +1427,7 @@ msgstr ""
 "Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
 "\n"
 
-#: src/uudecode-opts.c:691
+#: src/uudecode-opts.c:712
 msgid ""
 "uudecode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
@@ -1271,21 +1441,21 @@ msgstr ""
 "Zie de GNU General Public License voor meer details.\n"
 "\n"
 
-#: src/uudecode-opts.c:699
+#: src/uudecode-opts.c:720
 #, c-format
 msgid ""
 "uudecode (GNU sharutils) - decode an encoded file\n"
-"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
 msgstr ""
 "'uudecode' (uit GNU sharutils) -- Decodeert een base64-gecodeerd bestand.\n"
 "\n"
 "Gebruik:  %s [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
 
-#: src/uudecode-opts.c:703
+#: src/uudecode-opts.c:724
 msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
 msgstr "Als er geen bestanden gegeven zijn, dan wordt standaardinvoer gedecodeerd.\n"
 
-#: src/uudecode-opts.c:706 src/uudecode-opts.c:739
+#: src/uudecode-opts.c:727
 msgid ""
 "'Uudecode' transforms uuencoded files into their original form.\n"
 "\n"
@@ -1294,7 +1464,7 @@ msgstr ""
 "terug naar hun originele vorm.\n"
 "\n"
 
-#: src/uudecode-opts.c:707 src/uudecode-opts.c:740
+#: src/uudecode-opts.c:728 src/uudecode-opts.c:763
 msgid ""
 "The encoded file(s) may be specified on the command line, or one may be\n"
 "read from standard input.  The output file name is specified in the encoded\n"
@@ -1307,7 +1477,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/uudecode-opts.c:715
+#: src/uudecode-opts.c:736
 msgid ""
 "'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
 "that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
@@ -1316,53 +1486,29 @@ msgid ""
 "output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
 msgstr ""
 
-#: src/uudecode-opts.c:722
-msgid "uudecode (GNU sharutils) 4.13.4pre4"
-msgstr "uudecode (uit GNU sharutils-4.13.4pre4)"
+#: src/uudecode-opts.c:743
+msgid "uudecode (GNU sharutils) 4.13.4pre9"
+msgstr "uudecode (uit GNU sharutils-4.13.4pre9)"
 
-#: src/uudecode-opts.c:725
+#: src/uudecode-opts.c:746
 msgid ""
 "uudecode (GNU sharutils) - decode an encoded file\n"
-"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
 "\n"
 msgstr ""
 "'uudecode' (uit GNU sharutils) -- Decodeert een base64-gecodeerd bestand.\n"
 "\n"
 "Gebruik:  uudecode [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
 
-#: src/uudecode-opts.c:727
+#: src/uudecode-opts.c:748
 msgid "   -o, --output-file=str      direct output to file\n"
 msgstr "  -o, --output-file=BESTAND  uitvoer in BESTAND opslaan\n"
 
-#: src/uudecode-opts.c:728
+#: src/uudecode-opts.c:749
 msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
 msgstr ""
 
-#: src/uudecode-opts.c:729 src/uuencode-opts.c:679
-msgid "   -v, --version[=arg]        output version information and exit\n"
-msgstr "  -v, --version              programmaversie tonen en stoppen\n"
-
-#: src/uudecode-opts.c:730 src/uuencode-opts.c:680
-msgid "   -h, --help                 display extended usage information and exit\n"
-msgstr "  -h, --help                 deze hulptekst tonen en stoppen\n"
-
-#: src/uudecode-opts.c:731 src/uuencode-opts.c:681
-msgid "   -!, --more-help            extended usage information passed thru pager\n"
-msgstr "  -!, --more-help            deze hulptekst gepagineerd tonen\n"
-
-#: src/uudecode-opts.c:732 src/uuencode-opts.c:682
-msgid "   -R, --save-opts[=arg]      save the option state to a config file\n"
-msgstr ""
-
-#: src/uudecode-opts.c:733 src/uuencode-opts.c:683
-msgid ""
-"   -r, --load-opts=str        load options from a config file\n"
-"                                - disabled as --no-load-opts\n"
-"                                - may appear multiple times\n"
-"\n"
-msgstr ""
-
-#: src/uudecode-opts.c:736
+#: src/uudecode-opts.c:757
 msgid ""
 "Options are specified by doubled hyphens and their name or by a single\n"
 "hyphen and the flag character.\n"
@@ -1374,7 +1520,19 @@ msgstr ""
 "Als er geen bestanden gegeven zijn, dan wordt standaardinvoer gedecodeerd.\n"
 "\n"
 
-#: src/uudecode-opts.c:748
+#: src/uudecode-opts.c:761
+#, fuzzy
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+"'uudecode' transformeert door 'uuencode' gecodeerde bestanden\n"
+"terug naar hun originele vorm.\n"
+"\n"
+
+#: src/uudecode-opts.c:771
 msgid ""
 "'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
 "that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
@@ -1384,25 +1542,17 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/uudecode-opts.c:753
-msgid ""
-"'Uudecode' supports reading a configuration file:  $HOME/.sharrc\n"
-"\n"
-"please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
-msgstr ""
-"'uudecode' accepteert een configuratiebestand:  $HOME/.sharrc\n"
-"\n"
-"Rapporteer gebreken in het programma aan: <bug-gnu-utils@gnu.org>;\n"
-"meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
-
-#: src/uudecode-opts.c:757
+#: src/uudecode-opts.c:779
 msgid ""
 "uudecode (GNU sharutils) - decode an encoded file\n"
-"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'uudecode --help' for more information.\n"
 msgstr ""
 "'uudecode' (uit GNU sharutils) -- Decodeert een base64-gecodeerd bestand.\n"
 "\n"
 "Gebruik:  uudecode [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
+"\n"
+"Typ 'uudecode --help' voor meer informatie.\n"
 
 #: src/uudecode.c:120 src/uudecode.c:184
 #, c-format
@@ -1472,30 +1622,47 @@ msgid ""
 "multiple input files.\n"
 msgstr "Bij meerdere invoerbestanden is het niet mogelijk een uitvoerbestand op te geven.\n"
 
-#: src/uuencode-opts.c:374
+#: src/uuencode-opts.c:386
 msgid "uuencode usage error:\n"
 msgstr "'uuencode'-gebruiksfout:\n"
 
-#: src/uuencode-opts.c:410
+#: src/uuencode-opts.c:422
 msgid "uuencode fatal error:\n"
 msgstr "fatale 'uuencode'-fout:\n"
 
-#: src/uuencode-opts.c:634
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uuencodeOptions structure noted in the comments below.  The
+#. literal text is defined in uuencode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uuencode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uuencodeOptions.pzCopyright
+#: src/uuencode-opts.c:652
 msgid ""
-"uuencode (GNU sharutils) 4.13.4pre4\n"
+"uuencode (GNU sharutils) 4.13.4pre9\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (uit GNU sharutils-4.13.4pre4)\n"
+"uuencode (uit GNU sharutils-4.13.4pre9)\n"
 "Copyright (C) 2013 Free Software Foundation, Inc, alle rechten voorbehouden.\n"
 "\n"
 "Dit is vrije software: u mag het vrijelijk wijzigen en verder verspreiden.\n"
 "De precieze licentie is GPL-3+: GNU General Public License versie 3 of later.\n"
 "Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
 
-#: src/uuencode-opts.c:641
+#: src/uuencode-opts.c:659
 msgid ""
 "uuencode is free software: you can redistribute it and/or modify it under\n"
 "the terms of the GNU General Public License as published by the Free\n"
@@ -1508,7 +1675,7 @@ msgstr ""
 "Zie <http://gnu.org/licenses/gpl.html> voor de volledige (Engelse) tekst.\n"
 "\n"
 
-#: src/uuencode-opts.c:645
+#: src/uuencode-opts.c:663
 msgid ""
 "uuencode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
@@ -1522,17 +1689,17 @@ msgstr ""
 "Zie de GNU General Public License voor meer details.\n"
 "\n"
 
-#: src/uuencode-opts.c:653
+#: src/uuencode-opts.c:671
 #, c-format
 msgid ""
 "uuencode (GNU sharutils) - encode a file into email friendly text\n"
-"Usage:  %s [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+"Usage:  %s [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
 msgstr ""
 "'uuencode' (uit GNU sharutils) -- Codeert een bestand naar e-mailbare \"tekst\".\n"
 "\n"
-"Gebruik:  %s [-<vlag> --<naam>]... [<invoerbestand>] <uitvoerbestand>\n"
+"Gebruik:  %s [-<vlag> | --<naam>]... [<invoerbestand>] <uitvoerbestand>\n"
 
-#: src/uuencode-opts.c:657 src/uuencode-opts.c:688
+#: src/uuencode-opts.c:675
 msgid ""
 "'uuencode' is used to create an ASCII representation of a file that can be\n"
 "sent over channels that may otherwise corrupt the data.  Specifically,\n"
@@ -1541,7 +1708,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/uuencode-opts.c:661 src/uuencode-opts.c:692
+#: src/uuencode-opts.c:679 src/uuencode-opts.c:712
 msgid ""
 "'uuencode' will read 'in-file' if provided and otherwise read data from\n"
 "standard in and write the encoded form to standard out.  The output will\n"
@@ -1552,7 +1719,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/uuencode-opts.c:667
+#: src/uuencode-opts.c:685
 msgid ""
 "'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
 "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
@@ -1562,60 +1729,65 @@ msgstr ""
 "met de hand op een terminal getypt wordt.  Op een terminal kan het daarom\n"
 "nodig zijn om meerdere keren Ctrl-D te typen om de invoer te beëindigen.\n"
 
-#: src/uuencode-opts.c:672
-msgid "uuencode (GNU sharutils) 4.13.4pre4"
-msgstr "uuencode (uit GNU sharutils-4.13.4pre4)"
+#: src/uuencode-opts.c:690
+msgid "uuencode (GNU sharutils) 4.13.4pre9"
+msgstr "uuencode (uit GNU sharutils-4.13.4pre9)"
 
-#: src/uuencode-opts.c:675
+#: src/uuencode-opts.c:693
 msgid ""
 "uuencode (GNU sharutils) - encode a file into email friendly text\n"
-"Usage:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
 "\n"
 msgstr ""
 "'uuencode' (uit GNU sharutils) -- Codeert een bestand naar e-mailbare \"tekst\".\n"
 "\n"
-"Gebruik:  uuencode [-<vlag> --<naam>]... [<invoerbestand>] <uitvoerbestand>\n"
+"Gebruik:  uuencode [-<vlag> | --<naam>]... [<invoerbestand>] <uitvoerbestand>\n"
 "\n"
 
-#: src/uuencode-opts.c:677
+#: src/uuencode-opts.c:695
 msgid "   -m, --base64               convert using base 64\n"
 msgstr "  -m, --base64    base64-codering gebruiken (zoals beschreven in RFC1521)\n"
 
-#: src/uuencode-opts.c:678
+#: src/uuencode-opts.c:696
 msgid "   -e, --encode-file-name     encode the output file name\n"
 msgstr "  -e, --encode-file-name    de uitvoerbestandsnaam coderen\n"
 
-#: src/uuencode-opts.c:698
+#: src/uuencode-opts.c:707
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:718
+#, fuzzy
 msgid ""
 "'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
 "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
 "Ctl-D several times to terminate input.\n"
 "\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
 msgstr ""
 "Opmerking: 'uuencode' gebruikt gebufferde invoer en neemt aan dat het niet\n"
 "met de hand op een terminal getypt wordt.  Op een terminal kan het daarom\n"
 "nodig zijn om meerdere keren Ctrl-D te typen om de invoer te beëindigen.\n"
 "\n"
 
-#: src/uuencode-opts.c:701
-msgid ""
-"uuencode supports reading a configuration file:  $HOME/.sharrc\n"
-"\n"
-"please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
-msgstr ""
-"'uuencode' accepteert een configuratiebestand:  $HOME/.sharrc\n"
-"\n"
-"Rapporteer gebreken in het programma aan: <bug-gnu-utils@gnu.org>;\n"
-"meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
-
-#: src/uuencode-opts.c:705
+#: src/uuencode-opts.c:724
 msgid ""
 "uuencode (GNU sharutils) - encode a file into email friendly text\n"
-"Usage:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"Try 'uuencode --help' for more information.\n"
 msgstr ""
 "'uuencode' (uit GNU sharutils) -- Codeert een bestand naar e-mailbare \"tekst\".\n"
 "\n"
-"Gebruik:  uuencode [-<vlag> --<naam>]... [<invoerbestand>] <uitvoerbestand>\n"
+"Gebruik:  uuencode [-<vlag> | --<naam>]... [<invoerbestand>] <uitvoerbestand>\n"
+"\n"
+"Typ 'uuencode --help' voor meer informatie.\n"
 
 #: src/uuencode.c:226
 msgid "freopen of stdin"
@@ -1742,6 +1914,146 @@ msgstr "ongeldig achtervoegsel in argument '%3$s' van %1$s%2$s"
 msgid "%s%s argument '%s' too large"
 msgstr "argument '%3$s' van %1$s%2$s is te groot"
 
+#~ msgid "   -v, --version[=arg]        Output version information and exit\n"
+#~ msgstr "  -v, --version             programmaversie tonen en stoppen\n"
+
+#~ msgid "   -h, --help                 Display extended usage information and exit\n"
+#~ msgstr "  -h, --help                deze hulptekst tonen en stoppen\n"
+
+#~ msgid "   -!, --more-help            Extended usage information passed thru pager\n"
+#~ msgstr "  -!, --more-help           deze hulptekst gepagineerd tonen\n"
+
+#~ msgid ""
+#~ "If no 'file's are specified, the list of input files is read from a\n"
+#~ "standard input.  Standard input must not be a terminal.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Als er geen bestanden gegeven zijn, dan wordt de lijst met invoerbestanden\n"
+#~ "van standaardinvoer gelezen.  Standaardinvoer mag dan geen terminal zijn.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Shar supports reading a configuration file:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+#~ msgstr ""
+#~ "'shar' accepteert een configuratiebestand:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Rapporteer gebreken in het programma aan: <bug-gnu-utils@gnu.org>;\n"
+#~ "meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
+
+#~ msgid ""
+#~ "shar (GNU sharutils) - create a shell archive\n"
+#~ "Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+#~ msgstr ""
+#~ "'shar' (uit GNU sharutils) -- Maakt een shell-archief aan.\n"
+#~ "\n"
+#~ "Gebruik:  shar [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
+
+#~ msgid "%s: option '%s' requires an argument\n"
+#~ msgstr "%s: optie '%s' vereist een argument\n"
+
+#~ msgid "More info with: \"%s %s\"\n"
+#~ msgstr "Meer informatie met: '%s %s'\n"
+
+#~ msgid "New file, remaining %s, "
+#~ msgstr "### Nieuw bestand, nu nog %s, "
+
+#~ msgid "Limit still %s\n"
+#~ msgstr "### De groottelimiet is nog %s\n"
+
+#~ msgid "In shar: remaining size %s\n"
+#~ msgstr "### In shar: resterende grootte %s\n"
+
+#~ msgid "Starting `sh' process"
+#~ msgstr "Starten van 'sh'-proces"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Gebruik:  %s [OPTIE]... [BESTAND]...\n"
+
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
+#~ "  -c, --overwrite             pass -c to shar script for overwriting files\n"
+#~ "  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=STRING       split concatenated shars after STRING\n"
+#~ "  -f, --force                 same as `-c'\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If no FILE, standard input is read.\n"
+#~ msgstr ""
+#~ "(Een verplicht argument bij een lange optie is ook verplicht bij de korte optie.)\n"
+#~ "\n"
+#~ "  -d, --directory=MAP    naar MAP gaan alvorens uit te pakken\n"
+#~ "  -c, --overwrite        optie '-c' aan shar-script geven voor het\n"
+#~ "                           overschrijven van bestanden\n"
+#~ "  -e, --exit-0           hetzelfde als '--split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=TEKST   samengevoegde shars splitsen na deze tekst\n"
+#~ "  -f, --force            hetzelfde als '-c'\n"
+#~ "      --help             deze hulptekst tonen en stoppen\n"
+#~ "      --version          programmaversie tonen en stoppen\n"
+#~ "\n"
+#~ "Als er geen BESTAND gegeven is, wordt van standaardinvoer gelezen.\n"
+
+#~ msgid "Report bugs to <%s>.\n"
+#~ msgstr ""
+#~ "Rapporteer gebreken in het programma aan <%s>;\n"
+#~ "meld fouten in de vertaling aan <vertaling@vrijschrift.org>.\n"
+
+#~ msgid "Cannot chdir to `%s'"
+#~ msgstr "Kan huidige map niet instellen op '%s'"
+
+#~ msgid ""
+#~ "Copyright (C) %s Free Software Foundation, Inc.\n"
+#~ "This is free software; see the source for copying conditions.  There is NO\n"
+#~ "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+#~ msgstr ""
+#~ "Copyright (C) %s Free Software Foundation, Inc.\n"
+#~ "Dit is vrije software; zie de programmatekst voor de kopieervoorwaarden.\n"
+#~ "Er is GEEN garantie, zelfs niet voor VERKOOPBAARHEID of GESCHIKTHEID\n"
+#~ "VOOR EEN BEPAALD DOEL.\n"
+
+#~ msgid "allocate file buffer"
+#~ msgstr "reserveren van bestandsbuffer"
+
+#~ msgid ""
+#~ "'Uudecode' supports reading a configuration file:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+#~ msgstr ""
+#~ "'uudecode' accepteert een configuratiebestand:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Rapporteer gebreken in het programma aan: <bug-gnu-utils@gnu.org>;\n"
+#~ "meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
+
+#~ msgid ""
+#~ "uudecode (GNU sharutils) - decode an encoded file\n"
+#~ "Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+#~ msgstr ""
+#~ "'uudecode' (uit GNU sharutils) -- Decodeert een base64-gecodeerd bestand.\n"
+#~ "\n"
+#~ "Gebruik:  uudecode [-<vlag> [<waarde>] | --<naam>[{=| }<waarde>]]... [<bestand>...]\n"
+
+#~ msgid ""
+#~ "uuencode supports reading a configuration file:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+#~ msgstr ""
+#~ "'uuencode' accepteert een configuratiebestand:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Rapporteer gebreken in het programma aan: <bug-gnu-utils@gnu.org>;\n"
+#~ "meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
+
+#~ msgid ""
+#~ "uuencode (GNU sharutils) - encode a file into email friendly text\n"
+#~ "Usage:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+#~ msgstr ""
+#~ "'uuencode' (uit GNU sharutils) -- Codeert een bestand naar e-mailbare \"tekst\".\n"
+#~ "\n"
+#~ "Gebruik:  uuencode [-<vlag> --<naam>]... [<invoerbestand>] <uitvoerbestand>\n"
+
 #~ msgid ""
 #~ "If no 'file'(s) are provided, then standard input is decoded.\n"
 #~ "\n"
@@ -1749,14 +2061,8 @@ msgstr "argument '%3$s' van %1$s%2$s is te groot"
 #~ "Als er geen bestanden gegeven zijn, dan wordt standaardinvoer gedecodeerd.\n"
 #~ "\n"
 
-#~ msgid "The following option preset mechanisms are supported:\n"
-#~ msgstr "De volgende optievoorinstellingsmechanismen worden ondersteund:\n"
-
 #~ msgid "strdup of %d byte string failed\n"
 #~ msgstr "Kopiëren van tekenreeks van %d bytes is mislukt\n"
-
-#~ msgid "  %s%s\n"
-#~ msgstr "  %s%s\n"
 
 #~ msgid "version, usage and configuration options:"
 #~ msgstr "Versie-, gebruiks- en configuratie-opties:"
@@ -1863,14 +2169,6 @@ msgstr "argument '%3$s' van %1$s%2$s is te groot"
 
 #~ msgid ""
 #~ "\n"
-#~ "please send bug reports to:  %s\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Rapporteer gebreken in het programma aan:  %s;\n"
-#~ "meld fouten in de vertaling aan: <vertaling@vrijschriftorg>.\n"
-
-#~ msgid ""
-#~ "\n"
 #~ "The following option preset mechanisms are supported:\n"
 #~ msgstr ""
 #~ "\n"
@@ -1897,9 +2195,6 @@ msgstr "argument '%3$s' van %1$s%2$s is te groot"
 #~ msgid "The --reset-option has not been configured.\n"
 #~ msgstr "De optie '--reset-option' is niet geconfigureerd.\n"
 
-#~ msgid "-_^"
-#~ msgstr "-_^"
-
 #~ msgid ""
 #~ "or you may use a numeric representation.  Preceding these with a '!' will\n"
 #~ "clear the bits, specifying 'none' will clear all bits, and 'all' will set them\n"
@@ -1918,10 +2213,6 @@ msgstr "argument '%3$s' van %1$s%2$s is te groot"
 #~ msgid "These additional options are:"
 #~ msgstr "Deze extra opties zijn:"
 
-#, fuzzy
-#~ msgid "create a shell archiv"
-#~ msgstr "Maakt een shell-archief aan."
-
 #~ msgid "This program is released under the terms of the GNU General Public License, version 3 or later."
 #~ msgstr ""
 #~ "Dit programma wordt uitgegeven onder de voorwaarden van\n"
@@ -1929,12 +2220,6 @@ msgstr "argument '%3$s' van %1$s%2$s is te groot"
 
 #~ msgid "File %s (%s)"
 #~ msgstr "Bestand %s (%s)"
-
-#~ msgid "unshar usage error:\n"
-#~ msgstr "'unshar'-gebruiksfout:\n"
-
-#~ msgid "unshar fatal error:\n"
-#~ msgstr "fatale 'unshar'-fout:\n"
 
 #~ msgid "unpack a shar archiv"
 #~ msgstr "Pakt een SHAR-archief uit."

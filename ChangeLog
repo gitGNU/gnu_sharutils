@@ -1,5 +1,18 @@
 2013-03-09  Bruce Korb  <bkorb@gnu.org>
 
+	* src/uudecode.c (read_base64): input line now contains newline.
+	(reopen_output): comment on why we're messing with POSIXLY_CORRECT
+	(decode_fname): current algorithm does not require extra NUL bytes
+	* tests/Makefile.am: add uudecode-2 test
+	* tests/uudecode-2: new test for encoded file names
+	* tests/uutest-1: compute loop static computations outside of loop
+
+2013-03-31  Bruce Korb  <bkorb@gnu.org>
+
+	4.13.4 released
+
+2013-03-09  Bruce Korb  <bkorb@gnu.org>
+
 	* bootstrap: constrain translation fetching to once a day
 	(set_up_po_dir): clean up README construction
 	(setup_configure): extract local.h include list from gnulib-tool

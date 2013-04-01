@@ -11,15 +11,16 @@ test "X${VERBOSE}" = Xtrue && {
   PS4=">$`basename $0`> "
 }
 
+: ${UUDECODE=$top_builddir/src/uudecode}
+: ${UUENCODE=$top_builddir/src/uuencode}
+
 while :
 do
-  : ${UUDECODE=$top_builddir/src/uudecode}
   ${UUDECODE} $top_srcdir/tests/testdata || {
     result=$?
     break
   }
 
-  : ${UUENCODE=$top_builddir/src/uuencode}
   ${UUENCODE} test.bin test.bin > test.out || {
     result=$?
     break
