@@ -83,8 +83,6 @@ static uudecode_exit_code_t read_stduu (const char *inname, const char *outname)
 static uudecode_exit_code_t read_base64(const char *inname, const char *outname);
 static uudecode_exit_code_t decode (const char * in_name);
 
-static bool do_base64 = false;
-
 #ifndef NUL
 #define NUL '\0'
 #endif
@@ -303,7 +301,6 @@ decode_fname (char * buf)
 
   {
     char * tmp = out + sz + 4;
-    struct base64_decode_context ctx;
 
     if (out == NULL)
       fserr(UUDECODE_EXIT_NO_MEM, "malloc", _("output file name"));
@@ -336,6 +333,7 @@ decode (char const * inname)
   bool  allocated_outname = false;
   bool  encoded_fname = false;
   uudecode_exit_code_t rval;
+  bool  do_base64 = false;
 
   /* Search for header line.  */
 

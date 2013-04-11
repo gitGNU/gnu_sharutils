@@ -106,11 +106,10 @@ flag = {
 	There is also the @command{xz} compactor now.  Specify @command{xz}
 	with @option{-C xz} or @option{--compactor=xz}.
 
-	Specifying the compactor "@samp{none}" will then disable file
-	compression, even for non-text files.  Any other compactor will force
-	uuencoding of files, and the recipient must have @command{uudecode} to
-	unpack the archive.  (Compressed files are never processed as plain
-	text.)
+        Specifying the compactor "@samp{none}" will disable file compression.
+	Compressed files are never processed as plain text.  They are always
+	uuencoded and the recipient must have @command{uudecode} to unpack
+	them.
 
 	Specifying the compactor @command{compress} is deprecated.
 	_EODoc_;

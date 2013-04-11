@@ -234,7 +234,13 @@ static int debugging_mode = 0;
 
 /* Other global variables.  */
 
-int uuencode_file = -1;
+typedef enum {
+  fail = ~1, // disambiguate, in case "true" is -1.
+  doue_true = true,
+  doue_false = false
+} do_uue_t;
+
+do_uue_t uuencode_file = fail;
 int opt_idx = 0;
 
 /* File onto which the shar script is being written.  */
@@ -913,17 +919,29 @@ print_header_stamp (FILE * fp)
   }
 
   {
-    static char const ftime_fmt[] = "%Y-%m-%d %H:%M %Z";
+    static char ftime_fmt[] = "%Y-%m-%d %H:%M %Z";
+
     /*
-     * All fields are two characters, except %Y is four.
+     * All fields are two characters, except %Y is four and
+     * %Z may be up to 30 (?!?!).  Anyway, if that still fails,
+     * we'll drop back to "%z".  We'll give up if that fails.
      */
-    char buffer[sizeof (ftime_fmt) + 4];
+    char buffer[sizeof (ftime_fmt) + 64];
     time_t now;
     struct tm * local_time;
     time (&now);
     local_time = localtime (&now);
-    strftime (buffer, sizeof (buffer) - 1, ftime_fmt, local_time);
-    fprintf (fp, made_on_comment_z, buffer, OPT_ARG(SUBMITTER));
+    {
+      size_t l =
+        strftime (buffer, sizeof (buffer) - 1, ftime_fmt, local_time);
+      if (l == 0)
+        {
+          ftime_fmt[sizeof(ftime_fmt) - 2] = 'z';
+          l = strftime (buffer, sizeof (buffer) - 1, ftime_fmt, local_time);
+        }
+      if (l > 0)
+        fprintf (fp, made_on_comment_z, buffer, OPT_ARG(SUBMITTER));
+    }
   }
 
   {
@@ -1053,6 +1071,43 @@ change_files (const char * restore_name, off_t * remaining_size)
   first_file_position = ftell (output);
 }
 
+static void
+read_byte_size (char * wc, size_t wc_sz, FILE * pfp)
+{
+  char* pz = wc;
+
+  /* Read to the first digit or EOF */
+  for (;;)
+    {
+      int ch = getc (pfp);
+      if (ch == EOF)
+        goto bogus_number; /* no digits were found */
+
+      if (isdigit (ch))
+        {
+          *(pz++) = ch;
+          break;
+        }
+    }
+
+  for (;;)
+    {
+      int ch = getc (pfp);
+      if (! isdigit (ch))
+        break;
+      *(pz++) = ch;
+      if (pz >= wc + wc_sz)
+        goto bogus_number; /* number is waaay too large */
+    }
+
+  *pz = NUL;
+  return;
+
+ bogus_number:
+  wc[0] = '0'; /* assume zero length */
+  wc[1] = NUL;
+}
+
 /* Emit shell script text to validate the restored file size
    Validate the transferred file using simple 'wc' command. */
 static void
@@ -1065,53 +1120,35 @@ emit_char_ct_validation (
   /* Shell command able to count characters from its standard input.
      We have to take care for the locale setting because wc in multi-byte
      character environments gets different results.  */
-  static char const cct_cmd[] = "LC_ALL=C wc -c <";
 
-  FILE *pfp;
   char wc[16 /* log MAX_INT + a few extra */];
+
+#ifndef __MINGW32__
+  static char const cct_cmd[] = "LC_ALL=C wc -c < %s";
   char *command = alloca (sizeof(cct_cmd) + strlen (quoted_name) + 2);
- 
-  sprintf (command, "%s %s", cct_cmd, quoted_name);
-  pfp = popen (command, "r");
-  if (pfp == NULL)
-    die (SHAR_EXIT_FAILED, _("Could not popen command"), command);
+#else
+  static char const cct_cmd[] = "set LC_ALL=C & wc -c \"%s\"";
+  char *command = alloca (sizeof(cct_cmd) + strlen (local_name));
+#endif
+
+  sprintf (command, cct_cmd, quoted_name);
+
+  {
+    FILE *pfp = popen (command, "r");
+    if (pfp == NULL)
+      die (SHAR_EXIT_FAILED, _("Could not popen command"), command);
+
+    /*  Read from stdin white space followed by digits.  That ought to be
+        followed by a newline or a NUL.  */
+    read_byte_size (wc, sizeof(wc), pfp);
+    pclose (pfp);
+  }
 
   if (did_md5)
     fputs (otherwise_z, output);
 
-  /*  Read from stdin white space followed by digits.  That ought to be
-      followed by a newline or a NUL.  */
-  {
-    char* pz = wc;
-    for (;;)
-      {
-        int ch = getc (pfp);
-        if (ch == EOF)
-          {
-            *(pz++) = NUL;
-            break;
-          }
-
-        if (! isspace (ch))
-          {
-            *(pz++) = ch;
-            break;
-          }
-      }
-    if (pz[-1] != NUL)
-      do
-        {
-          int ch = getc (pfp);
-          if (! isdigit (ch))
-            break;
-          *(pz++) = ch;
-        } while (pz < wc + sizeof(wc) - 1);
-    *pz = NUL;
-  }
-
   snprintf (scribble, scribble_size, SM_bad_size, restore_name, wc);
-  fprintf (output, ck_chct_z, cct_cmd, restore_name, wc, scribble);
-  pclose (pfp);
+  fprintf (output, ck_chct_z, restore_name, wc, scribble);
 }
 
 /**
@@ -1126,7 +1163,7 @@ emit_char_ct_validation (
  * @returns 0 if the file is a simple text file -- no encoding needed.
  * @returns 1 when the file must be encoded.
  */
-static int
+static do_uue_t
 file_needs_encoding (char const * fname)
 {
 #ifdef __CHAR_UNSIGNED__
@@ -1139,11 +1176,11 @@ file_needs_encoding (char const * fname)
   int    line_length;
 
   if (cmpr_state != NULL)
-    return 1; // compression always implies encoding
+    return true; // compression always implies encoding
 
   switch (WHICH_OPT_MIXED_UUENCODE) {
-  case VALUE_OPT_TEXT_FILES: return 0;
-  case VALUE_OPT_UUENCODE:   return 1;
+  case VALUE_OPT_TEXT_FILES: return false;
+  case VALUE_OPT_UUENCODE:   return true;
   default: break;
   }
 
@@ -1156,7 +1193,7 @@ file_needs_encoding (char const * fname)
   if (infp == NULL)
     {
       error (0, errno, _("Cannot open file %s"), fname);
-      return SHAR_EXIT_FILE_NOT_FOUND;
+      return fail;
     }
 
   /* Assume initially that the input file is text.  Then try to prove
@@ -1221,7 +1258,7 @@ file_needs_encoding (char const * fname)
 
   /* Text files should terminate with an end of line.  */
 
-  return (line_length != 0) ? 1 : 0;
+  return (line_length != 0) ? true : false;
 #undef BYTE_IS_BINARY
 }
 
@@ -1284,7 +1321,7 @@ open_shar_input (
   /* If mixed, determine the file type.  */
 
   uuencode_file = file_needs_encoding (local_name);
-  if (uuencode_file < 0)
+  if (uuencode_file == fail)
     return NULL;
 
   if (! uuencode_file)
@@ -1436,7 +1473,7 @@ static void
 process_shar_input (FILE * input, off_t * size_left, int * split_flag,
                     char const * restore, char const * q_restore)
 {
-  if (uuencode_file && HAVE_OPT(COMPACTOR) && (cmpr_state != NULL))
+  if (uuencode_file && (cmpr_state != NULL))
     {
       char * p = fgets (scribble, BUFSIZ, input);
       char * e;
@@ -1775,7 +1812,7 @@ shar (const char * lname, const char * rname)
 	}
 
       /* If this file was compressed, uncompress it and drop the temp.  */
-      if (HAVE_OPT(COMPACTOR) && (cmpr_state != NULL))
+      if (cmpr_state != NULL)
         {
 	  if (! HAVE_OPT(QUIET_UNSHAR))
             echo_text (cmpr_state->cmpr_unnote, rname, 1);
@@ -1939,15 +1976,15 @@ trim (char * pz)
 static void
 set_submitter (void)
 {
-  char buffer[256];
+  char * buffer;
   char * uname = getuser (getuid ());
   size_t len   = strlen (uname);
   if (uname == NULL)
     fserr (SHAR_EXIT_FAILED, "getpwuid", "getuid()");
-  
+  buffer = xmalloc (len + 2 + HOST_NAME_MAX);
   memcpy (buffer, uname, len);
   buffer[len++] = '@';
-  gethostname (buffer + len, sizeof (buffer) - len);
+  gethostname (buffer + len, HOST_NAME_MAX);
   SET_OPT_SUBMITTER(buffer);
 }
 
@@ -1975,9 +2012,6 @@ configure_shar (int * argc_p, char *** argv_p)
 
   scribble = xmalloc (scribble_size);
 
-  if (! HAVE_OPT(COMPACTOR))
-    SET_OPT_MIXED_UUENCODE;
-
   /* Set defaults for unset options.  */
   if (! HAVE_OPT(SUBMITTER))
     set_submitter ();
@@ -1997,7 +2031,7 @@ configure_shar (int * argc_p, char *** argv_p)
     }
 
   memset ((char *) byte_is_binary, 1, sizeof (byte_is_binary));
-  /* \n \v and \r disrupt the output  */
+  /* \n ends an input line, and \v and \r disrupt the output  */
   byte_is_binary['\b'] = 0; /* BS back space   */
   byte_is_binary['\t'] = 0; /* HT horiz. tab   */
   byte_is_binary['\f'] = 0; /* FF form feed    */

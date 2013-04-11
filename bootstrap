@@ -253,6 +253,8 @@ setup_configure() {
 	dirname
 	error
 	fdl
+	freopen
+	fork
 	getcwd
 	getopt-gnu
 	gettext
@@ -261,9 +263,11 @@ setup_configure() {
 	idcache
 	inttostr
 	malloc-gnu
+	mkstemp
 	crypto/md5
 	mktime
 	pathmax
+	pipe
 	popen
 	quotearg
 	realloc-gnu
@@ -275,6 +279,7 @@ setup_configure() {
 	strftime
 	uname
 	unlocked-io
+	waitpid
 	xalloc
 	xgetcwd
 	xstrtoimax

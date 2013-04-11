@@ -45,7 +45,7 @@ text = {
 
 text = {
   name = ck_chct;
-  body = "test `%s %s` -ne %s && \\\n  ${echo} %s";
+  body = "test `LC_ALL=C wc -c < %s` -ne %s && \\\n  ${echo} %s";
 };
 
 text = {

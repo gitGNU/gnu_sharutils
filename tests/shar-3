@@ -37,7 +37,7 @@ init() {
   cd ${top_builddir}/..
 
   basedir=`basename ${top_builddir}`
-  tar cf ${testdir}/${basedir}.tar ${basedir}
+  tar cf ${testdir}/${basedir}.tar ${basedir}/*
 }
 
 unroll_tar() {

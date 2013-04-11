@@ -30,9 +30,8 @@ dist_man5_MANS  =
 man_files       = $(cmds:=.1) uuencode.5
 
 if UUCODE
-  dist_man1_MANS += uuencode.1
+  dist_man1_MANS += uuencode.1 uudecode.1
   dist_man5_MANS += uuencode.5
-  man1_MANS = uudecode.1
 endif
 
 CLEANFILES  = $(man1_MANS)

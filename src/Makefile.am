@@ -24,8 +24,8 @@
 # But libgnu.a must also follow $(LIBINTL), since libintl uses
 # replacement functions defined in libgnu.a.
 
-LDADD = $(GETHOSTNAME_LIB) $(LIBSOCKET) $(top_builddir)/libopts/libopts.a \
-	$(top_builddir)/lib/libgnu.a $(LIBINTL) $(top_builddir)/lib/libgnu.a
+LDADD = $(top_builddir)/libopts/libopts.a $(top_builddir)/lib/libgnu.a \
+	$(LIBINTL) $(top_builddir)/lib/libgnu.a $(GETHOSTNAME_LIB) $(LIBSOCKET)
 
 shar_LDADD      = $(LDADD)
 unshar_LDADD    = $(LDADD)
@@ -92,7 +92,7 @@ AOINC       = -I$(top_srcdir)/libopts
 
 # `autoopts-config cflags`
 AM_CPPFLAGS = $(AOINC) -I$(srcdir) -I$(top_builddir) \
-	-I$(top_srcdir)/lib -I$(top_builddir)/intl
+	-I$(top_srcdir)/lib -I$(top_builddir)/lib -I$(top_builddir)/intl
 
 DEFS        = -DLOCALEDIR=\"$(localedir)\" @DEFS@
 

@@ -1,4 +1,27 @@
-2013-03-09  Bruce Korb  <bkorb@gnu.org>
+2013-04-10  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: more stuff from gnulib
+	* configure.ac.git: defer libopts/autogen testing to end.  Give gnulib
+	a chance to patch in headers.  (Partial fix)
+	* doc/Makefile.am: uudecode.1 should be distributable.
+	* src/Makefile.am: reorder library list for systems that need it
+	* src/scripts.def (ck_chct): put the "wc" command into the string,
+	instead of using the one that must work with "system(3)".
+	It is different for MinGW.
+	* src/shar-opts.def: clarify the significance of compression
+	* src/shar.c (do_uue_t): enumerate the ternary results of need-to-encode:
+	true, false and fail/broken.
+	(print_header_stamp): timezones can be very long.
+	(read_byte_size): extraction from emit_char_ct_validation
+	(emit_char_ct_validation): system(3) requires a different command syntax
+	on Windows platforms.  Accommodate.
+	(file_needs_encoding): returns do_uue_t enumeration
+	(set_submitter): SET_OPT_SUBMITTER() needs a stable (non-stack) value
+	* src/uudecode.c (decode): do_base64 is local to this function.
+	* tests/shar-1: accommodate Windows
+	* tests/shar-3: accommodate the build directory being a sym link
+
+2013-04-06  Bruce Korb  <bkorb@gnu.org>
 
 	* src/uudecode.c (read_base64): input line now contains newline.
 	(reopen_output): comment on why we're messing with POSIXLY_CORRECT

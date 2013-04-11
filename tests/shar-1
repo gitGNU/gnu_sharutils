@@ -23,7 +23,12 @@ SHAR=../src/shar
 
 ${SHAR} -f $current_dir/${inf} > ${sharf} 2> /dev/null || exit 1
 
+# adjust for variations in the package string and for
+# variations in Windows capabilities.
+#
 sed -e "s/__PACKAGE_STRING__/${PACKAGE_STRING}/" \
+    -e 's/-rw-rw-rw- shar-1.in/-rw-r--r-- shar-1.in/' \
+    -e "s/chmod 0666 'shar-1.in'/chmod 0644 'shar-1.in'/" \
   $top_srcdir/tests/shar-1.ok > ${tmpfile}.sample
 
 # Remove variations based on PID and the current date
