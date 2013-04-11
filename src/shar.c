@@ -173,28 +173,28 @@ typedef struct {
 
 compact_state_t gzip_compaction = {
   .cmpr_name    = "gzip",
-  .cmpr_cmd_fmt = "gzip -c -%u < %s",
+  .cmpr_cmd_fmt = "gzip -c -%u %s",
   .cmpr_title   = "gzipped",
   .cmpr_mode    = "gzi",
-  .cmpr_unpack  = "gzip -d < ${lock_dir}/gzi > %s && \\\n",
+  .cmpr_unpack  = "gzip -dc ${lock_dir}/gzi > %s && \\\n",
   .cmpr_unnote  = "gunzipping file %s"
 };
 
 compact_state_t xz_compaction = {
   .cmpr_name    = "xz",
-  .cmpr_cmd_fmt = "xz -z -c -%u < %s",
+  .cmpr_cmd_fmt = "xz -zc -%u %s",
   .cmpr_title   = "xz-compressed",
   .cmpr_mode    = "xzi",
-  .cmpr_unpack  = "xz --decompress < ${lock_dir}/xzi > %s && \\\n",
+  .cmpr_unpack  = "xz -dc ${lock_dir}/xzi > %s && \\\n",
   .cmpr_unnote  = "xz-decompressing file %s"
 };
 
 compact_state_t bzip2_compaction = {
   .cmpr_name    = "bzip2",
-  .cmpr_cmd_fmt = "bzip2 -z -c -%u < %s",
+  .cmpr_cmd_fmt = "bzip2 -zkc -%u %s",
   .cmpr_title   = "bzipped",
   .cmpr_mode    = "bzi",
-  .cmpr_unpack  = "bzip2 -d < ${lock_dir}/bzi > %s && \\\n",
+  .cmpr_unpack  = "bzip2 -dkc ${lock_dir}/bzi > %s && \\\n",
   .cmpr_unnote  = "bunzipping file %s"
 };
 
