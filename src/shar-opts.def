@@ -59,12 +59,12 @@ exit-name[63] = bug;
 exit-desc[63] = 'There is a shar command bug.  Please report it.';
 
 include = <<- _EOInclude_
-	int initialization_done = 0;
+	bool initialization_done = false;
 	int optidx = 0;
 	_EOInclude_;
 
 export = <<- _EOExport_
-	extern int initialization_done;
+	extern bool initialization_done;
 	extern int optidx;
 	_EOExport_;
 

@@ -8,7 +8,8 @@
 	* src/scripts.def (ck_chct): put the "wc" command into the string,
 	instead of using the one that must work with "system(3)".
 	It is different for MinGW.
-	* src/shar-opts.def: clarify the significance of compression
+	* src/shar-opts.def: clarify the significance of compression.
+	declare initialization_done to be a boolean.
 	* src/shar.c (do_uue_t): enumerate the ternary results of need-to-encode:
 	true, false and fail/broken.
 	(print_header_stamp): timezones can be very long.
@@ -17,6 +18,12 @@
 	on Windows platforms.  Accommodate.
 	(file_needs_encoding): returns do_uue_t enumeration
 	(set_submitter): SET_OPT_SUBMITTER() needs a stable (non-stack) value
+	(file_needs_encoding): remove unneeded "else".
+	(open_shar_input): split out code that requires fork(2) into
+	a new function compress_file().
+	(compress_file): do the fork() call.
+	(compress_file): make a version for platforms without fork(2).
+	(open_output): set stdout to binary mode on MINGW
 	* src/uudecode.c (decode): do_base64 is local to this function.
 	* tests/shar-1: accommodate Windows
 	* tests/shar-3: accommodate the build directory being a sym link

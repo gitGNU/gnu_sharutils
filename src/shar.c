@@ -78,6 +78,8 @@ static const char cright_years_z[] =
 /* Maximum length for a text line before it is considered binary.  */
 #define MAXIMUM_NON_BINARY_LINE 200
 
+#define LOG10_MAX_INT  11
+
 /* System related declarations.  */
 
 #if STDC_HEADERS
@@ -1074,7 +1076,7 @@ change_files (const char * restore_name, off_t * remaining_size)
 static void
 read_byte_size (char * wc, size_t wc_sz, FILE * pfp)
 {
-  char* pz = wc;
+  char * pz = wc;
 
   /* Read to the first digit or EOF */
   for (;;)
@@ -1112,29 +1114,30 @@ read_byte_size (char * wc, size_t wc_sz, FILE * pfp)
    Validate the transferred file using simple 'wc' command. */
 static void
 emit_char_ct_validation (
-     char const *local_name,
-     char const *quoted_name,
-     char const *restore_name,
+     char const * local_name,
+     char const * quoted_name,
+     char const * restore_name,
      int did_md5)
 {
   /* Shell command able to count characters from its standard input.
      We have to take care for the locale setting because wc in multi-byte
      character environments gets different results.  */
 
-  char wc[16 /* log MAX_INT + a few extra */];
+  char wc[1 + LOG10_MAX_INT * 2]; // enough for 64 bit size
+  char * command;
 
 #ifndef __MINGW32__
   static char const cct_cmd[] = "LC_ALL=C wc -c < %s";
-  char *command = alloca (sizeof(cct_cmd) + strlen (quoted_name) + 2);
 #else
   static char const cct_cmd[] = "set LC_ALL=C & wc -c \"%s\"";
-  char *command = alloca (sizeof(cct_cmd) + strlen (local_name));
+  quoted_name = local_name;
 #endif
 
+  command = alloca (sizeof(cct_cmd) + strlen (quoted_name));
   sprintf (command, cct_cmd, quoted_name);
 
   {
-    FILE *pfp = popen (command, "r");
+    FILE * pfp = popen (command, "r");
     if (pfp == NULL)
       die (SHAR_EXIT_FAILED, _("Could not popen command"), command);
 
@@ -1216,29 +1219,29 @@ file_needs_encoding (char const * fname)
             line_length++;
             break;
           }
-        else
-          {
-            /*
-             * Mail handlers like to mutilate lines beginning with "from ".
-             * Therefore, if a line starts with "From " or "from ", deem
-             * the file to need encoding.
-             */
-            static char const from[] = "rom ";
-            char const * p = from;
-            for (;;)
-              {
-                line_length++;
-                ch = getc (infp);
-                if (ch != *p)
-                  goto retest_char;
-                if (*++p == NUL)
-                  {
-                    line_length = MAXIMUM_NON_BINARY_LINE;
-                    goto loop_done;
-                  }
-              }
-            /* NOTREACHED */
-          }
+
+        {
+          /*
+           * Mail handlers like to mutilate lines beginning with "from ".
+           * Therefore, if a line starts with "From " or "from ", deem
+           * the file to need encoding.
+           */
+          static char const from[] = "rom ";
+          char const * p = from;
+          for (;;)
+            {
+              line_length++;
+              ch = getc (infp);
+              if (ch != *p)
+                goto retest_char;
+              if (*++p == NUL)
+                {
+                  line_length = MAXIMUM_NON_BINARY_LINE;
+                  goto loop_done;
+                }
+            }
+          /* NOTREACHED */
+        }
 
       default:
         if (BYTE_IS_BINARY(ch))
@@ -1262,12 +1265,14 @@ file_needs_encoding (char const * fname)
 #undef BYTE_IS_BINARY
 }
 
+#ifdef HAVE_WORKING_FORK
+
 static void
 encode_file_to_pipe (
-     int out_fd,
-     const char *  local_name,
-     const char *  q_local_name,
-     const char *  restore_name)
+    int out_fd,
+    const char *  local_name,
+    const char *  q_local_name,
+    const char *  restore_name)
 {
   /* Start writing the pipe with encodes.  */
 
@@ -1308,6 +1313,117 @@ encode_file_to_pipe (
 }
 
 static FILE *
+compress_file (char const * local_name, char const * q_local_name,
+               const char *  restore_name)
+{
+  int pipex[2];
+
+  /* Fork a uuencode process.  */
+
+  if (pipe (pipex) < 0)
+    fserr (SHAR_EXIT_FAILED, _("call"), "pipe(2)");
+  fflush (output);
+
+  switch (fork ())
+    {
+    case 0:
+      close (pipex[0]);
+      encode_file_to_pipe (pipex[1], local_name, q_local_name, restore_name);
+      /* NOTREACHED */
+
+    case -1:
+      fserr (SHAR_EXIT_FAILED, _("call"), "fork");
+      return NULL;
+
+    default:
+      /* Parent, create a file to read.  */
+      break;
+    }
+  close (pipex[1]);
+
+  {
+    FILE * fp = fdopen (pipex[0], freadonly_mode);
+    if (fp == NULL)
+      fserr (SHAR_EXIT_FAILED, "fdopen", _("pipe fd"));
+    return fp;
+  }
+}
+
+#else /* ! HAVE_WORKING_FORK */
+
+#ifdef __MINGW32__
+static char *
+win_cmd_quote (char const * fname)
+{
+  static size_t blen = 0;
+  static char   buf  = NULL;
+  size_t        nlen = strlen (fname);
+  if (nlen + 3 > blen)
+    {
+      blen = nlen + 3;
+      buf = buf ? malloc (blen) : realloc (blen, buf);
+      if (fp == NULL)
+        fserr (SHAR_EXIT_FAILED, "malloc", fname);
+    }
+  *buf = '"';
+  memcpy (buf+1, fname, nlen);
+  buf[nlen + 1] = '"';
+  buf[nlen + 2] = NUL;
+}
+#endif
+
+static FILE *
+compress_file (char const * local_name,
+               char const * q_local_name,
+               char const * restore_name)
+{
+  /* Start writing the pipe with encodes.  */
+
+  char * cmdline, char * p;
+  static char uu_cmd_fmt[] = "uuencode %s %s";
+  size_t sz = sizeof (uu_cmd_fmt) + strlen (q_local_name)
+    + strlen (restore_name);
+  /* A command to use for encoding an uncompressed text file.  */
+#ifdef __MINGW32__
+  q_local_name = win_cmd_quote (local_name);
+#endif
+
+  if (cmpr_state == NULL)
+    p = cmdline = alloca (sz);
+  else
+    {
+      static char const shartemp[] = "SHARTEMP.DTA";
+      sz += strlen (cmpr_state->cmpr_cmd_fmt) + LOG10_MAX_INT
+        + 2 * sizeof (shartemp);
+
+      p = cmdline = alloca (sz);
+      sprintf (p, cmpr_state->cmpr_cmd_fmt, cmpr_state->cmpr_level,
+               q_local_name);
+      p += strlen (p);
+      sprintf (p, "> %s\n", shartemp);
+      p += strlen (p);
+      q_local_name = shartemp;
+    }
+
+    sprintf (p, uu_cmd_fmt, q_local_name, restore_name);
+
+  /* Don't use freadonly_mode because it might be "rb", while we need
+     text-mode read here, because we will be reading pure text from
+     uuencode, and we want to drop any CR characters from the CRLF
+     line endings, when we write the result into the shar.  */
+  {
+    FILE * in_fp = popen (cmdline, "r");
+
+    if (in_fp == NULL)
+      fserr (SHAR_EXIT_FAILED, "popen", cmdline);
+
+    return in_fp;
+  }
+}
+
+#endif /* HAVE_WORKING_FORK */
+
+static FILE *
 open_shar_input (
      const char *  local_name,
      const char *  q_local_name,
@@ -1318,11 +1434,11 @@ open_shar_input (
 {
   FILE * infp;
 
-  /* If mixed, determine the file type.  */
-
   uuencode_file = file_needs_encoding (local_name);
   if (uuencode_file == fail)
     return NULL;
+
+  /* If mixed, determine the file type.  */
 
   if (! uuencode_file)
     {
@@ -1335,36 +1451,15 @@ open_shar_input (
     }
   else
     {
-      int pipex[2];
-
-      *file_type_p        = cmpr_state ? cmpr_state->cmpr_title : _("text");
-      *file_type_remote_p = cmpr_state ? cmpr_state->cmpr_title : _("(text)");
-
-      /* Fork a uuencode process.  */
-
-      if (pipe (pipex) < 0)
-        fserr (SHAR_EXIT_FAILED, _("call"), "pipe(2)");
-      fflush (output);
-
-      switch (fork ())
+      if (cmpr_state != NULL)
+        *file_type_p = *file_type_remote_p = cmpr_state->cmpr_title;
+      else
         {
-        case 0:
-          encode_file_to_pipe (
-            pipex[1], local_name, q_local_name, restore_name);
-          /* NOTREACHED */
-
-        case -1:
-          fserr (SHAR_EXIT_FAILED, _("call"), "fork");
-          return NULL;
-
-        default:
-          /* Parent, create a file to read.  */
-
-          close (pipex[1]);
-          infp = fdopen (pipex[0], freadonly_mode);
-          if (infp == NULL)
-            fserr (SHAR_EXIT_FAILED, "fdopen", _("pipe[1]"));
+          *file_type_p        = _("text");
+          *file_type_remote_p = _("(text)");
         }
+
+      infp = compress_file (local_name, q_local_name, restore_name);
     }
 
   return infp;
@@ -1890,12 +1985,12 @@ parse_output_base_name (char const * arg)
       static char const sfx[] = ".%02d";
       size_t len = strlen (arg);
       char * fmt = xmalloc(len + sizeof (sfx));
-      int    svd = initialization_done;
+      bool   svd = initialization_done;
       memcpy (fmt, arg, len);
       memcpy (fmt + len, sfx, sizeof (sfx));
 
       /* this is allowed to happen after initialization. */
-      initialization_done = 0;
+      initialization_done = false;
       SET_OPT_OUTPUT_PREFIX(fmt);
       initialization_done = svd;
     }
@@ -1914,6 +2009,9 @@ open_output (void)
   if (! HAVE_OPT(OUTPUT_PREFIX))
     {
       output = stdout;
+#ifdef __MINGW32__
+      _setmode (fileno (stdout) , _O_BINARY);
+#endif
       return;
     }
 
@@ -2213,7 +2311,7 @@ initialize(int * argcp, char *** argvp)
 
   init_shar_msg ();
   configure_shar (argcp, argvp);
-  initialization_done = 1;
+  initialization_done = true;
 }
 
 /**
