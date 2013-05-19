@@ -194,6 +194,38 @@ read_base64 (char const * inname, char const * outname)
   return UUDECODE_EXIT_SUCCESS;
 }
 
+#ifdef __MINGW32__
+static char const *
+get_env_homedir(void)
+{
+  char const * res = getenv("HOME");
+  if (res) return res;
+  {
+    static char w32homedir[FILENAME_MAX];
+
+    char *homedrive = getenv ("HOMEDRIVE");
+    char *homepath  = getenv ("HOMEPATH");
+
+    if ((homedrive == NULL) || (homepath == NULL))
+      die (UUDECODE_EXIT_INVALID, _("cannot expand $HOME"));
+
+    strcat (strcpy (w32homedir, homedrive), homepath);
+    return w32homedir;
+  }
+}
+
+#else
+
+static char const *
+get_env_homedir(void)
+{
+  char const * res = getenv("HOME");
+  if (res == NULL)
+    die (UUDECODE_EXIT_INVALID, _("cannot expand $HOME"));
+  return res;
+}
+#endif
+
 /**
  * replace a leading tilde character with either the home directory of
  * the login name that follows it, or with the home directory of the
@@ -210,16 +242,18 @@ expand_tilde (char * buf)
 
   if (buf[1] == '/')
     {
-      homedir = getenv("HOME");
-      if (homedir == NULL)
-        die (UUDECODE_EXIT_INVALID, _("cannot expand $HOME"));
+      homedir = get_env_homedir ();
       buf += 2;
     }
   else
     {
       struct passwd *pw;
       char * pz = buf + 1;
-      while (*pz != '/')
+      while (*pz != '/'
+#ifdef __MINGW32__
+             && *pz != '\\'
+#endif
+             )
         ++pz;
       if (*pz == NUL)
         {
@@ -420,6 +454,13 @@ decode (char const * inname)
       if (rval != UUDECODE_EXIT_SUCCESS)
         goto fail_return;
     }
+#ifdef __MINGW32__
+  else if (_setmode (fileno (stdout), _O_BINARY) == -1)
+    {
+      rval = UUDECODE_EXIT_NO_OUTPUT;
+      goto fail_return;
+    }
+#endif
 
   /* We use different functions for different encoding methods.
      A common function would slow down the program.  */

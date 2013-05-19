@@ -1313,7 +1313,7 @@ encode_file_to_pipe (
 }
 
 static FILE *
-compress_file (char const * local_name, char const * q_local_name,
+open_encoded_file (char const * local_name, char const * q_local_name,
                const char *  restore_name)
 {
   int pipex[2];
@@ -1373,10 +1373,11 @@ win_cmd_quote (char const * fname)
 #endif
 
 static FILE *
-compress_file (char const * local_name,
+open_encoded_file (char const * local_name,
                char const * q_local_name,
                char const * restore_name)
 {
+  static char const rm_temp[]  = "\nrm -f %s";
   /* Start writing the pipe with encodes.  */
 
   char * cmdline, char * p;
@@ -1392,20 +1393,29 @@ compress_file (char const * local_name,
     p = cmdline = alloca (sz);
   else
     {
-      static char const shartemp[] = "SHARTEMP.DTA";
+      /* Before uuencoding the file, we compress it.  The compressed output
+         goes into a temporary file.  */
+      char * shartemp = tmpnam(NULL);
       sz += strlen (cmpr_state->cmpr_cmd_fmt) + LOG10_MAX_INT
-        + 2 * sizeof (shartemp);
+        + 4 + sizeof (rm_temp) + 3 * strlen (shartemp);
 
       p = cmdline = alloca (sz);
       sprintf (p, cmpr_state->cmpr_cmd_fmt, cmpr_state->cmpr_level,
                q_local_name);
       p += strlen (p);
-      sprintf (p, "> %s\n", shartemp);
-      p += strlen (p);
+      *(p++) = '>';
+      strcpy(p, shartemp);
+      p += sizeof (shartemp) - 1;
+      *(p++) = '\n';
       q_local_name = shartemp;
     }
 
-    sprintf (p, uu_cmd_fmt, q_local_name, restore_name);
+  /* Insert the uuencode command.  It may be reading from the original file,
+     or from a temporary file containing the compressed original.
+     If we compressed it, then we'll need to remove the temp, too.   */
+  sprintf (p, uu_cmd_fmt, q_local_name, restore_name);
+  if (cmpr_state != NULL)
+    sprintf (p + strlen (p), rm_temp, q_local_name);
 
   /* Don't use freadonly_mode because it might be "rb", while we need
      text-mode read here, because we will be reading pure text from
@@ -1459,7 +1469,7 @@ open_shar_input (
           *file_type_remote_p = _("(text)");
         }
 
-      infp = compress_file (local_name, q_local_name, restore_name);
+      infp = open_encoded_file (local_name, q_local_name, restore_name);
     }
 
   return infp;

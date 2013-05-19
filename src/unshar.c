@@ -271,6 +271,29 @@ find_archive (char const * name, FILE * file, off_t start)
     }
 }
 
+#ifdef __MINGW32__
+
+static char const *
+get_env_tmpdir(void)
+{
+  char const * res = getenv ("TMPDIR");
+  if (res) return res;
+  res = getenv ("TEMP");
+  if (res) return res;
+  res = getenv ("TMP");
+  return res ? res : ".";
+}
+
+#else
+
+static char const *
+get_env_tmpdir(void)
+{
+  char const * res = getenv ("TMPDIR");
+  return res ? res : "/tmp";
+}
+#endif
+
 /**
  * load a file that does not support ftell/seek.
  * Create a temporary file and suck up all the file data, writing it out
@@ -292,10 +315,7 @@ load_file (char const ** tmp_fname, FILE * infp)
 
   {
     size_t name_size;
-    char *pz_tmp = getenv ("TMPDIR");
-
-    if (pz_tmp == NULL)
-      pz_tmp = "/tmp";
+    char * pz_tmp = get_env_tmpdir();
 
     name_size = strlen (pz_tmp) + sizeof (z_tmpfile) + 1;
     *tmp_fname = pz_fname = malloc (name_size);
@@ -311,7 +331,7 @@ load_file (char const ** tmp_fname, FILE * infp)
     if (fd < 0)
       fserr (UNSHAR_EXIT_CANNOT_CREATE, "mkstemp", z_tmpfile);
     
-    outfp = fdopen (fd, "w+");
+    outfp = fdopen (fd, "wb+");
   }
 
   if (outfp == NULL)
@@ -339,8 +359,13 @@ int
 unshar_file (const char * name, FILE * file)
 {
   char const * tmp_fname = NULL;
-  off_t curr_pos = ftell (file);
+  off_t curr_pos;
 
+#ifdef __MINGW32__
+  _setmode (fileno (file), _O_BINARY);
+#endif
+
+  curr_pos = ftell (file);
   if (curr_pos < 0)
     {
       file = load_file (&tmp_fname, file);

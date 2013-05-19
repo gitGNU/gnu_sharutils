@@ -232,7 +232,7 @@ process_opts (int argc, char ** argv, int * mode)
       }
 
     case 1:
-#if __CYGWIN__
+#if __CYGWIN__ || __MINGW32__
       if (! isatty (STDIN_FILENO))
        setmode (STDIN_FILENO, O_BINARY);
 #endif
