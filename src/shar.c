@@ -56,6 +56,7 @@ static const char cright_years_z[] =
 #include "quotearg.h"
 #include "xalloc.h"
 #include "xgetcwd.h"
+#include "scribble.h"
 
 #if HAVE_LOCALE_H
 #else
@@ -269,10 +270,6 @@ static struct stat struct_stat;
 /* The number used to make the intermediate files unique.  */
 static int sharpid = 0;
 
-/* scribble space. */
-static size_t scribble_size = 1024 + (BUFSIZ * 2);
-static char* scribble = NULL;
-
 static int translate_script = 0;
 
 static int    mkdir_alloc_ct = 0;
@@ -345,31 +342,21 @@ init_shar_msg(void)
 static char const *
 format_report(quot_id_t type, char const * fmt, char const * what)
 {
-  int off = strlen(scribble);
-  size_t sz;
-
-  if (off > 0)
-    off++;
-  sz = scribble_size - off;
-
   if (fmt == NULL)
     return NULL;
 
-  for (;;)
-    {
-      int len = snprintf (scribble + off, sz, fmt, what);
-      if ((unsigned)len < sz)
-        break;
+  {
+    size_t sz = strlen (fmt) + strlen (what) + 2;
+    char * res = scribble_get(sz);
+    int len = snprintf (res, sz, fmt, what);
+    if ((unsigned)len < sz)
+      return res;
+    if (len < 0)
+      die (SHAR_EXIT_BUG, _("printf formatting error:  %s\n"), fmt);
 
-      if (len < 0)
-        die (SHAR_EXIT_BUG, _("printf formatting error:  %s\n"), fmt);
-
-      scribble_size = (len + off + 4096) & 0x0FFF;
-      scribble = xrealloc (scribble, scribble_size);
-      sz = scribble_size - off;
-    }
-
-  return scribble + off;
+    res = scribble_get(len + 1);
+    return res;
+  }
 }
 
 static void
@@ -395,7 +382,6 @@ echo_status (const char*  test,
      output formatting with show_all_status_z or show_good_status_z or
      show_bad_status_z.  Not all do, so "what" can sometimes be NULL.
    */
-  *scribble = NUL;
   good_quot = format_report (QUOT_ID_GOOD_STATUS, ok_fmt, what);
   bad_quot  = format_report (QUOT_ID_BAD_STATUS, bad_fmt, what);
   die_str   = die_on_failure ? show_status_dies_z : "";
@@ -417,19 +403,16 @@ echo_status (const char*  test,
 }
 
 static void
-echo_text (const char* format_pz, const char* arg_pz, int cascade)
+echo_text (const char* format_pz, const char* arg_pz, bool cascade)
 {
   static char const continue_z[] = " &&\n";
-  unsigned int len = (unsigned)snprintf (
-    scribble, scribble_size - sizeof (continue_z), format_pz, arg_pz);
+  size_t sz = strlen (format_pz) + strlen (arg_pz) + sizeof (continue_z);
+  char * bf = scribble_get (sz);
+  unsigned int len = (unsigned)snprintf (bf, sz, format_pz, arg_pz);
 
-  if (cascade && (len < scribble_size - sizeof (continue_z)))
-    {
-      char * pz = scribble + len;
-      /* replace newline with the continuation string */
-      strcpy (pz, continue_z);
-    }
-  fprintf (output, echo_string_z, scribble);
+  if (cascade)
+    memcpy (bf + len, continue_z, sizeof (continue_z));
+  fprintf (output, echo_string_z, bf);
 }
 
 #if !NO_WALKTREE
@@ -491,17 +474,6 @@ walkdown (
   memcpy (restore_name_copy, restore_name, restore_name_length-1);
   restore_name_copy[ restore_name_length-1 ] = '/';
   restore_name_copy[ restore_name_length   ] = NUL;
-
-  {
-    size_t sz = (sizeof_local_name < sizeof_restore_name)
-      ? sizeof_restore_name : sizeof_local_name;
-    sz = 1024 + (sz * 2);
-    if (scribble_size < sz)
-      {
-        scribble_size = (sz + 4096) & 0x0FFF;
-        scribble = xrealloc (scribble, scribble_size);
-      }
-  }
 
   if ((restore_name_copy[0] == '.') && (restore_name_copy[1] == '/'))
     restore_offset = 2;
@@ -1026,9 +998,12 @@ change_files (const char * restore_name, off_t * remaining_size)
   fputs (" :\n", output);
   echo_status ("test $? -ne 0", SM_restore_failed, NULL, restore_name, 0);
 
-  snprintf (scribble, scribble_size,
-            SM_end_of_part, part_number, part_number+1);
-  fprintf (output, echo_string_z, scribble);
+  {
+    size_t sz = strlen (SM_end_of_part) + 2 * LOG10_MAX_INT;
+    char * bf = scribble_get (sz);
+    snprintf (bf, sz, SM_end_of_part, part_number, part_number+1);
+    fprintf (output, echo_string_z, bf);
+  }
 
   close_output (part_number + 1);
 
@@ -1057,15 +1032,10 @@ change_files (const char * restore_name, off_t * remaining_size)
     static const char part_z[] = "part %02d of %s ";
     char const * nm = HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) :
       "a multipart";
-    off_t len = sizeof(part_z) + strlen(nm) + 16;
-    if (scribble_size < len)
-      {
-        scribble_size = (scribble_size + len + 0x0FFF) & ~0x0FFF;
-        scribble = xrealloc (scribble, scribble_size);
-      }
-
-    sprintf (scribble, part_z, part_number, nm);
-    fprintf (output, file_leader_z, scribble, "", PACKAGE, VERSION, sharpid);
+    off_t len = sizeof(part_z) + strlen(nm) + LOG10_MAX_INT;
+    char * bf = scribble_get (len);
+    snprintf (bf, len, part_z, part_number, nm);
+    fprintf (output, file_leader_z, bf, "", PACKAGE, VERSION, sharpid);
   }
 
   generate_configure ();
@@ -1150,8 +1120,12 @@ emit_char_ct_validation (
   if (did_md5)
     fputs (otherwise_z, output);
 
-  snprintf (scribble, scribble_size, SM_bad_size, restore_name, wc);
-  fprintf (output, ck_chct_z, restore_name, wc, scribble);
+  {
+    size_t sz = strlen (SM_bad_size) + strlen (restore_name) + LOG10_MAX_INT;
+    char * bf = scribble_get (sz);
+    snprintf (bf, sz, SM_bad_size, restore_name, wc);
+    fprintf (output, ck_chct_z, restore_name, wc, bf);
+  }
 }
 
 /**
@@ -1356,19 +1330,25 @@ static char *
 win_cmd_quote (char const * fname)
 {
   static size_t blen = 0;
-  static char   buf  = NULL;
+  static char   *buf  = NULL;
   size_t        nlen = strlen (fname);
   if (nlen + 3 > blen)
     {
       blen = nlen + 3;
-      buf = buf ? malloc (blen) : realloc (blen, buf);
-      if (fp == NULL)
+      buf = buf ? malloc (blen) : realloc (buf, blen);
+      if (buf == NULL)
         fserr (SHAR_EXIT_FAILED, "malloc", fname);
     }
   *buf = '"';
   memcpy (buf+1, fname, nlen);
   buf[nlen + 1] = '"';
   buf[nlen + 2] = NUL;
+}
+
+static int
+isatty (int fd)
+{
+  return (_isatty (fd) && _lseek (fd, SEEK_CUR, 0L) == -1);
 }
 #endif
 
@@ -1377,45 +1357,45 @@ open_encoded_file (char const * local_name,
                char const * q_local_name,
                char const * restore_name)
 {
-  static char const rm_temp[]  = "\nrm -f %s";
-  /* Start writing the pipe with encodes.  */
-
-  char * cmdline, char * p;
-  static char uu_cmd_fmt[] = "uuencode %s %s";
-  size_t sz = sizeof (uu_cmd_fmt) + strlen (q_local_name)
-    + strlen (restore_name);
+  char * cmdline, * p;
+  static char uu_cmd_fmt[] = "uuencode %s";
+  size_t sz = sizeof (uu_cmd_fmt);
   /* A command to use for encoding an uncompressed text file.  */
 #ifdef __MINGW32__
+  /* Windows needs a different style of quoting.  */
   q_local_name = win_cmd_quote (local_name);
+  restore_name = win_cmd_quote (restore_name);
+#else
+  restore_name = quotearg_n_style (QUOT_ID_RNAME, shell_always_quoting_style,
+                                   restore_name);
 #endif
 
+  sz += strlen (q_local_name) + strlen (restore_name);
+
   if (cmpr_state == NULL)
-    p = cmdline = alloca (sz);
+    {
+      p = cmdline = alloca (sz);
+
+      /* Insert the uuencode command.  It will be reading from the
+         original file, so append the name of the remote file.  */
+      sprintf (p, uu_cmd_fmt, q_local_name);
+      strcat (strcat (p, " "), restore_name);
+    }
   else
     {
       /* Before uuencoding the file, we compress it.  The compressed output
-         goes into a temporary file.  */
-      char * shartemp = tmpnam(NULL);
-      sz += strlen (cmpr_state->cmpr_cmd_fmt) + LOG10_MAX_INT
-        + 4 + sizeof (rm_temp) + 3 * strlen (shartemp);
+         is piped into uuencode.  */
+      sz += strlen (cmpr_state->cmpr_cmd_fmt) + LOG10_MAX_INT;
 
       p = cmdline = alloca (sz);
       sprintf (p, cmpr_state->cmpr_cmd_fmt, cmpr_state->cmpr_level,
                q_local_name);
       p += strlen (p);
-      *(p++) = '>';
-      strcpy(p, shartemp);
-      p += sizeof (shartemp) - 1;
-      *(p++) = '\n';
-      q_local_name = shartemp;
+      /* Append a pipe into uuencode.  */
+      strcat (p, " | ");
+      p += strlen (p);
+      sprintf (p, uu_cmd_fmt, restore_name);
     }
-
-  /* Insert the uuencode command.  It may be reading from the original file,
-     or from a temporary file containing the compressed original.
-     If we compressed it, then we'll need to remove the temp, too.   */
-  sprintf (p, uu_cmd_fmt, q_local_name, restore_name);
-  if (cmpr_state != NULL)
-    sprintf (p + strlen (p), rm_temp, q_local_name);
 
   /* Don't use freadonly_mode because it might be "rb", while we need
      text-mode read here, because we will be reading pure text from
@@ -1440,7 +1420,8 @@ open_shar_input (
      const char *  restore_name,
      const char *  q_restore_name,
      const char ** file_type_p,
-     const char ** file_type_remote_p)
+     const char ** file_type_remote_p,
+     int *pipe_p)
 {
   FILE * infp;
 
@@ -1458,6 +1439,7 @@ open_shar_input (
       infp = fopen (local_name, freadonly_mode);
       if (infp == NULL)
         fserr (SHAR_EXIT_FAILED, "fopen", local_name);
+      *pipe_p = 0;
     }
   else
     {
@@ -1470,6 +1452,7 @@ open_shar_input (
         }
 
       infp = open_encoded_file (local_name, q_local_name, restore_name);
+      *pipe_p = 1;
     }
 
   return infp;
@@ -1497,20 +1480,25 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
 
   if (HAVE_OPT(QUIET_UNSHAR))
     {
-      snprintf (scribble, scribble_size, SM_end_of_part,
-               part_number, part_number + 1);
-      fprintf (output, echo_string_z, scribble);
+      size_t sz = strlen (SM_end_of_part) + 2 * LOG10_MAX_INT;
+      char * bf = scribble_get (sz);
+      snprintf (bf, sz, SM_end_of_part, part_number, part_number + 1);
+      fprintf (output, echo_string_z, bf);
     }
   else
     {
-      snprintf (scribble, scribble_size, SM_s_end_of_part,
-               HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) : SM_word_archive,
-               part_number);
-      fprintf (output, echo_string_z, scribble);
-
-      snprintf (scribble, scribble_size, SM_contin_in_part,
-               restore, (long)part_number + 1);
-      fprintf (output, echo_string_z, scribble);
+      char const * nm =
+        HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) : SM_word_archive;
+      size_t sz1 = strlen (SM_s_end_of_part) + strlen (nm) + LOG10_MAX_INT;
+      size_t sz2 = strlen (SM_contin_in_part) + strlen (restore) + LOG10_MAX_INT;
+      char * bf;
+      if (sz1 < sz2)
+        sz1 = sz2;
+      bf = scribble_get (sz1);
+      snprintf (bf, sz1, SM_s_end_of_part, nm, part_number);
+      fprintf (output, echo_string_z, bf);
+      snprintf (bf, sz1, SM_contin_in_part, restore, (long)part_number + 1);
+      fprintf (output, echo_string_z, bf);
     }
 
   fwrite (split_file_z, sizeof (split_file_z) - 1, 1, output);
@@ -1564,7 +1552,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
   if (! HAVE_OPT(QUIET))
     fprintf (stderr, _("Continuing file %s\n"), output_filename);
   if (! HAVE_OPT(QUIET_UNSHAR))
-    echo_text (SM_continuing, restore, 0);
+    echo_text (SM_continuing, restore, false);
 
   fprintf (output, split_resume_z,
            line_prefix, OPT_ARG(HERE_DELIMITER),
@@ -1578,9 +1566,11 @@ static void
 process_shar_input (FILE * input, off_t * size_left, int * split_flag,
                     char const * restore, char const * q_restore)
 {
+  char * inbf = scribble_get (BUFSIZ);
+
   if (uuencode_file && (cmpr_state != NULL))
     {
-      char * p = fgets (scribble, BUFSIZ, input);
+      char * p = fgets (inbf, BUFSIZ, input);
       char * e;
       if ((p == NULL) || (strncmp (p, mode_fmt_z, 6) != 0))
         return;
@@ -1594,47 +1584,47 @@ process_shar_input (FILE * input, off_t * size_left, int * split_flag,
       fprintf (output, "_sh%05d/%s\n", (int)sharpid, cmpr_state->cmpr_mode);
     }
 
-  while (fgets (scribble, scribble_size, input))
+  while (fgets (inbf, BUFSIZ, input))
     {
       /* Output a line and test the length.  */
 
       if (!HAVE_OPT(FORCE_PREFIX)
-          && ISASCII (scribble[0])
-          && IS_GRAPH (scribble[0])
+          && ISASCII (inbf[0])
+          && IS_GRAPH (inbf[0])
 
           /* Protect lines already starting with the prefix.  */
-          && scribble[0] != line_prefix
+          && inbf[0] != line_prefix
 
           /* Old mail programs interpret ~ directives.  */
-          && scribble[0] != '~'
+          && inbf[0] != '~'
 
           /* Avoid mailing lines which are just '.'.  */
-          && scribble[0] != '.'
+          && inbf[0] != '.'
 
 #if STRNCMP_IS_FAST
-          && strncmp (scribble, OPT_ARG(HERE_DELIMITER), here_delimiter_length)
+          && strncmp (inbf, OPT_ARG(HERE_DELIMITER), here_delimiter_length)
 
           /* unshar -e: avoid 'exit 0'.  */
-          && strncmp (scribble, "exit 0", 6)
+          && strncmp (inbf, "exit 0", 6)
 
           /* Don't let mail prepend a '>'.  */
-          && strncmp (scribble, "From", 4)
+          && strncmp (inbf, "From", 4)
 #else
-          && (scribble[0] != OPT_ARG(HERE_DELIMITER)[0]
-              || strncmp (scribble, OPT_ARG(HERE_DELIMITER),
+          && (inbf[0] != OPT_ARG(HERE_DELIMITER)[0]
+              || strncmp (inbf, OPT_ARG(HERE_DELIMITER),
                           here_delimiter_length))
 
           /* unshar -e: avoid 'exit 0'.  */
-          && (scribble[0] != 'e' || strncmp (scribble, "exit 0", 6))
+          && (inbf[0] != 'e' || strncmp (inbf, "exit 0", 6))
 
           /* Don't let mail prepend a '>'.  */
-          && (scribble[0] != 'F' || strncmp (scribble, "From", 4))
+          && (inbf[0] != 'F' || strncmp (inbf, "From", 4))
 #endif
           )
-        fputs (scribble, output);
+        fputs (inbf, output);
       else
         {
-          fprintf (output, "%c%s", line_prefix, scribble);
+          fprintf (output, "%c%s", line_prefix, inbf);
           (*size_left)--;
         }
 
@@ -1642,13 +1632,13 @@ process_shar_input (FILE * input, off_t * size_left, int * split_flag,
          line contains no character.  This might occur with -T for
          incomplete files, or sometimes when switching to a new file.  */
 
-      if (*scribble && scribble[strlen (scribble) - 1] != '\n')
+      if (*inbf && inbf[strlen (inbf) - 1] != '\n')
         {
           putc ('\n', output);
           (*size_left)--;
         }
 
-      (*size_left) -= CRLF_STRLEN (scribble);
+      (*size_left) -= CRLF_STRLEN (inbf);
       if (WHICH_OPT_WHOLE_SIZE_LIMIT != VALUE_OPT_SPLIT_SIZE_LIMIT)
         continue;
 
@@ -1658,11 +1648,33 @@ process_shar_input (FILE * input, off_t * size_left, int * split_flag,
     }
 }
 
+static void
+print_query_user (char const * rname)
+{
+  size_t rname_len = strlen (rname);
+  size_t sz = strlen (SM_overwriting) + rname_len;
+  char * str_a, * str_b;
+
+  str_a = scribble_get (sz);
+  snprintf (str_a, sz, SM_overwriting, rname);
+
+  sz = strlen (SM_overwrite) + rname_len;
+  str_b = scribble_get (sz);
+  snprintf (str_b, sz, SM_overwrite, rname);
+
+  fprintf (output, query_user_z, str_a, str_b);
+
+  sz = strlen (SM_skipping) + rname_len;
+  str_b = scribble_get (sz);
+  snprintf (str_b, sz, SM_skipping, rname);
+  fprintf (output, query_check_z, SM_extract_aborted, str_b, str_b);
+}
+
 /* Prepare a shar script.  */
 
 static int
 start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
-                    FILE ** fpp, off_t * size_left_p)
+                    FILE ** fpp, off_t * size_left_p, int *pipe_p)
 {
   char const * lname = *lnameq_p;
   char const * rname = *rnameq_p;
@@ -1728,7 +1740,7 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
   else
     {
       *fpp = open_shar_input (lname, *lnameq_p, rname, *rnameq_p,
-                               &file_type, &file_type_remote);
+                              &file_type, &file_type_remote, pipe_p);
       if (*fpp == NULL)
         return 0;
     }
@@ -1740,21 +1752,9 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
       fprintf (output, pre_exist_z, *rnameq_p);
 
       if (HAVE_OPT(QUERY_USER))
-	{
-          char * tmp_str;
-
-          sprintf (scribble, SM_overwriting, rname);
-
-          tmp_str = scribble + strlen(scribble) + 2;
-          sprintf (tmp_str, SM_overwrite, rname);
-          fprintf (output, query_user_z, scribble, tmp_str);
-
-          sprintf (scribble, SM_skipping, rname);
-          fprintf (output, query_check_z, SM_extract_aborted,
-		   scribble, scribble);
-	}
+	print_query_user (rname);
       else
-        echo_text (SM_skip_exist, rname, 0);
+        echo_text (SM_skip_exist, rname, false);
 
       fputs (otherwise_z, output);
     }
@@ -1764,8 +1764,11 @@ start_sharing_file (char const ** lnameq_p, char const ** rnameq_p,
 
   if (! HAVE_OPT(QUIET_UNSHAR))
     {
-      sprintf (scribble, SM_x_extracting, rname, file_type_remote);
-      fprintf (output, echo_string_z, scribble);
+      size_t sz = strlen (SM_x_extracting)
+        + strlen (rname) + strlen (file_type_remote);
+      char * bf = scribble_get(sz);
+      snprintf (bf, sz, SM_x_extracting, rname, file_type_remote);
+      fprintf (output, echo_string_z, bf);
     }
 
   return 1;
@@ -1860,15 +1863,18 @@ shar (const char * lname, const char * rname)
   int    split_flag = 0;          /* file split flag */
   char const * lname_q = lname;
   char const * rname_q = rname;
+  int pipe_p;
 
-  if (! start_sharing_file (&lname_q, &rname_q, &input, &size_left))
+  scribble_free ();
+
+  if (! start_sharing_file (&lname_q, &rname_q, &input, &size_left, &pipe_p))
     return SHAR_EXIT_FAILED;
 
   if (struct_stat.st_size == 0)
     {
       /* Just touch the file, or empty it if it exists.  */
 
-      fprintf (output, "  > %s &&\n", rname_q);
+      fprintf (output, " > %s &&\n", rname_q);
     }
 
   else
@@ -1898,20 +1904,30 @@ shar (const char * lname, const char * rname)
 
       process_shar_input (input, &size_left, &split_flag, rname, rname_q);
 
-      fclose (input);
-      while (wait (NULL) >= 0)
-	;
+      if (!pipe_p)
+        fclose (input);
+      else
+        {
+#if HAVE_WORKING_FORK
+          fclose (input);
+          while (wait (NULL) >= 0)
+            ;
+#else
+          if (pclose (input))
+            fserr (SHAR_EXIT_FAILED, _("call"), "pclose");
+#endif
+        }
 
       fprintf (output, "%s\n", OPT_ARG(HERE_DELIMITER));
       if (split_flag && ! HAVE_OPT(QUIET_UNSHAR))
-        echo_text (SM_file_complete, rname, 1);
+        echo_text (SM_file_complete, rname, true);
 
       /* If this file was uuencoded w/Split, decode it and drop the temp.  */
 
       if (uuencode_file && HAVE_OPT(NO_PIPING))
 	{
 	  if (! HAVE_OPT(QUIET_UNSHAR))
-            echo_text (SM_uudec_file, rname, 1);
+            echo_text (SM_uudec_file, rname, true);
 
           fwrite (shar_decode_z, sizeof (shar_decode_z) - 1, 1, output);
 	}
@@ -1920,7 +1936,7 @@ shar (const char * lname, const char * rname)
       if (cmpr_state != NULL)
         {
 	  if (! HAVE_OPT(QUIET_UNSHAR))
-            echo_text (cmpr_state->cmpr_unnote, rname, 1);
+            echo_text (cmpr_state->cmpr_unnote, rname, true);
           fprintf (output, cmpr_state->cmpr_unpack, rname_q);
         }
     }
@@ -2118,8 +2134,6 @@ configure_shar (int * argc_p, char *** argv_p)
   compress_compaction.cmpr_level = DESC(BITS_PER_CODE).optArg.argInt;
 #endif
 
-  scribble = xmalloc (scribble_size);
-
   /* Set defaults for unset options.  */
   if (! HAVE_OPT(SUBMITTER))
     set_submitter ();
@@ -2152,15 +2166,19 @@ configure_shar (int * argc_p, char *** argv_p)
     {
       char ** list;
       int max_argc = 32;
+      char * get_buf = scribble_get (BUFSIZ);
 
       *argc_p = 0;
 
       list = (char **) xmalloc (max_argc * sizeof (char *));
-      *scribble = NUL;
+
+#ifdef __MINGW32__
+      _setmode (fileno (stdin), _O_BINARY);
+#endif
 
       for (;;)
         {
-          char * pz = fgets (scribble, scribble_size, stdin);
+          char * pz = fgets (get_buf, BUFSIZ, stdin);
           if (pz == NULL)
             break;
 
@@ -2180,6 +2198,7 @@ configure_shar (int * argc_p, char *** argv_p)
       opt_idx = 0;
     }
 
+  scribble_free ();
   /* Diagnose various usage errors.  */
 
   if (opt_idx >= *argc_p)
@@ -2305,6 +2324,7 @@ initialize(int * argcp, char *** argvp)
   /* Set the text message domain.  */
   bindtextdomain (PACKAGE, LOCALEDIR);
   textdomain (PACKAGE);
+  scribble_init ();
 
   opt_idx = optionProcess (&sharOptions, *argcp, *argvp);
   if (opt_idx == *argcp)
@@ -2372,6 +2392,7 @@ main (int argc, char ** argv)
                "${lock_dir}", 1);
 
   close_output (0);
+  scribble_deinit ();
   exit (status);
 }
 /*

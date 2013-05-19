@@ -114,7 +114,7 @@ set_up_src_dir() {
     do
         autogen $def
         autogen -b ${def%-opts.def} -Tagman-cmd.tpl $def
-        autogen -Tagtexi-cmd.tpl -DSECTION=chapter $def
+        autogen -Tagtexi-cmd.tpl -DLEVEL=section $def
         mv -f ${def%-opts.def}.1 invoke-${def%-opts.def}.texi ../doc/.
         rm -f invoke-${def%-opts.def}.menu
     done
@@ -292,6 +292,21 @@ setup_configure() {
       ${gltool} --import ${gnulib_libs} 2>&1
     } | sed '1,/^You may need to add #include/d' | \
       tee import-log.txt
+
+    {
+        sed '/^# *INVOKE_LIBOPTS_MACROS/q' configure.ac
+        printf '['
+        for f in $(egrep '#include  *<' import-log.txt | \
+            sed 's/.*<//;s/>.*//')
+        do
+            f=$(echo "$f" | tr -- '-./' '___')
+            echo ac_cv_header_${f}=yes
+        done
+        printf ']'
+        sed '1,/^# *INVOKE_LIBOPTS_MACROS/d' configure.ac
+    } > configure.tmp
+    mv -f configure.tmp configure.ac
+
     echo "${extra_dist}" >> lib/Makefile.am
     test -f fdl.texi && mv fdl.texi doc/.
     AUTOPOINT=true autoreconf --force --install -Wall || true

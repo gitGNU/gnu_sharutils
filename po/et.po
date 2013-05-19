@@ -5,15 +5,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.13.4pre9\n"
+"Project-Id-Version: sharutils 4.13.5\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-03-07 13:33-0800\n"
-"PO-Revision-Date: 2013-03-22 13:04+0200\n"
+"POT-Creation-Date: 2013-04-12 17:27-0700\n"
+"PO-Revision-Date: 2013-04-15 15:26+0300\n"
 "Last-Translator: Toomas Soome <Toomas.Soome@microlink.ee>\n"
 "Language-Team: Estonian <linux-ee@lists.eenet.ee>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-15\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS:  This is a phony function generated for the purpose of
@@ -25,7 +25,7 @@ msgstr ""
 #.
 #: src/scripts.x:449
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr "M‰rkus: md5 kontrollsummasid ei kontrolli. Kaaluge GNU coreutils paigaldamist."
+msgstr "M√§rkus: md5 kontrollsummasid ei kontrolli. Kaaluge GNU coreutils paigaldamist."
 
 #: src/scripts.x:450
 msgid ""
@@ -43,7 +43,7 @@ msgstr "lukkude kataloog %s on olemas"
 #: src/scripts.x:453
 #, c-format
 msgid "failed to create %s lock directory"
-msgstr "lukkude kataloogi %s loomine ebaınnestus"
+msgstr "lukkude kataloogi %s loomine eba√µnnestus"
 
 #: src/scripts.x:454
 #, c-format
@@ -53,7 +53,7 @@ msgstr "x - lukkude kataloog %s loodud."
 #: src/scripts.x:455
 #, c-format
 msgid "x - failed to create lock directory %s."
-msgstr "x - lukkude kataloogi %s loomine ebaınnestus."
+msgstr "x - lukkude kataloogi %s loomine eba√µnnestus."
 
 #: src/scripts.x:456
 #, c-format
@@ -63,7 +63,7 @@ msgstr "x - tekitasin kataloogi %s."
 #: src/scripts.x:457
 #, c-format
 msgid "x - failed to create directory %s."
-msgstr "x - kataloogi %s loomine ebaınnestus."
+msgstr "x - kataloogi %s loomine eba√µnnestus."
 
 #: src/scripts.x:458
 msgid "yes"
@@ -71,7 +71,7 @@ msgstr "jah"
 
 #: src/scripts.x:459
 msgid "overwrite this file"
-msgstr "kirjutan selle faili ¸le"
+msgstr "kirjutan selle faili √ºle"
 
 #: src/scripts.x:460
 msgid "no"
@@ -79,23 +79,23 @@ msgstr "ei"
 
 #: src/scripts.x:461
 msgid "skip this file"
-msgstr "j‰tan selle faili vahele"
+msgstr "j√§tan selle faili vahele"
 
 #: src/scripts.x:462
 msgid "all"
-msgstr "kıik"
+msgstr "k√µik"
 
 #: src/scripts.x:463
 msgid "overwrite all files"
-msgstr "kirjutan kıik failid ¸le"
+msgstr "kirjutan k√µik failid √ºle"
 
 #: src/scripts.x:464
 msgid "none"
-msgstr "mitte ¸htegi"
+msgstr "mitte √ºhtegi"
 
 #: src/scripts.x:465
 msgid "overwrite no files"
-msgstr "ei kirjuta midagi ¸le"
+msgstr "ei kirjuta midagi √ºle"
 
 #: src/scripts.x:466
 msgid "help"
@@ -107,16 +107,16 @@ msgstr "selgita valikuid"
 
 #: src/scripts.x:468
 msgid "quit"
-msgstr "v‰lju"
+msgstr "v√§lju"
 
 #: src/scripts.x:469
 msgid "exit immediately"
-msgstr "lıpeta kohe"
+msgstr "l√µpeta kohe"
 
 #: src/scripts.x:470
 #, c-format
 msgid "restore of %s failed"
-msgstr "%s taastame ebaınnestus"
+msgstr "%s taastame eba√µnnestus"
 
 #: src/scripts.x:471
 #, c-format
@@ -126,19 +126,19 @@ msgstr "  chmod %04o %s\n"
 #: src/scripts.x:472
 #, c-format
 msgid "End of part %d, continue with part %d"
-msgstr "Osa %d lıpp, j‰tkan osaga %d"
+msgstr "Osa %d l√µpp, j√§tkan osaga %d"
 
 #: src/scripts.x:473
 #, c-format
 msgid "End of %s part %d"
-msgstr "%s Osa %d lıpp"
+msgstr "%s Osa %d l√µpp"
 
 #: src/scripts.x:474
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
 msgstr "hoiatus taastamisel:  %s suurus ei ole %s"
 
-#: src/scripts.x:475 src/shar.c:1304
+#: src/scripts.x:475 src/shar.c:1469
 msgid "(text)"
 msgstr "(tekst)"
 
@@ -165,7 +165,7 @@ msgstr "arhiiv"
 #: src/scripts.x:481
 #, c-format
 msgid "File %s is continued in part %d"
-msgstr "Fail %s j‰tkub osas %d"
+msgstr "Fail %s j√§tkub osas %d"
 
 #: src/scripts.x:482
 msgid "Please unpack part 1 first!"
@@ -173,50 +173,50 @@ msgstr "Palun pakkige lahti esmalt osa 1!"
 
 #: src/scripts.x:483
 msgid "Please unpack part ${shar_sequence} next!"
-msgstr "Palun pakkige j‰rgmisena lahti osa ${shar_sequence}!"
+msgstr "Palun pakkige j√§rgmisena lahti osa ${shar_sequence}!"
 
 #: src/scripts.x:484
 #, c-format
 msgid "x - STILL SKIPPING %s"
-msgstr "x - JƒTAN %s IKKA VAHELE"
+msgstr "x - J√ÑTAN %s IKKA VAHELE"
 
 #: src/scripts.x:485
 #, c-format
 msgid "continuing file %s"
-msgstr "j‰tkan faili %s"
+msgstr "j√§tkan faili %s"
 
 #: src/scripts.x:486
 msgid "(empty)"
-msgstr "(t¸hi)"
+msgstr "(t√ºhi)"
 
 #: src/scripts.x:487
 #, c-format
 msgid "x - overwriting %s"
-msgstr "x - kirjutan %s ¸le"
+msgstr "x - kirjutan %s √ºle"
 
 #: src/scripts.x:488
 #, c-format
 msgid "overwrite %s"
-msgstr "kirjutan %s ¸le"
+msgstr "kirjutan %s √ºle"
 
 #: src/scripts.x:489
 #, c-format
 msgid "SKIPPING %s"
-msgstr "JƒTAN %s VAHELE"
+msgstr "J√ÑTAN %s VAHELE"
 
 #: src/scripts.x:490
 msgid "extraction aborted"
-msgstr "v‰ljastamine katkestatud"
+msgstr "v√§ljastamine katkestatud"
 
 #: src/scripts.x:491
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
-msgstr "x - JƒTAN %s VAHELE (fail on juba olemas)"
+msgstr "x - J√ÑTAN %s VAHELE (fail on juba olemas)"
 
 #: src/scripts.x:492
 #, c-format
 msgid "x - extracting %s %s"
-msgstr "x - v‰ljastan %s %s"
+msgstr "x - v√§ljastan %s %s"
 
 #: src/scripts.x:493
 #, c-format
@@ -230,7 +230,7 @@ msgstr "uudekodeerin faili %s"
 
 #: src/scripts.x:495
 msgid "MD5 check failed"
-msgstr "MD5 kontroll ebaınnestus"
+msgstr "MD5 kontroll eba√µnnestus"
 
 #: src/scripts.x:496
 msgid "You have unpacked the last part"
@@ -244,7 +244,7 @@ msgstr "x - eemaldasin luku kataloogi %s."
 #: src/scripts.x:498
 #, c-format
 msgid "x - failed to remove lock directory %s."
-msgstr "x - lukkude kataloogi eemaldamine ebaınnestus %s."
+msgstr "x - lukkude kataloogi eemaldamine eba√µnnestus %s."
 
 #: src/shar-opts.c:1867
 #, c-format
@@ -268,7 +268,7 @@ msgstr "fserr %d (%s) teostab '%s' failil %s\n"
 #: src/shar-opts.c:2185 src/unshar-opts.c:859 src/uudecode-opts.c:633
 #: src/uuencode-opts.c:584
 msgid "No memory for duping translated strings\n"
-msgstr "Tılgitud sınede jaoks puudub vaba m‰lu\n"
+msgstr "T√µlgitud s√µnede jaoks puudub vaba m√§lu\n"
 
 #. TRANSLATORS:
 #.
@@ -289,17 +289,17 @@ msgstr "Tılgitud sınede jaoks puudub vaba m‰lu\n"
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2253
 msgid ""
-"shar (GNU sharutils) 4.13.4pre9\n"
+"shar (GNU sharutils) 4.13.5\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.13.4pre9\n"
-"Autoriıigused © 1994-2013 Free Software Foundation, Inc., kıik ıigused on\n"
+"shar (GNU sharutils) 4.13.5\n"
+"Autori√µigused ¬© 1994-2013 Free Software Foundation, Inc., k√µik √µigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
-"ja levitamiseks vastavalt GNU ‹ldise Avaliku Litsensi versioon 3 vıi\n"
+"ja levitamiseks vastavalt GNU √úldise Avaliku Litsensi versioon 3 v√µi\n"
 "uuema tingimustele <http://gnu.org/licenses/gpl.html>\n"
 
 #: src/shar-opts.c:2260
@@ -310,8 +310,8 @@ msgid ""
 "version.\n"
 "\n"
 msgstr ""
-"shar on vaba tarkvara: teil on lubatud seda muuta ja/vıi levitada\n"
-"vastavalt GNU ‹ldise Avaliku Litsensi versioon 3, vıi (teie valikul)\n"
+"shar on vaba tarkvara: teil on lubatud seda muuta ja/v√µi levitada\n"
+"vastavalt GNU √úldise Avaliku Litsensi versioon 3, v√µi (teie valikul)\n"
 "uuema, tingimustele.\n"
 "\n"
 
@@ -324,7 +324,7 @@ msgid ""
 "\n"
 msgstr ""
 "shar levitatakse lootuses et see on kasutatav, aga ILMA IGASUGUSE\n"
-"GARANTIITA. Detailid leiate GNU ‹ldisest Avalikust Litsensist.\n"
+"GARANTIITA. Detailid leiate GNU √úldisest Avalikust Litsensist.\n"
 "\n"
 
 #: src/shar-opts.c:2268 src/unshar-opts.c:942 src/uudecode-opts.c:716
@@ -333,7 +333,7 @@ msgid ""
 "You should have received a copy of the GNU General Public License along\n"
 "with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
 msgstr ""
-"Selle programmiga koos peaks olema ka koopia GNU ‹ldisest Avalikust\n"
+"Selle programmiga koos peaks olema ka koopia GNU √úldisest Avalikust\n"
 "Litsensist. Vastasel korral leiate selle aadressilt\n"
 "<http://www.gnu.org/licenses/>.\n"
 
@@ -344,7 +344,7 @@ msgid ""
 "Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
 msgstr ""
 "shar (GNU sharutils) - loo shelli arhiiv\n"
-"Kasutamine:  %s [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>...]\n"
+"Kasutamine:  %s [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>...]\n"
 
 #: src/shar-opts.c:2276
 msgid ""
@@ -365,12 +365,12 @@ msgid ""
 "mailable 'tar' archive.\n"
 "\n"
 msgstr ""
-"'shar' loob \"shelli arhiivid\" (vıi shar failid), mis on tekstifailid ja\n"
-"on vıimalik saata e-postiga. Sellised failid saab hiljem lahti pakkida,\n"
-"k‰ivitades need k‰suga '/bin/sh'. Saadav arhiiv kirjutatakse standard\n"
-"v‰ljundisse, kui vıtit '-o' ei kasutatud. Paljud lisavıimalused annavad\n"
-"arhiivide loomisele suure paindlikkuse. Arhiivid vıivad olla ¸sna lihtsad\n"
-"('--vanilla-operation') vıi ka postitamise kılblikud 'tar' arhiivid.\n"
+"'shar' loob \"shelli arhiivid\" (v√µi shar failid), mis on tekstifailid ja\n"
+"on v√µimalik saata e-postiga. Sellised failid saab hiljem lahti pakkida,\n"
+"k√§ivitades need k√§suga '/bin/sh'. Saadav arhiiv kirjutatakse standard\n"
+"v√§ljundisse, kui v√µtit '-o' ei kasutatud. Paljud lisav√µimalused annavad\n"
+"arhiivide loomisele suure paindlikkuse. Arhiivid v√µivad olla √ºsna lihtsad\n"
+"('--vanilla-operation') v√µi ka postitamise k√µlblikud 'tar' arhiivid.\n"
 "\n"
 
 #: src/shar-opts.c:2287 src/shar-opts.c:2381
@@ -381,24 +381,24 @@ msgid ""
 "arguments.\n"
 "\n"
 msgstr ""
-"Vıtmeid vıib esitada suvalises j‰rjekorras, kuni tuvastatakse argument 'fail'.\n"
-"Kui kasutati vıtit '--intermix-type', on lubatud failide vahel kasutada\n"
-"t‰iendavaid pakkimise ja kodeerimise vıtmeid.\n"
+"V√µtmeid v√µib esitada suvalises j√§rjekorras, kuni tuvastatakse argument 'fail'.\n"
+"Kui kasutati v√µtit '--intermix-type', on lubatud failide vahel kasutada\n"
+"t√§iendavaid pakkimise ja kodeerimise v√µtmeid.\n"
 "\n"
 
 #: src/shar-opts.c:2291
 msgid ""
 "Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
 "you are emailing files, please consider mime-encoded files.  If you do\n"
-"'uuencode', base 64 is the preferred encoding method.\n"
+"'uuencode', base64 is the preferred encoding method.\n"
 msgstr ""
 "Kuigi see programm toetab 'uuencode' faile, ei ole nende kasutamine soovitatav.\n"
 "Kui te soovite faile postitada, kasutage pigem mime-kodeeritud faile.\n"
-"Kui te siiski kasutate 'uuencode', on eelistatud kodeerimismeetod base 64\n"
+"Kui te siiski kasutate 'uuencode', on eelistatud kodeerimismeetod base64.\n"
 
 #: src/shar-opts.c:2296
-msgid "shar (GNU sharutils) 4.13.4pre9"
-msgstr "shar (GNU sharutils) 4.13.4pre9"
+msgid "shar (GNU sharutils) 4.13.5"
+msgstr "shar (GNU sharutils) 4.13.5"
 
 #: src/shar-opts.c:2299
 msgid ""
@@ -407,7 +407,7 @@ msgid ""
 "\n"
 msgstr ""
 "shar (GNU sharutils) - loo shelli arhiiv\n"
-"Kasutamine:  shar [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>...]\n"
+"Kasutamine:  shar [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>...]\n"
 
 #: src/shar-opts.c:2301
 msgid ""
@@ -415,9 +415,9 @@ msgid ""
 "   -p, --intermix-type        specify compression for input files\n"
 "                                - prohibits the option 'vanilla-operation'\n"
 msgstr ""
-"tihendamise m‰‰ramine:\n"
-"   -p, --intermix-type        m‰‰ra sisendfailide tihendamine\n"
-"                                - keelab vıtme 'vanilla-operation'\n"
+"tihendamise m√§√§ramine:\n"
+"   -p, --intermix-type        m√§√§ra sisendfailide tihendamine\n"
+"                                - keelab v√µtme 'vanilla-operation'\n"
 
 #: src/shar-opts.c:2304
 msgid ""
@@ -426,9 +426,9 @@ msgid ""
 "                                - may appear multiple times\n"
 "                                - it must be known to shar: xz gzip bzip2\n"
 msgstr ""
-"   -C, --compactor=PROG       m‰‰rab tihendamise programmi\n"
-"                                - keelab vıtme 'vanilla-operation'\n"
-"                                - vıib kasutada korduvalt\n"
+"   -C, --compactor=PROG       m√§√§rab tihendamise programmi\n"
+"                                - keelab v√µtme 'vanilla-operation'\n"
+"                                - v√µib kasutada korduvalt\n"
 "                                - peab olema sharile tuttav: xz gzip bzip2\n"
 
 #: src/shar-opts.c:2308
@@ -438,7 +438,7 @@ msgid ""
 "                                - it must be in the range: 1 to 9\n"
 "\n"
 msgstr ""
-"   -g, --level-of-compression=num m‰‰ra tihendamise tase\n"
+"   -g, --level-of-compression=num m√§√§ra tihendamise tase\n"
 "                                - Peab olema vahemikus: 1 kuni 9\n"
 
 #: src/shar-opts.c:2311
@@ -454,7 +454,7 @@ msgid ""
 "   -B, --uuencode             treat all files as binary\n"
 "                                - an alternate for mixed-uuencode\n"
 msgstr ""
-"   -B, --uuencode             k‰sitle kıiki faile binaarfailidena\n"
+"   -B, --uuencode             k√§sitle k√µiki faile binaarfailidena\n"
 "                                - mixed-uuencode alternatiiv\n"
 
 #: src/shar-opts.c:2315
@@ -463,17 +463,17 @@ msgid ""
 "                                - an alternate for mixed-uuencode\n"
 "\n"
 msgstr ""
-"   -T, --text-files           k‰sitle kıiki faile tekstifailidena\n"
+"   -T, --text-files           k√§sitle k√µiki faile tekstifailidena\n"
 "                                - mixed-uuencode alternatiiv\n"
 "\n"
 
 #: src/shar-opts.c:2317
 msgid "Specifying file selection and output modes:\n"
-msgstr "Failide valik ja v‰ljundi mood:\n"
+msgstr "Failide valik ja v√§ljundi mood:\n"
 
 #: src/shar-opts.c:2318
 msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
-msgstr "   -o, --output-prefix=str    v‰ljasta v‰ljund faili  PREFIKS.nn\n"
+msgstr "   -o, --output-prefix=str    v√§ljasta v√§ljund faili  PREFIKS.nn\n"
 
 #: src/shar-opts.c:2319
 msgid ""
@@ -484,11 +484,11 @@ msgid ""
 "                                - it must lie in one of the ranges:\n"
 "                                  8 to 1023, or 8192 to 4194304\n"
 msgstr ""
-"   -l, --whole-size-limit=num t¸kelda arhiiv, mitte failid, antud suurusele\n"
-"                                - nıuab vıtit: output-prefix\n"
+"   -l, --whole-size-limit=num t√ºkelda arhiiv, mitte failid, antud suurusele\n"
+"                                - n√µuab v√µtit: output-prefix\n"
 "                                - skaleerub sufiksiga: k/K/m/M/g/G\n"
 "                                - Peab olema vahemikus:\n"
-"                                  8 kuni 1023, vıi 8192 kuni 4194304\n"
+"                                  8 kuni 1023, v√µi 8192 kuni 4194304\n"
 
 #: src/shar-opts.c:2325
 msgid ""
@@ -500,12 +500,12 @@ msgid ""
 "                                  8 to 1023, or 8192 to 4194304\n"
 "                                - an alternate for 'whole-size-limit'\n"
 msgstr ""
-"   -L, --split-size-limit=num t¸kelda arhiiv vıi failid antud suurusele\n"
-"                                - nıuab vıtit: output-prefix\n"
+"   -L, --split-size-limit=num t√ºkelda arhiiv v√µi failid antud suurusele\n"
+"                                - n√µuab v√µtit: output-prefix\n"
 "                                - skaleerub sufiksiga: k/K/m/M/g/G\n"
 "                                - Peab olema vahemikus:\n"
-"                                  8 kuni 1023, vıi 8192 kuni 4194304\n"
-"                                - on alternatiiv vıtmele whole-size-limit\n"
+"                                  8 kuni 1023, v√µi 8192 kuni 4194304\n"
+"                                - on alternatiiv v√µtmele whole-size-limit\n"
 
 #: src/shar-opts.c:2332
 msgid ""
@@ -520,31 +520,31 @@ msgid ""
 "Controlling the shar headers:\n"
 "   -n, --archive-name=NAME    use NAME to document the archive\n"
 msgstr ""
-"shar p‰iste juhtimine:\n"
-"   -n, --archive-name=NIMI    m‰‰ra arhiivi nimi\n"
+"shar p√§iste juhtimine:\n"
+"   -n, --archive-name=NIMI    m√§√§ra arhiivi nimi\n"
 
 #: src/shar-opts.c:2335
 msgid "   -s, --submitter=NAME       override the submitter name with NAME\n"
-msgstr "   -s, --submitter=NIMI       m‰‰ra postitaja nimi\n"
+msgstr "   -s, --submitter=NIMI       m√§√§ra postitaja nimi\n"
 
 #: src/shar-opts.c:2336
 msgid ""
 "   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
 "                                - requires the option 'archive-name'\n"
 msgstr ""
-"   -a, --net-headers          v‰ljasta Submitted-by: ja Archive-name: p‰ised\n"
-"                                - nıuab vıtit 'archive-name'\n"
+"   -a, --net-headers          v√§ljasta Submitted-by: ja Archive-name: p√§ised\n"
+"                                - n√µuab v√µtit 'archive-name'\n"
 
 #: src/shar-opts.c:2338
 msgid "   -c, --cut-mark             start the shar with a cut line\n"
-msgstr "   -c, --cut-mark             alusta shar lıikereaga\n"
+msgstr "   -c, --cut-mark             alusta shar l√µikereaga\n"
 
 #: src/shar-opts.c:2339
 msgid ""
 "   -t, --translate            translate messages in the script\n"
 "\n"
 msgstr ""
-"   -t, --translate            tılgi skriptis olevad teated\n"
+"   -t, --translate            t√µlgi skriptis olevad teated\n"
 "\n"
 
 #: src/shar-opts.c:2340
@@ -552,23 +552,23 @@ msgid ""
 "Protecting against transmission issues:\n"
 "       --no-character-count   do not use `wc -c' to check size\n"
 msgstr ""
-"Kaitse ¸lekande probleemide vastu:\n"
-"       --no-character-count   ‰ra kasuta suuruse kontrolliks `wc -c'\n"
+"Kaitse √ºlekande probleemide vastu:\n"
+"       --no-character-count   √§ra kasuta suuruse kontrolliks `wc -c'\n"
 
 #: src/shar-opts.c:2342
 msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
-msgstr "   -D, --no-md5-digest        ‰ra kasuta kontrolliks md5sum\n"
+msgstr "   -D, --no-md5-digest        √§ra kasuta kontrolliks md5sum\n"
 
 #: src/shar-opts.c:2343
 msgid "   -F, --force-prefix         apply the prefix character on every line\n"
-msgstr "   -F, --force-prefix         kasuta igal real prefiks s¸mbolit\n"
+msgstr "   -F, --force-prefix         kasuta igal real prefiks s√ºmbolit\n"
 
 #: src/shar-opts.c:2344
 msgid ""
 "   -d, --here-delimiter=DELIM use DELIM to delimit the files\n"
 "\n"
 msgstr ""
-"   -d, --here-delimiter=str   m‰‰ra failide eraldaja\n"
+"   -d, --here-delimiter=str   m√§√§ra failide eraldaja\n"
 "\n"
 
 #: src/shar-opts.c:2345
@@ -577,7 +577,7 @@ msgid ""
 "   -V, --vanilla-operation    produce very simple shars\n"
 msgstr ""
 "Erinevat liiki shar failide loomine:\n"
-"   -V, --vanilla-operation    loo v‰ga lihtne shar\n"
+"   -V, --vanilla-operation    loo v√§ga lihtne shar\n"
 
 #: src/shar-opts.c:2347
 msgid "   -P, --no-piping            use temporary files between programs\n"
@@ -585,30 +585,30 @@ msgstr "   -P, --no-piping            kasuta programmide vahel ajutisi faile\n"
 
 #: src/shar-opts.c:2348
 msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
-msgstr "   -x, --no-check-existing    kirjuta olemasolevad failid ¸le\n"
+msgstr "   -x, --no-check-existing    kirjuta olemasolevad failid √ºle\n"
 
 #: src/shar-opts.c:2349
 msgid ""
 "   -X, --query-user           ask user before overwriting files\n"
 "                                - prohibits the option 'vanilla-operation'\n"
 msgstr ""
-"   -X, --query-user           k¸si enne faili ¸lekirjutamist\n"
-"                                - keelab vıtme 'vanilla-operation'\n"
+"   -X, --query-user           k√ºsi enne faili √ºlekirjutamist\n"
+"                                - keelab v√µtme 'vanilla-operation'\n"
 
 #: src/shar-opts.c:2351
 msgid "   -m, --no-timestamp         do not restore modification times\n"
-msgstr "   -m, --no-timestamp         ‰ra taasta muutmise aega\n"
+msgstr "   -m, --no-timestamp         √§ra taasta muutmise aega\n"
 
 #: src/shar-opts.c:2352
 msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
-msgstr "   -Q, --quiet-unshar         v‰ldi taastamisel teateid\n"
+msgstr "   -Q, --quiet-unshar         v√§ldi taastamisel teateid\n"
 
 #: src/shar-opts.c:2353
 msgid ""
 "   -f, --basename             restore in one directory, despite hierarchy\n"
 "\n"
 msgstr ""
-"   -f, --basename             sıltumata hierarhiast, taasta ¸hte kataloogi\n"
+"   -f, --basename             s√µltumata hierarhiast, taasta √ºhte kataloogi\n"
 "\n"
 
 #: src/shar-opts.c:2354
@@ -616,15 +616,15 @@ msgid ""
 "Internationalization options:\n"
 "       --no-i18n              do not internationalize\n"
 msgstr ""
-"Tılkimse vıtmed:\n"
-"       --no-i18n              ‰ra tılgi teateid\n"
+"T√µlkimse v√µtmed:\n"
+"       --no-i18n              √§ra t√µlgi teateid\n"
 
 #: src/shar-opts.c:2356
 msgid ""
 "       --print-text-domain-dir  print directory with shar messages\n"
 "\n"
 msgstr ""
-"       --print-text-domain-dir  n‰ita shar teadete kataloog\n"
+"       --print-text-domain-dir  n√§ita shar teadete kataloog\n"
 "\n"
 
 #: src/shar-opts.c:2357
@@ -632,8 +632,8 @@ msgid ""
 "User feedback/entertainment:\n"
 "   -q, --quiet                do not output verbose messages\n"
 msgstr ""
-"Kasutaja tagasiside/lıbustamine:\n"
-"   -q, --quiet                ‰ra v‰ljasta teateid\n"
+"Kasutaja tagasiside/l√µbustamine:\n"
+"   -q, --quiet                √§ra v√§ljasta teateid\n"
 
 #: src/shar-opts.c:2359
 msgid ""
@@ -645,26 +645,26 @@ msgstr ""
 
 #: src/shar-opts.c:2360
 msgid "Version, usage and configuration options:\n"
-msgstr "Versiooni, kasutamise ja konfiguratsiooni vıtmed:\n"
+msgstr "Versiooni, kasutamise ja konfiguratsiooni v√µtmed:\n"
 
 #: src/shar-opts.c:2361 src/unshar-opts.c:974 src/uudecode-opts.c:750
 #: src/uuencode-opts.c:697
 msgid "   -v, --version[=MODE]       output version information and exit\n"
-msgstr "   -v, --version[=MOOD]       v‰ljasta inult versiooni info\n"
+msgstr "   -v, --version[=MOOD]       v√§ljasta inult versiooni info\n"
 
 #: src/shar-opts.c:2362 src/unshar-opts.c:975 src/uudecode-opts.c:751
 #: src/uuencode-opts.c:698
 msgid "   -h, --help                 display extended usage information and exit\n"
-msgstr "   -h, --help                 v‰ljasta ainult kasutamise info\n"
+msgstr "   -h, --help                 v√§ljasta ainult kasutamise info\n"
 
 #: src/shar-opts.c:2363 src/unshar-opts.c:976 src/uudecode-opts.c:752
 #: src/uuencode-opts.c:699
 msgid "   -!, --more-help            extended usage information passed thru pager\n"
-msgstr "   -!, --more-help            v‰ljasta kasutamise info lehitsemise programmiga\n"
+msgstr "   -!, --more-help            v√§ljasta kasutamise info lehitsemise programmiga\n"
 
 #: src/shar-opts.c:2364 src/uudecode-opts.c:753 src/uuencode-opts.c:700
 msgid "   -R, --save-opts[=FILE]     save the option state to a config file FILE\n"
-msgstr "   -R, --save-opts[=FAIL]     salvesta vıtmed konfiguratsiooni faili\n"
+msgstr "   -R, --save-opts[=FAIL]     salvesta v√µtmed konfiguratsiooni faili\n"
 
 #: src/shar-opts.c:2365 src/uudecode-opts.c:754 src/uuencode-opts.c:701
 msgid ""
@@ -673,9 +673,9 @@ msgid ""
 "                                - may appear multiple times\n"
 "\n"
 msgstr ""
-"   -r, --load-opts=FAIL       lae vıtmed konfiguratsiooni failist\n"
-"                                - blokeerib vıti '--no-load-opts'\n"
-"                                - vıib kasutada korduvalt\n"
+"   -r, --load-opts=FAIL       lae v√µtmed konfiguratsiooni failist\n"
+"                                - blokeerib v√µti '--no-load-opts'\n"
+"                                - v√µib kasutada korduvalt\n"
 "\n"
 
 #: src/shar-opts.c:2368
@@ -686,7 +686,7 @@ msgid ""
 "standard input.  Standard input must not be a terminal.\n"
 "\n"
 msgstr ""
-"Vıtmed kirjeldatakse kas topeltkriipsu ja nimega vıi kriipsu ja t‰hega.\n"
+"V√µtmed kirjeldatakse kas topeltkriipsu ja nimega v√µi kriipsu ja t√§hega.\n"
 "Kui faile ei antud, dekodeeritakse standard sisend. Standard sisend ei tohi\n"
 "olla terminal.\n"
 "\n"
@@ -694,7 +694,7 @@ msgstr ""
 #: src/shar-opts.c:2372 src/unshar-opts.c:986 src/uudecode-opts.c:760
 #: src/uuencode-opts.c:706
 msgid "The following option preset mechanisms are supported:\n"
-msgstr "Sobivad j‰rgnevad vıtmete esitamise mehhanismid:\n"
+msgstr "Sobivad j√§rgnevad v√µtmete esitamise mehhanismid:\n"
 
 #: src/shar-opts.c:2373
 msgid ""
@@ -711,12 +711,12 @@ msgid ""
 msgstr ""
 " - loen faili $HOME/.sharrc\n"
 "\n"
-"'shar' loob \"shelli arhiivid\" (vıi shar failid), mis on tekstifailid ja\n"
-"on vıimalik saata e-postiga. Sellised failid saab hiljem lahti pakkida,\n"
-"k‰ivitades need k‰suga '/bin/sh'. Saadav arhiiv kirjutatakse standard\n"
-"v‰ljundisse, kui vıtit '-o' ei kasutatud. Paljud lisavıimalused annavad\n"
-"arhiivide loomisele suure paindlikkuse. Arhiivid vıivad olla ¸sna lihtsad\n"
-"('--vanilla-operation') vıi ka postitamise kılblikud 'tar' arhiivid.\n"
+"'shar' loob \"shelli arhiivid\" (v√µi shar failid), mis on tekstifailid ja\n"
+"on v√µimalik saata e-postiga. Sellised failid saab hiljem lahti pakkida,\n"
+"k√§ivitades need k√§suga '/bin/sh'. Saadav arhiiv kirjutatakse standard\n"
+"v√§ljundisse, kui v√µtit '-o' ei kasutatud. Paljud lisav√µimalused annavad\n"
+"arhiivide loomisele suure paindlikkuse. Arhiivid v√µivad olla √ºsna lihtsad\n"
+"('--vanilla-operation') v√µi ka postitamise k√µlblikud 'tar' arhiivid.\n"
 "\n"
 
 #: src/shar-opts.c:2385
@@ -740,20 +740,20 @@ msgid ""
 "Try 'shar --help' for more information.\n"
 msgstr ""
 "shar (GNU sharutils) - loo shelli arhiiv\n"
-"Kasutamine:  shar [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>...]\n"
+"Kasutamine:  shar [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>...]\n"
 
 #: ../autoopts.c:60 ../autoopts.c:86
 #, c-format
 msgid "allocation of %d bytes failed\n"
-msgstr "m‰lu k¸simine %d baidi jaoks ebaınnestus\n"
+msgstr "m√§lu k√ºsimine %d baidi jaoks eba√µnnestus\n"
 
 #: ../init.c:53
 msgid "AutoOpts function called without option descriptor\n"
-msgstr "AutoOpts funktsiooni kasutati vıtmeid kasutamata\n"
+msgstr "AutoOpts funktsiooni kasutati v√µtmeid kasutamata\n"
 
 #: ../init.c:89
 msgid "\tThis exceeds the compiled library version:  "
-msgstr "\tSee ¸letab kompileeritud teegi versiooni:  "
+msgstr "\tSee √ºletab kompileeritud teegi versiooni:  "
 
 #: ../init.c:87
 #, c-format
@@ -761,17 +761,17 @@ msgid ""
 "Automated Options Processing Error!\n"
 "\t%s called AutoOpts function with structure version %d:%d:%d.\n"
 msgstr ""
-"Automated Options Tˆˆtlemise Viga!\n"
+"Automated Options T√∂√∂tlemise Viga!\n"
 "\t%s kasutas AutoOpts funktsiooni struktuuri versiooniga %d:%d:%d.\n"
 
 #: ../autoopts.c:73
 #, c-format
 msgid "realloc of %d bytes at 0x%p failed\n"
-msgstr "realloc %d baiti viidal 0x%p ebaınnestus\n"
+msgstr "realloc %d baiti viidal 0x%p eba√µnnestus\n"
 
 #: ../init.c:91
 msgid "\tThis is less than the minimum library version:  "
-msgstr "\tSee on v‰iksem kui minimaalne teegi versioon:  "
+msgstr "\tSee on v√§iksem kui minimaalne teegi versioon:  "
 
 #: ../version.c:121
 #, c-format
@@ -780,7 +780,7 @@ msgid ""
 "\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Automated Options versioon %s\n"
-"\tAutoriıigused (C) 1999-2013 Bruce Korb - kıik ıigused on reserveeritud\n"
+"\tAutori√µigused (C) 1999-2013 Bruce Korb - k√µik √µigused on reserveeritud\n"
 
 #: ../usage.c:310
 #, c-format
@@ -793,47 +793,47 @@ msgstr "kasutati optionResetOpt(), aga reset-option pole seadistatud"
 
 #: ../usage.c:329
 msgid "could not locate the 'help' option"
-msgstr "ei leia vıtit 'help'"
+msgstr "ei leia v√µtit 'help'"
 
 #: ../autoopts.c:351
 msgid "optionProcess() was called with invalid data"
 msgstr "optionProcess() kasutati vigaste andmetega"
 
-#: ../usage.c:770
+#: ../usage.c:783
 msgid "invalid argument type specified"
-msgstr "anti vigane argumendi t¸¸p"
+msgstr "anti vigane argumendi t√º√ºp"
 
 #: ../find.c:589
 msgid "defaulted to option with optional arg"
-msgstr "kasutan vaikimisi mittekohustusliku argumendiga vıtit"
+msgstr "kasutan vaikimisi mittekohustusliku argumendiga v√µtit"
 
 #: ../alias.c:76
 msgid "aliasing option is out of range."
-msgstr "vıtme alternatiivne nimi on v‰ljaspool vahemikku."
+msgstr "v√µtme alternatiivne nimi on v√§ljaspool vahemikku."
 
 #: ../enum.c:229
 #, c-format
 msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
-msgstr "%s viga: vıtmesına '%s' on %s korral mitmet‰henduslik\n"
+msgstr "%s viga: v√µtmes√µna '%s' on %s korral mitmet√§henduslik\n"
 
 #: ../find.c:108
 msgid "  The following options match:\n"
-msgstr "  Sobivad j‰rgnevad vıtmed:\n"
+msgstr "  Sobivad j√§rgnevad v√µtmed:\n"
 
 #: ../find.c:290
 #, c-format
 msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr "%s: segane vıtme nimi: %s (sobib %d vıtmega)\n"
+msgstr "%s: segane v√µtme nimi: %s (sobib %d v√µtmega)\n"
 
 #: ../check.c:161
 #, c-format
 msgid "%s: Command line arguments required\n"
-msgstr "%s: Nıutakse k‰surea argumente\n"
+msgstr "%s: N√µutakse k√§surea argumente\n"
 
 #: ../alias.c:43
 #, c-format
 msgid "%d %s%s options allowed\n"
-msgstr "%d %s%s vıtmed on lubatud\n"
+msgstr "%d %s%s v√µtmed on lubatud\n"
 
 #: ../makeshell.c:81
 #, c-format
@@ -852,20 +852,20 @@ msgid ""
 "\t'c' - version and copyright\n"
 "\t'n' - version and full copyright notice\n"
 msgstr ""
-"viga: versiooni vıtme argument '%c' on vigane. Kasutage:\n"
+"viga: versiooni v√µtme argument '%c' on vigane. Kasutage:\n"
 "\t'v' - ainult versioon\n"
-"\t'c' - versioon ja autoriıigus\n"
-"\t'n' - versioon ja autoriıiguse info\n"
+"\t'c' - versioon ja autori√µigus\n"
+"\t'n' - versioon ja autori√µiguse info\n"
 
 #: ../check.c:58
 #, c-format
 msgid "%s error:  the '%s' and '%s' options conflict\n"
-msgstr "%s viga: vıtmed '%s' ja '%s' on konfliktsed\n"
+msgstr "%s viga: v√µtmed '%s' ja '%s' on konfliktsed\n"
 
 #: ../find.c:214 ../find.c:421
 #, c-format
 msgid "%s: The '%s' option has been disabled."
-msgstr "%s: Vıti '%s' on blokeeritud."
+msgstr "%s: V√µti '%s' on blokeeritud."
 
 #: ../alias.c:38
 msgid "-equivalence"
@@ -874,61 +874,61 @@ msgstr "-ekvivalents"
 #: ../find.c:460 ../reset.c:110
 #, c-format
 msgid "%s: illegal option -- %c\n"
-msgstr "%s: vigane vıti -- %c\n"
+msgstr "%s: vigane v√µti -- %c\n"
 
 #: ../find.c:268 ../find.c:746 ../reset.c:118
 #, c-format
 msgid "%s: illegal option -- %s\n"
-msgstr "%s: vigane vıti -- %s\n"
+msgstr "%s: vigane v√µti -- %s\n"
 
 #: ../find.c:332
 #, c-format
 msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: tundmatu tootja laiendus vıti -- %s\n"
+msgstr "%s: tundmatu tootja laiendus v√µti -- %s\n"
 
 #: ../enum.c:154 ../enum.c:164
 #, c-format
 msgid "  or an integer from %d through %d\n"
-msgstr "  vıi t‰isarv vahemikust %d kuni %d\n"
+msgstr "  v√µi t√§isarv vahemikust %d kuni %d\n"
 
-#: ../usage.c:769 ../usage.c:1097
+#: ../usage.c:782 ../usage.c:1110
 #, c-format
 msgid "%s error:  invalid option descriptor for %s\n"
-msgstr "%s viga:  vigane %s vıtmete kirjeldus\n"
+msgstr "%s viga:  vigane %s v√µtmete kirjeldus\n"
 
 #: ../find.c:379
 #, c-format
 msgid "%s: invalid option name: %s\n"
-msgstr "%s: vigane vıtme nimi: %s\n"
+msgstr "%s: vigane v√µtme nimi: %s\n"
 
 #: ../find.c:518
 #, c-format
 msgid "%s: The '%s' option requires an argument.\n"
-msgstr "%s viga: Vıti '%s' nıuab argumenti.\n"
+msgstr "%s viga: V√µti '%s' n√µuab argumenti.\n"
 
 #: ../autoopts.c:171
 #, c-format
 msgid ""
 "(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
-"\t'%s' and '%s'"
+"\t'%s' and '%s'."
 msgstr ""
-"(AutoOpts bug): Samav‰‰rne vıti '%s' on samav‰‰rne nii\n"
-"\t'%s' kui ka '%s' jaoks"
+"(AutoOpts bug): Samav√§√§rne v√µti '%s' on samav√§√§rne nii\n"
+"\t'%s' kui ka '%s' jaoks."
 
 #: ../check.c:94
 #, c-format
 msgid "%s error:  The %s option is required\n"
-msgstr "%s viga:  Vıti %s on kohustuslik\n"
+msgstr "%s viga:  V√µti %s on kohustuslik\n"
 
 #: ../find.c:623
 #, c-format
 msgid "%s: The '%s' option cannot have an argument.\n"
-msgstr "%s: vıti '%s' ei luba argumenti.\n"
+msgstr "%s: v√µti '%s' ei luba argumenti.\n"
 
 #: ../check.c:151
 #, c-format
 msgid "%s: Command line arguments are not allowed.\n"
-msgstr "%s: K‰surea argumendid ei ole lubatud.\n"
+msgstr "%s: K√§surea argumendid ei ole lubatud.\n"
 
 #: ../save.c:531
 #, c-format
@@ -938,12 +938,12 @@ msgstr "viga %d (%s) %s loomisel\n"
 #: ../enum.c:229
 #, c-format
 msgid "%s error:  '%s' does not match any %s keywords.\n"
-msgstr "%s viga:  '%s' ei sobi ¸hegagi %s vıtmesınadest.\n"
+msgstr "%s viga:  '%s' ei sobi √ºhegagi %s v√µtmes√µnadest.\n"
 
 #: ../reset.c:93
 #, c-format
 msgid "%s error: The '%s' option requires an argument.\n"
-msgstr "%s viga: Vıti '%s' nıuab argumenti.\n"
+msgstr "%s viga: V√µti '%s' n√µuab argumenti.\n"
 
 #: ../save.c:184 ../save.c:238
 #, c-format
@@ -953,17 +953,17 @@ msgstr "viga %d (%s) stat %s\n"
 #: ../restore.c:143
 #, c-format
 msgid "%s error: no saved option state\n"
-msgstr "%s viga: salvestatud vıtme olekut pole\n"
+msgstr "%s viga: salvestatud v√µtme olekut pole\n"
 
 #: ../autoopts.c:246
 #, c-format
 msgid "'%s' is not a command line option.\n"
-msgstr "'%s' ei ole k‰surea vıti.\n"
+msgstr "'%s' ei ole k√§surea v√µti.\n"
 
 #: ../time.c:114
 #, c-format
 msgid "%s error:  '%s' is not a recognizable date/time.\n"
-msgstr "%s viga:  '%s' ei ole tuvastatav kuup‰ev.\n"
+msgstr "%s viga:  '%s' ei ole tuvastatav kuup√§ev.\n"
 
 #: ../save.c:132
 #, c-format
@@ -977,8 +977,8 @@ msgstr "%s viga:  '%s' ei ole tuvastatav kestus.\n"
 
 #: ../check.c:92
 #, c-format
-msgid "%s error:  The %s option must appear %d times\n"
-msgstr "%s viga:  Vıti %s peab olema antud %d korda\n"
+msgid "%s error:  The %s option must appear %d times.\n"
+msgstr "%s viga:  V√µti %s peab olema antud %d korda.\n"
 
 #: ../numeric.c:157
 #, c-format
@@ -988,187 +988,187 @@ msgstr "%s viga:  '%s' ei ole tuvastatav number.\n"
 #: ../enum.c:195
 #, c-format
 msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr "%s viga:  %s ¸letab %s vıtmesınade arvu\n"
+msgstr "%s viga:  %s √ºletab %s v√µtmes√µnade arvu\n"
 
 #: ../usage.c:366
 #, c-format
 msgid "Try '%s %s' for more information.\n"
-msgstr "Lisainfot saate k‰suga '%s %s'.\n"
+msgstr "Lisainfot saate k√§suga '%s %s'.\n"
 
 #: ../alias.c:45
 #, c-format
 msgid "one %s%s option allowed\n"
-msgstr "lubatud on ¸ks %s%s vıti\n"
+msgstr "lubatud on √ºks %s%s v√µti\n"
 
 #: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:304 ../usage.c:451
-#: ../usage.c:647 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
+#: ../usage.c:660 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
 #: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
 msgid "standard output"
-msgstr "standard v‰ljund"
+msgstr "standard v√§ljund"
 
-#: ../usage.c:304 ../usage.c:451 ../usage.c:647 ../version.c:175
+#: ../usage.c:304 ../usage.c:451 ../usage.c:660 ../version.c:175
 msgid "standard error"
 msgstr "standard veavoog"
 
 #: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:303 ../usage.c:450
-#: ../usage.c:646 ../version.c:174
+#: ../usage.c:659 ../version.c:174
 msgid "write"
 msgstr "kirjutamise"
 
 #: ../numeric.c:60
 #, c-format
 msgid "%s error:  %s option value %ld is out of range.\n"
-msgstr "%s viga:  %s vıtme v‰‰rtus %ld ei ole lubatud vahemikus.\n"
+msgstr "%s viga:  %s v√µtme v√§√§rtus %ld ei ole lubatud vahemikus.\n"
 
 #: ../check.c:44
 #, c-format
 msgid "%s error:  %s option requires the %s option\n"
-msgstr "%s viga:  vıti %s nıuab vıtit %s\n"
+msgstr "%s viga:  v√µti %s n√µuab v√µtit %s\n"
 
 #: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:530
 #, c-format
 msgid "%s warning:  cannot save options - %s not regular file\n"
-msgstr "%s hoiatus:  vıtmeid ei saa salvestada - %s ei ole tavaline fail\n"
+msgstr "%s hoiatus:  v√µtmeid ei saa salvestada - %s ei ole tavaline fail\n"
 
-#: src/shar.c:357
+#: src/shar.c:365
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "printf vormindamis viga:  %s\n"
 
-#: src/shar.c:408
+#: src/shar.c:416
 msgid "sharutils bug - no status"
 msgstr "sharutils viga - olek puudub"
 
-#: src/shar.c:771
+#: src/shar.c:779
 msgid "Too many directories for mkdir generation"
-msgstr "Liiga palju katalooge mkdir k‰sule"
+msgstr "Liiga palju katalooge mkdir k√§sule"
 
-#: src/shar.c:854 src/shar.c:1539
+#: src/shar.c:862 src/shar.c:1681
 #, c-format
 msgid "Cannot access %s"
 msgstr "%s ei saa kasutada"
 
-#: src/shar.c:937
+#: src/shar.c:957
 #, c-format
 msgid "Cannot get current directory name"
-msgstr "Ei ınnestu tuvastada jooksva kataloogi nime"
+msgstr "Ei √µnnestu tuvastada jooksva kataloogi nime"
 
-#: src/shar.c:1023
+#: src/shar.c:1043
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Alustan fili %s\n"
 
-#: src/shar.c:1077
+#: src/shar.c:1142
 msgid "Could not popen command"
-msgstr "popen k‰sk ebaınnestus"
+msgstr "popen k√§sk eba√µnnestus"
 
-#: src/shar.c:1158
+#: src/shar.c:1198
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Faili %s ei saa avada"
 
-#: src/shar.c:1292 src/shar.c:1303
-msgid "text"
-msgstr "tekst"
-
-#: src/shar.c:1309 src/shar.c:1320
+#: src/shar.c:1324 src/shar.c:1335
 msgid "call"
 msgstr "kutsun"
 
-#: src/shar.c:1329
-msgid "pipe[1]"
-msgstr "pipe[1]"
+#: src/shar.c:1347
+msgid "pipe fd"
+msgstr "pipe fd"
 
-#: src/shar.c:1423
+#: src/shar.c:1455 src/shar.c:1468
+msgid "text"
+msgstr "tekst"
+
+#: src/shar.c:1565
 #, c-format
 msgid "Continuing file %s\n"
-msgstr "J‰tkan faili %s\n"
+msgstr "J√§tkan faili %s\n"
 
-#: src/shar.c:1534
+#: src/shar.c:1676
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Pole tavaline fail"
 
-#: src/shar.c:1582
+#: src/shar.c:1724
 msgid "empty"
-msgstr "t¸hi"
+msgstr "t√ºhi"
 
-#: src/shar.c:1621
+#: src/shar.c:1763
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Salvestan %s (%s)"
 
-#: src/shar.c:1806
+#: src/shar.c:1948
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
-msgstr "Vigane v‰ljund failide nimede vorming (%s): %s"
+msgstr "Vigane v√§ljund failide nimede vorming (%s): %s"
 
-#: src/shar.c:1821
+#: src/shar.c:1963
 msgid "more than one format element"
-msgstr "enam kui ¸ks vormingu element"
+msgstr "enam kui √ºks vormingu element"
 
-#: src/shar.c:1826
+#: src/shar.c:1968
 msgid "no conversion character"
-msgstr "puudub teisenduse s¸mbol"
+msgstr "puudub teisenduse s√ºmbol"
 
-#: src/shar.c:1835
+#: src/shar.c:1977
 msgid "format is too wide"
 msgstr "vorming on liiga lai"
 
-#: src/shar.c:1847
+#: src/shar.c:1989
 msgid "invalid conversion character"
-msgstr "vigane teisenduse s¸mbol"
+msgstr "vigane teisenduse s√ºmbol"
 
-#: src/shar.c:1889
+#: src/shar.c:2034
 msgid "Opening"
 msgstr "Avan"
 
-#: src/shar.c:1904
+#: src/shar.c:2049
 msgid "Closing"
 msgstr "Sulen"
 
-#: src/shar.c:1996
+#: src/shar.c:2138
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "suunan stderr voo faili /dev/null"
 
-#: src/shar.c:2044
+#: src/shar.c:2186
 msgid "No input files"
 msgstr "Sisendfaile pole"
 
-#: src/shar.c:2061
+#: src/shar.c:2203
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "PALUN v‰ltige -X shar'e Usenetis ja avalikes vırkudes"
+msgstr "PALUN v√§ltige -X shar'e Usenetis ja avalikes v√µrkudes"
 
-#: src/shar.c:2085
+#: src/shar.c:2227
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
-"Vıtit '%s' ei saa failinimedega kasutada, v‰lja arvatud juhul,\n"
-"kui kasutati vıtit --intermix-type."
+"V√µtit '%s' ei saa failinimedega kasutada, v√§lja arvatud juhul,\n"
+"kui kasutati v√µtit --intermix-type."
 
-#: src/shar.c:2103
+#: src/shar.c:2245
 #, c-format
 msgid "The '%s' option must appear before any file names"
-msgstr "Vıti '%s' peab olema antud enne failinimesid"
+msgstr "V√µti '%s' peab olema antud enne failinimesid"
 
-#: src/shar.c:2139
+#: src/shar.c:2281
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
 "the known types are:\n"
 msgstr ""
-"vigane tihendamise t¸¸p:  %s\n"
-"tuntud t¸¸bid on:\n"
+"vigane tihendamise t√º√ºp:  %s\n"
+"tuntud t√º√ºbid on:\n"
 
-#: src/shar.c:2177
+#: src/shar.c:2319
 msgid "files on command line and --input-file-list specified"
-msgstr "--input-file-list ja k‰sureal n‰idatud failid"
+msgstr "--input-file-list ja k√§sureal n√§idatud failid"
 
-#: src/shar.c:2226
+#: src/shar.c:2368
 #, c-format
 msgid "Created %d files\n"
 msgstr "Loodud %d faili\n"
@@ -1178,7 +1178,7 @@ msgstr "Loodud %d faili\n"
 msgid "fs error %d (%s) %s-ing %s\n"
 msgstr "fs viga %d (%s) %s %s\n"
 
-#: src/unshar-opts.c:582 src/unshar-opts.c:644 src/uudecode.c:469
+#: src/unshar-opts.c:582 src/unshar-opts.c:644 src/uudecode.c:470
 #: src/uuencode.c:205
 msgid "standard input"
 msgstr "standardsisend"
@@ -1210,17 +1210,17 @@ msgstr "unshar fataalne viga:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:927
 msgid ""
-"unshar (GNU sharutils) 4.13.4pre9\n"
+"unshar (GNU sharutils) 4.13.5\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.13.4pre9\n"
-"Autoriıigused © 1994-2013 Free Software Foundation, Inc., kıik ıigused on\n"
+"shar (GNU sharutils) 4.13.5\n"
+"Autori√µigused ¬© 1994-2013 Free Software Foundation, Inc., k√µik √µigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
-"ja levitamiseks vastavalt GNU ‹ldise Avaliku Litsensi versioon 3 vıi\n"
+"ja levitamiseks vastavalt GNU √úldise Avaliku Litsensi versioon 3 v√µi\n"
 "uuema tingimustele <http://gnu.org/licenses/gpl.html>\n"
 
 #: src/unshar-opts.c:934
@@ -1231,8 +1231,8 @@ msgid ""
 "version.\n"
 "\n"
 msgstr ""
-"unshar on vaba tarkvara: teil on lubatud seda muuta ja/vıi levitada\n"
-"vastavalt GNU ‹ldise Avaliku Litsensi versioon 3, vıi (teie valikul)\n"
+"unshar on vaba tarkvara: teil on lubatud seda muuta ja/v√µi levitada\n"
+"vastavalt GNU √úldise Avaliku Litsensi versioon 3, v√µi (teie valikul)\n"
 "uuema, tingimustele.\n"
 "\n"
 
@@ -1245,7 +1245,7 @@ msgid ""
 "\n"
 msgstr ""
 "unshar levitatakse lootuses et see on kasutatav, aga ILMA IGASUGUSE\n"
-"GARANTIITA. Detailid leiate GNU ‹ldisest Avalikust Litsensist.\n"
+"GARANTIITA. Detailid leiate GNU √úldisest Avalikust Litsensist.\n"
 "\n"
 
 #: src/unshar-opts.c:946
@@ -1255,7 +1255,7 @@ msgid ""
 "Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
 msgstr ""
 "unshar (GNU sharutils) - loo shelli arhiiv\n"
-"Kasutamine:  %s [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>...]\n"
+"Kasutamine:  %s [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>...]\n"
 
 #: src/unshar-opts.c:950
 msgid ""
@@ -1266,7 +1266,7 @@ msgid ""
 msgstr ""
 "\n"
 "Kui argumente ei kasutatud, loetakse sisendargumendid standard sisendist,\n"
-"¸ks argument rea kohta; t¸hjad ja '#' m‰rgiga read on kommentaarid.\n"
+"√ºks argument rea kohta; t√ºhjad ja '#' m√§rgiga read on kommentaarid.\n"
 "'stdin' ei saa olla terminal (tty).\n"
 
 #: src/unshar-opts.c:956
@@ -1278,11 +1278,11 @@ msgid ""
 msgstr ""
 "Unshar otsib sisendfailidest (tavaliselt e-posti teated) shelli arhiivi\n"
 "algust. Kui faile ei antud, loetakse standardsisendit.\n"
-"Iga leitud arhiiv pakitakse seej‰rel shalli programmi abil lahti.\n"
+"Iga leitud arhiiv pakitakse seej√§rel shalli programmi abil lahti.\n"
 
 #: src/unshar-opts.c:962
-msgid "unshar (GNU sharutils) 4.13.4pre9"
-msgstr "unshar (GNU sharutils) 4.13.4pre9"
+msgid "unshar (GNU sharutils) 4.13.5"
+msgstr "unshar (GNU sharutils) 4.13.5"
 
 #: src/unshar-opts.c:965
 msgid ""
@@ -1291,7 +1291,7 @@ msgid ""
 "\n"
 msgstr ""
 "unshar (GNU sharutils) - loo shelli arhiiv\n"
-"Kasutamine:  shar [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>...]\n"
+"Kasutamine:  shar [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>...]\n"
 
 #: src/unshar-opts.c:967
 msgid "   -d, --directory=DIR        change directory to DIR before unpacking\n"
@@ -1299,23 +1299,23 @@ msgstr "   -d, --directory=KAT        enne lahtipakkimist mine kataloogi KAT\n"
 
 #: src/unshar-opts.c:968
 msgid "   -c, --overwrite            overwrite any pre-existing files\n"
-msgstr "   -c, --overwrite            kirjuta olemasolevad failid ¸le\n"
+msgstr "   -c, --overwrite            kirjuta olemasolevad failid √ºle\n"
 
 #: src/unshar-opts.c:969
 msgid "   -f, --force                an alias for the 'overwrite' option\n"
-msgstr "   -f, --force                sama, kui vıti 'overwrite'\n"
+msgstr "   -f, --force                sama, kui v√µti 'overwrite'\n"
 
 #: src/unshar-opts.c:970
 msgid "   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines\n"
-msgstr "   -E, --split-at=SPLIT-PAT   t¸kelda sisend SPLIT-PAT ridadel\n"
+msgstr "   -E, --split-at=SPLIT-PAT   t√ºkelda sisend SPLIT-PAT ridadel\n"
 
 #: src/unshar-opts.c:971
 msgid ""
 "   -e, --exit-0               split input on \"exit 0\" lines\n"
 "                                - prohibits the option 'split-at'\n"
 msgstr ""
-"   -e, --exit-0               t¸keldab sisendi \"exit 0\" ridadel\n"
-"                                - keelab vıtme 'split-at'\n"
+"   -e, --exit-0               t√ºkeldab sisendi \"exit 0\" ridadel\n"
+"                                - keelab v√µtme 'split-at'\n"
 
 #: src/unshar-opts.c:973
 msgid "   -D, --debug                debug the shell code\n"
@@ -1323,7 +1323,7 @@ msgstr "   -D, --debug                shelli koodi silumine\n"
 
 #: src/unshar-opts.c:977
 msgid "   -R, --save-opts[=FILE]     save the option state to the config file FILE\n"
-msgstr "   -R, --save-opts[=FAIL]     salvesta vıtmed konfiguratsiooni faili\n"
+msgstr "   -R, --save-opts[=FAIL]     salvesta v√µtmed konfiguratsiooni faili\n"
 
 #: src/unshar-opts.c:978
 msgid ""
@@ -1332,9 +1332,9 @@ msgid ""
 "                                - may appear multiple times\n"
 "\n"
 msgstr ""
-"   -r, --load-opts=FAIL       lae vıtmed konfiguratsiooni failist\n"
-"                                - blokeerib vıti --no-load-opts\n"
-"                                - vıib kasutada korduvalt\n"
+"   -r, --load-opts=FAIL       lae v√µtmed konfiguratsiooni failist\n"
+"                                - blokeerib v√µti --no-load-opts\n"
+"                                - v√µib kasutada korduvalt\n"
 "\n"
 
 #: src/unshar-opts.c:981 src/uuencode-opts.c:704
@@ -1343,7 +1343,7 @@ msgid ""
 "hyphen and the flag character.\n"
 "\n"
 msgstr ""
-"Vıtmed kirjeldatakse kas topeltkriipsu ja nimega vıi kriipsu ja t‰hega.\n"
+"V√µtmed kirjeldatakse kas topeltkriipsu ja nimega v√µi kriipsu ja t√§hega.\n"
 "\n"
 
 #: src/unshar-opts.c:983
@@ -1354,7 +1354,7 @@ msgid ""
 "\n"
 msgstr ""
 "Kui argumente ei kasutatud, loetakse sisendargumendid standard sisendist,\n"
-"¸ks argument rea kohta; t¸hjad ja '#' m‰rgiga read on kommentaarid.\n"
+"√ºks argument rea kohta; t√ºhjad ja '#' m√§rgiga read on kommentaarid.\n"
 "'stdin' ei saa olla terminal (tty).\n"
 "\n"
 
@@ -1372,7 +1372,7 @@ msgstr ""
 "\n"
 "Unshar otsib sisendfailidest (tavaliselt e-posti teated) shelli arhiivi\n"
 "algust. Kui faile ei antud, loetakse standardsisendit.\n"
-"Iga leitud arhiiv pakitakse seej‰rel shalli programmi abil lahti.\n"
+"Iga leitud arhiiv pakitakse seej√§rel shalli programmi abil lahti.\n"
 "\n"
 
 #: src/unshar-opts.c:992 src/uudecode-opts.c:776
@@ -1386,33 +1386,33 @@ msgid ""
 "Try 'unshar --help' for more information.\n"
 msgstr ""
 "unshar (GNU sharutils) - loo shelli arhiiv\n"
-"Kasutamine:  unshar [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>...]\n"
+"Kasutamine:  unshar [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>...]\n"
 "Lisainfo saamiseks kasutage 'unshar --help'.\n"
 
 #: src/unshar.c:202
 #, c-format
 msgid "Found no shell commands after cut line in %s"
-msgstr "Failis %s puuduvad peale lıikerida edasised k‰sud"
+msgstr "Failis %s puuduvad peale l√µikerida edasised k√§sud"
 
 #: src/unshar.c:220
 #, c-format
 msgid "%s is probably not a shell archive"
-msgstr "%s pole tıen‰oliselt k‰suinterpretaatori arhiiv"
+msgstr "%s pole t√µen√§oliselt k√§suinterpretaatori arhiiv"
 
 #: src/unshar.c:221
 #, c-format
 msgid "The 'cut line' was followed by: %s"
-msgstr "'lıikereale' j‰rgnes: %s"
+msgstr "'l√µikereale' j√§rgnes: %s"
 
 #: src/unshar.c:244
 #, c-format
 msgid "Found no shell commands in %s"
-msgstr "%s ei sisalda k‰sklusi k‰suinterpretaatorile"
+msgstr "%s ei sisalda k√§sklusi k√§suinterpretaatorile"
 
 #: src/unshar.c:253
 #, c-format
 msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s paistab olema C kood, mitte k‰suinterpretaatori arhiiv"
+msgstr "%s paistab olema C kood, mitte k√§suinterpretaatori arhiiv"
 
 #: src/unshar.c:304
 msgid "file name buffer"
@@ -1449,17 +1449,17 @@ msgstr "uudecode fataalne viga:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:701
 msgid ""
-"uudecode (GNU sharutils) 4.13.4pre9\n"
+"uudecode (GNU sharutils) 4.13.5\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (GNU sharutils) 4.13.4pre9\n"
-"Autoriıigused © 1994-2013 Free Software Foundation, Inc., kıik ıigused on\n"
+"uudecode (GNU sharutils) 4.13.5\n"
+"Autori√µigused ¬© 1994-2013 Free Software Foundation, Inc., k√µik √µigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
-"ja levitamiseks vastavalt GNU ‹ldise Avaliku Litsensi versioon 3 vıi\n"
+"ja levitamiseks vastavalt GNU √úldise Avaliku Litsensi versioon 3 v√µi\n"
 "uuema tingimustele <http://gnu.org/licenses/gpl.html>\n"
 
 #: src/uudecode-opts.c:708
@@ -1470,8 +1470,8 @@ msgid ""
 "any later version.\n"
 "\n"
 msgstr ""
-"uudecode on vaba tarkvara: teil on lubatud seda muuta ja/vıi levitada\n"
-"vastavalt GNU ‹ldise Avaliku Litsensi versioon 3, vıi (teie valikul)\n"
+"uudecode on vaba tarkvara: teil on lubatud seda muuta ja/v√µi levitada\n"
+"vastavalt GNU √úldise Avaliku Litsensi versioon 3, v√µi (teie valikul)\n"
 "uuema, tingimustele.\n"
 "\n"
 
@@ -1484,7 +1484,7 @@ msgid ""
 "\n"
 msgstr ""
 "uudecode levitatakse lootuses et see on kasutatav, aga ILMA IGASUGUSE\n"
-"GARANTIITA. Detailid leiate GNU ‹ldisest Avalikust Litsensist.\n"
+"GARANTIITA. Detailid leiate GNU √úldisest Avalikust Litsensist.\n"
 "\n"
 
 #: src/uudecode-opts.c:720
@@ -1494,7 +1494,7 @@ msgid ""
 "Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
 msgstr ""
 "uudecode (GNU sharutils) - dekodeeri kodeeritud fail\n"
-"Kasutamine:  %s [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>... ]\n"
+"Kasutamine:  %s [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>... ]\n"
 
 #: src/uudecode-opts.c:724
 msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
@@ -1502,10 +1502,10 @@ msgstr "Kui faile ei antud, dekodeeritakse standard sisend\n"
 
 #: src/uudecode-opts.c:727
 msgid ""
-"'Uudecode' transforms uuencoded files into their original form.\n"
+"'uudecode' transforms uuencoded files into their original form.\n"
 "\n"
 msgstr ""
-"'Uudecode' teisendab uuencode failid algsele kujule.\n"
+"'uudecode' teisendab uuencode failid algsele kujule.\n"
 "\n"
 
 #: src/uudecode-opts.c:728 src/uudecode-opts.c:763
@@ -1520,13 +1520,13 @@ msgid ""
 "be written to the same file as the previous output.  Don't do that.\n"
 "\n"
 msgstr ""
-"Kodeeritud failid vıib n‰idata k‰sureal vıi anda standardsisendis.\n"
-"V‰ljundfaili nimi on m‰‰ratud kodeeritud failis, aga vıib olla ¸mber m‰‰ratud\n"
-"ka vıtmega '-o'. V‰ljundfail s‰ilistab algse faili moodi, v‰lja arvatud setuid\n"
-"ja k‰ivitamisıigused. Kui v‰ljundfail on n‰idatud '/dev/stdout' vıi '-',\n"
-"kirjutatakse tulemus standardv‰ljundisse. Kui on n‰idatud mitu sisendfaili ja\n"
-"teine vıi j‰rgnevad failid on n‰idatud standardv‰ljundisse, kirjutatakse\n"
-"dekodeeritud info samasse faili kui eelmine. ƒrge nii tehke.\n"
+"Kodeeritud failid v√µib n√§idata k√§sureal v√µi anda standardsisendis.\n"
+"V√§ljundfaili nimi on m√§√§ratud kodeeritud failis, aga v√µib olla √ºmber m√§√§ratud\n"
+"ka v√µtmega '-o'. V√§ljundfail s√§ilistab algse faili moodi, v√§lja arvatud setuid\n"
+"ja k√§ivitamis√µigused. Kui v√§ljundfail on n√§idatud '/dev/stdout' v√µi '-',\n"
+"kirjutatakse tulemus standardv√§ljundisse. Kui on n√§idatud mitu sisendfaili ja\n"
+"teine v√µi j√§rgnevad failid on n√§idatud standardv√§ljundisse, kirjutatakse\n"
+"dekodeeritud info samasse faili kui eelmine. √Ñrge nii tehke.\n"
 "\n"
 
 #: src/uudecode-opts.c:736
@@ -1537,15 +1537,15 @@ msgid ""
 "which of the two supported encoding schemes was used and whether or not the\n"
 "output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
 msgstr ""
-"'uudecode' ignoreerib eelnevaid ja j‰rgnevaid ridu. Ta otsib rida, mis algab\n"
-"sınaga \"'begin'\" ja tˆˆtleb kuni kodeerimist lıpetava markerini. Programm\n"
-"tuvastab kodeeritud faili p‰isest millist kahest toetatud kodeerimismeetodist\n"
-"on kasutatud ja kas v‰ljundfaili nimi on kodeeritud base64 vıi ei. Lisainfo\n"
+"'uudecode' ignoreerib eelnevaid ja j√§rgnevaid ridu. Ta otsib rida, mis algab\n"
+"s√µnaga \"'begin'\" ja t√∂√∂tleb kuni kodeerimist l√µpetava markerini. Programm\n"
+"tuvastab kodeeritud faili p√§isest millist kahest toetatud kodeerimismeetodist\n"
+"on kasutatud ja kas v√§ljundfaili nimi on kodeeritud base64 v√µi ei. Lisainfo\n"
 "saamiseks vaadake 'uuencode(5)'.\n"
 
 #: src/uudecode-opts.c:743
-msgid "uudecode (GNU sharutils) 4.13.4pre9"
-msgstr "uudecode (GNU sharutils) 4.13.4pre9"
+msgid "uudecode (GNU sharutils) 4.13.5"
+msgstr "uudecode (GNU sharutils) 4.13.5"
 
 #: src/uudecode-opts.c:746
 msgid ""
@@ -1554,11 +1554,11 @@ msgid ""
 "\n"
 msgstr ""
 "uudecode (GNU sharutils) - dekodeeri kodeeritud fail\n"
-"Kasutamine:  uudecode [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>... ]\n"
+"Kasutamine:  uudecode [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>... ]\n"
 
 #: src/uudecode-opts.c:748
 msgid "   -o, --output-file=str      direct output to file\n"
-msgstr "   -o, --output-file=str      suuna v‰ljund faili\n"
+msgstr "   -o, --output-file=str      suuna v√§ljund faili\n"
 
 #: src/uudecode-opts.c:749
 msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
@@ -1571,7 +1571,7 @@ msgid ""
 "If no 'file'(s) are provided, then standard input is decoded.\n"
 "\n"
 msgstr ""
-"Vıtmed kirjeldatakse kas topeltkriipsu ja nimega vıi kriipsu ja t‰hega.\n"
+"V√µtmed kirjeldatakse kas topeltkriipsu ja nimega v√µi kriipsu ja t√§hega.\n"
 "Kui faile ei antud, dekodeeritakse standard sisend.\n"
 "\n"
 
@@ -1596,10 +1596,10 @@ msgid ""
 "output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
 "\n"
 msgstr ""
-"'uudecode' ignoreerib eelnevaid ja j‰rgnevaid ridu. Ta otsib rida, mis algab\n"
-"sınaga \"'begin'\" ja tˆˆtleb kuni kodeerimist lıpetava markerini. Programm\n"
-"tuvastab kodeeritud faili p‰isest millist kahest toetatud kodeerimismeetodist\n"
-"on kasutatud ja kas v‰ljundfaili nimi on kodeeritud base64 vıi ei. Lisainfo\n"
+"'uudecode' ignoreerib eelnevaid ja j√§rgnevaid ridu. Ta otsib rida, mis algab\n"
+"s√µnaga \"'begin'\" ja t√∂√∂tleb kuni kodeerimist l√µpetava markerini. Programm\n"
+"tuvastab kodeeritud faili p√§isest millist kahest toetatud kodeerimismeetodist\n"
+"on kasutatud ja kas v√§ljundfaili nimi on kodeeritud base64 v√µi ei. Lisainfo\n"
 "saamiseks vaadake 'uuencode(5)'.\n"
 "\n"
 
@@ -1610,76 +1610,76 @@ msgid ""
 "Try 'uudecode --help' for more information.\n"
 msgstr ""
 "uudecode (GNU sharutils) - dekodeeri kodeeritud fail\n"
-"Kasutamine:  uudecode [ -<lipp> [<v‰‰rtus>] | --<nimi>[{=| }<v‰‰rtus>] ]... [<fail>... ]\n"
+"Kasutamine:  uudecode [ -<lipp> [<v√§√§rtus>] | --<nimi>[{=| }<v√§√§rtus>] ]... [<fail>... ]\n"
 "Lisainfo saamiseks kasutaga 'uudecode --help'.\n"
 
-#: src/uudecode.c:120 src/uudecode.c:184
+#: src/uudecode.c:118 src/uudecode.c:182
 #, c-format
 msgid "%s: Short file"
-msgstr "%s: L¸hike fail"
+msgstr "%s: L√ºhike fail"
 
-#: src/uudecode.c:166
+#: src/uudecode.c:164
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Puudub rida `end'"
 
-#: src/uudecode.c:190
+#: src/uudecode.c:188
 #, c-format
 msgid "%s: invalid input"
 msgstr "%s: vigane sisend"
 
-#: src/uudecode.c:218
+#: src/uudecode.c:215
 msgid "cannot expand $HOME"
-msgstr "$HOME avaldamine ei ınnestu"
+msgstr "$HOME avaldamine ei √µnnestu"
 
-#: src/uudecode.c:229
+#: src/uudecode.c:226
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Vigane faili nimi: %s"
 
-#: src/uudecode.c:236
+#: src/uudecode.c:233
 #, c-format
 msgid "No user '%s'"
 msgstr "Kasutaja '%s' puudub"
 
-#: src/uudecode.c:247 src/uudecode.c:305
+#: src/uudecode.c:244 src/uudecode.c:306
 msgid "output file name"
-msgstr "v‰ljund faili nimi"
+msgstr "v√§ljund faili nimi"
 
-#: src/uudecode.c:266
+#: src/uudecode.c:263
 #, c-format
 msgid "cannot access %s"
 msgstr "%s ei saa kasutada"
 
-#: src/uudecode.c:279
+#: src/uudecode.c:276
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod %s"
 
-#: src/uudecode.c:298
+#: src/uudecode.c:300
 msgid "output name is empty"
-msgstr "v‰ljundi nimi on t¸hi"
+msgstr "v√§ljundi nimi on t√ºhi"
 
 #: src/uudecode.c:311
 #, c-format
 msgid "invalid base64 encoded name: %s"
 msgstr "vigane base64 kodeeritud nimi: %s"
 
-#: src/uudecode.c:345
+#: src/uudecode.c:346
 #, c-format
 msgid "%s: Invalid or missing 'begin' line"
-msgstr "%s: Vigane vıi puuduv rida `begin'"
+msgstr "%s: Vigane v√µi puuduv rida `begin'"
 
-#: src/uudecode.c:435
+#: src/uudecode.c:436
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Viga kirjutamisel"
 
-#: src/uudecode.c:475
+#: src/uudecode.c:476
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
-msgstr "Mitme sisendfaili korral ei saa v‰ljundfaili m‰‰rata.\n"
+msgstr "Mitme sisendfaili korral ei saa v√§ljundfaili m√§√§rata.\n"
 
 #: src/uuencode-opts.c:386
 msgid "uuencode usage error:\n"
@@ -1708,17 +1708,17 @@ msgstr "uuencode fataalne viga:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:652
 msgid ""
-"uuencode (GNU sharutils) 4.13.4pre9\n"
+"uuencode (GNU sharutils) 4.13.5\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (GNU sharutils) 4.13.4pre9\n"
-"Autoriıigused © 1994-2013 Free Software Foundation, Inc., kıik ıigused on\n"
+"uuencode (GNU sharutils) 4.13.5\n"
+"Autori√µigused ¬© 1994-2013 Free Software Foundation, Inc., k√µik √µigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
-"ja levitamiseks vastavalt GNU ‹ldise Avaliku Litsensi versioon 3 vıi\n"
+"ja levitamiseks vastavalt GNU √úldise Avaliku Litsensi versioon 3 v√µi\n"
 "uuema tingimustele <http://gnu.org/licenses/gpl.html>\n"
 
 #: src/uuencode-opts.c:659
@@ -1729,8 +1729,8 @@ msgid ""
 "any later version.\n"
 "\n"
 msgstr ""
-"uuencode on vaba tarkvara: teil on lubatud seda muuta ja/vıi levitada\n"
-"vastavalt GNU ‹ldise Avaliku Litsensi versioon 3, vıi (teie valikul)\n"
+"uuencode on vaba tarkvara: teil on lubatud seda muuta ja/v√µi levitada\n"
+"vastavalt GNU √úldise Avaliku Litsensi versioon 3, v√µi (teie valikul)\n"
 "uuema, tingimustele.\n"
 "\n"
 
@@ -1743,7 +1743,7 @@ msgid ""
 "\n"
 msgstr ""
 "uuencode levitatakse lootuses et see on kasutatav, aga ILMA IGASUGUSE\n"
-"GARANTIITA. Detailid leiate GNU ‹ldisest Avalikust Litsensist.\n"
+"GARANTIITA. Detailid leiate GNU √úldisest Avalikust Litsensist.\n"
 "\n"
 
 #: src/uuencode-opts.c:671
@@ -1752,8 +1752,8 @@ msgid ""
 "uuencode (GNU sharutils) - encode a file into email friendly text\n"
 "Usage:  %s [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
 msgstr ""
-"uuencode (GNU sharutils) - kodeeri fail e-posti sıbralikuks tekstiks.\n"
-"Kasutamine:  %s [ -<lipp> | --<nimi> ]... [<sisend-fail>] <v‰ljundi-nimi>\n"
+"uuencode (GNU sharutils) - kodeeri fail e-posti s√µbralikuks tekstiks.\n"
+"Kasutamine:  %s [ -<lipp> | --<nimi> ]... [<sisend-fail>] <v√§ljundi-nimi>\n"
 
 #: src/uuencode-opts.c:675
 msgid ""
@@ -1765,8 +1765,8 @@ msgid ""
 msgstr ""
 "'uuencode' kasutatakse et luua failist ASCII esitus, mida saab kasutada\n"
 "kanalites, mis muud andmed rikub. Konkreetselt e-post ei luba otse binaar\n"
-"faile saata ning sageli lisab s¸mboli, kui leiab tekstist kuue s¸mbolilise\n"
-"j‰rjendi \"\\nFrom \".\n"
+"faile saata ning sageli lisab s√ºmboli, kui leiab tekstist kuue s√ºmbolilise\n"
+"j√§rjendi \"\\nFrom \".\n"
 "\n"
 
 #: src/uuencode-opts.c:679 src/uuencode-opts.c:712
@@ -1780,10 +1780,10 @@ msgid ""
 "\n"
 msgstr ""
 "'uuencode' loeb 'sisend-faili' kui see on antud, muidu loeb info standard\n"
-"sisendist ja kirjutab kodeeritud info standardv‰ljundisse. V‰ljund algab\n"
-"p‰isereaga 'uudecode' programmile, andes soovitusliku faili 'v‰ljund-nimi'\n"
-"ja juurdep‰‰su ıigused. Kui 'v‰ljund-nimi' on antud '/dev/stdout', siis\n"
-"'uudecode' kirjutab dekodeeritud faili standardv‰ljundisse.\n"
+"sisendist ja kirjutab kodeeritud info standardv√§ljundisse. V√§ljund algab\n"
+"p√§isereaga 'uudecode' programmile, andes soovitusliku faili 'v√§ljund-nimi'\n"
+"ja juurdep√§√§su √µigused. Kui 'v√§ljund-nimi' on antud '/dev/stdout', siis\n"
+"'uudecode' kirjutab dekodeeritud faili standardv√§ljundisse.\n"
 "\n"
 
 #: src/uuencode-opts.c:685
@@ -1792,14 +1792,14 @@ msgid ""
 "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
 "Ctl-D several times to terminate input.\n"
 msgstr ""
-"'M‰rkus': 'uuencode' kasutab puhverdatud sisendit ja eeldab et sisend ei\n"
-"ole terminalis k‰sitsi tr¸kitud. Kui te siiski annate sisendi terminalis\n"
-"k‰sitsi tr¸kkides, vıib olla faililıpu klahvikombinatsiooni (tavaliselt\n"
+"'M√§rkus': 'uuencode' kasutab puhverdatud sisendit ja eeldab et sisend ei\n"
+"ole terminalis k√§sitsi tr√ºkitud. Kui te siiski annate sisendi terminalis\n"
+"k√§sitsi tr√ºkkides, v√µib olla failil√µpu klahvikombinatsiooni (tavaliselt\n"
 "Ctl-D) vaja anda korduvalt.\n"
 
 #: src/uuencode-opts.c:690
-msgid "uuencode (GNU sharutils) 4.13.4pre9"
-msgstr "uuencode (GNU sharutils) 4.13.4pre9"
+msgid "uuencode (GNU sharutils) 4.13.5"
+msgstr "uuencode (GNU sharutils) 4.13.5"
 
 #: src/uuencode-opts.c:693
 msgid ""
@@ -1807,17 +1807,17 @@ msgid ""
 "Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
 "\n"
 msgstr ""
-"uuencode (GNU sharutils) - kodeeri fail e-posti sıbralikuks tekstiks.\n"
-"Kasutamine:  uuencode [ -<lipp> | --<nimi> ]... [<sisend-fail>] <v‰ljundi-nimi>\n"
+"uuencode (GNU sharutils) - kodeeri fail e-posti s√µbralikuks tekstiks.\n"
+"Kasutamine:  uuencode [ -<lipp> | --<nimi> ]... [<sisend-fail>] <v√§ljundi-nimi>\n"
 "\n"
 
 #: src/uuencode-opts.c:695
-msgid "   -m, --base64               convert using base 64\n"
-msgstr "   -m, --base64               teisenda kasutades base 64\n"
+msgid "   -m, --base64               convert using base64\n"
+msgstr "   -m, --base64               teisenda kasutades base64\n"
 
 #: src/uuencode-opts.c:696
 msgid "   -e, --encode-file-name     encode the output file name\n"
-msgstr "   -e, --encode-file-name     kodeeri v‰ljund faili nimi\n"
+msgstr "   -e, --encode-file-name     kodeeri v√§ljund faili nimi\n"
 
 #: src/uuencode-opts.c:707
 msgid ""
@@ -1833,8 +1833,8 @@ msgstr ""
 "\n"
 "'uuencode' kasutatakse et luua failist ASCII esitus, mida saab kasutada\n"
 "kanalites, mis muud andmed rikub. Konkreetselt e-post ei luba otse binaar\n"
-"faile saata ning sageli lisab s¸mboli, kui leiab tekstist kuue s¸mbolilise\n"
-"j‰rjendi \"\\nFrom \".\n"
+"faile saata ning sageli lisab s√ºmboli, kui leiab tekstist kuue s√ºmbolilise\n"
+"j√§rjendi \"\\nFrom \".\n"
 "\n"
 
 #: src/uuencode-opts.c:718
@@ -1845,9 +1845,9 @@ msgid ""
 "\n"
 "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
 msgstr ""
-"'M‰rkus': 'uuencode' kasutab puhverdatud sisendit ja eeldab et sisend ei\n"
-"ole terminalis k‰sitsi tr¸kitud. Kui te siiski annate sisendi terminalis\n"
-"k‰sitsi tr¸kkides, vıib olla faililıpu klhvikombinatsiooni (tavaliselt\n"
+"'M√§rkus': 'uuencode' kasutab puhverdatud sisendit ja eeldab et sisend ei\n"
+"ole terminalis k√§sitsi tr√ºkitud. Kui te siiski annate sisendi terminalis\n"
+"k√§sitsi tr√ºkkides, v√µib olla failil√µpu klhvikombinatsiooni (tavaliselt\n"
 "Ctl-D) vaja anda korduvalt.\n"
 "\n"
 "Palun saatke vearaporid aadressil: <bug-gnu-utils@gnu.org>\n"
@@ -1858,8 +1858,8 @@ msgid ""
 "Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
 "Try 'uuencode --help' for more information.\n"
 msgstr ""
-"uuencode (GNU sharutils) - kodeeri fail e-posti sıbralikuks tekstiks.\n"
-"Kasutamine:  uuencode [ -<lipp> | --<nimi> ]... [<sisend-fail>] <v‰ljundi-nimi>\n"
+"uuencode (GNU sharutils) - kodeeri fail e-posti s√µbralikuks tekstiks.\n"
+"Kasutamine:  uuencode [ -<lipp> | --<nimi> ]... [<sisend-fail>] <v√§ljundi-nimi>\n"
 "Lisainfo saamiseks kasutage 'uuencode --help'\n"
 
 #: src/uuencode.c:226
@@ -1872,72 +1872,72 @@ msgstr "faili nimi"
 
 #: lib/error.c:188
 msgid "Unknown system error"
-msgstr "Tundmatu s¸steemne viga"
+msgstr "Tundmatu s√ºsteemne viga"
 
 #: lib/getopt.c:547 lib/getopt.c:576
 #, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: vıti '%s' on mitmet‰henduslik; variandid:"
+msgstr "%s: v√µti '%s' on mitmet√§henduslik; variandid:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
 msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: vıti '--%s' ei luba argumenti\n"
+msgstr "%s: v√µti '--%s' ei luba argumenti\n"
 
 #: lib/getopt.c:637 lib/getopt.c:642
 #, c-format
 msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: vıti '%c%s' ei luba argumenti\n"
+msgstr "%s: v√µti '%c%s' ei luba argumenti\n"
 
 #: lib/getopt.c:685 lib/getopt.c:704
 #, c-format
 msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: vıti '--%s' nıuab argumenti\n"
+msgstr "%s: v√µti '--%s' n√µuab argumenti\n"
 
 #: lib/getopt.c:742 lib/getopt.c:745
 #, c-format
 msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: tundmatu vıti '--%s'\n"
+msgstr "%s: tundmatu v√µti '--%s'\n"
 
 #: lib/getopt.c:753 lib/getopt.c:756
 #, c-format
 msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: tundmatu vıti '%c%s'\n"
+msgstr "%s: tundmatu v√µti '%c%s'\n"
 
 #: lib/getopt.c:805 lib/getopt.c:808
 #, c-format
 msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: vigane vıti -- '%c'\n"
+msgstr "%s: vigane v√µti -- '%c'\n"
 
 #: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
 #, c-format
 msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: vıti nıuab argumenti -- '%c'\n"
+msgstr "%s: v√µti n√µuab argumenti -- '%c'\n"
 
 #: lib/getopt.c:934 lib/getopt.c:950
 #, c-format
 msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: vıti '-W %s' on mitmet‰henduslik\n"
+msgstr "%s: v√µti '-W %s' on mitmet√§henduslik\n"
 
 #: lib/getopt.c:974 lib/getopt.c:992
 #, c-format
 msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: vıti '-W %s' ei luba kasutada argumenti\n"
+msgstr "%s: v√µti '-W %s' ei luba kasutada argumenti\n"
 
 #: lib/getopt.c:1013 lib/getopt.c:1031
 #, c-format
 msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: vıti '-W %s' nıuab argumenti\n"
+msgstr "%s: v√µti '-W %s' n√µuab argumenti\n"
 
 #: lib/openat-die.c:38
 #, c-format
 msgid "unable to record current working directory"
-msgstr "jooksva tˆˆkataloogi salvestamine ebaınnestus"
+msgstr "jooksva t√∂√∂kataloogi salvestamine eba√µnnestus"
 
 #: lib/openat-die.c:57
 #, c-format
 msgid "failed to return to initial working directory"
-msgstr "algsesse tˆˆkataloogi tagasi minemine ebaınnestus"
+msgstr "algsesse t√∂√∂kataloogi tagasi minemine eba√µnnestus"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -1968,9 +1968,41 @@ msgstr "`"
 msgid "'"
 msgstr "'"
 
+#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
+#: lib/spawn-pipe.c:267
+#, c-format
+msgid "cannot create pipe"
+msgstr "toru ei √µnnestu luua"
+
+#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/wait-process.c:356
+#, c-format
+msgid "%s subprocess failed"
+msgstr "%s alamprotsess sai vea"
+
+#: lib/w32spawn.h:43
+#, c-format
+msgid "_open_osfhandle failed"
+msgstr "_open_osfhandle sai vea"
+
+#: lib/w32spawn.h:84
+#, c-format
+msgid "cannot restore fd %d: dup2 failed"
+msgstr "fd %d taastamine ei √µnnestu: dup2 sai vea"
+
+#: lib/wait-process.c:223 lib/wait-process.c:255 lib/wait-process.c:317
+#, c-format
+msgid "%s subprocess"
+msgstr "%s alamprotsess"
+
+#: lib/wait-process.c:274 lib/wait-process.c:346
+#, c-format
+msgid "%s subprocess got fatal signal %d"
+msgstr "%s alamprotsess sai fataalse signaali %d"
+
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
-msgstr "m‰lu on otsas"
+msgstr "m√§lu on otsas"
 
 #: lib/xstrtol-error.c:63
 #, c-format

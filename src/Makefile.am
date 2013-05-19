@@ -37,6 +37,7 @@ encode_opt_code = uuencode-opts.c uuencode-opts.h
 decode_opt_code = uudecode-opts.c uudecode-opts.h
 
 shar_opts       = shar-opts.def
+shar_extra      = scripts.x scribble.c scribble.h
 unshar_opts     = unshar-opts.def
 encode_opts	= uuencode-opts.def
 decode_opts	= uudecode-opts.def
@@ -115,7 +116,7 @@ endif
 endif
 # UUCODE
 
-shar_SOURCES    = shar.c   local.h encode.c scripts.x $(shar_opt_code)
+shar_SOURCES    = shar.c   local.h encode.c $(shar_extra) $(shar_opt_code)
 unshar_SOURCES  = unshar.c local.h encode.c $(unshar_opt_code)
 
 if AMDEP

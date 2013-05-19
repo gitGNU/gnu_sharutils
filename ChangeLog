@@ -8,6 +8,13 @@
 	* src/uudecode.c (get_env_homedir): new function, varies by MinGW
 	(expand_tilde): use it
 	(decode): filemode must be set to binary for MinGW
+	* bootstrap: make sure that gnulib supported headers are not
+	seen as missing by the libopts config macros
+	* src/Makefile.am: add "scribble" module to shar program.
+	* src/scribble.c: new file
+	* src/scribble.h: likewise
+	* src/shar.c: simplify a lot of code by using that module.
+	* tests/shar-1: accommodate Windows correctly.
 
 2013-04-12  Bruce Korb  <bkorb@gnu.org>
 

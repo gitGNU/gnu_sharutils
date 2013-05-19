@@ -21,10 +21,8 @@ aGVsbG8K
 ====
 _EOF_
 
-cmp -s $tbase.xx $tbase.uu || {
-  diff -u $tbase.xx $tbase.uu
+diff -u $tbase.xx $tbase.uu 1>&2 || \
   exit 1
-}
 
 res=`uudecode -o - $tbase.uu 2>&1`
 test "X$res" = Xhello || {

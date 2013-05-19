@@ -23,21 +23,21 @@ SHAR=../src/shar
 
 ${SHAR} -f $current_dir/${inf} > ${sharf} 2> /dev/null || exit 1
 
-# adjust for variations in the package string and for
-# variations in Windows capabilities.
+# adjust for variations in the package string
 #
 sed -e "s/__PACKAGE_STRING__/${PACKAGE_STRING}/" \
-    -e 's/-rw-rw-rw- shar-1.in/-rw-r--r-- shar-1.in/' \
-    -e "s/chmod 0666 'shar-1.in'/chmod 0644 'shar-1.in'/" \
   $top_srcdir/tests/shar-1.ok > ${tmpfile}.sample
 
-# Remove variations based on PID and the current date
+# Remove variations based on PID and the current date and for
+# variations in Windows capabilities.
 #
 sed -e 's/^# Made on.*/# Made on .../' \
     -e 's/^# Source directory was.*/# Source directory was .../' \
+    -e 's/-rw-r.-r.- shar-1.in/-rw-r--r-- shar-1.in/' \
     -e 's/=_sh[0-9][0-9]*/=_sh<PID>/' \
     -e 's/(set .. .. .. .. .. .. ../(set <date>/' \
-${sharf} > ${outf} 2> /dev/null
+    -e "s/chmod 06[0-6][0-6] 'shar-1.in'/chmod 0644 'shar-1.in'/" \
+  ${sharf} > ${outf} 2> /dev/null
 
 : ${DIFF=diff}
 ${DIFF} -c ${tmpfile}.sample ${outf} || exit 1

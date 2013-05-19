@@ -52,8 +52,6 @@ Free Documentation License''.
 @ifnottex
 @node Top, Introduction, (dir), (dir)
 @top GNU @code{shar} utilities
-
-@insertcopying
 @end ifnottex
 
 @c @item @b{@code{sharutils}} @value{hfillkludge} (UtilD, SrcCD (??))
@@ -64,8 +62,6 @@ while @code{unshar} helps unpacking shell archives after reception.
 Other tools help using @code{shar} with the electronic mail system,
 and even allow synchronization of remote directory trees.
 This is release @value{VERSION}.
-
-@insertcopying
 
 @menu
 * Introduction::                Introduction to this toolset
