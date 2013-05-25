@@ -1,7 +1,7 @@
 unshar (GNU sharutils) - unpack a shar archive
 Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]
 
-   -d, --directory=DIR        change directory to DIR before unpacking
+   -d, --directory=DIR        unpack into the directory DIR
    -c, --overwrite            overwrite any pre-existing files
    -f, --force                an alias for the 'overwrite' option
    -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines

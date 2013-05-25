@@ -58,7 +58,7 @@ flag = {
     value       = d;
     arg-type    = string;
     arg-name    = dir;
-    descrip     = 'change directory to @file{dir} before unpacking';
+    descrip     = 'unpack into the directory @file{dir}';
 
     doc = <<- _EODoc_
 	The input file names are relative to the current directory
@@ -89,8 +89,8 @@ flag = {
     name        = split-at;
     value       = E;
     arg-type    = string;
-    arg-name    = split-pat;
-    descrip     = 'split input on @var{split-pat} lines';
+    arg-name    = split-mark;
+    descrip     = 'split input on @var{split-mark} lines';
     arg-default = "exit 0";
     flag-code   =
         '    separator_str_len = strlen (pOptDesc->optArg.argString);';
@@ -101,7 +101,7 @@ flag = {
 	from the others which have been placed in the same file, unpacking each
 	in turn, from the beginning of the file to the end.  Its proper
 	operation relies on the fact that many shar files are terminated by a
-	readily identifiable string.
+	readily identifiable string at the start of the last line.
 
 	For example, noticing that most `.signatures' have a double hyphen
 	("--") on a line right before them, one can then sometimes use
