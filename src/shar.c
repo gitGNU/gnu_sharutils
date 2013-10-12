@@ -444,7 +444,7 @@ walkdown (
 
   if (stat (local_name, &struct_stat))
     {
-      error (0, errno, local_name);
+      error (0, errno, "%s", local_name);
       return SHAR_EXIT_FILE_NOT_FOUND;
     }
 
@@ -453,7 +453,7 @@ walkdown (
 
   if (directory = opendir (local_name), !directory)
     {
-      error (0, errno, local_name);
+      error (0, errno, "%s", local_name);
       return SHAR_EXIT_CANNOT_OPENDIR;
     }
 
@@ -535,7 +535,7 @@ walkdown (
 #else
   if (closedir (directory))
     {
-      error (0, errno, local_name);
+      error (0, errno, "%s", local_name);
       return SHAR_EXIT_CANNOT_OPENDIR;
     }
 #endif
@@ -587,7 +587,7 @@ walktree (walker_t routine, const char *local_name)
 
     if (status != 0)
       {
-        error (0, errno, local_name_copy);
+        error (0, errno, "%s", local_name_copy);
         status = SHAR_EXIT_FILE_NOT_FOUND;
       }
     else
@@ -2368,7 +2368,7 @@ main (int argc, char ** argv)
               optionLoadLine (&sharOptions, arg);
             }
           else
-            error (0, errno, arg);
+            error (0, errno, "%s", arg);
           continue;
         }
 
