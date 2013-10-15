@@ -286,7 +286,7 @@ setup_configure() {
 "
 
     echo autopoint --force >&2
-    autopoint --force > /dev/null 2>&1
+    autopoint --force > /dev/null 2>&1 || :
     echo  ${gltool} --import  ... >&2
     {
       ${gltool} --import ${gnulib_libs} 2>&1

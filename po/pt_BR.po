@@ -1,0 +1,2066 @@
+# Brazilian Portuguese translation for sharutils.
+# Copyright (C) 2013 Free Software Foundation, Inc.
+# This file is distributed under the same license as the sharutils package.
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sharutils 4.13.5\n"
+"Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
+"POT-Creation-Date: 2013-04-12 17:27-0700\n"
+"PO-Revision-Date: 2013-09-25 03:40-0300\n"
+"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge.net>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. TRANSLATORS:  This is a phony function generated for the purpose of
+#. constructing the strings to be extracted for translation.  Each string
+#. is associated with a name (e.g. SM_ans_yes) that can be found in shar.c,
+#. if you need to look up context.  These strings are all inserted into
+#. the shar-generated shell script so the shar user can create shar archives
+#. with messages localized for one locale.
+#.
+#: src/scripts.x:449
+msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
+msgstr "Nota: md5sums não serão verificados. Considere instalar o GNU coreutils."
+
+#: src/scripts.x:450
+msgid ""
+"WARNING: not restoring timestamps.  Consider getting and\n"
+"installing GNU 'touch', distributed in GNU coreutils..."
+msgstr ""
+"AVISO: Marca de tempo não restaurada. Considere obter e instalar\n"
+"GNU \"touch\", distribuído no GNU coreutils..."
+
+#: src/scripts.x:452
+#, c-format
+msgid "lock directory %s exists"
+msgstr "diretório de trava %s existe"
+
+#: src/scripts.x:453
+#, c-format
+msgid "failed to create %s lock directory"
+msgstr "falha ao criar diretório de trava %s"
+
+#: src/scripts.x:454
+#, c-format
+msgid "x - created lock directory %s."
+msgstr "x - criou diretório de trava %s."
+
+#: src/scripts.x:455
+#, c-format
+msgid "x - failed to create lock directory %s."
+msgstr "x - falha ao criar diretório de trava %s."
+
+#: src/scripts.x:456
+#, c-format
+msgid "x - created directory %s."
+msgstr "x - criou diretório %s."
+
+#: src/scripts.x:457
+#, c-format
+msgid "x - failed to create directory %s."
+msgstr "x - falha ao criar diretório %s."
+
+#: src/scripts.x:458
+msgid "yes"
+msgstr "sim"
+
+#: src/scripts.x:459
+msgid "overwrite this file"
+msgstr "sobrescrever este arquivo"
+
+#: src/scripts.x:460
+msgid "no"
+msgstr "não"
+
+#: src/scripts.x:461
+msgid "skip this file"
+msgstr "ignorar este arquivo"
+
+#: src/scripts.x:462
+msgid "all"
+msgstr "todos"
+
+#: src/scripts.x:463
+msgid "overwrite all files"
+msgstr "sobrescrever todos arquivos"
+
+#: src/scripts.x:464
+msgid "none"
+msgstr "nenhum"
+
+#: src/scripts.x:465
+msgid "overwrite no files"
+msgstr "sobrescrever nenhum arquivo"
+
+#: src/scripts.x:466
+msgid "help"
+msgstr "ajuda"
+
+#: src/scripts.x:467
+msgid "explain choices"
+msgstr "explicar escolhas"
+
+#: src/scripts.x:468
+msgid "quit"
+msgstr "sair"
+
+#: src/scripts.x:469
+msgid "exit immediately"
+msgstr "sair imediatamente"
+
+#: src/scripts.x:470
+#, c-format
+msgid "restore of %s failed"
+msgstr "restauração de %s falhou"
+
+#: src/scripts.x:471
+#, c-format
+msgid "  chmod %04o %s\n"
+msgstr "  chmod %04o %s\n"
+
+#: src/scripts.x:472
+#, c-format
+msgid "End of part %d, continue with part %d"
+msgstr "Fim da parte %d, continuar com a parte %d"
+
+#: src/scripts.x:473
+#, c-format
+msgid "End of %s part %d"
+msgstr "Fim de %s parte %d"
+
+#: src/scripts.x:474
+#, c-format
+msgid "restoration warning:  size of %s is not %s"
+msgstr "aviso de restauração: tamanho de %s não é %s"
+
+#: src/scripts.x:475 src/shar.c:1469
+msgid "(text)"
+msgstr "(texto)"
+
+#: src/scripts.x:476
+msgid "(compressed)"
+msgstr "(comprimido)"
+
+#: src/scripts.x:477
+msgid "(gzipped)"
+msgstr "(gzippado)"
+
+#: src/scripts.x:478
+msgid "(bzipped)"
+msgstr "(bzippado)"
+
+# obs.: caso esteja relacionado a executável, é assim que deve ser traduzido.
+#: src/scripts.x:479
+msgid "(binary)"
+msgstr "(binário)"
+
+#: src/scripts.x:480
+msgid "archive"
+msgstr "pacote"
+
+#: src/scripts.x:481
+#, c-format
+msgid "File %s is continued in part %d"
+msgstr "Arquivo %s é continuado na parte %d"
+
+#: src/scripts.x:482
+msgid "Please unpack part 1 first!"
+msgstr "Por favor, descompacte a parte 1 primeiro!"
+
+#: src/scripts.x:483
+msgid "Please unpack part ${shar_sequence} next!"
+msgstr "Por favor, extraia a parte ${shar_sequence} em seguida!"
+
+#: src/scripts.x:484
+#, c-format
+msgid "x - STILL SKIPPING %s"
+msgstr "x - AINDA IGNORANDO %s"
+
+#: src/scripts.x:485
+#, c-format
+msgid "continuing file %s"
+msgstr "continuando arquivo %s"
+
+#: src/scripts.x:486
+msgid "(empty)"
+msgstr "(vazio)"
+
+#: src/scripts.x:487
+#, c-format
+msgid "x - overwriting %s"
+msgstr "x - sobrescrevendo %s"
+
+#: src/scripts.x:488
+#, c-format
+msgid "overwrite %s"
+msgstr "sobrescrever %s"
+
+#: src/scripts.x:489
+#, c-format
+msgid "SKIPPING %s"
+msgstr "IGNORANDO %s"
+
+#: src/scripts.x:490
+msgid "extraction aborted"
+msgstr "extração abortada"
+
+#: src/scripts.x:491
+#, c-format
+msgid "x - SKIPPING %s (file already exists)"
+msgstr "x - IGNORANDO %s (arquivo já existe)"
+
+#: src/scripts.x:492
+#, c-format
+msgid "x - extracting %s %s"
+msgstr "x - extraindo %s %s"
+
+#: src/scripts.x:493
+#, c-format
+msgid "File %s is complete"
+msgstr "Arquivo %s concluiu"
+
+#: src/scripts.x:494
+#, c-format
+msgid "uudecoding file %s"
+msgstr "uudecodificando arquivo %s"
+
+#: src/scripts.x:495
+msgid "MD5 check failed"
+msgstr "Verificação MD5 falhou"
+
+#: src/scripts.x:496
+msgid "You have unpacked the last part"
+msgstr "Você descompactou a última parte"
+
+#: src/scripts.x:497
+#, c-format
+msgid "x - removed lock directory %s."
+msgstr "x - removeu o diretório de trava %s."
+
+#: src/scripts.x:498
+#, c-format
+msgid "x - failed to remove lock directory %s."
+msgstr "x - falha ao remover o diretório de trava %s."
+
+#: src/shar-opts.c:1867
+#, c-format
+msgid "Cannot reopen %s as stdin"
+msgstr "Não foi possível reabrir %s como entrada padrão"
+
+#: src/shar-opts.c:1987
+msgid "shar usage error:\n"
+msgstr "erro de uso do shar:\n"
+
+#: src/shar-opts.c:2023
+msgid "shar fatal error:\n"
+msgstr "erro fatal do shar:\n"
+
+#: src/shar-opts.c:2060 src/unshar-opts.c:734 src/uudecode-opts.c:508
+#: src/uuencode-opts.c:459
+#, c-format
+msgid "fserr %d (%s) performing '%s' on %s\n"
+msgstr "fserr %d (%s) realizando \"%s\" em %s\n"
+
+#: src/shar-opts.c:2185 src/unshar-opts.c:859 src/uudecode-opts.c:633
+#: src/uuencode-opts.c:584
+msgid "No memory for duping translated strings\n"
+msgstr "Sem memória para duplicar strings traduzidas\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the sharOptions structure noted in the comments below.  The
+#. literal text is defined in shar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. shar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via sharOptions.pzCopyright
+#: src/shar-opts.c:2253
+msgid ""
+"shar (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"shar (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., todos direitos reservados.\n"
+"Este é um software livre. Ele está licenciado para uso, modificação e\n"
+"redistribuição sob os termos da Licença Pública Geral GNU, versão 3 ou\n"
+"posterior <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/shar-opts.c:2260
+msgid ""
+"shar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"shar é um software livre; você pode redistribuí-lo e/ou modificá-lo\n"
+"sob os termos da Licença Pública Geral GNU publicada pela Free Software\n"
+"Foundation; versão 3 da Licença, ou (a seu critério) outra versão\n"
+"posterior.\n"
+"\n"
+
+#: src/shar-opts.c:2264
+msgid ""
+"shar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"shar é distribuído na expectativa de que seja útil, mas SEM NENHUMA\n"
+"GARANTIA; sem mesmo implicar garantias de COMERCIALIZAÇÃO ou ADEQUAÇÃO\n"
+"A UM FIM ESPECÍFICO. Veja a Licença Pública Geral GNU (GPL) para mais\n"
+"detalhes.\n"
+"\n"
+
+#: src/shar-opts.c:2268 src/unshar-opts.c:942 src/uudecode-opts.c:716
+#: src/uuencode-opts.c:667
+msgid ""
+"You should have received a copy of the GNU General Public License along\n"
+"with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+" Você deve ter recebido uma cópia da Licença Pública Geral GNU junto\n"
+"com este programa; senão, veja <http://www.gnu.org/licenses/>.\n"
+
+#: src/shar-opts.c:2272
+#, c-format
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"shar (GNU sharutils) - cria um pacote de shell\n"
+"Uso:  %s [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+
+#: src/shar-opts.c:2276
+msgid ""
+"If no 'file's are specified, the list of input files is read from standard\n"
+"input.  Standard input must not be a terminal.\n"
+msgstr ""
+"Se nenhum \"arquivo\" for especificado, a lista de arquivos de entrada\n"
+"é lida da entrada padrão. A entrada padrão não pode ser um terminal.\n"
+
+#: src/shar-opts.c:2280
+msgid ""
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+"\"shar\" cria \"pacotes shell\" (ou arquivo shell) que estão em formato texto\n"
+"e podem ser enviados por e-mail. Esses arquivos podem ser descompactados\n"
+"posteriormente para serem executados com \"/bin/sh\". O pacote resultante é\n"
+"enviado para a saída padrão, a menos que a opção \"-o\" seja fornecida. Um\n"
+"ampla variedade de recursos fornecem flexibilidade extensiva na criação de\n"
+"shars e em especificar a \"esperteza\" dos \"shars\". Os pacotes podem ser\n"
+"razoavelmente simples (\"--vanilla-operation\") ou essencialmente um pacote\n"
+"\"tar\" para enviar por e-mail.\n"
+"\n"
+
+#: src/shar-opts.c:2287 src/shar-opts.c:2381
+msgid ""
+"Options may be specified in any order until a 'file' argument is\n"
+"recognized.  If the '--intermix-type' option has been specified, more\n"
+"compression and encoding options will be recognized between the 'file'\n"
+"arguments.\n"
+"\n"
+msgstr ""
+"Opções podem ser especificadas em qualquer ordem até um argumento\n"
+"\"arquivo\" ser especificado. Se a opção \"--intermix-type\" foi\n"
+"especificada, mais opções de compressão e codificação serão reconhecidas\n"
+"entre os argumentos de \"arquivo\".\n"
+"\n"
+
+#: src/shar-opts.c:2291
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+msgstr ""
+"Apesar deste programa ter suporte a arquivos a \"uuencode\", eles estão\n"
+"obsoletos. Se você está enviando arquivos por e-mail, por favor considere\n"
+"usar arquivos codificados em \"mime\". Se você utilizar \"uuencode\",\n"
+"base64 é o método de codificação preferível.\n"
+
+#: src/shar-opts.c:2296
+msgid "shar (GNU sharutils) 4.13.5"
+msgstr "shar (GNU sharutils) 4.13.5"
+
+#: src/shar-opts.c:2299
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"shar (GNU sharutils) - cria um pacote de shell\n"
+"Uso:  shar [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+"\n"
+
+#: src/shar-opts.c:2301
+msgid ""
+"Specify compression:\n"
+"   -p, --intermix-type        specify compression for input files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"Especificando a compressão:\n"
+"   -p, --intermix-type        especifica compressão para arquivos de entrada\n"
+"                                - proíbe a opção \"vanilla-operation\"\n"
+
+#: src/shar-opts.c:2304
+msgid ""
+"   -C, --compactor=PROG       specify compaction (compression) program PROG\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+"                                - may appear multiple times\n"
+"                                - it must be known to shar: xz gzip bzip2\n"
+msgstr ""
+"   -C, --compactor=PROG       especifica um programa de compactação PROG\n"
+"                                - proíbe a opção \"vanilla-operation\"\n"
+"                                - pode aparecer múltiplas vezes\n"
+"                                - deve ser conhecido pelo shar: xz gzip bzip2\n"
+
+#: src/shar-opts.c:2308
+msgid ""
+"   -g, --level-of-compression=LEVEL\n"
+"                              pass LEVEL for compression\n"
+"                                - it must be in the range: 1 to 9\n"
+"\n"
+msgstr ""
+"   -g, --level-of-compression=NÍVEL\n"
+"                              passa NÍVEL para compressão\n"
+"                                - deve estar na faixa: 1 até 9\n"
+"\n"
+
+#: src/shar-opts.c:2311
+msgid ""
+"Specify file encoding methodology:\n"
+"   -M, --mixed-uuencode       decide uuencoding for each file\n"
+msgstr ""
+"Especificando metodologia de codificação de arquivo:\n"
+"   -M, --mixed-uuencode       decide uuenconding para cada arquivo\n"
+
+#: src/shar-opts.c:2313
+msgid ""
+"   -B, --uuencode             treat all files as binary\n"
+"                                - an alternate for mixed-uuencode\n"
+msgstr ""
+"   -B, --uuencode             trata todos os arquivos como binários\n"
+"                                - uma alterativa à mixed-uuencode\n"
+
+#: src/shar-opts.c:2315
+msgid ""
+"   -T, --text-files           treat all files as text\n"
+"                                - an alternate for mixed-uuencode\n"
+"\n"
+msgstr ""
+"   -T, --text-files           trata todos os arquivos como textos\n"
+"                                - uma alterativa à mixed-uuencode\n"
+"\n"
+
+#: src/shar-opts.c:2317
+msgid "Specifying file selection and output modes:\n"
+msgstr "Especificando modos de saída e seleção de arquivos:\n"
+
+#: src/shar-opts.c:2318
+msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+msgstr ""
+"   -o, --output-prefix=PREFIXO\n"
+"                              envia mensagem de saída para PREFIXO.nn\n"
+
+#: src/shar-opts.c:2319
+msgid ""
+"   -l, --whole-size-limit=SIZE\n"
+"                              split archive, not files, to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+msgstr ""
+"   -l, --whole-size-limit=TAMANHO\n"
+"                              divide pacote, não arquivos, em TAMANHO\n"
+"                                - exige a opção \"output-prefix\"\n"
+"                                - escalonável com um sufixo: k/K/m/M/g/G/t/T\n"
+"                                - deve estar em uma das faixas:\n"
+"                                  8 até 1023, ou 8192 até 4194304\n"
+
+#: src/shar-opts.c:2325
+msgid ""
+"   -L, --split-size-limit=SIZE\n"
+"                              split archive or files to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+"                                - an alternate for 'whole-size-limit'\n"
+msgstr ""
+"   -l, --split-size-limit=TAMANHO\n"
+"                              divide pacote ou arquivos em TAMANHO\n"
+"                                - exige a opção \"output-prefix\"\n"
+"                                - escalonável com um sufixo: k/K/m/M/g/G/t/T\n"
+"                                - deve estar em uma das faixas:\n"
+"                                  8 até 1023, ou 8192 até 4194304\n"
+"                                - uma alternativa à \"whole-size-limit\"\n"
+
+#: src/shar-opts.c:2332
+msgid ""
+"   -I, --input-file-list=FILE read file list from FILE\n"
+"\n"
+msgstr ""
+"   -I, --input-file-list=ARQUIVO\n"
+"                              lê lista de arquivo de ARQUIVO\n"
+"\n"
+
+#: src/shar-opts.c:2333
+msgid ""
+"Controlling the shar headers:\n"
+"   -n, --archive-name=NAME    use NAME to document the archive\n"
+msgstr ""
+"Controlando os cabeçalhos de shar:\n"
+"   -n, --archive-name=NOME    usa NOME para documentar o pacote\n"
+
+#: src/shar-opts.c:2335
+msgid "   -s, --submitter=NAME       override the submitter name with NAME\n"
+msgstr "   -s, --submitter=NOME       sobrescreve o nome do emissor com NOME\n"
+
+#: src/shar-opts.c:2336
+msgid ""
+"   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
+"                                - requires the option 'archive-name'\n"
+msgstr ""
+"   -a, --net-headers          imprime os cabeçalhos Submitted-by & Archive-name\n"
+"                                - exige a opção \"archive-name\"\n"
+
+#: src/shar-opts.c:2338
+msgid "   -c, --cut-mark             start the shar with a cut line\n"
+msgstr "   -c, --cut-mark             inicia o shar com uma linha de corte\n"
+
+#: src/shar-opts.c:2339
+msgid ""
+"   -t, --translate            translate messages in the script\n"
+"\n"
+msgstr ""
+"   -t, --translate            traduz as mensagens no script\n"
+"\n"
+
+#: src/shar-opts.c:2340
+msgid ""
+"Protecting against transmission issues:\n"
+"       --no-character-count   do not use `wc -c' to check size\n"
+msgstr ""
+"Proteção contra problemas de transmissão:\n"
+"       --no-character-count   não usa \"wc -c\" para verificar o tamanho\n"
+
+#: src/shar-opts.c:2342
+msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
+msgstr "   -D, --no-md5-digest        não usa resumo md5sum para verificar\n"
+
+#: src/shar-opts.c:2343
+msgid "   -F, --force-prefix         apply the prefix character on every line\n"
+msgstr "   -F, --force-prefix         aplica o caractere de prefixo em cada linha\n"
+
+#: src/shar-opts.c:2344
+msgid ""
+"   -d, --here-delimiter=DELIM use DELIM to delimit the files\n"
+"\n"
+msgstr ""
+"   -d, --here-delimiter=DELIM usa DELIM para delimitar os arquivos\n"
+"\n"
+
+#: src/shar-opts.c:2345
+msgid ""
+"Producing different kinds of shars:\n"
+"   -V, --vanilla-operation    produce very simple shars\n"
+msgstr ""
+"Produzindo tipos diferentes de shars:\n"
+"   -V, --vanilla-operation    produz shars muito simples\n"
+
+#: src/shar-opts.c:2347
+msgid "   -P, --no-piping            use temporary files between programs\n"
+msgstr "   -P, --no-piping            usa arquivos temporários entre programas\n"
+
+#: src/shar-opts.c:2348
+msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr "   -x, --no-check-existing    sobrescreve sem verificar arquivos existentes\n"
+
+#: src/shar-opts.c:2349
+msgid ""
+"   -X, --query-user           ask user before overwriting files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"   -X, --query-user           pergunta ao usuário antes de sobrescrever\n"
+"                                - proíbe a opção \"vanilla-operation\"\n"
+
+#: src/shar-opts.c:2351
+msgid "   -m, --no-timestamp         do not restore modification times\n"
+msgstr "   -m, --no-timestamp         não restaura horário de última modificação\n"
+
+#: src/shar-opts.c:2352
+msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+msgstr "   -Q, --quiet-unshar         evita mensagens detalhadas ao fazer unshar\n"
+
+#: src/shar-opts.c:2353
+msgid ""
+"   -f, --basename             restore in one directory, despite hierarchy\n"
+"\n"
+msgstr ""
+"   -f, --basename             restaura em um diretório, apesar da hierarquia\n"
+"\n"
+
+#: src/shar-opts.c:2354
+msgid ""
+"Internationalization options:\n"
+"       --no-i18n              do not internationalize\n"
+msgstr ""
+"Opções de internacionalização:\n"
+"       --no-i18n              não internacionaliza\n"
+
+#: src/shar-opts.c:2356
+msgid ""
+"       --print-text-domain-dir  print directory with shar messages\n"
+"\n"
+msgstr ""
+"       --print-text-domain-dir\n"
+"                              exibe o diretório com mensagens shar\n"
+"\n"
+
+#: src/shar-opts.c:2357
+msgid ""
+"User feedback/entertainment:\n"
+"   -q, --quiet                do not output verbose messages\n"
+msgstr ""
+"Divertimento/feedback do usuário:\n"
+"   -q, --quiet                não exibe saídas detalhadas\n"
+
+#: src/shar-opts.c:2359
+msgid ""
+"       --silent               an alias for the 'quiet' option\n"
+"\n"
+msgstr ""
+"       --silent               uma apelido para a opção \"quiet\"\n"
+"\n"
+
+#: src/shar-opts.c:2360
+msgid "Version, usage and configuration options:\n"
+msgstr "Opções de versão, uso e configuração:\n"
+
+#: src/shar-opts.c:2361 src/unshar-opts.c:974 src/uudecode-opts.c:750
+#: src/uuencode-opts.c:697
+msgid "   -v, --version[=MODE]       output version information and exit\n"
+msgstr "   -v, --version[=MODO]       exibe a informação da versão e sai\n"
+
+#: src/shar-opts.c:2362 src/unshar-opts.c:975 src/uudecode-opts.c:751
+#: src/uuencode-opts.c:698
+msgid "   -h, --help                 display extended usage information and exit\n"
+msgstr "   -h, --help                 exibe informação estendida de uso e sai\n"
+
+#: src/shar-opts.c:2363 src/unshar-opts.c:976 src/uudecode-opts.c:752
+#: src/uuencode-opts.c:699
+msgid "   -!, --more-help            extended usage information passed thru pager\n"
+msgstr "   -!, --more-help            informação estendida de uso passada no paginador\n"
+
+#: src/shar-opts.c:2364 src/uudecode-opts.c:753 src/uuencode-opts.c:700
+msgid "   -R, --save-opts[=FILE]     save the option state to a config file FILE\n"
+msgstr ""
+"   -R, --save-opts[=ARQUIVO]  salva o estado da opção do arquivo de\n"
+"                              configuração ARQUIVO\n"
+
+#: src/shar-opts.c:2365 src/uudecode-opts.c:754 src/uuencode-opts.c:701
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled with '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"   -r, --load-opts=ARQUIVO    carrega opções do arquivo de configuração\n"
+"                              ARQUIVO\n"
+"                                - desabilitado com \"--no-load-opts\"\n"
+"                                - pode aparecer várias vezes\n"
+"\n"
+
+#: src/shar-opts.c:2368
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file's are specified, the list of input files is read from a\n"
+"standard input.  Standard input must not be a terminal.\n"
+"\n"
+msgstr ""
+"Opções são especificadas por hífenes duplos e seu nome ou por um hífen\n"
+"singular e o caractere de opção.\n"
+"Se nenhum \"arquivo\" for especificado, a lista de arquivos de entrada\n"
+"é lida de uma entrada padrão. Entrada padrão não deve ser um terminal.\n"
+"\n"
+
+#: src/shar-opts.c:2372 src/unshar-opts.c:986 src/uudecode-opts.c:760
+#: src/uuencode-opts.c:706
+msgid "The following option preset mechanisms are supported:\n"
+msgstr "Há suporte às seguintes mecanismos de opções predefinidas:\n"
+
+#: src/shar-opts.c:2373
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+" - leitura de arquivo $HOME/.sharrc\n"
+"\n"
+"\"shar\" cria \"pacotes shell\" (ou arquivos shar) que estão em formato texto\n"
+"e podem ser enviados por e-mail. Esses arquivos podem ser descompactados\n"
+"posteriormente para serem executados com \"/bin/sh\". O pacote resultante é\n"
+"enviado para a saída padrão, a menos que a opção \"-o\" seja fornecida. Um\n"
+"ampla variedade de recursos fornecem flexibilidade extensiva na criação de\n"
+"shars e em especificar a \"esperteza\" dos \"shars\". Os pacotes podem ser\n"
+"razoavelmente simples (\"--vanilla-operation\") ou essencialmente um pacote\n"
+"\"tar\" para enviar por e-mail.\n"
+"\n"
+
+#: src/shar-opts.c:2385
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"Apesar de neste programa haver suporte a arquivos resultados de\n"
+"\"uuencode\", eles estão obsoletos. Se você está enviando arquivos\n"
+"por e-mail, por favor considere usar arquivos codificados em \"mime\".\n"
+"Se você utilizar \"uuencode\", base64 é o método de codificação\n"
+"preferível.\n"
+"\n"
+"Por favor, envie relatórios de erro para: <bug-gnu-utils@gnu.org>\n"
+
+#: src/shar-opts.c:2391
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'shar --help' for more information.\n"
+msgstr ""
+"shar (GNU sharutils) - cria um pacote shell\n"
+"Uso:  shar [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+"Tente \"shar --help\" para mais informações.\n"
+
+#: ../autoopts.c:60 ../autoopts.c:86
+#, c-format
+msgid "allocation of %d bytes failed\n"
+msgstr "alocação de %d bytes falhou\n"
+
+#: ../init.c:53
+msgid "AutoOpts function called without option descriptor\n"
+msgstr "função AutoOpts chamada sem descritor de opção\n"
+
+#: ../init.c:89
+msgid "\tThis exceeds the compiled library version:  "
+msgstr "\tIsso excede a versão da biblioteca compilada:  "
+
+#: ../init.c:87
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+"Erro de processamento de Automated Options!\n"
+"\t%s chamou a função AutoOpts com versão de estrutura %d:%d:%d.\n"
+
+#: ../autoopts.c:73
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr "realocação de %d bytes em 0x%p falhou\n"
+
+#: ../init.c:91
+msgid "\tThis is less than the minimum library version:  "
+msgstr "\tIsso é menor que a versão mínima da biblioteca:  "
+
+#: ../version.c:121
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+"Automated Options versão %s\n"
+"\tCopyright (C) 1999-2013 por Bruce Korb - todos direitos reservados\n"
+
+#: ../usage.c:310
+#, c-format
+msgid "(AutoOpts bug):  %s.\n"
+msgstr "(erro no AutoOpts):  %s.\n"
+
+#: ../reset.c:90
+msgid "optionResetOpt() called, but reset-option not configured"
+msgstr "optionResetOpt() chamado, mas opção de reset não está configurada"
+
+#: ../usage.c:329
+msgid "could not locate the 'help' option"
+msgstr "não foi possível localizar a opção \"help\""
+
+#: ../autoopts.c:351
+msgid "optionProcess() was called with invalid data"
+msgstr "optionProcess() foi chamado com dados inválidos"
+
+#: ../usage.c:783
+msgid "invalid argument type specified"
+msgstr "tipo de argumento inválido especificado"
+
+#: ../find.c:589
+msgid "defaulted to option with optional arg"
+msgstr "definido padrão para opção com argumento opcional"
+
+#: ../alias.c:76
+msgid "aliasing option is out of range."
+msgstr "opção de alias está fora da faixa."
+
+#: ../enum.c:229
+#, c-format
+msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
+msgstr "erro %s: a palavra-chave \"%s\" é ambígua para %s\n"
+
+#: ../find.c:108
+msgid "  The following options match:\n"
+msgstr "  As seguintes opções coincidem:\n"
+
+#: ../find.c:290
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr "%s: nome de opção ambígua: %s (coincide com %d opções)\n"
+
+#: ../check.c:161
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr "%s: Argumentos de linha de comando necessários\n"
+
+#: ../alias.c:43
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr "%d %s%s opções permitidas\n"
+
+#: ../makeshell.c:81
+#, c-format
+msgid "%s error %d (%s) calling %s for '%s'\n"
+msgstr "erro de %s, %d (%s) chamando %s para \"%s\"\n"
+
+#: ../makeshell.c:293
+msgid "interprocess pipe"
+msgstr "redirecionamento (pipe) interprocesso"
+
+#: ../version.c:168
+#, c-format
+msgid ""
+"error: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and full copyright notice\n"
+msgstr ""
+"erro: argumento \"%c\" inválido de opção de versão. Use:\n"
+"\t'v' - versão apenas\n"
+"\t'c' - versão e copyright\n"
+"\t'n' - versão e aviso de copyright completo\n"
+
+#: ../check.c:58
+#, c-format
+msgid "%s error:  the '%s' and '%s' options conflict\n"
+msgstr "%s erro: as opções \"%s\" e \"%s\" conflitam\n"
+
+#: ../find.c:214 ../find.c:421
+#, c-format
+msgid "%s: The '%s' option has been disabled."
+msgstr "%s: a opção \"%s\" foi desabilitada."
+
+#: ../alias.c:38
+msgid "-equivalence"
+msgstr "-equivalência"
+
+#: ../find.c:460 ../reset.c:110
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: opção ilegal -- %c\n"
+
+#: ../find.c:268 ../find.c:746 ../reset.c:118
+#, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: opção ilegal -- %s\n"
+
+#: ../find.c:332
+#, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: opção de extensão de fabricante desconhecida -- %s\n"
+
+#: ../enum.c:154 ../enum.c:164
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr "  ou um inteiro de %d até %d\n"
+
+#: ../usage.c:782 ../usage.c:1110
+#, c-format
+msgid "%s error:  invalid option descriptor for %s\n"
+msgstr "%s erro: descritor de opção inválida para %s\n"
+
+#: ../find.c:379
+#, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: nome de opção inválida: %s\n"
+
+#: ../find.c:518
+#, c-format
+msgid "%s: The '%s' option requires an argument.\n"
+msgstr "%s: A opção \"%s\" exige um argumento.\n"
+
+#: ../autoopts.c:171
+#, c-format
+msgid ""
+"(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'."
+msgstr ""
+"(erro no AutoOpts): Opção \"%s\" foi equivalenciada por ambos\n"
+"\t\"%s\" e \"%s\"."
+
+#: ../check.c:94
+#, c-format
+msgid "%s error:  The %s option is required\n"
+msgstr "%s erro: A opção %s é necessária\n"
+
+#: ../find.c:623
+#, c-format
+msgid "%s: The '%s' option cannot have an argument.\n"
+msgstr "%s: A opção \"%s\" não pode levar um argumento.\n"
+
+#: ../check.c:151
+#, c-format
+msgid "%s: Command line arguments are not allowed.\n"
+msgstr "%s: Argumentos de linha de comando não são permitidos.\n"
+
+#: ../save.c:531
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr "erro %d (%s) ao criar %s\n"
+
+#: ../enum.c:229
+#, c-format
+msgid "%s error:  '%s' does not match any %s keywords.\n"
+msgstr "%s erro: \"%s\" não corresponde a quaisquer palavras chaves %s.\n"
+
+#: ../reset.c:93
+#, c-format
+msgid "%s error: The '%s' option requires an argument.\n"
+msgstr "%s erro: A opção \"%s\" exige um argumento.\n"
+
+#: ../save.c:184 ../save.c:238
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr "erro %d (%s) ao obter estado de %s\n"
+
+#: ../restore.c:143
+#, c-format
+msgid "%s error: no saved option state\n"
+msgstr "%s erro: nenhum estado de opção salvo\n"
+
+#: ../autoopts.c:246
+#, c-format
+msgid "'%s' is not a command line option.\n"
+msgstr "\"%s\" não é uma opção de linha de comando.\n"
+
+#: ../time.c:114
+#, c-format
+msgid "%s error:  '%s' is not a recognizable date/time.\n"
+msgstr "%s erro: \"%s\" não é uma data/hora reconhecível.\n"
+
+#: ../save.c:132
+#, c-format
+msgid "'%s' not defined\n"
+msgstr "\"%s\" não definido\n"
+
+#: ../time.c:53
+#, c-format
+msgid "%s error:  '%s' is not a recognizable time duration.\n"
+msgstr "%s erro: \"%s\" não é uma duração de tempo reconhecível.\n"
+
+#: ../check.c:92
+#, c-format
+msgid "%s error:  The %s option must appear %d times.\n"
+msgstr "%s erro: A opção %s deve aparecer %d vezes.\n"
+
+#: ../numeric.c:157
+#, c-format
+msgid "%s error:  '%s' is not a recognizable number.\n"
+msgstr "%s erro: \"%s\" não é um número reconhecível.\n"
+
+#: ../enum.c:195
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr "%s erro: %s excede a quantidade de %s palavras chaves\n"
+
+#: ../usage.c:366
+#, c-format
+msgid "Try '%s %s' for more information.\n"
+msgstr "Tente \"%s %s\" para obter mais informações.\n"
+
+#: ../alias.c:45
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr "uma opção %s%s é permitida\n"
+
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:304 ../usage.c:451
+#: ../usage.c:660 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
+#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+msgid "standard output"
+msgstr "saída padrão"
+
+#: ../usage.c:304 ../usage.c:451 ../usage.c:660 ../version.c:175
+msgid "standard error"
+msgstr "erro padrão"
+
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:303 ../usage.c:450
+#: ../usage.c:659 ../version.c:174
+msgid "write"
+msgstr "escrever"
+
+#: ../numeric.c:60
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr "%s erro: opção %s com valor %ld fora de alcance.\n"
+
+#: ../check.c:44
+#, c-format
+msgid "%s error:  %s option requires the %s option\n"
+msgstr "%s erro: a opção %s exige a opção %s\n"
+
+#: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:530
+#, c-format
+msgid "%s warning:  cannot save options - %s not regular file\n"
+msgstr "%s aviso: não foi possível salvar opções - %s não é um arquivo normal\n"
+
+#: src/shar.c:365
+#, c-format
+msgid "printf formatting error:  %s\n"
+msgstr "erro de formatação no printf: %s\n"
+
+#: src/shar.c:416
+msgid "sharutils bug - no status"
+msgstr "erro no sharutils = nenhum estado"
+
+#: src/shar.c:779
+msgid "Too many directories for mkdir generation"
+msgstr "Número excessivo de diretórios para criação com mkdir"
+
+#: src/shar.c:862 src/shar.c:1681
+#, c-format
+msgid "Cannot access %s"
+msgstr "Não foi possível acessar %s"
+
+#: src/shar.c:957
+#, c-format
+msgid "Cannot get current directory name"
+msgstr "Não foi possível obter o nome do diretório atual"
+
+#: src/shar.c:1043
+#, c-format
+msgid "Starting file %s\n"
+msgstr "Iniciando o arquivo %s\n"
+
+#: src/shar.c:1142
+msgid "Could not popen command"
+msgstr "Não foi possível popen comando"
+
+#: src/shar.c:1198
+#, c-format
+msgid "Cannot open file %s"
+msgstr "Não foi possível abrir o arquivo %s"
+
+#: src/shar.c:1324 src/shar.c:1335
+msgid "call"
+msgstr "chamar"
+
+#: src/shar.c:1347
+msgid "pipe fd"
+msgstr "redirecionar descritor de arquivo"
+
+#: src/shar.c:1455 src/shar.c:1468
+msgid "text"
+msgstr "texto"
+
+#: src/shar.c:1565
+#, c-format
+msgid "Continuing file %s\n"
+msgstr "Continuando arquivo %s\n"
+
+#: src/shar.c:1676
+#, c-format
+msgid "%s: Not a regular file"
+msgstr "%s: Não é um arquivo normal"
+
+#: src/shar.c:1724
+msgid "empty"
+msgstr "vazio"
+
+#: src/shar.c:1763
+#, c-format
+msgid "Saving %s (%s)"
+msgstr "Salvando %s (%s)"
+
+#: src/shar.c:1948
+#, c-format
+msgid "Invalid format for output file names (%s): %s"
+msgstr "Formato inválido para nomes de arquivo de saída (%s): %s"
+
+#: src/shar.c:1963
+msgid "more than one format element"
+msgstr "mais de um elemento de formato"
+
+#: src/shar.c:1968
+msgid "no conversion character"
+msgstr "nenhum caractere de conversão"
+
+#: src/shar.c:1977
+msgid "format is too wide"
+msgstr "formato é muito amplo"
+
+#: src/shar.c:1989
+msgid "invalid conversion character"
+msgstr "caractere de conversão inválido"
+
+#: src/shar.c:2034
+msgid "Opening"
+msgstr "Abrindo"
+
+#: src/shar.c:2049
+msgid "Closing"
+msgstr "Fechando"
+
+#: src/shar.c:2138
+#, c-format
+msgid "reopening stderr to /dev/null"
+msgstr "reabrindo a saída de erro para /dev/null"
+
+#: src/shar.c:2186
+msgid "No input files"
+msgstr "Nenhum arquivo de entrada"
+
+#: src/shar.c:2203
+#, c-format
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "POR FAVOR, evite -X shars na Usenet ou em redes públicas"
+
+#: src/shar.c:2227
+#, c-format
+msgid ""
+"The '%s' option may not be intermixed with file names\n"
+"unless the --intermix-type option has been specified."
+msgstr ""
+"A opção \"%s\" pode não ser misturada com nomes de arquivos\n"
+"a menos que a opção --intermix-type tiver sido especificada."
+
+#: src/shar.c:2245
+#, c-format
+msgid "The '%s' option must appear before any file names"
+msgstr "A opção \"%s\" deve aparecer antes de quaisquer arquivos"
+
+#: src/shar.c:2281
+#, c-format
+msgid ""
+"invalid compaction type:  %s\n"
+"the known types are:\n"
+msgstr ""
+"tipo de compactação inválida: %s\n"
+"Os tipos conhecidos são:\n"
+
+#: src/shar.c:2319
+msgid "files on command line and --input-file-list specified"
+msgstr "arquivos especificados na linha de comando e com --input-file-list"
+
+#: src/shar.c:2368
+#, c-format
+msgid "Created %d files\n"
+msgstr "Criados %d arquivos\n"
+
+#: src/unshar-opts.c:580
+#, c-format
+msgid "fs error %d (%s) %s-ing %s\n"
+msgstr "erro %d (%s) ao executar %s em %s\n"
+
+#: src/unshar-opts.c:582 src/unshar-opts.c:644 src/uudecode.c:470
+#: src/uuencode.c:205
+msgid "standard input"
+msgstr "entrada padrão"
+
+#: src/unshar-opts.c:661
+msgid "unshar usage error:\n"
+msgstr "erro de uso do unshar:\n"
+
+#: src/unshar-opts.c:697
+msgid "unshar fatal error:\n"
+msgstr "erro fatal do unshar:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the unsharOptions structure noted in the comments below.  The
+#. literal text is defined in unshar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. unshar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via unsharOptions.pzCopyright
+#: src/unshar-opts.c:927
+msgid ""
+"unshar (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"unshar (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., todos direitos reservados.\n"
+"Este é um software livre. Ele está licenciado para uso, modificação e\n"
+"redistribuição sob os termos da Licença Pública Geral GNU, version 3 ou\n"
+"posterior <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/unshar-opts.c:934
+msgid ""
+"unshar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"unshar é um software livre; você pode redistribuí-lo e/ou modificá-lo\n"
+"sob os termos da Licença Pública Geral GNU publicada pela Free Software\n"
+"Foundation; versão 3 da Licença, ou (a seu critério) outra versão\n"
+"posterior.\n"
+
+#: src/unshar-opts.c:938
+msgid ""
+"unshar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"unshar é distribuído na expectativa de que seja útil, mas SEM NENHUMA\n"
+"GARANTIA; sem mesmo implicar garantias de COMERCIALIZAÇÃO ou ADEQUAÇÃO\n"
+"A UM FIM ESPECÍFICO. Veja a Licença Pública Geral GNU (GPL) para mais\n"
+"detalhes.\n"
+"\n"
+
+#: src/unshar-opts.c:946
+#, c-format
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"unshar (GNU sharutils) - extrai um pacote shar\n"
+"Uso:  %s [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+
+#: src/unshar-opts.c:950
+msgid ""
+"\n"
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+msgstr ""
+"\n"
+"Se nenhum argumento for fornecido, os argumentos de entrada são lidos da\n"
+"entrada padrão, cada um por linha. Linhas em brancos e precedidas de #\n"
+"são consideradas comentários.\n"
+"\"Entrada padrão\" pode não ser um terminal (tty).\n"
+
+#: src/unshar-opts.c:956
+msgid ""
+"Unshar scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+msgstr ""
+"\"unshar\" vasculha os arquivos de entrada (normalmente mensagens de e-mail\n"
+"procurando pelo começo do pacote shell. Se nenhum arquivo for fornecido,\n"
+"então a entrada padrão é processada. Ele, então, passa cada pacote\n"
+"descoberto por meio de uma invocação do programa shell para descompactá-lo.\n"
+
+#: src/unshar-opts.c:962
+msgid "unshar (GNU sharutils) 4.13.5"
+msgstr "unshar (GNU sharutils) 4.13.5"
+
+#: src/unshar-opts.c:965
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"unshar (GNU sharutils) - extrai um pacote shar\n"
+"Uso:  unshar [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+
+#: src/unshar-opts.c:967
+msgid "   -d, --directory=DIR        change directory to DIR before unpacking\n"
+msgstr "   -d, --directory=DIR        altera diretório para DIR antes de extrair\n"
+
+#: src/unshar-opts.c:968
+msgid "   -c, --overwrite            overwrite any pre-existing files\n"
+msgstr "   -c, --overwrite            sobrescreve arquivos pré-existente\n"
+
+#: src/unshar-opts.c:969
+msgid "   -f, --force                an alias for the 'overwrite' option\n"
+msgstr "   -f, --force                um apelida para opção \"overwrite\"\n"
+
+#: src/unshar-opts.c:970
+msgid "   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines\n"
+msgstr ""
+"   -E, --split-at=PADRÃO-DIVISÃO\n"
+"                                    divide a entrada em linhas considerando\n"
+"                                    o PADRÃO-DIVISÃO\n"
+
+#: src/unshar-opts.c:971
+msgid ""
+"   -e, --exit-0               split input on \"exit 0\" lines\n"
+"                                - prohibits the option 'split-at'\n"
+msgstr ""
+"   -e, --exit-0               divide a entrada em linhas com \"exit 0\"\n"
+"                                - proíbe a opção \"split-at\"\n"
+
+#: src/unshar-opts.c:973
+msgid "   -D, --debug                debug the shell code\n"
+msgstr "   -D, --debug                depura o código de shell\n"
+
+#: src/unshar-opts.c:977
+msgid "   -R, --save-opts[=FILE]     save the option state to the config file FILE\n"
+msgstr ""
+"   -R, --save-opts[=ARQUIVO]  salva o estado da opção no arquivo de\n"
+"                              configuração ARQUIVO\n"
+
+#: src/unshar-opts.c:978
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled as '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"   -r, --load-opts=ARQUIVO    carrega opções do arquivo de configuração\n"
+"                              ARQUIVO\n"
+"                                - desabilitado com \"--no-load-opts\"\n"
+"                                - pode aparecer várias vezes\n"
+"\n"
+
+#: src/unshar-opts.c:981 src/uuencode-opts.c:704
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"\n"
+msgstr ""
+"Opções são especificadas por hífenes duplos e seus nomes ou por um único\n"
+"hífen e o caractere de opção.\n"
+"\n"
+
+#: src/unshar-opts.c:983
+msgid ""
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+"\n"
+msgstr ""
+"Se nenhum argumento for fornecido, os argumentos de entrada são lidos\n"
+"da entrada padrão, um por linha; linhas vazias e prefixadas com \"#\" são\n"
+"comentários.\n"
+"A \"entrada padrão\" pode não ser um terminal (tty).\n"
+"\n"
+
+#: src/unshar-opts.c:987
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'unshar' scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+"\n"
+msgstr ""
+" - leitura de arquivo $HOME/.sharrc\n"
+"\n"
+"\"unshar\" vasculha os arquivos de entrada (normalmente mensagens de e-mail\n"
+"procurando pelo começo do pacote shell. Se nenhum arquivo for fornecido,\n"
+"então a entrada padrão é processada. Ele, então, passa cada pacote\n"
+"descoberto por meio de uma invocação do programa shell para descompactá-lo.\n"
+
+#: src/unshar-opts.c:992 src/uudecode-opts.c:776
+msgid "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr "Por favor, envie relatos de problemas e sugestões para: <bug-gnu-utils@gnu.org>\n"
+
+#: src/unshar-opts.c:995
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'unshar --help' for more information.\n"
+msgstr ""
+"unshar (GNU sharutils) - extrai um pacote shar\n"
+"Uso:  shar [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+"Tente \"unshar -help\" para mais informações.\n"
+
+#: src/unshar.c:202
+#, c-format
+msgid "Found no shell commands after cut line in %s"
+msgstr "Nenhum comando shell encontrado após corte de linha em %s"
+
+#: src/unshar.c:220
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "%s provavelmente não é um pacote shell"
+
+#: src/unshar.c:221
+#, c-format
+msgid "The 'cut line' was followed by: %s"
+msgstr "A \"linha de corte\" foi seguida por: %s"
+
+#: src/unshar.c:244
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "Nenhum comando shell encontrado em %s"
+
+#: src/unshar.c:253
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s se parece com um código C não tratado, e não um pacote shell"
+
+#: src/unshar.c:304
+msgid "file name buffer"
+msgstr "buffer de nome de arquivo"
+
+#: src/unshar.c:425
+msgid "read/write buffer"
+msgstr "buffer de leitura/escrita"
+
+#: src/uudecode-opts.c:435
+msgid "uudecode usage error:\n"
+msgstr "erro no uso de uudecode:\n"
+
+#: src/uudecode-opts.c:471
+msgid "uudecode fatal error:\n"
+msgstr "erro fatal no uudecode:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uudecodeOptions structure noted in the comments below.  The
+#. literal text is defined in uudecode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uudecode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uudecodeOptions.pzCopyright
+#: src/uudecode-opts.c:701
+msgid ""
+"uudecode (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uudecode (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., todos direitos reservados.\n"
+"Este é um software livre. Ele está licenciado para uso, modificação e\n"
+"redistribuição sob os termos da Licença Pública Geral GNU, version 3 ou\n"
+"posterior <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/uudecode-opts.c:708
+msgid ""
+"uudecode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+"uudecode é um software livre; você pode redistribuí-lo e/ou modificá-lo\n"
+"sob os termos da Licença Pública Geral GNU publicada pela Free Software\n"
+"Foundation; versão 3 da Licença, ou (a seu critério) outra versão\n"
+"posterior.\n"
+
+#: src/uudecode-opts.c:712
+msgid ""
+"uudecode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"uudecode é distribuído na expectativa de que seja útil, mas SEM NENHUMA\n"
+"GARANTIA; sem mesmo implicar garantias de COMERCIALIZAÇÃO ou ADEQUAÇÃO\n"
+"A UM FIM ESPECÍFICO. Veja a Licença Pública Geral GNU (GPL) para mais\n"
+"detalhes.\n"
+"\n"
+
+#: src/uudecode-opts.c:720
+#, c-format
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"uudecode (GNU sharutils) - decodifica um arquivo codificado\n"
+"Uso:  %s [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+
+#: src/uudecode-opts.c:724
+msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
+msgstr "Se nenhum \"arquivo\"(s) for fornecido, então a entrada padrão é decodificada.\n"
+
+#: src/uudecode-opts.c:727
+msgid ""
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+"\"uudecode\" transforma arquivos codificados com uuencode em sua forma original.\n"
+"\n"
+
+#: src/uudecode-opts.c:728 src/uudecode-opts.c:763
+msgid ""
+"The encoded file(s) may be specified on the command line, or one may be\n"
+"read from standard input.  The output file name is specified in the encoded\n"
+"file, but may be overridden with the '-o' option.  It will have the mode of\n"
+"the original file, except that setuid and execute bits are not retained.  If\n"
+"the output file is specified to be '/dev/stdout' or '-', the result will be\n"
+"written to standard output.  If there are multiple input files and the\n"
+"second or subsquent file specifies standard output, the decoded data will\n"
+"be written to the same file as the previous output.  Don't do that.\n"
+"\n"
+msgstr ""
+"Os arquivo(s) codificados podem ser especificados na linha de comando ou um\n"
+"pode ser lido da entrada padrão. O nome do arquivo de saída é especificado\n"
+"no arquivo codificado, mas pode ser sobrescrito com a opção \"-o\". Eleterá\n"
+"o modo de arquivo original, exceto que setuid e bits de execução não são\n"
+"retidos. Se o arquivo de saída for especificado para ser \"/dev/stdout\" ou\n"
+"\"-\", o resultado será escrito na saída padrão. Se houver múltiplosarquivos\n"
+"de entrada e o segundo arquivo ou o subsequente especifica a saída padrão,\n"
+"os dados decodificados serão escritos no mesmo arquivo que a saídaanterior.\n"
+"Não faça isso.\n"
+
+#: src/uudecode-opts.c:736
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+msgstr ""
+"\"uudecode\" ignora quaisquer linhas iniciais ou finais. Ele procura por\n"
+"uma linha que começa com \"'begin'\" e procede até o marcador de fim de\n"
+"codificação ser encontrado. O programa determina da linha de cabeçalho do\n"
+"arquivo codificado até os dois esquemas de codificação suportados e se o\n"
+"nome de arquivo de saída tiver sido codificado com base64. Veja \"uuencode(5)\".\n"
+
+#: src/uudecode-opts.c:743
+msgid "uudecode (GNU sharutils) 4.13.5"
+msgstr "uudecode (GNU sharutils) 4.13.5"
+
+#: src/uudecode-opts.c:746
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"uudecode (GNU sharutils) - decodifica um arquivo codificado\n"
+"Uso:  uudecode [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+"\n"
+
+#: src/uudecode-opts.c:748
+msgid "   -o, --output-file=str      direct output to file\n"
+msgstr "   -o, --output-file=str      direciona a saída para um arquivo\n"
+
+#: src/uudecode-opts.c:749
+msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
+msgstr "   -c, --ignore-chmod         ignora erros de fchmod(3P)\n"
+
+#: src/uudecode-opts.c:757
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file'(s) are provided, then standard input is decoded.\n"
+"\n"
+msgstr ""
+"Opções são especificadas por hífenes duplos e seus nomes ou por um único\n"
+"hífen e o caractere de opção.\n"
+"Se nenhum \"arquivo\" tiver sido fornecido, então a entrada padrão é\n"
+"decodificada.\n"
+
+#: src/uudecode-opts.c:761
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+" - leitura de arquivo $HOME/.sharrc\n"
+"\n"
+"'uudecode' transforma arquivos codificados com uuencode em sua forma original.\n"
+"\n"
+
+#: src/uudecode-opts.c:771
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+"\n"
+msgstr ""
+"\"uudecode\" ignora quaisquer linhas iniciais ou finais. Ele procura por\n"
+"uma linha que começa com \"'begin'\" e procede até o marcador de fim de\n"
+"codificação ser encontrado. O programa determina da linha de cabeçalho do\n"
+"arquivo codificado até os dois esquemas de codificação suportados e se o\n"
+"nome de arquivo de saída tiver sido codificado com base64. Veja \"uuencode(5)\".\n"
+
+#: src/uudecode-opts.c:779
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'uudecode --help' for more information.\n"
+msgstr ""
+"uudecode (GNU sharutils) - decodifica um arquivo codificado\n"
+"Uso:  uudecode [ -<opção> [<val>] | --<nome>[{=| }<val>] ]... [<arquivo>...]\n"
+"Tente \"uudecode --help\" para mais informações.\n"
+
+#: src/uudecode.c:118 src/uudecode.c:182
+#, c-format
+msgid "%s: Short file"
+msgstr "%s: Arquivo curto"
+
+#: src/uudecode.c:164
+#, c-format
+msgid "%s: No `end' line"
+msgstr "%s: Nenhuma linha de \"end\""
+
+#: src/uudecode.c:188
+#, c-format
+msgid "%s: invalid input"
+msgstr "%s: Entrada inválida"
+
+#: src/uudecode.c:215
+msgid "cannot expand $HOME"
+msgstr "não foi possível expandir $HOME"
+
+#: src/uudecode.c:226
+#, c-format
+msgid "%s: Illegal file name: %s"
+msgstr "%s: Nome de arquivo ilegal: %s"
+
+#: src/uudecode.c:233
+#, c-format
+msgid "No user '%s'"
+msgstr "nenhum usuário \"%s\""
+
+#: src/uudecode.c:244 src/uudecode.c:306
+msgid "output file name"
+msgstr "nome do arquivo de saída"
+
+#: src/uudecode.c:263
+#, c-format
+msgid "cannot access %s"
+msgstr "não é possível acessar %s"
+
+#: src/uudecode.c:276
+#, c-format
+msgid "chmod of %s"
+msgstr "chmod de %s"
+
+#: src/uudecode.c:300
+msgid "output name is empty"
+msgstr "nome da saída está vazio!"
+
+#: src/uudecode.c:311
+#, c-format
+msgid "invalid base64 encoded name: %s"
+msgstr "Nome codificado com base64 inválido: %s"
+
+#: src/uudecode.c:346
+#, c-format
+msgid "%s: Invalid or missing 'begin' line"
+msgstr "%s Linha de \"begin\" faltando ou inválida"
+
+#: src/uudecode.c:436
+#, c-format
+msgid "%s: Write error"
+msgstr "%s: Erro de gravação"
+
+#: src/uudecode.c:476
+msgid ""
+"You cannot specify an output file when processing\n"
+"multiple input files.\n"
+msgstr ""
+"Você não pode especificar um arquivo de saída ao\n"
+"processar múltiplos arquivos de entrada.\n"
+
+#: src/uuencode-opts.c:386
+msgid "uuencode usage error:\n"
+msgstr "erro de uso do uuencode:\n"
+
+#: src/uuencode-opts.c:422
+msgid "uuencode fatal error:\n"
+msgstr "erro fatal do uuencode:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uuencodeOptions structure noted in the comments below.  The
+#. literal text is defined in uuencode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uuencode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uuencodeOptions.pzCopyright
+#: src/uuencode-opts.c:652
+msgid ""
+"uuencode (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uuencode (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., todos direitos reservados.\n"
+"Este é um software livre. Ele está licenciado para uso, modificação e\n"
+"redistribuição sob os termos da Licença Pública Geral GNU, version 3 ou\n"
+"posterior <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/uuencode-opts.c:659
+msgid ""
+"uuencode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+"uudecode é um software livre; você pode redistribuí-lo e/ou modificá-lo\n"
+"sob os termos da Licença Pública Geral GNU publicada pela Free Software\n"
+"Foundation; versão 3 da Licença, ou (a seu critério) outra versão\n"
+"posterior.\n"
+"\n"
+
+#: src/uuencode-opts.c:663
+msgid ""
+"uuencode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"uuencode é distribuído na expectativa de que seja útil, mas SEM NENHUMA\n"
+"GARANTIA; sem mesmo implicar garantias de COMERCIALIZAÇÃO ou ADEQUAÇÃO\n"
+"A UM FIM ESPECÍFICO. Veja a Licença Pública Geral GNU (GPL) para mais\n"
+"detalhes.\n"
+"\n"
+
+#: src/uuencode-opts.c:671
+#, c-format
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  %s [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+msgstr ""
+"uuencode (GNU sharutils) - codifica um arquivo para um texto de e-mail\n"
+"Uso:  %s [ -<opção> | --<nome> ]... [<arquivo-entrada>] <nome-saída>\n"
+
+#: src/uuencode-opts.c:675
+msgid ""
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+"\"uuencode\" é usado para criar uma representação de um arquivo que pode\n"
+"ser enviado por meio de canais que do contrário poderiam corromper os\n"
+"dados. Especificamente, e-mail não pode lidar com dados binários e com\n"
+"frequência vão inserir um caractere quando o sexta sequência de caracteres\n"
+"\"\\nFrom \" for vista.\n"
+"\n"
+
+#: src/uuencode-opts.c:679 src/uuencode-opts.c:712
+msgid ""
+"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
+"standard in and write the encoded form to standard out.  The output will\n"
+"begin with a header line for use by 'uudecode' giving it the resulting\n"
+"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
+"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
+"standard out.\n"
+"\n"
+msgstr ""
+"\"uuencode\" vai ler o \"arquivo-entrada\" se fornecido e, do contrário,\n"
+"vai ler os dados da entrada padrão e escrever na forma codificada para a\n"
+"saída padrão. A saída começará com uma linha de cabeçalho para uso pelo\n"
+"\"uuencode\" dando a ele o arquivo resultando sugerido \"nome-saída\" e\n"
+"o modo de acesso. Se o \"nome-saída\" é especificamente \"/dev/stdout\",\n"
+"então \"uuencode\" vai emitir o arquivo decodificado para a saída padrão.\n"
+
+#: src/uuencode-opts.c:685
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+msgstr ""
+"\"Nota\": \"uuencode\" usa entrada em buffer e presume que não foi\n"
+"digitado a mão a partir de um tty. A consequência é que em um tty,\n"
+"você pode precisar pressionar Ctrl-D várias vezes para terminar a\n"
+"entrada.\n"
+
+#: src/uuencode-opts.c:690
+msgid "uuencode (GNU sharutils) 4.13.5"
+msgstr "uuencode (GNU sharutils) 4.13.5"
+
+#: src/uuencode-opts.c:693
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"\n"
+msgstr ""
+"uuencode (GNU sharutils) - codifica um arquivo em texto amigável para e-mail\n"
+"Uso:  uuencode [ --<opção> | --<nome> ]... [<arquivo-entrada>] <nome-saída>\n"
+"\n"
+
+#: src/uuencode-opts.c:695
+msgid "   -m, --base64               convert using base64\n"
+msgstr "   -m, --base64               converte usando base64\n"
+
+#: src/uuencode-opts.c:696
+msgid "   -e, --encode-file-name     encode the output file name\n"
+msgstr "   -e, --encode-file-name     codifica o nome do arquivo de saída\n"
+
+#: src/uuencode-opts.c:707
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+" - leitura de arquivo $HOME/.sharrc\n"
+"\n"
+"\"uuencode\" é usado para criar uma representação de um arquivo que pode\n"
+"ser enviado por meio de canais que do contrário poderiam corromper os\n"
+"dados. Especificamente, e-mail não pode lidar com dados binários e com\n"
+"frequência vão inserir um caractere quando o sexta sequência de caracteres\n"
+"\"\\nFrom \" for vista.\n"
+"\n"
+
+#: src/uuencode-opts.c:718
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"\"Nota\": \"uuencode\" usa entrada em buffer e presume que não foi\n"
+"digitado a mão a partir de um tty. A consequência é que em um tty,\n"
+"você pode precisar pressionar Ctrl-D várias vezes para terminar a\n"
+"entrada.\n"
+"\n"
+"Por favor, envie relatórios de erro para: <bug-gnu-utils@gnu.org>\n"
+
+#: src/uuencode-opts.c:724
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"Try 'uuencode --help' for more information.\n"
+msgstr ""
+"uuencode (GNU sharutils) - codifica um arquivo em texto amigável para e-mail\n"
+"Uso:  uuencode [ -<opção> | --<nome> ]... [<arquivo-entrada>] <nome-saída>\n"
+"Tente \"uuencode --help\" para mais informações.\n"
+
+#: src/uuencode.c:226
+msgid "freopen of stdin"
+msgstr "freopen da entrada padrão"
+
+#: src/uuencode.c:255
+msgid "file name"
+msgstr "nome do arquivo"
+
+#: lib/error.c:188
+msgid "Unknown system error"
+msgstr "Erro de sistema desconhecido"
+
+#: lib/getopt.c:547 lib/getopt.c:576
+#, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: a opção \"%s\" é ambígua; possibilidades:"
+
+#: lib/getopt.c:624 lib/getopt.c:628
+#, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: a opção \"--%s\" não aceita argumentos\n"
+
+#: lib/getopt.c:637 lib/getopt.c:642
+#, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: a opção \"%c%s\" não aceita argumentos\n"
+
+#: lib/getopt.c:685 lib/getopt.c:704
+#, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: a opção \"%s\" exige um argumento\n"
+
+#: lib/getopt.c:742 lib/getopt.c:745
+#, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: opção \"--%s\" desconhecida\n"
+
+#: lib/getopt.c:753 lib/getopt.c:756
+#, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: opção \"%c%s\" desconhecida\n"
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: opção inválida -- \"%c\"\n"
+
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: a opção exige um argumento -- \"%c\"\n"
+
+#: lib/getopt.c:934 lib/getopt.c:950
+#, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: a opção \"-W %s\" é ambígua\n"
+
+#: lib/getopt.c:974 lib/getopt.c:992
+#, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: a opção \"-W %s\" não aceita argumentos\n"
+
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: a opção \"-W %s\" exige um argumento\n"
+
+#: lib/openat-die.c:38
+#, c-format
+msgid "unable to record current working directory"
+msgstr "não foi possível registrar o diretório de trabalho atual"
+
+#: lib/openat-die.c:57
+#, c-format
+msgid "failed to return to initial working directory"
+msgstr "falha em retornar para o diretório de trabalho inicial"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:312
+msgid "`"
+msgstr "\""
+
+#: lib/quotearg.c:313
+msgid "'"
+msgstr "\""
+
+#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
+#: lib/spawn-pipe.c:267
+#, c-format
+msgid "cannot create pipe"
+msgstr "não foi possível criar redirecionamento (pipe)"
+
+#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/wait-process.c:356
+#, c-format
+msgid "%s subprocess failed"
+msgstr "subprocesso %s falhou"
+
+#: lib/w32spawn.h:43
+#, c-format
+msgid "_open_osfhandle failed"
+msgstr "_open_osfhandle falhou"
+
+#: lib/w32spawn.h:84
+#, c-format
+msgid "cannot restore fd %d: dup2 failed"
+msgstr "não foi possível restaurar o descritor de arquivo %d: dup2 falhou"
+
+#: lib/wait-process.c:223 lib/wait-process.c:255 lib/wait-process.c:317
+#, c-format
+msgid "%s subprocess"
+msgstr "subprocesso de %s"
+
+#: lib/wait-process.c:274 lib/wait-process.c:346
+#, c-format
+msgid "%s subprocess got fatal signal %d"
+msgstr "subprocesso de %s recebeu o sinal fatal %d"
+
+#: lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr "memória insuficiente"
+
+#: lib/xstrtol-error.c:63
+#, c-format
+msgid "invalid %s%s argument '%s'"
+msgstr "argumento inválido para %s%s: \"%s\""
+
+#: lib/xstrtol-error.c:68
+#, c-format
+msgid "invalid suffix in %s%s argument '%s'"
+msgstr "sufixo inválido no argumento para %s%s: \"%s\""
+
+#: lib/xstrtol-error.c:72
+#, c-format
+msgid "%s%s argument '%s' too large"
+msgstr "argumento de %s%s \"%s\" é grande demais"

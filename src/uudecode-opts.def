@@ -80,7 +80,7 @@ flag = {
 	_EOCode_;
 
     doc = <<- _EODoc_
-	If specifed, decoded data are written to this file.  When multiple
+	If specified, decoded data are written to this file.  When multiple
 	inputs are specified on the command line, this option cannot be
 	specified.  All decoded data must be written to the file name
 	encoded in the data.

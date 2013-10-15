@@ -22,6 +22,7 @@ TESTS = uutest-1 uudecode-2 shar-1 shar-2 shar-3 shar-4
 TESTS_ENVIRONMENT = \
   top_srcdir=$(top_srcdir) \
   PATH=`cd ../src && pwd`:"$$PATH" \
+  LC_ALL=C \
   PACKAGE_STRING='$(PACKAGE_STRING)' top_builddir=$(top_builddir)
 
 EXTRA_DIST = $(TESTS) testdata shar-1.ok

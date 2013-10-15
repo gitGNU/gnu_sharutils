@@ -654,7 +654,7 @@ flag = {
 	overwritten.  Do not use for shars submitted to the net.
 
 	Use of this option produces shars which @emph{will} cause problems
-	with some unshar-style procedures, particularily when used
+	with some unshar-style procedures, particularly when used
 	together with vanilla mode (@option{--vanilla-operation}).  Use this
 	feature mainly for archives to be passed among agreeable parties.
 	Certainly, @option{-X} is @emph{not} for shell archives which are to be
