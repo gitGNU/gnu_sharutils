@@ -38,3 +38,4 @@ lib/
 ! lib/md5.h
 ! lib/system.h
 ! lib/whoami.c
+cscope.*
