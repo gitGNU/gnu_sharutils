@@ -4,644 +4,20 @@
 # Translators so far:
 # Filip Miletić <f.miletic@ewi.tudelft.nl>, 2005.
 # Aleksandar Jelenak <jelenak@verizon.net>, 2005.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.11\n"
+"Project-Id-Version: sharutils-4.13.5\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2011-02-05 11:12-0800\n"
-"PO-Revision-Date: 2012-03-31 02:40+0200\n"
+"POT-Creation-Date: 2013-04-12 17:27-0700\n"
+"PO-Revision-Date: 2013-10-18 21:18+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <gnu@prevod.org>\n"
+"Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-
-#: lib/error.c:181
-msgid "Unknown system error"
-msgstr "Непозната системска грешка"
-
-#: lib/getopt.c:527 lib/getopt.c:543
-#, c-format
-msgid "%s: option '%s' is ambiguous\n"
-msgstr "%s: опција „%s“ је нејасна\n"
-
-#: lib/getopt.c:576 lib/getopt.c:580
-#, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: опција „--%s“ не дозвољава аргумент\n"
-
-#: lib/getopt.c:589 lib/getopt.c:594
-#, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: опција „%c%s“ не дозвољава аргумент\n"
-
-#: lib/getopt.c:637 lib/getopt.c:656
-#, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: опција „--%s“ захтева аргумент\n"
-
-#: lib/getopt.c:694 lib/getopt.c:697
-#, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: непрепознатљива опција „--%s“\n"
-
-#: lib/getopt.c:705 lib/getopt.c:708
-#, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: непрепознатљива опција „%c%s“\n"
-
-#: lib/getopt.c:757 lib/getopt.c:760
-#, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: неисправна опција —— „%c“\n"
-
-#: lib/getopt.c:810 lib/getopt.c:827 lib/getopt.c:1035 lib/getopt.c:1053
-#, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: опција захтева аргумент —— „%c“\n"
-
-#: lib/getopt.c:883 lib/getopt.c:899
-#, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: опција „-W %s“ је двосмислена\n"
-
-#: lib/getopt.c:923 lib/getopt.c:941
-#, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: опција „-W %s“ не дозвољава аргумент\n"
-
-#: lib/getopt.c:962 lib/getopt.c:980
-#, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: опција „-W %s“ захтева аргумент\n"
-
-#: src/shar.c:416
-#, c-format
-msgid "printf formatting error:  %s\n"
-msgstr "грешка обликовања штампања датотеке:  %s\n"
-
-#: src/shar.c:467
-#, c-format
-msgid "sharutils bug - no status\n"
-msgstr "грешка програма — нема стања\n"
-
-#: src/shar.c:823
-#, c-format
-msgid "Too many directories for mkdir generation"
-msgstr "Превише директоријума за наредбу стварања директоријума (mkdir)"
-
-#: src/shar.c:906 src/shar.c:1573
-#, c-format
-msgid "Cannot access %s"
-msgstr "Не могу да приступим %s"
-
-#: src/shar.c:956
-#, c-format
-msgid "-C is being deprecated, use -Z instead"
-msgstr "„-C“ је застарела опција, користите „-Z“"
-
-#: src/shar.c:997 src/unshar.c:375
-#, c-format
-msgid "Cannot get current directory name"
-msgstr "Не могу да добавим назив тренутног директоријума"
-
-#: src/shar.c:1066 src/shar.c:1388
-#, c-format
-msgid "New file, remaining %s, "
-msgstr "Нова датотека, остаје %s, "
-
-#: src/shar.c:1067 src/shar.c:1389
-#, c-format
-msgid "Limit still %s\n"
-msgstr "Ограничење је и даље %s\n"
-
-#: src/shar.c:1090 src/shar.c:1471
-#, c-format
-msgid "Starting file %s\n"
-msgstr "Почетна датотека %s\n"
-
-#: src/shar.c:1141
-#, c-format
-msgid "Could not popen 'wc' command:  %s\n"
-msgstr "Не могу да отворим процес спојком наредбе „wc“:  %s\n"
-
-#: src/shar.c:1202
-#, c-format
-msgid "Cannot open file %s"
-msgstr "Не могу да отворим датотеку „%s“"
-
-#: src/shar.c:1257
-#, c-format
-msgid "popen(3) on: %s"
-msgstr "„popen(3)“ (отварање процеса спојком) на: %s"
-
-#: src/shar.c:1280
-#, c-format
-msgid "fopen(3) of file %s"
-msgstr "„fopen(3)“ (отварање тока) датотеке %s"
-
-#: src/shar.c:1332
-msgid "text"
-msgstr "текст"
-
-#: src/shar.c:1342
-msgid "compressed"
-msgstr "сабијен"
-
-#: src/shar.c:1343
-msgid "gzipped"
-msgstr "гзипован"
-
-#: src/shar.c:1344
-msgid "bzipped"
-msgstr "бзипован"
-
-#: src/shar.c:1345
-msgid "binary"
-msgstr "бинарни"
-
-#: src/shar.c:1356
-#, c-format
-msgid "pipe(2) failed"
-msgstr "„pipe(2)“ (стварање спојке) није успело"
-
-#: src/shar.c:1367
-#, c-format
-msgid "Could not fork"
-msgstr "Не могу да изродим процес"
-
-#: src/shar.c:1379
-#, c-format
-msgid "File %s (%s)"
-msgstr "Датотека %s (%s)"
-
-#: src/shar.c:1568
-#, c-format
-msgid "%s: Not a regular file"
-msgstr "%s: Није уобичајена врста датотеке"
-
-#: src/shar.c:1588
-#, c-format
-msgid "In shar: remaining size %s\n"
-msgstr "У архиви: преостала величина %s\n"
-
-#: src/shar.c:1606
-msgid "empty"
-msgstr "празно"
-
-#: src/shar.c:1649
-#, c-format
-msgid "Saving %s (%s)"
-msgstr "Снимам %s (%s)"
-
-#: src/shar.c:1869
-#, c-format
-msgid "allocating output file name"
-msgstr "додељујем назив излазне датотеке"
-
-#: src/shar.c:1875
-#, c-format
-msgid "Opening `%s'"
-msgstr "Отварам „%s“"
-
-#: src/shar.c:1886
-#, c-format
-msgid "Closing `%s'"
-msgstr "Затварам „%s“"
-
-#: src/shar.c:1897 src/unshar.c:311 src/uudecode.c:460 src/uuencode.c:202
-#, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "Покушајте „%s --help“ за више информација.\n"
-
-#: src/shar.c:1901 src/unshar.c:315
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Употреба: %s [ОПЦИЈА]... [ДАТОТЕКА]...\n"
-
-#: src/shar.c:1902
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"Giving feedback:\n"
-"      --help              display this help and exit\n"
-"      --version           output version information and exit\n"
-"  -q, --quiet, --silent   do not output verbose messages locally\n"
-"\n"
-"Selecting files:\n"
-msgstr ""
-"Обавезни аргументи за дуге опције су обавезни и за кратке опције такође.\n"
-"\n"
-"Давање потврде:\n"
-"      --help              приказује ову помоћ и излази\n"
-"      --version           приказује податке о издању и излази\n"
-"  -q, --quiet, --silent   не исписује опширне поруке у локалу\n"
-"\n"
-"Бирање датотека:\n"
-
-#: src/shar.c:1913
-msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-msgstr "  -p, --intermix-type     допушта да „-[BTzZ]“ у списку датотека промени режим\n"
-
-#: src/shar.c:1917
-msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-msgstr "  -p, --intermix-type     допушта да „-[BTz]“ у списку датотека промени режим\n"
-
-#: src/shar.c:1921
-msgid ""
-"  -S, --stdin-file-list   read file list from standard input\n"
-"\n"
-"Splitting output:\n"
-"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
-"\n"
-"Controlling the shar headers:\n"
-"  -n, --archive-name=NAME   use NAME to document the archive\n"
-"  -s, --submitter=ADDRESS   override the submitter name\n"
-"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-"  -c, --cut-mark            start the shar with a cut line\n"
-"  -t, --translate           translate messages in the script\n"
-"\n"
-"Selecting how files are stocked:\n"
-"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-"  -T, --text-files             treat all files as text\n"
-"  -B, --uuencode               treat all files as binary, use uuencode\n"
-"  -z, --gzip                   gzip and uuencode all files\n"
-"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-"  -j, --bzip2                  bzip2 and uuencode all files\n"
-msgstr ""
-"  -S, --stdin-file-list             чита списак датотека са стандардног улаза\n"
-"\n"
-"Подела излаза:\n"
-"  -o, --output-prefix=ПРЕФИКС       шаље излазе у датотеке ПРЕФИКС.01 до ПРЕФИКС.nn\n"
-"  -l, --whole-size-limit=ВЕЛИЧИНА   дели архиву, не датотеке, на ВЕЛИЧИНУ килобајта\n"
-"  -L, --split-size-limit=ВЕЛИЧИНА   дели архиву, или датотеке, на ВЕЛИЧИНУ килобајта\n"
-"\n"
-"Управљање шар заглављима:\n"
-"  -n, --archive-name=НАЗИВ          користи НАЗИВ за документовање архиве\n"
-"  -s, --submitter=АДРЕСА            превазилази име пошиљаоца\n"
-"  -a, --net-headers                 записује заглавља „Submitted-by:“ и „Archive-name:“\n"
-"  -c, --cut-mark                    започиње архиву ознаком за сечење\n"
-"  -t, --translate                   преводи поруке у скрипти\n"
-"\n"
-"Бирање начина паковања датотека:\n"
-"  -M, --mixed-uuencode              динамички одређује ууекодирање (основно)\n"
-"  -T, --text-files                  сматра све датотеке текстуалним\n"
-"  -B, --uuencode                    сматра све датотеке бинарним, користи ууенкод\n"
-"  -z, --gzip                        пропушта све датотеке кроз гзип и ууенкод\n"
-"  -g, --level-for-gzip=НИВО         прослеђује -НИВО (основни је 9) гзипу\n"
-"  -j, --bzip2                       пропушта све датотеке кроз бзип2 и ууенкод\n"
-
-#: src/shar.c:1945
-msgid ""
-"  -Z, --compress               compress and uuencode all files\n"
-"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-msgstr ""
-"  -Z, --compress               сажима и кодира све датотеке са „uuencode“\n"
-"  -b, --bits-per-code=БИТА     поставља опцију „-bBITS“ (основно је 12) за сажимање\n"
-
-#: src/shar.c:1950
-msgid ""
-"\n"
-"Protecting against transmission:\n"
-"  -w, --no-character-count      do not use `wc -c' to check size\n"
-"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-"  -F, --force-prefix            force the prefix character on every line\n"
-"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
-"\n"
-"Producing different kinds of shars:\n"
-"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-"  -P, --no-piping           exclusively use temporary files at unshar time\n"
-"  -x, --no-check-existing   blindly overwrite existing files\n"
-"  -X, --query-user          ask user before overwriting files (not for Net)\n"
-"  -m, --no-timestamp        do not restore file modification dates & times\n"
-"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-"  -f, --basename            restore in one directory, despite hierarchy\n"
-"      --no-i18n             do not produce internationalized shell script\n"
-msgstr ""
-"\n"
-"Заштита од грешака у преносу:\n"
-"  -w, --no-character-count      не проверава величину користећи „wc -c“\n"
-"  -D, --no-md5-digest           не користи „md5sum“ за проверу\n"
-"  -F, --force-prefix            приморава знак префикса на сваком реду\n"
-"  -d, --here-delimiter=НИСКА    користи НИСКУ за раздвајање датотека\n"
-"\n"
-"Прављење разних врста архива:\n"
-"  -V, --vanilla-operation       прави једноставне и мало захтевне архиве\n"
-"  -P, --no-piping               обавезно користи привремене датотеке при распакивању\n"
-"  -x, --no-check-existing       увек преписује постојеће датотеке\n"
-"  -X, --query-user              пита корисника пре брисања датотека\n"
-"  -m, --no-timestamp            не враћа датум и време мењања датотеке\n"
-"  -Q, --quiet-unshar            избегава детаљне поруке при распакивању\n"
-"  -f, --basename                враћа у истом директоријуму, без обзира на хијерархију\n"
-"      --no-i18n                 не производи интернационализовану скрипту љуске\n"
-
-#: src/shar.c:1968
-msgid ""
-"\n"
-"Option -o is required with -l or -L, option -n is required with -a.\n"
-msgstr ""
-"\n"
-"Опција „-o“ је потребна уз „-l“ или „-L“, опција „-n“ је потребна уз „-a“.\n"
-
-#: src/shar.c:1972
-msgid "Option -g implies -z, option -b implies -Z.\n"
-msgstr "Опција „-g“ подразумева „-z“, опција „-b“ подразумева „-Z“.\n"
-
-#: src/shar.c:1975
-msgid "Option -g implies -z.\n"
-msgstr "Опција „-g“ подразумева „-z“.\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/shar.c:1979 src/unshar.c:330 src/uudecode.c:471 src/uuencode.c:212
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr ""
-"Грешке пријавите на адресу <%s>.\n"
-"Поруке у вези овог превода слати на адресу <gnu@prevod.org>.\n"
-
-#: src/shar.c:1996
-#, c-format
-msgid "invalid file size limit `%s'"
-msgstr "неисправно ограничење величине датотеке „%s“"
-
-#: src/shar.c:2032
-#, c-format
-msgid "invalid format (count field too wide): '%s'\n"
-msgstr "неисправан формат (бројно поље је прешироко): „%s“\n"
-
-#: src/shar.c:2121
-#, c-format
-msgid "DEBUG was not selected at compile time"
-msgstr "Исправљање грешака није изабрано приликом превођења"
-
-#: src/shar.c:2141
-#, c-format
-msgid "Hard limit %s\n"
-msgstr "Строго ограничење %s\n"
-
-#: src/shar.c:2183
-#, c-format
-msgid "This system doesn't support -Z ('compress'), use -z instead"
-msgstr "Овај систем не подржава „-Z“ ('compress'), користите „-z“ уместо тога"
-
-#: src/shar.c:2216
-#, c-format
-msgid "Soft limit %s\n"
-msgstr "Благо ограничење %s\n"
-
-#: src/shar.c:2231
-#, c-format
-msgid "illegal output prefix\n"
-msgstr "неисправан излазни префикс\n"
-
-#: src/shar.c:2278 src/unshar.c:413 src/uudecode.c:509 src/uuencode.c:252
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Ауторска права (C) %s Задужбина слободног софтвера, корп.\n"
-"Ово је слободан софтвер; погледајте изворни код за услове умножавања. Не постоји\n"
-"НИКАКВА гаранције; чак ни о ТРЖИШНОЈ ВРЕДНОСТИ или ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.\n"
-
-#: src/shar.c:2347
-#, c-format
-msgid "WARNING: No user interaction in vanilla mode"
-msgstr "УПОЗОРЕЊЕ: Нема посредовања са корисником у најпростијем режиму"
-
-#: src/shar.c:2359
-#, c-format
-msgid "WARNING: Non-text storage options overridden"
-msgstr "УПОЗОРЕЊЕ: Опције за обраду не-текстуалних датотека су промењене"
-
-#: src/shar.c:2388
-#, c-format
-msgid "Cannot use -a option without -n"
-msgstr "Опција „-a“ се не може користити без „-n“"
-
-#: src/shar.c:2394
-#, c-format
-msgid "Cannot use -l or -L option without -o"
-msgstr "Опције „-l“ или „-L“ се не могу користити без „-o“"
-
-#: src/shar.c:2436
-#, c-format
-msgid "No input files"
-msgstr "Нису наведене улазне датотеке"
-
-#: src/shar.c:2448
-#, c-format
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "МОЛИМ немојте да користите архиве прављене са „-X“ на Јуснету или јавним мрежама"
-
-#: src/shar.c:2514
-#, c-format
-msgid "Created %d files\n"
-msgstr "Направљених датотека — %d\n"
-
-#: src/unshar.c:167
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "Нисам пронашао наредбе шкољке у „%s“"
-
-#: src/unshar.c:183
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "„%s“ изгледа као изворни код Ц језика, а не архива шкољке"
-
-#: src/unshar.c:219
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "Нисам пронашао наредбе шкољке након „cut“ у „%s“"
-
-#: src/unshar.c:240
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "„%s“ вероватно није архива шкољке"
-
-#: src/unshar.c:241
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "Након реда „cut“ је следило: %s"
-
-#: src/unshar.c:267
-#, c-format
-msgid "Starting `sh' process"
-msgstr "Покрећем процес „sh“"
-
-#: src/unshar.c:316
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
-"  -c, --overwrite             pass -c to shar script for overwriting files\n"
-"  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=STRING       split concatenated shars after STRING\n"
-"  -f, --force                 same as `-c'\n"
-"      --help                  display this help and exit\n"
-"      --version               output version information and exit\n"
-"\n"
-"If no FILE, standard input is read.\n"
-msgstr ""
-"Обавезни аргументи за дуге опције су такође обавезни и за кратке опције.\n"
-"\n"
-"  -d, --directory=ДИРЕКТОРИЈУМ  пребацује се у ДИРЕКТОРИЈУМ пре распакивања\n"
-"  -c, --overwrite               доставља „-c“ скрипти архивирања за преписивање датотека\n"
-"  -e, --exit-0                  исто као „--split-at=\"exit 0\"“\n"
-"  -E, --split-at=НИСКА          дели нанизане архиве након НИСКЕ\n"
-"  -f, --force                   исто као „-c“\n"
-"      --help                    приказује ову помоћ и излази\n"
-"      --version                 приказује податке о издању и излази\n"
-"\n"
-"Ако ДАТОТЕКА није наведена, чита са стандардног улаза.\n"
-
-#: src/unshar.c:393
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Не могу да се пребацим (chdir) у „%s“"
-
-#: src/unshar.c:444 src/unshar.c:506
-#, c-format
-msgid "allocate file name buffer"
-msgstr "додели бафер назива датотеке"
-
-#: src/unshar.c:465
-msgid "standard input"
-msgstr "стандардни улаз"
-
-#: src/unshar.c:527
-#, c-format
-msgid "allocate file buffer"
-msgstr "додели бафер датотеке"
-
-#: src/uudecode.c:113 src/uudecode.c:444
-#, c-format
-msgid "%s: Write error"
-msgstr "%s: Грешка уписа"
-
-#: src/uudecode.c:130 src/uudecode.c:217
-#, c-format
-msgid "%s: Short file"
-msgstr "%s: Кратка датотека"
-
-#: src/uudecode.c:166
-#, c-format
-msgid "%s: No `end' line"
-msgstr "%s: Нема реда „end“ (крај)"
-
-#: src/uudecode.c:226
-#, c-format
-msgid "%s: data following `=' padding character"
-msgstr "%s: подаци следе знак допуњавања „=“"
-
-#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
-#, c-format
-msgid "%s: illegal line"
-msgstr "%s: неисправан ред"
-
-#: src/uudecode.c:302
-#, c-format
-msgid "%s: Illegal file name: %s"
-msgstr "%s: Неисправан назив датотеке: %s"
-
-#: src/uudecode.c:309
-#, c-format
-msgid "No user `%s'"
-msgstr "Не постоји корисник „%s“"
-
-#: src/uudecode.c:320
-#, c-format
-msgid "no memory for %d byte allocation"
-msgstr "нема меморије за додељивање %d бајта"
-
-#: src/uudecode.c:345
-#, c-format
-msgid "cannot access %s"
-msgstr "не могу да приступим „%s“"
-
-#: src/uudecode.c:353
-#, c-format
-msgid "freopen of %s"
-msgstr "отварање тока (freopen) за „%s“"
-
-#: src/uudecode.c:359
-#, c-format
-msgid "chmod of %s"
-msgstr "промена режима датотеке (chmod) за „%s“"
-
-#: src/uudecode.c:385
-#, c-format
-msgid "%s: No `begin' line"
-msgstr "%s: Нема реда „begin“ (почетак)"
-
-#: src/uudecode.c:464
-#, c-format
-msgid "Usage: %s [FILE]...\n"
-msgstr "Употреба: %s [ДАТОТЕКА]...\n"
-
-#: src/uudecode.c:465
-msgid ""
-"Mandatory arguments to long options are mandatory to short options too.\n"
-"  -o, --output-file=FILE   direct output to FILE\n"
-"      --help               display this help and exit\n"
-"      --version            output version information and exit\n"
-msgstr ""
-"Обавезни аргументи за дуге опције су такође обавезни и за кратке опције.\n"
-"  -o, --output-file=ДАТОТЕКА   директан излаз у ДАТОТЕКУ\n"
-"      --help                   приказује ову помоћ и излази\n"
-"      --version                приказује податке о издању и излази\n"
-
-#: src/uudecode.c:533
-#, c-format
-msgid ""
-"You cannot specify an output file when processing\n"
-"multiple input files.\n"
-msgstr ""
-"Не можете да наведете излазну датотеку када обрађујете\n"
-"више улазних датотека.\n"
-
-#: src/uuencode.c:133 src/uuencode.c:301 src/uuencode.c:308
-#, c-format
-msgid "Write error"
-msgstr "Грешка уписа"
-
-#: src/uuencode.c:155 src/uuencode.c:186 src/uuencode.c:188
-#, c-format
-msgid "Read error"
-msgstr "Грешка читања"
-
-#: src/uuencode.c:206
-#, c-format
-msgid "Usage: %s [INFILE] REMOTEFILE\n"
-msgstr "УПОТРЕБА: %s [УЛАЗНА_ДАТ] УДАЉЕНА_ДАТ\n"
-
-#: src/uuencode.c:207
-msgid ""
-"\n"
-"  -m, --base64    use base64 encoding as of RFC1521\n"
-"      --help      display this help and exit\n"
-"      --version   output version information and exit\n"
-msgstr ""
-"\n"
-"  -m, --base64    користи 64-базно кодирање, према РФЦ1521\n"
-"      --help      приказује ову помоћ и излази\n"
-"      --version   приказује податке о издању и излази\n"
-
-#: src/uuencode.c:277
-#, c-format
-msgid "fopen-ing %s"
-msgstr "отварам ток датотеке „%s“"
-
-#: src/uuencode.c:279
-#, c-format
-msgid "fstat-ing %s"
-msgstr "добављам податке датотеке „%s“"
 
 #. TRANSLATORS:  This is a phony function generated for the purpose of
 #. constructing the strings to be extracted for translation.  Each string
@@ -650,322 +26,2013 @@ msgstr "добављам податке датотеке „%s“"
 #. the shar-generated shell script so the shar user can create shar archives
 #. with messages localized for one locale.
 #.
-#: src/scripts.x:398
+#: src/scripts.x:449
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
 msgstr "Напомена: не проверавам „md5sum“. Размотрите инсталирање Гнуових кључних помагала (GNU coreutils)."
 
-#: src/scripts.x:399
+#: src/scripts.x:450
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
+"installing GNU 'touch', distributed in GNU coreutils..."
 msgstr ""
 "УПОЗОРЕЊЕ: не враћам временску ознаку.  Размотрите добављање и инсталацију\n"
 "Гнуовог „touch“-а, који се расподељује у Гнуовим кључним помагалима..."
 
-#: src/scripts.x:401
+#: src/scripts.x:452
 #, c-format
 msgid "lock directory %s exists"
 msgstr "директоријум закључавања „%s“ постоји"
 
-#: src/scripts.x:402
+#: src/scripts.x:453
 #, c-format
 msgid "failed to create %s lock directory"
 msgstr "нисам успео да направим „%s“ директоријум закључавања"
 
-#: src/scripts.x:403
+#: src/scripts.x:454
 #, c-format
 msgid "x - created lock directory %s."
 msgstr "x — направљен је директоријум закључавања „%s“."
 
-#: src/scripts.x:404
+#: src/scripts.x:455
 #, c-format
 msgid "x - failed to create lock directory %s."
 msgstr "х — нисам успео да направим директоријум закључавања „%s“."
 
-#: src/scripts.x:405
+#: src/scripts.x:456
 #, c-format
 msgid "x - created directory %s."
 msgstr "х — направљен је директоријум „%s“."
 
-#: src/scripts.x:406
+#: src/scripts.x:457
 #, c-format
 msgid "x - failed to create directory %s."
 msgstr "х — нисам успео да направим директоријум „%s“."
 
-#: src/scripts.x:407
+#: src/scripts.x:458
 msgid "yes"
 msgstr "да"
 
-#: src/scripts.x:408
+#: src/scripts.x:459
 msgid "overwrite this file"
 msgstr "преписује ову датотеку"
 
-#: src/scripts.x:409
+#: src/scripts.x:460
 msgid "no"
 msgstr "не"
 
-#: src/scripts.x:410
+#: src/scripts.x:461
 msgid "skip this file"
 msgstr "прескаче ову датотеку"
 
-#: src/scripts.x:411
+#: src/scripts.x:462
 msgid "all"
 msgstr "све"
 
-#: src/scripts.x:412
+#: src/scripts.x:463
 msgid "overwrite all files"
 msgstr "преписује све датотеке"
 
-#: src/scripts.x:413
+#: src/scripts.x:464
 msgid "none"
 msgstr "ништа"
 
-#: src/scripts.x:414
+#: src/scripts.x:465
 msgid "overwrite no files"
 msgstr "не преписује датотеке"
 
-#: src/scripts.x:415
+#: src/scripts.x:466
 msgid "help"
 msgstr "помоћ"
 
-#: src/scripts.x:416
+#: src/scripts.x:467
 msgid "explain choices"
 msgstr "објашњава изборе"
 
-#: src/scripts.x:417
+#: src/scripts.x:468
 msgid "quit"
 msgstr "излази"
 
-#: src/scripts.x:418
+#: src/scripts.x:469
 msgid "exit immediately"
 msgstr "излази одмах"
 
-#: src/scripts.x:419
-msgid ""
-"Archives must be unpacked in sequence!\n"
-"Please unpack part `cat ${lock_dir}/seq` next."
-msgstr ""
-"Архиве се морају распаковати по реду!\n"
-"Распакујте затим део „cat ${lock_dir}/seq“."
-
-#: src/scripts.x:421
+#: src/scripts.x:470
 #, c-format
 msgid "restore of %s failed"
 msgstr "обнављање „%s“ није успело"
 
-#: src/scripts.x:422
+#: src/scripts.x:471
+#, c-format
+msgid "  chmod %04o %s\n"
+msgstr "  chmod %04o %s\n"
+
+#: src/scripts.x:472
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "Крај дела „%d“, настављам са делом „%d“"
 
-#: src/scripts.x:423
+#: src/scripts.x:473
 #, c-format
 msgid "End of %s part %d"
 msgstr "Крај „%s“ део %d"
 
-#: src/scripts.x:424
+#: src/scripts.x:474
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
 msgstr "упозорење повраћаја: величина „%s“ није %s"
 
-#: src/scripts.x:425
+#: src/scripts.x:475 src/shar.c:1469
 msgid "(text)"
 msgstr "(текст)"
 
-#: src/scripts.x:426
+#: src/scripts.x:476
 msgid "(compressed)"
 msgstr "(сабијен)"
 
-#: src/scripts.x:427
+#: src/scripts.x:477
 msgid "(gzipped)"
 msgstr "(гзипован)"
 
-#: src/scripts.x:428
+#: src/scripts.x:478
 msgid "(bzipped)"
 msgstr "(бзипован)"
 
-#: src/scripts.x:429
+#: src/scripts.x:479
 msgid "(binary)"
 msgstr "(бинаран)"
 
-#: src/scripts.x:430
+#: src/scripts.x:480
 msgid "archive"
 msgstr "архива"
 
-#: src/scripts.x:431
+#: src/scripts.x:481
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "Датотека „%s“ је настављена у делу %d"
 
-#: src/scripts.x:432
+#: src/scripts.x:482
 msgid "Please unpack part 1 first!"
 msgstr "Молим прво отпакујте део 1!"
 
-#: src/scripts.x:433
+#: src/scripts.x:483
 msgid "Please unpack part ${shar_sequence} next!"
 msgstr "Молим затим распакујте део ${shar_sequence}!"
 
-#: src/scripts.x:434
+#: src/scripts.x:484
 #, c-format
 msgid "x - STILL SKIPPING %s"
 msgstr "х — И ДАЉЕ ПРЕСКАЧЕМ %s"
 
-#: src/scripts.x:435
+#: src/scripts.x:485
 #, c-format
 msgid "continuing file %s"
 msgstr "настављам датотеком „%s“"
 
-#: src/scripts.x:436
+#: src/scripts.x:486
 msgid "(empty)"
 msgstr "(празно)"
 
-#: src/scripts.x:437
+#: src/scripts.x:487
 #, c-format
 msgid "x - overwriting %s"
 msgstr "х — преписујем „%s“"
 
-#: src/scripts.x:438
+#: src/scripts.x:488
 #, c-format
 msgid "overwrite %s"
 msgstr "преписује „%s“"
 
-#: src/scripts.x:439
+#: src/scripts.x:489
 #, c-format
 msgid "SKIPPING %s"
 msgstr "ПРЕСКАЧЕМ %s"
 
-#: src/scripts.x:440
+#: src/scripts.x:490
 msgid "extraction aborted"
 msgstr "распакивање je обустављено"
 
-#: src/scripts.x:441
+#: src/scripts.x:491
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
 msgstr "х — ПРЕСКАЧЕМ %s (датотека већ постоји)"
 
-#: src/scripts.x:442
+#: src/scripts.x:492
 #, c-format
 msgid "x - extracting %s %s"
 msgstr "х — распакујем %s %s"
 
-#: src/scripts.x:443
+#: src/scripts.x:493
 #, c-format
 msgid "File %s is complete"
 msgstr "Датотека „%s“ је довршена"
 
-#: src/scripts.x:444
+#: src/scripts.x:494
 #, c-format
 msgid "uudecoding file %s"
 msgstr "уудекодирам датотеку „%s“"
 
-#: src/scripts.x:445
-#, c-format
-msgid "uncompressing file %s"
-msgstr "распакујем датотеку „%s“"
-
-#: src/scripts.x:446
-#, c-format
-msgid "gunzipping file %s"
-msgstr "распакујем гзипом датотеку „%s“"
-
-#: src/scripts.x:447
-#, c-format
-msgid "bunzipping file %s"
-msgstr "распакујем бзипом датотеку „%s“"
-
-#: src/scripts.x:448
+#: src/scripts.x:495
 msgid "MD5 check failed"
 msgstr "МД5 провера није успела"
 
-#: src/scripts.x:449
+#: src/scripts.x:496
 msgid "You have unpacked the last part"
 msgstr "Распаковали сте последњи део"
 
-#: src/scripts.x:450
+#: src/scripts.x:497
 #, c-format
 msgid "x - removed lock directory %s."
 msgstr "x — уклоњен је директоријум закључавања „%s“."
 
-#: src/scripts.x:451
+#: src/scripts.x:498
 #, c-format
 msgid "x - failed to remove lock directory %s."
 msgstr "х — нисам успео да уклоним директоријум закључавања „%s“."
 
-#~ msgid "%s: illegal option -- %c\n"
-#~ msgstr "%s: неисправна опција -- %c\n"
+#: src/shar-opts.c:1867
+#, c-format
+msgid "Cannot reopen %s as stdin"
+msgstr "Не могу поново да отворим „%s“ као стандардни улаз"
 
-#~ msgid "memory exhausted"
-#~ msgstr "нема довољно меморије"
+#: src/shar-opts.c:1987
+msgid "shar usage error:\n"
+msgstr "грешка употребе шар-а:\n"
 
-#~ msgid "installing GNU `touch'\\'', distributed in GNU File Utilities..."
-#~ msgstr "инсталирам GNU touch, који се налази међу GNU алатима за датотеке..."
+#: src/shar-opts.c:2023
+msgid "shar fatal error:\n"
+msgstr "кобна грешка шар-а:\n"
 
-#~ msgid "[no, yes, all, quit] (no)?"
-#~ msgstr "[не: no, да: yes, све: all, крај: quit] (no)?"
+#: src/shar-opts.c:2060 src/unshar-opts.c:734 src/uudecode-opts.c:508
+#: src/uuencode-opts.c:459
+#, c-format
+msgid "fserr %d (%s) performing '%s' on %s\n"
+msgstr "фсерр %d (%s) извршава „%s“ на %s\n"
 
-#~ msgid "restore of %s failed\n"
-#~ msgstr "обнављање „%s“ није успело\n"
+#: src/shar-opts.c:2185 src/unshar-opts.c:859 src/uudecode-opts.c:633
+#: src/uuencode-opts.c:584
+msgid "No memory for duping translated strings\n"
+msgstr "Нема меморије за удвостручавање преведених ниски\n"
 
-#~ msgid "Please unpack part"
-#~ msgstr "Молим распакујте део"
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the sharOptions structure noted in the comments below.  The
+#. literal text is defined in shar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. shar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via sharOptions.pzCopyright
+#: src/shar-opts.c:2253
+msgid ""
+"shar (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"шар (Гнуова помагала шар-а) 4.13.5\n"
+"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
+"расподелу под одредбама Гнуове опште јавне дозволе,\n"
+"издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
 
-#~ msgid "next!"
-#~ msgstr "следећи!"
+#: src/shar-opts.c:2260
+msgid ""
+"shar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"шар је слободан софтвер: можете га прослеђивати и/или мењати под\n"
+"одредбама Гнуове опште јавне лиценце коју је објавила Задужбина\n"
+"слободног софтвера, било издања 3 дозволе, или (по вашем избору)\n"
+"било којег новијег издања.\n"
+"\n"
 
-#~ msgid "File"
-#~ msgstr "Датотека"
+#: src/shar-opts.c:2264
+msgid ""
+"shar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"шар се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ\n"
+"ГАРАНЦИЈЕ; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или\n"
+"ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.  Погледајте Гнуову општу јавну\n"
+"лиценцу за више детаља.\n"
+"\n"
 
-#~ msgid "original size"
-#~ msgstr "полазна величина"
+#: src/shar-opts.c:2268 src/unshar-opts.c:942 src/uudecode-opts.c:716
+#: src/uuencode-opts.c:667
+msgid ""
+"You should have received a copy of the GNU General Public License along\n"
+"with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+"Требали сте да примите примерак Гнуове опште јавне лиценце уз\n"
+"овај програм. Ако нисте, погледајте <http://www.gnu.org/licenses/>.\n"
 
-#~ msgid "current size"
-#~ msgstr "тренутна величина"
+#: src/shar-opts.c:2272
+#, c-format
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"шар (Гнуова помагала шар-а) — направите архиву шкољке\n"
+"Употреба:  %s [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
 
-#~ msgid "Mandatory arguments to long options are mandatory for short options too.\n"
-#~ msgstr "Обавезни аргументи за дугачке опције су обавезни и за кратке опције.\n"
+#: src/shar-opts.c:2276
+msgid ""
+"If no 'file's are specified, the list of input files is read from standard\n"
+"input.  Standard input must not be a terminal.\n"
+msgstr ""
+"Ако нису наведене „датотеке“, списак улазних датотека се чита са\n"
+"стандардног улаза.  Стандардни улаз не сме бити терминал.\n"
 
-#~ msgid ""
-#~ "\n"
-#~ "Splitting output:\n"
-#~ "  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-#~ "  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-#~ "  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Дељење излаза:\n"
-#~ "  -o, --output-prefix=PREFIX    излазне датотеке ће имати име PREFIX.01 \n"
-#~ "                                до PREFIX.NN\n"
-#~ "  -l, --whole-size-limit=SIZE   подели архиву, не датотеке, у делове величине \n"
-#~ "                                SIZE килобајта\n"
-#~ "  -L, --split-size-limit=SIZE   подели архиву, или датотеке у делове величине\n"
-#~ "                                SIZE килобајта\n"
+#: src/shar-opts.c:2280
+msgid ""
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+"„шар“ прави „архиве шкољке“ (или шар датотеке) које су у текстуалном запису\n"
+"и могу бити послате ел. поштом.  Те датотеке касније могу бити распаковане\n"
+"њиховим извршавањем наредбом „/bin/sh“.  Резултирајућа архива се шаље на\n"
+"стандардни излаз осим ако није дата опција „-o“. Широки опсег функција\n"
+"обезбеђује опширну прилагодљивост у производњи шарова и у навођењу шарових\n"
+"проницљивости. Архиве могу бити врло једноставне („--vanilla-operation“)\n"
+"или суштински „тар“ архива која се може слати ел. поштом.\n"
+"\n"
 
-#~ msgid "%s: Illegal ~user"
-#~ msgstr "%s: Неисправан ~корисник"
+#: src/shar-opts.c:2287 src/shar-opts.c:2381
+msgid ""
+"Options may be specified in any order until a 'file' argument is\n"
+"recognized.  If the '--intermix-type' option has been specified, more\n"
+"compression and encoding options will be recognized between the 'file'\n"
+"arguments.\n"
+"\n"
+msgstr ""
+"Могућности могу бити наведене било којим редом све док је препознат\n"
+"аргумент „датотека“.  Ако је наведено „--intermix-type“, више могућности\n"
+"сажимања и кодирања ће бити препознато између аргумената „датотеке“.\n"
+"\n"
 
-#~ msgid "denied writing FIFO (%s)"
-#~ msgstr "не може се уписати FIFO (%s)"
+#: src/shar-opts.c:2291
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+msgstr ""
+"Иако овај програм подржава „uuencode“-d датотеке, оне су застареле.\n"
+"Ако шаљете датотеке ле. поштом, узмите у обзир миме-кодиране датотеке.\n"
+"Ако радите „uuencode“, „base64“ је жељени начин кодирања.\n"
 
-#~ msgid "not following symlink (%s)"
-#~ msgstr "не пратим симболичку везу (%s)"
+#: src/shar-opts.c:2296
+msgid "shar (GNU sharutils) 4.13.5"
+msgstr "шар (Гнуова помагала шар-а) 4.13.5"
 
-#~ msgid "created"
-#~ msgstr "направљен"
+#: src/shar-opts.c:2299
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"шар (Гнуова помагала шар-а) — направите архиву шкољке\n"
+"Употреба:  shar [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
 
-#~ msgid "failed to create"
-#~ msgstr "није направљен"
+#: src/shar-opts.c:2301
+msgid ""
+"Specify compression:\n"
+"   -p, --intermix-type        specify compression for input files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"Наведите сажимање:\n"
+"   -p, --intermix-type        наводи сажимање улазних датотека\n"
+"                                — забрањује могућност „vanilla-operation“\n"
 
-#~ msgid "Must unpack archives in sequence!"
-#~ msgstr "Архиве се морају отпаковати редом!"
+#: src/shar-opts.c:2304
+msgid ""
+"   -C, --compactor=PROG       specify compaction (compression) program PROG\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+"                                - may appear multiple times\n"
+"                                - it must be known to shar: xz gzip bzip2\n"
+msgstr ""
+"   -C, --compactor=ПРОГ       наводи програм ПРОГ сабијања (сажимања)\n"
+"                                — забрањује могућност „vanilla-operation“\n"
+"                                — може да се појави више пута\n"
+"                                — мора бити познат шару: xz gzip bzip2\n"
 
-#~ msgid "End of"
-#~ msgstr "Крај"
+#: src/shar-opts.c:2308
+msgid ""
+"   -g, --level-of-compression=LEVEL\n"
+"                              pass LEVEL for compression\n"
+"                                - it must be in the range: 1 to 9\n"
+"\n"
+msgstr ""
+"   -g, --level-of-compression=НИВО\n"
+"                              даје НИВО сажимања\n"
+"                                — мора бити у опсегу: од 1 до 9\n"
+"\n"
 
-#~ msgid "part"
-#~ msgstr "дела"
+#: src/shar-opts.c:2311
+msgid ""
+"Specify file encoding methodology:\n"
+"   -M, --mixed-uuencode       decide uuencoding for each file\n"
+msgstr ""
+"Наведите методологију кодирања датотеке:\n"
+"   -M, --mixed-uuencode       одлучује уукодирање за сваку датотеку\n"
 
-#~ msgid "removed"
-#~ msgstr "уклоњен"
+#: src/shar-opts.c:2313
+msgid ""
+"   -B, --uuencode             treat all files as binary\n"
+"                                - an alternate for mixed-uuencode\n"
+msgstr ""
+"   -B, --uuencode             све датотеке сматра извршним\n"
+"                                — други избор за мешано-уукодирање\n"
 
-#~ msgid "failed to remove"
-#~ msgstr "није уклоњен"
+#: src/shar-opts.c:2315
+msgid ""
+"   -T, --text-files           treat all files as text\n"
+"                                - an alternate for mixed-uuencode\n"
+"\n"
+msgstr ""
+"   -T, --text-files             све датотеке сматра текстом\n"
+"                                — други избор за мешано-уукодирање\n"
+
+#: src/shar-opts.c:2317
+msgid "Specifying file selection and output modes:\n"
+msgstr "Навођење избора датотека и режима излаза:\n"
+
+#: src/shar-opts.c:2318
+msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+msgstr "   -o, --output-prefix=ниска  исписује излаз у датотеку „PREFIX.nn“\n"
+
+#: src/shar-opts.c:2319
+msgid ""
+"   -l, --whole-size-limit=SIZE\n"
+"                              split archive, not files, to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+msgstr ""
+"   -l, --whole-size-limit=ВЕЛИЧИНА\n"
+"                              дели архиву, не датотеке, на ВЕЛИЧИНУ\n"
+"                                — захтева опцију „output-prefix“\n"
+"                                — заменљиво је са суфиксом: k/K/m/M/g/G/t/T\n"
+"                                — мора бити у једном од опсега:\n"
+"                                  од 8 до 1023, или од 8192 до 4194304\n"
+
+#: src/shar-opts.c:2325
+msgid ""
+"   -L, --split-size-limit=SIZE\n"
+"                              split archive or files to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+"                                - an alternate for 'whole-size-limit'\n"
+msgstr ""
+"   -L, --split-size-limit=ВЕЛИЧИНА\n"
+"                              дели архиву или датотеке на ВЕЛИЧИНУ\n"
+"                                — захтева опцију „output-prefix“\n"
+"                                заменљиво је са суфиксом: k/K/m/M/g/G/t/T\n"
+"                                — мора бити у једном од опсега:\n"
+"                                  од 8 до 1023, или од 8192 до 4194304\n"
+"                                — замена за „whole-size-limit“\n"
+
+#: src/shar-opts.c:2332
+msgid ""
+"   -I, --input-file-list=FILE read file list from FILE\n"
+"\n"
+msgstr ""
+"   -I, --input-file-list=ДАТОТЕКА чита списак датотека из ДАТОТЕКЕ\n"
+"\n"
+
+#: src/shar-opts.c:2333
+msgid ""
+"Controlling the shar headers:\n"
+"   -n, --archive-name=NAME    use NAME to document the archive\n"
+msgstr ""
+"Управљање шаровим заглављима:\n"
+"   -n, --archive-name=НАЗИВ   користи НАЗИВ за документовање архиве\n"
+
+#: src/shar-opts.c:2335
+msgid "   -s, --submitter=NAME       override the submitter name with NAME\n"
+msgstr "   -s, --submitter=ИМЕ        преписује име пошиљаоца ИМЕНОМ\n"
+
+#: src/shar-opts.c:2336
+msgid ""
+"   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
+"                                - requires the option 'archive-name'\n"
+msgstr ""
+"   -a, --net-headers          исписује заглавља Предао је: и Назив архиве:\n"
+"                                — захтева опцију „archive-name“\n"
+
+#: src/shar-opts.c:2338
+msgid "   -c, --cut-mark             start the shar with a cut line\n"
+msgstr "   -c, --cut-mark             покреће шар са редом за одсецање\n"
+
+#: src/shar-opts.c:2339
+msgid ""
+"   -t, --translate            translate messages in the script\n"
+"\n"
+msgstr ""
+"   -t, --translate            преводи поруке у спису\n"
+"\n"
+
+#: src/shar-opts.c:2340
+msgid ""
+"Protecting against transmission issues:\n"
+"       --no-character-count   do not use `wc -c' to check size\n"
+msgstr ""
+"Заштита од проблема преноса:\n"
+"       --no-character-count   не користи „wc -c“ да провери величину\n"
+
+#: src/shar-opts.c:2342
+msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
+msgstr "   -D, --no-md5-digest        не користи збирке мд5суме за проверу\n"
+
+#: src/shar-opts.c:2343
+msgid "   -F, --force-prefix         apply the prefix character on every line\n"
+msgstr "   -F, --force-prefix         примењује знак префикса на сваком реду\n"
+
+#: src/shar-opts.c:2344
+msgid ""
+"   -d, --here-delimiter=DELIM use DELIM to delimit the files\n"
+"\n"
+msgstr ""
+"   -d, --here-delimiter=ОГРАН користи ОГРАН да ограничи датотеке\n"
+"\n"
+
+#: src/shar-opts.c:2345
+msgid ""
+"Producing different kinds of shars:\n"
+"   -V, --vanilla-operation    produce very simple shars\n"
+msgstr ""
+"Стварање различитих врста шарова:\n"
+"   -V, --vanilla-operation    ствара врло једноставне шарове\n"
+
+#: src/shar-opts.c:2347
+msgid "   -P, --no-piping            use temporary files between programs\n"
+msgstr "   -P, --no-piping            користи привремене датотеке између програма\n"
+
+#: src/shar-opts.c:2348
+msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr "   -x, --no-check-existing    слепо преписује постојеће датотеке\n"
+
+#: src/shar-opts.c:2349
+msgid ""
+"   -X, --query-user           ask user before overwriting files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"   -X, --query-user           пита корисника пре преписивања датотека\n"
+"                                — забрањује опцију „vanilla-operation“\n"
+
+#: src/shar-opts.c:2351
+msgid "   -m, --no-timestamp         do not restore modification times\n"
+msgstr "   -m, --no-timestamp         не враћа времена измена\n"
+
+#: src/shar-opts.c:2352
+msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+msgstr "   -Q, --quiet-unshar         избегава опширне поруке за време разшаривања\n"
+
+#: src/shar-opts.c:2353
+msgid ""
+"   -f, --basename             restore in one directory, despite hierarchy\n"
+"\n"
+msgstr ""
+"   -f, --basename             враћа у једном директоријуму, упркос хијерархији\n"
+"\n"
+
+#: src/shar-opts.c:2354
+msgid ""
+"Internationalization options:\n"
+"       --no-i18n              do not internationalize\n"
+msgstr ""
+"Могућности интернационализације:\n"
+"       --no-i18n              не интернационализује\n"
+
+#: src/shar-opts.c:2356
+msgid ""
+"       --print-text-domain-dir  print directory with shar messages\n"
+"\n"
+msgstr ""
+"       --print-text-domain-dir  исписује директоријум са порукама шара\n"
+"\n"
+
+#: src/shar-opts.c:2357
+msgid ""
+"User feedback/entertainment:\n"
+"   -q, --quiet                do not output verbose messages\n"
+msgstr ""
+"Корисникове притужбе:\n"
+"   -q, --quiet                не исписује опширне поруке\n"
+
+#: src/shar-opts.c:2359
+msgid ""
+"       --silent               an alias for the 'quiet' option\n"
+"\n"
+msgstr ""
+"       --silent               имењак за опцију „quiet“\n"
+"\n"
+
+#: src/shar-opts.c:2360
+msgid "Version, usage and configuration options:\n"
+msgstr "Издање, употреба и могућности подешавања:\n"
+
+#: src/shar-opts.c:2361 src/unshar-opts.c:974 src/uudecode-opts.c:750
+#: src/uuencode-opts.c:697
+msgid "   -v, --version[=MODE]       output version information and exit\n"
+msgstr "  -V, --version[=РЕЖИМ]       исписује податке о издању и излази\n"
+
+#: src/shar-opts.c:2362 src/unshar-opts.c:975 src/uudecode-opts.c:751
+#: src/uuencode-opts.c:698
+msgid "   -h, --help                 display extended usage information and exit\n"
+msgstr "   -h, --help                 приказује опширно обавештење о коришћењу и излази\n"
+
+#: src/shar-opts.c:2363 src/unshar-opts.c:976 src/uudecode-opts.c:752
+#: src/uuencode-opts.c:699
+msgid "   -!, --more-help            extended usage information passed thru pager\n"
+msgstr "   -!, --more-help            опширно обавештење о коришћењу прослеђено страничнику\n"
+
+#: src/shar-opts.c:2364 src/uudecode-opts.c:753 src/uuencode-opts.c:700
+msgid "   -R, --save-opts[=FILE]     save the option state to a config file FILE\n"
+msgstr "   -R, --save-opts[=ДАТОТЕКА] чува стање опције у датотеку подешавања ДАТОТЕКА\n"
+
+#: src/shar-opts.c:2365 src/uudecode-opts.c:754 src/uuencode-opts.c:701
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled with '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"   -r, --load-opts=ДАТОТЕКА   учитава могућности из датотеке подешавања ДАТОТЕКА\n"
+"                                — искључено са „--no-load-opts“\n"
+"                                — може да се појави више пута\n"
+"\n"
+
+#: src/shar-opts.c:2368
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file's are specified, the list of input files is read from a\n"
+"standard input.  Standard input must not be a terminal.\n"
+"\n"
+msgstr ""
+"Могућности су наведене удвострученим цртицама и њиховим називом или једном\n"
+"цртицом и знаком обележја.\n"
+"Ако није наведена ни једна датотека, списак улазних датотека се чита са\n"
+"стандардног улаза.  Стандардни улаз не сме бити терминал.\n"
+"\n"
+
+#: src/shar-opts.c:2372 src/unshar-opts.c:986 src/uudecode-opts.c:760
+#: src/uuencode-opts.c:706
+msgid "The following option preset mechanisms are supported:\n"
+msgstr "Подржани су следећи механизми подешености опција:\n"
+
+#: src/shar-opts.c:2373
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+" — читање датотеке „$HOME/.sharrc“\n"
+"\n"
+"„шар“ прави „архиве шкољке“ (или шар датотеке) које су у текстуалном запису\n"
+"и могу бити послате ел. поштом.  Те датотеке касније могу бити распаковане\n"
+"њиховим извршавањем наредбом „/bin/sh“.  Резултирајућа архива се шаље на\n"
+"стандардни излаз осим ако није дата опција „-o“. Широки опсег функција\n"
+"обезбеђује опширну прилагодљивост у производњи шарова и у навођењу шарових\n"
+"проницљивости. Архиве могу бити врло једноставне („--vanilla-operation“)\n"
+"или суштински „тар“ архива која се може слати ел. поштом.\n"
+"\n"
+
+#: src/shar-opts.c:2385
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"Иако овај програм подржава „uuencode“-d датотеке, оне су застареле.\n"
+"Ако шаљете датотеке ле. поштом, узмите у обзир миме-кодиране датотеке.\n"
+"Ако радите „uuencode“, „base64“ је жељени начин кодирања.\n"
+"\n"
+"Извештаје о грешкама пошаљите на:  <bug-gnu-utils@gnu.org>\n"
+
+#: src/shar-opts.c:2391
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'shar --help' for more information.\n"
+msgstr ""
+"шар (Гнуова помагала шар-а) — направите архиву шкољке\n"
+"Употреба:  shar [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
+"Покушајте „shar --help“ за више података.\n"
+
+#: ../autoopts.c:60 ../autoopts.c:86
+#, c-format
+msgid "allocation of %d bytes failed\n"
+msgstr "додељивање %d бајта није успело\n"
+
+#: ../init.c:53
+msgid "AutoOpts function called without option descriptor\n"
+msgstr "Функција „AutoOpts“ је позвана без описника могућности\n"
+
+#: ../init.c:89
+msgid "\tThis exceeds the compiled library version:  "
+msgstr "\tОво премашује издање преведене библиотеке:  "
+
+#: ../init.c:87
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+"Грешка обраде осамостаљених могућности!\n"
+"\t%s је позвао функцију „AutoOpts“ са издањем структуре %d:%d:%d.\n"
+
+#: ../autoopts.c:73
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr "поновно додељивање %d бајта на 0x%p није успело\n"
+
+#: ../init.c:91
+msgid "\tThis is less than the minimum library version:  "
+msgstr "\tОво је мање од најмањег издања библиотеке:  "
+
+#: ../version.c:121
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+"Осамостаљене могућности издање %s\n"
+"\tАуторска права © 1999-2013 Брус Корб — сва права су задржана\n"
+
+#: ../usage.c:310
+#, c-format
+msgid "(AutoOpts bug):  %s.\n"
+msgstr "(Грешка Осамостаљених могућности):  %s.\n"
+
+#: ../reset.c:90
+msgid "optionResetOpt() called, but reset-option not configured"
+msgstr "позвана је функција „optionResetOpt()“, али није подешено поништавање могућности"
+
+#: ../usage.c:329
+msgid "could not locate the 'help' option"
+msgstr "не могу да пронађем могућност „help“"
+
+#: ../autoopts.c:351
+msgid "optionProcess() was called with invalid data"
+msgstr "позвана је фунција „optionProcess()“ са неисправним подацима"
+
+#: ../usage.c:783
+msgid "invalid argument type specified"
+msgstr "наведена је неисправна врста аргумента"
+
+#: ../find.c:589
+msgid "defaulted to option with optional arg"
+msgstr "подразумевам могућност са изборним аргументом"
+
+#: ../alias.c:76
+msgid "aliasing option is out of range."
+msgstr "могућност умекшавања ивица је ван опсега."
+
+#: ../enum.c:229
+#, c-format
+msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
+msgstr "%s грешка: кључна реч „%s“ је нејасна за %s\n"
+
+#: ../find.c:108
+msgid "  The following options match:\n"
+msgstr "  Следеће могућности се подударају:\n"
+
+#: ../find.c:290
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr "%s: нејасан назив опције: %s (поклапа %d опције)\n"
+
+#: ../check.c:161
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr "%s: Потребни су аргументи линије наредби\n"
+
+#: ../alias.c:43
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr "%d %s%s опције су дозвољене\n"
+
+#: ../makeshell.c:81
+#, c-format
+msgid "%s error %d (%s) calling %s for '%s'\n"
+msgstr "%s грешка %d (%s) позивања %s за „%s“\n"
+
+#: ../makeshell.c:293
+msgid "interprocess pipe"
+msgstr "спојка унутарњег процеса"
+
+#: ../version.c:168
+#, c-format
+msgid ""
+"error: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and full copyright notice\n"
+msgstr ""
+"грешка: није исправан аргумент могућности издања „%c“.  Користите:\n"
+"\t„v“ — само издање\n"
+"\t„c“ — издање и ауторска права\n"
+"\t„n“ — издање и потпуно обавештење ауторских права\n"
+
+#: ../check.c:58
+#, c-format
+msgid "%s error:  the '%s' and '%s' options conflict\n"
+msgstr "%s грешка:  опције „%s“ и „%s“ се сукобљавају\n"
+
+#: ../find.c:214 ../find.c:421
+#, c-format
+msgid "%s: The '%s' option has been disabled."
+msgstr "%s: Опција „%s“ је искључена."
+
+#: ../alias.c:38
+msgid "-equivalence"
+msgstr "—једнакост"
+
+#: ../find.c:460 ../reset.c:110
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: неисправна опција -- %c\n"
+
+#: ../find.c:268 ../find.c:746 ../reset.c:118
+#, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: неисправна опција -- %s\n"
+
+#: ../find.c:332
+#, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: непозната опција продавца проширења „--%s“\n"
+
+#: ../enum.c:154 ../enum.c:164
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr "  или цео број од %d до %d\n"
+
+#: ../usage.c:782 ../usage.c:1110
+#, c-format
+msgid "%s error:  invalid option descriptor for %s\n"
+msgstr "%s грешка: неисправан описник опције за „%s“\n"
+
+#: ../find.c:379
+#, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: неисправан назив опције: %s\n"
+
+#: ../find.c:518
+#, c-format
+msgid "%s: The '%s' option requires an argument.\n"
+msgstr "%s: опција „--%s“ захтева аргумент.\n"
+
+#: ../autoopts.c:171
+#, c-format
+msgid ""
+"(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'."
+msgstr ""
+"(Грешка СамстОпцја):  Уједначена опција „%s“ је уједначена и са\n"
+"\t„%s“ и са „%s“."
+
+#: ../check.c:94
+#, c-format
+msgid "%s error:  The %s option is required\n"
+msgstr "%s грешка:  Потребна је опција „%s“\n"
+
+#: ../find.c:623
+#, c-format
+msgid "%s: The '%s' option cannot have an argument.\n"
+msgstr "%s: опција „%s“ не може имати аргумент.\n"
+
+#: ../check.c:151
+#, c-format
+msgid "%s: Command line arguments are not allowed.\n"
+msgstr "%s: Аргументи линије наредби нису дозвољени.\n"
+
+#: ../save.c:531
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr "грешка %d (%s) стварања %s\n"
+
+#: ../enum.c:229
+#, c-format
+msgid "%s error:  '%s' does not match any %s keywords.\n"
+msgstr "%s грешка:  „%s“ не одговара ни једној %s кључној речи.\n"
+
+#: ../reset.c:93
+#, c-format
+msgid "%s error: The '%s' option requires an argument.\n"
+msgstr "%s грешка: опција „%s“ захтева аргумент.\n"
+
+#: ../save.c:184 ../save.c:238
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr "грешка %d (%s) постављања стања %s\n"
+
+#: ../restore.c:143
+#, c-format
+msgid "%s error: no saved option state\n"
+msgstr "%s грешка: нема сачуваног стања опције\n"
+
+#: ../autoopts.c:246
+#, c-format
+msgid "'%s' is not a command line option.\n"
+msgstr "„%s“ није опција линије наредби.\n"
+
+#: ../time.c:114
+#, c-format
+msgid "%s error:  '%s' is not a recognizable date/time.\n"
+msgstr "%s грешка:  „%s“ није препознатљив датум/време.\n"
+
+#: ../save.c:132
+#, c-format
+msgid "'%s' not defined\n"
+msgstr "„%s“ није наведено\n"
+
+#: ../time.c:53
+#, c-format
+msgid "%s error:  '%s' is not a recognizable time duration.\n"
+msgstr "%s грешка:  „%s“ није препознатљиво трајање времена.\n"
+
+#: ../check.c:92
+#, c-format
+msgid "%s error:  The %s option must appear %d times.\n"
+msgstr "%s грешка:  опција „%s“ мора да се појави %d пута.\n"
+
+#: ../numeric.c:157
+#, c-format
+msgid "%s error:  '%s' is not a recognizable number.\n"
+msgstr "%s грешка:  „%s“ није препознатљив број.\n"
+
+#: ../enum.c:195
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr "%s грешка:  %s премашује број %s кључне речи\n"
+
+#: ../usage.c:366
+#, c-format
+msgid "Try '%s %s' for more information.\n"
+msgstr "Пробајте „%s %s“ за више информација.\n"
+
+#: ../alias.c:45
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr "једна %s%s опција је дозвољена\n"
+
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:304 ../usage.c:451
+#: ../usage.c:660 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
+#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+msgid "standard output"
+msgstr "стандардни излаз"
+
+#: ../usage.c:304 ../usage.c:451 ../usage.c:660 ../version.c:175
+msgid "standard error"
+msgstr "стандардна грешка"
+
+#: ../makeshell.c:195 ../makeshell.c:930 ../usage.c:303 ../usage.c:450
+#: ../usage.c:659 ../version.c:174
+msgid "write"
+msgstr "пиши"
+
+#: ../numeric.c:60
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr "%s грешка:  %s опције вредност %ld је ван опсега.\n"
+
+#: ../check.c:44
+#, c-format
+msgid "%s error:  %s option requires the %s option\n"
+msgstr "%s грешка:  %s опција захтева %s опцију\n"
+
+#: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:530
+#, c-format
+msgid "%s warning:  cannot save options - %s not regular file\n"
+msgstr "%s упозорење:  не могу да сачувам опције — %s није обична датотека\n"
+
+#: src/shar.c:365
+#, c-format
+msgid "printf formatting error:  %s\n"
+msgstr "грешка обликовања штампања датотеке:  %s\n"
+
+#: src/shar.c:416
+msgid "sharutils bug - no status"
+msgstr "грешка шарових помагала — нема стања"
+
+#: src/shar.c:779
+msgid "Too many directories for mkdir generation"
+msgstr "Превише директоријума за наредбу стварања директоријума (mkdir)"
+
+#: src/shar.c:862 src/shar.c:1681
+#, c-format
+msgid "Cannot access %s"
+msgstr "Не могу да приступим %s"
+
+#: src/shar.c:957
+#, c-format
+msgid "Cannot get current directory name"
+msgstr "Не могу да добавим назив тренутног директоријума"
+
+#: src/shar.c:1043
+#, c-format
+msgid "Starting file %s\n"
+msgstr "Почетна датотека %s\n"
+
+#: src/shar.c:1142
+msgid "Could not popen command"
+msgstr "Не могу да извршим наредбу „popen“"
+
+#: src/shar.c:1198
+#, c-format
+msgid "Cannot open file %s"
+msgstr "Не могу да отворим датотеку „%s“"
+
+#: src/shar.c:1324 src/shar.c:1335
+msgid "call"
+msgstr "позив"
+
+#: src/shar.c:1347
+msgid "pipe fd"
+msgstr "фд спојка"
+
+#: src/shar.c:1455 src/shar.c:1468
+msgid "text"
+msgstr "текст"
+
+#: src/shar.c:1565
+#, c-format
+msgid "Continuing file %s\n"
+msgstr "Настављам датотеком „%s“\n"
+
+#: src/shar.c:1676
+#, c-format
+msgid "%s: Not a regular file"
+msgstr "%s: Није уобичајена датотека"
+
+#: src/shar.c:1724
+msgid "empty"
+msgstr "празно"
+
+#: src/shar.c:1763
+#, c-format
+msgid "Saving %s (%s)"
+msgstr "Чувам %s (%s)"
+
+#: src/shar.c:1948
+#, c-format
+msgid "Invalid format for output file names (%s): %s"
+msgstr "Неисправан запис за називе излазних датотека (%s): %s"
+
+#: src/shar.c:1963
+msgid "more than one format element"
+msgstr "више од једног елемента заоиса"
+
+#: src/shar.c:1968
+msgid "no conversion character"
+msgstr "нема знака претварања"
+
+#: src/shar.c:1977
+msgid "format is too wide"
+msgstr "запис је преширок"
+
+#: src/shar.c:1989
+msgid "invalid conversion character"
+msgstr "неисправан знак претварања"
+
+#: src/shar.c:2034
+msgid "Opening"
+msgstr "Отварам"
+
+#: src/shar.c:2049
+msgid "Closing"
+msgstr "Затварам"
+
+#: src/shar.c:2138
+#, c-format
+msgid "reopening stderr to /dev/null"
+msgstr "поново отварам стандардну грешку у „/dev/null“"
+
+#: src/shar.c:2186
+msgid "No input files"
+msgstr "Нису наведене улазне датотеке"
+
+#: src/shar.c:2203
+#, c-format
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "МОЛИМ избегавајте „-X“ шарове на Јузнету или јавним мрежама"
+
+#: src/shar.c:2227
+#, c-format
+msgid ""
+"The '%s' option may not be intermixed with file names\n"
+"unless the --intermix-type option has been specified."
+msgstr ""
+"Опција „%s“ не може бити измешана са називима датотека\n"
+"осим ако није наведена опција „--intermix-type“."
+
+#: src/shar.c:2245
+#, c-format
+msgid "The '%s' option must appear before any file names"
+msgstr "Опција „%s“ мора да се појави пре назива било које датотеке"
+
+#: src/shar.c:2281
+#, c-format
+msgid ""
+"invalid compaction type:  %s\n"
+"the known types are:\n"
+msgstr ""
+"неисправна врста сабијања:  %s\n"
+"познате врсте су:\n"
+
+#: src/shar.c:2319
+msgid "files on command line and --input-file-list specified"
+msgstr "наведене су датотеке на линији наредби и „--input-file-list“"
+
+#: src/shar.c:2368
+#, c-format
+msgid "Created %d files\n"
+msgstr "Направљених датотека — %d\n"
+
+#: src/unshar-opts.c:580
+#, c-format
+msgid "fs error %d (%s) %s-ing %s\n"
+msgstr "грешка фс-а %d (%s) %s-инг %s\n"
+
+#: src/unshar-opts.c:582 src/unshar-opts.c:644 src/uudecode.c:470
+#: src/uuencode.c:205
+msgid "standard input"
+msgstr "стандардни улаз"
+
+#: src/unshar-opts.c:661
+msgid "unshar usage error:\n"
+msgstr "грешка употребе уншар-а:\n"
+
+#: src/unshar-opts.c:697
+msgid "unshar fatal error:\n"
+msgstr "кобна грешка уншар-а:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the unsharOptions structure noted in the comments below.  The
+#. literal text is defined in unshar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. unshar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via unsharOptions.pzCopyright
+#: src/unshar-opts.c:927
+msgid ""
+"unshar (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"уншар (Гнуова помагала шар-а) 4.13.5\n"
+"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
+"расподелу под одредбама Гнуове опште јавне дозволе,\n"
+"издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/unshar-opts.c:934
+msgid ""
+"unshar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"уншар је слободан софтвер: можете га прослеђивати и/или мењати под\n"
+"одредбама Гнуове опште јавне лиценце коју је објавила Задужбина\n"
+"слободног софтвера, било издања 3 дозволе, или (по вашем избору)\n"
+"било којег новијег издања.\n"
+"\n"
+
+#: src/unshar-opts.c:938
+msgid ""
+"unshar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"уншар се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ\n"
+"ГАРАНЦИЈЕ; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или\n"
+"ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.  Погледајте Гнуову општу јавну\n"
+"лиценцу за више детаља.\n"
+"\n"
+
+#: src/unshar-opts.c:946
+#, c-format
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"уншар (Гнуова помагала шар-а) — распакујте шар архиву\n"
+"Употреба:  %s [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
+
+#: src/unshar-opts.c:950
+msgid ""
+"\n"
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+msgstr ""
+"\n"
+"Ако нису обезбеђени аргументи, аргументи улаза се читају са стдулз-а,\n"
+"један по реду; празни и редови са префиксом „#“ јесу напомене.\n"
+"„стдулз“ не може бити терминал (tty).\n"
+
+#: src/unshar-opts.c:956
+msgid ""
+"Unshar scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+msgstr ""
+"Уншар прегледа улазне датотеке (обично поруке ел. поште) тражећи почетак\n"
+"архиве шкољке.  Ако нису дате датотеке, онда се обрађује стандардни улаз.\n"
+"Затим прослеђује сваку архиву откривену позивом програма шкољке да је распакује.\n"
+
+#: src/unshar-opts.c:962
+msgid "unshar (GNU sharutils) 4.13.5"
+msgstr "уншар (Гнуова помагала шар-а) 4.13.5"
+
+#: src/unshar-opts.c:965
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"уншар (Гнуова помагала шар-а) — распакујте шар архиву\n"
+"Употреба:  unshar [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
+
+#: src/unshar-opts.c:967
+msgid "   -d, --directory=DIR        change directory to DIR before unpacking\n"
+msgstr "   -d, --directory=ДИР        мења директоријум у ДИР пре распакивања\n"
+
+#: src/unshar-opts.c:968
+msgid "   -c, --overwrite            overwrite any pre-existing files\n"
+msgstr "   -c, --overwrite            преписује сваку претходно постојећу датотеку\n"
+
+#: src/unshar-opts.c:969
+msgid "   -f, --force                an alias for the 'overwrite' option\n"
+msgstr "   -f, --force                имењак за опцију „overwrite“\n"
+
+#: src/unshar-opts.c:970
+msgid "   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines\n"
+msgstr "   -E, --split-at=ПОДЕЛИ-ПАТ  дели улаз на редове ПОДЕЛИ-ПАТ\n"
+
+#: src/unshar-opts.c:971
+msgid ""
+"   -e, --exit-0               split input on \"exit 0\" lines\n"
+"                                - prohibits the option 'split-at'\n"
+msgstr ""
+"   -e, --exit-0               дели улаз на редове „exit 0“\n"
+"                                — забрањује опцију „split-at“\n"
+
+#: src/unshar-opts.c:973
+msgid "   -D, --debug                debug the shell code\n"
+msgstr "   -D, --debug                прочишћава код шкољке\n"
+
+#: src/unshar-opts.c:977
+msgid "   -R, --save-opts[=FILE]     save the option state to the config file FILE\n"
+msgstr "   -R, --save-opts[=ДАТОТЕКА] чува стање опције у датотеку подешавања ДАТОТЕКА\n"
+
+#: src/unshar-opts.c:978
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled as '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"   -r, --load-opts=ДАТОТЕКА   учитава могућности из датотеке подешавања ДАТОТЕКА\n"
+"                                — искључено као „--no-load-opts“\n"
+"                                — може да се појави више пута\n"
+"\n"
+
+#: src/unshar-opts.c:981 src/uuencode-opts.c:704
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"\n"
+msgstr ""
+"Опције се наводе двоструким цртицама и њиховим називом или једном\n"
+"цртицом и знаком обележја.\n"
+"\n"
+
+#: src/unshar-opts.c:983
+msgid ""
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+"\n"
+msgstr ""
+"Ако нису обезбеђени аргументи, аргументи улаза се читају са стдулз-а,\n"
+"један по реду; празни и редови са префиксом „#“ јесу напомене.\n"
+"„стдулз“ не може бити терминал (tty).\n"
+
+#: src/unshar-opts.c:987
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'unshar' scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+"\n"
+msgstr ""
+" — читање датотеке „$HOME/.sharrc“\n"
+"\n"
+"„уншар“ прегледа улазне датотеке (обично поруке ел. поште) тражећи почетак\n"
+"архиве шкољке.  Ако нису дате датотеке, онда се обрађује стандардни улаз.\n"
+"Затим прослеђује сваку архиву откривену позивом програма шкољке да је распакује.\n"
+
+#: src/unshar-opts.c:992 src/uudecode-opts.c:776
+msgid "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr "Извештаје о грешкама пошаљите на:  <bug-gnu-utils@gnu.org>\n"
+
+#: src/unshar-opts.c:995
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'unshar --help' for more information.\n"
+msgstr ""
+"уншар (Гнуова помагала шар-а) — распакујте архиву шкољке\n"
+"Употреба:  shar [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
+"Покушајте „unshar --help“ за више података.\n"
+
+#: src/unshar.c:202
+#, c-format
+msgid "Found no shell commands after cut line in %s"
+msgstr "Нисам пронашао наредбе шкољке након реда исецања у „%s“"
+
+#: src/unshar.c:220
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "„%s“ вероватно није архива шкољке"
+
+#: src/unshar.c:221
+#, c-format
+msgid "The 'cut line' was followed by: %s"
+msgstr "Након „реда исецања“ је следило: %s"
+
+#: src/unshar.c:244
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "Нисам пронашао наредбе шкољке у „%s“"
+
+#: src/unshar.c:253
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "„%s“ изгледа као изворни Ц код, а не архива шкољке"
+
+#: src/unshar.c:304
+msgid "file name buffer"
+msgstr "међумеморија назива датотеке"
+
+#: src/unshar.c:425
+msgid "read/write buffer"
+msgstr "читај/пиши међумеморију"
+
+#: src/uudecode-opts.c:435
+msgid "uudecode usage error:\n"
+msgstr "грешка коришћења уудекодера:\n"
+
+#: src/uudecode-opts.c:471
+msgid "uudecode fatal error:\n"
+msgstr "кобна грешка уудекодера:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uudecodeOptions structure noted in the comments below.  The
+#. literal text is defined in uudecode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uudecode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uudecodeOptions.pzCopyright
+#: src/uudecode-opts.c:701
+msgid ""
+"uudecode (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"уудекодер (Гнуова помагала шар-а) 4.13.5\n"
+"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
+"расподелу под одредбама Гнуове опште јавне дозволе,\n"
+"издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/uudecode-opts.c:708
+msgid ""
+"uudecode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+"уудекодер је слободан софтвер: можете га прослеђивати и/или мењати под\n"
+"одредбама Гнуове опште јавне лиценце коју је објавила Задужбина\n"
+"слободног софтвера, било издања 3 дозволе, или (по вашем избору)\n"
+"било којег новијег издања.\n"
+"\n"
+
+#: src/uudecode-opts.c:712
+msgid ""
+"uudecode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"уудекодер се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ\n"
+"ГАРАНЦИЈЕ; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или\n"
+"ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.  Погледајте Гнуову општу јавну\n"
+"лиценцу за више детаља.\n"
+"\n"
+
+#: src/uudecode-opts.c:720
+#, c-format
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"уудекодер (Гнуова помагала шар-а) — дешифрујте шифровану датотеку\n"
+"Употреба:  %s [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
+
+#: src/uudecode-opts.c:724
+msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
+msgstr "Ако нису обезбеђене датотеке, онда се дешифрује стандардни улаз.\n"
+
+#: src/uudecode-opts.c:727
+msgid ""
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+"„уудекодер“ претвара датотеке шифроване ууенкодером у њихов изворни облик.\n"
+"\n"
+
+#: src/uudecode-opts.c:728 src/uudecode-opts.c:763
+msgid ""
+"The encoded file(s) may be specified on the command line, or one may be\n"
+"read from standard input.  The output file name is specified in the encoded\n"
+"file, but may be overridden with the '-o' option.  It will have the mode of\n"
+"the original file, except that setuid and execute bits are not retained.  If\n"
+"the output file is specified to be '/dev/stdout' or '-', the result will be\n"
+"written to standard output.  If there are multiple input files and the\n"
+"second or subsquent file specifies standard output, the decoded data will\n"
+"be written to the same file as the previous output.  Don't do that.\n"
+"\n"
+msgstr ""
+"Шифроване датотеке могу бити наведене на линији наредби, или једна може\n"
+"бити прочитана са стандардног улаза.  Назив излазне датотеке је наведен\n"
+"у шифрованој датотеци, али може бити преписан опцијом „-o“.  Имаће режим\n"
+"изворне датотеке, изузев ако сетјиб извршни битови нису задржани.\n"
+"Ако је излазна датотека наведена да буде „/dev/stdout“ или „-“, резултат\n"
+"ће бити записан у стандардни излаз.  Ако има више улазних датотека а друга\n"
+"или наредна датотека наводи стандардни излаз, дешифровани подаци ће бити\n"
+"записани у истој датотеци као претходни излаз.  Немојте то да радите.\n"
+"\n"
+
+#: src/uudecode-opts.c:736
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+msgstr ""
+"„уудекодер“ занемарује сваки водећи и пратећи ред.  Тражи ред који почиње\n"
+"са „'begin'“ и наставља све док не пронађе белег крај-шифровања.  Програм\n"
+"одређује из реда заглавља шифроване датотеке која је од две подржане шеме\n"
+"шифровања коришћена и да ли је назив излазне датотеке шифрован шифровањем\n"
+"са базом64.  Погледајте „uuencode(5)“.\n"
+
+#: src/uudecode-opts.c:743
+msgid "uudecode (GNU sharutils) 4.13.5"
+msgstr "уудекодер (Гнуова помагала шар-а) 4.13.5"
+
+#: src/uudecode-opts.c:746
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"уудекодер (Гнуова помагала шар-а) — дешифрујте шифровану датотеку\n"
+"Употреба:  uudecode [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
+
+#: src/uudecode-opts.c:748
+msgid "   -o, --output-file=str      direct output to file\n"
+msgstr "   -o, --output-file=стр      упућује излаз у датотеку\n"
+
+#: src/uudecode-opts.c:749
+msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
+msgstr "   -c, --ignore-chmod         занемарује „fchmod(3P)“ грешке\n"
+
+#: src/uudecode-opts.c:757
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file'(s) are provided, then standard input is decoded.\n"
+"\n"
+msgstr ""
+"Опције су наведене удвострученим цртицама и њиховим називом или једном\n"
+"цртицом и знаком обележја.\n"
+"Ако није наведена ни једна датотека, онда се дешифрује стандардни улаз.\n"
+"\n"
+
+#: src/uudecode-opts.c:761
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+" — читање датотеке „$HOME/.sharrc“\n"
+"\n"
+"„уудекодер“ претвара датотеке шифроване ууенкодером у њихов изворни облик.\n"
+"\n"
+
+#: src/uudecode-opts.c:771
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+"\n"
+msgstr ""
+"„уудекодер“ занемарује сваки водећи и пратећи ред.  Тражи ред који почиње\n"
+"са „'begin'“ и наставља све док не пронађе белег крај-шифровања.  Програм\n"
+"одређује из реда заглавља шифроване датотеке која је од две подржане шеме\n"
+"шифровања коришћена и да ли је назив излазне датотеке шифрован шифровањем\n"
+"са базом64.  Погледајте „uuencode(5)“.\n"
+"\n"
+
+#: src/uudecode-opts.c:779
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'uudecode --help' for more information.\n"
+msgstr ""
+"уудекодер (Гнуова помагала шар-а) — дешифрујте шифровану датотеку\n"
+"Употреба:  shar [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
+"Покушајте „unshar --help“ за више података.\n"
+
+#: src/uudecode.c:118 src/uudecode.c:182
+#, c-format
+msgid "%s: Short file"
+msgstr "%s: Кратка датотека"
+
+#: src/uudecode.c:164
+#, c-format
+msgid "%s: No `end' line"
+msgstr "%s: Нема реда „end“ (крај)"
+
+#: src/uudecode.c:188
+#, c-format
+msgid "%s: invalid input"
+msgstr "%s: неисправан улаз"
+
+#: src/uudecode.c:215
+msgid "cannot expand $HOME"
+msgstr "не могу да повећам $HOME"
+
+#: src/uudecode.c:226
+#, c-format
+msgid "%s: Illegal file name: %s"
+msgstr "%s: Неисправан назив датотеке: %s"
+
+#: src/uudecode.c:233
+#, c-format
+msgid "No user '%s'"
+msgstr "Нема корисника „%s“"
+
+#: src/uudecode.c:244 src/uudecode.c:306
+msgid "output file name"
+msgstr "назив излазне датотеке"
+
+#: src/uudecode.c:263
+#, c-format
+msgid "cannot access %s"
+msgstr "не могу да приступим „%s“"
+
+#: src/uudecode.c:276
+#, c-format
+msgid "chmod of %s"
+msgstr "промена режима датотеке (chmod) за „%s“"
+
+#: src/uudecode.c:300
+msgid "output name is empty"
+msgstr "назив излаза је празан"
+
+#: src/uudecode.c:311
+#, c-format
+msgid "invalid base64 encoded name: %s"
+msgstr "неисправан назив шифрован базом64: %s"
+
+#: src/uudecode.c:346
+#, c-format
+msgid "%s: Invalid or missing 'begin' line"
+msgstr "%s: Неисправан или недостаје ред „begin“ (почетак)"
+
+#: src/uudecode.c:436
+#, c-format
+msgid "%s: Write error"
+msgstr "%s: Грешка уписа"
+
+#: src/uudecode.c:476
+msgid ""
+"You cannot specify an output file when processing\n"
+"multiple input files.\n"
+msgstr ""
+"Не можете да наведете излазну датотеку када обрађујете\n"
+"више улазних датотека.\n"
+
+#: src/uuencode-opts.c:386
+msgid "uuencode usage error:\n"
+msgstr "грешка коришћења ууенкодера:\n"
+
+#: src/uuencode-opts.c:422
+msgid "uuencode fatal error:\n"
+msgstr "кобна грешка ууенкодера:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can extract
+#. the correct strings.  These strings are actually referenced by a field name
+#. in the uuencodeOptions structure noted in the comments below.  The
+#. literal text is defined in uuencode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uuencode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uuencodeOptions.pzCopyright
+#: src/uuencode-opts.c:652
+msgid ""
+"uuencode (GNU sharutils) 4.13.5\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"ууенкодер (Гнуова помагала шар-а) 4.13.5\n"
+"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
+"расподелу под одредбама Гнуове опште јавне дозволе,\n"
+"издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/uuencode-opts.c:659
+msgid ""
+"uuencode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+"ууенкодер је слободан софтвер: можете га прослеђивати и/или мењати под\n"
+"одредбама Гнуове опште јавне лиценце коју је објавила Задужбина\n"
+"слободног софтвера, било издања 3 дозволе, или (по вашем избору)\n"
+"било којег новијег издања.\n"
+"\n"
+
+#: src/uuencode-opts.c:663
+msgid ""
+"uuencode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"ууенкодер се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ\n"
+"ГАРАНЦИЈЕ; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или\n"
+"ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.  Погледајте Гнуову општу јавну\n"
+"лиценцу за више детаља.\n"
+"\n"
+
+#: src/uuencode-opts.c:671
+#, c-format
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  %s [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+msgstr ""
+"ууенкодер (Гнуова помагала шар-а) — шифрујте датотеку у текст погодан за ел. пошту\n"
+"Употреба:  %s [ -<обележје> | --<назив> ]... [<ул-датотека>] <назив-излаза>\n"
+
+#: src/uuencode-opts.c:675
+msgid ""
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+"„ууенкодер“ се користи да направи АСКРИ представљање датотеке која може\n"
+"бити послата каналима који могу да оштете податке.  Нарочито, ел. пошта\n"
+"не може да рукује бинарним подацима и често ће чак и уметнути знак када\n"
+"се види низ шест знакова „\\nFrom“.\n"
+"\n"
+
+#: src/uuencode-opts.c:679 src/uuencode-opts.c:712
+msgid ""
+"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
+"standard in and write the encoded form to standard out.  The output will\n"
+"begin with a header line for use by 'uudecode' giving it the resulting\n"
+"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
+"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
+"standard out.\n"
+"\n"
+msgstr ""
+"„ууенкодер“ ће читати „ул-датотеку“ ако је достављена а у супротном чита\n"
+"податке са стандардног улаза и записује шифровани облик на стандардни излаз.\n"
+"Излаз ће почети редом заглавља за употребу „ууенкодеру“ дајући му резултирајући\n"
+"„назив-излаза“ и режим приступа предложене датотеке. Ако је „назив-излаза“\n"
+"изричито „/dev/stdout“, тада ће „ууенкодер“ одаслати дешифровану датотеку\n"
+"на стандардни излаз.\n"
+"\n"
+
+#: src/uuencode-opts.c:685
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+msgstr ""
+"„Напомена“: „ууенкодер“ користи улаз из међумеморије и претпоставља да није\n"
+"ручно укуцан из терминала.  Последица овога је да ћете у терминалу,  морати\n"
+"неколико пута да укуцате Ктрл-Д да окончате улаз.\n"
+
+#: src/uuencode-opts.c:690
+msgid "uuencode (GNU sharutils) 4.13.5"
+msgstr "ууенкодер (Гнуова помагала шар-а) 4.13.5"
+
+#: src/uuencode-opts.c:693
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"\n"
+msgstr ""
+"ууенкодер (Гнуова помагала шар-а) — шифрујте датотеку у текст погодан за ел. пошту\n"
+"Употреба:  uuencode [ -<обележје> | --<назив> ]... [<ул-датотека>] <назив-излаза>\n"
+
+#: src/uuencode-opts.c:695
+msgid "   -m, --base64               convert using base64\n"
+msgstr "   -m, --base64               претвара користећи основу64\n"
+
+#: src/uuencode-opts.c:696
+msgid "   -e, --encode-file-name     encode the output file name\n"
+msgstr "   -e, --encode-file-name     шифрује назив излазне датотеке\n"
+
+#: src/uuencode-opts.c:707
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+" — читање датотеке „$HOME/.sharrc“\n"
+"\n"
+"„ууенкодер“ се користи да направи АСКРИ представљање датотеке која може\n"
+"бити послата каналима који могу да оштете податке.  Нарочито, ел. пошта\n"
+"не може да рукује бинарним подацима и често ће чак и уметнути знак када\n"
+"се види низ шест знакова „\\nFrom“.\n"
+"\n"
+
+#: src/uuencode-opts.c:718
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"„Напомена“: „ууенкодер“ користи улаз из међумеморије и претпоставља да није\n"
+"ручно укуцан из терминала.  Последица овога је да ћете у терминалу,  морати\n"
+"неколико пута да укуцате Ктрл-Д да окончате улаз.\n"
+"\n"
+"Пошаљите извештаје о грешкама на:  <bug-gnu-utils@gnu.org>\n"
+
+#: src/uuencode-opts.c:724
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"Try 'uuencode --help' for more information.\n"
+msgstr ""
+"ууенкодер (Гнуова помагала шар-а) — шифрујте датотеку у текст погодан за ел. пошту\n"
+"Употреба:  uuencode [ -<обележје> | --<назив> ]... [<ул-датотека>] <назив-излаза>\n"
+"Покушајте „uuencode --help“ за више података.\n"
+
+#: src/uuencode.c:226
+msgid "freopen of stdin"
+msgstr "отварање тока (freopen) стдулз-а"
+
+#: src/uuencode.c:255
+msgid "file name"
+msgstr "назив датотеке"
+
+#: lib/error.c:188
+msgid "Unknown system error"
+msgstr "Непозната системска грешка"
+
+#: lib/getopt.c:547 lib/getopt.c:576
+#, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: опција „%s“ је нејасна; могућности:"
+
+#: lib/getopt.c:624 lib/getopt.c:628
+#, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: опција „--%s“ не дозвољава аргумент\n"
+
+#: lib/getopt.c:637 lib/getopt.c:642
+#, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: опција „%c%s“ не дозвољава аргумент\n"
+
+#: lib/getopt.c:685 lib/getopt.c:704
+#, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: опција „--%s“ захтева аргумент\n"
+
+#: lib/getopt.c:742 lib/getopt.c:745
+#, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: непозната опција „--%s“\n"
+
+#: lib/getopt.c:753 lib/getopt.c:756
+#, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: непозната опција „%c%s“\n"
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: неисправна опција -- „%c“\n"
+
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: опција захтева аргумент -- „%c“\n"
+
+#: lib/getopt.c:934 lib/getopt.c:950
+#, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: опција „-W %s“ је нејасна\n"
+
+#: lib/getopt.c:974 lib/getopt.c:992
+#, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: опција „-W %s“ не дозвољава аргумент\n"
+
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: опција „-W %s“ захтева аргумент\n"
+
+#: lib/openat-die.c:38
+#, c-format
+msgid "unable to record current working directory"
+msgstr "не могу да снимим тренутни радни директоријум"
+
+#: lib/openat-die.c:57
+#, c-format
+msgid "failed to return to initial working directory"
+msgstr "не могу да се вратим у почетни радни директоријум"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:312
+msgid "`"
+msgstr "„"
+
+#: lib/quotearg.c:313
+msgid "'"
+msgstr "“"
+
+#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
+#: lib/spawn-pipe.c:267
+#, c-format
+msgid "cannot create pipe"
+msgstr "не могу да направим спојку"
+
+#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/wait-process.c:356
+#, c-format
+msgid "%s subprocess failed"
+msgstr "%s потпроцес није успео"
+
+#: lib/w32spawn.h:43
+#, c-format
+msgid "_open_osfhandle failed"
+msgstr "„_open_osfhandle“ није успело"
+
+#: lib/w32spawn.h:84
+#, c-format
+msgid "cannot restore fd %d: dup2 failed"
+msgstr "не могу да повратим фд %d: „dup2“ није успело"
+
+#: lib/wait-process.c:223 lib/wait-process.c:255 lib/wait-process.c:317
+#, c-format
+msgid "%s subprocess"
+msgstr "%s потпроцес"
+
+#: lib/wait-process.c:274 lib/wait-process.c:346
+#, c-format
+msgid "%s subprocess got fatal signal %d"
+msgstr "%s потпроцес је добио кобни сигнал %d"
+
+#: lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr "нема довољно меморије"
+
+#: lib/xstrtol-error.c:63
+#, c-format
+msgid "invalid %s%s argument '%s'"
+msgstr "неисправан %s%s аргумент „%s“"
+
+#: lib/xstrtol-error.c:68
+#, c-format
+msgid "invalid suffix in %s%s argument '%s'"
+msgstr "неисправан суфикс у %s%s аргументу „%s“"
+
+#: lib/xstrtol-error.c:72
+#, c-format
+msgid "%s%s argument '%s' too large"
+msgstr "%s%s аргумент „%s“ је превелик"
