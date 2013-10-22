@@ -79,7 +79,7 @@ without having intermediate hosts "fixing" the files en route.
 
 _EOF_
 
-test ${#rel_type} -gt 1 && print -u3 "${rel_type}\n\n"
+test ${#rel_type} -gt 1 && printf "${rel_type}\n\n" >&3
 
 exec 4< NEWS
 while read -u4 text
@@ -88,7 +88,7 @@ do
   Version* ) break ;; esac  
 done
 
-print -u3 "${text}"
+printf "${text}" >&3
 sed '/^Version/,$d;//d' >&3 <&4
 exec 4<&-
 
