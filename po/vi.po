@@ -1,15 +1,15 @@
 # Vietnamese Translation for Sharutils.
-# Copyright © 2012 Free Software Foundation, Inc.
+# Copyright © 2013 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2010.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2012.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2012-2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils-4.12\n"
+"Project-Id-Version: sharutils-4.14\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2012-08-11 10:56-0700\n"
-"PO-Revision-Date: 2012-08-14 15:00+0700\n"
+"POT-Creation-Date: 2013-10-18 14:04-0700\n"
+"PO-Revision-Date: 2013-10-29 14:40+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "Language: vi\n"
@@ -17,10 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: LocFactoryEditor 1.8\n"
-"X-Poedit-Language: Vietnamese\n"
-"X-Poedit-Country: VIET NAM\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: src/scribble.c:150
+#, c-format
+msgid "could not allocate %u bytes of scribble space"
+msgstr "không thể cấp phát %u byte cho không gian scribble"
 
 #. TRANSLATORS:  This is a phony function generated for the purpose of
 #. constructing the strings to be extracted for translation.  Each string
@@ -29,385 +32,1149 @@ msgstr ""
 #. the shar-generated shell script so the shar user can create shar archives
 #. with messages localized for one locale.
 #.
-#: src/scripts.x:395
+#: src/scripts.x:449
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr "Ghi chú: không kiểm tra các md5sum. Hãy suy tính cài đặt gói các tiện ích lõi coreutils của GNU."
+msgstr "Ghi chú: không kiểm tra mã băm md5sum. Hãy cài đặt gói các tiện ích lõi coreutils của GNU."
 
-#: src/scripts.x:396
+#: src/scripts.x:450
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
+"installing GNU 'touch', distributed in GNU coreutils..."
 msgstr ""
-"CẢNH BÁO: không phục hồi nhãn giờ.\n"
-"Hãy lấy và cài đặt gói \"touch\" của GNU,\n"
-"được phân phối trong gói phần mềm coreutils (các tiện ích lõi) của GNU..."
+"CẢNH BÁO: không phục hồi dấu vết thời gian.\n"
+"Hãy lấy và cài đặt gói “touch” từ dự án GNU,\n"
+"được phân phối trong gói phần mềm coreutils của GNU..."
 
-#: src/scripts.x:398
+#: src/scripts.x:452
 #, c-format
 msgid "lock directory %s exists"
 msgstr "thư mục khoá %s đã có"
 
-#: src/scripts.x:399
+#: src/scripts.x:453
 #, c-format
 msgid "failed to create %s lock directory"
 msgstr "lỗi tạo thư mục khoá %s"
 
-#: src/scripts.x:400
+#: src/scripts.x:454
 #, c-format
 msgid "x - created lock directory %s."
 msgstr "x - đã tạo thư mục khoá %s."
 
-#: src/scripts.x:401
+#: src/scripts.x:455
 #, c-format
 msgid "x - failed to create lock directory %s."
-msgstr "x - gặp lỗi tạo thư mục khoá %s."
+msgstr "x - gặp lỗi khi tạo thư mục khoá %s."
 
-#: src/scripts.x:402
+#: src/scripts.x:456
 #, c-format
 msgid "x - created directory %s."
 msgstr "x - đã tạo thư mục %s."
 
-#: src/scripts.x:403
+#: src/scripts.x:457
 #, c-format
 msgid "x - failed to create directory %s."
-msgstr "x - gặp lỗi tạo thư mục %s."
+msgstr "x - gặp lỗi khi tạo thư mục %s."
 
-#: src/scripts.x:404
+#: src/scripts.x:458
 msgid "yes"
 msgstr "có"
 
-#: src/scripts.x:405
+#: src/scripts.x:459
 msgid "overwrite this file"
 msgstr "ghi đè lên tập tin này"
 
-#: src/scripts.x:406
+#: src/scripts.x:460
 msgid "no"
 msgstr "không"
 
-#: src/scripts.x:407
+#: src/scripts.x:461
 msgid "skip this file"
 msgstr "bỏ qua tập tin này"
 
-#: src/scripts.x:408
+#: src/scripts.x:462
 msgid "all"
-msgstr "tất cả"
+msgstr "tất"
 
-#: src/scripts.x:409
+#: src/scripts.x:463
 msgid "overwrite all files"
 msgstr "ghi đè lên mọi tập tin"
 
-#: src/scripts.x:410
+#: src/scripts.x:464
 msgid "none"
 msgstr "không có"
 
-#: src/scripts.x:411
+#: src/scripts.x:465
 msgid "overwrite no files"
 msgstr "đừng ghi đè gì"
 
-#: src/scripts.x:412
+#: src/scripts.x:466
 msgid "help"
 msgstr "trợ giúp"
 
-#: src/scripts.x:413
+#: src/scripts.x:467
 msgid "explain choices"
 msgstr "giải thích các lựa chọn"
 
-#: src/scripts.x:414
+#: src/scripts.x:468
 msgid "quit"
 msgstr "thoát"
 
-#: src/scripts.x:415
+#: src/scripts.x:469
 msgid "exit immediately"
 msgstr "thoát ngay"
 
-#: src/scripts.x:416
+#: src/scripts.x:470
 #, c-format
 msgid "restore of %s failed"
 msgstr "việc phục hồi %s bị lỗi"
 
-#: src/scripts.x:417
+#: src/scripts.x:471
+#, c-format
+msgid "  chmod %04o %s\n"
+msgstr "  chmod %04o %s\n"
+
+#: src/scripts.x:472
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "Kết thúc phần %d, tiếp tục lại với phần %d"
 
-#: src/scripts.x:418
+#: src/scripts.x:473
 #, c-format
 msgid "End of %s part %d"
 msgstr "Kết thức %s phần %d"
 
-#: src/scripts.x:419
+#: src/scripts.x:474
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
 msgstr "cảnh báo phục hồi: kích cỡ %s không phải %s"
 
-#: src/scripts.x:420 src/shar.c:1306
+#: src/scripts.x:475 src/shar.c:1451
 msgid "(text)"
 msgstr "(văn bản)"
 
-#: src/scripts.x:421
+#: src/scripts.x:476
 msgid "(compressed)"
 msgstr "(đã nén)"
 
-#: src/scripts.x:422
+#: src/scripts.x:477
 msgid "(gzipped)"
 msgstr "(đã nén gzip)"
 
-#: src/scripts.x:423
+#: src/scripts.x:478
 msgid "(bzipped)"
 msgstr "(đã nén bzip)"
 
-#: src/scripts.x:424
+#: src/scripts.x:479
 msgid "(binary)"
 msgstr "(nhị phân)"
 
-#: src/scripts.x:425
+#: src/scripts.x:480
 msgid "archive"
 msgstr "kho nén"
 
-#: src/scripts.x:426
+#: src/scripts.x:481
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "Tập tin %s được tiếp tục trong phần %d"
 
-#: src/scripts.x:427
+#: src/scripts.x:482
 msgid "Please unpack part 1 first!"
 msgstr "Trước tiên hãy giải nén phần 1."
 
-#: src/scripts.x:428
+#: src/scripts.x:483
 msgid "Please unpack part ${shar_sequence} next!"
 msgstr "Kế tiếp hãy giải nén phần ${shar_sequence}."
 
-#: src/scripts.x:429
+#: src/scripts.x:484
 #, c-format
 msgid "x - STILL SKIPPING %s"
 msgstr "x - VẪN CÒN BỎ QUA %s"
 
-#: src/scripts.x:430
+#: src/scripts.x:485
 #, c-format
 msgid "continuing file %s"
 msgstr "đang tiếp tục tập tin %s"
 
-#: src/scripts.x:431
+#: src/scripts.x:486
 msgid "(empty)"
 msgstr "(rỗng)"
 
-#: src/scripts.x:432
+#: src/scripts.x:487
 #, c-format
 msgid "x - overwriting %s"
 msgstr "x - đang ghi đè lên %s"
 
-#: src/scripts.x:433
+#: src/scripts.x:488
 #, c-format
 msgid "overwrite %s"
 msgstr "ghi đè lên %s"
 
-#: src/scripts.x:434
+#: src/scripts.x:489
 #, c-format
 msgid "SKIPPING %s"
 msgstr "ĐANG BỎ QUA %s"
 
-#: src/scripts.x:435
+#: src/scripts.x:490
 msgid "extraction aborted"
 msgstr "việc giải nén bị hủy bỏ"
 
-#: src/scripts.x:436
+#: src/scripts.x:491
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
-msgstr "x - ĐANG BỎ QUA %s (tập tin đã có)"
+msgstr "x - ĐANG BỎ QUA %s (tập tin đã sẵn có)"
 
-#: src/scripts.x:437
+#: src/scripts.x:492
 #, c-format
 msgid "x - extracting %s %s"
 msgstr "x — đang giải nén %s %s"
 
-#: src/scripts.x:438
+#: src/scripts.x:493
 #, c-format
 msgid "File %s is complete"
 msgstr "Tập tin %s hoàn tất"
 
-#: src/scripts.x:439
+#: src/scripts.x:494
 #, c-format
 msgid "uudecoding file %s"
 msgstr "đang giải nén tập tin kiểu \"uu\" %s"
 
-#: src/scripts.x:440
+#: src/scripts.x:495
 msgid "MD5 check failed"
 msgstr "Việc kiểm tra MD5 gặp lỗi"
 
-#: src/scripts.x:441
+#: src/scripts.x:496
 msgid "You have unpacked the last part"
 msgstr "Bạn đã giải nén mọi phần"
 
-#: src/scripts.x:442
+#: src/scripts.x:497
 #, c-format
 msgid "x - removed lock directory %s."
 msgstr "x - đã gỡ bỏ thư mục khoá %s."
 
-#: src/scripts.x:443
+#: src/scripts.x:498
 #, c-format
 msgid "x - failed to remove lock directory %s."
 msgstr "x - gặp lỗi gỡ bỏ thư mục khoá %s."
 
-#: src/shar-opts.c:1650
+#: src/shar-opts.c:1870
 #, c-format
 msgid "Cannot reopen %s as stdin"
 msgstr "Không thể mở lại %s như là stdin"
 
-#: src/shar-opts.c:1742
+#: src/shar-opts.c:1990
 msgid "shar usage error:\n"
 msgstr "cú pháp shar sai:\n"
 
-#: src/shar-opts.c:1778
+#: src/shar-opts.c:2027
 msgid "shar fatal error:\n"
 msgstr "lỗi shar nghiêm trọng:\n"
 
-#: src/shar-opts.c:1815
+#: src/shar-opts.c:2064 src/unshar-opts.c:738 src/uudecode-opts.c:512
+#: src/uuencode-opts.c:463
 #, c-format
 msgid "fserr %d (%s) performing '%s' on %s\n"
-msgstr "fserr %d (%s) thực hiện '%s' trên %s\n"
+msgstr "fserr %d (%s) thực hiện “%s” trên %s\n"
 
-#: src/shar-opts.c:1916 src/unshar-opts.c:563 src/uudecode-opts.c:434
-#: src/uuencode-opts.c:479
+#: src/shar-opts.c:2189 src/unshar-opts.c:863 src/uudecode-opts.c:637
+#: src/uuencode-opts.c:588
 msgid "No memory for duping translated strings\n"
 msgstr "Không đủ bộ nhớ cho\"duping\" các chuỗi đã dịch\n"
 
-#: src/shar.c:372
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the sharOptions structure noted in the
+#. comments below.  The literal text is defined in shar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. shar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via sharOptions.pzCopyright
+#: src/shar-opts.c:2257
+msgid ""
+"shar (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"shar (GNU sharutils) 4.14\n"
+"Bản quyền (C) 1994-2013 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
+"phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
+"phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/shar-opts.c:2264
+msgid ""
+"shar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"shar là phần mềm miễn phí: bạn có thể phân phối nó hoặc/và sửa nó\n"
+"phù hợp với các điều khoản trong Giấy Phép Công GNU, được xuất ra bởi\n"
+"Tổ chức Phần mềm Tự do, hoặc là phiên bản 3 hoặc chọn bản mới hơn.\n"
+"\n"
+
+#: src/shar-opts.c:2268
+msgid ""
+"shar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"shar được phân phối với hy vọng là nó hữu ích, nhưng KHÔNG CÓ BẢO HÀNH\n"
+"GÌ CẢ; không đảm bảo ngay cả khi nó được BÁN HAY KHẢ NĂNG LÀM ĐƯỢC\n"
+"VIỆC DỨT KHOÁT. Xem Giấy Phép Công GNU để để có thêm thông tin chi tiết.\n"
+"\n"
+
+#: src/shar-opts.c:2272 src/unshar-opts.c:946 src/uudecode-opts.c:720
+#: src/uuencode-opts.c:671
+msgid ""
+"You should have received a copy of the GNU General Public License along\n"
+"with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+"Bạn nên đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với chương\n"
+"trình này. Không thì xem địa chỉ <http://www.gnu.org/licenses/>.\n"
+
+#: src/shar-opts.c:2276
+#, c-format
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"shar (GNU sharutils) - tạo lưu trữ hệ vỏ tự giải nén\n"
+"Cách dùng:  %s [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+
+#: src/shar-opts.c:2280
+msgid ""
+"If no 'file's are specified, the list of input files is read from standard\n"
+"input.  Standard input must not be a terminal.\n"
+msgstr ""
+"Nếu không có tập tin nào được chỉ ra, danh sách tập tin đầu vào sẽ được\n"
+"đọc từ đầu vào tiêu chuẩn. Đầu vào tiêu chuẩn phải là một thiết bị cuối.\n"
+
+#: src/shar-opts.c:2284
+msgid ""
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+"“shar” tạo \"shell archives\" (hay tập tin shar) cái này ở định dạng chữ thường\n"
+"và có thể được gửi qua thư điện tử. Những tập-tin này có thể được giải nén sau\n"
+"đó bằng “/bin/sh”. Kho kết quả được gửi ra đầu ra chuẩn trừ phi có tùy chọn\n"
+"“-o” được đưa ra. Một vùng đặc tính kỹ thuật rộng lớn cung cấp khả năng\n"
+"linh hoạt trong việc tạo các shar và trong chỉ định “shar” \"smartness\".\n"
+"Kho lưu có thể khá đơn giản (“-vanilla-operation”) hay về mặt bản chất nó\n"
+"là kho “tar” có thể gửi được bằng thư.\n"
+"\n"
+
+#: src/shar-opts.c:2291 src/shar-opts.c:2385
+msgid ""
+"Options may be specified in any order until a 'file' argument is\n"
+"recognized.  If the '--intermix-type' option has been specified, more\n"
+"compression and encoding options will be recognized between the 'file'\n"
+"arguments.\n"
+"\n"
+msgstr ""
+"Các tùy-chọn có thể được chỉ định theo bất kỳ thứ tự nào cho đến khi\n"
+"đối số “tập-tin” được nhận ra. Nếu tùy-chọn “--intermix-type” được chỉ\n"
+"định, nhiều bộ nén và mã hóa sẽ được nhận diện giữa các đối số\n"
+"“tập-tin”.\n"
+"\n"
+
+#: src/shar-opts.c:2295
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+msgstr ""
+"Mặc dù chương trình này vẫn hỗ trợ “uuencode” -d files, chúng vẫn bị phản đối. Nếu\n"
+"bạn gửi những thư này, xin hãy cân nhắc đến các tập tin mime-encoded. Nếu bạn\n"
+"“uuencode”, base64 là phương thức mã hóa được ưu tiên dùng.\n"
+
+#: src/shar-opts.c:2300
+msgid "shar (GNU sharutils) 4.14"
+msgstr "shar (GNU sharutils) 4.14"
+
+#: src/shar-opts.c:2303
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"shar (GNU sharutils) - tạo lưu trữ hệ vỏ tự giải nén\n"
+"Cách dùng:  shar [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+"\n"
+
+#: src/shar-opts.c:2305
+msgid ""
+"Specify compression:\n"
+"   -p, --intermix-type        specify compression for input files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"Chỉ định cách nén:\n"
+"   -p, --intermix-type        chỉ định cách nén cho các tập tin đầu vào\n"
+"                                - cấm tùy chọn “vanilla-operation”\n"
+
+#: src/shar-opts.c:2308
+msgid ""
+"   -C, --compactor=PROG       specify compaction (compression) program PROG\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+"                                - may appear multiple times\n"
+"                                - it must be known to shar: xz gzip bzip2\n"
+msgstr ""
+"   -C, --compactor=ChTrình    chỉ định phần mềm dùng để nén\n"
+"                                - tùy chọn không được dùng: “vanilla-operation”\n"
+"                                - có thể xuất hiện nhiều lần\n"
+"                                - thường là: xz gzip bzip2\n"
+
+#: src/shar-opts.c:2312
+msgid ""
+"   -g, --level-of-compression=LEVEL\n"
+"                              pass LEVEL for compression\n"
+"                                - it must be in the range: 1 to 9\n"
+"\n"
+msgstr ""
+"   -g, --level-of-compression=MỨC\n"
+"                              dùng MỨC này để nén\n"
+"                                - nó phải nằm trong vùng: 1 đến 9\n"
+"\n"
+
+#: src/shar-opts.c:2315
+msgid ""
+"Specify file encoding methodology:\n"
+"   -M, --mixed-uuencode       decide uuencoding for each file\n"
+msgstr ""
+"Chỉ định phương thức mã hóa tập tin:\n"
+"   -M, --mixed-uuencode       chọn uuencoding cho từng tập tin\n"
+
+#: src/shar-opts.c:2317
+msgid ""
+"   -B, --uuencode             treat all files as binary\n"
+"                                - an alternate for mixed-uuencode\n"
+msgstr ""
+"   -B, --uuencode             coi tất cả các tập tin là dạng nhị phân\n"
+"                                - một kiểu thay thế cho mixed-uuencode\n"
+
+#: src/shar-opts.c:2319
+msgid ""
+"   -T, --text-files           treat all files as text\n"
+"                                - an alternate for mixed-uuencode\n"
+"\n"
+msgstr ""
+"   -T, --text-files           coi mọi tập tin là văn bản thường\n"
+"                                - dùng thay cho mixed-uuencode\n"
+"\n"
+
+#: src/shar-opts.c:2321
+msgid "Specifying file selection and output modes:\n"
+msgstr "Đang chỉ định chọn tập tin và chế độ xuất:\n"
+
+#: src/shar-opts.c:2322
+msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+msgstr "   -o, --output-prefix=str    kết xuất ra tập tin PREFIX.nn\n"
+
+#: src/shar-opts.c:2323
+msgid ""
+"   -l, --whole-size-limit=SIZE\n"
+"                              split archive, not files, to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+msgstr ""
+"   -l, --whole-size-limit=CỠ\n"
+"                              chia nhỏ các kho, không phải tập tin, thành cỡ này\n"
+"                                - yêu cầu tùy chọn “output-prefix”\n"
+"                                - được biến đổi tỷ lệ với hậu tố: k/K/m/M/g/G\n"
+"                                - Nó phải nằm trong vùng:\n"
+"                                  8 đến 1023, hoặc 8192 đến 4194304\n"
+
+#: src/shar-opts.c:2329
+msgid ""
+"   -L, --split-size-limit=SIZE\n"
+"                              split archive or files to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+"                                - an alternate for 'whole-size-limit'\n"
+msgstr ""
+"   -L, --split-size-limit=KÍCH-THƯỚC\n"
+"                              chia nhỏ các tập tin hay kho lưu thành cỡ này\n"
+"                                - yêu cầu tùy chọn: “output-prefix”\n"
+"                                - được biến đổi tỷ lệ với hậu tố: k/K/m/M/g/G\n"
+"                                - Nó phải nằm trong vùng:\n"
+"                                  8 đến 1023, hoặc 8192 đến 4194304\n"
+"                                - lựa chọn thay thế khác là “whole-size-limit”\n"
+
+#: src/shar-opts.c:2336
+msgid ""
+"   -I, --input-file-list=FILE read file list from FILE\n"
+"\n"
+msgstr ""
+"   -I, --input-file-list=TẬP-TIN đọc danh sách tập tin từ TẬP-TIN\n"
+"\n"
+
+#: src/shar-opts.c:2337
+msgid ""
+"Controlling the shar headers:\n"
+"   -n, --archive-name=NAME    use NAME to document the archive\n"
+msgstr ""
+"Điều khiển phần đầu shar:\n"
+"   -n, --archive-name=TÊN     dùng TÊN để cung cấp tư liệu về kho lưu\n"
+
+#: src/shar-opts.c:2339
+msgid "   -s, --submitter=NAME       override the submitter name with NAME\n"
+msgstr "   -s, --submitter=TÊN        ghi đè tên người gửi bằng TÊN\n"
+
+#: src/shar-opts.c:2340
+msgid ""
+"   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
+"                                - requires the option 'archive-name'\n"
+msgstr ""
+"   -a, --net-headers          kết xuất Submitted-by: & Archive-name: headers\n"
+"                                - yêu cầu cần có tùy chọn “archive-name”\n"
+
+#: src/shar-opts.c:2342
+msgid "   -c, --cut-mark             start the shar with a cut line\n"
+msgstr "   -c, --cut-mark             bắt đầu shar với dòng cắt\n"
+
+#: src/shar-opts.c:2343
+msgid ""
+"   -t, --translate            translate messages in the script\n"
+"\n"
+msgstr ""
+"   -t, --translate            dịch thông điệp này trong script\n"
+"\n"
+
+#: src/shar-opts.c:2344
+msgid ""
+"Protecting against transmission issues:\n"
+"       --no-character-count   do not use `wc -c' to check size\n"
+msgstr ""
+"Bảo vệ tính toàn vẹn của dữ liệu:\n"
+"       --no-character-count   không dùng tùy chọn “wc -c” để kiểm tra cỡ\n"
+
+#: src/shar-opts.c:2346
+msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
+msgstr "   -D, --no-md5-digest        không băm md5sum để thẩm tra\n"
+
+#: src/shar-opts.c:2347
+msgid "   -F, --force-prefix         apply the prefix character on every line\n"
+msgstr "   -F, --force-prefix         áp dùng ký tự tiền tố cho mỗi dòng\n"
+
+#: src/shar-opts.c:2348
+msgid ""
+"   -d, --here-delimiter=DELIM use DELIM to delimit the files\n"
+"\n"
+msgstr ""
+"   -d, --here-delimiter=CHỮ   dùng ký hiệu này để định giới các tập tin\n"
+"\n"
+
+#: src/shar-opts.c:2349
+msgid ""
+"Producing different kinds of shars:\n"
+"   -V, --vanilla-operation    produce very simple shars\n"
+msgstr ""
+"Sản sinh các kiểu khác nhau của shars:\n"
+"   -V, --vanilla-operation    dạng shars đơn giản\n"
+
+#: src/shar-opts.c:2351
+msgid "   -P, --no-piping            use temporary files between programs\n"
+msgstr "   -P, --no-piping            dùng các tập tin tạm giữa các ứng dụng\n"
+
+#: src/shar-opts.c:2352
+msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr "   -x, --no-check-existing    ghi đè lên các tập tin nếu nó có từ trước\n"
+
+#: src/shar-opts.c:2353
+msgid ""
+"   -X, --query-user           ask user before overwriting files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+"   -X, --query-user           hỏi người dùng trước khi ghi đè các tập tin\n"
+"                                - cấm chỉ tùy chọn “vanilla-operation”\n"
+
+#: src/shar-opts.c:2355
+msgid "   -m, --no-timestamp         do not restore modification times\n"
+msgstr "   -m, --no-timestamp         không phục hồi lại thời gian sửa đổi\n"
+
+#: src/shar-opts.c:2356
+msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+msgstr "   -Q, --quiet-unshar         không hiện thông tin chi tiết khi unshar\n"
+
+#: src/shar-opts.c:2357
+msgid ""
+"   -f, --basename             restore in one directory, despite hierarchy\n"
+"\n"
+msgstr ""
+"   -f, --basename             phục hồi trong một thư mục, bất chấp thứ bậc\n"
+"\n"
+
+#: src/shar-opts.c:2358
+msgid ""
+"Internationalization options:\n"
+"       --no-i18n              do not internationalize\n"
+msgstr ""
+"Các tùy chọn về quốc tế hóa:\n"
+"       --no-i18n              không quốc tế hóa\n"
+
+#: src/shar-opts.c:2360
+msgid ""
+"       --print-text-domain-dir  print directory with shar messages\n"
+"\n"
+msgstr ""
+"       --print-text-domain-dir  in thư mục cùng với các thông điệp shar\n"
+"\n"
+
+#: src/shar-opts.c:2361
+msgid ""
+"User feedback/entertainment:\n"
+"   -q, --quiet                do not output verbose messages\n"
+msgstr ""
+"Phản hồi/ biểu diễn:\n"
+"   -q, --quiet                không mô tả chi tiết\n"
+
+#: src/shar-opts.c:2363
+msgid ""
+"       --silent               an alias for the 'quiet' option\n"
+"\n"
+msgstr ""
+"       --silent               là bí danh của tùy chọn “quiet”\n"
+"\n"
+
+#: src/shar-opts.c:2364
+msgid "Version, usage and configuration options:\n"
+msgstr "Phiên bản, cách dùng và các tùy chọn cấu hình:\n"
+
+#: src/shar-opts.c:2365 src/unshar-opts.c:978 src/uudecode-opts.c:754
+#: src/uuencode-opts.c:701
+msgid "   -v, --version[=MODE]       output version information and exit\n"
+msgstr "   -v, --version[=CHẾ_ĐỘ]     xuất thông tin phiên bản rồi thoát\n"
+
+#: src/shar-opts.c:2366 src/unshar-opts.c:979 src/uudecode-opts.c:755
+#: src/uuencode-opts.c:702
+msgid "   -h, --help                 display extended usage information and exit\n"
+msgstr "   -h, --help                 hiển thị thông tin cách dùng sau đó thoát\n"
+
+#: src/shar-opts.c:2367 src/unshar-opts.c:980 src/uudecode-opts.c:756
+#: src/uuencode-opts.c:703
+msgid "   -!, --more-help            extended usage information passed thru pager\n"
+msgstr "   -!, --more-help            xem thêm trợ giúp về cách sử dụng\n"
+
+#: src/shar-opts.c:2368 src/uudecode-opts.c:757 src/uuencode-opts.c:704
+msgid "   -R, --save-opts[=FILE]     save the option state to a config file FILE\n"
+msgstr "   -R, --save-opts[=TẬP-TIN]  ghi trạng tái tùy chọn ra TẬP-TIN cấu hình\n"
+
+#: src/shar-opts.c:2369 src/uudecode-opts.c:758 src/uuencode-opts.c:705
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled with '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"   -r, --load-opts=TẬP-TIN    tải các tùy chọn từ tập tin cấu hình\n"
+"                                - bị tắt bởi “--no-load-opts”\n"
+"                                - có thể xuất hiện nhiều lần\n"
+"\n"
+
+#: src/shar-opts.c:2372
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file's are specified, the list of input files is read from a\n"
+"standard input.  Standard input must not be a terminal.\n"
+"\n"
+msgstr ""
+"Các tùy chọn được chỉ định bằng dấu nối kép và tên của chúng hay bởi dấu\n"
+"gạch nối và ký tự cờ.\n"
+"Nếu không có tập tin nào được chỉ ra, danh sách tập tin đầu vào sẽ được\n"
+"đọc từ đầu vào tiêu chuẩn. Đầu vào tiêu chuẩn phải là một thiết bị cuối.\n"
+"\n"
+
+#: src/shar-opts.c:2376 src/unshar-opts.c:990 src/uudecode-opts.c:764
+#: src/uuencode-opts.c:710
+msgid "The following option preset mechanisms are supported:\n"
+msgstr " Các tùy chọn sau đây được cài đặt cơ cấu trước được hỗ trợ:\n"
+
+#: src/shar-opts.c:2377
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+" - đọc tập tin $HOME/.sharrc\n"
+"\n"
+"“shar” tạo \"shell archives\" (hay tập tin shar) cái này ở định dạng chữ thường\n"
+"và có thể được gửi qua thư điện tử. Những tập-tin này có thể được giải nén sau\n"
+"đó bằng “/bin/sh”. Kho kết quả được gửi ra đầu ra chuẩn trừ phi có tùy chọn\n"
+"“-o” được đưa ra. Một vùng đặc tính kỹ thuật rộng lớn cung cấp khả năng\n"
+"linh hoạt trong việc tạo các shar và trong chỉ định “shar” \"smartness\".\n"
+"Kho lưu có thể khá đơn giản (“-vanilla-operation”) hay về mặt bản chất nó\n"
+"là kho “tar” có thể gửi được bằng thư.\n"
+"\n"
+
+#: src/shar-opts.c:2389
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"Mặc dù chương trình này hỗ trợ “uuencode” -d các tập tin, chúng bị phản đối. Nếu\n"
+"bạn gửi thư các tập tin, xin hãy cân nhắc đến các tập tin mime-encoded.\n"
+"Nếu bạn thực hiện “uuencode”, base64 là phương thức mã hóa ưa dùng.\n"
+"\n"
+"Hãy gửi báo lỗi đến: <bug-gnu-utils@gnu.org>\n"
+
+#: src/shar-opts.c:2395
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'shar --help' for more information.\n"
+msgstr ""
+"shar (GNU sharutils) - tạo lưu trữ hệ vỏ tự giải nén\n"
+"Cách dùng:  shar [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+"Chạy lệnh “shar --help” để có thêm thông tin.\n"
+
+#: ../autoopts.c:67 ../autoopts.c:93
+#, c-format
+msgid "allocation of %d bytes failed\n"
+msgstr "cấp phát %d byte bộ nhớ gặp lỗi\n"
+
+#: ../init.c:53
+msgid "AutoOpts function called without option descriptor\n"
+msgstr "Hàm AutoOpts được gọi mà không có bộ mô tả tùy chọn\n"
+
+#: ../init.c:90
+msgid "\tThis exceeds the compiled library version:  "
+msgstr "\tĐây là giới hạn tối đa dành cho phiên bản thư viện dịch:  "
+
+#: ../init.c:88
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+"Lỗi Xử lý Tùy chọn Tự động!\n"
+"\t%s đã gọi hàm AutoOpts với cấu trúc phiên bản %d:%d:%d.\n"
+
+#: ../autoopts.c:80
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr "việc realloc %d byte tại 0x%p gặp lỗi\n"
+
+#: ../init.c:92
+msgid "\tThis is less than the minimum library version:  "
+msgstr "\tNhỏ hơn phiên bản thư viện tối thiểu cần có:  "
+
+#: ../version.c:121
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+"Automated Options phiên bản %s\n"
+"\tTác quyền (C) 1999-2013 bởi Bruce Korb - giữ toàn bộ bản quyền\n"
+
+#: ../makeshell.c:82
+#, c-format
+msgid "(AutoOpts bug):  %s.\n"
+msgstr "(lỗi AutoOpts):  %s.\n"
+
+#: ../reset.c:90
+msgid "optionResetOpt() called, but reset-option not configured"
+msgstr "optionResetOpt() được gọi, nhưng tùy chọn reset chưa được cấu hình"
+
+#: ../usage.c:292
+msgid "could not locate the 'help' option"
+msgstr "không thể xác định địa phương của tùy chọn “help”"
+
+#: ../autoopts.c:336
+msgid "optionProcess() was called with invalid data"
+msgstr "optionProcess() đã được gọi với đối số không hợp lệ"
+
+#: ../usage.c:748
+msgid "invalid argument type specified"
+msgstr "kiểu tham số đã cho không hợp lệ"
+
+#: ../find.c:598
+msgid "defaulted to option with optional arg"
+msgstr "được mặc định cho tùy chọn với đối số tùy chọn"
+
+#: ../alias.c:76
+msgid "aliasing option is out of range."
+msgstr "tùy chọn bí danh nằm ngoài phạm vi."
+
+#: ../enum.c:234
+#, c-format
+msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
+msgstr "%s lỗi:  từ khóa “%s” chưa rõ ràng đối với %s\n"
+
+#: ../find.c:108
+msgid "  The following options match:\n"
+msgstr "  Các tùy chọn sau đây ứng với nó:\n"
+
+#: ../find.c:293
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr "%s: tên tùy chọn chưa rõ ràng: %s (khớp %d tùy chọn)\n"
+
+#: ../check.c:161
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr "%s: Bắt buộc phải có đối số dòng lệnh\n"
+
+#: ../alias.c:43
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr "cho phép %d tùy chọn %s%s\n"
+
+#: ../makeshell.c:89
+#, c-format
+msgid "%s error %d (%s) calling %s for '%s'\n"
+msgstr "%s lỗi %d (%s) đang gọi %s cho “%s”\n"
+
+#: ../makeshell.c:301
+msgid "interprocess pipe"
+msgstr "ống dẫn liên tiến trình"
+
+#: ../version.c:168
+#, c-format
+msgid ""
+"error: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and full copyright notice\n"
+msgstr ""
+"lỗi: tham số tùy chọn phiên bản “%c” không hợp lệ. Hãy dùng:\n"
+"\t'v' - chỉ hiển thị số phiên bản\n"
+"\t'c' - hiển thị số phiên bản và bản quyền\n"
+"\t'n' - hiển thị số phiên bản và bản quyền đầy đủ\n"
+
+#: ../check.c:58
+#, c-format
+msgid "%s error:  the '%s' and '%s' options conflict\n"
+msgstr "%s lỗi:  “%s” và “%s” là các tùy chọn xung đột nhau\n"
+
+#: ../find.c:217 ../find.c:430
+#, c-format
+msgid "%s: The '%s' option has been disabled."
+msgstr "%s: Tùy chọn “%s” đã bị tắt."
+
+#: ../alias.c:38
+msgid "-equivalence"
+msgstr "-tương đương"
+
+#: ../find.c:469 ../reset.c:110
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: tùy chọn không hợp lệ -- %c\n"
+
+#: ../find.c:271 ../find.c:755 ../reset.c:118
+#, c-format
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: tùy chọn không hợp lệ -- %s\n"
+
+#: ../find.c:335
+#, c-format
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: không hiểu tùy chọn mở rộng từ người sản xuất -- %s\n"
+
+#: ../enum.c:159 ../enum.c:169
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr "  hoặc một số nguyên từ %d đến %d\n"
+
+#: ../usage.c:747 ../usage.c:1081
+#, c-format
+msgid "%s error:  invalid option descriptor for %s\n"
+msgstr "%s lỗi:  bộ mô tả tùy chọn dành cho %s không hợp lệ\n"
+
+#: ../find.c:385
+#, c-format
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: tên tùy chọn không hợp lệ: %s\n"
+
+#: ../find.c:527
+#, c-format
+msgid "%s: The '%s' option requires an argument.\n"
+msgstr "%s: Tùy chọn “%s” yêu cầu một tham số.\n"
+
+#: ../autoopts.c:156
+#, c-format
+msgid ""
+"(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'."
+msgstr ""
+"(AutoOpts bug): Tùy chọn “%s” tương đương với cả hai\n"
+"\ttùy chọn “%s” và “%s”."
+
+#: ../check.c:94
+#, c-format
+msgid "%s error:  The %s option is required\n"
+msgstr "%s lỗi:  Tùy chọn %s là bắt buộc\n"
+
+#: ../find.c:632
+#, c-format
+msgid "%s: The '%s' option cannot have an argument.\n"
+msgstr "%s: tùy chọn “%s” không thể nhận đối số.\n"
+
+#: ../check.c:151
+#, c-format
+msgid "%s: Command line arguments are not allowed.\n"
+msgstr "%s: Không chấp nhận đối số dòng lệnh.\n"
+
+#: ../save.c:535
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr "lỗi %d (%s) tạo %s\n"
+
+#: ../enum.c:234
+#, c-format
+msgid "%s error:  '%s' does not match any %s keywords.\n"
+msgstr "%s lỗi:  “%s” không khớp bất kỳ từ khóa %s nào.\n"
+
+#: ../reset.c:93
+#, c-format
+msgid "%s error: The '%s' option requires an argument.\n"
+msgstr "%s lỗi: Tùy chọn “%s” yêu cầu có đối số.\n"
+
+#: ../save.c:184 ../save.c:238
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr "lỗi %d (%s) đang-thống-kê %s\n"
+
+#: ../restore.c:143
+#, c-format
+msgid "%s error: no saved option state\n"
+msgstr "%s lỗi: không trạng thái tùy chọn được lưu\n"
+
+#: ../autoopts.c:231
+#, c-format
+msgid "'%s' is not a command line option.\n"
+msgstr "“%s” không phải là tùy chọn dòng lệnh.\n"
+
+#: ../time.c:114
+#, c-format
+msgid "%s error:  '%s' is not a recognizable date/time.\n"
+msgstr "%s lỗi:  kiểu ngày tháng của “%s” không được chấp nhận.\n"
+
+#: ../save.c:132
+#, c-format
+msgid "'%s' not defined\n"
+msgstr "“%s” chưa định nghĩa\n"
+
+#: ../time.c:53
+#, c-format
+msgid "%s error:  '%s' is not a recognizable time duration.\n"
+msgstr "%s lỗi:  không chấp nhận khoảng thời gian của “%s”.\n"
+
+#: ../check.c:92
+#, c-format
+msgid "%s error:  The %s option must appear %d times.\n"
+msgstr "%s lỗi:  Tùy chọn %s phải xuất hiện %d lần.\n"
+
+#: ../numeric.c:157
+#, c-format
+msgid "%s error:  '%s' is not a recognizable number.\n"
+msgstr "%s lỗi:  “%s” không phải là kiểu số được thừa nhận.\n"
+
+#: ../enum.c:200
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr "%s lỗi:  %s đạt đến ngưỡng số lượng %s từ khóa\n"
+
+#: ../usage.c:330
+#, c-format
+msgid "Try '%s %s' for more information.\n"
+msgstr "Thử lệnh “%s %s” để tìm thấy thông tin thêm.\n"
+
+#: ../alias.c:45
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr "chỉ cho phép một tùy chọn %s%s\n"
+
+#: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:274 ../usage.c:415
+#: ../usage.c:625 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
+#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+msgid "standard output"
+msgstr "đầu ra tiêu chuẩn"
+
+#: ../usage.c:274 ../usage.c:415 ../usage.c:625 ../version.c:175
+msgid "standard error"
+msgstr "đầu ra lỗi chuẩn"
+
+#: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:273 ../usage.c:414
+#: ../usage.c:624 ../version.c:174
+msgid "write"
+msgstr "ghi"
+
+#: ../numeric.c:60
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr "%s lỗi:  giá trị cho tùy chọn %s %ld nằm ngoài phạm vi.\n"
+
+#: ../check.c:44
+#, c-format
+msgid "%s error:  %s option requires the %s option\n"
+msgstr "%s lỗi: Tùy chọn %s yêu cầu cần có tùy chọn %s\n"
+
+#: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:534
+#, c-format
+msgid "%s warning:  cannot save options - %s not regular file\n"
+msgstr "%s cảnh báo:  không thể ghi lại tùy chọn - %s không phải tập tin thường\n"
+
+#: src/shar.c:355
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "lỗi định dạng printf: %s\n"
 
-#: src/shar.c:423
+#: src/shar.c:402
 msgid "sharutils bug - no status"
 msgstr "lỗi sharutils - không có trạng thái"
 
-#: src/shar.c:788
+#: src/shar.c:751
 msgid "Too many directories for mkdir generation"
 msgstr "Quá nhiều thư mục để tạo ra bằng mkdir (tạo thư mục)"
 
-#: src/shar.c:871 src/shar.c:1541
+#: src/shar.c:834 src/shar.c:1693
 #, c-format
 msgid "Cannot access %s"
 msgstr "Không thể truy cập %s."
 
-#: src/shar.c:948 src/unshar.c:376
+#: src/shar.c:929
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Không thể lấy tên thư mục hiện có."
 
-#: src/shar.c:1005 src/shar.c:1346
-#, c-format
-msgid "New file, remaining %s, "
-msgstr "Tập tin mới, còn lại %s, "
-
-#: src/shar.c:1006 src/shar.c:1347
-#, c-format
-msgid "Limit still %s\n"
-msgstr "Vẫn còn có sự hạn chế %s\n"
-
-#: src/shar.c:1028
+#: src/shar.c:1018
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Đang bắt đầu tập tin %s\n"
 
-#: src/shar.c:1081
+#: src/shar.c:1112
 msgid "Could not popen command"
 msgstr "Không thể popen một lệnh"
 
-#: src/shar.c:1162
+#: src/shar.c:1172
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Không thể mở tập tin %s"
 
-#: src/shar.c:1296 src/shar.c:1305
-msgid "text"
-msgstr "văn bản"
-
-#: src/shar.c:1311 src/shar.c:1322
+#: src/shar.c:1298 src/shar.c:1309 src/shar.c:1917
 msgid "call"
 msgstr "lời gọi"
 
-#: src/shar.c:1335
-#, c-format
-msgid "File %s (%s)"
-msgstr "Tập tin %s (%s)"
+#: src/shar.c:1321
+msgid "pipe fd"
+msgstr "fd đường ống"
 
-#: src/shar.c:1426
+#: src/shar.c:1436 src/shar.c:1450
+msgid "text"
+msgstr "văn bản"
+
+#: src/shar.c:1553
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Đang tiếp tục tập tin %s\n"
 
-#: src/shar.c:1536
+#: src/shar.c:1688
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: không phải là tập tin chuẩn"
 
-#: src/shar.c:1563
-#, c-format
-msgid "In shar: remaining size %s\n"
-msgstr "Trong shar: kích cỡ còn lại %s\n"
-
-#: src/shar.c:1583
+#: src/shar.c:1736
 msgid "empty"
 msgstr "rỗng"
 
-#: src/shar.c:1622
+#: src/shar.c:1763
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Đang lưu %s (%s)"
 
-#: src/shar.c:1807
+#: src/shar.c:1964
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Định dạng không hợp lệ cho tên tập tin kết xuất (%s): %s"
 
-#: src/shar.c:1822
+#: src/shar.c:1979
 msgid "more than one format element"
 msgstr "nhiều hơn một phần tử định dạng"
 
-#: src/shar.c:1827
+#: src/shar.c:1984
 msgid "no conversion character"
 msgstr "ký tự không chuyển đổi"
 
-#: src/shar.c:1836
+#: src/shar.c:1993
 msgid "format is too wide"
 msgstr "định dạng quá rộng"
 
-#: src/shar.c:1848
+#: src/shar.c:2005
 msgid "invalid conversion character"
 msgstr "ký tự chuyển đổi sai"
 
-#: src/shar.c:1889
+#: src/shar.c:2050
 msgid "Opening"
 msgstr "Đang mở"
 
-#: src/shar.c:1904
+#: src/shar.c:2065
 msgid "Closing"
 msgstr "Đang đóng"
 
-#: src/shar.c:2015
+#: src/shar.c:2152
+#, c-format
+msgid "reopening stderr to /dev/null"
+msgstr "mở lại stderr sang /dev/null"
+
+#: src/shar.c:2205
 msgid "No input files"
 msgstr "Không có tập tin nhập"
 
-#: src/shar.c:2032
+#: src/shar.c:2222
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "QUAN TRỌNG là bạn tránh shar -X trên USENET (nhóm tin) hay mạng công."
 
-#: src/shar.c:2056
+#: src/shar.c:2246
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
 "unless the --intermix-type option has been specified."
 msgstr ""
-"Tùy chọn '%s' có lẽ không nên được trộn lẫn với tên các tập tin\n"
+"Tùy chọn “%s” có lẽ không nên được trộn lẫn với tên các tập tin\n"
 "trừ phi tùy chọn --intermix-type được chỉ định."
 
-#: src/shar.c:2074
+#: src/shar.c:2264
 #, c-format
 msgid "The '%s' option must appear before any file names"
-msgstr "Tùy chọn '%s' phải xuất hiện trước tất cả các tập tin nào"
+msgstr "Tùy chọn “%s” phải xuất hiện trước tất cả các tập tin nào"
 
-#: src/shar.c:2110
+#: src/shar.c:2300
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -416,227 +1183,722 @@ msgstr ""
 "kiểu nén không hợp lệ:  %s\n"
 "các kiểu có thể sử dụng là:\n"
 
-#: src/shar.c:2149
+#: src/shar.c:2339
 msgid "files on command line and --input-file-list specified"
 msgstr "các tập tin trên dòng lệnh và --input-file-list được chỉ định"
 
-#: src/shar.c:2198
+#: src/shar.c:2388
 #, c-format
 msgid "Created %d files\n"
 msgstr "Đã tạo %d tập tin\n"
 
-#: src/unshar-opts.c:427 src/unshar.c:394
+#: src/unshar-opts.c:583
 #, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "Không thể chdir (chuyển đổi thư mục) sang \"%s\""
+msgid "fs error %d (%s) %s-ing %s\n"
+msgstr "lỗi fs %d (%s) đang-%s %s\n"
 
-#: src/unshar.c:168
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "Không tìm thấy lệnh trình bao trong %s"
+#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:511
+#: src/uuencode.c:205
+msgid "standard input"
+msgstr "thiết bị nhập chuẩn"
 
-#: src/unshar.c:184
+#: src/unshar-opts.c:664
+msgid "unshar usage error:\n"
+msgstr "lỗi dùng unshar:\n"
+
+#: src/unshar-opts.c:701
+msgid "unshar fatal error:\n"
+msgstr "gặp lỗi unshar nghiêm trọng:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the unsharOptions structure noted in the
+#. comments below.  The literal text is defined in unshar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. unshar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via unsharOptions.pzCopyright
+#: src/unshar-opts.c:931
+msgid ""
+"unshar (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"unshar (GNU sharutils) 4.14\n"
+"Bản quyền (C) 1994-2013 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
+"phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
+"phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/unshar-opts.c:938
+msgid ""
+"unshar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+"unshar là phần mềm miễn phí: bạn có thể phân phối nó hoặc/và sửa nó\n"
+"phù hợp với các điều khoản trong Giấy Phép Công GNU, được xuất ra bởi\n"
+"Tổ chức Phần mềm Tự do, hoặc là phiên bản 3 hoặc chọn bản mới hơn.\n"
+"\n"
+
+#: src/unshar-opts.c:942
+msgid ""
+"unshar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"unshar được phân phối với hy vọng là nó hữu ích, nhưng KHÔNG CÓ BẢO HÀNH\n"
+"GÌ CẢ; không đảm bảo ngay cả khi nó được KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC\n"
+"VIỆC DỨT KHOÁT. Xem Giấy Phép Công GNU để để có thêm thông tin chi tiết.\n"
+"\n"
+
+#: src/unshar-opts.c:950
 #, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s hình như mã C thô, không phải kho trình bao."
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"unshar (GNU sharutils) - mở gói lưu trữ\n"
+"Cách dùng:  %s [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+
+#: src/unshar-opts.c:954
+msgid ""
+"\n"
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+msgstr ""
+"\n"
+"Nếu không có đối số nào được đưa ra thì các đối số này sẽ được đọc từ\n"
+"đầu vào tiêu chuẩn, mỗi cái một dòng; dòng trống và có “#” đứng đầu là\n"
+"ghi chú. “stdin” không thể là một thiết-bị cuối (tty).\n"
+
+#: src/unshar-opts.c:960
+msgid ""
+"Unshar scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+msgstr ""
+"“unshar” quét các tập-tin đầu vào (thường là các thư) để tìm kiếm\n"
+"điểm đầu của kho lưu hệ vỏ. Nếu không chỉ định tập-tin đầu vào thì dùng\n"
+"đầu ra tiêu chuẩn để thay thế. Nó sau đó phân tích từng kho lưu đã tìm được\n"
+"quẳng nó cho hệ vỏ giải nén nó.\n"
+
+#: src/unshar-opts.c:966
+msgid "unshar (GNU sharutils) 4.14"
+msgstr "unshar (GNU sharutils) 4.14"
+
+#: src/unshar-opts.c:969
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"unshar (GNU sharutils) - mở gói lưu trữ\n"
+"Cách dùng:  unshar [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+"\n"
+
+#: src/unshar-opts.c:971
+msgid "   -d, --directory=DIR        unpack into the directory DIR\n"
+msgstr "   -d, --directory=THƯ_MỤC    mở gói vào trong thư mục này\n"
+
+#: src/unshar-opts.c:972
+msgid "   -c, --overwrite            overwrite any pre-existing files\n"
+msgstr "   -c, --overwrite            ghi đè lên những tập tin đã có trước\n"
+
+#: src/unshar-opts.c:973
+msgid "   -f, --force                an alias for the 'overwrite' option\n"
+msgstr "   -f, --force               là bí danh của “overwrite”\n"
+
+#: src/unshar-opts.c:974
+msgid "   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines\n"
+msgstr "   -E, --split-at=SPLIT-PAT   chia cắt đầu ra tại dòng SPLIT-PAT\n"
+
+#: src/unshar-opts.c:975
+msgid ""
+"   -e, --exit-0               split input on \"exit 0\" lines\n"
+"                                - prohibits the option 'split-at'\n"
+msgstr ""
+"   -e, --exit-0               chia đầu vào mỗi \"exit 0\" dòng\n"
+"                                - cấm chỉ tùy chọn “split-at”\n"
+
+#: src/unshar-opts.c:977
+msgid "   -D, --debug                debug the shell code\n"
+msgstr "   -D, --debug                gỡ lỗi mã hệ vỏ\n"
+
+#: src/unshar-opts.c:981
+msgid "   -R, --save-opts[=FILE]     save the option state to the config file FILE\n"
+msgstr "   -R, --save-opts[=TẬP-TIN]  ghi trạng tái tùy chọn ra TẬP-TIN cấu hình\n"
+
+#: src/unshar-opts.c:982
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled as '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+"   -r, --load-opts=TẬP-TIN    tải các tùy chọn từ TẬP-TIN cấu hình\n"
+"                                - bị tắt bởi “--no-load-opts”\n"
+"                                - có thể xuất hiện nhiều lần\n"
+"\n"
+
+#: src/unshar-opts.c:985 src/uuencode-opts.c:708
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"\n"
+msgstr ""
+"Các tùy chọn được chỉ định bằng dấu nối đôi và tên của chúng hoặc dấu nối\n"
+"đơn và ký tự cờ.\n"
+"\n"
+
+#: src/unshar-opts.c:987
+msgid ""
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+"\n"
+msgstr ""
+"Nếu không có đối số nào được đưa ra thì các đối số này sẽ được đọc từ\n"
+"đầu vào tiêu chuẩn, mỗi cái một dòng; dòng trống và có “#” đứng đầu là\n"
+"ghi chú. “stdin” không thể là một thiết-bị cuối (tty).\n"
+"\n"
+
+#: src/unshar-opts.c:991
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'unshar' scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+"\n"
+msgstr ""
+" - đọc tập-tin $HOME/.sharrc\n"
+"\n"
+"“unshar” quét các tập-tin đầu vào (thường là các thư) để tìm kiếm\n"
+"điểm đầu của kho lưu hệ vỏ. Nếu không chỉ định tập-tin đầu vào thì dùng\n"
+"đầu ra tiêu chuẩn để thay thế. Nó sau đó phân tích từng kho lưu đã tìm được\n"
+"quẳng nó cho hệ vỏ giải nén nó.\n"
+"\n"
+
+#: src/unshar-opts.c:996 src/uudecode-opts.c:780
+msgid "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr "Hãy gửi báo cáo lỗi tới:  <bug-gnu-utils@gnu.org>\n"
+
+#: src/unshar-opts.c:999
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'unshar --help' for more information.\n"
+msgstr ""
+"unshar (GNU sharutils) - mở gói lưu trữ\n"
+"Cách dùng:  shar [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+"Hãy chạy lệnh “unshar --help” để có thêm thông tin.\n"
+
+#: src/unshar-opts.h:258 src/uudecode-opts.h:236
+#, c-format
+msgid "could not allocate %zu bytes for %s\n"
+msgstr "không thể cấp phát %zu byte cho %s\n"
+
+#: src/unshar.c:202
+#, c-format
+msgid "Found no shell commands after cut line in %s"
+msgstr "Không tìm thấy lệnh hệ vỏ sau \"cut\" (cắt) dòng trong %s"
 
 #: src/unshar.c:220
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "Không tìm thấy lệnh trình bao nằm sau \"cut\" (cắt) trong %s"
-
-#: src/unshar.c:241
 #, c-format
 msgid "%s is probably not a shell archive"
 msgstr "Rất có thể là %s không phải kho trình bao"
 
-#: src/unshar.c:242
+#: src/unshar.c:221
 #, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "Dòng \"cut\" (cắt) nằm trước: %s"
+msgid "The 'cut line' was followed by: %s"
+msgstr "Lệnh “cut line” được theo sau bởi: %s"
 
-#: src/unshar.c:268
+#: src/unshar.c:244
 #, c-format
-msgid "Starting `sh' process"
-msgstr "Đang bắt đầu tiến trình \"sh\""
+msgid "Found no shell commands in %s"
+msgstr "Không tìm thấy lệnh trình bao trong %s"
 
-#: src/unshar.c:312 src/uudecode.c:459
+#: src/unshar.c:253
 #, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "Hãy thử lệnh trợ giúp \"%s --help\" để tìm thông tin thêm.\n"
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s hình như mã C thô, không phải kho trình bao."
 
-#: src/unshar.c:316
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "Cách sử dụng: %s [TÙY_CHỌN]... [TẬP_TIN]...\n"
+#: src/unshar.c:324
+msgid "file name buffer"
+msgstr "bộ đệm tên tập tin"
 
-#: src/unshar.c:317
+#: src/unshar.c:450
+msgid "read/write buffer"
+msgstr "bộ đệm đọc/ghi"
+
+#: src/uudecode-opts.c:438
+msgid "uudecode usage error:\n"
+msgstr "lỗi sử dụng uudecode:\n"
+
+#: src/uudecode-opts.c:475
+msgid "uudecode fatal error:\n"
+msgstr "lỗi uudecode nghiêm trọng:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the uudecodeOptions structure noted in the
+#. comments below.  The literal text is defined in uudecode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uudecode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uudecodeOptions.pzCopyright
+#: src/uudecode-opts.c:705
 msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
-"  -c, --overwrite             pass -c to shar script for overwriting files\n"
-"  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=STRING       split concatenated shars after STRING\n"
-"  -f, --force                 same as `-c'\n"
-"      --help                  display this help and exit\n"
-"      --version               output version information and exit\n"
-"\n"
-"If no FILE, standard input is read.\n"
+"uudecode (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
-"\n"
-"  -d, --directory=THƯ_MỤC   \tchuyển đổi sang thư mục này trước khi giải nén\n"
-"  -c, --overwrite             gửi tùy chọn \"-c\" qua cho văn lệnh shar để ghi đè lên tập tin\n"
-"\t\t(_ghi đè_)\n"
-"  -e, --exit-0                bằng \"--split-at=\"exit 0\"\" (_thoát_)\n"
-"  -E, --split-at=CHUỖI       chia tách các shar nối nhau sau chuỗi này (_chia tách ở_)\n"
-"  -f, --force                 \tbằng \"-c\" (_ép buộc_)\n"
-"      --help                  \thiển thị trợ giúp này rồi thoát (trợ giúp_)\n"
-"      --version               \txuất thông tin phiên bản rồi thoát (_phiên bản_)\n"
-"\n"
-"Không có TẬP TIN thì đọc thiết bị nhập chuẩn.\n"
+"uudecode (GNU sharutils) 4.14\n"
+"Bản quyền (C) 1994-2013 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
+"phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
+"phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
 
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/unshar.c:331 src/uudecode.c:470
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr "Hãy thông báo lỗi dịch nào cho <vi-VN@googlegroups.com>%.0s.\n"
-
-#: src/unshar.c:414 src/uudecode.c:506
-#, c-format, no-wrap
+#: src/uudecode-opts.c:712
 msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+"uudecode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
 msgstr ""
-"Tác quyền © %s cùa Tổ chức Phần mềm Tự do.\n"
-"Chương trình này là phần mềm tự do; xem mã nguồn để tìm điều kiện sao chép.\n"
-"KHÔNG CÓ BẢO HÀNH GÌ CẢ, THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý\n"
-"KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC VIỆC DỨT KHOÁT.\n"
+"uudecode là phần mềm miễn phí: bạn có thể phân phối nó hoặc/và sửa nó\n"
+"phù hợp với các điều khoản trong Giấy Phép Công GNU, được xuất ra bởi\n"
+"Tổ chức Phần mềm Tự do, hoặc là phiên bản 3 hoặc chọn bản mới hơn.\n"
+"\n"
 
-#: src/unshar.c:445 src/unshar.c:507
+#: src/uudecode-opts.c:716
+msgid ""
+"uudecode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"uudecode được phân phối với hy vọng là nó hữu ích, nhưng KHÔNG CÓ BẢO HÀNH\n"
+"GÌ CẢ; không đảm bảo ngay cả khi nó được KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC\n"
+"VIỆC DỨT KHOÁT. Xem Giấy Phép Công GNU để để có thêm thông tin chi tiết.\n"
+"\n"
+
+#: src/uudecode-opts.c:724
 #, c-format
-msgid "allocate file name buffer"
-msgstr "cấp phát bộ đệm tên tập tin"
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+"uudecode (GNU sharutils) - giải mã một tập tin đã được mã hóa\n"
+"Cách dùng:  %s [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
 
-#: src/unshar.c:466
-msgid "standard input"
-msgstr "thiết bị nhập chuẩn"
+#: src/uudecode-opts.c:728
+msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
+msgstr "Nếu không có tập tin nào được chỉ ra, thế thì đầu vào tiêu chuẩn sẽ được giải mã.\n"
 
-#: src/unshar.c:528
-#, c-format
-msgid "allocate file buffer"
-msgstr "cấp phát bộ đệm tập tin"
+#: src/uudecode-opts.c:731
+msgid ""
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+"“uudecode” chuyển đổi các tập tin được uuencode sang dạng nguyên bản.\n"
+"\n"
 
-#: src/uudecode.c:114 src/uudecode.c:444
-#, c-format
-msgid "%s: Write error"
-msgstr "%s: Lỗi ghi"
+#: src/uudecode-opts.c:732 src/uudecode-opts.c:767
+msgid ""
+"The encoded file(s) may be specified on the command line, or one may be\n"
+"read from standard input.  The output file name is specified in the encoded\n"
+"file, but may be overridden with the '-o' option.  It will have the mode of\n"
+"the original file, except that setuid and execute bits are not retained.  If\n"
+"the output file is specified to be '/dev/stdout' or '-', the result will be\n"
+"written to standard output.  If there are multiple input files and the\n"
+"second or subsquent file specifies standard output, the decoded data will\n"
+"be written to the same file as the previous output.  Don't do that.\n"
+"\n"
+msgstr ""
+"Các tập-tin cần mã hóa có thể được chỉ ra bằng đối số dòng lệnh, hoặc có thể\n"
+"từ đầu vào tiêu chuẩn. Tên tập-tin đầu ra được chỉ định trong tập-tin được mã\n"
+"hóa, nhưng có thể được ghi đè bằng tùy-chọn “-o”. Nó sẽ có chế độ đọc ghi\n"
+"giống với tập tin gốc, ngoại trừ setuid và các bít mở rộng là không. Nếu\n"
+"tập-tin xuất là “/dev/stdout” hay “-”. kết quả sẽ được ghi ra đầu\n"
+"ra tiêu chuẩn. Nếu có nhiều tập-tin đầu vào và tập-tin\n"
+"thứ hai hay sau đó là đầu ra tiêu chuẩn thì dữ liệu đã giải mã sẽ được ghi\n"
+"vào cùng một tập-tin với kết xuất trước. Đừng làm thế.\n"
+"\n"
 
-#: src/uudecode.c:131 src/uudecode.c:218
+#: src/uudecode-opts.c:740
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+msgstr ""
+"“uudecode” bỏ qua mọi dấu trắng ở đầu hay ở cuối. Nó tìm kiếm dòng mà\n"
+"được khởi đầu bằng \"'begin'\" và xử lý cho đến chỗ được đánh dấu là cuối mà nó tìm\n"
+"thấy. Chương trình dùng dòng đầu của tập tin được mã hóa để xác định rõ\n"
+"cái nào trong số hai lược đồ mã hóa được hỗ trợ đã được dùng và có hay không\n"
+"tên tập tin đầu vào đã được mã hóa bằng base64.  Xem “uuencode(5)”.\n"
+
+#: src/uudecode-opts.c:747
+msgid "uudecode (GNU sharutils) 4.14"
+msgstr "uudecode (GNU sharutils) 4.14"
+
+#: src/uudecode-opts.c:750
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+"uudecode (GNU sharutils) - giải mã một tập tin đã được mã hóa\n"
+"Cách dùng:  uudecode [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+"\n"
+
+#: src/uudecode-opts.c:752
+msgid "   -o, --output-file=str      direct output to file\n"
+msgstr "   -o, --output-file=str      chuyển hướng kết xuất ra tập tin\n"
+
+#: src/uudecode-opts.c:753
+msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
+msgstr "   -c, --ignore-chmod         bỏ qua các lỗi fchmod(3P)\n"
+
+#: src/uudecode-opts.c:761
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file'(s) are provided, then standard input is decoded.\n"
+"\n"
+msgstr ""
+"Các tùy chọn được chỉ định bằng dấu nối kép và tên của chúng hoặc bằng dấu\n"
+"nối đơn và các ký hiệu cờ.\n"
+"Nếu không đưa ra tập tin thì sẽ decode từ đầu vào tiêu chuẩn.\n"
+"\n"
+
+#: src/uudecode-opts.c:765
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+" - đọc tập tin $HOME/.sharrc\n"
+"\n"
+"“uudecode” chuyển đổi các tập-tin được uuencod thành nguyên bản.\n"
+"\n"
+
+#: src/uudecode-opts.c:775
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+"\n"
+msgstr ""
+"“uudecode” bỏ qua mọi dấu trắng ở đầu hay ở cuối. Nó tìm kiếm dòng mà\n"
+"được khởi đầu bằng \"'begin'\" và xử lý cho đến chỗ được đánh dấu là cuối mà nó tìm\n"
+"thấy. Chương trình dùng dòng đầu của tập tin được mã hóa để xác định rõ\n"
+"cái nào trong số hai lược đồ mã hóa được hỗ trợ đã được dùng và có hay không\n"
+"tên tập tin đầu vào đã được mã hóa bằng base64.  Xem “uuencode(5)”.\n"
+
+#: src/uudecode-opts.c:783
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'uudecode --help' for more information.\n"
+msgstr ""
+"uudecode (GNU sharutils) - giải mã một tập tin đã được mã hóa\n"
+"Cách dùng:  uudecode [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+"Hãy chạy lệnh “uudecode --help” để có thêm thông tin.\n"
+
+#: src/uudecode.c:118 src/uudecode.c:182
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Tập tin ngắn"
 
-#: src/uudecode.c:167
+#: src/uudecode.c:164
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: không có \"end\" (kết thúc) dòng"
 
-#: src/uudecode.c:227
+#: src/uudecode.c:188
 #, c-format
-msgid "%s: data following `=' padding character"
-msgstr "%s: có dữ liệu theo ký tự đệm \"=\""
+msgid "%s: invalid input"
+msgstr "%s: đầu vào không hợp lệ"
 
-#: src/uudecode.c:251 src/uudecode.c:259 src/uudecode.c:273
-#, c-format
-msgid "%s: illegal line"
-msgstr "%s: dòng không hợp lệ"
+#: src/uudecode.c:210 src/uudecode.c:224
+msgid "cannot expand $HOME"
+msgstr "không thể mở rộng biến $HOME"
 
-#: src/uudecode.c:303
+#: src/uudecode.c:260
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Tên tập tin không hợp lệ: %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:267
 #, c-format
-msgid "No user `%s'"
-msgstr "Không có người dùng \"%s\""
+msgid "No user '%s'"
+msgstr "Không có người dùng “%s”"
 
-#: src/uudecode.c:321
-#, c-format
-msgid "no memory for %d byte allocation"
-msgstr "không có bộ nhớ cho sự cấp phát %d byte"
+#: src/uudecode.c:278 src/uudecode.c:340
+msgid "output file name"
+msgstr "tên tập tin xuất"
 
-#: src/uudecode.c:346
+#: src/uudecode.c:297
 #, c-format
 msgid "cannot access %s"
 msgstr "không thể truy cập %s"
 
-#: src/uudecode.c:354
-#, c-format
-msgid "freopen of %s"
-msgstr "việc freopen %s"
-
-#: src/uudecode.c:360
+#: src/uudecode.c:310
 #, c-format
 msgid "chmod of %s"
 msgstr "việc chmod (thay đổi chế độ) %s"
 
-#: src/uudecode.c:385
-#, c-format
-msgid "%s: No `begin' line"
-msgstr "%s: không có dòng \"begin\" (bắt đầu)"
+#: src/uudecode.c:334
+msgid "output name is empty"
+msgstr "tên tập tin kết xuất là trống rỗng"
 
-#: src/uudecode.c:463
+#: src/uudecode.c:345
 #, c-format
-msgid "Usage: %s [FILE]...\n"
-msgstr "Cách sử dụng: %s [TẬP_TIN]...\n"
+msgid "invalid base64 encoded name: %s"
+msgstr "tên mã hóa base64 không hợp lệ: %s"
 
-#: src/uudecode.c:464
-msgid ""
-"Mandatory arguments to long options are mandatory to short options too.\n"
-"  -o, --output-file=FILE   direct output to FILE\n"
-"      --help               display this help and exit\n"
-"      --version            output version information and exit\n"
-msgstr ""
-"Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
-"  -o, --output-file=TẬP_TIN   chuyển kết xuất ra tập tin này (_tập tin xuất_)\n"
-"      --help               hiển thị _trợ giúp_ này rồi thoát\n"
-"      --version            xuất thông tin _phiên bản_ rồi thoát\n"
-
-#: src/uudecode.c:530
+#: src/uudecode.c:380
 #, c-format
+msgid "%s: Invalid or missing 'begin' line"
+msgstr "%s: Dòng “begin” bị thiếu hay không hợp lệ"
+
+#: src/uudecode.c:477
+#, c-format
+msgid "%s: Write error"
+msgstr "%s: Lỗi ghi"
+
+#: src/uudecode.c:517
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
 msgstr "Không cho phép ghi rõ một tập tin kết xuất khi xử lý nhiều tập tin nhập vào.\n"
 
-#: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
-#, c-format
-msgid "Write error"
-msgstr "Lỗi ghi"
+#: src/uuencode-opts.c:389
+msgid "uuencode usage error:\n"
+msgstr "lỗi sử dụng uuencode:\n"
 
-#: src/uuencode.c:184 src/uuencode.c:196 src/uuencode.c:198
+#: src/uuencode-opts.c:426
+msgid "uuencode fatal error:\n"
+msgstr "lỗi uuencode nghiêm trọng:\n"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the uuencodeOptions structure noted in the
+#. comments below.  The literal text is defined in uuencode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uuencode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uuencodeOptions.pzCopyright
+#: src/uuencode-opts.c:656
+msgid ""
+"uuencode (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+"uuencode (GNU sharutils) 4.14\n"
+"Bản quyền (C) 1994-2013 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
+"phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
+"phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
+
+#: src/uuencode-opts.c:663
+msgid ""
+"uuencode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+"uudecode là phần mềm miễn phí: bạn có thể phân phối nó hoặc/và sửa nó\n"
+"phù hợp với các điều khoản trong Giấy Phép Công GNU, được xuất ra bởi\n"
+"Tổ chức Phần mềm Tự do, hoặc là phiên bản 3 hoặc chọn bản mới hơn.\n"
+"\n"
+
+#: src/uuencode-opts.c:667
+msgid ""
+"uuencode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+"uuencode được phân phối với hy vọng là nó hữu ích, nhưng KHÔNG CÓ BẢO HÀNH\n"
+"GÌ CẢ; không đảm bảo ngay cả khi nó được KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC\n"
+"VIỆC DỨT KHOÁT. Xem Giấy Phép Công GNU để để có thêm thông tin chi tiết.\n"
+"\n"
+
+#: src/uuencode-opts.c:675
 #, c-format
-msgid "Read error"
-msgstr "Lỗi đọc"
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  %s [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+msgstr ""
+"uuencode (GNU sharutils) - mã hóa một tập tin thành thư kiểu thân thiện text\n"
+"Cách dùng:  %s [ -<cờ> | --<tên> ]... [ tập-tin-vào ] <tập-tin-ra>\n"
+"\n"
+
+#: src/uuencode-opts.c:679
+msgid ""
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+"“uuencode” được dùng để biểu diễn một tập tin theo định dạng ASCII cái mà\n"
+"được gửi thông qua các kênh mà các kênh này lại làm hỏng dữ liệu. Đặc biệt nhất là,\n"
+"thư không thể tiếp nhận dữ liệu nhị phân và thường chèn thêm một ký tự khi\n"
+"xung đột ký tự thoát chuỗi \"\\nTừ \" được thấy.\n"
+"\n"
+
+#: src/uuencode-opts.c:683 src/uuencode-opts.c:716
+msgid ""
+"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
+"standard in and write the encoded form to standard out.  The output will\n"
+"begin with a header line for use by 'uudecode' giving it the resulting\n"
+"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
+"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
+"standard out.\n"
+"\n"
+msgstr ""
+"“uuencode” sẽ đọc nội dung của “tập tin đầu vào” nếu được cung cấp và nếu không\n"
+"thì đọc từ đầu vào tiêu chuẩn và ghi dữ liệu được mã hóa ra đầu ra tiêu chuẩn.\n"
+"Kết xuất sẽ bắt đầu bởi một dòng đầu được dùng cho “uudecode” để nhận biết\n"
+"tập tin gợi ý “output-name” và chế độ truy cập.  Nếu “output-name” trong trường\n"
+"hợp đặc biệt là “/dev/stdout”, thế thì “uudecode” sẽ phát tập tin được giải mã ra\n"
+"đầu ra tiêu chuẩn.\n"
+"\n"
+
+#: src/uuencode-opts.c:689
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+msgstr ""
+"“Note”: “uuencode” dùng đầu vào được đệm và coi rằng nó không xử lý\n"
+"ký tự được gõ từ một tty.  Hậu quả là ở một tty, bạn có lẽ cần phải bấm\n"
+"Ctl-D nhiều lần để có thể chấm dứt đầu vào.\n"
+
+#: src/uuencode-opts.c:694
+msgid "uuencode (GNU sharutils) 4.14"
+msgstr "uuencode (GNU sharutils) 4.14"
+
+#: src/uuencode-opts.c:697
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"\n"
+msgstr ""
+"uuencode (GNU sharutils) - mã hóa một tập tin thành thư kiểu thân thiện text\n"
+"Cách dùng:  uuencode [ -<cờ> | --<tên> ]... [ tập-tin-vào ] <tập-tin-ra>\n"
+"\n"
+
+#: src/uuencode-opts.c:699
+msgid "   -m, --base64               convert using base64\n"
+msgstr "   -m, --base64               chuyển đổi sử dụng cơ số 64\n"
+
+#: src/uuencode-opts.c:700
+msgid "   -e, --encode-file-name     encode the output file name\n"
+msgstr "   -e, --encode-file-name     mã hóa tên tập tin đầu ra\n"
+
+#: src/uuencode-opts.c:711
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+" - đọc tập tin $HOME/.sharrc\n"
+"\n"
+"“uuencode” được dùng để tạo một biểu diễn ASCII từ một tập tin, cái này\n"
+"dùng để gửi thông qua các kênh mà nó có thể làm hư hỏng dữ liệu.\n"
+"Đặc biệt nhất là, thư điện tử không tiếp hợp dữ liệu nhị phân\n"
+"và thường chèn thêm các ký tự khi dãy ký tự thứ sáu \"\\nTừ \" được thấy.\n"
+"\n"
+
+#: src/uuencode-opts.c:722
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+"“Note”: “uuencode” dùng đầu vào được đệm và coi rằng nó không xử lý\n"
+"ký tự được gõ từ một tty.  Hậu quả là ở một tty, bạn có lẽ cần phải bấm\n"
+"Ctl-D nhiều lần để có thể chấm dứt đầu vào.\n"
+"\n"
+"Hãy gửi báo cáo lỗi cho: <bug-gnu-utils@gnu.org>\n"
+
+#: src/uuencode-opts.c:728
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"Try 'uuencode --help' for more information.\n"
+msgstr ""
+"uuencode (GNU sharutils) - mã hóa một tập tin thành thư kiểu thân thiện text\n"
+"Cách dùng:  uuencode [ -<cờ> | --<tên> ]... [ tập-tin-vào ] <tập-tin-ra>\n"
+"Hãy chạy lệnh “uuencode --help” để có thêm thông tin.\n"
 
 #: src/uuencode.c:226
-#, c-format
-msgid "fopen-ing %s"
-msgstr "Đang fopen (mở) %s"
+msgid "freopen of stdin"
+msgstr "freopen của stdin"
 
-#: src/uuencode.c:228
-#, c-format
-msgid "fstat-ing %s"
-msgstr "Đang fstat (lấy các thông tin) %s"
-
-#: src/uuencode.c:254
-#, c-format
-msgid "Allocation failure"
-msgstr "Lỗi phân cấp bộ nhớ"
+#: src/uuencode.c:255
+msgid "file name"
+msgstr "tên tập tin"
 
 #: lib/error.c:188
 msgid "Unknown system error"
@@ -660,7 +1922,7 @@ msgstr "%s: tùy chọn \"%c%s\" không cho phép đối số\n"
 #: lib/getopt.c:685 lib/getopt.c:704
 #, c-format
 msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: tùy chọn '--%s' yêu cầu một đối số\n"
+msgstr "%s: tùy chọn “--%s” yêu cầu một đối số\n"
 
 #: lib/getopt.c:742 lib/getopt.c:745
 #, c-format
@@ -695,7 +1957,7 @@ msgstr "%s: tùy chọn \"-W %s\" không cho phép đối số\n"
 #: lib/getopt.c:1013 lib/getopt.c:1031
 #, c-format
 msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: tùy chọn '-W %s' yêu cầu một đối số\n"
+msgstr "%s: tùy chọn “-W %s” yêu cầu một đối số\n"
 
 #: lib/openat-die.c:38
 #, c-format
@@ -736,6 +1998,38 @@ msgstr "\""
 msgid "'"
 msgstr "\""
 
+#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
+#: lib/spawn-pipe.c:267
+#, c-format
+msgid "cannot create pipe"
+msgstr "không thể tạo đường ống"
+
+#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/wait-process.c:356
+#, c-format
+msgid "%s subprocess failed"
+msgstr "tiến trình con %s gặp lỗi"
+
+#: lib/w32spawn.h:43
+#, c-format
+msgid "_open_osfhandle failed"
+msgstr "_open_osfhandle gặp lỗi"
+
+#: lib/w32spawn.h:84
+#, c-format
+msgid "cannot restore fd %d: dup2 failed"
+msgstr "không thể phục hồi fd %d: dup2 gặp lỗi"
+
+#: lib/wait-process.c:223 lib/wait-process.c:255 lib/wait-process.c:317
+#, c-format
+msgid "%s subprocess"
+msgstr "tiến trình con %s"
+
+#: lib/wait-process.c:274 lib/wait-process.c:346
+#, c-format
+msgid "%s subprocess got fatal signal %d"
+msgstr "Tiến trình con %s đã nhận tín hiệu nghiêm trọng %d"
+
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
 msgstr "cạn bộ nhớ"
@@ -743,20 +2037,425 @@ msgstr "cạn bộ nhớ"
 #: lib/xstrtol-error.c:63
 #, c-format
 msgid "invalid %s%s argument '%s'"
-msgstr "%s%s không hợp lệ đối số '%s'"
+msgstr "%s%s không hợp lệ đối số “%s”"
 
 #: lib/xstrtol-error.c:68
 #, c-format
 msgid "invalid suffix in %s%s argument '%s'"
-msgstr "hậu tố không hợp lệ trong %s%s đối số '%s'"
+msgstr "hậu tố không hợp lệ trong %s%s đối số “%s”"
 
 #: lib/xstrtol-error.c:72
 #, c-format
 msgid "%s%s argument '%s' too large"
-msgstr "%s%s đối số '%s' quá lớn"
+msgstr "%s%s đối số “%s” quá lớn"
+
+#~ msgid "pipe[1]"
+#~ msgstr "đường-ống[1]"
+
+#~ msgid ""
+#~ "       --level-for-gzip=num   This is an alias for 'level-of-compression'\n"
+#~ "\n"
+#~ msgstr ""
+#~ "       --level-for-gzip=số    Đây là bí danh của “level-of-compression”\n"
+#~ "\n"
+
+#~ msgid "   -v, --version[=arg]        Output version information and exit\n"
+#~ msgstr "   -v, --version[=arg]        Xuất thông tin phiên bản rồi thoát\n"
+
+#~ msgid "   -h, --help                 Display extended usage information and exit\n"
+#~ msgstr "   -h, --help                 Hiển thị trợ giúp cách dùng sau đó thoát\n"
+
+#~ msgid "   -!, --more-help            Extended usage information passed thru pager\n"
+#~ msgstr "   -!, --more-help            Hiển thị nhiều thông tin hơn về cách dùng\n"
+
+#~ msgid "   -R, --save-opts[=arg]      Save the option state to a config file\n"
+#~ msgstr "   -R, --save-opts[=arg]      Ghi trạng tái tùy chọn ra tập tin cấu hình\n"
+
+#~ msgid ""
+#~ "   -r, --load-opts=str        Load options from a config file\n"
+#~ "                                - disabled as --no-load-opts\n"
+#~ "                                - may appear multiple times\n"
+#~ "\n"
+#~ msgstr ""
+#~ "   -r, --load-opts=str        Tải các tùy chọn từ tập tin cấu hình\n"
+#~ "                                - bị tắt bởi --no-load-opts\n"
+#~ "                                - có thê xuất hiện nhiều lần\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Shar supports reading a configuration file:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+#~ msgstr ""
+#~ "Shar hỗ trợ việc đọc tập tin cấu hình:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "Hãy báo cáo các lỗi tới:  <bug-gnu-utils@gnu.org>\n"
+
+#~ msgid ""
+#~ "shar (GNU sharutils) - create a shell archive\n"
+#~ "Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]\n"
+#~ msgstr ""
+#~ "shar (GNU sharutils) - tạo lưu trữ hệ vỏ tự giải nén\n"
+#~ "Cách dùng:  shar [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+
+#~ msgid "%s: option '%s' requires an argument\n"
+#~ msgstr "%s: tùy chọn “%s” cần một đối số\n"
+
+#~ msgid "More info with: \"%s %s\"\n"
+#~ msgstr "Xem thêm thông tin bằng lệnh: \"%s %s\"\n"
+
+#~ msgid "New file, remaining %s, "
+#~ msgstr "Tập tin mới, còn lại %s, "
+
+#~ msgid "Limit still %s\n"
+#~ msgstr "Vẫn còn có sự hạn chế %s\n"
+
+#~ msgid "In shar: remaining size %s\n"
+#~ msgstr "Trong shar: kích cỡ còn lại %s\n"
+
+#~ msgid "Starting `sh' process"
+#~ msgstr "Đang bắt đầu tiến trình \"sh\""
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Cách sử dụng: %s [TÙY_CHỌN]... [TẬP_TIN]...\n"
+
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
+#~ "  -c, --overwrite             pass -c to shar script for overwriting files\n"
+#~ "  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=STRING       split concatenated shars after STRING\n"
+#~ "  -f, --force                 same as `-c'\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If no FILE, standard input is read.\n"
+#~ msgstr ""
+#~ "Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
+#~ "\n"
+#~ "  -d, --directory=THƯ_MỤC   \tchuyển đổi sang thư mục này trước khi giải nén\n"
+#~ "  -c, --overwrite             gửi tùy chọn \"-c\" qua cho văn lệnh shar để ghi đè lên tập tin\n"
+#~ "\t\t(_ghi đè_)\n"
+#~ "  -e, --exit-0                bằng \"--split-at=\"exit 0\"\" (_thoát_)\n"
+#~ "  -E, --split-at=CHUỖI       chia tách các shar nối nhau sau chuỗi này (_chia tách ở_)\n"
+#~ "  -f, --force                 \tbằng \"-c\" (_ép buộc_)\n"
+#~ "      --help                  \thiển thị trợ giúp này rồi thoát (trợ giúp_)\n"
+#~ "      --version               \txuất thông tin phiên bản rồi thoát (_phiên bản_)\n"
+#~ "\n"
+#~ "Không có TẬP TIN thì đọc thiết bị nhập chuẩn.\n"
+
+#~ msgid "Report bugs to <%s>.\n"
+#~ msgstr "Hãy thông báo lỗi dịch nào cho <vi-VN@googlegroups.com>%.0s.\n"
+
+#~ msgid "Cannot chdir to `%s'"
+#~ msgstr "Không thể chdir (chuyển đổi thư mục) sang \"%s\""
+
+#~ msgid ""
+#~ "Copyright (C) %s Free Software Foundation, Inc.\n"
+#~ "This is free software; see the source for copying conditions.  There is NO\n"
+#~ "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+#~ msgstr ""
+#~ "Tác quyền © %s cùa Tổ chức Phần mềm Tự do.\n"
+#~ "Chương trình này là phần mềm tự do; xem mã nguồn để tìm điều kiện sao chép.\n"
+#~ "KHÔNG CÓ BẢO HÀNH GÌ CẢ, THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý\n"
+#~ "KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC VIỆC DỨT KHOÁT.\n"
+
+#~ msgid "allocate file buffer"
+#~ msgstr "cấp phát bộ đệm tập tin"
+
+#~ msgid ""
+#~ "'Uudecode' supports reading a configuration file:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+#~ msgstr ""
+#~ "“Uudecode” hỗ trợ việc đọc tập tin cấu hình:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "hãy gửi báo cáo lỗi đến:  <bug-gnu-utils@gnu.org>\n"
+
+#~ msgid ""
+#~ "uudecode (GNU sharutils) - decode an encoded file\n"
+#~ "Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]\n"
+#~ msgstr ""
+#~ "uudecode (GNU sharutils) - giải mã một tập tin\n"
+#~ "Cách dùng:  uudecode [ -<cờ> [<biến>] | --<tên>[{=| }<biến>] ]... [ tập-tin ... ]\n"
+
+#~ msgid ""
+#~ "uuencode supports reading a configuration file:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+#~ msgstr ""
+#~ "uuencode hỗ trợ việc đọc tập tin cấu hình:  $HOME/.sharrc\n"
+#~ "\n"
+#~ "hãy báo cáo lỗi cho:  <bug-gnu-utils@gnu.org>\n"
+
+#~ msgid ""
+#~ "uuencode (GNU sharutils) - encode a file into email friendly text\n"
+#~ "Usage:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+#~ msgstr ""
+#~ "uuencode (GNU sharutils) - mã hóa một tập tin thành thư kiểu thân thiện text\n"
+#~ "Cách dùng:  uuencode [ -<cờ> | --<tên> ]... [ tập-tin-vào ] tập-tin-ra\n"
+
+#~ msgid "create a shell archiv"
+#~ msgstr "tạo một “shell archiv”"
+
+#~ msgid "File %s (%s)"
+#~ msgstr "Tập tin %s (%s)"
+
+#, fuzzy
+#~ msgid "unpack a shar archiv"
+#~ msgstr "tạo một “shell archiv”"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: ./unshar [OPTION]... [FILE]...\n"
+#~ "Mandatory arguments to long options are mandatory for short options too.\n"
+#~ "\n"
+#~ "  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
+#~ "  -c, --overwrite             pass -c to shar script for overwriting files\n"
+#~ "  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
+#~ "  -E, --split-at=STRING       split concatenated shars after STRING\n"
+#~ "  -f, --force                 same as `-c'\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If no FILE, standard input is read.\n"
+#~ "Report bugs to <bug-gnu-utils@gnu.org>."
+#~ msgstr ""
+#~ "Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
+#~ "\n"
+#~ "  -d, --directory=THƯ_MỤC   \tchuyển đổi sang thư mục này trước khi giải nén\n"
+#~ "  -c, --overwrite             gửi tùy chọn \"-c\" qua cho văn lệnh shar để ghi đè lên tập tin\n"
+#~ "\t\t(_ghi đè_)\n"
+#~ "  -e, --exit-0                bằng \"--split-at=\"exit 0\"\" (_thoát_)\n"
+#~ "  -E, --split-at=CHUỖI       chia tách các shar nối nhau sau chuỗi này (_chia tách ở_)\n"
+#~ "  -f, --force                 \tbằng \"-c\" (_ép buộc_)\n"
+#~ "      --help                  \thiển thị trợ giúp này rồi thoát (trợ giúp_)\n"
+#~ "      --version               \txuất thông tin phiên bản rồi thoát (_phiên bản_)\n"
+#~ "\n"
+#~ "Không có TẬP TIN thì đọc thiết bị nhập chuẩn.\n"
+
+#~ msgid "decode an encoded fil"
+#~ msgstr "fil mã hóa và giải má"
+
+#~ msgid "%s: data following `=' padding character"
+#~ msgstr "%s: có dữ liệu theo ký tự đệm \"=\""
+
+#~ msgid "%s: illegal line"
+#~ msgstr "%s: dòng không hợp lệ"
+
+#~ msgid "no memory for %d byte allocation"
+#~ msgstr "không có bộ nhớ cho sự cấp phát %d byte"
+
+#~ msgid "encode a file into email friendly tex"
+#~ msgstr "mã hóa tập tin thành thư kiểu thân thiện tex"
+
+#, fuzzy
+#~ msgid ""
+#~ "uuencode (GNU sharutils) - encode a file into email friendly text - Ver. 4.13.3\n"
+#~ "USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name\n"
+#~ "\n"
+#~ "   -m, --base64               convert using base 64\n"
+#~ "   -e, --encode-file-name     encode the output file name\n"
+#~ "   -v, --version[=arg]        Output version information and exit\n"
+#~ "   -h, --help                 Display extended usage information and exit\n"
+#~ "   -!, --more-help            Extended usage information passed thru pager\n"
+#~ "   -R, --save-opts[=arg]      Save the option state to a config file\n"
+#~ "   -r, --load-opts=str        Load options from a config file\n"
+#~ "                                - disabled as --no-load-opts\n"
+#~ "                                - may appear multiple times\n"
+#~ "\n"
+#~ "Options are specified by doubled hyphens and their name or by a single\n"
+#~ "hyphen and the flag character.\n"
+#~ "\n"
+#~ "The following option preset mechanisms are supported:\n"
+#~ " - reading file $HOME/.sharrc\n"
+#~ "\n"
+#~ "'uuencode' is used to create an ASCII representation of a file that can be\n"
+#~ "sent over channels that may otherwise corrupt the data.  Specifically,\n"
+#~ "email cannot handle binary data and will often even insert a character when\n"
+#~ "the six character sequence \"\\nFrom \" is seen.\n"
+#~ "\n"
+#~ "'uuencode' will read 'in-file' if provided and otherwise read data from\n"
+#~ "standard in and write the encoded form to standard out.  The output will\n"
+#~ "begin with a header line for use by 'uudecode' giving it the resulting\n"
+#~ "suggested file 'output-name' and access mode.  If the 'output-name' is\n"
+#~ "specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
+#~ "standard out.\n"
+#~ "\n"
+#~ "'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+#~ "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+#~ "Ctl-D several times to terminate input.\n"
+#~ "\n"
+#~ "please send bug reports to:  bug-gnu-utils@gnu.org"
+#~ msgstr ""
+#~ "uuencode (GNU sharutils) - mã hóa tập tin thành dạng thư điện tử dạng chữ - Bản. 4.13.3\n"
+#~ "USAGE:  uuencode [ -<cờ> | --<tên> ]... [ tập-tin-đầu-vào ] tên-tập-tin-đầu ra\n"
+#~ "\n"
+#~ "   -m, --base64               chuyển đổi sử dụng cơ số 64\n"
+#~ "   -e, --encode-file-name     tên tập tin mã hóa xuất ra\n"
+#~ "   -v, --version[=arg]        Hiển thị thông tin về phiên bản rồi thoát\n"
+#~ "   -h, --help                 Hiển thị cách dùng rồi thoát\n"
+#~ "   -!, --more-help            Hiển thị cách dùng dạng đầy đủ\n"
+#~ "   -R, --save-opts[=arg]      Ghi lại tùy chọn vào tập tin cấu hình\n"
+#~ "   -r, --load-opts=str        Lấy các tùy chọn từ tập tin cấu hình\n"
+#~ "                                - tắt như là as --no-load-opts\n"
+#~ "                                - có thể xuất hiện nhiều lần\n"
+#~ "\n"
+#~ "Các tùy chọn được chỉ ra bằng cách dùng dấu gạch nối kép và tên của chúng hoặc bằng một dấu\n"
+#~ "gạch nối và chữ cái đại diện cho cờ.\n"
+#~ "\n"
+#~ "The following option preset mechanisms are supported:\n"
+#~ " - đọc tập tin $HOME/.sharrc\n"
+#~ "\n"
+#~ "“uuencode” được sử dụng để tạo ASCII representation of a file that can be\n"
+#~ "sent over channels that may otherwise corrupt the data.  Đặc biệt nhất là khi\n"
+#~ "thư điện tử không thể nhận dữ liệu nhị phân và sẽ thường là chèn một ký tự\n"
+#~ "the six character sequence \"\\nFrom \" is seen.\n"
+#~ "\n"
+#~ "“uuencode” will read “in-file” if provided and otherwise read data from\n"
+#~ "standard in and write the encoded form to standard out.  The output will\n"
+#~ "begin with a header line for use by “uudecode” giving it the resulting\n"
+#~ "suggested file “output-name” and access mode.  If the “output-name” is\n"
+#~ "specifically “/dev/stdout”. then “uudecode” will emit the decoded file to\n"
+#~ "standard out.\n"
+#~ "\n"
+#~ "“Note”: “uuencode” dùng đầu vào đã được đệm và không coi là được gõ vào\n"
+#~ "từ thiết bị tty.  Nếu chuỗi đầu vào là từ một thiết bị tty, bạn có thể gõ\n"
+#~ "Ctl-D nhiều lần để chấm dứt từ đầu vào.\n"
+#~ "\n"
+#~ "hãy gửi báo cáo lỗi cho:  bug-gnu-utils@gnu.org\n"
+#~ "Thông báo lỗi dịch cho: <translation-team-vi@lists.sourceforge.net>"
+
+#~ msgid "Write error"
+#~ msgstr "Lỗi ghi"
+
+#~ msgid "fopen-ing %s"
+#~ msgstr "Đang fopen (mở) %s"
+
+#~ msgid "fstat-ing %s"
+#~ msgstr "Đang fstat (lấy các thông tin) %s"
+
+#~ msgid "Allocation failure"
+#~ msgstr "Lỗi phân cấp bộ nhớ"
+
+#~ msgid "strdup of %d byte string failed\n"
+#~ msgstr "việc strdup (sao chuỗi) %d byte gặp lỗi\n"
+
+#~ msgid "  %s%s\n"
+#~ msgstr "  %s%s\n"
+
+#, fuzzy
+#~ msgid "Error %d (%s) from the pipe(2) syscall\n"
+#~ msgstr "gặp lỗi khi đọc từ một đường ống dẫn lệnh"
+
+#, fuzzy
+#~ msgid "ERROR:  %s option conflicts with the %s option\n"
+#~ msgstr "Nhãn xung đột với “Rx”"
+
+#~ msgid "%s(optionSaveState): error: cannot allocate %d bytes\n"
+#~ msgstr "%s(optionSaveState): lỗi: không thể cấp phát %d byte\n"
+
+#~ msgid "auto-options"
+#~ msgstr "tùy-chọn-tự-động"
+
+#~ msgid "program"
+#~ msgstr "chương trình"
+
+#~ msgid "\t\t\t\t- default option for unnamed options\n"
+#~ msgstr "\t\t\t\t- tùy chọn mặc định cho các tùy chọn chưa đặt tên\n"
+
+#~ msgid "\t\t\t\t- disabled as --%s\n"
+#~ msgstr "\t\t\t\t- tắt như --%s\n"
+
+#~ msgid "This option has been disabled"
+#~ msgstr "Tùy chọn này đã bị khóa"
+
+#~ msgid "ERROR:  only "
+#~ msgstr "LỖI:   chỉ"
+
+#~ msgid " - examining environment variables named %s_*\n"
+#~ msgstr " - đang kiểm tra các biến môi trường có tên %s_*\n"
+
+#, fuzzy
+#~ msgid "File error %d (%s) opening %s for loading options\n"
+#~ msgstr "Gặp lỗi khi mở tập tin ảnh khởi động “%s” để cập nhật"
+
+#~ msgid "fopen-ing file"
+#~ msgstr "tập tin fopen-ing"
+
+#~ msgid "stat-ing for directory"
+#~ msgstr "đang-thống-kê cho thư mục"
+
+#~ msgid "stat-ing for regular file"
+#~ msgstr "đang-thống-kê cho tập tin thông thường"
+
+#~ msgid "stat-ing for non-existant file"
+#~ msgstr "stat-ing cho tập tin chưa tồn tại"
+
+#~ msgid "open-ing file"
+#~ msgstr "đang-mở tập tin"
+
+#, fuzzy
+#~ msgid "fs error %d (%s) on %s %s for option %s\n"
+#~ msgstr "fserr %d (%s) thực hiện “%s” trên %s\n"
+
+#~ msgid "fs error %d (%s) on freopen\n"
+#~ msgstr "lỗi fs %d (%s) khi freopen\n"
+
+#~ msgid "%s: option `%s' requires an argument\n"
+#~ msgstr "%s: tùy chọn “%s” cần một đối số\n"
+
+#~ msgid "   Arg Option-Name    Description\n"
+#~ msgstr "  Đsố  Tên-Tchọn      Mô tả\n"
+
+#~ msgid "  Flg Arg Option-Name    Description\n"
+#~ msgstr "  Cờ  Đsố  Tên-Tchọn     Mô tả\n"
+
+#~ msgid "Write failure to output file"
+#~ msgstr "Ghi sai hỏng ra tập tin kết xuất"
+
+#~ msgid " - reading file %s"
+#~ msgstr " - đang đọc tập tin %s"
+
+#~ msgid "%sIt must be in the range:\n"
+#~ msgstr "%sNó phải trong một vùng:\n"
+
+#~ msgid "requires these options:\n"
+#~ msgstr "yêu cầu các tùy chọn:\n"
+
+#, fuzzy
+#~ msgid "   Arg Option-Name   Req?  Description\n"
+#~ msgstr "set [-abefhkmnptuvxBCHP] [-o tên-tùy-chọn] [--] [đối-số ...]"
+
+#~ msgid "  Flg Arg Option-Name   Req?  Description\n"
+#~ msgstr "  Cờ  Đsố  Tên-Tchọn    Req?  Mô tả\n"
+
+#~ msgid "-_^"
+#~ msgstr "-_^"
+
+#~ msgid "The valid \"%s\" option keywords are:\n"
+#~ msgstr "Các từ khóa tùy chọn \"%s\" hợp lệ là:\n"
+
+#~ msgid "These additional options are:"
+#~ msgstr "Các tuỳ chọn bổ xung thêm là:"
+
+#~ msgid "Usage: %s [FILE]...\n"
+#~ msgstr "Cách sử dụng: %s [TẬP_TIN]...\n"
+
+#~ msgid ""
+#~ "Mandatory arguments to long options are mandatory to short options too.\n"
+#~ "  -o, --output-file=FILE   direct output to FILE\n"
+#~ "      --help               display this help and exit\n"
+#~ "      --version            output version information and exit\n"
+#~ msgstr ""
+#~ "Tất cả đối số bắt buộc phải sử dụng với tùy chọn dài cũng bắt buộc với tùy chọn ngắn.\n"
+#~ "  -o, --output-file=TẬP_TIN   chuyển kết xuất ra tập tin này (_tập tin xuất_)\n"
+#~ "      --help               hiển thị _trợ giúp_ này rồi thoát\n"
+#~ "      --version            xuất thông tin _phiên bản_ rồi thoát\n"
 
 #~ msgid "-C is being deprecated, use -Z instead"
-#~ msgstr "« -C\" bị phản đối nên dùng \"-Z\" thay thế."
+#~ msgstr "“-C\" bị phản đối nên dùng \"-Z\" thay thế."
 
 #~ msgid "popen(3) on: %s"
 #~ msgstr "popen(3) trên: %s"
@@ -776,14 +2475,8 @@ msgstr "%s%s đối số '%s' quá lớn"
 #~ msgid "binary"
 #~ msgstr "nhị phân"
 
-#~ msgid "pipe(2) failed"
-#~ msgstr "pipe(2) bị lỗi"
-
 #~ msgid "Could not fork"
 #~ msgstr "Không thể tạo tiến trình con"
-
-#~ msgid "allocating output file name"
-#~ msgstr "đang cấp phát tên tập tin xuất"
 
 #~ msgid ""
 #~ "Mandatory arguments to long options are mandatory for short options too.\n"

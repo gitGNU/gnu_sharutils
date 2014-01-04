@@ -39,3 +39,4 @@ lib/
 ! lib/system.h
 ! lib/whoami.c
 cscope.*
+/TAGS

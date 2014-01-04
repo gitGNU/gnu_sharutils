@@ -61,8 +61,7 @@ init() {
 
     if test -x ../gnulib/gnulib-tool
     then gltool=$(cd ../gnulib >/dev/null; pwd)/gnulib-tool
-    else
-        gltool=$(which gnulib-tool)
+    else gltool=$(which gnulib-tool)
     fi
     test -x "${gltool}" || die "cannot locate gnulib-tool"
 
@@ -248,34 +247,37 @@ setup_configure() {
     gnulib_libs="
 	alloca
 	base64
+	crypto/md5
 	ctype
 	dirname
 	error
 	fdl
-	freopen
+	fflush
 	fork
+	freopen
+	fseeko
+	ftello
+	gendocs
 	getcwd
+	gethostname
 	getopt-gnu
 	gettext
-	gethostname
-	gendocs
 	idcache
 	inttostr
 	malloc-gnu
 	mkstemp
-	crypto/md5
 	mktime
 	pathmax
 	pipe
 	popen
 	quotearg
 	realloc-gnu
-	stpcpy
-	string
 	stddef
 	stdlib
+	stpcpy
 	strerror
 	strftime
+	string
 	uname
 	unlocked-io
 	waitpid

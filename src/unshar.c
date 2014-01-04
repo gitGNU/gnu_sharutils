@@ -195,7 +195,7 @@ next_line_is_valid (char const * name, FILE * file)
   for (;;)
     {
       char * buf;
-      position = ftell (file);
+      position = ftello (file);
       buf = fgets (rw_buffer, rw_base_size, file);
       if (buf == NULL)
         {
@@ -211,7 +211,7 @@ next_line_is_valid (char const * name, FILE * file)
   /* Win if line starts with a comment character of lower case letter.  */
   if (islower ((int)*rw_buffer) || (*rw_buffer == '#') || (*rw_buffer == ':'))
     {
-      fseek (file, position, SEEK_SET);
+      fseeko (file, position, SEEK_SET);
       return true;
     }
 
@@ -230,12 +230,12 @@ next_line_is_valid (char const * name, FILE * file)
 static bool
 find_archive (char const * name, FILE * file, off_t start)
 {
-  fseek (file, start, SEEK_SET);
+  fseeko (file, start, SEEK_SET);
 
   while (1)
     {
       /* Record position of the start of this line.  */
-      off_t position = ftell (file);
+      off_t position = ftello (file);
 
       /* Read next line, fail if no more and no previous process.  */
       if (!fgets (rw_buffer, BUFSIZ, file))
@@ -259,7 +259,7 @@ find_archive (char const * name, FILE * file, off_t start)
 
       if (looks_like_shell_code (rw_buffer))
 	{
-	  fseek (file, position, SEEK_SET);
+	  fseeko (file, position, SEEK_SET);
 	  return true;
 	}
 
@@ -365,11 +365,11 @@ unshar_file (const char * name, FILE * file)
   _setmode (fileno (file), _O_BINARY);
 #endif
 
-  curr_pos = ftell (file);
+  curr_pos = ftello (file);
   if (curr_pos < 0)
     {
       file = load_file (&tmp_fname, file);
-      curr_pos = ftell (file);
+      curr_pos = ftello (file);
       if (curr_pos < 0)
         fserr (UNSHAR_EXIT_CANNOT_CREATE, "ftell", tmp_fname);
     }
@@ -413,7 +413,7 @@ unshar_file (const char * name, FILE * file)
 	  if (text_in == NULL)
 	    break;
 
-          curr_pos = ftell (file);
+          curr_pos = ftello (file);
 	}
     }
 

@@ -73,7 +73,6 @@ intmax_t strtoimax ();
 #endif
 
 FILE *fdopen ();
-long ftell ();
 FILE *popen ();
 
 /* Global functions of the shar package.  */
