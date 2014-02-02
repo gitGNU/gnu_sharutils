@@ -16,8 +16,10 @@ static const char cright_years_z[] =
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
- * You should have received a copy of the GNU General Public License along
- * with this program.  If not, see <http://www.gnu.org/licenses/>.
+   You should have received a copy of the GNU General Public License along
+   with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+   --copyright-mark "(copyright \\(c\\)[ \t]+[*]/ *\")([12][90][0-9][0-9])"
  */
 
 /*
