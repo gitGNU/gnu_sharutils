@@ -2,42 +2,24 @@ GNU sharutils NEWS - User visible changes.
 Copyright (C) 1994-2013
     Free Software Foundation, Inc.
 
+Version 4.14.1 - April 2014, by Bruce Korb
+
+* translation updates
+* use ftello, fseeko and fflush
+* augment copyright marks in shar.c and shar-std.def
+* Happy 2014 copyright dates
+
+Version 4.14 - October 2013, by Bruce Korb
+
+* documentation, obscure usage, FSF address
+
+Version 4.13.5 - April 2013, by Bruce Korb
+
+* primarily, configuration cleanups.  Mostly for MinGW,
+  but some others, too.
+
 Version 4.13.4 - February 2013, by Bruce Korb
 
 * output file names may be encoded in the uuencoded file.
   By specifying '--encode' on the command line, the output
   file name will be base64 encoded in the uuencode file.
-
-Version 4.13.3 - January 2013, by Bruce Korb
-
-* fix malformatted docs
-* update automake
-
-Version 4.13.2 - January 2013, by Bruce Korb
-
-* add option and POSIXLY_CORRECT environment variable usage
-  for POSIX compliance on uudecode.
-* update docs
-* remove docs for non-existing scripts
-* update autotooling
-* remove more code maintained elsewhere (e.g. md5.c)
-
-Version 4.13 - December 2012, by Bruce Korb
-
-* POSIX-ism: they have determined that uudecode is not expected
-  to exit failure when the output file mode cannot be changed.
-  Either POSIXLY_CORRECT or --ignore-chmod will cause uudecode
-  to behave this way.
-
-* uudecode now has its options processed wut libopts.
-
-* recent autotools were used in bootstrap, fixing some build issues.
-
-
-
-Version 4.12 - August 2012, by Bruce Korb
-
-* options are now defined in option definition files
-* the code to process command line and config file options
-  is generated or obtained from a library
-* docs are now largely derived from these definition files
