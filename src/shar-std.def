@@ -1,5 +1,8 @@
 AutoGen Definitions options;
-/*
+
+/*--copyright-mark "(copyright \\(c\\)[ \t]+|date[ \t]*=[ \t]*\")" \
+ *  "([12][90][0-9][0-9])"
+
    Copyright (C) 1994-2014 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
@@ -15,7 +18,7 @@ AutoGen Definitions options;
    You should have received a copy of the GNU General Public License
  */
 copyright = {
-    date    = "1994-2013";
+    date    = "1994-2014";
     type    = gpl;
     owner   = "Free Software Foundation, Inc.";
     eaddr   = 'bug-gnu-utils@gnu.org';
