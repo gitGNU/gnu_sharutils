@@ -75,8 +75,11 @@ init() {
     mkdir m4
     ln tests/sharutils.m4 m4/.
 
-    sharutils_version=$(autoconf -t 'AC_INIT:$2' configure.ac.git)
-    sharutils_eaddr=$(  autoconf -t 'AC_INIT:$3' configure.ac.git)
+    sharutils_version=$(
+        cd ${progsrc} || die "$progsrc directory is invalid"
+        test -d .git  || die "$progsrc directory is invalid"
+        ${gldir}/build-aux/git-version-gen ${progdir}/sharutils.ver)
+    sharutils_eaddr=$(autoconf -t 'AC_INIT:$3' configure.ac.git)
 
     autoconf_version=$(
         autoconf --version | \
@@ -237,32 +240,7 @@ versioned_files() {
 	_EOVersion_
 }
 
-setup_configure() {
-    #  Make sure the gettext version is up to date.  You cannot use the
-    #  normal m4_define from version.m4 'cuz the gettext macros are
-    #  specially designed to not allow that.  So, we use sed.
-    #  While we're messing with it, update the automake version, too.
-    #
-    shar_ver=$(
-        cd ${progsrc}
-        ${gldir}/build-aux/git-version-gen ${progdir}/sharutils.ver)
-    sed -e "/^AM_INIT_AUTOMAKE/s/(\[[0-9.]*/([${automake_version}/" \
-        -e "/^AM_GNU_GETTEXT_VERSION/s/(\[[0-9.]*/([${gettext_version}/" \
-        -e "/^AC_INIT/s/@GIT-VERSION@/${shar_ver}/" \
-        configure.ac.git > configure.ac
-    exit 1
-    exec 3> po/LINGUAS
-    echo '# Set of available languages:' >&3
-    ls -1 po | sed -n 's/\.po$//p' | columns --spread=1 >&3
-    exec 3>&-
-
-    find . -type f | xargs chmod ugo-x
-    chmod -R go-w .
-    chmod a+x tests/*-[1-9] src/mk-help.sh bootstrap
-
-    shar_lib_hdrs=$(ls -1 lib | egrep -v '^(CVS|SCCS)$')
-    extra_dist=$'\n## begin sharutils extras\n\nEXTRA_DIST += \\\n'$(
-        echo "${shar_lib_hdrs}" | columns -I4 --spread=1 --line=' \')
+run_gnulib_tool() {
 
     gnulib_libs="
 	alloca
@@ -307,13 +285,46 @@ setup_configure() {
 	xstrtoimax
 "
 
-    echo autopoint --force >&2
-    autopoint --force > /dev/null 2>&1 || :
+    autopoint=$(command -v autopoint)
+    ${autopoint} --version | head -n2 >&2
+    ${autopoint} --force > /dev/null 2>&1 || :
     echo  ${gltool} --import  ... >&2
     {
       ${gltool} --import ${gnulib_libs} 2>&1
     } | sed '1,/^You may need to add #include/d' | \
       tee import-log.txt
+
+    for f in intl po
+    do
+        cp /usr/local/share/aclocal/${f}.m4 m4/.
+        touch -r /usr/local/share/aclocal/${f}.m4 m4/${f}.m4
+    done
+}
+
+setup_configure() {
+    #  Make sure the gettext version is up to date.  You cannot use the
+    #  normal m4_define from version.m4 'cuz the gettext macros are
+    #  specially designed to not allow that.  So, we use sed.
+    #  While we're messing with it, update the automake version, too.
+    #
+    sed -e "/^AM_INIT_AUTOMAKE/s/@AM-VER@/${automake_version}/" \
+        -e "/^AM_GNU_GETTEXT_VERSION/s/@GT-VER@/${gettext_version}/" \
+        -e "/^AC_INIT/s=@GIT-VERSION@=${sharutils_version}=" \
+        configure.ac.git > configure.ac
+
+    exec 3> po/LINGUAS
+    echo '# Set of available languages:' >&3
+    ls -1 po | sed -n 's/\.po$//p' | columns --spread=1 >&3
+    exec 3>&-
+
+    find . -type f | xargs chmod ugo-x
+    chmod -R go-w .
+    chmod a+x tests/*-[1-9] src/mk-help.sh bootstrap
+
+    shar_lib_hdrs=$(ls -1 lib | egrep -v '^(CVS|SCCS)$')
+    extra_dist=$'\n## begin sharutils extras\n\nEXTRA_DIST += \\\n'$(
+        echo "${shar_lib_hdrs}" | columns -I4 --spread=1 --line=' \')
+    run_gnulib_tool
 
     {
         sed '/^# *INVOKE_LIBOPTS_MACROS/q' configure.ac
@@ -331,7 +342,7 @@ setup_configure() {
 
     echo "${extra_dist}" >> lib/Makefile.am
     test -f fdl.texi && mv fdl.texi doc/.
-    AUTOPOINT=true autoreconf --force --install -Wall
+    AUTOPOINT=true autoreconf --verbose --force --install -Wall
 
     chmod ugo-x COPYING INSTALL doc/texinfo.tex
     rm -f m4/*~
