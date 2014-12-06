@@ -379,7 +379,7 @@ decode (char const * inname)
 	{
         bad_beginning:
 	  die (UUDECODE_EXIT_INVALID,
-               _("%s: Invalid or missing 'begin' line"), inname);
+               _("%s: Invalid or missing 'begin' line\n"), inname);
 	}
 
       if (strncmp (buf, "begin", 5) == 0)

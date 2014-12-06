@@ -25,7 +25,8 @@
 # replacement functions defined in libgnu.a.
 
 LDADD = $(top_builddir)/libopts/libopts.a $(top_builddir)/lib/libgnu.a \
-	$(LIBINTL) $(top_builddir)/lib/libgnu.a $(GETHOSTNAME_LIB) $(LIBSOCKET)
+	$(top_builddir)/lib/libgnu.a \
+	$(GETHOSTNAME_LIB) $(LIBSOCKET) $(LIB_CRYPTO) $(LIBINTL)
 
 shar_LDADD      = $(LDADD)
 unshar_LDADD    = $(LDADD)

@@ -1,5 +1,5 @@
 # Japanese messages for GNU sharutils
-# Copyright (C) 2000, 2010, 2011 Free Software Foundation, Inc.
+# Copyright (C) 2000, 2010, 2011, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 # Masahito Yamaga <yamaga@ipc.chiba-u.ac.jp>, 2002.
 # GOTO Masanori <gotom@debian.or.jp>, 2006.
@@ -11,14 +11,13 @@
 # SAKAI Kiyotaka <ksakai@netwk.ntt-at.co.jp>, 1995.
 # And taken over on 1999-11-04 by IIDA.
 #
-# Yasuaki Taniguchi <yasuakit@gmail.com>, 2010, 2011.
-#
+# Yasuaki Taniguchi <yasuakit@gmail.com>, 2010, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.11\n"
+"Project-Id-Version: sharutils 4.14\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2011-02-05 11:12-0800\n"
-"PO-Revision-Date: 2011-10-20 06:46+0900\n"
+"POT-Creation-Date: 2013-10-18 14:04-0700\n"
+"PO-Revision-Date: 2014-10-30 09:13+0100\n"
 "Last-Translator: Yasuaki Taniguchi <yasuakit@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -27,633 +26,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: lib/error.c:181
-msgid "Unknown system error"
-msgstr "不明なシステムエラー"
-
-#: lib/getopt.c:527 lib/getopt.c:543
+#: src/scribble.c:150
 #, c-format
-msgid "%s: option '%s' is ambiguous\n"
-msgstr "%s: オプション '%s' は曖昧です\n"
-
-#: lib/getopt.c:576 lib/getopt.c:580
-#, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: オプション '--%s' は引数を取ることができません\n"
-
-#: lib/getopt.c:589 lib/getopt.c:594
-#, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: オプション '%c%s' は引数を取ることができません\n"
-
-#: lib/getopt.c:637 lib/getopt.c:656
-#, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: オプション '--%s' は引数が必要です\n"
-
-#: lib/getopt.c:694 lib/getopt.c:697
-#, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: オプション '--%s' を認識できません\n"
-
-#: lib/getopt.c:705 lib/getopt.c:708
-#, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: オプション '%c%s' を認識できません\n"
-
-#: lib/getopt.c:757 lib/getopt.c:760
-#, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: 無効なオプション -- '%c'\n"
-
-#: lib/getopt.c:810 lib/getopt.c:827 lib/getopt.c:1035 lib/getopt.c:1053
-#, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: オプションには引数が必要です -- '%c'\n"
-
-#: lib/getopt.c:883 lib/getopt.c:899
-#, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: オプション '-W %s' は曖昧です\n"
-
-#: lib/getopt.c:923 lib/getopt.c:941
-#, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: オプション '-W %s' は引数を取ることができません\n"
-
-#: lib/getopt.c:962 lib/getopt.c:980
-#, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: オプション '-W %s' は引数が必要です\n"
-
-#: src/shar.c:416
-#, c-format
-msgid "printf formatting error:  %s\n"
-msgstr "printf 書式エラー: %s\n"
-
-#: src/shar.c:467
-#, c-format
-msgid "sharutils bug - no status\n"
-msgstr "sharutils バグ - 状態が不明です\n"
-
-#: src/shar.c:823
-#, c-format
-msgid "Too many directories for mkdir generation"
-msgstr "mkdirで生成するディレクトリの数が多すぎます"
-
-#: src/shar.c:906 src/shar.c:1573
-#, c-format
-msgid "Cannot access %s"
-msgstr "%s にアクセスできません"
-
-#: src/shar.c:956
-#, c-format
-msgid "-C is being deprecated, use -Z instead"
-msgstr "-C は廃止予定です。かわりに -Z を使用してください"
-
-#: src/shar.c:997 src/unshar.c:375
-#, c-format
-msgid "Cannot get current directory name"
-msgstr "現在のディレクトリー名を取得できません"
-
-#: src/shar.c:1066 src/shar.c:1388
-#, c-format
-msgid "New file, remaining %s, "
-msgstr "新規ファイル、残り %s、"
-
-#: src/shar.c:1067 src/shar.c:1389
-#, c-format
-msgid "Limit still %s\n"
-msgstr "まだ限度は %s です\n"
-
-#: src/shar.c:1090 src/shar.c:1471
-#, c-format
-msgid "Starting file %s\n"
-msgstr "ファイル %s を開始します\n"
-
-#: src/shar.c:1141
-#, c-format
-msgid "Could not popen 'wc' command:  %s\n"
-msgstr "'wc' コマンドに対する popen が出来ません:  %s\n"
-
-#: src/shar.c:1202
-#, c-format
-msgid "Cannot open file %s"
-msgstr "ファイル %s をオープンできません"
-
-#: src/shar.c:1257
-#, c-format
-msgid "popen(3) on: %s"
-msgstr "popen(3) の対象: %s"
-
-#: src/shar.c:1280
-#, c-format
-msgid "fopen(3) of file %s"
-msgstr "ファイル %s に対する fopen(3)"
-
-#: src/shar.c:1332
-msgid "text"
-msgstr "テキスト"
-
-#: src/shar.c:1342
-msgid "compressed"
-msgstr "compress で圧縮された"
-
-#: src/shar.c:1343
-msgid "gzipped"
-msgstr "gzip で圧縮された"
-
-#: src/shar.c:1344
-msgid "bzipped"
-msgstr "bzip で圧縮された"
-
-#: src/shar.c:1345
-msgid "binary"
-msgstr "バイナリ"
-
-#: src/shar.c:1356
-#, c-format
-msgid "pipe(2) failed"
-msgstr "pipe(2) に失敗しました"
-
-#: src/shar.c:1367
-#, c-format
-msgid "Could not fork"
-msgstr "fork できません"
-
-#: src/shar.c:1379
-#, c-format
-msgid "File %s (%s)"
-msgstr "ファイル %s (%s)"
-
-#: src/shar.c:1568
-#, c-format
-msgid "%s: Not a regular file"
-msgstr "%s: 通常ファイルではありません"
-
-#: src/shar.c:1588
-#, c-format
-msgid "In shar: remaining size %s\n"
-msgstr "shar中: 残りサイズ %s\n"
-
-#: src/shar.c:1606
-msgid "empty"
-msgstr "空"
-
-#: src/shar.c:1649
-#, c-format
-msgid "Saving %s (%s)"
-msgstr "%s (%s) を保存しています"
-
-#: src/shar.c:1869
-#, c-format
-msgid "allocating output file name"
-msgstr "出力ファイル名の割付け"
-
-#: src/shar.c:1875
-#, c-format
-msgid "Opening `%s'"
-msgstr "`%s' を開いています"
-
-#: src/shar.c:1886
-#, c-format
-msgid "Closing `%s'"
-msgstr "`%s' を閉じています"
-
-#: src/shar.c:1897 src/unshar.c:311 src/uudecode.c:460 src/uuencode.c:202
-#, c-format
-msgid "Try `%s --help' for more information.\n"
-msgstr "詳しくは`%s --help'を実行してください。\n"
-
-#: src/shar.c:1901 src/unshar.c:315
-#, c-format
-msgid "Usage: %s [OPTION]... [FILE]...\n"
-msgstr "使用法: %s [OPTION]... [FILE]...\n"
-
-#: src/shar.c:1902
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"Giving feedback:\n"
-"      --help              display this help and exit\n"
-"      --version           output version information and exit\n"
-"  -q, --quiet, --silent   do not output verbose messages locally\n"
-"\n"
-"Selecting files:\n"
+msgid "could not allocate %u bytes of scribble space"
 msgstr ""
-"長いオプションに必須の引数は短いオプションにも必須です。\n"
-"\n"
-"フィードバックの提供:\n"
-"      --help              このヘルプを表示して終了する\n"
-"      --version           バージョン情報を表示して終了する\n"
-"  -q, --quiet, --silent   冗長なメッセージをローカルに出力しない\n"
-"\n"
-"ファイルの選択:\n"
-
-#: src/shar.c:1913
-msgid "  -p, --intermix-type     allow -[BTzZ] in file lists to change mode\n"
-msgstr "  -p, --intermix-type     ファイル一覧にモードを変更するための -[BTzZ] を許可する\n"
-
-#: src/shar.c:1917
-msgid "  -p, --intermix-type     allow -[BTz] in file lists to change mode\n"
-msgstr "  -p, --intermix-type     ファイル一覧にモードを変更するための -[BTz] を許可する\n"
-
-#: src/shar.c:1921
-msgid ""
-"  -S, --stdin-file-list   read file list from standard input\n"
-"\n"
-"Splitting output:\n"
-"  -o, --output-prefix=PREFIX    output to file PREFIX.01 through PREFIX.NN\n"
-"  -l, --whole-size-limit=SIZE   split archive, not files, to SIZE kilobytes\n"
-"  -L, --split-size-limit=SIZE   split archive, or files, to SIZE kilobytes\n"
-"\n"
-"Controlling the shar headers:\n"
-"  -n, --archive-name=NAME   use NAME to document the archive\n"
-"  -s, --submitter=ADDRESS   override the submitter name\n"
-"  -a, --net-headers         output Submitted-by: & Archive-name: headers\n"
-"  -c, --cut-mark            start the shar with a cut line\n"
-"  -t, --translate           translate messages in the script\n"
-"\n"
-"Selecting how files are stocked:\n"
-"  -M, --mixed-uuencode         dynamically decide uuencoding (default)\n"
-"  -T, --text-files             treat all files as text\n"
-"  -B, --uuencode               treat all files as binary, use uuencode\n"
-"  -z, --gzip                   gzip and uuencode all files\n"
-"  -g, --level-for-gzip=LEVEL   pass -LEVEL (default 9) to gzip\n"
-"  -j, --bzip2                  bzip2 and uuencode all files\n"
-msgstr ""
-"  -S, --stdin-file-list   ファイル一覧を標準入力から読み込む\n"
-"\n"
-"出力の分割:\n"
-"  -o, --output-prefix=PREFIX    ファイル PREFIX.01 から PREFIX.NN までに出力する\n"
-"  -l, --whole-size-limit=SIZE   SIZE キロバイト毎に (ファイルではなく) 書庫を分割する\n"
-"  -L, --split-size-limit=SIZE   SIZE キロバイト毎に書庫またはファイルを分割する\n"
-"\n"
-"sharヘッダーの制御:\n"
-"  -n, --archive-name=NAME   書庫名としてNAMEを使用する\n"
-"  -s, --submitter=ADDRESS   作成者名を指定する\n"
-"  -a, --net-headers         Submitted-by: および Archive-name: ヘッダを出力する\n"
-"  -c, --cut-mark            cut 行で shar を開始する\n"
-"  -t, --translate           スクリプト内のメッセージを翻訳する\n"
-"\n"
-"格納方法の選択:\n"
-"  -M, --mixed-uuencode         uuencode をするかどうか動的に決める (デフォルト)\n"
-"  -T, --text-files             すべてのファイルをテキストとして扱う\n"
-"  -B, --uuencode               すべてのファイルをバイナリーとして扱い、uuencodeを使用する\n"
-"  -z, --gzip                   すべてのファイルを gzip して uuencode する\n"
-"  -g, --level-for-gzip=LEVEL   gzip に -LEVEL (デフォルトは 9) を渡す\n"
-"  -j, --bzip2                  すべてのファイルを bzip2 して uuencode する\n"
-
-#: src/shar.c:1945
-msgid ""
-"  -Z, --compress               compress and uuencode all files\n"
-"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
-msgstr ""
-"  -Z, --compress               すべてのファイルを compress および uuencode する\n"
-"  -b, --bits-per-code=BITS     compress に -bBITS (デフォルトは 12) を渡す\n"
-
-#: src/shar.c:1950
-msgid ""
-"\n"
-"Protecting against transmission:\n"
-"  -w, --no-character-count      do not use `wc -c' to check size\n"
-"  -D, --no-md5-digest           do not use `md5sum' digest to verify\n"
-"  -F, --force-prefix            force the prefix character on every line\n"
-"  -d, --here-delimiter=STRING   use STRING to delimit the files in the shar\n"
-"\n"
-"Producing different kinds of shars:\n"
-"  -V, --vanilla-operation   produce very simple and undemanding shars\n"
-"  -P, --no-piping           exclusively use temporary files at unshar time\n"
-"  -x, --no-check-existing   blindly overwrite existing files\n"
-"  -X, --query-user          ask user before overwriting files (not for Net)\n"
-"  -m, --no-timestamp        do not restore file modification dates & times\n"
-"  -Q, --quiet-unshar        avoid verbose messages at unshar time\n"
-"  -f, --basename            restore in one directory, despite hierarchy\n"
-"      --no-i18n             do not produce internationalized shell script\n"
-msgstr ""
-"\n"
-"伝送に対する保護:\n"
-"  -w, --no-character-count      サイズのチェックに`wc -c'を使用しない\n"
-"  -D, --no-md5-digest           ダイジェストのチェックに`md5sum'を使用しない\n"
-"  -F, --force-prefix            接頭文字を各行の前に置く\n"
-"  -d, --here-delimiter=STRING   shar 内でファイル分割の区切りに STRING を使用する\n"
-"\n"
-"別種類のsharの生成:\n"
-"  -V, --vanilla-operation   かなり簡潔でゆるいsharを生成\n"
-"  -P, --no-piping           unshar時に排他的な一時ファイルを使用\n"
-"  -x, --no-check-existing   ファイルが存在しても必ず上書き\n"
-"  -X, --query-user          ファイルの上書き時にユーザーに問合せ (not for Net)\n"
-"  -m, --no-timestamp        ファイルの更新日時を戻さない\n"
-"  -Q, --quiet-unshar        unshar時の確認メッセージを省略\n"
-"  -f, --basename            階層化せずに、1つのディレクトリーに戻す\n"
-"      --no-i18n             国際化されたシェル・スクリプトを生成しない\n"
-
-#: src/shar.c:1968
-msgid ""
-"\n"
-"Option -o is required with -l or -L, option -n is required with -a.\n"
-msgstr ""
-"\n"
-"オプション -l または -L には -o が必要です。オプション -a には -n が必要です。\n"
-
-#: src/shar.c:1972
-msgid "Option -g implies -z, option -b implies -Z.\n"
-msgstr ""
-"オプション -g では -z が暗黙的に使用されます。オプション -b では -Z が暗黙\n"
-"的に使用されます。\n"
-
-#: src/shar.c:1975
-msgid "Option -g implies -z.\n"
-msgstr "オプション -g では -z が暗黙的に使用されます。\n"
-
-#. TRANSLATORS: add the contact address for your translation team!
-#: src/shar.c:1979 src/unshar.c:330 src/uudecode.c:471 src/uuencode.c:212
-#, c-format
-msgid "Report bugs to <%s>.\n"
-msgstr ""
-"バグを発見したら <%s> に報告して下さい。\n"
-"翻訳に関するバグは<translation-team-ja@lists.sourceforge.net>に報告してください。\n"
-
-#: src/shar.c:1996
-#, c-format
-msgid "invalid file size limit `%s'"
-msgstr "無効なファイルサイズ上限 `%s'"
-
-#: src/shar.c:2032
-#, c-format
-msgid "invalid format (count field too wide): '%s'\n"
-msgstr "無効な形式 (カウント欄が広過ぎます): '%s'\n"
-
-#: src/shar.c:2121
-#, c-format
-msgid "DEBUG was not selected at compile time"
-msgstr "コンパイル時に DEBUG が選択されていません"
-
-#: src/shar.c:2141
-#, c-format
-msgid "Hard limit %s\n"
-msgstr "ハードリミットが %s です\n"
-
-#: src/shar.c:2183
-#, c-format
-msgid "This system doesn't support -Z ('compress'), use -z instead"
-msgstr "このシステムでは -Z ('compress') がサポートされません。代わりに -z を使用してください。"
-
-#: src/shar.c:2216
-#, c-format
-msgid "Soft limit %s\n"
-msgstr "ソフトリミットが %s です\n"
-
-#: src/shar.c:2231
-#, c-format
-msgid "illegal output prefix\n"
-msgstr "無効な出力接頭辞です\n"
-
-#: src/shar.c:2278 src/unshar.c:413 src/uudecode.c:509 src/uuencode.c:252
-#, c-format, no-wrap
-msgid ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-msgstr ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
-"This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-"訳注: 非常に重要な文章のため、原文を残しています。\n"
-"  -- 参考訳\n"
-"これは、フリー・ソフトウェアです。複製の条件は、ソースをご覧ください。\n"
-"一切の保証はありません。商業性や特定目的適合性に関する保証すらありません。\n"
-
-#: src/shar.c:2347
-#, c-format
-msgid "WARNING: No user interaction in vanilla mode"
-msgstr "警告: 簡素モードではユーザーとの対話はありません"
-
-#: src/shar.c:2359
-#, c-format
-msgid "WARNING: Non-text storage options overridden"
-msgstr "警告: テキストでない格納オプションは、上書きされました"
-
-#: src/shar.c:2388
-#, c-format
-msgid "Cannot use -a option without -n"
-msgstr "-n オプションを指定しない場合は、-a オプションを使用できません"
-
-#: src/shar.c:2394
-#, c-format
-msgid "Cannot use -l or -L option without -o"
-msgstr "-o オプションを指定しない場合は、 -l または -L オプションを使用できません"
-
-#: src/shar.c:2436
-#, c-format
-msgid "No input files"
-msgstr "入力ファイルがありません"
-
-#: src/shar.c:2448
-#, c-format
-msgid "PLEASE avoid -X shars on Usenet or public networks"
-msgstr "Usenetや公衆網では、-X sharを*是非とも使用しないで*ください"
-
-#: src/shar.c:2514
-#, c-format
-msgid "Created %d files\n"
-msgstr "%d 個のファイルを作成しました\n"
-
-#: src/unshar.c:167
-#, c-format
-msgid "Found no shell commands in %s"
-msgstr "%s 内にはシェルコマンドがありません"
-
-#: src/unshar.c:183
-#, c-format
-msgid "%s looks like raw C code, not a shell archive"
-msgstr "%s は C のコードそのものです。シェル書庫ではありません"
-
-#: src/unshar.c:219
-#, c-format
-msgid "Found no shell commands after `cut' in %s"
-msgstr "%s 内の `cut' 以降にシェルコマンドがありません"
-
-#: src/unshar.c:240
-#, c-format
-msgid "%s is probably not a shell archive"
-msgstr "%s は、おそらくシェル書庫ではありません"
-
-#: src/unshar.c:241
-#, c-format
-msgid "The `cut' line was followed by: %s"
-msgstr "%s に続いて `cut' 行があります"
-
-#: src/unshar.c:267
-#, c-format
-msgid "Starting `sh' process"
-msgstr "`sh' プロセスを開始します"
-
-#: src/unshar.c:316
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-"\n"
-"  -d, --directory=DIRECTORY   change to DIRECTORY before unpacking\n"
-"  -c, --overwrite             pass -c to shar script for overwriting files\n"
-"  -e, --exit-0                same as `--split-at=\"exit 0\"'\n"
-"  -E, --split-at=STRING       split concatenated shars after STRING\n"
-"  -f, --force                 same as `-c'\n"
-"      --help                  display this help and exit\n"
-"      --version               output version information and exit\n"
-"\n"
-"If no FILE, standard input is read.\n"
-msgstr ""
-"長い形式のオプションで必須な引数は、短い形式のオプションでも必須です。\n"
-"\n"
-"  -d, --directory=DIRECTORY   展開する前に DIRECTORY に移動する\n"
-"  -c, --overwrite             ファイルを上書きするよう、-cをsharに渡す\n"
-"  -e, --exit-0                `--split-at=\"exit 0\"'と同じ\n"
-"  -E, --split-at=STRING       つながったsharをSTRINGの後ろで分割\n"
-"  -f, --force                 `-c'と同じ\n"
-"      --help                  このヘルプを表示して終了\n"
-"      --version               バージョン情報を表示して終了\n"
-"\n"
-"FILE を指定しない場合、標準入力から読み込まれます\n"
-
-#: src/unshar.c:393
-#, c-format
-msgid "Cannot chdir to `%s'"
-msgstr "`%s' に chdir できません"
-
-#: src/unshar.c:444 src/unshar.c:506
-#, c-format
-msgid "allocate file name buffer"
-msgstr "ファイル名バッファの割り当て"
-
-#: src/unshar.c:465
-msgid "standard input"
-msgstr "標準入力"
-
-#: src/unshar.c:527
-#, c-format
-msgid "allocate file buffer"
-msgstr "ファイルバッファの割り当て"
-
-#: src/uudecode.c:113 src/uudecode.c:444
-#, c-format
-msgid "%s: Write error"
-msgstr "%s: 書き込みエラー"
-
-#: src/uudecode.c:130 src/uudecode.c:217
-#, c-format
-msgid "%s: Short file"
-msgstr "%s: 短いファイル"
-
-#: src/uudecode.c:166
-#, c-format
-msgid "%s: No `end' line"
-msgstr "%s: `end' 行がありません"
-
-#: src/uudecode.c:226
-#, c-format
-msgid "%s: data following `=' padding character"
-msgstr "%s: 詰め文字の`='に続くデータ"
-
-#: src/uudecode.c:250 src/uudecode.c:258 src/uudecode.c:272
-#, c-format
-msgid "%s: illegal line"
-msgstr "%s: 不正な行"
-
-#: src/uudecode.c:302
-#, c-format
-msgid "%s: Illegal file name: %s"
-msgstr "%s: 不正なファイル名: %s"
-
-#: src/uudecode.c:309
-#, c-format
-msgid "No user `%s'"
-msgstr "`%s' というユーザーは存在しません"
-
-#: src/uudecode.c:320
-#, c-format
-msgid "no memory for %d byte allocation"
-msgstr "%d バイト割り当てるのに必要なメモリがありません"
-
-#: src/uudecode.c:345
-#, c-format
-msgid "cannot access %s"
-msgstr "%s にアクセスできません"
-
-#: src/uudecode.c:353
-#, c-format
-msgid "freopen of %s"
-msgstr "%s に対する freopen"
-
-#: src/uudecode.c:359
-#, c-format
-msgid "chmod of %s"
-msgstr "%s に対する chmod"
-
-#: src/uudecode.c:385
-#, c-format
-msgid "%s: No `begin' line"
-msgstr "%s: `begin' 行がありません"
-
-#: src/uudecode.c:464
-#, c-format
-msgid "Usage: %s [FILE]...\n"
-msgstr "使用法: %s [FILE]...\n"
-
-#: src/uudecode.c:465
-msgid ""
-"Mandatory arguments to long options are mandatory to short options too.\n"
-"  -o, --output-file=FILE   direct output to FILE\n"
-"      --help               display this help and exit\n"
-"      --version            output version information and exit\n"
-msgstr ""
-"長形式のオプションで必須な引数は、短形式のオプションでも必須です。\n"
-"  -o, --output-file=FILE   直接 FILE に出力する\n"
-"      --help               このヘルプを表示して終了する\n"
-"      --version            バージョン情報を表示して終了する\n"
-
-#: src/uudecode.c:533
-#, c-format
-msgid ""
-"You cannot specify an output file when processing\n"
-"multiple input files.\n"
-msgstr "複数の入力ファイルを処理する時に単一の出力ファイルを指定できません。\n"
-
-#: src/uuencode.c:133 src/uuencode.c:301 src/uuencode.c:308
-#, c-format
-msgid "Write error"
-msgstr "書込みエラー"
-
-#: src/uuencode.c:155 src/uuencode.c:186 src/uuencode.c:188
-#, c-format
-msgid "Read error"
-msgstr "読取りエラー"
-
-#: src/uuencode.c:206
-#, c-format
-msgid "Usage: %s [INFILE] REMOTEFILE\n"
-msgstr "使用法: %s [INFILE] REMOTEFILE\n"
-
-#: src/uuencode.c:207
-msgid ""
-"\n"
-"  -m, --base64    use base64 encoding as of RFC1521\n"
-"      --help      display this help and exit\n"
-"      --version   output version information and exit\n"
-msgstr ""
-"\n"
-"  -m, --base64    RFC1521 で定義されている base64 符号化を使用する\n"
-"      --help      このヘルプを表示して終了する\n"
-"      --version   バージョン情報を表示して終了する\n"
-
-#: src/uuencode.c:277
-#, c-format
-msgid "fopen-ing %s"
-msgstr "%s に対して fopen を実行しています"
-
-#: src/uuencode.c:279
-#, c-format
-msgid "fstat-ing %s"
-msgstr "%s に対して fstat を実行しています"
 
 #. TRANSLATORS:  This is a phony function generated for the purpose of
 #. constructing the strings to be extracted for translation.  Each string
@@ -662,243 +38,2401 @@ msgstr "%s に対して fstat を実行しています"
 #. the shar-generated shell script so the shar user can create shar archives
 #. with messages localized for one locale.
 #.
-#: src/scripts.x:398
+#: src/scripts.x:449
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
 msgstr "注意: md5sumの検証をしません。GNU coreutils のインストールを検討してください。"
 
-#: src/scripts.x:399
+#: src/scripts.x:450
+#, fuzzy
+#| msgid ""
+#| "WARNING: not restoring timestamps.  Consider getting and\n"
+#| "installing GNU `touch', distributed in GNU coreutils..."
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
-"installing GNU `touch', distributed in GNU coreutils..."
+"installing GNU 'touch', distributed in GNU coreutils..."
 msgstr ""
 "警告: タイムスタンプを復元しません。 GNU coreutils に含まれる GNU `touch' を\n"
 "入手してインストールすることを検討してください。"
 
-#: src/scripts.x:401
+#: src/scripts.x:452
 #, c-format
 msgid "lock directory %s exists"
 msgstr "ロック用ディレクトリ %s が存在しています"
 
-#: src/scripts.x:402
+#: src/scripts.x:453
 #, c-format
 msgid "failed to create %s lock directory"
 msgstr "ロック用ディレクトリ %s の作成に失敗しました"
 
-#: src/scripts.x:403
+#: src/scripts.x:454
 #, c-format
 msgid "x - created lock directory %s."
 msgstr "x - ロック用ディレクトリ %s を作成しました。"
 
-#: src/scripts.x:404
+#: src/scripts.x:455
 #, c-format
 msgid "x - failed to create lock directory %s."
 msgstr "x - ロック用ディレクトリ %s の作成に失敗しました。"
 
-#: src/scripts.x:405
+#: src/scripts.x:456
 #, c-format
 msgid "x - created directory %s."
 msgstr "x - ディレクトリ %s を作成しました。"
 
-#: src/scripts.x:406
+#: src/scripts.x:457
 #, c-format
 msgid "x - failed to create directory %s."
 msgstr "x - ディレクトリ %s の作成に失敗しました。"
 
-#: src/scripts.x:407
+#: src/scripts.x:458
 msgid "yes"
 msgstr "yes"
 
-#: src/scripts.x:408
+#: src/scripts.x:459
 msgid "overwrite this file"
 msgstr "このファイルを上書きする"
 
-#: src/scripts.x:409
+#: src/scripts.x:460
 msgid "no"
 msgstr "no"
 
-#: src/scripts.x:410
+#: src/scripts.x:461
 msgid "skip this file"
 msgstr "このファイルをスキップする"
 
-#: src/scripts.x:411
+#: src/scripts.x:462
 msgid "all"
 msgstr "all"
 
-#: src/scripts.x:412
+#: src/scripts.x:463
 msgid "overwrite all files"
 msgstr "全てのファイルを上書きする"
 
-#: src/scripts.x:413
+#: src/scripts.x:464
 msgid "none"
 msgstr "none"
 
-#: src/scripts.x:414
+#: src/scripts.x:465
 msgid "overwrite no files"
 msgstr "ファイルを全く上書きしない"
 
-#: src/scripts.x:415
+#: src/scripts.x:466
 msgid "help"
 msgstr "help"
 
-#: src/scripts.x:416
+#: src/scripts.x:467
 msgid "explain choices"
 msgstr "選択肢に関して解説する"
 
-#: src/scripts.x:417
+#: src/scripts.x:468
 msgid "quit"
 msgstr "quit"
 
-#: src/scripts.x:418
+#: src/scripts.x:469
 msgid "exit immediately"
 msgstr "即時終了する"
 
-#: src/scripts.x:419
-msgid ""
-"Archives must be unpacked in sequence!\n"
-"Please unpack part `cat ${lock_dir}/seq` next."
-msgstr ""
-"書庫は順番通りに展開しなければいけません!\n"
-"次に `cat ${lock_dir}/seq` 番目のパートを展開してください。"
-
-#: src/scripts.x:421
+#: src/scripts.x:470
 #, c-format
 msgid "restore of %s failed"
 msgstr "%s の復元に失敗しました"
 
-#: src/scripts.x:422
+#: src/scripts.x:471
+#, fuzzy, c-format
+#| msgid "chmod of %s"
+msgid "  chmod %04o %s\n"
+msgstr "%s に対する chmod"
+
+#: src/scripts.x:472
 #, c-format
 msgid "End of part %d, continue with part %d"
 msgstr "%d 番目のパートが終了しました。%d 番目のパートで継続します。"
 
-#: src/scripts.x:423
+#: src/scripts.x:473
 #, c-format
 msgid "End of %s part %d"
 msgstr "%s の %d 番目のパートが終了しました"
 
-#: src/scripts.x:424
+#: src/scripts.x:474
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
 msgstr "復元に関する警告: %s のサイズが %s ではありません"
 
-#: src/scripts.x:425
+#: src/scripts.x:475 src/shar.c:1451
 msgid "(text)"
 msgstr "(テキスト)"
 
-#: src/scripts.x:426
+#: src/scripts.x:476
 msgid "(compressed)"
 msgstr "(compressされています)"
 
-#: src/scripts.x:427
+#: src/scripts.x:477
 msgid "(gzipped)"
 msgstr "(gzipされています)"
 
-#: src/scripts.x:428
+#: src/scripts.x:478
 msgid "(bzipped)"
 msgstr "(bzipされています)"
 
-#: src/scripts.x:429
+#: src/scripts.x:479
 msgid "(binary)"
 msgstr "(バイナリ)"
 
-#: src/scripts.x:430
+#: src/scripts.x:480
 msgid "archive"
 msgstr "書庫"
 
-#: src/scripts.x:431
+#: src/scripts.x:481
 #, c-format
 msgid "File %s is continued in part %d"
 msgstr "ファイル %s は %d 番目のパートに続きます"
 
-#: src/scripts.x:432
+#: src/scripts.x:482
 msgid "Please unpack part 1 first!"
 msgstr "1 番目のパートを最初に展開してください!"
 
-#: src/scripts.x:433
+#: src/scripts.x:483
 msgid "Please unpack part ${shar_sequence} next!"
 msgstr "次に ${shar_sequence} 番目のパートを展開してください!"
 
-#: src/scripts.x:434
+#: src/scripts.x:484
 #, c-format
 msgid "x - STILL SKIPPING %s"
 msgstr "x - %s をまだスキップ中です"
 
-#: src/scripts.x:435
+#: src/scripts.x:485
 #, c-format
 msgid "continuing file %s"
 msgstr "ファイル %s に続いています"
 
-#: src/scripts.x:436
+#: src/scripts.x:486
 msgid "(empty)"
 msgstr "(空)"
 
-#: src/scripts.x:437
+#: src/scripts.x:487
 #, c-format
 msgid "x - overwriting %s"
 msgstr "x - %s を上書き中です"
 
-#: src/scripts.x:438
+#: src/scripts.x:488
 #, c-format
 msgid "overwrite %s"
 msgstr "%s を上書きします"
 
-#: src/scripts.x:439
+#: src/scripts.x:489
 #, c-format
 msgid "SKIPPING %s"
 msgstr "%s をスキップしています"
 
-#: src/scripts.x:440
+#: src/scripts.x:490
 msgid "extraction aborted"
 msgstr "抽出を中断します"
 
-#: src/scripts.x:441
+#: src/scripts.x:491
 #, c-format
 msgid "x - SKIPPING %s (file already exists)"
 msgstr "x - %s をスキップしています (ファイルは既に存在しています)"
 
-#: src/scripts.x:442
+#: src/scripts.x:492
 #, c-format
 msgid "x - extracting %s %s"
 msgstr "x - %s %s を抽出中です"
 
-#: src/scripts.x:443
+#: src/scripts.x:493
 #, c-format
 msgid "File %s is complete"
 msgstr "ファイル %s が完了しました"
 
-#: src/scripts.x:444
+#: src/scripts.x:494
 #, c-format
 msgid "uudecoding file %s"
 msgstr "ファイル %s を uudecode しています"
 
-#: src/scripts.x:445
-#, c-format
-msgid "uncompressing file %s"
-msgstr "ファイル %s を uncompress しています"
-
-#: src/scripts.x:446
-#, c-format
-msgid "gunzipping file %s"
-msgstr "ファイル %s を gunzip しています"
-
-#: src/scripts.x:447
-#, c-format
-msgid "bunzipping file %s"
-msgstr "ファイル %s を bunzip しています"
-
-#: src/scripts.x:448
+#: src/scripts.x:495
 msgid "MD5 check failed"
 msgstr "MD5 の確認に失敗しました"
 
-#: src/scripts.x:449
+#: src/scripts.x:496
 msgid "You have unpacked the last part"
 msgstr "最後のパートを展開しました"
 
-#: src/scripts.x:450
+#: src/scripts.x:497
 #, c-format
 msgid "x - removed lock directory %s."
 msgstr "x - ロック用ディレクトリ %s を削除しました。"
 
-#: src/scripts.x:451
+#: src/scripts.x:498
 #, c-format
 msgid "x - failed to remove lock directory %s."
 msgstr "x - ロック用ディレクトリ %s の削除に失敗しました。"
+
+#: src/shar-opts.c:1870
+#, fuzzy, c-format
+#| msgid "Cannot open file %s"
+msgid "Cannot reopen %s as stdin"
+msgstr "ファイル %s をオープンできません"
+
+#: src/shar-opts.c:1990
+msgid "shar usage error:\n"
+msgstr ""
+
+#: src/shar-opts.c:2027
+msgid "shar fatal error:\n"
+msgstr ""
+
+#: src/shar-opts.c:2064 src/unshar-opts.c:738 src/uudecode-opts.c:512
+#: src/uuencode-opts.c:463
+#, c-format
+msgid "fserr %d (%s) performing '%s' on %s\n"
+msgstr ""
+
+#: src/shar-opts.c:2189 src/unshar-opts.c:863 src/uudecode-opts.c:637
+#: src/uuencode-opts.c:588
+#, fuzzy
+#| msgid "no memory for %d byte allocation"
+msgid "No memory for duping translated strings\n"
+msgstr "%d バイト割り当てるのに必要なメモリがありません"
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the sharOptions structure noted in the
+#. comments below.  The literal text is defined in shar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. shar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via sharOptions.pzCopyright
+#: src/shar-opts.c:2257
+msgid ""
+"shar (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+
+#: src/shar-opts.c:2264
+msgid ""
+"shar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2268
+msgid ""
+"shar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2272 src/unshar-opts.c:946 src/uudecode-opts.c:720
+#: src/uuencode-opts.c:671
+msgid ""
+"You should have received a copy of the GNU General Public License along\n"
+"with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+
+#: src/shar-opts.c:2276
+#, c-format
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+
+#: src/shar-opts.c:2280
+msgid ""
+"If no 'file's are specified, the list of input files is read from standard\n"
+"input.  Standard input must not be a terminal.\n"
+msgstr ""
+
+#: src/shar-opts.c:2284
+msgid ""
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2291 src/shar-opts.c:2385
+msgid ""
+"Options may be specified in any order until a 'file' argument is\n"
+"recognized.  If the '--intermix-type' option has been specified, more\n"
+"compression and encoding options will be recognized between the 'file'\n"
+"arguments.\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2295
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+msgstr ""
+
+#: src/shar-opts.c:2300
+msgid "shar (GNU sharutils) 4.14"
+msgstr ""
+
+#: src/shar-opts.c:2303
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2305
+msgid ""
+"Specify compression:\n"
+"   -p, --intermix-type        specify compression for input files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+
+#: src/shar-opts.c:2308
+msgid ""
+"   -C, --compactor=PROG       specify compaction (compression) program PROG\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+"                                - may appear multiple times\n"
+"                                - it must be known to shar: xz gzip bzip2\n"
+msgstr ""
+
+#: src/shar-opts.c:2312
+msgid ""
+"   -g, --level-of-compression=LEVEL\n"
+"                              pass LEVEL for compression\n"
+"                                - it must be in the range: 1 to 9\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2315
+msgid ""
+"Specify file encoding methodology:\n"
+"   -M, --mixed-uuencode       decide uuencoding for each file\n"
+msgstr ""
+
+#: src/shar-opts.c:2317
+msgid ""
+"   -B, --uuencode             treat all files as binary\n"
+"                                - an alternate for mixed-uuencode\n"
+msgstr ""
+
+#: src/shar-opts.c:2319
+msgid ""
+"   -T, --text-files           treat all files as text\n"
+"                                - an alternate for mixed-uuencode\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2321
+msgid "Specifying file selection and output modes:\n"
+msgstr ""
+
+#: src/shar-opts.c:2322
+msgid "   -o, --output-prefix=str    print output to file PREFIX.nn\n"
+msgstr ""
+
+#: src/shar-opts.c:2323
+msgid ""
+"   -l, --whole-size-limit=SIZE\n"
+"                              split archive, not files, to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+msgstr ""
+
+#: src/shar-opts.c:2329
+msgid ""
+"   -L, --split-size-limit=SIZE\n"
+"                              split archive or files to SIZE\n"
+"                                - requires the option 'output-prefix'\n"
+"                                - is scalable with a suffix: k/K/m/M/g/G/t/T\n"
+"                                - it must lie in one of the ranges:\n"
+"                                  8 to 1023, or 8192 to 4194304\n"
+"                                - an alternate for 'whole-size-limit'\n"
+msgstr ""
+
+#: src/shar-opts.c:2336
+msgid ""
+"   -I, --input-file-list=FILE read file list from FILE\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2337
+msgid ""
+"Controlling the shar headers:\n"
+"   -n, --archive-name=NAME    use NAME to document the archive\n"
+msgstr ""
+
+#: src/shar-opts.c:2339
+msgid "   -s, --submitter=NAME       override the submitter name with NAME\n"
+msgstr ""
+
+#: src/shar-opts.c:2340
+msgid ""
+"   -a, --net-headers          output Submitted-by: & Archive-name: headers\n"
+"                                - requires the option 'archive-name'\n"
+msgstr ""
+
+#: src/shar-opts.c:2342
+msgid "   -c, --cut-mark             start the shar with a cut line\n"
+msgstr ""
+
+#: src/shar-opts.c:2343
+msgid ""
+"   -t, --translate            translate messages in the script\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2344
+msgid ""
+"Protecting against transmission issues:\n"
+"       --no-character-count   do not use `wc -c' to check size\n"
+msgstr ""
+
+#: src/shar-opts.c:2346
+msgid "   -D, --no-md5-digest        do not use md5sum digest to verify\n"
+msgstr ""
+
+#: src/shar-opts.c:2347
+msgid "   -F, --force-prefix         apply the prefix character on every line\n"
+msgstr ""
+
+#: src/shar-opts.c:2348
+msgid ""
+"   -d, --here-delimiter=DELIM use DELIM to delimit the files\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2349
+msgid ""
+"Producing different kinds of shars:\n"
+"   -V, --vanilla-operation    produce very simple shars\n"
+msgstr ""
+
+#: src/shar-opts.c:2351
+msgid "   -P, --no-piping            use temporary files between programs\n"
+msgstr ""
+
+#: src/shar-opts.c:2352
+msgid "   -x, --no-check-existing    blindly overwrite existing files\n"
+msgstr ""
+
+#: src/shar-opts.c:2353
+msgid ""
+"   -X, --query-user           ask user before overwriting files\n"
+"                                - prohibits the option 'vanilla-operation'\n"
+msgstr ""
+
+#: src/shar-opts.c:2355
+msgid "   -m, --no-timestamp         do not restore modification times\n"
+msgstr ""
+
+#: src/shar-opts.c:2356
+msgid "   -Q, --quiet-unshar         avoid verbose messages at unshar time\n"
+msgstr ""
+
+#: src/shar-opts.c:2357
+msgid ""
+"   -f, --basename             restore in one directory, despite hierarchy\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2358
+msgid ""
+"Internationalization options:\n"
+"       --no-i18n              do not internationalize\n"
+msgstr ""
+
+#: src/shar-opts.c:2360
+msgid ""
+"       --print-text-domain-dir  print directory with shar messages\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2361
+msgid ""
+"User feedback/entertainment:\n"
+"   -q, --quiet                do not output verbose messages\n"
+msgstr ""
+
+#: src/shar-opts.c:2363
+msgid ""
+"       --silent               an alias for the 'quiet' option\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2364
+msgid "Version, usage and configuration options:\n"
+msgstr ""
+
+#: src/shar-opts.c:2365 src/unshar-opts.c:978 src/uudecode-opts.c:754
+#: src/uuencode-opts.c:701
+msgid "   -v, --version[=MODE]       output version information and exit\n"
+msgstr ""
+
+#: src/shar-opts.c:2366 src/unshar-opts.c:979 src/uudecode-opts.c:755
+#: src/uuencode-opts.c:702
+msgid "   -h, --help                 display extended usage information and exit\n"
+msgstr ""
+
+#: src/shar-opts.c:2367 src/unshar-opts.c:980 src/uudecode-opts.c:756
+#: src/uuencode-opts.c:703
+msgid "   -!, --more-help            extended usage information passed thru pager\n"
+msgstr ""
+
+#: src/shar-opts.c:2368 src/uudecode-opts.c:757 src/uuencode-opts.c:704
+msgid "   -R, --save-opts[=FILE]     save the option state to a config file FILE\n"
+msgstr ""
+
+#: src/shar-opts.c:2369 src/uudecode-opts.c:758 src/uuencode-opts.c:705
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled with '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2372
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file's are specified, the list of input files is read from a\n"
+"standard input.  Standard input must not be a terminal.\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2376 src/unshar-opts.c:990 src/uudecode-opts.c:764
+#: src/uuencode-opts.c:710
+msgid "The following option preset mechanisms are supported:\n"
+msgstr ""
+
+#: src/shar-opts.c:2377
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'shar' creates \"shell archives\" (or shar files) which are in text format\n"
+"and can be emailed.  These files may be unpacked later by executing them\n"
+"with '/bin/sh'.  The resulting archive is sent to standard out unless the\n"
+"'-o' option is given.  A wide range of features provide extensive\n"
+"flexibility in manufacturing shars and in specifying 'shar' \"smartness\".\n"
+"Archives may be fairly simple ('--vanilla-operation') or essentially a\n"
+"mailable 'tar' archive.\n"
+"\n"
+msgstr ""
+
+#: src/shar-opts.c:2389
+msgid ""
+"Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
+"you are emailing files, please consider mime-encoded files.  If you do\n"
+"'uuencode', base64 is the preferred encoding method.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+
+#: src/shar-opts.c:2395
+msgid ""
+"shar (GNU sharutils) - create a shell archive\n"
+"Usage:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'shar --help' for more information.\n"
+msgstr ""
+
+#: ../autoopts.c:67 ../autoopts.c:93
+#, fuzzy, c-format
+#| msgid "restore of %s failed"
+msgid "allocation of %d bytes failed\n"
+msgstr "%s の復元に失敗しました"
+
+#: ../init.c:53
+msgid "AutoOpts function called without option descriptor\n"
+msgstr ""
+
+#: ../init.c:90
+msgid "\tThis exceeds the compiled library version:  "
+msgstr ""
+
+#: ../init.c:88
+#, c-format
+msgid ""
+"Automated Options Processing Error!\n"
+"\t%s called AutoOpts function with structure version %d:%d:%d.\n"
+msgstr ""
+
+#: ../autoopts.c:80
+#, c-format
+msgid "realloc of %d bytes at 0x%p failed\n"
+msgstr ""
+
+#: ../init.c:92
+msgid "\tThis is less than the minimum library version:  "
+msgstr ""
+
+#: ../version.c:121
+#, c-format
+msgid ""
+"Automated Options version %s\n"
+"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+msgstr ""
+
+#: ../makeshell.c:82
+#, c-format
+msgid "(AutoOpts bug):  %s.\n"
+msgstr ""
+
+#: ../reset.c:90
+msgid "optionResetOpt() called, but reset-option not configured"
+msgstr ""
+
+#: ../usage.c:292
+msgid "could not locate the 'help' option"
+msgstr ""
+
+#: ../autoopts.c:336
+msgid "optionProcess() was called with invalid data"
+msgstr ""
+
+#: ../usage.c:748
+msgid "invalid argument type specified"
+msgstr ""
+
+#: ../find.c:598
+msgid "defaulted to option with optional arg"
+msgstr ""
+
+#: ../alias.c:76
+msgid "aliasing option is out of range."
+msgstr ""
+
+#: ../enum.c:234
+#, fuzzy, c-format
+#| msgid "%s: option '%s' is ambiguous\n"
+msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
+msgstr "%s: オプション '%s' は曖昧です\n"
+
+#: ../find.c:108
+msgid "  The following options match:\n"
+msgstr ""
+
+#: ../find.c:293
+#, c-format
+msgid "%s: ambiguous option name: %s (matches %d options)\n"
+msgstr ""
+
+#: ../check.c:161
+#, c-format
+msgid "%s: Command line arguments required\n"
+msgstr ""
+
+#: ../alias.c:43
+#, c-format
+msgid "%d %s%s options allowed\n"
+msgstr ""
+
+#: ../makeshell.c:89
+#, c-format
+msgid "%s error %d (%s) calling %s for '%s'\n"
+msgstr ""
+
+#: ../makeshell.c:301
+msgid "interprocess pipe"
+msgstr ""
+
+#: ../version.c:168
+#, c-format
+msgid ""
+"error: version option argument '%c' invalid.  Use:\n"
+"\t'v' - version only\n"
+"\t'c' - version and copyright\n"
+"\t'n' - version and full copyright notice\n"
+msgstr ""
+
+#: ../check.c:58
+#, c-format
+msgid "%s error:  the '%s' and '%s' options conflict\n"
+msgstr ""
+
+#: ../find.c:217 ../find.c:430
+#, c-format
+msgid "%s: The '%s' option has been disabled."
+msgstr ""
+
+#: ../alias.c:38
+msgid "-equivalence"
+msgstr ""
+
+#: ../find.c:469 ../reset.c:110
+#, fuzzy, c-format
+#| msgid "%s: invalid option -- '%c'\n"
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: 無効なオプション -- '%c'\n"
+
+#: ../find.c:271 ../find.c:755 ../reset.c:118
+#, fuzzy, c-format
+#| msgid "%s: invalid option -- '%c'\n"
+msgid "%s: illegal option -- %s\n"
+msgstr "%s: 無効なオプション -- '%c'\n"
+
+#: ../find.c:335
+#, fuzzy, c-format
+#| msgid "%s: unrecognized option '--%s'\n"
+msgid "%s: unknown vendor extension option -- %s\n"
+msgstr "%s: オプション '--%s' を認識できません\n"
+
+#: ../enum.c:159 ../enum.c:169
+#, c-format
+msgid "  or an integer from %d through %d\n"
+msgstr ""
+
+#: ../usage.c:747 ../usage.c:1081
+#, fuzzy, c-format
+#| msgid "%s: invalid option -- '%c'\n"
+msgid "%s error:  invalid option descriptor for %s\n"
+msgstr "%s: 無効なオプション -- '%c'\n"
+
+#: ../find.c:385
+#, fuzzy, c-format
+#| msgid "%s: invalid option -- '%c'\n"
+msgid "%s: invalid option name: %s\n"
+msgstr "%s: 無効なオプション -- '%c'\n"
+
+#: ../find.c:527
+#, fuzzy, c-format
+#| msgid "%s: option '--%s' requires an argument\n"
+msgid "%s: The '%s' option requires an argument.\n"
+msgstr "%s: オプション '--%s' は引数が必要です\n"
+
+#: ../autoopts.c:156
+#, c-format
+msgid ""
+"(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
+"\t'%s' and '%s'."
+msgstr ""
+
+#: ../check.c:94
+#, c-format
+msgid "%s error:  The %s option is required\n"
+msgstr ""
+
+#: ../find.c:632
+#, fuzzy, c-format
+#| msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgid "%s: The '%s' option cannot have an argument.\n"
+msgstr "%s: オプション '%c%s' は引数を取ることができません\n"
+
+#: ../check.c:151
+#, c-format
+msgid "%s: Command line arguments are not allowed.\n"
+msgstr ""
+
+#: ../save.c:535
+#, c-format
+msgid "error %d (%s) creating %s\n"
+msgstr ""
+
+#: ../enum.c:234
+#, c-format
+msgid "%s error:  '%s' does not match any %s keywords.\n"
+msgstr ""
+
+#: ../reset.c:93
+#, fuzzy, c-format
+#| msgid "%s: option '--%s' requires an argument\n"
+msgid "%s error: The '%s' option requires an argument.\n"
+msgstr "%s: オプション '--%s' は引数が必要です\n"
+
+#: ../save.c:184 ../save.c:238
+#, c-format
+msgid "error %d (%s) stat-ing %s\n"
+msgstr ""
+
+#: ../restore.c:143
+#, c-format
+msgid "%s error: no saved option state\n"
+msgstr ""
+
+#: ../autoopts.c:231
+#, c-format
+msgid "'%s' is not a command line option.\n"
+msgstr ""
+
+#: ../time.c:114
+#, c-format
+msgid "%s error:  '%s' is not a recognizable date/time.\n"
+msgstr ""
+
+#: ../save.c:132
+#, c-format
+msgid "'%s' not defined\n"
+msgstr ""
+
+#: ../time.c:53
+#, c-format
+msgid "%s error:  '%s' is not a recognizable time duration.\n"
+msgstr ""
+
+#: ../check.c:92
+#, c-format
+msgid "%s error:  The %s option must appear %d times.\n"
+msgstr ""
+
+#: ../numeric.c:157
+#, c-format
+msgid "%s error:  '%s' is not a recognizable number.\n"
+msgstr ""
+
+#: ../enum.c:200
+#, c-format
+msgid "%s error:  %s exceeds %s keyword count\n"
+msgstr ""
+
+#: ../usage.c:330
+#, fuzzy, c-format
+#| msgid "Try `%s --help' for more information.\n"
+msgid "Try '%s %s' for more information.\n"
+msgstr "詳しくは`%s --help'を実行してください。\n"
+
+#: ../alias.c:45
+#, c-format
+msgid "one %s%s option allowed\n"
+msgstr ""
+
+#: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:274 ../usage.c:415
+#: ../usage.c:625 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
+#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+#, fuzzy
+#| msgid "standard input"
+msgid "standard output"
+msgstr "標準入力"
+
+#: ../usage.c:274 ../usage.c:415 ../usage.c:625 ../version.c:175
+#, fuzzy
+#| msgid "Read error"
+msgid "standard error"
+msgstr "読取りエラー"
+
+#: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:273 ../usage.c:414
+#: ../usage.c:624 ../version.c:174
+msgid "write"
+msgstr ""
+
+#: ../numeric.c:60
+#, c-format
+msgid "%s error:  %s option value %ld is out of range.\n"
+msgstr ""
+
+#: ../check.c:44
+#, c-format
+msgid "%s error:  %s option requires the %s option\n"
+msgstr ""
+
+#: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:534
+#, c-format
+msgid "%s warning:  cannot save options - %s not regular file\n"
+msgstr ""
+
+#: src/shar.c:355
+#, c-format
+msgid "printf formatting error:  %s\n"
+msgstr "printf 書式エラー: %s\n"
+
+#: src/shar.c:402
+#, fuzzy
+#| msgid "sharutils bug - no status\n"
+msgid "sharutils bug - no status"
+msgstr "sharutils バグ - 状態が不明です\n"
+
+#: src/shar.c:751
+msgid "Too many directories for mkdir generation"
+msgstr "mkdirで生成するディレクトリの数が多すぎます"
+
+#: src/shar.c:834 src/shar.c:1693
+#, c-format
+msgid "Cannot access %s"
+msgstr "%s にアクセスできません"
+
+#: src/shar.c:929
+#, c-format
+msgid "Cannot get current directory name"
+msgstr "現在のディレクトリー名を取得できません"
+
+#: src/shar.c:1018
+#, c-format
+msgid "Starting file %s\n"
+msgstr "ファイル %s を開始します\n"
+
+#: src/shar.c:1112
+#, fuzzy
+#| msgid "Could not popen 'wc' command:  %s\n"
+msgid "Could not popen command"
+msgstr "'wc' コマンドに対する popen が出来ません:  %s\n"
+
+#: src/shar.c:1172
+#, c-format
+msgid "Cannot open file %s"
+msgstr "ファイル %s をオープンできません"
+
+#: src/shar.c:1298 src/shar.c:1309 src/shar.c:1917
+msgid "call"
+msgstr ""
+
+#: src/shar.c:1321
+#, fuzzy
+#| msgid "pipe(2) failed"
+msgid "pipe fd"
+msgstr "pipe(2) に失敗しました"
+
+#: src/shar.c:1436 src/shar.c:1450
+msgid "text"
+msgstr "テキスト"
+
+#: src/shar.c:1553
+#, fuzzy, c-format
+#| msgid "continuing file %s"
+msgid "Continuing file %s\n"
+msgstr "ファイル %s に続いています"
+
+#: src/shar.c:1688
+#, c-format
+msgid "%s: Not a regular file"
+msgstr "%s: 通常ファイルではありません"
+
+#: src/shar.c:1736
+msgid "empty"
+msgstr "空"
+
+#: src/shar.c:1763
+#, c-format
+msgid "Saving %s (%s)"
+msgstr "%s (%s) を保存しています"
+
+#: src/shar.c:1964
+#, fuzzy, c-format
+#| msgid "invalid format (count field too wide): '%s'\n"
+msgid "Invalid format for output file names (%s): %s"
+msgstr "無効な形式 (カウント欄が広過ぎます): '%s'\n"
+
+#: src/shar.c:1979
+msgid "more than one format element"
+msgstr ""
+
+#: src/shar.c:1984
+msgid "no conversion character"
+msgstr ""
+
+#: src/shar.c:1993
+msgid "format is too wide"
+msgstr ""
+
+#: src/shar.c:2005
+msgid "invalid conversion character"
+msgstr ""
+
+#: src/shar.c:2050
+#, fuzzy
+#| msgid "Opening `%s'"
+msgid "Opening"
+msgstr "`%s' を開いています"
+
+#: src/shar.c:2065
+#, fuzzy
+#| msgid "Closing `%s'"
+msgid "Closing"
+msgstr "`%s' を閉じています"
+
+#: src/shar.c:2152
+#, c-format
+msgid "reopening stderr to /dev/null"
+msgstr ""
+
+#: src/shar.c:2205
+msgid "No input files"
+msgstr "入力ファイルがありません"
+
+#: src/shar.c:2222
+#, c-format
+msgid "PLEASE avoid -X shars on Usenet or public networks"
+msgstr "Usenetや公衆網では、-X sharを*是非とも使用しないで*ください"
+
+#: src/shar.c:2246
+#, c-format
+msgid ""
+"The '%s' option may not be intermixed with file names\n"
+"unless the --intermix-type option has been specified."
+msgstr ""
+
+#: src/shar.c:2264
+#, c-format
+msgid "The '%s' option must appear before any file names"
+msgstr ""
+
+#: src/shar.c:2300
+#, c-format
+msgid ""
+"invalid compaction type:  %s\n"
+"the known types are:\n"
+msgstr ""
+
+#: src/shar.c:2339
+msgid "files on command line and --input-file-list specified"
+msgstr ""
+
+#: src/shar.c:2388
+#, c-format
+msgid "Created %d files\n"
+msgstr "%d 個のファイルを作成しました\n"
+
+#: src/unshar-opts.c:583
+#, c-format
+msgid "fs error %d (%s) %s-ing %s\n"
+msgstr ""
+
+#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:511
+#: src/uuencode.c:205
+msgid "standard input"
+msgstr "標準入力"
+
+#: src/unshar-opts.c:664
+msgid "unshar usage error:\n"
+msgstr ""
+
+#: src/unshar-opts.c:701
+msgid "unshar fatal error:\n"
+msgstr ""
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the unsharOptions structure noted in the
+#. comments below.  The literal text is defined in unshar_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. unshar_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via unsharOptions.pzCopyright
+#: src/unshar-opts.c:931
+msgid ""
+"unshar (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+
+#: src/unshar-opts.c:938
+msgid ""
+"unshar is free software: you can redistribute it and/or modify it under the\n"
+"terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:942
+msgid ""
+"unshar is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:950
+#, c-format
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+
+#: src/unshar-opts.c:954
+msgid ""
+"\n"
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+msgstr ""
+
+#: src/unshar-opts.c:960
+msgid ""
+"Unshar scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+msgstr ""
+
+#: src/unshar-opts.c:966
+msgid "unshar (GNU sharutils) 4.14"
+msgstr ""
+
+#: src/unshar-opts.c:969
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:971
+msgid "   -d, --directory=DIR        unpack into the directory DIR\n"
+msgstr ""
+
+#: src/unshar-opts.c:972
+msgid "   -c, --overwrite            overwrite any pre-existing files\n"
+msgstr ""
+
+#: src/unshar-opts.c:973
+msgid "   -f, --force                an alias for the 'overwrite' option\n"
+msgstr ""
+
+#: src/unshar-opts.c:974
+msgid "   -E, --split-at=SPLIT-PAT   split input on SPLIT-PAT lines\n"
+msgstr ""
+
+#: src/unshar-opts.c:975
+msgid ""
+"   -e, --exit-0               split input on \"exit 0\" lines\n"
+"                                - prohibits the option 'split-at'\n"
+msgstr ""
+
+#: src/unshar-opts.c:977
+msgid "   -D, --debug                debug the shell code\n"
+msgstr ""
+
+#: src/unshar-opts.c:981
+msgid "   -R, --save-opts[=FILE]     save the option state to the config file FILE\n"
+msgstr ""
+
+#: src/unshar-opts.c:982
+msgid ""
+"   -r, --load-opts=FILE       load options from the config file FILE\n"
+"                                - disabled as '--no-load-opts'\n"
+"                                - may appear multiple times\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:985 src/uuencode-opts.c:708
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:987
+msgid ""
+"If no arguments are provided, input arguments are read from stdin,\n"
+"one per line; blank and '#'-prefixed lines are comments.\n"
+"'stdin' may not be a terminal (tty).\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:991
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'unshar' scans the input files (typically email messages) looking for the\n"
+"start of a shell archive.  If no files are given, then standard input is\n"
+"processed instead.  It then passes each archive discovered through an\n"
+"invocation of the shell program to unpack it.\n"
+"\n"
+msgstr ""
+
+#: src/unshar-opts.c:996 src/uudecode-opts.c:780
+msgid "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+
+#: src/unshar-opts.c:999
+msgid ""
+"unshar (GNU sharutils) - unpack a shar archive\n"
+"Usage:  unshar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'unshar --help' for more information.\n"
+msgstr ""
+
+#: src/unshar-opts.h:258 src/uudecode-opts.h:236
+#, c-format
+msgid "could not allocate %zu bytes for %s\n"
+msgstr ""
+
+#: src/unshar.c:202
+#, fuzzy, c-format
+#| msgid "Found no shell commands after `cut' in %s"
+msgid "Found no shell commands after cut line in %s"
+msgstr "%s 内の `cut' 以降にシェルコマンドがありません"
+
+#: src/unshar.c:220
+#, c-format
+msgid "%s is probably not a shell archive"
+msgstr "%s は、おそらくシェル書庫ではありません"
+
+#: src/unshar.c:221
+#, fuzzy, c-format
+#| msgid "The `cut' line was followed by: %s"
+msgid "The 'cut line' was followed by: %s"
+msgstr "%s に続いて `cut' 行があります"
+
+#: src/unshar.c:244
+#, c-format
+msgid "Found no shell commands in %s"
+msgstr "%s 内にはシェルコマンドがありません"
+
+#: src/unshar.c:253
+#, c-format
+msgid "%s looks like raw C code, not a shell archive"
+msgstr "%s は C のコードそのものです。シェル書庫ではありません"
+
+#: src/unshar.c:324
+#, fuzzy
+#| msgid "allocate file name buffer"
+msgid "file name buffer"
+msgstr "ファイル名バッファの割り当て"
+
+#: src/unshar.c:450
+msgid "read/write buffer"
+msgstr ""
+
+#: src/uudecode-opts.c:438
+msgid "uudecode usage error:\n"
+msgstr ""
+
+#: src/uudecode-opts.c:475
+msgid "uudecode fatal error:\n"
+msgstr ""
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the uudecodeOptions structure noted in the
+#. comments below.  The literal text is defined in uudecode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uudecode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uudecodeOptions.pzCopyright
+#: src/uudecode-opts.c:705
+msgid ""
+"uudecode (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+
+#: src/uudecode-opts.c:712
+msgid ""
+"uudecode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:716
+msgid ""
+"uudecode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:724
+#, c-format
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  %s [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+msgstr ""
+
+#: src/uudecode-opts.c:728
+msgid "If no 'file'(s) are provided, then standard input is decoded.\n"
+msgstr ""
+
+#: src/uudecode-opts.c:731
+msgid ""
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:732 src/uudecode-opts.c:767
+msgid ""
+"The encoded file(s) may be specified on the command line, or one may be\n"
+"read from standard input.  The output file name is specified in the encoded\n"
+"file, but may be overridden with the '-o' option.  It will have the mode of\n"
+"the original file, except that setuid and execute bits are not retained.  If\n"
+"the output file is specified to be '/dev/stdout' or '-', the result will be\n"
+"written to standard output.  If there are multiple input files and the\n"
+"second or subsquent file specifies standard output, the decoded data will\n"
+"be written to the same file as the previous output.  Don't do that.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:740
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+msgstr ""
+
+#: src/uudecode-opts.c:747
+msgid "uudecode (GNU sharutils) 4.14"
+msgstr ""
+
+#: src/uudecode-opts.c:750
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:752
+msgid "   -o, --output-file=str      direct output to file\n"
+msgstr ""
+
+#: src/uudecode-opts.c:753
+msgid "   -c, --ignore-chmod         ignore fchmod(3P) errors\n"
+msgstr ""
+
+#: src/uudecode-opts.c:761
+msgid ""
+"Options are specified by doubled hyphens and their name or by a single\n"
+"hyphen and the flag character.\n"
+"If no 'file'(s) are provided, then standard input is decoded.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:765
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uudecode' transforms uuencoded files into their original form.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:775
+msgid ""
+"'uudecode' ignores any leading and trailing lines.  It looks for a line\n"
+"that starts with \"'begin'\" and proceeds until the end-of-encoding marker is\n"
+"found.  The program determines from the header line of the encoded file\n"
+"which of the two supported encoding schemes was used and whether or not the\n"
+"output file name has been encoded with base64 encoding.  See 'uuencode(5)'.\n"
+"\n"
+msgstr ""
+
+#: src/uudecode-opts.c:783
+msgid ""
+"uudecode (GNU sharutils) - decode an encoded file\n"
+"Usage:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [<file>...]\n"
+"Try 'uudecode --help' for more information.\n"
+msgstr ""
+
+#: src/uudecode.c:118 src/uudecode.c:182
+#, c-format
+msgid "%s: Short file"
+msgstr "%s: 短いファイル"
+
+#: src/uudecode.c:164
+#, c-format
+msgid "%s: No `end' line"
+msgstr "%s: `end' 行がありません"
+
+#: src/uudecode.c:188
+#, fuzzy, c-format
+#| msgid "standard input"
+msgid "%s: invalid input"
+msgstr "標準入力"
+
+#: src/uudecode.c:210 src/uudecode.c:224
+msgid "cannot expand $HOME"
+msgstr ""
+
+#: src/uudecode.c:260
+#, c-format
+msgid "%s: Illegal file name: %s"
+msgstr "%s: 不正なファイル名: %s"
+
+#: src/uudecode.c:267
+#, fuzzy, c-format
+#| msgid "No user `%s'"
+msgid "No user '%s'"
+msgstr "`%s' というユーザーは存在しません"
+
+#: src/uudecode.c:278 src/uudecode.c:340
+#, fuzzy
+#| msgid "allocating output file name"
+msgid "output file name"
+msgstr "出力ファイル名の割付け"
+
+#: src/uudecode.c:297
+#, c-format
+msgid "cannot access %s"
+msgstr "%s にアクセスできません"
+
+#: src/uudecode.c:310
+#, c-format
+msgid "chmod of %s"
+msgstr "%s に対する chmod"
+
+#: src/uudecode.c:334
+msgid "output name is empty"
+msgstr ""
+
+#: src/uudecode.c:345
+#, c-format
+msgid "invalid base64 encoded name: %s"
+msgstr ""
+
+#: src/uudecode.c:380
+#, fuzzy, c-format
+#| msgid "%s: No `begin' line"
+msgid "%s: Invalid or missing 'begin' line"
+msgstr "%s: `begin' 行がありません"
+
+#: src/uudecode.c:477
+#, c-format
+msgid "%s: Write error"
+msgstr "%s: 書き込みエラー"
+
+#: src/uudecode.c:517
+msgid ""
+"You cannot specify an output file when processing\n"
+"multiple input files.\n"
+msgstr "複数の入力ファイルを処理する時に単一の出力ファイルを指定できません。\n"
+
+#: src/uuencode-opts.c:389
+msgid "uuencode usage error:\n"
+msgstr ""
+
+#: src/uuencode-opts.c:426
+msgid "uuencode fatal error:\n"
+msgstr ""
+
+#. TRANSLATORS:
+#.
+#. The following dummy function was crated solely so that xgettext can
+#. extract the correct strings.  These strings are actually referenced
+#. by a field name in the uuencodeOptions structure noted in the
+#. comments below.  The literal text is defined in uuencode_opt_strs.
+#.
+#. NOTE: the strings below are segmented with respect to the source string
+#. uuencode_opt_strs.  The strings above are handed off for translation
+#. at run time a paragraph at a time.  Consequently, they are presented here
+#. for translation a paragraph at a time.
+#.
+#. ALSO: often the description for an option will reference another option
+#. by name.  These are set off with apostrophe quotes (I hope).  Do not
+#. translate option names.
+#.
+#. referenced via uuencodeOptions.pzCopyright
+#: src/uuencode-opts.c:656
+msgid ""
+"uuencode (GNU sharutils) 4.14\n"
+"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"This is free software. It is licensed for use, modification and\n"
+"redistribution under the terms of the GNU General Public License,\n"
+"version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+msgstr ""
+
+#: src/uuencode-opts.c:663
+msgid ""
+"uuencode is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free\n"
+"Software Foundation, either version 3 of the License, or (at your option)\n"
+"any later version.\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:667
+msgid ""
+"uuencode is distributed in the hope that it will be useful, but WITHOUT ANY\n"
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:675
+#, c-format
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  %s [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+msgstr ""
+
+#: src/uuencode-opts.c:679
+msgid ""
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:683 src/uuencode-opts.c:716
+msgid ""
+"'uuencode' will read 'in-file' if provided and otherwise read data from\n"
+"standard in and write the encoded form to standard out.  The output will\n"
+"begin with a header line for use by 'uudecode' giving it the resulting\n"
+"suggested file 'output-name' and access mode.  If the 'output-name' is\n"
+"specifically '/dev/stdout', then 'uudecode' will emit the decoded file to\n"
+"standard out.\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:689
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+msgstr ""
+
+#: src/uuencode-opts.c:694
+msgid "uuencode (GNU sharutils) 4.14"
+msgstr ""
+
+#: src/uuencode-opts.c:697
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:699
+msgid "   -m, --base64               convert using base64\n"
+msgstr ""
+
+#: src/uuencode-opts.c:700
+msgid "   -e, --encode-file-name     encode the output file name\n"
+msgstr ""
+
+#: src/uuencode-opts.c:711
+msgid ""
+" - reading file $HOME/.sharrc\n"
+"\n"
+"'uuencode' is used to create an ASCII representation of a file that can be\n"
+"sent over channels that may otherwise corrupt the data.  Specifically,\n"
+"email cannot handle binary data and will often even insert a character when\n"
+"the six character sequence \"\\nFrom \" is seen.\n"
+"\n"
+msgstr ""
+
+#: src/uuencode-opts.c:722
+msgid ""
+"'Note': 'uuencode' uses buffered input and assumes that it is not hand\n"
+"typed from a tty.  The consequence is that at a tty, you may need to hit\n"
+"Ctl-D several times to terminate input.\n"
+"\n"
+"Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
+msgstr ""
+
+#: src/uuencode-opts.c:728
+msgid ""
+"uuencode (GNU sharutils) - encode a file into email friendly text\n"
+"Usage:  uuencode [ -<flag> | --<name> ]... [<in-file>] <output-name>\n"
+"Try 'uuencode --help' for more information.\n"
+msgstr ""
+
+#: src/uuencode.c:226
+#, fuzzy
+#| msgid "freopen of %s"
+msgid "freopen of stdin"
+msgstr "%s に対する freopen"
+
+#: src/uuencode.c:255
+msgid "file name"
+msgstr ""
+
+#: lib/error.c:188
+msgid "Unknown system error"
+msgstr "不明なシステムエラー"
+
+#: lib/getopt.c:547 lib/getopt.c:576
+#, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: オプション '%s' は曖昧です:次のものが可能です:"
+
+#: lib/getopt.c:624 lib/getopt.c:628
+#, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: オプション '--%s' は引数を取ることができません\n"
+
+#: lib/getopt.c:637 lib/getopt.c:642
+#, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: オプション '%c%s' は引数を取ることができません\n"
+
+#: lib/getopt.c:685 lib/getopt.c:704
+#, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: オプション '--%s' は引数が必要です\n"
+
+#: lib/getopt.c:742 lib/getopt.c:745
+#, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: オプション '--%s' を認識できません\n"
+
+#: lib/getopt.c:753 lib/getopt.c:756
+#, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: オプション '%c%s' を認識できません\n"
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: 無効なオプション -- '%c'\n"
+
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: オプションには引数が必要です -- '%c'\n"
+
+#: lib/getopt.c:934 lib/getopt.c:950
+#, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: オプション '-W %s' は曖昧です\n"
+
+#: lib/getopt.c:974 lib/getopt.c:992
+#, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: オプション '-W %s' は引数を取ることができません\n"
+
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: オプション '-W %s' は引数が必要です\n"
+
+#: lib/openat-die.c:38
+#, c-format
+msgid "unable to record current working directory"
+msgstr "現在の作業ディレクトリを記録することができません"
+
+#: lib/openat-die.c:57
+#, c-format
+msgid "failed to return to initial working directory"
+msgstr "初期作業ディレクトリに戻るのに失敗しました"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:312
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:313
+msgid "'"
+msgstr "'"
+
+#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
+#: lib/spawn-pipe.c:267
+#, c-format
+msgid "cannot create pipe"
+msgstr "パイプを作成できません"
+
+#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/wait-process.c:356
+#, c-format
+msgid "%s subprocess failed"
+msgstr "%s サブプロセスが失敗しました"
+
+#: lib/w32spawn.h:43
+#, c-format
+msgid "_open_osfhandle failed"
+msgstr "_open_osfhandle に失敗しました"
+
+#: lib/w32spawn.h:84
+#, c-format
+msgid "cannot restore fd %d: dup2 failed"
+msgstr "ファイル記述子 (fd) %d をリストアできません: dup2 に失敗しました"
+
+#: lib/wait-process.c:223 lib/wait-process.c:255 lib/wait-process.c:317
+#, c-format
+msgid "%s subprocess"
+msgstr "%s 子プロセス"
+
+#: lib/wait-process.c:274 lib/wait-process.c:346
+#, c-format
+msgid "%s subprocess got fatal signal %d"
+msgstr "%s 子プロセスが致命的なシグナル %d を受信しました"
+
+#: lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr "メモリを使い果たしました"
+
+#: lib/xstrtol-error.c:63
+#, c-format
+msgid "invalid %s%s argument '%s'"
+msgstr ""
+
+#: lib/xstrtol-error.c:68
+#, c-format
+msgid "invalid suffix in %s%s argument '%s'"
+msgstr ""
+
+#: lib/xstrtol-error.c:72
+#, c-format
+msgid "%s%s argument '%s' too large"
+msgstr ""
+
+#~ msgid "invalid argument %s for %s"
+#~ msgstr "%2$s に対する引数 %1$s が間違っています"
+
+#~ msgid "ambiguous argument %s for %s"
+#~ msgstr "%2$s に対する引数 %1$s が曖昧です"
+
+#~ msgid "Valid arguments are:"
+#~ msgstr "有効な引数:"
+
+#~ msgid "ARGP_HELP_FMT: %s value is less than or equal to %s"
+#~ msgstr "ARGP_HELP_FMT: %s の値は %s の値以下です"
+
+#~ msgid "%.*s: ARGP_HELP_FMT parameter requires a value"
+#~ msgstr "%.*s: ARGP_HELP_FMT パラメータには値が必要です"
+
+#~ msgid "%.*s: ARGP_HELP_FMT parameter must be positive"
+#~ msgstr "%.*s: ARGP_HELP_FMT パラメータは正の値でなければいけません"
+
+#~ msgid "%.*s: Unknown ARGP_HELP_FMT parameter"
+#~ msgstr "%.*s: 不明な ARGP_HELP_FMT パラメータ"
+
+#~ msgid "Garbage in ARGP_HELP_FMT: %s"
+#~ msgstr "ARGP_HELP_FMT 中にごみがあります: %s"
+
+#~ msgid "Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options."
+#~ msgstr "長い形式のオプションで必須または任意の引数は、それに対応する短い形式のオプションでも同様に必須または任意です。"
+
+#~ msgid "Usage:"
+#~ msgstr "使用法:"
+
+#~ msgid "  or: "
+#~ msgstr "または: "
+
+#~ msgid " [OPTION...]"
+#~ msgstr " [OPTION...]"
+
+#~ msgid "Try `%s --help' or `%s --usage' for more information.\n"
+#~ msgstr "詳細は `%s --help' または `%s --usage' を実行して下さい。\n"
+
+#~ msgid "Report bugs to %s.\n"
+#~ msgstr ""
+#~ "バグを発見したら <%s> に報告して下さい。\n"
+#~ "翻訳に関するバグは<translation-team-ja@lists.sourceforge.net>に報告してください。\n"
+
+#~ msgid "give this help list"
+#~ msgstr "このヘルプを表示する"
+
+#~ msgid "give a short usage message"
+#~ msgstr "短い使用方法を表示する"
+
+#~ msgid "NAME"
+#~ msgstr "名前"
+
+#~ msgid "set the program name"
+#~ msgstr "プログラム名を設定する"
+
+#~ msgid "SECS"
+#~ msgstr "SECS"
+
+#~ msgid "hang for SECS seconds (default 3600)"
+#~ msgstr "SECS 秒でハング (デフォルト 3600)"
+
+#~ msgid "print program version"
+#~ msgstr "プログラムのバージョンを表示する"
+
+#~ msgid "(PROGRAM ERROR) No version known!?"
+#~ msgstr "(プログラムエラー) 不明なバージョン!?"
+
+#~ msgid "%s: Too many arguments\n"
+#~ msgstr "%s: 引数が多すぎます\n"
+
+#~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
+#~ msgstr "(プログラムエラー) オプションは認識されているべきです!?"
+
+#~ msgid "program error"
+#~ msgstr "プログラムエラー"
+
+#~ msgid "stack overflow"
+#~ msgstr "スタックオーバーフロー"
+
+#~ msgid "cannot find a temporary directory, try setting $TMPDIR"
+#~ msgstr "一時ディレクトリを作成できません。 $TMPDIR を設定してみてください"
+
+#~ msgid "cannot create a temporary directory using template \"%s\""
+#~ msgstr "テンプレート \"%s\" を使用した一時ディレクトリを作成できません"
+
+#~ msgid "cannot remove temporary file %s"
+#~ msgstr "一時ファイル %s を削除できません"
+
+#~ msgid "cannot remove temporary directory %s"
+#~ msgstr "一時ディレクトリ %s を削除できません"
+
+#~ msgid "error closing file"
+#~ msgstr "ファイルクローズエラー"
+
+#~ msgid "write error"
+#~ msgstr "書き込みエラー"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "%s のパーミッションを保存しています"
+
+#~ msgid "error while opening \"%s\" for reading"
+#~ msgstr "\"%s\"を読込むため開いている際にエラーが発生しました"
+
+#~ msgid "cannot open backup file \"%s\" for writing"
+#~ msgstr "書込み用バックアップファイル\"%s\"を開くことができません"
+
+#~ msgid "error reading \"%s\""
+#~ msgstr "\"%s\"の読込み中にエラーが発生しました"
+
+#~ msgid "error writing \"%s\""
+#~ msgstr "\"%s\"の書込み中にエラーが発生しました"
+
+#~ msgid "error after reading \"%s\""
+#~ msgstr "\"%s\"の読込み後にエラーが発生しました"
+
+#~ msgid "fdopen() failed"
+#~ msgstr "fdopen()に失敗しました"
+
+#~ msgid "C# compiler not found, try installing pnet"
+#~ msgstr "C# コンパイラが見つりません。pnet をインストールしてみてください"
+
+#~ msgid "C# virtual machine not found, try installing pnet"
+#~ msgstr "C# 仮想マシンが見つかりません。pnet をインストールしてみてください"
+
+#~ msgid "regular empty file"
+#~ msgstr "通常の空ファイル"
+
+#~ msgid "regular file"
+#~ msgstr "通常ファイル"
+
+#~ msgid "directory"
+#~ msgstr "ディレクトリ"
+
+#~ msgid "block special file"
+#~ msgstr "ブロックスペシャルファイル"
+
+#~ msgid "character special file"
+#~ msgstr "キャラクタスペシャルファイル"
+
+#~ msgid "fifo"
+#~ msgstr "fifo"
+
+#~ msgid "symbolic link"
+#~ msgstr "シンボリックリンク"
+
+#~ msgid "socket"
+#~ msgstr "ソケット"
+
+#~ msgid "message queue"
+#~ msgstr "メッセージキュー"
+
+#~ msgid "semaphore"
+#~ msgstr "セマフォ"
+
+#~ msgid "shared memory object"
+#~ msgstr "共有メモリオブジェクト"
+
+#~ msgid "typed memory object"
+#~ msgstr "型付メモリオブジェクト"
+
+#~ msgid "weird file"
+#~ msgstr "不明なファイル"
+
+#~ msgid "Address family for hostname not supported"
+#~ msgstr "ホスト名に対する Address family がサポートされていません"
+
+#~ msgid "Temporary failure in name resolution"
+#~ msgstr "名前解決に一時的に失敗しました"
+
+#~ msgid "Bad value for ai_flags"
+#~ msgstr "ai_flags に対する誤った値です"
+
+#~ msgid "Non-recoverable failure in name resolution"
+#~ msgstr "名前解決でリカバリできない失敗が発生しました"
+
+#~ msgid "ai_family not supported"
+#~ msgstr "ai_family はサポートされていません"
+
+#~ msgid "Memory allocation failure"
+#~ msgstr "メモリ配置に失敗しました"
+
+#~ msgid "No address associated with hostname"
+#~ msgstr "ホスト名にアドレスが割り当てられていません"
+
+#~ msgid "Name or service not known"
+#~ msgstr "名前またはサービスが不明です"
+
+#~ msgid "Servname not supported for ai_socktype"
+#~ msgstr "ai_socktype に対して Servname がサポートされていません"
+
+#~ msgid "ai_socktype not supported"
+#~ msgstr "ai_socktype はサポートされていません"
+
+#~ msgid "System error"
+#~ msgstr "システムエラー"
+
+#~ msgid "Argument buffer too small"
+#~ msgstr "引数バッファが小さすぎます"
+
+#~ msgid "Processing request in progress"
+#~ msgstr "要求された処理は実行中です"
+
+#~ msgid "Request canceled"
+#~ msgstr "要求がキャンセルされました"
+
+#~ msgid "Request not canceled"
+#~ msgstr "要求がキャンセルされませんでした"
+
+#~ msgid "All requests done"
+#~ msgstr "すべての要求が完了しました"
+
+#~ msgid "Interrupted by a signal"
+#~ msgstr "シグナル割り込みが発生しました"
+
+#~ msgid "Parameter string not correctly encoded"
+#~ msgstr "パラメーター文字列が正しくエンコードされていません"
+
+#~ msgid "Unknown error"
+#~ msgstr "不明なエラー"
+
+#~ msgid "invalid source_version argument to compile_java_class"
+#~ msgstr "compile_java_class への source_version 引数が無効です"
+
+#~ msgid "invalid target_version argument to compile_java_class"
+#~ msgstr "compile_java_class への target_version 引数が無効です"
+
+#~ msgid "failed to create \"%s\""
+#~ msgstr "\"%s\" の作成に失敗しました"
+
+#~ msgid "error while writing \"%s\" file"
+#~ msgstr "\"%s\" ファイルの書き込み中にエラーが発生しました"
+
+#~ msgid "Java compiler not found, try installing gcj or set $JAVAC"
+#~ msgstr "Java コンパイラが見つかりません。 gcj をインストールするか、または $JAVAC を設定してみてください"
+
+#~ msgid "Java virtual machine not found, try installing gij or set $JAVA"
+#~ msgstr "Java 仮想マシンが見つかりません。 gij をインストールするか、または $JAVA を設定してみてください"
+
+#~ msgid "%s subprocess I/O error"
+#~ msgstr "%s サブプロセス I/O エラー"
+
+#~ msgid "cannot change permissions of %s"
+#~ msgstr "%s のパーミッションを変更できません"
+
+#~ msgid "cannot create directory %s"
+#~ msgstr "ディレクトリ %s を作成できません"
+
+#~ msgid "Failed to open /dev/zero for read"
+#~ msgstr "/dev/zeroを読込み用に開けません"
+
+#~ msgid "creation of reading thread failed"
+#~ msgstr "読み込みスレッドの作成に失敗しました"
+
+#~ msgid "cannot set up nonblocking I/O to %s subprocess"
+#~ msgstr "%s 子プロセスへ非ブロック I/O を設定できません"
+
+#~ msgid "communication with %s subprocess failed"
+#~ msgstr "%s 子プロセスとの通信に失敗しました"
+
+#~ msgid "write to %s subprocess failed"
+#~ msgstr "%s 子プロセスへの書き込みに失敗しました"
+
+#~ msgid "read from %s subprocess failed"
+#~ msgstr "%s 子プロセスからの読み込みに失敗しました"
+
+#~ msgid "subprocess %s terminated with exit code %d"
+#~ msgstr "子プロセス %s が終了コード %d で終了しました"
+
+#~ msgid "creation of threads failed"
+#~ msgstr "スレッドの作成に失敗しました"
+
+#~ msgid "%s subprocess terminated with exit code %d"
+#~ msgstr "%s 子プロセスが終了コード %d で終了しました"
+
+#~ msgid "Franc,ois Pinard"
+#~ msgstr "Franc,ois Pinard"
+
+#~ msgid "Success"
+#~ msgstr "成功です"
+
+#~ msgid "No match"
+#~ msgstr "一致しません"
+
+#~ msgid "Invalid regular expression"
+#~ msgstr "無効な正規表現です"
+
+#~ msgid "Invalid collation character"
+#~ msgstr "無効な照合文字です"
+
+#~ msgid "Invalid character class name"
+#~ msgstr "無効な文字クラス名です"
+
+#~ msgid "Trailing backslash"
+#~ msgstr "終端のバックスラッシュ"
+
+#~ msgid "Invalid back reference"
+#~ msgstr "無効な前方参照です"
+
+#~ msgid "Unmatched [ or [^"
+#~ msgstr "[ または [^ が不一致です"
+
+#~ msgid "Unmatched ( or \\("
+#~ msgstr "( または \\( が不一致です"
+
+#~ msgid "Unmatched \\{"
+#~ msgstr "\\{ が不一致です"
+
+#~ msgid "Invalid content of \\{\\}"
+#~ msgstr "\\{\\} の中身が無効です"
+
+#~ msgid "Invalid range end"
+#~ msgstr "無効な範囲終了です"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "メモリを使い果たしました"
+
+#~ msgid "Invalid preceding regular expression"
+#~ msgstr "無効な前方正規表現です"
+
+#~ msgid "Premature end of regular expression"
+#~ msgstr "正規表現が途中で終了しました"
+
+#~ msgid "Regular expression too big"
+#~ msgstr "正規表現が大きすぎます"
+
+#~ msgid "Unmatched ) or \\)"
+#~ msgstr ") または \\) が不一致です"
+
+#~ msgid "No previous regular expression"
+#~ msgstr "以前に正規表現がありません"
+
+#~ msgid "^[yY]"
+#~ msgstr "^[yY]"
+
+#~ msgid "^[nN]"
+#~ msgstr "^[nN]"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "%s のパーミッションを設定します"
+
+#~ msgid "Hangup"
+#~ msgstr "Hangup"
+
+#~ msgid "Interrupt"
+#~ msgstr "割り込み"
+
+#~ msgid "Quit"
+#~ msgstr "終了"
+
+#~ msgid "Illegal instruction"
+#~ msgstr "Illegal instruction"
+
+#~ msgid "Trace/breakpoint trap"
+#~ msgstr "Trace/breakpoint trap"
+
+#~ msgid "Aborted"
+#~ msgstr "中止"
+
+#~ msgid "Floating point exception"
+#~ msgstr "浮動小数点例外"
+
+#~ msgid "Killed"
+#~ msgstr "強制終了"
+
+#~ msgid "Bus error"
+#~ msgstr "バスエラー"
+
+#~ msgid "Segmentation fault"
+#~ msgstr "Segmentation fault"
+
+#~ msgid "Broken pipe"
+#~ msgstr "Broken pipe"
+
+#~ msgid "Alarm clock"
+#~ msgstr "Alarm clock"
+
+#~ msgid "Terminated"
+#~ msgstr "Terminated"
+
+#~ msgid "Urgent I/O condition"
+#~ msgstr "緊急 I/O 状態"
+
+#~ msgid "Stopped (signal)"
+#~ msgstr "停止 (シグナル)"
+
+#~ msgid "Stopped"
+#~ msgstr "停止"
+
+#~ msgid "Continued"
+#~ msgstr "継続"
+
+#~ msgid "Child exited"
+#~ msgstr "子プロセス終了"
+
+#~ msgid "Stopped (tty input)"
+#~ msgstr "停止 (tty 入力)"
+
+#~ msgid "Stopped (tty output)"
+#~ msgstr "停止 (tty 出力)"
+
+#~ msgid "I/O possible"
+#~ msgstr "I/O 可能"
+
+#~ msgid "CPU time limit exceeded"
+#~ msgstr "CPU時間制限を超過しました"
+
+#~ msgid "File size limit exceeded"
+#~ msgstr "ファイルサイズ制限を超過しました"
+
+#~ msgid "Virtual timer expired"
+#~ msgstr "仮想タイマーが終了しました"
+
+#~ msgid "Profiling timer expired"
+#~ msgstr "プロファイリングタイマーが終了しました"
+
+#~ msgid "Window changed"
+#~ msgstr "Window が変更されました"
+
+#~ msgid "User defined signal 1"
+#~ msgstr "ユーザー定義シグナル1"
+
+#~ msgid "User defined signal 2"
+#~ msgstr "ユーザー定義シグナル2"
+
+#~ msgid "EMT trap"
+#~ msgstr "EMT トラップ"
+
+#~ msgid "Bad system call"
+#~ msgstr "間違ったシステムコール"
+
+#~ msgid "Stack fault"
+#~ msgstr "スタックエラー"
+
+#~ msgid "Information request"
+#~ msgstr "情報要求"
+
+#~ msgid "Power failure"
+#~ msgstr "電源エラー"
+
+#~ msgid "Resource lost"
+#~ msgstr "リソースが無くなりました"
+
+#~ msgid "error writing to a closed pipe or socket"
+#~ msgstr "閉じたパイプまたはソケットへの書き込みでエラーが発生しました"
+
+#~ msgid "Real-time signal %d"
+#~ msgstr "リアルタイムシグナル %d"
+
+#~ msgid "Unknown signal %d"
+#~ msgstr "不明なシグナル %d"
+
+#~ msgid "iconv function not usable"
+#~ msgstr "iconv 関数が使えません"
+
+#~ msgid "iconv function not available"
+#~ msgstr "iconv 関数が有効ではありません"
+
+#~ msgid "character out of range"
+#~ msgstr "範囲外の文字"
+
+#~ msgid "cannot convert U+%04X to local character set"
+#~ msgstr "U+%04X をローカル文字セットに変換できません"
+
+#~ msgid "cannot convert U+%04X to local character set: %s"
+#~ msgstr "U+%04X をローカル文字セットに変換できません: %s "
+
+#~ msgid "invalid user"
+#~ msgstr "無効なユーザ"
+
+#~ msgid "invalid group"
+#~ msgstr "無効なグループ"
+
+#~ msgid "invalid spec"
+#~ msgstr "無効な指定"
+
+#~ msgid "unable to display error message"
+#~ msgstr "エラーメッセージを表示できません"
+
+#~ msgid "Packaged by %s (%s)\n"
+#~ msgstr "パッケージ作成者: %s (%s)\n"
+
+#~ msgid "Packaged by %s\n"
+#~ msgstr "パッケージ作成者: %s\n"
+
+#~ msgid "(C)"
+#~ msgstr "(C)"
+
+#~ msgid ""
+#~ "\n"
+#~ "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.\n"
+#~ "This is free software: you are free to change and redistribute it.\n"
+#~ "There is NO WARRANTY, to the extent permitted by law.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "ライセンス GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.\n"
+#~ "This is free software: you are free to change and redistribute it.\n"
+#~ "There is NO WARRANTY, to the extent permitted by law.\n"
+#~ "\n"
+
+#~ msgid "Written by %s.\n"
+#~ msgstr "作者 %s。\n"
+
+#~ msgid "Written by %s and %s.\n"
+#~ msgstr "作者 %s および %s。\n"
+
+#~ msgid "Written by %s, %s, and %s.\n"
+#~ msgstr "作者 %s、 %s、および %s。\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "and %s.\n"
+#~ msgstr ""
+#~ "作者 %s、 %s、 %s、\n"
+#~ "および %s。\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, and %s.\n"
+#~ msgstr ""
+#~ "作者 %s、 %s、 %s、\n"
+#~ "%s、および %s。\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, and %s.\n"
+#~ msgstr ""
+#~ "作者 %s、 %s、 %s、\n"
+#~ "%s、 %s、および %s。\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, and %s.\n"
+#~ msgstr ""
+#~ "作者 %s、 %s、 %s、\n"
+#~ "%s、 %s、 %s、および %s。\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "and %s.\n"
+#~ msgstr ""
+#~ "作者 %s、 %s、 %s、\n"
+#~ "%s、 %s、 %s、 %s、\n"
+#~ "および %s。\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "%s, and %s.\n"
+#~ msgstr ""
+#~ "作者 %s、 %s、 %s、\n"
+#~ "%s、 %s、 %s、 %s、\n"
+#~ "%s、および %s。\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "%s, %s, and others.\n"
+#~ msgstr ""
+#~ "作者 %s、 %s、 %s、\n"
+#~ "%s、 %s、 %s、 %s、\n"
+#~ "%s、 %s、 および他の方々。\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Report bugs to: %s\n"
+#~ msgstr ""
+#~ "\n"
+#~ "バグを発見したら <%s> に報告して下さい。\n"
+#~ "翻訳に関するバグは<translation-team-ja@lists.sourceforge.net>に報告してください。\n"
+
+#~ msgid "Report %s bugs to: %s\n"
+#~ msgstr "%s のバグは <%s> に報告してください。\n"
+
+#~ msgid "%s home page: <%s>\n"
+#~ msgstr "%s のホームページ: <%s>\n"
+
+#~ msgid "%s home page: <http://www.gnu.org/software/%s/>\n"
+#~ msgstr "%s のホームページ: <http://www.gnu.org/software/%s/>\n"
+
+#~ msgid "General help using GNU software: <http://www.gnu.org/gethelp/>\n"
+#~ msgstr "GNU ソフトウェアを使用する際の一般的なヘルプ: <http://www.gnu.org/gethelp/>\n"
+
+#~ msgid "stdin"
+#~ msgstr "標準入力"
+
+#~ msgid "stdout"
+#~ msgstr "標準出力"
+
+#~ msgid "stderr"
+#~ msgstr "標準エラー出力"
+
+#~ msgid "unknown stream"
+#~ msgstr "不明なストリーム"
+
+#~ msgid "failed to reopen %s with mode %s"
+#~ msgstr "%s をモード %s で再度開くことに失敗しました"
+
+#~ msgid "string comparison failed"
+#~ msgstr "文字列の比較に失敗しました"
+
+#~ msgid "Set LC_ALL='C' to work around the problem."
+#~ msgstr "問題を回避するために LC_ALL='C' を指定してください."
+
+#~ msgid "The strings compared were %s and %s."
+#~ msgstr "比較した文字列は %s と %s です."
+
+#~ msgid "cannot perform formatted output"
+#~ msgstr "書式設定を行った出力を実行することができません"
+
+#~ msgid "invalid %s%s argument `%s'"
+#~ msgstr "引数 `%3$s' に対して %1$s%2$s が無効です"
+
+#~ msgid "invalid suffix in %s%s argument `%s'"
+#~ msgstr "引数 `%3$s' に対して無効な接尾辞 %1$s%2$s です"
+
+#~ msgid "%s%s argument `%s' too large"
+#~ msgstr "引数 `%3$s' に対する %1$s%2$s が大きすぎます"
