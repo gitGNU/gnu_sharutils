@@ -24,7 +24,6 @@ detail = <<- _EODetail_
 	the start of a shell archive.  If no files are given, then standard
 	input is processed instead.  It then passes each archive discovered
 	through an invocation of the shell program to unpack it.
-
 	_EODetail_;
 
 main = {
