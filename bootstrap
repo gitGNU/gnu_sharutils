@@ -259,7 +259,6 @@ run_gnulib_tool() {
 	getcwd
 	gethostname
 	getopt-gnu
-	gettext
 	idcache
 	inttostr
 	malloc-gnu
@@ -285,20 +284,15 @@ run_gnulib_tool() {
 	xstrtoimax
 "
 
-    autopoint=$(command -v autopoint)
-    ${autopoint} --version | head -n2 >&2
-    ${autopoint} --force > /dev/null 2>&1 || :
     echo  ${gltool} --import  ... >&2
     {
       ${gltool} --import ${gnulib_libs} 2>&1
     } | sed '1,/^You may need to add #include/d' | \
       tee import-log.txt
 
-    for f in intl po
-    do
-        cp /usr/local/share/aclocal/${f}.m4 m4/.
-        touch -r /usr/local/share/aclocal/${f}.m4 m4/${f}.m4
-    done
+    autopoint=$(command -v autopoint)
+    ${autopoint} --version | head -n2 >&2
+    ${autopoint} --force > /dev/null 2>&1 || :
 }
 
 setup_configure() {
