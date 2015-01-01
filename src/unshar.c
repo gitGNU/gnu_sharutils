@@ -309,13 +309,13 @@ get_env_tmpdir(void)
 static FILE *
 load_file (char const ** tmp_fname, FILE * infp)
 {
-  static const char z_tmpfile[] = "unsh.XXXXXX";
+  static char const z_tmpfile[] = "unsh.XXXXXX";
   char * pz_fname;
   FILE * outfp;
 
   {
     size_t name_size;
-    char * pz_tmp = get_env_tmpdir();
+    char const * pz_tmp = get_env_tmpdir();
 
     name_size = strlen (pz_tmp) + sizeof (z_tmpfile) + 1;
     *tmp_fname = pz_fname = malloc (name_size);

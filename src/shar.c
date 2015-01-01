@@ -574,7 +574,7 @@ walktree (walker_t routine, const char *local_name)
   /* Remove crumb at beginning.  */
 
   if (HAVE_OPT(BASENAME))
-    restore_name = basename (local_name_copy);
+    restore_name = base_name (local_name_copy);
   else if (!strncmp (local_name_copy, "./", 2))
     restore_name = local_name_copy + 2;
   else

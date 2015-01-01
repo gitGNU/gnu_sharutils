@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the sharutils package.
 # David Sauer <xsauer@fel.cvut.cz>, 1997.
 # Vladimir Michl <Vladimir.Michl@upol.cz>, 1998.
-# Petr Pisar <petr.pisar@atlas.cz>, 2010, 2011, 2012, 2013.
+# Petr Pisar <petr.pisar@atlas.cz>, 2010, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.14\n"
+"Project-Id-Version: sharutils 4.14.2\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-10-18 14:04-0700\n"
-"PO-Revision-Date: 2013-10-28 10:23+0100\n"
+"POT-Creation-Date: 2014-12-07 18:00-0800\n"
+"PO-Revision-Date: 2014-12-15 13:52+0100\n"
 "Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # TODO: Plural
-#: src/scribble.c:150
+#: src/scribble.c:166
 #, c-format
 msgid "could not allocate %u bytes of scribble space"
 msgstr "nebylo možné alokovat %u bajtů v prostoru scribble"
@@ -146,7 +146,7 @@ msgstr "Konec %s, část %d"
 msgid "restoration warning:  size of %s is not %s"
 msgstr "upozornění při obnově: velikost %s není %s"
 
-#: src/scripts.x:475 src/shar.c:1451
+#: src/scripts.x:475 src/shar.c:1453
 msgid "(text)"
 msgstr "(textový)"
 
@@ -298,14 +298,14 @@ msgstr "Nedostatek paměti pro duplikaci přeložených řetězců\n"
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2257
 msgid ""
-"shar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"shar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.14\n"
-"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"shar (GNU sharutils) 4.14.2\n"
+"Copyright © 1994–2014 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
 "Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
 "šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
 "nebo pozdější <http://gnu.org/licenses/gpl.html>\n"
@@ -407,8 +407,8 @@ msgstr ""
 "zvolena metoda Base64.\n"
 
 #: src/shar-opts.c:2300
-msgid "shar (GNU sharutils) 4.14"
-msgstr "shar (GNU sharutils) 4.14"
+msgid "shar (GNU sharutils) 4.14.2"
+msgstr "shar (GNU sharutils) 4.14.2"
 
 #: src/shar-opts.c:2303
 msgid ""
@@ -781,11 +781,11 @@ msgstr "alokace %d bajtů paměti selhala\n"
 msgid "AutoOpts function called without option descriptor\n"
 msgstr "Funkce AutoOpts byla zavolána bez popisu přepínačů\n"
 
-#: ../init.c:90
+#: ../init.c:86
 msgid "\tThis exceeds the compiled library version:  "
 msgstr "\tToto překračuje verzi knihovny v době překladu: "
 
-#: ../init.c:88
+#: ../init.c:84
 #, c-format
 msgid ""
 "Automated Options Processing Error!\n"
@@ -800,7 +800,7 @@ msgstr ""
 msgid "realloc of %d bytes at 0x%p failed\n"
 msgstr "realokace %d bajtů na adrese 0x%p selhala\n"
 
-#: ../init.c:92
+#: ../init.c:88
 msgid "\tThis is less than the minimum library version:  "
 msgstr "\tToto je méně než minimální verze knihovny:  "
 
@@ -808,10 +808,10 @@ msgstr "\tToto je méně než minimální verze knihovny:  "
 #, c-format
 msgid ""
 "Automated Options version %s\n"
-"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+"\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Automated Options verze %s\n"
-"\tCopyright © 1999–2013 Bruce Korb – všechna práva vyhrazena\n"
+"\tCopyright © 1999–2014 Bruce Korb – všechna práva vyhrazena\n"
 
 #: ../makeshell.c:82
 #, c-format
@@ -992,7 +992,7 @@ msgstr "Chyba %s: chybí uložený stav přepínače\n"
 msgid "'%s' is not a command line option.\n"
 msgstr "„%s“ není přepínačem na příkazovém řádku.\n"
 
-#: ../time.c:114
+#: ../time.c:111
 #, c-format
 msgid "%s error:  '%s' is not a recognizable date/time.\n"
 msgstr "chyba %s: „%s“ není rozpoznatelné datum nebo čas.\n"
@@ -1002,7 +1002,7 @@ msgstr "chyba %s: „%s“ není rozpoznatelné datum nebo čas.\n"
 msgid "'%s' not defined\n"
 msgstr "„%s“ není definováno\n"
 
-#: ../time.c:53
+#: ../time.c:50
 #, c-format
 msgid "%s error:  '%s' is not a recognizable time duration.\n"
 msgstr "chyba %s: „%s“ není rozpoznatelná délka trvání.\n"
@@ -1012,7 +1012,7 @@ msgstr "chyba %s: „%s“ není rozpoznatelná délka trvání.\n"
 msgid "%s error:  The %s option must appear %d times.\n"
 msgstr "Chyba %s: Přepínač %s musí se vyskytovat %dkrát.\n"
 
-#: ../numeric.c:157
+#: ../numeric.c:164
 #, c-format
 msgid "%s error:  '%s' is not a recognizable number.\n"
 msgstr "chyba %s: „%s“ není rozpoznatelné číslo.\n"
@@ -1033,8 +1033,8 @@ msgid "one %s%s option allowed\n"
 msgstr "dovolen je jeden přepínač %s%s\n"
 
 #: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:274 ../usage.c:415
-#: ../usage.c:625 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
-#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+#: ../usage.c:625 ../version.c:175 src/uuencode.c:107 src/uuencode.c:184
+#: src/uuencode.c:273 src/uuencode.c:278 src/uuencode.c:280 src/uuencode.c:282
 msgid "standard output"
 msgstr "standardní výstup"
 
@@ -1062,120 +1062,120 @@ msgstr "Chyba %s: přepínač %s vyžaduje přepínač %s\n"
 msgid "%s warning:  cannot save options - %s not regular file\n"
 msgstr "varování %s: přepínače nelze uložit – %s není běžným souborem\n"
 
-#: src/shar.c:355
+#: src/shar.c:357
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "chyba formátování printf: %s\n"
 
-#: src/shar.c:402
+#: src/shar.c:404
 msgid "sharutils bug - no status"
 msgstr "chyba sharutils – chybí status"
 
-#: src/shar.c:751
+#: src/shar.c:753
 msgid "Too many directories for mkdir generation"
 msgstr "Příliš mnoho adresářů pro mkdir"
 
-#: src/shar.c:834 src/shar.c:1693
+#: src/shar.c:836 src/shar.c:1695
 #, c-format
 msgid "Cannot access %s"
 msgstr "Pro přístup k %s chybí práva"
 
-#: src/shar.c:929
+#: src/shar.c:931
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Jméno aktuálního adresáře nelze zjistit"
 
-#: src/shar.c:1018
+#: src/shar.c:1020
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Začíná soubor %s\n"
 
-#: src/shar.c:1112
+#: src/shar.c:1114
 msgid "Could not popen command"
 msgstr "Nebylo možné spustit příkaz přes popen"
 
-#: src/shar.c:1172
+#: src/shar.c:1174
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Soubor %s nelze otevřít"
 
-#: src/shar.c:1298 src/shar.c:1309 src/shar.c:1917
+#: src/shar.c:1300 src/shar.c:1311 src/shar.c:1919
 msgid "call"
 msgstr "volání"
 
-#: src/shar.c:1321
+#: src/shar.c:1323
 msgid "pipe fd"
 msgstr "deskriptor roury"
 
-#: src/shar.c:1436 src/shar.c:1450
+#: src/shar.c:1438 src/shar.c:1452
 msgid "text"
 msgstr "textový"
 
-#: src/shar.c:1553
+#: src/shar.c:1555
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Pokračování souboru %s\n"
 
-#: src/shar.c:1688
+#: src/shar.c:1690
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Není obyčejný soubor"
 
-#: src/shar.c:1736
+#: src/shar.c:1738
 msgid "empty"
 msgstr "prázdný"
 
 # Error while...
-#: src/shar.c:1763
+#: src/shar.c:1765
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Ukládání %s (%s)"
 
-#: src/shar.c:1964
+#: src/shar.c:1966
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Neplatný formát pro názvy výstupního souboru (%s): %s"
 
-#: src/shar.c:1979
+#: src/shar.c:1981
 msgid "more than one format element"
 msgstr "více jak jeden formátovací prvek"
 
-#: src/shar.c:1984
+#: src/shar.c:1986
 msgid "no conversion character"
 msgstr "žádný převodní znak"
 
-#: src/shar.c:1993
+#: src/shar.c:1995
 msgid "format is too wide"
 msgstr "formát je příliš široký"
 
-#: src/shar.c:2005
+#: src/shar.c:2007
 msgid "invalid conversion character"
 msgstr "neplatný převodní znak"
 
 # Error while...
-#: src/shar.c:2050
+#: src/shar.c:2052
 msgid "Opening"
 msgstr "Otevírání"
 
-#: src/shar.c:2065
+#: src/shar.c:2067
 msgid "Closing"
 msgstr "Uzavírání"
 
-#: src/shar.c:2152
+#: src/shar.c:2154
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "chybový výstup se znovu otevírá jako /dev/null"
 
-#: src/shar.c:2205
+#: src/shar.c:2207
 msgid "No input files"
 msgstr "Vstupní soubory nejsou zadány"
 
-#: src/shar.c:2222
+#: src/shar.c:2224
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "PROSÍM, nepoužívejte -X soubory v USENETu nebo veřejných sítích"
 
-#: src/shar.c:2246
+#: src/shar.c:2248
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -1184,12 +1184,12 @@ msgstr ""
 "Přepínač „%s“ nesmí být namíchán s názvy souborů\n"
 "pokud nebyl zadán přepínač --intermix-type."
 
-#: src/shar.c:2264
+#: src/shar.c:2266
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Přepínač „%s“ musí předcházet všem názvům souborů"
 
-#: src/shar.c:2300
+#: src/shar.c:2302
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -1198,11 +1198,11 @@ msgstr ""
 "neplatný druh komprese: %s\n"
 "známé druhy jsou:\n"
 
-#: src/shar.c:2339
+#: src/shar.c:2341
 msgid "files on command line and --input-file-list specified"
 msgstr "zadány soubory na příkazovém řádku i --input-file-list"
 
-#: src/shar.c:2388
+#: src/shar.c:2390
 #, c-format
 msgid "Created %d files\n"
 msgstr "Souborů vytvořeno: %d\n"
@@ -1212,8 +1212,8 @@ msgstr "Souborů vytvořeno: %d\n"
 msgid "fs error %d (%s) %s-ing %s\n"
 msgstr "chyba souborového systému %d (%s) při operaci %s nad %s\n"
 
-#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:511
-#: src/uuencode.c:205
+#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:513
+#: src/uuencode.c:207
 msgid "standard input"
 msgstr "standardní vstup"
 
@@ -1244,14 +1244,14 @@ msgstr "nepřekonatelná chyba v unshar:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:931
 msgid ""
-"unshar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"unshar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"unshar (GNU sharutils) 4.14\n"
-"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"unshar (GNU sharutils) 4.14.2\n"
+"Copyright © 1994–2014 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
 "Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
 "šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
 "nebo pozdější <http://gnu.org/licenses/gpl.html>.\n"
@@ -1318,8 +1318,8 @@ msgstr ""
 "archiv rozbalil.\n"
 
 #: src/unshar-opts.c:966
-msgid "unshar (GNU sharutils) 4.14"
-msgstr "unshar (GNU sharutils) 4.14"
+msgid "unshar (GNU sharutils) 4.14.2"
+msgstr "unshar (GNU sharutils) 4.14.2"
 
 #: src/unshar-opts.c:969
 msgid ""
@@ -1434,7 +1434,7 @@ msgstr ""
 "Podrobnosti získáte příkazem „unshar --help“.\n"
 
 # TODO: Plural
-#: src/unshar-opts.h:258 src/uudecode-opts.h:236
+#: src/unshar-opts.h:263 src/uudecode-opts.h:241
 #, c-format
 msgid "could not allocate %zu bytes for %s\n"
 msgstr "nebylo možné alokovat %zu bajtů pro %s\n"
@@ -1500,14 +1500,14 @@ msgstr "nepřekonatelná chyba v uudecode:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:705
 msgid ""
-"uudecode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uudecode (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (GNU sharutils) 4.14\n"
-"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"uudecode (GNU sharutils) 4.14.2\n"
+"Copyright © 1994–2014 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
 "Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
 "šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
 "nebo pozdější <http://gnu.org/licenses/gpl.html>.\n"
@@ -1597,8 +1597,8 @@ msgstr ""
 "Totéž se týká názvu výstupního souboru. Vizte „uuencode(5)“.\n"
 
 #: src/uudecode-opts.c:747
-msgid "uudecode (GNU sharutils) 4.14"
-msgstr "uudecode (GNU sharutils) 4.14"
+msgid "uudecode (GNU sharutils) 4.14.2"
+msgstr "uudecode (GNU sharutils) 4.14.2"
 
 #: src/uudecode-opts.c:750
 msgid ""
@@ -1668,70 +1668,70 @@ msgstr ""
 "                  [<soubor>…]\n"
 "Podrobnosti získáte příkazem „uudecode --help“.\n"
 
-#: src/uudecode.c:118 src/uudecode.c:182
+#: src/uudecode.c:120 src/uudecode.c:184
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Krátký soubor"
 
-#: src/uudecode.c:164
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Chybí řádek „end“"
 
-#: src/uudecode.c:188
+#: src/uudecode.c:190
 #, c-format
 msgid "%s: invalid input"
 msgstr "%s: neplatný vstup"
 
-#: src/uudecode.c:210 src/uudecode.c:224
+#: src/uudecode.c:212 src/uudecode.c:226
 msgid "cannot expand $HOME"
 msgstr "nelze vyhodnotit $HOME"
 
-#: src/uudecode.c:260
+#: src/uudecode.c:262
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Nepřípustný název souboru: %s"
 
-#: src/uudecode.c:267
+#: src/uudecode.c:269
 #, c-format
 msgid "No user '%s'"
 msgstr "Uživatel „%s“ neexistuje"
 
 # Error while...
-#: src/uudecode.c:278 src/uudecode.c:340
+#: src/uudecode.c:280 src/uudecode.c:342
 msgid "output file name"
 msgstr "název výstupního souboru"
 
-#: src/uudecode.c:297
+#: src/uudecode.c:299
 #, c-format
 msgid "cannot access %s"
 msgstr "nelze přistoupit k %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:312
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod nad %s"
 
-#: src/uudecode.c:334
+#: src/uudecode.c:336
 msgid "output name is empty"
 msgstr "název výstupu je prázdný"
 
-#: src/uudecode.c:345
+#: src/uudecode.c:347
 #, c-format
 msgid "invalid base64 encoded name: %s"
 msgstr "neplatný název kódovaný v Base64: %s"
 
-#: src/uudecode.c:380
+#: src/uudecode.c:382
 #, c-format
-msgid "%s: Invalid or missing 'begin' line"
-msgstr "%s: Neplatný nebo chybějící řádek „begin“"
+msgid "%s: Invalid or missing 'begin' line\n"
+msgstr "%s: Neplatný nebo chybějící řádek „begin“\n"
 
-#: src/uudecode.c:477
+#: src/uudecode.c:479
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Chyba při zápisu"
 
-#: src/uudecode.c:517
+#: src/uudecode.c:519
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
@@ -1764,14 +1764,14 @@ msgstr "nepřekonatelná chyba v uuencode:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:656
 msgid ""
-"uuencode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uuencode (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (GNU sharutils) 4.14\n"
-"Copyright © 1994–2013 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
+"uuencode (GNU sharutils) 4.14.2\n"
+"Copyright © 1994–2014 Free Software Foundation, Inc., všechna práva vyhrazena.\n"
 "Toto je svobodné programové vybavení. Je licencováno pro použití, úpravy a\n"
 "šíření podle podmínek Obecné veřejné licence GNU (GPL) verze 3\n"
 "nebo pozdější <http://gnu.org/licenses/gpl.html>.\n"
@@ -1854,8 +1854,8 @@ msgstr ""
 "můžete potřebovat stisknout několikrát Ctrl-D, abyste ukončili vstup.\n"
 
 #: src/uuencode-opts.c:694
-msgid "uuencode (GNU sharutils) 4.14"
-msgstr "uuencode (GNU sharutils) 4.14"
+msgid "uuencode (GNU sharutils) 4.14.2"
+msgstr "uuencode (GNU sharutils) 4.14.2"
 
 #: src/uuencode-opts.c:697
 msgid ""
@@ -1919,15 +1919,15 @@ msgstr ""
 "Použití: uuencode [ -<příznak> | --<název> ]… [<vstupní_soubor>]\n"
 "                  <název_výstupu>\n"
 
-#: src/uuencode.c:226
+#: src/uuencode.c:228
 msgid "freopen of stdin"
 msgstr "freopen() nad standardním vstupem"
 
-#: src/uuencode.c:255
+#: src/uuencode.c:257
 msgid "file name"
 msgstr "název souboru"
 
-#: lib/error.c:188
+#: lib/error.c:191
 msgid "Unknown system error"
 msgstr "Neznámá chyba systému"
 
@@ -2025,13 +2025,13 @@ msgstr "„"
 msgid "'"
 msgstr "“"
 
-#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
-#: lib/spawn-pipe.c:267
+#: lib/spawn-pipe.c:135 lib/spawn-pipe.c:138 lib/spawn-pipe.c:259
+#: lib/spawn-pipe.c:262
 #, c-format
 msgid "cannot create pipe"
 msgstr "rouru nelze vytvořit"
 
-#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/spawn-pipe.c:229 lib/spawn-pipe.c:343 lib/wait-process.c:282
 #: lib/wait-process.c:356
 #, c-format
 msgid "%s subprocess failed"

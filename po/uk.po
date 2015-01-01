@@ -2,13 +2,13 @@
 # Copyright (C) 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2012, 2013.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: GNU sharutils 4.14\n"
+"Project-Id-Version: GNU sharutils 4.14.2\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-10-18 14:04-0700\n"
-"PO-Revision-Date: 2013-10-28 11:40+0200\n"
+"POT-Creation-Date: 2014-12-07 18:00-0800\n"
+"PO-Revision-Date: 2014-12-14 23:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: src/scribble.c:150
+#: src/scribble.c:166
 #, c-format
 msgid "could not allocate %u bytes of scribble space"
 msgstr "не вдалося отримати %u байтів тимчасової області у пам’яті"
@@ -145,7 +145,7 @@ msgstr "Завершення частини %s з номером %d"
 msgid "restoration warning:  size of %s is not %s"
 msgstr "попередження щодо відновлення: розмір %s не дорівнює %s"
 
-#: src/scripts.x:475 src/shar.c:1451
+#: src/scripts.x:475 src/shar.c:1453
 msgid "(text)"
 msgstr "(текстовий)"
 
@@ -296,14 +296,14 @@ msgstr "Недостатньо пам’яті для дублювання пе�
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2257
 msgid ""
-"shar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"shar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.14\n"
-"(C) Free Software Foundation, Inc., 1994-2013. Всі права захищено.\n"
+"shar (GNU sharutils) 4.14.2\n"
+"(C) Free Software Foundation, Inc., 1994-2014. Всі права захищено.\n"
 "Це вільне програмне забезпечення. Ліцензійними умовами щодо його\n"
 "використання передбачено можливість використання, внесення змін\n"
 "та поширення його відповідно до умов GNU General Public License,\n"
@@ -409,8 +409,8 @@ msgstr ""
 "використовувати основу 64 для кодування.\n"
 
 #: src/shar-opts.c:2300
-msgid "shar (GNU sharutils) 4.14"
-msgstr "shar (GNU sharutils) 4.14"
+msgid "shar (GNU sharutils) 4.14.2"
+msgstr "shar (GNU sharutils) 4.14.2"
 
 #: src/shar-opts.c:2303
 msgid ""
@@ -780,11 +780,11 @@ msgstr "не вдалося розмістити у пам’яті %d байт�
 msgid "AutoOpts function called without option descriptor\n"
 msgstr "Функцію AutoOpts викликано без дескриптора параметра\n"
 
-#: ../init.c:90
+#: ../init.c:86
 msgid "\tThis exceeds the compiled library version:  "
 msgstr "\tЄ більшим за значення версії зібраної бібліотеки:  "
 
-#: ../init.c:88
+#: ../init.c:84
 #, c-format
 msgid ""
 "Automated Options Processing Error!\n"
@@ -798,7 +798,7 @@ msgstr ""
 msgid "realloc of %d bytes at 0x%p failed\n"
 msgstr "помилка виконання realloc для отримання %d байтів за адресою 0x%p\n"
 
-#: ../init.c:92
+#: ../init.c:88
 msgid "\tThis is less than the minimum library version:  "
 msgstr "\tЗначення версії є меншим за мінімальне значення версії бібліотеки:  "
 
@@ -806,10 +806,10 @@ msgstr "\tЗначення версії є меншим за мінімальн�
 #, c-format
 msgid ""
 "Automated Options version %s\n"
-"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+"\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Засіб автоматичної обробки параметрів версії %s\n"
-"\t© Bruce Korb, 1999–2013, всі права захищено\n"
+"\t© Bruce Korb, 1999–2014, всі права захищено\n"
 
 #: ../makeshell.c:82
 #, c-format
@@ -989,7 +989,7 @@ msgstr "Помилка %s: немає збереженого стану пара
 msgid "'%s' is not a command line option.\n"
 msgstr "«%s» не є параметром командного рядка.\n"
 
-#: ../time.c:114
+#: ../time.c:111
 #, c-format
 msgid "%s error:  '%s' is not a recognizable date/time.\n"
 msgstr "Помилка %s:  «%s» не є придатним для обробки записом дати або часу\n"
@@ -999,7 +999,7 @@ msgstr "Помилка %s:  «%s» не є придатним для оброб�
 msgid "'%s' not defined\n"
 msgstr "«%s» не визначено\n"
 
-#: ../time.c:53
+#: ../time.c:50
 #, c-format
 msgid "%s error:  '%s' is not a recognizable time duration.\n"
 msgstr "Помилка %s:  «%s» не є придатним для обробки записом часу\n"
@@ -1009,7 +1009,7 @@ msgstr "Помилка %s:  «%s» не є придатним для оброб�
 msgid "%s error:  The %s option must appear %d times.\n"
 msgstr "Помилка %s:  параметр %s мало бути вказано %d разів.\n"
 
-#: ../numeric.c:157
+#: ../numeric.c:164
 #, c-format
 msgid "%s error:  '%s' is not a recognizable number.\n"
 msgstr "Помилка %s:  «%s» не є придатним для обробки числом\n"
@@ -1030,8 +1030,8 @@ msgid "one %s%s option allowed\n"
 msgstr "один параметр %s%s може бути використано\n"
 
 #: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:274 ../usage.c:415
-#: ../usage.c:625 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
-#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+#: ../usage.c:625 ../version.c:175 src/uuencode.c:107 src/uuencode.c:184
+#: src/uuencode.c:273 src/uuencode.c:278 src/uuencode.c:280 src/uuencode.c:282
 msgid "standard output"
 msgstr "стандартний потік виводу"
 
@@ -1059,118 +1059,118 @@ msgstr "Помилка %s:  для того, щоб працювати з пар
 msgid "%s warning:  cannot save options - %s not regular file\n"
 msgstr "Попередження %s:  не вдалося зберегти параметри - %s не є звичайним файлом\n"
 
-#: src/shar.c:355
+#: src/shar.c:357
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "помилка форматування даних у printf: %s\n"
 
-#: src/shar.c:402
+#: src/shar.c:404
 msgid "sharutils bug - no status"
 msgstr "вада sharutils — стан не визначено"
 
-#: src/shar.c:751
+#: src/shar.c:753
 msgid "Too many directories for mkdir generation"
 msgstr "Занадто багато каталогів для створення команди mkdir"
 
-#: src/shar.c:834 src/shar.c:1693
+#: src/shar.c:836 src/shar.c:1695
 #, c-format
 msgid "Cannot access %s"
 msgstr "Не вдалося отримати доступ до %s"
 
-#: src/shar.c:929
+#: src/shar.c:931
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Не вдалося визначити назву поточного каталогу"
 
-#: src/shar.c:1018
+#: src/shar.c:1020
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Запуск файла %s\n"
 
-#: src/shar.c:1112
+#: src/shar.c:1114
 msgid "Could not popen command"
 msgstr "Не вдалося виконати команду popen"
 
-#: src/shar.c:1172
+#: src/shar.c:1174
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Не вдалося відкрити файл %s"
 
-#: src/shar.c:1298 src/shar.c:1309 src/shar.c:1917
+#: src/shar.c:1300 src/shar.c:1311 src/shar.c:1919
 msgid "call"
 msgstr "виклик"
 
-#: src/shar.c:1321
+#: src/shar.c:1323
 msgid "pipe fd"
 msgstr "дескриптор файла каналу"
 
-#: src/shar.c:1436 src/shar.c:1450
+#: src/shar.c:1438 src/shar.c:1452
 msgid "text"
 msgstr "текст"
 
-#: src/shar.c:1553
+#: src/shar.c:1555
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Продовження файла %s\n"
 
-#: src/shar.c:1688
+#: src/shar.c:1690
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: не є звичайним файлом"
 
-#: src/shar.c:1736
+#: src/shar.c:1738
 msgid "empty"
 msgstr "порожній"
 
-#: src/shar.c:1763
+#: src/shar.c:1765
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Збереження %s (%s)"
 
-#: src/shar.c:1964
+#: src/shar.c:1966
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Помилкове форматування назв файлів виведених даних (%s): %s"
 
-#: src/shar.c:1979
+#: src/shar.c:1981
 msgid "more than one format element"
 msgstr "більше за один запис формату"
 
-#: src/shar.c:1984
+#: src/shar.c:1986
 msgid "no conversion character"
 msgstr "немає символу перетворення"
 
-#: src/shar.c:1993
+#: src/shar.c:1995
 msgid "format is too wide"
 msgstr "формат є надто довгим"
 
-#: src/shar.c:2005
+#: src/shar.c:2007
 msgid "invalid conversion character"
 msgstr "некоректний символ перетворення"
 
-#: src/shar.c:2050
+#: src/shar.c:2052
 msgid "Opening"
 msgstr "Відкриття"
 
-#: src/shar.c:2065
+#: src/shar.c:2067
 msgid "Closing"
 msgstr "Закриття"
 
-#: src/shar.c:2152
+#: src/shar.c:2154
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "повторно відкриваємо stderr з переспрямовуванням до /dev/null"
 
-#: src/shar.c:2205
+#: src/shar.c:2207
 msgid "No input files"
 msgstr "Не вказано вхідних файлів"
 
-#: src/shar.c:2222
+#: src/shar.c:2224
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "БУДЬ ЛАСКА, не використовуйте режим -X у Usenet та мережах з відкритим доступом"
 
-#: src/shar.c:2246
+#: src/shar.c:2248
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -1179,12 +1179,12 @@ msgstr ""
 "Параметр «%s» не можна використовувати з заданими назвами файлів,\n"
 "якщо не було вказано параметра --intermix-type."
 
-#: src/shar.c:2264
+#: src/shar.c:2266
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Параметр «%s» слід вказувати до назв файлів"
 
-#: src/shar.c:2300
+#: src/shar.c:2302
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -1193,11 +1193,11 @@ msgstr ""
 "некоректний тип ущільнення:  %s\n"
 "відомі програмі типи:\n"
 
-#: src/shar.c:2339
+#: src/shar.c:2341
 msgid "files on command line and --input-file-list specified"
 msgstr "вказано файли у командному рядку і за допомогою --input-file-list"
 
-#: src/shar.c:2388
+#: src/shar.c:2390
 #, c-format
 msgid "Created %d files\n"
 msgstr "Створено %d файлів\n"
@@ -1207,8 +1207,8 @@ msgstr "Створено %d файлів\n"
 msgid "fs error %d (%s) %s-ing %s\n"
 msgstr "помилка файлової системи %d (%s) під час обробки за допомогою %s %s\n"
 
-#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:511
-#: src/uuencode.c:205
+#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:513
+#: src/uuencode.c:207
 msgid "standard input"
 msgstr "стандартне джерело даних"
 
@@ -1239,14 +1239,14 @@ msgstr "критична помилка unshar:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:931
 msgid ""
-"unshar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"unshar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"unshar (GNU sharutils) 4.14\n"
-"(C) Free Software Foundation, Inc., 1994-2013. Всі права захищено.\n"
+"unshar (GNU sharutils) 4.14.2\n"
+"(C) Free Software Foundation, Inc., 1994-2014. Всі права захищено.\n"
 "Це вільне програмне забезпечення. Ліцензійними умовами щодо його\n"
 "використання передбачено можливість використання, внесення змін\n"
 "та поширення його відповідно до умов GNU General Public License,\n"
@@ -1317,8 +1317,8 @@ msgstr ""
 "оболонки системи.\n"
 
 #: src/unshar-opts.c:966
-msgid "unshar (GNU sharutils) 4.14"
-msgstr "shar (GNU sharutils) 4.14"
+msgid "unshar (GNU sharutils) 4.14.2"
+msgstr "shar (GNU sharutils) 4.14.2"
 
 #: src/unshar-opts.c:969
 msgid ""
@@ -1432,7 +1432,7 @@ msgstr ""
 "Віддайте команду «unshar --help», щоб дізнатися більше.\n"
 "\n"
 
-#: src/unshar-opts.h:258 src/uudecode-opts.h:236
+#: src/unshar-opts.h:263 src/uudecode-opts.h:241
 #, c-format
 msgid "could not allocate %zu bytes for %s\n"
 msgstr "не вдалося отримати %zu байтів пам’яті для %s\n"
@@ -1497,14 +1497,14 @@ msgstr "критична помилка uudecode:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:705
 msgid ""
-"uudecode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uudecode (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (GNU sharutils) 4.14\n"
-"(C) Free Software Foundation, Inc., 1994-2013. Всі права захищено.\n"
+"uudecode (GNU sharutils) 4.14.2\n"
+"(C) Free Software Foundation, Inc., 1994-2014. Всі права захищено.\n"
 "Це вільне програмне забезпечення. Ліцензійними умовами щодо його\n"
 "використання передбачено можливість використання, внесення змін\n"
 "та поширення його відповідно до умов GNU General Public License,\n"
@@ -1598,8 +1598,8 @@ msgstr ""
 "закодованого файла. Див. uuencode(5).\n"
 
 #: src/uudecode-opts.c:747
-msgid "uudecode (GNU sharutils) 4.14"
-msgstr "uudecode (GNU sharutils) 4.14"
+msgid "uudecode (GNU sharutils) 4.14.2"
+msgstr "uudecode (GNU sharutils) 4.14.2"
 
 #: src/uudecode-opts.c:750
 msgid ""
@@ -1669,69 +1669,69 @@ msgstr ""
 "Користування:  uudecode [ -<прапорець> [<значення>] | --<назва>[{=| }<значення>] ]... [<файл>... ]\n"
 "Доступ до додаткових довідкових даних можна отримати за допомогою команди «uudecode --help».\n"
 
-#: src/uudecode.c:118 src/uudecode.c:182
+#: src/uudecode.c:120 src/uudecode.c:184
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: незавершений файл"
 
-#: src/uudecode.c:164
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: не виявлено рядка «end»"
 
-#: src/uudecode.c:188
+#: src/uudecode.c:190
 #, c-format
 msgid "%s: invalid input"
 msgstr "%s: некоректні вхідні дані"
 
-#: src/uudecode.c:210 src/uudecode.c:224
+#: src/uudecode.c:212 src/uudecode.c:226
 msgid "cannot expand $HOME"
 msgstr "не вдалося обробити $HOME"
 
-#: src/uudecode.c:260
+#: src/uudecode.c:262
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: некоректна назва файла: %s"
 
-#: src/uudecode.c:267
+#: src/uudecode.c:269
 #, c-format
 msgid "No user '%s'"
 msgstr "Не виявлено користувача «%s»"
 
-#: src/uudecode.c:278 src/uudecode.c:340
+#: src/uudecode.c:280 src/uudecode.c:342
 msgid "output file name"
 msgstr "назва файла вихідних даних"
 
-#: src/uudecode.c:297
+#: src/uudecode.c:299
 #, c-format
 msgid "cannot access %s"
 msgstr "не вдалося отримати доступ до %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:312
 #, c-format
 msgid "chmod of %s"
 msgstr "виконання chmod над %s"
 
-#: src/uudecode.c:334
+#: src/uudecode.c:336
 msgid "output name is empty"
 msgstr "порожня назва файла результату"
 
-#: src/uudecode.c:345
+#: src/uudecode.c:347
 #, c-format
 msgid "invalid base64 encoded name: %s"
 msgstr "некоректна назва у кодуванні base64: %s"
 
-#: src/uudecode.c:380
+#: src/uudecode.c:382
 #, c-format
-msgid "%s: Invalid or missing 'begin' line"
-msgstr "%s: некоректний рядок «begin» або такого рядка взагалі немає"
+msgid "%s: Invalid or missing 'begin' line\n"
+msgstr "%s: некоректний рядок «begin» або такого рядка взагалі немає\n"
 
-#: src/uudecode.c:477
+#: src/uudecode.c:479
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: помилка запису"
 
-#: src/uudecode.c:517
+#: src/uudecode.c:519
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
@@ -1766,14 +1766,14 @@ msgstr "критична помилка uuencode:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:656
 msgid ""
-"uuencode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uuencode (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (GNU sharutils) 4.14\n"
-"(C) Free Software Foundation, Inc., 1994-2013. Всі права захищено.\n"
+"uuencode (GNU sharutils) 4.14.2\n"
+"(C) Free Software Foundation, Inc., 1994-2014. Всі права захищено.\n"
 "Це вільне програмне забезпечення. Ліцензійними умовами щодо його\n"
 "використання передбачено можливість використання, внесення змін\n"
 "та поширення його відповідно до умов GNU General Public License,\n"
@@ -1863,8 +1863,8 @@ msgstr ""
 "натиснути комбінацію клавіш Ctrl-D.\n"
 
 #: src/uuencode-opts.c:694
-msgid "uuencode (GNU sharutils) 4.14"
-msgstr "uuencode (GNU sharutils) 4.14"
+msgid "uuencode (GNU sharutils) 4.14.2"
+msgstr "uuencode (GNU sharutils) 4.14.2"
 
 #: src/uuencode-opts.c:697
 msgid ""
@@ -1930,15 +1930,15 @@ msgstr ""
 "Користування:  uuencode [ -<прапорець> | --<назва> ]... [<файл вхідних даних>] <результат>\n"
 "Додаткові довідкові дані можна отримати за допомогою команди «uuencode --help».\n"
 
-#: src/uuencode.c:226
+#: src/uuencode.c:228
 msgid "freopen of stdin"
 msgstr "виконання freopen над stdin"
 
-#: src/uuencode.c:255
+#: src/uuencode.c:257
 msgid "file name"
 msgstr "назва файла"
 
-#: lib/error.c:188
+#: lib/error.c:191
 msgid "Unknown system error"
 msgstr "Невідома системна помилка"
 
@@ -2036,13 +2036,13 @@ msgstr "«"
 msgid "'"
 msgstr "»"
 
-#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
-#: lib/spawn-pipe.c:267
+#: lib/spawn-pipe.c:135 lib/spawn-pipe.c:138 lib/spawn-pipe.c:259
+#: lib/spawn-pipe.c:262
 #, c-format
 msgid "cannot create pipe"
 msgstr "не вдалося створити канал"
 
-#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/spawn-pipe.c:229 lib/spawn-pipe.c:343 lib/wait-process.c:282
 #: lib/wait-process.c:356
 #, c-format
 msgid "%s subprocess failed"

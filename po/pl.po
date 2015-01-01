@@ -1,15 +1,15 @@
 # Polish translation for sharutils.
-# Copyright (C) 2005, 2006, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2013.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2014.
 # partially based on initial translation by Wojtek Ślusarczyk of PLD, 1999.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.14\n"
+"Project-Id-Version: sharutils 4.14.2\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-10-18 14:04-0700\n"
-"PO-Revision-Date: 2013-10-20 08:02+0200\n"
+"POT-Creation-Date: 2014-12-07 18:00-0800\n"
+"PO-Revision-Date: 2014-12-15 17:30+0100\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/scribble.c:150
+#: src/scribble.c:166
 #, c-format
 msgid "could not allocate %u bytes of scribble space"
 msgstr "nie udało się przydzielić miejsca na gryzmoły (%u b)"
@@ -144,7 +144,7 @@ msgstr "Koniec części %2$d %1$s"
 msgid "restoration warning:  size of %s is not %s"
 msgstr "uwaga odzyskiwania: rozmiar %s nie wynosi %s"
 
-#: src/scripts.x:475 src/shar.c:1451
+#: src/scripts.x:475 src/shar.c:1453
 msgid "(text)"
 msgstr "(tekst)"
 
@@ -295,14 +295,14 @@ msgstr "Brak pamięci do powielenia przetłumaczonych napisów\n"
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2257
 msgid ""
-"shar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"shar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
+"shar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
 "(GNU General Public License) w wersji 3 lub nowszej\n"
@@ -405,8 +405,8 @@ msgstr ""
 "MIME. W przypadku wywołania uuencode, preferowaną metodą kodowania jest base64.\n"
 
 #: src/shar-opts.c:2300
-msgid "shar (GNU sharutils) 4.14"
-msgstr "shar (GNU sharutils) 4.14"
+msgid "shar (GNU sharutils) 4.14.2"
+msgstr "shar (GNU sharutils) 4.14.2"
 
 #: src/shar-opts.c:2303
 msgid ""
@@ -768,11 +768,11 @@ msgstr "przydzielenie %d bajtów nie powiodło się\n"
 msgid "AutoOpts function called without option descriptor\n"
 msgstr "Funkcja AutoOpts wywołana bez deskryptora opcji\n"
 
-#: ../init.c:90
+#: ../init.c:86
 msgid "\tThis exceeds the compiled library version:  "
 msgstr "\tJest większa od wersji skompilowanej biblioteki: "
 
-#: ../init.c:88
+#: ../init.c:84
 #, c-format
 msgid ""
 "Automated Options Processing Error!\n"
@@ -786,7 +786,7 @@ msgstr ""
 msgid "realloc of %d bytes at 0x%p failed\n"
 msgstr "realloc %d bajtów pod 0x%p nie powiodło się\n"
 
-#: ../init.c:92
+#: ../init.c:88
 msgid "\tThis is less than the minimum library version:  "
 msgstr "\tJest mniejsza od minimalnej wersji biblioteki: "
 
@@ -794,10 +794,10 @@ msgstr "\tJest mniejsza od minimalnej wersji biblioteki: "
 #, c-format
 msgid ""
 "Automated Options version %s\n"
-"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+"\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Automated Options wersja %s\n"
-"\tCopyright (C) 1999-2013 Bruce Korb - wszelkie prawa zastrzeżone\n"
+"\tCopyright (C) 1999-2014 Bruce Korb - wszelkie prawa zastrzeżone\n"
 
 #: ../makeshell.c:82
 #, c-format
@@ -977,7 +977,7 @@ msgstr "Błąd %s: brak zapisanego stanu opcji\n"
 msgid "'%s' is not a command line option.\n"
 msgstr "'%s' nie jest opcją linii poleceń.\n"
 
-#: ../time.c:114
+#: ../time.c:111
 #, c-format
 msgid "%s error:  '%s' is not a recognizable date/time.\n"
 msgstr "błąd %s: '%s' nie jest rozpoznawanym formatem daty/czasu.\n"
@@ -987,7 +987,7 @@ msgstr "błąd %s: '%s' nie jest rozpoznawanym formatem daty/czasu.\n"
 msgid "'%s' not defined\n"
 msgstr "'%s' nie jest zdefiniowane\n"
 
-#: ../time.c:53
+#: ../time.c:50
 #, c-format
 msgid "%s error:  '%s' is not a recognizable time duration.\n"
 msgstr "Błąd %s: '%s' nie jest rozpoznawanym formatem okresu czasu.\n"
@@ -997,7 +997,7 @@ msgstr "Błąd %s: '%s' nie jest rozpoznawanym formatem okresu czasu.\n"
 msgid "%s error:  The %s option must appear %d times.\n"
 msgstr "Błąd %s: opcja %s musi wystąpić %d razy.\n"
 
-#: ../numeric.c:157
+#: ../numeric.c:164
 #, c-format
 msgid "%s error:  '%s' is not a recognizable number.\n"
 msgstr "Błąd %s: '%s' nie jest rozpoznawane jako liczba.\n"
@@ -1018,8 +1018,8 @@ msgid "one %s%s option allowed\n"
 msgstr "dozwolona jedna opcja %2$s%1$s\n"
 
 #: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:274 ../usage.c:415
-#: ../usage.c:625 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
-#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+#: ../usage.c:625 ../version.c:175 src/uuencode.c:107 src/uuencode.c:184
+#: src/uuencode.c:273 src/uuencode.c:278 src/uuencode.c:280 src/uuencode.c:282
 msgid "standard output"
 msgstr "standardowe wyjście"
 
@@ -1047,118 +1047,118 @@ msgstr "Błąd %s: opcja %s wymaga opcji %s\n"
 msgid "%s warning:  cannot save options - %s not regular file\n"
 msgstr "Ostrzeżenie %s: nie można zapisać opcji - %s nie jest zwykłym plikiem\n"
 
-#: src/shar.c:355
+#: src/shar.c:357
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "Błąd formatowania printf: %s\n"
 
-#: src/shar.c:402
+#: src/shar.c:404
 msgid "sharutils bug - no status"
 msgstr "Błąd sharutils - brak statusu"
 
-#: src/shar.c:751
+#: src/shar.c:753
 msgid "Too many directories for mkdir generation"
 msgstr "Zbyt wiele katalogów dla programu mkdir"
 
-#: src/shar.c:834 src/shar.c:1693
+#: src/shar.c:836 src/shar.c:1695
 #, c-format
 msgid "Cannot access %s"
 msgstr "Brak dostępu do %s"
 
-#: src/shar.c:929
+#: src/shar.c:931
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Nie można pobrać nazwy bieżącego katalogu"
 
-#: src/shar.c:1018
+#: src/shar.c:1020
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Początkowy plik %s\n"
 
-#: src/shar.c:1112
+#: src/shar.c:1114
 msgid "Could not popen command"
 msgstr "Nie udało się wywołać polecenia przez popen"
 
-#: src/shar.c:1172
+#: src/shar.c:1174
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Nie można otworzyć pliku %s"
 
-#: src/shar.c:1298 src/shar.c:1309 src/shar.c:1917
+#: src/shar.c:1300 src/shar.c:1311 src/shar.c:1919
 msgid "call"
 msgstr "wywołania"
 
-#: src/shar.c:1321
+#: src/shar.c:1323
 msgid "pipe fd"
 msgstr "fd potoku"
 
-#: src/shar.c:1436 src/shar.c:1450
+#: src/shar.c:1438 src/shar.c:1452
 msgid "text"
 msgstr "tekst"
 
-#: src/shar.c:1553
+#: src/shar.c:1555
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Ciąg dalszy pliku %s\n"
 
-#: src/shar.c:1688
+#: src/shar.c:1690
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: To nie jest zwykły plik"
 
-#: src/shar.c:1736
+#: src/shar.c:1738
 msgid "empty"
 msgstr "pusty"
 
-#: src/shar.c:1763
+#: src/shar.c:1765
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Zapisywanie %s (%s)"
 
-#: src/shar.c:1964
+#: src/shar.c:1966
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Błędny format dla nazw pliku wyjściowego (%s): %s"
 
-#: src/shar.c:1979
+#: src/shar.c:1981
 msgid "more than one format element"
 msgstr "więcej niż jeden element formatujący"
 
-#: src/shar.c:1984
+#: src/shar.c:1986
 msgid "no conversion character"
 msgstr "brak znaku konwersji"
 
-#: src/shar.c:1993
+#: src/shar.c:1995
 msgid "format is too wide"
 msgstr "format zbyt długi"
 
-#: src/shar.c:2005
+#: src/shar.c:2007
 msgid "invalid conversion character"
 msgstr "błądny znak konwersji"
 
-#: src/shar.c:2050
+#: src/shar.c:2052
 msgid "Opening"
 msgstr "Otwieranie"
 
-#: src/shar.c:2065
+#: src/shar.c:2067
 msgid "Closing"
 msgstr "Zamykanie"
 
-#: src/shar.c:2152
+#: src/shar.c:2154
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "ponowne otwieranie stderr jako /dev/null"
 
-#: src/shar.c:2205
+#: src/shar.c:2207
 msgid "No input files"
 msgstr "Brak pliku wejściowego"
 
-#: src/shar.c:2222
+#: src/shar.c:2224
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "PROSZĘ unikać archiwów -X na Usenecie i w sieciach publicznych"
 
-#: src/shar.c:2246
+#: src/shar.c:2248
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -1167,12 +1167,12 @@ msgstr ""
 "Opcji '%s' nie można mieszać z nazwami plików,\n"
 "chyba że podano opcję --intermix-type."
 
-#: src/shar.c:2264
+#: src/shar.c:2266
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Opcja '%s' musi być podana przed jakąkolwiek nazwą pliku"
 
-#: src/shar.c:2300
+#: src/shar.c:2302
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -1181,11 +1181,11 @@ msgstr ""
 "błędny rodzaj kompresji: %s\n"
 "znane rodzaje to:\n"
 
-#: src/shar.c:2339
+#: src/shar.c:2341
 msgid "files on command line and --input-file-list specified"
 msgstr "przekazano pliki w linii poleceń wraz z opcją --input-file-list"
 
-#: src/shar.c:2388
+#: src/shar.c:2390
 #, c-format
 msgid "Created %d files\n"
 msgstr "Utworzono %d plików\n"
@@ -1195,8 +1195,8 @@ msgstr "Utworzono %d plików\n"
 msgid "fs error %d (%s) %s-ing %s\n"
 msgstr "błąd fs %d (%s) podczas wykonywania %s na %s\n"
 
-#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:511
-#: src/uuencode.c:205
+#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:513
+#: src/uuencode.c:207
 msgid "standard input"
 msgstr "standardowe wejście"
 
@@ -1227,14 +1227,14 @@ msgstr "Błąd krytyczny unshara:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:931
 msgid ""
-"unshar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"unshar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"unshar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
+"unshar (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
 "(GNU General Public License) w wersji 3 lub nowszej\n"
@@ -1300,8 +1300,8 @@ msgstr ""
 "wywołanie programu powłoki rozpakowujące je.\n"
 
 #: src/unshar-opts.c:966
-msgid "unshar (GNU sharutils) 4.14"
-msgstr "unshar (GNU sharutils) 4.14"
+msgid "unshar (GNU sharutils) 4.14.2"
+msgstr "unshar (GNU sharutils) 4.14.2"
 
 #: src/unshar-opts.c:969
 msgid ""
@@ -1409,7 +1409,7 @@ msgstr ""
 "Składnia: unshar [ -<flaga> [<wart>] | --<nazwa>[{=| }<wart>] ]... [<plik>...]\n"
 "Wywołanie 'unshar --help' poda więcej informacji.\n"
 
-#: src/unshar-opts.h:258 src/uudecode-opts.h:236
+#: src/unshar-opts.h:263 src/uudecode-opts.h:241
 #, c-format
 msgid "could not allocate %zu bytes for %s\n"
 msgstr "nie udało się przydzielić %zu b dla %s\n"
@@ -1474,13 +1474,13 @@ msgstr "Błąd krytyczny uudecode:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:705
 msgid ""
-"uudecode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uudecode (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (GNU sharutils) 4.14\n"
+"uudecode (GNU sharutils) 4.14.2\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
@@ -1572,8 +1572,8 @@ msgstr ""
 "zakodowana przy użyciu base64. Więcejw 'uuencode(5)'.\n"
 
 #: src/uudecode-opts.c:747
-msgid "uudecode (GNU sharutils) 4.14"
-msgstr "uudecode (GNU sharutils) 4.14"
+msgid "uudecode (GNU sharutils) 4.14.2"
+msgstr "uudecode (GNU sharutils) 4.14.2"
 
 #: src/uudecode-opts.c:750
 msgid ""
@@ -1642,69 +1642,69 @@ msgstr ""
 "Składnia: uudecode [ -<flaga> [<wart>] | --<name>[{=| }<wart>] ]... [<plik>...]\n"
 "Wywołanie 'uudecode --help' poda więcej informacji.\n"
 
-#: src/uudecode.c:118 src/uudecode.c:182
+#: src/uudecode.c:120 src/uudecode.c:184
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Krótki plik"
 
-#: src/uudecode.c:164
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Brak lini `end'"
 
-#: src/uudecode.c:188
+#: src/uudecode.c:190
 #, c-format
 msgid "%s: invalid input"
 msgstr "%s: błędne wejście"
 
-#: src/uudecode.c:210 src/uudecode.c:224
+#: src/uudecode.c:212 src/uudecode.c:226
 msgid "cannot expand $HOME"
 msgstr "nie można rozwinąć $HOME"
 
-#: src/uudecode.c:260
+#: src/uudecode.c:262
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: niedozwolona nazwa pliku: %s"
 
-#: src/uudecode.c:267
+#: src/uudecode.c:269
 #, c-format
 msgid "No user '%s'"
 msgstr "Brak użytkownika '%s'"
 
-#: src/uudecode.c:278 src/uudecode.c:340
+#: src/uudecode.c:280 src/uudecode.c:342
 msgid "output file name"
 msgstr "nazwa pliku wyjściowego"
 
-#: src/uudecode.c:297
+#: src/uudecode.c:299
 #, c-format
 msgid "cannot access %s"
 msgstr "brak dostępu do %s"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:312
 #, c-format
 msgid "chmod of %s"
 msgstr "chmod %s"
 
-#: src/uudecode.c:334
+#: src/uudecode.c:336
 msgid "output name is empty"
 msgstr "nazwa wyjścia jest pusta"
 
-#: src/uudecode.c:345
+#: src/uudecode.c:347
 #, c-format
 msgid "invalid base64 encoded name: %s"
 msgstr "błędna nazwa zakodowana base64: %s"
 
-#: src/uudecode.c:380
+#: src/uudecode.c:382
 #, c-format
-msgid "%s: Invalid or missing 'begin' line"
-msgstr "%s: błędna lub brak linii 'begin'"
+msgid "%s: Invalid or missing 'begin' line\n"
+msgstr "%s: Błędna lub brak linii 'begin'\n"
 
-#: src/uudecode.c:477
+#: src/uudecode.c:479
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Błąd zapisu"
 
-#: src/uudecode.c:517
+#: src/uudecode.c:519
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
@@ -1737,13 +1737,13 @@ msgstr "Błąd krytyczny uuencode:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:656
 msgid ""
-"uuencode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uuencode (GNU sharutils) 4.14.2\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (GNU sharutils) 4.14\n"
+"uuencode (GNU sharutils) 4.14.2\n"
 "Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
@@ -1830,8 +1830,8 @@ msgstr ""
 "wprowadzania.\n"
 
 #: src/uuencode-opts.c:694
-msgid "uuencode (GNU sharutils) 4.14"
-msgstr "uuencode (GNU sharutils) 4.14"
+msgid "uuencode (GNU sharutils) 4.14.2"
+msgstr "uuencode (GNU sharutils) 4.14.2"
 
 #: src/uuencode-opts.c:697
 msgid ""
@@ -1894,15 +1894,15 @@ msgstr ""
 "Składnia: uuencode [ -<flaga> | --<nazwa> ]... [<plik_wejściowy>] <nazwa_wyjścia>\n"
 "Wywołanie 'uuencode --help' poda więcej informacji.\n"
 
-#: src/uuencode.c:226
+#: src/uuencode.c:228
 msgid "freopen of stdin"
 msgstr "freopen standardowego wejścia"
 
-#: src/uuencode.c:255
+#: src/uuencode.c:257
 msgid "file name"
 msgstr "nazwa pliku"
 
-#: lib/error.c:188
+#: lib/error.c:191
 msgid "Unknown system error"
 msgstr "Nieznany błąd systemowy"
 
@@ -2000,13 +2000,13 @@ msgstr "\""
 msgid "'"
 msgstr "\""
 
-#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
-#: lib/spawn-pipe.c:267
+#: lib/spawn-pipe.c:135 lib/spawn-pipe.c:138 lib/spawn-pipe.c:259
+#: lib/spawn-pipe.c:262
 #, c-format
 msgid "cannot create pipe"
 msgstr "nie można utworzyć potoku"
 
-#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/spawn-pipe.c:229 lib/spawn-pipe.c:343 lib/wait-process.c:282
 #: lib/wait-process.c:356
 #, c-format
 msgid "%s subprocess failed"
