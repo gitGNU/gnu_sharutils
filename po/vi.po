@@ -1,15 +1,16 @@
 # Vietnamese Translation for Sharutils.
-# Copyright © 2014 Free Software Foundation, Inc.
+# Bản dịch tiếng Việt dành cho sharutils.
+# Copyright © 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2010.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2012, 2013, 2014.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils-4.14.2\n"
+"Project-Id-Version: sharutils 4.14.3\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2014-12-07 18:00-0800\n"
-"PO-Revision-Date: 2014-12-15 07:46+0700\n"
+"POT-Creation-Date: 2015-01-01 15:09-0800\n"
+"PO-Revision-Date: 2015-01-03 13:25+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "Language: vi\n"
@@ -32,36 +33,36 @@ msgstr "không thể cấp phát %u byte cho không gian scribble"
 #.
 #: src/scripts.x:449
 msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
-msgstr "Ghi chú: không kiểm tra mã băm md5sum. Hãy cài đặt gói các tiện ích lõi coreutils của GNU."
+msgstr "Ghi chú: Không kiểm tra mã băm md5sum. Hãy cài đặt gói các tiện ích lõi coreutils của GNU."
 
 #: src/scripts.x:450
 msgid ""
 "WARNING: not restoring timestamps.  Consider getting and\n"
 "installing GNU 'touch', distributed in GNU coreutils..."
 msgstr ""
-"CẢNH BÁO: không phục hồi dấu vết thời gian.\n"
+"CẢNH BÁO: Không phục hồi dấu vết thời gian.\n"
 "Hãy lấy và cài đặt gói “touch” từ dự án GNU,\n"
 "được phân phối trong gói phần mềm coreutils của GNU…"
 
 #: src/scripts.x:452
 #, c-format
 msgid "lock directory %s exists"
-msgstr "thư mục khoá %s đã có"
+msgstr "thư mục khóa %s đã có"
 
 #: src/scripts.x:453
 #, c-format
 msgid "failed to create %s lock directory"
-msgstr "lỗi tạo thư mục khoá %s"
+msgstr "gặp lỗi khi tạo thư mục khóa %s"
 
 #: src/scripts.x:454
 #, c-format
 msgid "x - created lock directory %s."
-msgstr "x - đã tạo thư mục khoá %s."
+msgstr "x - đã tạo thư mục khóa %s."
 
 #: src/scripts.x:455
 #, c-format
 msgid "x - failed to create lock directory %s."
-msgstr "x - gặp lỗi khi tạo thư mục khoá %s."
+msgstr "x - gặp lỗi khi tạo thư mục khóa %s."
 
 #: src/scripts.x:456
 #, c-format
@@ -144,7 +145,7 @@ msgstr "Kết thức %s phần %d"
 #: src/scripts.x:474
 #, c-format
 msgid "restoration warning:  size of %s is not %s"
-msgstr "cảnh báo phục hồi: kích cỡ %s không phải %s"
+msgstr "cảnh báo phục hồi: Kích cỡ %s không phải %s"
 
 #: src/scripts.x:475 src/shar.c:1453
 msgid "(text)"
@@ -247,12 +248,12 @@ msgstr "Bạn đã giải nén mọi phần"
 #: src/scripts.x:497
 #, c-format
 msgid "x - removed lock directory %s."
-msgstr "x - đã gỡ bỏ thư mục khoá %s."
+msgstr "x - đã gỡ bỏ thư mục khóa %s."
 
 #: src/scripts.x:498
 #, c-format
 msgid "x - failed to remove lock directory %s."
-msgstr "x - gặp lỗi gỡ bỏ thư mục khoá %s."
+msgstr "x - gặp lỗi gỡ bỏ thư mục khóa %s."
 
 #: src/shar-opts.c:1870
 #, c-format
@@ -297,14 +298,14 @@ msgstr "Không đủ bộ nhớ cho”duping” các chuỗi đã dịch\n"
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2257
 msgid ""
-"shar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.14.2\n"
-"Bản quyền (C) 1994-2014 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Bản quyền (C) 1994-2015 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
 "Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
 "phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
 "phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
@@ -406,8 +407,8 @@ msgstr ""
 "“uuencode”, base64 là phương thức mã hóa được ưu tiên dùng.\n"
 
 #: src/shar-opts.c:2300
-msgid "shar (GNU sharutils) 4.14.2"
-msgstr "shar (GNU sharutils) 4.14.2"
+msgid "shar (GNU sharutils) 4.14.3"
+msgstr "shar (GNU sharutils) 4.14.3"
 
 #: src/shar-opts.c:2303
 msgid ""
@@ -743,7 +744,7 @@ msgid ""
 "\n"
 "Please send bug reports to:  <bug-gnu-utils@gnu.org>\n"
 msgstr ""
-"Mặc dù chương trình này hỗ trợ “uuencode” -d các tập tin, chúng bị phản đối. Nếu\n"
+"Mặc dù chương trình này hỗ trợ “uuencode” -d các tập tin, chúng đã lạc hậu. Nếu\n"
 "bạn gửi thư các tập tin, xin hãy cân nhắc đến các tập tin mime-encoded.\n"
 "Nếu bạn thực hiện “uuencode”, base64 là phương thức mã hóa ưa dùng.\n"
 "\n"
@@ -762,7 +763,7 @@ msgstr ""
 #: ../autoopts.c:67 ../autoopts.c:93
 #, c-format
 msgid "allocation of %d bytes failed\n"
-msgstr "cấp phát %d byte bộ nhớ gặp lỗi\n"
+msgstr "gặp lỗi khi cấp phát %d byte bộ nhớ\n"
 
 #: ../init.c:53
 msgid "AutoOpts function called without option descriptor\n"
@@ -794,10 +795,10 @@ msgstr "\tNhỏ hơn phiên bản thư viện tối thiểu cần có:  "
 #, c-format
 msgid ""
 "Automated Options version %s\n"
-"\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
+"\tCopyright (C) 1999-2015 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Automated Options phiên bản %s\n"
-"\tTác quyền (C) 1999-2014 bởi Bruce Korb - giữ toàn bộ bản quyền\n"
+"\tTác quyền (C) 1999-2015 bởi Bruce Korb - giữ toàn bộ bản quyền\n"
 
 #: ../makeshell.c:82
 #, c-format
@@ -831,7 +832,7 @@ msgstr "tùy chọn bí danh nằm ngoài phạm vi."
 #: ../enum.c:234
 #, c-format
 msgid "%s error:  the keyword '%s' is ambiguous for %s\n"
-msgstr "%s lỗi:  từ khóa “%s” chưa rõ ràng đối với %s\n"
+msgstr "%s lỗi: Từ khóa “%s” chưa rõ ràng đối với %s\n"
 
 #: ../find.c:108
 msgid "  The following options match:\n"
@@ -840,7 +841,7 @@ msgstr "  Các tùy chọn sau đây ứng với nó:\n"
 #: ../find.c:293
 #, c-format
 msgid "%s: ambiguous option name: %s (matches %d options)\n"
-msgstr "%s: tên tùy chọn chưa rõ ràng: %s (khớp %d tùy chọn)\n"
+msgstr "%s: Tên tùy chọn chưa rõ ràng: %s (khớp %d tùy chọn)\n"
 
 #: ../check.c:161
 #, c-format
@@ -869,7 +870,7 @@ msgid ""
 "\t'c' - version and copyright\n"
 "\t'n' - version and full copyright notice\n"
 msgstr ""
-"lỗi: tham số tùy chọn phiên bản “%c” không hợp lệ. Hãy dùng:\n"
+"lỗi: Tham số tùy chọn phiên bản “%c” không hợp lệ. Hãy dùng:\n"
 "\t”v” - chỉ hiển thị số phiên bản\n"
 "\t”c” - hiển thị số phiên bản và bản quyền\n"
 "\t”n” - hiển thị số phiên bản và bản quyền đầy đủ\n"
@@ -891,17 +892,17 @@ msgstr "-tương đương"
 #: ../find.c:469 ../reset.c:110
 #, c-format
 msgid "%s: illegal option -- %c\n"
-msgstr "%s: tùy chọn không hợp lệ -- %c\n"
+msgstr "%s: Tùy chọn không hợp lệ -- %c\n"
 
 #: ../find.c:271 ../find.c:755 ../reset.c:118
 #, c-format
 msgid "%s: illegal option -- %s\n"
-msgstr "%s: tùy chọn không hợp lệ -- %s\n"
+msgstr "%s: Tùy chọn không hợp lệ -- %s\n"
 
 #: ../find.c:335
 #, c-format
 msgid "%s: unknown vendor extension option -- %s\n"
-msgstr "%s: không hiểu tùy chọn mở rộng từ người sản xuất -- %s\n"
+msgstr "%s: Không hiểu tùy chọn mở rộng từ người sản xuất -- %s\n"
 
 #: ../enum.c:159 ../enum.c:169
 #, c-format
@@ -911,12 +912,12 @@ msgstr "  hoặc một số nguyên từ %d đến %d\n"
 #: ../usage.c:747 ../usage.c:1081
 #, c-format
 msgid "%s error:  invalid option descriptor for %s\n"
-msgstr "%s lỗi:  bộ mô tả tùy chọn dành cho %s không hợp lệ\n"
+msgstr "%s lỗi: Bộ mô tả tùy chọn dành cho %s không hợp lệ\n"
 
 #: ../find.c:385
 #, c-format
 msgid "%s: invalid option name: %s\n"
-msgstr "%s: tên tùy chọn không hợp lệ: %s\n"
+msgstr "%s: Tên tùy chọn không hợp lệ: %s\n"
 
 #: ../find.c:527
 #, c-format
@@ -940,7 +941,7 @@ msgstr "%s lỗi:  Tùy chọn %s là bắt buộc\n"
 #: ../find.c:632
 #, c-format
 msgid "%s: The '%s' option cannot have an argument.\n"
-msgstr "%s: tùy chọn “%s” không thể nhận đối số.\n"
+msgstr "%s: Tùy chọn “%s” không thể nhận đối số.\n"
 
 #: ../check.c:151
 #, c-format
@@ -970,7 +971,7 @@ msgstr "lỗi %d (%s) đang-thống-kê %s\n"
 #: ../restore.c:143
 #, c-format
 msgid "%s error: no saved option state\n"
-msgstr "%s lỗi: không trạng thái tùy chọn được lưu\n"
+msgstr "%s lỗi: Không trạng thái tùy chọn được lưu\n"
 
 #: ../autoopts.c:231
 #, c-format
@@ -980,7 +981,7 @@ msgstr "“%s” không phải là tùy chọn dòng lệnh.\n"
 #: ../time.c:111
 #, c-format
 msgid "%s error:  '%s' is not a recognizable date/time.\n"
-msgstr "%s lỗi:  kiểu ngày tháng của “%s” không được chấp nhận.\n"
+msgstr "%s lỗi: Kiểu ngày tháng của “%s” không được chấp nhận.\n"
 
 #: ../save.c:132
 #, c-format
@@ -990,22 +991,22 @@ msgstr "“%s” chưa định nghĩa\n"
 #: ../time.c:50
 #, c-format
 msgid "%s error:  '%s' is not a recognizable time duration.\n"
-msgstr "%s lỗi:  không chấp nhận khoảng thời gian của “%s”.\n"
+msgstr "%s lỗi: Không chấp nhận khoảng thời gian của “%s”.\n"
 
 #: ../check.c:92
 #, c-format
 msgid "%s error:  The %s option must appear %d times.\n"
-msgstr "%s lỗi:  Tùy chọn %s phải xuất hiện %d lần.\n"
+msgstr "%s lỗi: Tùy chọn %s phải xuất hiện %d lần.\n"
 
 #: ../numeric.c:164
 #, c-format
 msgid "%s error:  '%s' is not a recognizable number.\n"
-msgstr "%s lỗi:  “%s” không phải là kiểu số được thừa nhận.\n"
+msgstr "%s lỗi: “%s” không phải là kiểu số được thừa nhận.\n"
 
 #: ../enum.c:200
 #, c-format
 msgid "%s error:  %s exceeds %s keyword count\n"
-msgstr "%s lỗi:  %s đạt đến ngưỡng số lượng %s từ khóa\n"
+msgstr "%s lỗi: %s đạt đến ngưỡng số lượng %s từ khóa\n"
 
 #: ../usage.c:330
 #, c-format
@@ -1035,7 +1036,7 @@ msgstr "ghi"
 #: ../numeric.c:60
 #, c-format
 msgid "%s error:  %s option value %ld is out of range.\n"
-msgstr "%s lỗi:  giá trị cho tùy chọn %s %ld nằm ngoài phạm vi.\n"
+msgstr "%s lỗi: Giá trị cho tùy chọn %s %ld nằm ngoài phạm vi.\n"
 
 #: ../check.c:44
 #, c-format
@@ -1045,7 +1046,7 @@ msgstr "%s lỗi: Tùy chọn %s yêu cầu cần có tùy chọn %s\n"
 #: ../save.c:131 ../save.c:183 ../save.c:237 ../save.c:256 ../save.c:534
 #, c-format
 msgid "%s warning:  cannot save options - %s not regular file\n"
-msgstr "%s cảnh báo:  không thể ghi lại tùy chọn - %s không phải tập tin thường\n"
+msgstr "%s cảnh báo:  Không thể ghi lại tùy chọn - %s không phải tập tin thường\n"
 
 #: src/shar.c:357
 #, c-format
@@ -1104,7 +1105,7 @@ msgstr "Đang tiếp tục tập tin %s\n"
 #: src/shar.c:1690
 #, c-format
 msgid "%s: Not a regular file"
-msgstr "%s: không phải là tập tin chuẩn"
+msgstr "%s: Không phải là tập tin thường"
 
 #: src/shar.c:1738
 msgid "empty"
@@ -1227,14 +1228,14 @@ msgstr "gặp lỗi unshar nghiêm trọng:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:931
 msgid ""
-"unshar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"unshar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"unshar (GNU sharutils) 4.14.2\n"
-"Bản quyền (C) 1994-2014 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"unshar (GNU sharutils) 4.14.3\n"
+"Bản quyền (C) 1994-2015 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
 "Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
 "phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
 "phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
@@ -1299,8 +1300,8 @@ msgstr ""
 "quẳng nó cho hệ vỏ giải nén nó.\n"
 
 #: src/unshar-opts.c:966
-msgid "unshar (GNU sharutils) 4.14.2"
-msgstr "unshar (GNU sharutils) 4.14.2"
+msgid "unshar (GNU sharutils) 4.14.3"
+msgstr "unshar (GNU sharutils) 4.14.3"
 
 #: src/unshar-opts.c:969
 msgid ""
@@ -1477,14 +1478,14 @@ msgstr "lỗi uudecode nghiêm trọng:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:705
 msgid ""
-"uudecode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"uudecode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (GNU sharutils) 4.14.2\n"
-"Bản quyền (C) 1994-2014 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"uudecode (GNU sharutils) 4.14.3\n"
+"Bản quyền (C) 1994-2015 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
 "Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
 "phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
 "phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
@@ -1573,8 +1574,8 @@ msgstr ""
 "tên tập tin đầu vào đã được mã hóa bằng base64.  Xem “uuencode(5)”.\n"
 
 #: src/uudecode-opts.c:747
-msgid "uudecode (GNU sharutils) 4.14.2"
-msgstr "uudecode (GNU sharutils) 4.14.2"
+msgid "uudecode (GNU sharutils) 4.14.3"
+msgstr "uudecode (GNU sharutils) 4.14.3"
 
 #: src/uudecode-opts.c:750
 msgid ""
@@ -1651,7 +1652,7 @@ msgstr "%s: Tập tin ngắn"
 #: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
-msgstr "%s: không có “end” (kết thúc) dòng"
+msgstr "%s: Không có “end” (kết thúc) dòng"
 
 #: src/uudecode.c:190
 #, c-format
@@ -1738,14 +1739,14 @@ msgstr "lỗi uuencode nghiêm trọng:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:656
 msgid ""
-"uuencode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"uuencode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (GNU sharutils) 4.14.2\n"
-"Bản quyền (C) 1994-2014 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
+"uuencode (GNU sharutils) 4.14.3\n"
+"Bản quyền (C) 1994-2015 Tổ chức Phần mềm Tự do, giữ toàn bộ bản quyền.\n"
 "Đây là phần mềm miễn phí. Cho phép sử dụng, sửa đổi và\n"
 "phân phối phù hợp với các điều khoản trong Giấy Phép Công GNU,\n"
 "phiên bản 3 hay mới hơn <http://gnu.org/licenses/gpl.html>\n"
@@ -1829,8 +1830,8 @@ msgstr ""
 "Ctl-D nhiều lần để có thể chấm dứt đầu vào.\n"
 
 #: src/uuencode-opts.c:694
-msgid "uuencode (GNU sharutils) 4.14.2"
-msgstr "uuencode (GNU sharutils) 4.14.2"
+msgid "uuencode (GNU sharutils) 4.14.3"
+msgstr "uuencode (GNU sharutils) 4.14.3"
 
 #: src/uuencode-opts.c:697
 msgid ""
@@ -1880,7 +1881,7 @@ msgstr ""
 "ký tự được gõ từ một tty.  Hậu quả là ở một tty, bạn có lẽ cần phải bấm\n"
 "Ctl-D nhiều lần để có thể chấm dứt đầu vào.\n"
 "\n"
-"Hãy gửi báo cáo lỗi cho: <bug-gnu-utils@gnu.org>\n"
+"Hãy báo cáo lỗi cho: <bug-gnu-utils@gnu.org>\n"
 "Thông báo lỗi dịch cho: <http://translationproject.org/team/vi.html>.\n"
 
 #: src/uuencode-opts.c:728
@@ -1908,57 +1909,57 @@ msgstr "Lỗi hệ thống không rõ"
 #: lib/getopt.c:547 lib/getopt.c:576
 #, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: tùy chọn “%s” chưa rõ ràng; khả năng là:"
+msgstr "%s: Tùy chọn “%s” chưa rõ ràng; khả năng là:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
 #, c-format
 msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s: tùy chọn “--%s” không cho phép đối số\n"
+msgstr "%s: Tùy chọn “--%s” không cho phép đối số\n"
 
 #: lib/getopt.c:637 lib/getopt.c:642
 #, c-format
 msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: tùy chọn “%c%s” không cho phép đối số\n"
+msgstr "%s: Tùy chọn “%c%s” không cho phép đối số\n"
 
 #: lib/getopt.c:685 lib/getopt.c:704
 #, c-format
 msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: tùy chọn “--%s” yêu cầu một đối số\n"
+msgstr "%s: Tùy chọn “--%s” yêu cầu một đối số\n"
 
 #: lib/getopt.c:742 lib/getopt.c:745
 #, c-format
 msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: không nhận ra tùy chọn “--%s”\n"
+msgstr "%s: Không nhận ra tùy chọn “--%s”\n"
 
 #: lib/getopt.c:753 lib/getopt.c:756
 #, c-format
 msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: không nhận ra tùy chọn “%c%s”\n"
+msgstr "%s: Không nhận ra tùy chọn “%c%s”\n"
 
 #: lib/getopt.c:805 lib/getopt.c:808
 #, c-format
 msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: tùy chọn không hợp lệ  -- “%c”\n"
+msgstr "%s: Tùy chọn không hợp lệ  -- “%c”\n"
 
 #: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
 #, c-format
 msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: tùy chọn yêu cầu một đối số -- “%c”\n"
+msgstr "%s: Tùy chọn yêu cầu một đối số -- “%c”\n"
 
 #: lib/getopt.c:934 lib/getopt.c:950
 #, c-format
 msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: tùy chọn “-W %s” chưa rõ ràng\n"
+msgstr "%s: Tùy chọn “-W %s” chưa rõ ràng\n"
 
 #: lib/getopt.c:974 lib/getopt.c:992
 #, c-format
 msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: tùy chọn “-W %s” không cho phép đối số\n"
+msgstr "%s: Tùy chọn “-W %s” không cho phép đối số\n"
 
 #: lib/getopt.c:1013 lib/getopt.c:1031
 #, c-format
 msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: tùy chọn “-W %s” yêu cầu một đối số\n"
+msgstr "%s: Tùy chọn “-W %s” yêu cầu một đối số\n"
 
 #: lib/openat-die.c:38
 #, c-format
@@ -2439,7 +2440,7 @@ msgstr "%s%s đối số “%s” quá lớn"
 #~ msgstr "Các từ khóa tùy chọn “%s” hợp lệ là:\n"
 
 #~ msgid "These additional options are:"
-#~ msgstr "Các tuỳ chọn bổ xung thêm là:"
+#~ msgstr "Các tùy chọn bổ xung thêm là:"
 
 #~ msgid "Usage: %s [FILE]...\n"
 #~ msgstr "Cách dùng: %s [TẬP_TIN]…\n"
@@ -2546,15 +2547,15 @@ msgstr "%s%s đối số “%s” quá lớn"
 #~ "  -M, --mixed-uuencode         quyết định động mã UU (uuencode): mặc định\n"
 #~ "  -T, --text-files                          thấy mọi tập tin là nhập thô\n"
 #~ "  -B, --uuencode                      thấy mọi tập tin là nhị phân, dùng mã UU\n"
-#~ "  -z, --gzip                                 nén gzip và mã hoá UU mọi tập tin\n"
+#~ "  -z, --gzip                                 nén gzip và mã hóa UU mọi tập tin\n"
 #~ "  -g, --level-for-gzip=CẤP      gửi cấp này (mặc định là 9) cho trình gzip\n"
-#~ "  -j, --bzip2                               nén bzip2 và mã hoá UU mọi tập tin\n"
+#~ "  -j, --bzip2                               nén bzip2 và mã hóa UU mọi tập tin\n"
 
 #~ msgid ""
 #~ "  -Z, --compress               compress and uuencode all files\n"
 #~ "  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
 #~ msgstr ""
-#~ "  -Z, --compress                       nén và mã hoá UU mọi tập tin\n"
+#~ "  -Z, --compress                       nén và mã hóa UU mọi tập tin\n"
 #~ "  -b, --bits-per-code=SỐ_BIT        gửi “-bSỐ_BIT” (mặc định là 12) sang trình nén\n"
 
 #~ msgid ""

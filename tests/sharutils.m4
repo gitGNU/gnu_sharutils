@@ -1,5 +1,5 @@
 # sharutils.m4 serial 2 (sharutils-4.3.75)
-dnl Copyright (C) 2002-2014 Free Software Foundation, Inc.
+dnl Copyright (C) 2002-2015 Free Software Foundation, Inc.
 dnl This file is free software, distributed under the terms of the GNU
 dnl General Public License.
 dnl

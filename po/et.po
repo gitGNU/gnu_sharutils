@@ -1,14 +1,14 @@
 # Estonian translations for sharutils.
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
-# Toomas Soome <tsoome@me.com>, 2014.
+# Toomas Soome <tsoome@me.com>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.14.2\n"
+"Project-Id-Version: sharutils 4.14.3\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2014-12-07 18:00-0800\n"
-"PO-Revision-Date: 2014-12-14 23:53+0200\n"
+"POT-Creation-Date: 2015-01-01 15:09-0800\n"
+"PO-Revision-Date: 2015-01-02 22:52+0200\n"
 "Last-Translator: Toomas Soome <tsoome@me.com>\n"
 "Language-Team: Estonian <linux-ee@lists.eenet.ee>\n"
 "Language: et\n"
@@ -294,14 +294,14 @@ msgstr "Tõlgitud sõnede jaoks puudub vaba mälu\n"
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2257
 msgid ""
-"shar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.14.2\n"
-"Autoriõigused © 1994-2014 Free Software Foundation, Inc., kõik õigused on\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Autoriõigused © 1994-2015 Free Software Foundation, Inc., kõik õigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
 "ja levitamiseks vastavalt GNU Üldise Avaliku Litsensi versioon 3 või\n"
@@ -402,8 +402,8 @@ msgstr ""
 "Kui te siiski kasutate 'uuencode', on eelistatud kodeerimismeetod base64.\n"
 
 #: src/shar-opts.c:2300
-msgid "shar (GNU sharutils) 4.14.2"
-msgstr "shar (GNU sharutils) 4.14.2"
+msgid "shar (GNU sharutils) 4.14.3"
+msgstr "shar (GNU sharutils) 4.14.3"
 
 #: src/shar-opts.c:2303
 msgid ""
@@ -782,10 +782,10 @@ msgstr "\tSee on väiksem kui minimaalne teegi versioon:  "
 #, c-format
 msgid ""
 "Automated Options version %s\n"
-"\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
+"\tCopyright (C) 1999-2015 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Automated Options versioon %s\n"
-"\tAutoriõigused (C) 1999-2014 Bruce Korb - kõik õigused on reserveeritud\n"
+"\tAutoriõigused (C) 1999-2015 Bruce Korb - kõik õigused on reserveeritud\n"
 
 #: ../makeshell.c:82
 #, c-format
@@ -1215,14 +1215,14 @@ msgstr "unshar fataalne viga:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:931
 msgid ""
-"unshar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"unshar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.14.2\n"
-"Autoriõigused © 1994-2014 Free Software Foundation, Inc., kõik õigused on\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Autoriõigused © 1994-2015 Free Software Foundation, Inc., kõik õigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
 "ja levitamiseks vastavalt GNU Üldise Avaliku Litsensi versioon 3 või\n"
@@ -1286,8 +1286,8 @@ msgstr ""
 "Iga leitud arhiiv pakitakse seejärel shalli programmi abil lahti.\n"
 
 #: src/unshar-opts.c:966
-msgid "unshar (GNU sharutils) 4.14.2"
-msgstr "unshar (GNU sharutils) 4.14.2"
+msgid "unshar (GNU sharutils) 4.14.3"
+msgstr "unshar (GNU sharutils) 4.14.3"
 
 #: src/unshar-opts.c:969
 msgid ""
@@ -1459,14 +1459,14 @@ msgstr "uudecode fataalne viga:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:705
 msgid ""
-"uudecode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"uudecode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (GNU sharutils) 4.14.2\n"
-"Autoriõigused © 1994-2014 Free Software Foundation, Inc., kõik õigused on\n"
+"uudecode (GNU sharutils) 4.14.3\n"
+"Autoriõigused © 1994-2015 Free Software Foundation, Inc., kõik õigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
 "ja levitamiseks vastavalt GNU Üldise Avaliku Litsensi versioon 3 või\n"
@@ -1554,8 +1554,8 @@ msgstr ""
 "saamiseks vaadake 'uuencode(5)'.\n"
 
 #: src/uudecode-opts.c:747
-msgid "uudecode (GNU sharutils) 4.14.2"
-msgstr "uudecode (GNU sharutils) 4.14.2"
+msgid "uudecode (GNU sharutils) 4.14.3"
+msgstr "uudecode (GNU sharutils) 4.14.3"
 
 #: src/uudecode-opts.c:750
 msgid ""
@@ -1718,14 +1718,14 @@ msgstr "uuencode fataalne viga:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:656
 msgid ""
-"uuencode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
+"uuencode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (GNU sharutils) 4.14.2\n"
-"Autoriõigused © 1994-2014 Free Software Foundation, Inc., kõik õigused on\n"
+"uuencode (GNU sharutils) 4.14.3\n"
+"Autoriõigused © 1994-2015 Free Software Foundation, Inc., kõik õigused on\n"
 "reserveeritud.\n"
 "See on vaba tarkvara. See on litsenseeritud kasutamiseks, muutmiseks\n"
 "ja levitamiseks vastavalt GNU Üldise Avaliku Litsensi versioon 3 või\n"
@@ -1808,8 +1808,8 @@ msgstr ""
 "Ctl-D) vaja anda korduvalt.\n"
 
 #: src/uuencode-opts.c:694
-msgid "uuencode (GNU sharutils) 4.14.2"
-msgstr "uuencode (GNU sharutils) 4.14.2"
+msgid "uuencode (GNU sharutils) 4.14.3"
+msgstr "uuencode (GNU sharutils) 4.14.3"
 
 #: src/uuencode-opts.c:697
 msgid ""

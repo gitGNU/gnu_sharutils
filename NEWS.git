@@ -1,6 +1,12 @@
 GNU sharutils NEWS - User visible changes.
-Copyright (C) 1994-2013
-    Free Software Foundation, Inc.
+Copyright (C) 1994-2015 Free Software Foundation, Inc.
+
+Version 4.14.3 - January 2015, by Bruce Korb
+
+* shar will no longer choke on 64 bit windows
+* unshar has a compiler warning fix
+* Happy 2015 copyright
+* PO file updates
 
 Version 4.14.2 - December 2014, by Bruce Korb
 

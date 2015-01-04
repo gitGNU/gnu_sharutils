@@ -1,5 +1,5 @@
 # sharutils translation into Serbian
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 # Translators so far:
 # Filip Miletić <f.miletic@ewi.tudelft.nl>, 2005.
