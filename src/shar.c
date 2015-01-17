@@ -85,24 +85,29 @@ static const char cright_years_z[] =
 
 /* System related declarations.  */
 
+/* Convert a possibly-signed character to an unsigned character.  This is
+   a bit safer than casting to unsigned char, since it catches some type
+   errors that the cast doesn't.  */
+static inline unsigned char to_uchar (char ch) { return ch; }
+
 #if STDC_HEADERS
-# define ISASCII(Char) 1
+# define ISASCII(_c) 1
 #else
 # ifdef isascii
-#  define ISASCII(Char) isascii (Char)
+#  define ISASCII(_c) isascii (to_uchar (_c))
 # else
 #  if HAVE_ISASCII
-#   define ISASCII(Char) isascii (Char)
+#   define ISASCII(_c) isascii (to_uchar (_c))
 #  else
-#   define ISASCII(Char) ((Char) & 0x7f == (unsigned char) (Char))
+#   define ISASCII(_c) ((_c) & 0x7f == (unsigned char) (_c))
 #  endif
 # endif
 #endif
 
 #ifdef isgraph
-#define IS_GRAPH(_c) isgraph (_c)
+#define IS_GRAPH(_c) isgraph (to_uchar (_c))
 #else
-#define IS_GRAPH(_c) (isprint (_c) && !isspace (_c))
+#define IS_GRAPH(_c) (isprint (to_uchar (_c)) && !isspace (to_uchar (_c)))
 #endif
 
 struct tm *localtime ();
@@ -161,9 +166,7 @@ static int  const explain_2_len = sizeof(explain_2_z) - 1;
 typedef enum {
   QUOT_ID_LNAME,
   QUOT_ID_RNAME,
-  QUOT_ID_PATH,
-  QUOT_ID_GOOD_STATUS,
-  QUOT_ID_BAD_STATUS
+  QUOT_ID_PATH
 } quot_id_t;
 
 typedef struct {
@@ -342,7 +345,7 @@ init_shar_msg(void)
 }
 
 static char const *
-format_report(quot_id_t type, char const * fmt, char const * what)
+format_report(char const * fmt, char const * what)
 {
   if (fmt == NULL)
     return NULL;
@@ -384,8 +387,8 @@ echo_status (const char*  test,
      output formatting with show_all_status_z or show_good_status_z or
      show_bad_status_z.  Not all do, so "what" can sometimes be NULL.
    */
-  good_quot = format_report (QUOT_ID_GOOD_STATUS, ok_fmt, what);
-  bad_quot  = format_report (QUOT_ID_BAD_STATUS, bad_fmt, what);
+  good_quot = format_report (ok_fmt, what);
+  bad_quot  = format_report (bad_fmt, what);
   die_str   = die_on_failure ? show_status_dies_z : "";
 
   if (good_quot != NULL)
@@ -1492,7 +1495,8 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
       char const * nm =
         HAVE_OPT(ARCHIVE_NAME) ? OPT_ARG(ARCHIVE_NAME) : SM_word_archive;
       size_t sz1 = strlen (SM_s_end_of_part) + strlen (nm) + LOG10_MAX_INT;
-      size_t sz2 = strlen (SM_contin_in_part) + strlen (restore) + LOG10_MAX_INT;
+      size_t sz2 = strlen (SM_contin_in_part) + strlen (restore)
+                 + LOG10_MAX_INT;
       char * bf;
       if (sz1 < sz2)
         sz1 = sz2;
@@ -1532,7 +1536,7 @@ split_shar_ed_file (char const * restore, off_t * size_left, int * split_flag)
     fputs (cut_mark_line_z, output);
 
   fprintf (output, continue_archive_z,
-           basename (output_filename), part_number,
+           base_name (output_filename), part_number,
            HAVE_OPT(ARCHIVE_NAME)
            ? OPT_ARG(ARCHIVE_NAME) : "a multipart archive",
            restore, sharpid);
@@ -1580,8 +1584,8 @@ process_shar_input (FILE * input, off_t * size_left, int * split_flag,
        * Find the start of the last token
        */
       e = p + strlen(p);
-      while (  isspace (e[-1]) && (e > p))  e--;
-      while (! isspace (e[-1]) && (e > p))  e--;
+      while (  isspace (to_uchar (e[-1])) && (e > p))  e--;
+      while (! isspace (to_uchar (e[-1])) && (e > p))  e--;
       fwrite (p, e - p, 1, output);
       fprintf (output, "_sh%05d/%s\n", (int)sharpid, cmpr_state->cmpr_mode);
     }
@@ -2079,7 +2083,7 @@ static char *
 trim (char * pz)
 {
   char * res;
-  while (isspace (*pz))  pz++;
+  while (isspace (to_uchar (*pz)))  pz++;
   switch (*pz)
     {
     case NUL:
@@ -2088,7 +2092,7 @@ trim (char * pz)
     }
   res = pz;
   pz += strlen (pz);
-  while (isspace (pz[-1]))  pz--;
+  while (isspace (to_uchar (pz[-1])))  pz--;
   *pz = NUL;
   return res;
 }

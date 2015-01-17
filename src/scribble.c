@@ -163,7 +163,8 @@ xscribble_get(ssize_t sz)
 {
     void * p = scribble_get(sz);
     if (p == NULL) {
-        fprintf(stderr, _("could not allocate %u bytes of scribble space"), sz);
+        fprintf(stderr, _("could not allocate %u bytes of scribble space"),
+                (unsigned int)sz);
         exit(EXIT_FAILURE);
     }
     return p;

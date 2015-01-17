@@ -1,3 +1,12 @@
+2015-01-06  Eric Blake  <eblake@redhat.com>
+
+	build: avoid error message failure on 64-bit hosts
+	* src/scribble.c (xscribble_get): Use correct specifier.
+
+	build: avoid range errors in use of ctype functions
+	* src/shar.c (to_uchar): New helper, borrowed from coreutils.
+	(ISASCII, IS_GRAPH, process_shar_input, trim): Avoid range errors.
+
 2013-04-13  Bruce Korb  <bkorb@gnu.org>
 
 	* src/shar.c (open_encoded_file): split out code that must vary

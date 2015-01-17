@@ -1,5 +1,5 @@
 # Japanese messages for GNU sharutils
-# Copyright (C) 2000-2015 Free Software Foundation, Inc.
+# Copyright (C) 2000, 2010, 2011, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 # Masahito Yamaga <yamaga@ipc.chiba-u.ac.jp>, 2002.
 # GOTO Masanori <gotom@debian.or.jp>, 2006.

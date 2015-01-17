@@ -50,6 +50,7 @@
 #endif
 
 #define EOL '\n'
+static inline unsigned char to_uchar (char ch) { return ch; }
 
 /** amount of data to read and write at once */
 size_t       rw_base_size = 0;
@@ -71,7 +72,7 @@ looks_like_c_code (char const * buf)
     "include", "define", "ifdef", "ifndef", "if",
     "pragma", "undef", "elif", "error", "line", NULL };
 
-  while (isspace ((int) *buf))  buf++;
+  while (isspace (to_uchar (*buf)))  buf++;
   switch (*(buf++))
     {
     case '#':
@@ -199,7 +200,8 @@ next_line_is_valid (char const * name, FILE * file)
       buf = fgets (rw_buffer, rw_base_size, file);
       if (buf == NULL)
         {
-          error (0, 0, _("Found no shell commands after cut line in %s"), name);
+          error (0, 0, _("Found no shell commands after cut line in %s"),
+                 name);
           return false;
         }
 

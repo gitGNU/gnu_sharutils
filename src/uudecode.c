@@ -81,8 +81,10 @@ static char const cright_years_z[] =
 
 struct passwd *getpwnam ();
 
-static uudecode_exit_code_t read_stduu (const char *inname, const char *outname);
-static uudecode_exit_code_t read_base64(const char *inname, const char *outname);
+static uudecode_exit_code_t read_stduu(
+        const char *inname, const char *outname);
+static uudecode_exit_code_t read_base64(
+        const char *inname, const char *outname);
 static uudecode_exit_code_t decode (const char * in_name);
 
 #ifndef NUL

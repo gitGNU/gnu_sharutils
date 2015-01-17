@@ -1,15 +1,15 @@
 # Polish translation for sharutils.
-# Copyright (C) 2005-2015 Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2014.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2015.
 # partially based on initial translation by Wojtek Ślusarczyk of PLD, 1999.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils 4.14.2\n"
+"Project-Id-Version: sharutils 4.14.3\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2014-12-07 18:00-0800\n"
-"PO-Revision-Date: 2014-12-15 17:30+0100\n"
+"POT-Creation-Date: 2015-01-01 15:09-0800\n"
+"PO-Revision-Date: 2015-01-08 16:02+0100\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -295,14 +295,14 @@ msgstr "Brak pamięci do powielenia przetłumaczonych napisów\n"
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2257
 msgid ""
-"shar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"shar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2015 Free Software Foundation, Inc., wszelkie prawa\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
 "(GNU General Public License) w wersji 3 lub nowszej\n"
@@ -405,8 +405,8 @@ msgstr ""
 "MIME. W przypadku wywołania uuencode, preferowaną metodą kodowania jest base64.\n"
 
 #: src/shar-opts.c:2300
-msgid "shar (GNU sharutils) 4.14.2"
-msgstr "shar (GNU sharutils) 4.14.2"
+msgid "shar (GNU sharutils) 4.14.3"
+msgstr "shar (GNU sharutils) 4.14.3"
 
 #: src/shar-opts.c:2303
 msgid ""
@@ -794,10 +794,10 @@ msgstr "\tJest mniejsza od minimalnej wersji biblioteki: "
 #, c-format
 msgid ""
 "Automated Options version %s\n"
-"\tCopyright (C) 1999-2015 by Bruce Korb - all rights reserved\n"
+"\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Automated Options wersja %s\n"
-"\tCopyright (C) 1999-2015 Bruce Korb - wszelkie prawa zastrzeżone\n"
+"\tCopyright (C) 1999-2014 Bruce Korb - wszelkie prawa zastrzeżone\n"
 
 #: ../makeshell.c:82
 #, c-format
@@ -1227,14 +1227,14 @@ msgstr "Błąd krytyczny unshara:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:931
 msgid ""
-"unshar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
+"unshar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"unshar (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2015 Free Software Foundation, Inc., wszelkie prawa\n"
+"unshar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
 "(GNU General Public License) w wersji 3 lub nowszej\n"
@@ -1300,8 +1300,8 @@ msgstr ""
 "wywołanie programu powłoki rozpakowujące je.\n"
 
 #: src/unshar-opts.c:966
-msgid "unshar (GNU sharutils) 4.14.2"
-msgstr "unshar (GNU sharutils) 4.14.2"
+msgid "unshar (GNU sharutils) 4.14.3"
+msgstr "unshar (GNU sharutils) 4.14.3"
 
 #: src/unshar-opts.c:969
 msgid ""
@@ -1474,14 +1474,14 @@ msgstr "Błąd krytyczny uudecode:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:705
 msgid ""
-"uudecode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
+"uudecode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uudecode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
+"uudecode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
 "(GNU General Public License) w wersji 3 lub nowszej\n"
@@ -1572,8 +1572,8 @@ msgstr ""
 "zakodowana przy użyciu base64. Więcejw 'uuencode(5)'.\n"
 
 #: src/uudecode-opts.c:747
-msgid "uudecode (GNU sharutils) 4.14.2"
-msgstr "uudecode (GNU sharutils) 4.14.2"
+msgid "uudecode (GNU sharutils) 4.14.3"
+msgstr "uudecode (GNU sharutils) 4.14.3"
 
 #: src/uudecode-opts.c:750
 msgid ""
@@ -1737,14 +1737,14 @@ msgstr "Błąd krytyczny uuencode:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:656
 msgid ""
-"uuencode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights reserved.\n"
+"uuencode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"uuencode (GNU sharutils) 4.14.2\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
+"uuencode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do użytku,\n"
 "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej GNU\n"
 "(GNU General Public License) w wersji 3 lub nowszej\n"
@@ -1830,8 +1830,8 @@ msgstr ""
 "wprowadzania.\n"
 
 #: src/uuencode-opts.c:694
-msgid "uuencode (GNU sharutils) 4.14.2"
-msgstr "uuencode (GNU sharutils) 4.14.2"
+msgid "uuencode (GNU sharutils) 4.14.3"
+msgstr "uuencode (GNU sharutils) 4.14.3"
 
 #: src/uuencode-opts.c:697
 msgid ""
