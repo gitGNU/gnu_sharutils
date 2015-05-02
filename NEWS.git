@@ -1,29 +1,9 @@
 GNU sharutils NEWS - User visible changes.
 Copyright (C) 1994-2015 Free Software Foundation, Inc.
 
-Version 4.14.3 - January 2015, by Bruce Korb
+Version 4.15.1 - May 2015, by Bruce Korb
 
-* shar will no longer choke on 64 bit windows
-* unshar has a compiler warning fix
-* Happy 2015 copyright
-* PO file updates
-
-Version 4.14.2 - December 2014, by Bruce Korb
-
-* translation updates
-* use ftello, fseeko and fflush
-* augment copyright marks in shar.c and shar-std.def
-* Happy 2014 copyright dates
-* fix up man pages (use newer doc generation code)
-
-Version 4.14 - October 2013, by Bruce Korb
-
-* documentation, obscure usage, FSF address
-
-Version 4.13.5 - April 2013, by Bruce Korb
-
-* primarily, configuration cleanups.  Mostly for MinGW,
-  but some others, too.
+* gnulib updates to fix rare platform build issues
 
 Version 4.13.4 - February 2013, by Bruce Korb
 
