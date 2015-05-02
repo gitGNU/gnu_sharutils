@@ -1,16 +1,16 @@
 # sharutils translation into Serbian
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sharutils package.
 # Translators so far:
 # Filip Miletić <f.miletic@ewi.tudelft.nl>, 2005.
 # Aleksandar Jelenak <jelenak@verizon.net>, 2005.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012, 2013, 2014.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012—2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: sharutils-4.14\n"
+"Project-Id-Version: sharutils-4.14.3\n"
 "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-"POT-Creation-Date: 2013-10-18 14:04-0700\n"
-"PO-Revision-Date: 2014-01-14 10:17+0200\n"
+"POT-Creation-Date: 2015-01-01 15:09-0800\n"
+"PO-Revision-Date: 2015-04-13 19:49+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: src/scribble.c:150
+#: src/scribble.c:166
 #, c-format
 msgid "could not allocate %u bytes of scribble space"
 msgstr "не могу да доделим %u бајта простора шкрабалице"
@@ -146,7 +146,7 @@ msgstr "Крај „%s“ део %d"
 msgid "restoration warning:  size of %s is not %s"
 msgstr "упозорење повраћаја: величина „%s“ није %s"
 
-#: src/scripts.x:475 src/shar.c:1451
+#: src/scripts.x:475 src/shar.c:1453
 msgid "(text)"
 msgstr "(текст)"
 
@@ -297,14 +297,14 @@ msgstr "Нема меморије за удвостручавање превед
 #. referenced via sharOptions.pzCopyright
 #: src/shar-opts.c:2257
 msgid ""
-"shar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"shar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"шар (Гнуова помагала шар-а) 4.14\n"
-"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"шар (Гнуова помагала шар-а) 4.14.3\n"
+"Ауторска права © 1994-2014 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
 "Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
 "расподелу под одредбама Гнуове опште јавне дозволе,\n"
 "издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
@@ -407,8 +407,8 @@ msgstr ""
 "Ако радите „uuencode“, „base64“ је жељени начин кодирања.\n"
 
 #: src/shar-opts.c:2300
-msgid "shar (GNU sharutils) 4.14"
-msgstr "шар (Гнуова помагала шар-а) 4.14"
+msgid "shar (GNU sharutils) 4.14.3"
+msgstr "шар (Гнуова помагала шар-а) 4.14.3"
 
 #: src/shar-opts.c:2303
 msgid ""
@@ -767,11 +767,11 @@ msgstr "додељивање %d бајта није успело\n"
 msgid "AutoOpts function called without option descriptor\n"
 msgstr "Функција „AutoOpts“ је позвана без описника могућности\n"
 
-#: ../init.c:90
+#: ../init.c:86
 msgid "\tThis exceeds the compiled library version:  "
 msgstr "\tОво премашује издање преведене библиотеке:  "
 
-#: ../init.c:88
+#: ../init.c:84
 #, c-format
 msgid ""
 "Automated Options Processing Error!\n"
@@ -785,7 +785,7 @@ msgstr ""
 msgid "realloc of %d bytes at 0x%p failed\n"
 msgstr "поновно додељивање %d бајта на 0x%p није успело\n"
 
-#: ../init.c:92
+#: ../init.c:88
 msgid "\tThis is less than the minimum library version:  "
 msgstr "\tОво је мање од најмањег издања библиотеке:  "
 
@@ -793,10 +793,10 @@ msgstr "\tОво је мање од најмањег издања библиот
 #, c-format
 msgid ""
 "Automated Options version %s\n"
-"\tCopyright (C) 1999-2013 by Bruce Korb - all rights reserved\n"
+"\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
 msgstr ""
 "Осамостаљене могућности издање %s\n"
-"\tАуторска права © 1999-2013 Брус Корб — сва права су задржана\n"
+"\tАуторска права © 1999-2014 Брус Корб — сва права су задржана\n"
 
 #: ../makeshell.c:82
 #, c-format
@@ -976,7 +976,7 @@ msgstr "%s грешка: нема сачуваног стања опције\n"
 msgid "'%s' is not a command line option.\n"
 msgstr "„%s“ није опција линије наредби.\n"
 
-#: ../time.c:114
+#: ../time.c:111
 #, c-format
 msgid "%s error:  '%s' is not a recognizable date/time.\n"
 msgstr "%s грешка:  „%s“ није препознатљив датум/време.\n"
@@ -986,7 +986,7 @@ msgstr "%s грешка:  „%s“ није препознатљив датум/
 msgid "'%s' not defined\n"
 msgstr "„%s“ није наведено\n"
 
-#: ../time.c:53
+#: ../time.c:50
 #, c-format
 msgid "%s error:  '%s' is not a recognizable time duration.\n"
 msgstr "%s грешка:  „%s“ није препознатљиво трајање времена.\n"
@@ -996,7 +996,7 @@ msgstr "%s грешка:  „%s“ није препознатљиво трај�
 msgid "%s error:  The %s option must appear %d times.\n"
 msgstr "%s грешка:  опција „%s“ мора да се појави %d пута.\n"
 
-#: ../numeric.c:157
+#: ../numeric.c:164
 #, c-format
 msgid "%s error:  '%s' is not a recognizable number.\n"
 msgstr "%s грешка:  „%s“ није препознатљив број.\n"
@@ -1017,8 +1017,8 @@ msgid "one %s%s option allowed\n"
 msgstr "једна %s%s опција је дозвољена\n"
 
 #: ../makeshell.c:203 ../makeshell.c:938 ../usage.c:274 ../usage.c:415
-#: ../usage.c:625 ../version.c:175 src/uuencode.c:105 src/uuencode.c:182
-#: src/uuencode.c:271 src/uuencode.c:276 src/uuencode.c:278 src/uuencode.c:280
+#: ../usage.c:625 ../version.c:175 src/uuencode.c:107 src/uuencode.c:184
+#: src/uuencode.c:273 src/uuencode.c:278 src/uuencode.c:280 src/uuencode.c:282
 msgid "standard output"
 msgstr "стандардни излаз"
 
@@ -1046,118 +1046,118 @@ msgstr "%s грешка:  %s опција захтева %s опцију\n"
 msgid "%s warning:  cannot save options - %s not regular file\n"
 msgstr "%s упозорење:  не могу да сачувам опције — %s није обична датотека\n"
 
-#: src/shar.c:355
+#: src/shar.c:357
 #, c-format
 msgid "printf formatting error:  %s\n"
 msgstr "грешка обликовања штампања датотеке:  %s\n"
 
-#: src/shar.c:402
+#: src/shar.c:404
 msgid "sharutils bug - no status"
 msgstr "грешка шарових помагала — нема стања"
 
-#: src/shar.c:751
+#: src/shar.c:753
 msgid "Too many directories for mkdir generation"
 msgstr "Превише директоријума за наредбу стварања директоријума (mkdir)"
 
-#: src/shar.c:834 src/shar.c:1693
+#: src/shar.c:836 src/shar.c:1695
 #, c-format
 msgid "Cannot access %s"
 msgstr "Не могу да приступим %s"
 
-#: src/shar.c:929
+#: src/shar.c:931
 #, c-format
 msgid "Cannot get current directory name"
 msgstr "Не могу да добавим назив тренутног директоријума"
 
-#: src/shar.c:1018
+#: src/shar.c:1020
 #, c-format
 msgid "Starting file %s\n"
 msgstr "Почетна датотека %s\n"
 
-#: src/shar.c:1112
+#: src/shar.c:1114
 msgid "Could not popen command"
 msgstr "Не могу да извршим наредбу „popen“"
 
-#: src/shar.c:1172
+#: src/shar.c:1174
 #, c-format
 msgid "Cannot open file %s"
 msgstr "Не могу да отворим датотеку „%s“"
 
-#: src/shar.c:1298 src/shar.c:1309 src/shar.c:1917
+#: src/shar.c:1300 src/shar.c:1311 src/shar.c:1919
 msgid "call"
 msgstr "позив"
 
-#: src/shar.c:1321
+#: src/shar.c:1323
 msgid "pipe fd"
 msgstr "фд спојка"
 
-#: src/shar.c:1436 src/shar.c:1450
+#: src/shar.c:1438 src/shar.c:1452
 msgid "text"
 msgstr "текст"
 
-#: src/shar.c:1553
+#: src/shar.c:1555
 #, c-format
 msgid "Continuing file %s\n"
 msgstr "Настављам датотеком „%s“\n"
 
-#: src/shar.c:1688
+#: src/shar.c:1690
 #, c-format
 msgid "%s: Not a regular file"
 msgstr "%s: Није уобичајена датотека"
 
-#: src/shar.c:1736
+#: src/shar.c:1738
 msgid "empty"
 msgstr "празно"
 
-#: src/shar.c:1763
+#: src/shar.c:1765
 #, c-format
 msgid "Saving %s (%s)"
 msgstr "Чувам %s (%s)"
 
-#: src/shar.c:1964
+#: src/shar.c:1966
 #, c-format
 msgid "Invalid format for output file names (%s): %s"
 msgstr "Неисправан запис за називе излазних датотека (%s): %s"
 
-#: src/shar.c:1979
+#: src/shar.c:1981
 msgid "more than one format element"
 msgstr "више од једног елемента заоиса"
 
-#: src/shar.c:1984
+#: src/shar.c:1986
 msgid "no conversion character"
 msgstr "нема знака претварања"
 
-#: src/shar.c:1993
+#: src/shar.c:1995
 msgid "format is too wide"
 msgstr "запис је преширок"
 
-#: src/shar.c:2005
+#: src/shar.c:2007
 msgid "invalid conversion character"
 msgstr "неисправан знак претварања"
 
-#: src/shar.c:2050
+#: src/shar.c:2052
 msgid "Opening"
 msgstr "Отварам"
 
-#: src/shar.c:2065
+#: src/shar.c:2067
 msgid "Closing"
 msgstr "Затварам"
 
-#: src/shar.c:2152
+#: src/shar.c:2154
 #, c-format
 msgid "reopening stderr to /dev/null"
 msgstr "поново отварам стандардну грешку у „/dev/null“"
 
-#: src/shar.c:2205
+#: src/shar.c:2207
 msgid "No input files"
 msgstr "Нису наведене улазне датотеке"
 
-#: src/shar.c:2222
+#: src/shar.c:2224
 #, c-format
 msgid "PLEASE avoid -X shars on Usenet or public networks"
 msgstr "МОЛИМ избегавајте „-X“ шарове на Јузнету или јавним мрежама"
 
-#: src/shar.c:2246
+#: src/shar.c:2248
 #, c-format
 msgid ""
 "The '%s' option may not be intermixed with file names\n"
@@ -1166,12 +1166,12 @@ msgstr ""
 "Опција „%s“ не може бити измешана са називима датотека\n"
 "осим ако није наведена опција „--intermix-type“."
 
-#: src/shar.c:2264
+#: src/shar.c:2266
 #, c-format
 msgid "The '%s' option must appear before any file names"
 msgstr "Опција „%s“ мора да се појави пре назива било које датотеке"
 
-#: src/shar.c:2300
+#: src/shar.c:2302
 #, c-format
 msgid ""
 "invalid compaction type:  %s\n"
@@ -1180,11 +1180,11 @@ msgstr ""
 "неисправна врста сабијања:  %s\n"
 "познате врсте су:\n"
 
-#: src/shar.c:2339
+#: src/shar.c:2341
 msgid "files on command line and --input-file-list specified"
 msgstr "наведене су датотеке на линији наредби и „--input-file-list“"
 
-#: src/shar.c:2388
+#: src/shar.c:2390
 #, c-format
 msgid "Created %d files\n"
 msgstr "Направљених датотека — %d\n"
@@ -1194,8 +1194,8 @@ msgstr "Направљених датотека — %d\n"
 msgid "fs error %d (%s) %s-ing %s\n"
 msgstr "грешка фс-а %d (%s) %s-инг %s\n"
 
-#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:511
-#: src/uuencode.c:205
+#: src/unshar-opts.c:585 src/unshar-opts.c:647 src/uudecode.c:513
+#: src/uuencode.c:207
 msgid "standard input"
 msgstr "стандардни улаз"
 
@@ -1226,14 +1226,14 @@ msgstr "кобна грешка уншар-а:\n"
 #. referenced via unsharOptions.pzCopyright
 #: src/unshar-opts.c:931
 msgid ""
-"unshar (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"unshar (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"уншар (Гнуова помагала шар-а) 4.14\n"
-"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"уншар (Гнуова помагала шар-а) 4.14.3\n"
+"Ауторска права © 1994-2014 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
 "Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
 "расподелу под одредбама Гнуове опште јавне дозволе,\n"
 "издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
@@ -1299,8 +1299,8 @@ msgstr ""
 "Затим прослеђује сваку архиву откривену позивом програма шкољке да је распакује.\n"
 
 #: src/unshar-opts.c:966
-msgid "unshar (GNU sharutils) 4.14"
-msgstr "уншар (Гнуова помагала шар-а) 4.14"
+msgid "unshar (GNU sharutils) 4.14.3"
+msgstr "уншар (Гнуова помагала шар-а) 4.14.3"
 
 #: src/unshar-opts.c:969
 msgid ""
@@ -1406,7 +1406,7 @@ msgstr ""
 "Употреба:  shar [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
 "Покушајте „unshar --help“ за више података.\n"
 
-#: src/unshar-opts.h:258 src/uudecode-opts.h:236
+#: src/unshar-opts.h:263 src/uudecode-opts.h:241
 #, c-format
 msgid "could not allocate %zu bytes for %s\n"
 msgstr "не могу да доделим %zu бајта за %s\n"
@@ -1471,14 +1471,14 @@ msgstr "кобна грешка уудекодера:\n"
 #. referenced via uudecodeOptions.pzCopyright
 #: src/uudecode-opts.c:705
 msgid ""
-"uudecode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uudecode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"уудекодер (Гнуова помагала шар-а) 4.14\n"
-"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"уудекодер (Гнуова помагала шар-а) 4.14.3\n"
+"Ауторска права © 1994-2014 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
 "Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
 "расподелу под одредбама Гнуове опште јавне дозволе,\n"
 "издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
@@ -1569,8 +1569,8 @@ msgstr ""
 "са базом64.  Погледајте „uuencode(5)“.\n"
 
 #: src/uudecode-opts.c:747
-msgid "uudecode (GNU sharutils) 4.14"
-msgstr "уудекодер (Гнуова помагала шар-а) 4.14"
+msgid "uudecode (GNU sharutils) 4.14.3"
+msgstr "уудекодер (Гнуова помагала шар-а) 4.14.3"
 
 #: src/uudecode-opts.c:750
 msgid ""
@@ -1639,69 +1639,69 @@ msgstr ""
 "Употреба:  shar [ -<обележје> [<вредност>] | --<назив>[{=| }<вредност>] ]... [<датотека>...]\n"
 "Покушајте „unshar --help“ за више података.\n"
 
-#: src/uudecode.c:118 src/uudecode.c:182
+#: src/uudecode.c:120 src/uudecode.c:184
 #, c-format
 msgid "%s: Short file"
 msgstr "%s: Кратка датотека"
 
-#: src/uudecode.c:164
+#: src/uudecode.c:166
 #, c-format
 msgid "%s: No `end' line"
 msgstr "%s: Нема реда „end“ (крај)"
 
-#: src/uudecode.c:188
+#: src/uudecode.c:190
 #, c-format
 msgid "%s: invalid input"
 msgstr "%s: неисправан улаз"
 
-#: src/uudecode.c:210 src/uudecode.c:224
+#: src/uudecode.c:212 src/uudecode.c:226
 msgid "cannot expand $HOME"
 msgstr "не могу да повећам $HOME"
 
-#: src/uudecode.c:260
+#: src/uudecode.c:262
 #, c-format
 msgid "%s: Illegal file name: %s"
 msgstr "%s: Неисправан назив датотеке: %s"
 
-#: src/uudecode.c:267
+#: src/uudecode.c:269
 #, c-format
 msgid "No user '%s'"
 msgstr "Нема корисника „%s“"
 
-#: src/uudecode.c:278 src/uudecode.c:340
+#: src/uudecode.c:280 src/uudecode.c:342
 msgid "output file name"
 msgstr "назив излазне датотеке"
 
-#: src/uudecode.c:297
+#: src/uudecode.c:299
 #, c-format
 msgid "cannot access %s"
 msgstr "не могу да приступим „%s“"
 
-#: src/uudecode.c:310
+#: src/uudecode.c:312
 #, c-format
 msgid "chmod of %s"
 msgstr "промена режима датотеке (chmod) за „%s“"
 
-#: src/uudecode.c:334
+#: src/uudecode.c:336
 msgid "output name is empty"
 msgstr "назив излаза је празан"
 
-#: src/uudecode.c:345
+#: src/uudecode.c:347
 #, c-format
 msgid "invalid base64 encoded name: %s"
 msgstr "неисправан назив шифрован базом64: %s"
 
-#: src/uudecode.c:380
+#: src/uudecode.c:382
 #, c-format
-msgid "%s: Invalid or missing 'begin' line"
-msgstr "%s: Неисправан или недостаје ред „begin“ (почетак)"
+msgid "%s: Invalid or missing 'begin' line\n"
+msgstr "%s: Неисправан или недостаје ред „begin“ (почетак)\n"
 
-#: src/uudecode.c:477
+#: src/uudecode.c:479
 #, c-format
 msgid "%s: Write error"
 msgstr "%s: Грешка уписа"
 
-#: src/uudecode.c:517
+#: src/uudecode.c:519
 msgid ""
 "You cannot specify an output file when processing\n"
 "multiple input files.\n"
@@ -1736,14 +1736,14 @@ msgstr "кобна грешка ууенкодера:\n"
 #. referenced via uuencodeOptions.pzCopyright
 #: src/uuencode-opts.c:656
 msgid ""
-"uuencode (GNU sharutils) 4.14\n"
-"Copyright (C) 1994-2013 Free Software Foundation, Inc., all rights reserved.\n"
+"uuencode (GNU sharutils) 4.14.3\n"
+"Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights reserved.\n"
 "This is free software. It is licensed for use, modification and\n"
 "redistribution under the terms of the GNU General Public License,\n"
 "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 msgstr ""
-"ууенкодер (Гнуова помагала шар-а) 4.14\n"
-"Ауторска права © 1994-2013 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
+"ууенкодер (Гнуова помагала шар-а) 4.14.3\n"
+"Ауторска права © 1994-2014 Задужбина слободног софтвера, Инц., сва права су задржана.\n"
 "Ово је слободан софтвер. Лиценциран је за употребу, измене и\n"
 "расподелу под одредбама Гнуове опште јавне дозволе,\n"
 "издања 3 или каснијег <http://gnu.org/licenses/gpl.html>\n"
@@ -1828,8 +1828,8 @@ msgstr ""
 "неколико пута да укуцате Ктрл-Д да окончате улаз.\n"
 
 #: src/uuencode-opts.c:694
-msgid "uuencode (GNU sharutils) 4.14"
-msgstr "ууенкодер (Гнуова помагала шар-а) 4.14"
+msgid "uuencode (GNU sharutils) 4.14.3"
+msgstr "ууенкодер (Гнуова помагала шар-а) 4.14.3"
 
 #: src/uuencode-opts.c:697
 msgid ""
@@ -1890,15 +1890,15 @@ msgstr ""
 "Употреба:  uuencode [ -<обележје> | --<назив> ]... [<ул-датотека>] <назив-излаза>\n"
 "Покушајте „uuencode --help“ за више података.\n"
 
-#: src/uuencode.c:226
+#: src/uuencode.c:228
 msgid "freopen of stdin"
 msgstr "отварање тока (freopen) стдулз-а"
 
-#: src/uuencode.c:255
+#: src/uuencode.c:257
 msgid "file name"
 msgstr "назив датотеке"
 
-#: lib/error.c:188
+#: lib/error.c:191
 msgid "Unknown system error"
 msgstr "Непозната системска грешка"
 
@@ -1996,13 +1996,13 @@ msgstr "„"
 msgid "'"
 msgstr "“"
 
-#: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
-#: lib/spawn-pipe.c:267
+#: lib/spawn-pipe.c:135 lib/spawn-pipe.c:138 lib/spawn-pipe.c:259
+#: lib/spawn-pipe.c:262
 #, c-format
 msgid "cannot create pipe"
 msgstr "не могу да направим спојку"
 
-#: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
+#: lib/spawn-pipe.c:229 lib/spawn-pipe.c:343 lib/wait-process.c:282
 #: lib/wait-process.c:356
 #, c-format
 msgid "%s subprocess failed"
