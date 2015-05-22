@@ -1,3 +1,17 @@
+2015-05-21  Bruce Korb  <bkorb@gnu.org>
+
+	* src/uudecode.c (decode): be more careful in guarding against
+	pathological "begin" lines
+
+2015-05-20  Filipe Brandenburger  <filbranden@google.com>
+	Bruce Korb  <bkorb@gnu.org>
+	Paul Eggert  <eggert@cs.ucla.edu>
+
+	* src/local.h.git: Replace the no longer needed f{read,write}only_mode
+	with #defines for FOPEN_BINARY/FOPEN_TEXT a la emacs
+	* src/shar.c: Use these instead of trying to derive via autoconf.
+	* configure.ac.git: Drop the check for popen with "rb" mode.
+
 2015-01-06  Eric Blake  <eblake@redhat.com>
 
 	build: avoid error message failure on 64-bit hosts

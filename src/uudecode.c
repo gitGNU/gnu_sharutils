@@ -63,6 +63,9 @@ static char const cright_years_z[] =
 #ifndef _
 # define _(str) (str)
 #endif
+#ifndef NL
+#define NL '\n'
+#endif
 
 /*=====================================================================\
 | uudecode [FILE ...]						       |
@@ -157,11 +160,11 @@ read_stduu (char const * inname, char const * outname)
     if (buf[0] != 'e') break;
     if (buf[1] != 'n') break;
     if (buf[2] != 'd') break;
-    if (buf[3] == '\n')
+    if (buf[3] == NL)
       return UUDECODE_EXIT_SUCCESS;
 
     if (buf[3] != '\r') break;
-    if (buf[4] == '\n')
+    if (buf[4] == NL)
       return UUDECODE_EXIT_SUCCESS;
   } while (0);
 
@@ -304,7 +307,7 @@ reopen_output (char const * outname, int mode)
     }
 
   {
-    FILE * fp = freopen (outname, FOPEN_WRITE_BINARY, stdout);
+    FILE * fp = freopen (outname, "w" FOPEN_BINARY, stdout);
     if (fp != stdout)
       fserr (UUDECODE_EXIT_NO_OUTPUT, "freopen", outname);
   }
@@ -384,14 +387,25 @@ decode (char const * inname)
                _("%s: Invalid or missing 'begin' line\n"), inname);
 	}
 
+      if (strchr (buf, NL) == NULL)
+        goto bad_beginning;
+
       if (strncmp (buf, "begin", 5) == 0)
 	{
           char * scan = buf+5;
-          if (*scan == '-')
+
+        check_begin_option:
+
+          switch (*scan) {
+          default:
+            goto bad_beginning;
+          case ' ':
+            break;
+          case '-':
             {
               static char const base64[]  = "ase64";
               static char const encoded[] = "encoded";
-            check_begin_option:
+
               if (*++scan == 'b')
                 {
                   if (strncmp (scan+1, base64, sizeof (base64) - 1) != 0)
@@ -411,12 +425,9 @@ decode (char const * inname)
                   scan += sizeof (encoded) - 1; /* 'e' is included */
                 }
 
-              switch (*scan) {
-              case ' ': break; /* no more begin options */
-              case '-': goto check_begin_option;
-              default:  goto bad_beginning;
-              }
+              goto check_begin_option;
 	    }
+          }
 
 	  if (sscanf (scan, " %o %[^\n]", &mode, buf) == 2)
 	    break;

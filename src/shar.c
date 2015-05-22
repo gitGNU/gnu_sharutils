@@ -1170,7 +1170,7 @@ file_needs_encoding (char const * fname)
      average file size, even reading the whole file (if it is text) would
      usually be faster than invoking 'file'.  */
 
-  infp = fopen (fname, freadonly_mode);
+  infp = fopen (fname, "r" FOPEN_BINARY);
 
   if (infp == NULL)
     {
@@ -1265,11 +1265,11 @@ encode_file_to_pipe (
     {
       sprintf (cmdline, cmpr_state->cmpr_cmd_fmt,
                cmpr_state->cmpr_level, q_local_name);
-      in_fp = popen (cmdline, freadonly_mode);
+      in_fp = popen (cmdline, "r" FOPEN_BINARY);
     }
   else
     {
-      in_fp = fopen (local_name, freadonly_mode);
+      in_fp = fopen (local_name, "r" FOPEN_BINARY);
       open_fmt = "fopen";
       open_txt = local_name;
     }
@@ -1277,7 +1277,7 @@ encode_file_to_pipe (
   if (in_fp == NULL)
     fserr (SHAR_EXIT_FAILED, open_fmt, open_txt);
 
-  out_fp = fdopen (out_fd, fwriteonly_mode);
+  out_fp = fdopen (out_fd, "w" FOPEN_BINARY);
 
   fprintf (out_fp, mode_fmt_z, restore_name);
 
@@ -1321,7 +1321,7 @@ open_encoded_file (char const * local_name, char const * q_local_name,
   close (pipex[1]);
 
   {
-    FILE * fp = fdopen (pipex[0], freadonly_mode);
+    FILE * fp = fdopen (pipex[0], "r" FOPEN_BINARY);
     if (fp == NULL)
       fserr (SHAR_EXIT_FAILED, "fdopen", _("pipe fd"));
     return fp;
@@ -1402,12 +1402,12 @@ open_encoded_file (char const * local_name,
       sprintf (p, uu_cmd_fmt, restore_name);
     }
 
-  /* Don't use freadonly_mode because it might be "rb", while we need
+  /* Don't use "r" FOPEN_BINARY mode because it might be "rb", while we need
      text-mode read here, because we will be reading pure text from
      uuencode, and we want to drop any CR characters from the CRLF
      line endings, when we write the result into the shar.  */
   {
-    FILE * in_fp = popen (cmdline, "r");
+    FILE * in_fp = popen (cmdline, "r" FOPEN_TEXT);
 
     if (in_fp == NULL)
       fserr (SHAR_EXIT_FAILED, "popen", cmdline);
@@ -1441,7 +1441,7 @@ open_shar_input (
       *file_type_p = _("text");
       *file_type_remote_p = SM_type_text;
 
-      infp = fopen (local_name, freadonly_mode);
+      infp = fopen (local_name, "r" FOPEN_BINARY);
       if (infp == NULL)
         fserr (SHAR_EXIT_FAILED, "fopen", local_name);
       *pipe_p = 0;
@@ -1822,7 +1822,7 @@ finish_sharing_file (const char * lname, const char * lname_q,
       echo_status ("test $? -ne 0", SM_restore_failed, NULL, rname, 0);
 
       if (   ! HAVE_OPT(NO_MD5_DIGEST)
-          && (fp = fopen (lname, freadonly_mode)) != NULL
+          && (fp = fopen (lname, "r" FOPEN_BINARY)) != NULL
 	  && md5_stream (fp, md5buffer) == 0)
 	{
 	  /* Validate the transferred file using 'md5sum' command.  */
@@ -2050,7 +2050,7 @@ open_output (void)
   if (output_filename == NULL)
     parse_output_base_name (OPT_ARG(OUTPUT_PREFIX));
   sprintf (output_filename, OPT_ARG(OUTPUT_PREFIX), ++part_number);
-  output = fopen (output_filename, fwriteonly_mode);
+  output = fopen (output_filename, "w" FOPEN_BINARY);
 
   if (output == NULL)
     fserr (SHAR_EXIT_FAILED, _("Opening"), output_filename);
@@ -2152,7 +2152,7 @@ configure_shar (int * argc_p, char *** argv_p)
        * Redirect stderr to /dev/null in that case so that
        * the results are not cluttered with chatter.
        */
-      FILE * fp = freopen ("/dev/null", fwriteonly_mode, stderr);
+      FILE * fp = freopen ("/dev/null", "w" FOPEN_BINARY, stderr);
       if (fp != stderr)
         error (SHAR_EXIT_FAILED, errno,
                _("reopening stderr to /dev/null"));

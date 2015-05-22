@@ -222,7 +222,7 @@ process_opts (int argc, char ** argv, int * mode)
         choke me - Must translate mode argument
 #endif
 
-	FILE * fp = freopen (*argv, FOPEN_READ_BINARY, stdin);
+	FILE * fp = freopen (*argv, "r" FOPEN_BINARY, stdin);
         input_name = *argv;
 	if (fp != stdin)
           fserr (UUENCODE_EXIT_FAILURE, _("freopen of stdin"), input_name);

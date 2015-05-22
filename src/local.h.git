@@ -22,14 +22,16 @@
 
 INCLUDE-LIST
 
-#ifdef SHAR_C
-# ifdef BINARY_MODE_POPEN
-static char const freadonly_mode[]  = "rb";
-static char const fwriteonly_mode[] = "wb";
-# else
-static char const freadonly_mode[]  = "r";
-static char const fwriteonly_mode[] = "w";
-# endif
+#ifndef O_BINARY
+# define O_BINARY 0
+#endif
+
+#if O_BINARY
+# define FOPEN_BINARY "b"
+# define FOPEN_TEXT "t"
+#else
+# define FOPEN_BINARY ""
+# define FOPEN_TEXT ""
 #endif
 
 #endif /* SHARUTILS_LOCAL_H */

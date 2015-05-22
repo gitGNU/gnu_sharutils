@@ -16,6 +16,9 @@
    along with this program; if not, see <http://gnu.org/licenses/gpl.html>
 */
 
+#ifndef SHARUTILS_SYSTEM_H_GUARD
+#define SHARUTILS_SYSTEM_H_GUARD 1
+
 #ifndef HAVE_CONFIG_H
 choke me -- I need config.h
 #endif
@@ -98,11 +101,4 @@ char *get_submitter (char *);
 # include <fcntl.h>
 # include <io.h> /* for setmode */
 #endif
-
-#if ! defined(O_BINARY) || (O_BINARY == 0)
-# define  FOPEN_READ_BINARY   "r"
-# define  FOPEN_WRITE_BINARY  "w"
-#else
-# define  FOPEN_READ_BINARY   "rb"
-# define  FOPEN_WRITE_BINARY  "wb"
-#endif
+#endif // SHARUTILS_SYSTEM_H_GUARD

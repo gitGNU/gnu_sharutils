@@ -94,12 +94,6 @@ AM_WITH_DMALLOC
   CATALOGS="$new_CATALOGS"
 fi]
 
-AC_RUN_IFELSE(
-  [AC_LANG_PROGRAM([], [dnl
-    FILE * fp = popen ("date", "rb");
-    exit (fp == NULL);])],
-  [AC_DEFINE([BINARY_MODE_POPEN], [1], [define if popen supports "rb" mode])]
-)
 # INVOKE_LIBOPTS_MACROS
 INVOKE_LIBOPTS_MACROS
 
