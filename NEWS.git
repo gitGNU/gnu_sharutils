@@ -1,6 +1,11 @@
 GNU sharutils NEWS - User visible changes.
 Copyright (C) 1994-2015 Free Software Foundation, Inc.
 
+Version 4.15.2 - May 2015, by Bruce Korb
+
+* updates to fix cross platform build issues
+* fixed problem where contrived uuencoded file caused seg fault
+
 Version 4.15.1 - May 2015, by Bruce Korb
 
 * gnulib updates to fix rare platform build issues
