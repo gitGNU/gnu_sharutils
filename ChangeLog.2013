@@ -1,0 +1,382 @@
+2013-04-13  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar.c (open_encoded_file): split out code that must vary
+	(compress_file): new function -- varies by HAVE_WORKING_FORK
+	* src/unshar.c (get_env_tmpdir): new function, varies by MinGW
+	(load_file): use it
+	(unshar_file): variations for MinGW
+	* src/uudecode.c (get_env_homedir): new function, varies by MinGW
+	(expand_tilde): use it
+	(decode): filemode must be set to binary for MinGW
+	* bootstrap: make sure that gnulib supported headers are not
+	seen as missing by the libopts config macros
+	* src/Makefile.am: add "scribble" module to shar program.
+	* src/scribble.c: new file
+	* src/scribble.h: likewise
+	* src/shar.c: simplify a lot of code by using that module.
+	Do not use file names as format arguments.
+	* tests/shar-1: accommodate Windows correctly.
+
+2013-04-12  Bruce Korb  <bkorb@gnu.org>
+
+	4.13.5 released
+
+	* bootstrap: more stuff from gnulib
+	* configure.ac.git: defer libopts/autogen testing to end.  Give gnulib
+	a chance to patch in headers.  (Partial fix)
+	* doc/Makefile.am: uudecode.1 should be distributable.
+	* src/Makefile.am: reorder library list for systems that need it
+	* src/scripts.def (ck_chct): put the "wc" command into the string,
+	instead of using the one that must work with "system(3)".
+	It is different for MinGW.
+	* src/shar-opts.def: clarify the significance of compression.
+	declare initialization_done to be a boolean.
+	* src/shar.c (do_uue_t): enumerate the ternary results of need-to-encode:
+	true, false and fail/broken.
+	(print_header_stamp): timezones can be very long.
+	(read_byte_size): extraction from emit_char_ct_validation
+	(emit_char_ct_validation): system(3) requires a different command syntax
+	on Windows platforms.  Accommodate.
+	(file_needs_encoding): returns do_uue_t enumeration
+	(set_submitter): SET_OPT_SUBMITTER() needs a stable (non-stack) value
+	(file_needs_encoding): remove unneeded "else".
+	(open_shar_input): split out code that requires fork(2) into
+	a new function compress_file().
+	(compress_file): do the fork() call.
+	(compress_file): make a version for platforms without fork(2).
+	(open_output): set stdout to binary mode on MINGW
+	* src/uudecode.c (decode): do_base64 is local to this function.
+	* tests/shar-1: accommodate Windows
+	* tests/shar-3: accommodate the build directory being a sym link
+
+2013-04-06  Bruce Korb  <bkorb@gnu.org>
+
+	* src/uudecode.c (read_base64): input line now contains newline.
+	(reopen_output): comment on why we're messing with POSIXLY_CORRECT
+	(decode_fname): current algorithm does not require extra NUL bytes
+	* tests/Makefile.am: add uudecode-2 test
+	* tests/uudecode-2: new test for encoded file names
+	* tests/uutest-1: compute loop static computations outside of loop
+
+2013-03-31  Bruce Korb  <bkorb@gnu.org>
+
+	4.13.4 released
+
+2013-03-09  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: constrain translation fetching to once a day
+	(set_up_po_dir): clean up README construction
+	(setup_configure): extract local.h include list from gnulib-tool
+	* src/shar-full-help.txt: fiddle, per xlation project requests
+	* src/unshar-full-help.txt: likewise
+	* src/uudecode-full-help.txt: likewise
+	* src/uuencode-full-help.txt: likewise
+	* src/unshar-opts.def: likewise
+	* src/shar.c (print_caution_notes): fix option test
+	(split_shar_ed_file): do not write NUL byte and set output file
+	position back to the end, after scribbling on the beginning.
+	(start_sharing_file): fix option test
+	(parse_output_base_name): save current init-done state before setting
+	to false and restore to saved value.
+	* tests/shar-3: fix misordered "find(1)" options
+
+2013-02-24  Bruce Korb  <bkorb@gnu.org>
+
+	* src/Makefile.am: process the unshar option code
+	* src/unshar-opts.def: make ready for use
+	* src/unshar.c: use the generated option code
+
+2013-02-17  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar.c (whoami.c): not needed -- do not include
+	(scripts.x): move more blocks of text to scripts.def and source
+	the file earlier in the file.
+	(DEBUG_PRINT): do not translate debugging formats
+	* lib/whoami.c: obsolete.
+	* configure.ac.git (HAVE_ETC_SYSTEMID): obsolete
+	(SH): accept ksh and dash, too
+	* po/*.po: updates from translation project
+	* src/mk-help.sh: update for latest AutoGen tweaks
+	* src/scripts.def: added new named blocks of text
+	* src/*-help.txt: fix capitalization for all usage text
+	* src/shar-opts.def: likewise
+	* src/shar-short-help.txt: likewise
+
+2013-01-12  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: allow for some issues to be warnings (rsync failures)
+	added new modules: base64, ctype, gendocs
+	(system.h): make sure it is included first
+	(unshar-opts.c): we create it, but do not compile it yet.
+	* doc/Makefile.am: add rule to create doc tree with gendocs
+	* doc/gnudoc.tpl: removed, obsolete
+	* doc/mkgnudoc.sh: likewise
+	* doc/uuencode.5: cleanup
+	* lib/system.h (USE_UNLOCKED_IO): always
+	(stdbool.h): provide alternative
+	* src/Makefile.am: add rules for updating help text
+	* src/mk-help.sh: adjust
+	* src/*-help.txt: adjust
+	* src/shar-std.def: emit some more common stuff
+	* src/local.h.git: migrate config.h and unlocked io requirements to
+	the system.h header
+	* src/unshar-opts.def: when this becomes auto-opt-ed, it will use
+	a generated main.  Partially tested, so disabled for now.
+	* src/uudecode-opts.def (output): do not freopen when the file
+	name is "-" or "/dev/stdout".
+	* src/uudecode.c: remove all base64 stuff and use gnulib.
+	(decode_fname): new.  Use when "begin-encode" is discovered.
+	(decode): rewrite the begin line parser to accept both "-base64"
+	and "-encode" options.
+	* src/uuencode.c: remove all base64 stuff and use gnulib.
+	* tests/Makefile.am: add shar-4 test
+	* tests/shar-2: improve debugability
+	* tests/shar-3: likewise
+	* tests/shar-4: new -- test "-o /dev/stdout" option to uudecode
+	* po/getpo.sh: removed - rsync is used now
+
+2013-01-05  Bruce Korb  <bkorb@gnu.org>
+
+	4.13.2 released
+
+2013-01-05  Peter Pisar  <ppisar@redhat.com>
+
+	* lib/md5.[ch]: deleted.
+	* lib/basename.h: deleted
+	* bootstrap: pull crypto/md5 from gnulib
+	do not include basename.h any more.
+
+2013-01-05  Karl Berry  <karl@freefriends.org>
+
+	* doc/sharutils.texi: sharutils doesn't own the GFDL
+
+2013-01-05  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar-opts.def: deprecate duplicate options and polish
+	* src/shar-std.def: polish
+	* src/unshar-opts.def: polish
+	* src/uudecode-opts.def: polish
+	* src/uuencode-opts.def: polish
+	* everywhere: Happy 2013 new year
+
+2013-01-05  Xose Vazquez Perez <xose.vazquez@gmail.com>
+
+	* doc/*.1: needed re-generation to fix missing newline.
+
+2012-12-27  Bruce Korb  <bkorb@gnu.org>
+
+	4.13.1 released
+
+	* doc/sharutils.texi: remove doc of non-existant scripts
+	* src/Makefile.am: add rule to update help text
+	* src/*-opts.def: Do not emit usage text values when we don't
+	have them.  This makes it possible to re-create it (see above).
+	* src/*help.txt: regenerated
+
+2012-12-22  Bruce Korb  <bkorb@gnu.org>
+
+	* src/uudecode-opts.def (ignore-chmod): new option to allow
+	POSIX preferences.  (Erroring out is compliant, but not
+	preferred behavior.)
+	(exit-name): document all the exit codes.
+	(detail/doc-section): improve command description.
+	(exit-name): add uudecode exit codes
+	* src/uudecode.c (everywhere): use the exit codes
+	(reopen_output): check for --ignore-chmod option and/or
+	POSIXLY_CORRECT environment variable before returning an error
+	on a bad result from fchmod().
+	(main): strip out option handling code and call optionProcess().
+	* tests/shar-3: adjust
+
+2012-08-11  Bruce Korb  <bkorb@gnu.org>
+
+	* .gnuploadrc: support gnu upload script
+	* bootstrap: rework to use gnulib and rebuild option code
+	* src/Makefile.am: tell make how to build option code
+	* configure.ac.git: renamed from configure.ac.  Check for autogen.
+	* src/scripts.def: define some new strings
+	* src/shar-opts.def: define options and doc them for shar program
+	* src/unshar-opts.def: likewise for unshar
+	* src/uudecode-opts.def: likewise for uudecode
+	* src/uuencode-opts.def: likewise for uuencode
+	* src/shar-std.def: define standard options for shar and unshar
+	* src/shar.c: rewrite to use generated option code
+	* src/uuencode.c: rework (not rewrite) to use new option code
+	* po/.gitignore: tell GIT to ignore derived files
+	* src/.gitignore: likewise
+	* doc/.gitignore: likewise
+	* doc/Makefile.am: docs are largely derived files now
+	* doc/*.1: removed
+	* doc/sharutils.texi: include derived files
+	* tests/shar-1.ok: tweak for new output layout
+	* tests/shar-2: cleanup debugging stuff
+	* tests/shar-3: increase file segment size
+	* tests/uutest-1: add debugability stuff & simplify script
+	* configure.ac.git: incorporate building of libopts
+	* src/Makefile.am: link against libopts
+
+2011-05-02  Bruce Korb  <bkorb@gnu.org>
+	Gary Vaughan  <gary@gnu.org>
+
+	* src/Makefile.am: do not use LTLIBOBJ for non-libtool build
+
+2011-04-25  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: tell autoreconf that autopoint has been run.
+
+2011-02-05  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: compute the list of files to include in local.h
+	by examining the log from gnulib-tool.
+	* src/local.h: replace the list of #includes with a marker that
+	gets replaced by bootstrap.
+	* src/mail-files.in: depends upon an executable that was removed
+	decades ago.  Removed.
+	* src/mailshar.in: likewise
+
+2011-01-14  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar.c: clean up code
+	* configure.ac: remove _GNU_SOURCE from config.h
+	* doc/Makefile.am: distribute fdl.texi, too
+	* doc/gnudoc.tpl: remove stray number->string function
+	* doc/mkgnudoc.sh: Trim "GNU" prefix from project name when
+	deriving a directory name
+	* doc/sharutils.texi: Add myself as an author and doc the
+	uuencode/uudecode programs
+
+2010-09-04  Bruce Korb  <bkorb@gnu.org>
+
+	* doc/doclicense.texi: remove -- use fdl.texi instead
+	* bootstrap: get fdl.texi
+	* configure.ac (AC_CONFIG_FILES): omit contrib/Makefile
+	* contrib/: remove
+	* doc/sharutils.texi: cleanup, per Karl's suggestions
+
+2010-08-27  Bruce Korb  <bkorb@gnu.org>
+
+	* everywhere: remsync removed
+
+2010-08-27  Bruce Korb  <bkorb@gnu.org>
+
+	4.10 released
+	Thanks to Paolo Bonzini
+
+	* src/scripts.def (i18n): Remove saving of $1.
+	(clobber_check) always emit a test for a -c option and set "keep_file"
+	appropriately.
+	(pre_exist): use it appropriately
+	* src/shar.c (generate_configure): always emit clobber_check.
+	* tests/shar-1.ok: adjust
+	* TODO: removed three entries
+	* src/uudecode (reopen_output): remove tests for FIFO and LINK.
+	(main): if output file is specified on the command line, ensure
+	that there is only one input.
+
+2010-02-21  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: Select fopen modes based on popen() support.
+	Well, infrastrucure for that.  A config test is still needed.
+	* scripts.def (noisy_mkdir): obsolete
+	(lock_dir): obsolete
+	(contents): new
+	(pre_exists): new
+	(split_mode): new
+	(show_*_status): new
+	* scripts.tpl: allow strings to not end with a newline.
+	* src/shar.c (echo_status):
+	(*): Remove shell quotes from messages inserted into the generated
+	shar script.  Quote these strings dynamically after translation.
+	(shar): rip out several large chunks into new functions.
+	(open_shar_input): new
+	(encode_file_to_pipe): new
+	(determine_file_mode): new
+	(emit_char_ct_validation): new
+	* tests/shar-1: check for $VERBOSE
+	* tests/shar-2: check for $VERBOSE
+	* tests/shar-3: check for $VERBOSE
+	* tests/shar-1.ok: Adjust some more.
+
+2010-02-21  Andreas Schwab  <schwab@linux-m68k.org>
+
+	* bootstrap: Add quotearg gnulib module.
+	* src/shar.c: Include "quotearg.h"
+	(generate_mkdir): Properly quote filename in script.
+	(change_files): Likewise.
+	(shar): Likewise.  Don't use fixed size buffer.
+	* src/scripts.def (md5check): Adjust quoting.
+	* tests/shar-1.ok: Adjust.
+
+2010-02-19  Bruce Korb  <bkorb@gnu.org>
+
+	* src/*.c (cright_years_z): define at top of main modules and use
+	in version formatting.
+	* bootstrap: clean up gnulib usage.  Generate the src/local.h header.
+
+2010-02-18  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: extract version from configure.ac and remove the
+	definition from the generated "version.m4" file.
+	Update the list of modules retrievable from gnulib.
+	Always change the automake and gettext versions in configure.ac.
+	* configure.ac: Add comment markers after each autoconf macro
+	Update the list of functions that gnulib does not fret over.
+	* src/Makefile.am (LDADD): obsolete.  Use <prog>_LDADD instead.
+
+2009-11-15  Alfred M. Szmidt  <ams@gnu.org>
+
+	* bootstrap (tag): Don't use obsolete syntax for sort.
+
+2009-11-14  Bruce Korb  <bkorb@gnu.org>
+
+	* src/uudecode.c (decode): break out some code to make it smaller.
+	Be certain to not include trailing white space in output file name.
+	<thanks to Daniel Richard G.>
+	(expand_tilde): one of those broken out functions
+	(reopen_output): the other
+
+2009-03-29  Bruce Korb  <bkorb@gnu.org>
+
+	* lib/ansi2knr.c: obsolete
+	* doc/ansi2knr.1: obsolete
+
+2008-06-28  Bruce Korb  <bkorb@gnu.org>
+
+	* src/shar.c (not restoring timestamps):
+	Do not concatenate translated strings.
+	* src/scripts.def: emit the one string, not two.
+
+2006-08-30  Bruce Korb  <bkorb@gnu.org>
+
+	* src/scripts.def: quote the heredoc marker.  No shell evals.
+
+2006-06-06  Paul Eggert  <eggert@cs.ucla.edu>
+
+	* tests/shar-3: Quote sed command, since it contains a ^,
+	and Solaris /bin/sh treats unquoted ^ like |.  Problem
+	reported by Nelson H. F. Beebe.
+
+2006-05-18  Bruce Korb  <bkorb@gnu.org>
+
+	* bootstrap: add code to derive compress-dummy.1 from the script.
+	* configure.ac: Remember which dirent header was found
+	* src/shar.c: Use the #define name of the dirent header for #include
+	Remove our own private declarations of opendir and readdir.
+	* doc/Makefile.am(dist_man2_MANS): add compress-dummy.1
+	* src/compress-dummy.in: clarify the name of what it is.
+
+2006-05-15  Bruno Haible  <bruno@clisp.org>
+
+	* shar.c: declare readdir IFF readdir is not already a #define
+
+2006-04-26  Pavel Roskin  <proski@gnu.org>
+
+	* uudecode.c (read_stduu): Allow characters other than '\n'
+	after "end", viz., the DOS style newline "\r\n".
+
+2006-03-24  Santiago Vila  <sanvila@unex.es>
+
+	* uudecode.c(decode): make clear the name of the file causing problems
+	* shar.c(change_files): fix args to fprintf.
+
+[[... see cvs ChangeLog.2005 ]]
