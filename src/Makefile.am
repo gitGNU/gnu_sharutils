@@ -143,4 +143,15 @@ help-text : mk-help.sh $(bin_PROGRAMS)
 	touch $@
 	$(SHELL) mk-help.sh $@ $(bin_PROGRAMS)
 
+$(usage_texts) :
+	@set -x ; for f in $(usage_texts) ; \
+	do test -f $(srcdir)/$$f && continue ; \
+	   g=$${f%%-*} ; test -x $(builddir)/$$g || { \
+	      cd $(builddir) ; $(MAKE) $$g ; } ; \
+	   case "$$f" in \
+	   *-short-* ) $(builddir)/$$g --bogus 2>&1 | sed 1d > $(srcdir)/$$f ;; \
+	   *-full-* )  $(builddir)/$$g --help > $(srcdir)/$$f ;; \
+	   esac ; \
+	done
+
 ## src/Makefile.am ends here

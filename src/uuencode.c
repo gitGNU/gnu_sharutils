@@ -147,6 +147,9 @@ encode (void)
 {
   int finishing = 0;
 
+  if (isatty (STDIN_FILENO) && isatty (STDERR_FILENO))
+    fputs (_("Please start typing your input file...\n"), stderr);
+
   do
     {
       unsigned char buf[45];
@@ -246,6 +249,39 @@ process_opts (int argc, char ** argv, int * mode)
     case 0:
     default:
       USAGE (UUENCODE_EXIT_USAGE_ERROR);
+    }
+
+  if (HAVE_OPT(MODE))
+    {
+#     define FLAG_OKAY(_f)  ((S_I##_f) == (MODE_##_f))
+      enum { ModeFlagValueCheck = 1 /
+             (FLAG_OKAY(RUSR) && FLAG_OKAY(WUSR) && FLAG_OKAY(XUSR) &&
+              FLAG_OKAY(RGRP) && FLAG_OKAY(WGRP) && FLAG_OKAY(XGRP) &&
+              FLAG_OKAY(ROTH) && FLAG_OKAY(WOTH) && FLAG_OKAY(XOTH)) };
+#     undef FLAG_OKAY
+      int m = OPT_VALUE_MODE;
+      if ((m & ~0777) != 0) {
+        if (m & MODE_RWXO)
+          m |= MODE_XOTH | MODE_WOTH | MODE_ROTH;
+
+        if (m & MODE_RWXG)
+          m |= MODE_XGRP | MODE_WGRP | MODE_RGRP;
+
+        if (m & MODE_RWXU)
+          m |= MODE_XUSR | MODE_WUSR | MODE_RUSR;
+
+        if (m & MODE_XALL)
+          m |= MODE_XOTH | MODE_XGRP | MODE_XUSR;
+
+        if (m & MODE_WALL)
+          m |= MODE_WOTH | MODE_WGRP | MODE_WUSR;
+
+        if (m & MODE_RALL)
+          m |= MODE_ROTH | MODE_RGRP | MODE_RUSR;
+
+        m &= 0777;
+      }
+      *mode = m;
     }
 
   if (HAVE_OPT(ENCODE_FILE_NAME))

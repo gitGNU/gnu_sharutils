@@ -68,6 +68,29 @@ flag = {
 	_EODoc_;
 };
 
+flag = {
+    name        = mode;
+    value       = p;
+    descrip     = 'file mode permissions';
+    arg-name    = perm-name;
+    arg-type    = set;
+    keyword     = xoth, woth, roth, xgrp, wgrp, rgrp, xusr, wusr, rusr,
+                  rwxo, rwxg, rwxu, xall, wall, rall;
+
+    doc = <<- _EODoc_
+	By default, the output mode is set by the mode of the input file, or
+	(if the input is standard input) defaults to the current umask.
+	This option specifies the mode.  The bit names match the bit names in @file{stat(2)},
+	extended by @code{?all} codes for setting read/write/execute bits for all categories.
+	So to specify that everyone can read and the owner can write:
+	@example
+	@file{uuencode} @samp{-prall,wusr}
+	@end example
+	@noindent
+        or, equivalently, @samp{-p 0644}.  NOTE: The number does @i{not} default to octal.
+	_EODoc_;
+};
+
 doc-section = {
     ds-type = STANDARDS;
     ds-format = texi;
