@@ -26,7 +26,7 @@ file, but may be overridden with the '-o' option.  It will have the mode of
 the original file, except that setuid and execute bits are not retained.  If
 the output file is specified to be '/dev/stdout' or '-', the result will be
 written to standard output.  If there are multiple input files and the
-second or subsquent file specifies standard output, the decoded data will
+second or subsequent file specifies standard output, the decoded data will
 be written to the same file as the previous output.  Don't do that.
 
 'uudecode' ignores any leading and trailing lines.  It looks for a line
